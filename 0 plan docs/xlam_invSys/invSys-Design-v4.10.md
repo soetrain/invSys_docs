@@ -2,7 +2,7 @@
 **Project:** invSys Multi-Warehouse Inventory System  
 **Version:** 4.10 (VBA Release 1)  
 **Date:** June 25, 2026  
-**Author:** Justin  
+**Author:** Codex  
 **Purpose:** Complete architectural specification for Release 1 (VBA/Excel only).
 
 ---
