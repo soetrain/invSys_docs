@@ -255,7 +255,7 @@ The user should not be asked whether to save canonical backend state.
 - Prevented synthetic `__ROW__` snapshot keys from creating duplicate invSys rows.
 - Changed shipment-line hydration to write blank `TOTAL INV` rather than zero.
 
-### A+B event staging architecture
+### A+B event staging architecture `0 plan docs\ln 1152-1653.md` (main content lines 1152-1653)
 
 - Confirmed the A+B plan from docs:
   - validate auth/context on click;
