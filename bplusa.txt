@@ -1,0 +1,22 @@
+I agree with the A + B direction, with one adjustment: Option B should be the durable click-path first; Option A should optimize the later NAS sync path.
+Reasoning:
+	• Option A alone improves speed, but deferred-save NAS workbook state is risky. If Excel crashes before flush, the event is lost unless it was staged elsewhere. Also, keeping the NAS inbox open can interfere with another processor/session seeing or writing the file.
+	• Option B first gives the click path what we actually need: durable local append, immediate return, survives Excel crash, works when NAS is down.
+	• Option A then helps the sync worker, by batching/keeping the NAS inbox open briefly while merging staged rows, instead of opening/saving once per event.
+The model I’d use:
+	1. On Make/Unmake click:
+		○ Validate auth/context.
+		○ Build the normal inbox row.
+		○ Append it to local staging JSONL.
+		○ Return success immediately: “Queued locally; NAS sync pending.”
+		○ Do not touch the NAS inbox in the click path.
+	2. Background/on-demand sync:
+		○ Merge local staging rows into the NAS .xlsb inbox.
+		○ Use EventID dedupe.
+		○ Save once per batch.
+		○ Archive/delete staged rows only after successful NAS save.
+	3. Processor safety:
+		○ Add a processor pre-run hook to call staging sync first.
+		○ Add a timer or “Sync Now” command for normal operation.
+		○ Form sync message should distinguish Local queued, NAS synced, and Processed.
+This is the right path for <1000 ms. It also gives a cleaner R2 migration than trying to make Excel workbook saves fast.
