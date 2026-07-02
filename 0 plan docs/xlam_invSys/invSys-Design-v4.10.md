@@ -353,8 +353,8 @@ Operator-facing inventory views must be regenerated from authoritative log state
 ```
 
 ---
-### D11 -- Shipments Inventory Boundary and A+B Event Staging (R1 Locked)
-**Decision:** Shipments inventory display has one hard boundary: `NAS Inv` is server/read-model truth. It must not be overwritten, reduced, inflated, or repaired by local Shipments form math, `Projected Inv` overlays, sent overlays, or `Locked` reservation display.
+### D11 -- Shipping System Inventory Boundary and A+B Event Loop (R1 Locked)
+**Decision:** Shipping system inventory display has one hard boundary: `NAS Inv` is the server/read-model value produced by the transaction loop. Local actions queue or stage transaction events, the processor applies those events to the server inventory log/read model, and users fetch that updated read model back into the role UI. `NAS Inv` must not be overwritten, reduced, inflated, or repaired by local Shipments math, Box Maker math, `Projected Inv` overlays, sent overlays, or `Locked` reservation display.
 
 **Projected Inv rule:**
 ```text
@@ -365,15 +365,15 @@ Projected Inv = NAS Inv - active Shipments list quantity for the same package ro
 
 **Locked rule:** `Locked` is a reservation/floor guard. It can prevent over-ordering and show inventory reserved by active shipment rows, but it never changes `NAS Inv`.
 
-**A+B staging model:**
+**A+B event loop model:**
 ```text
 A = immediate local/UI staging, validation feedback, reservation rows, and SHIPMENTS lock quantity.
 B = queued backend/server event processing and read-model catch-up.
 ```
 
-A may predict local availability and reserve inventory for the operator experience. B is the only authority for NAS inventory. The form must display backend/read-model inventory as `NAS Inv` until B publishes new values.
+A may predict local availability and reserve inventory for the operator experience. A must also queue/log the transaction for server processing. B applies those queued events to the server inventory log/read model, and role UIs fetch the resulting values back from that read model. B is the only authority for NAS inventory, but the UI may show explicit pending/local state while the A-to-B-to-fetch loop is incomplete. The Shipping system must display backend/read-model inventory as `NAS Inv` until B publishes new values.
 
-**Shipment display rules:**
+**Shipping system display rules:**
 - `NAS Inv` comes from the loaded shippables/read-model value only.
 - `Projected Inv` subtracts the current active Shipments list quantity from `NAS Inv`.
 - Pending/sent projected overlays must not drive Shipments form display.
