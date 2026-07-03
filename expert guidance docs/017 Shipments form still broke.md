@@ -1,5 +1,5 @@
 context: 
-first pic is the Box Maker form, second pic is the Shipments form. `.csv` show the logging of the Shipping system from the server/NAS. this is after implementing your 3 fixes from last prompt response. below are the messages from the user side tests, "AutoSync: refresh failed." sums it all up. Shipping system sync is broken again: instead of both Box Maker and Shipments updating according to the processor, their displayed inventory appears to drift from shared stale read-model/overlay state. Box Maker Projected Inv is wrong and Shipments projected inventory is wrong. below are the recent popup while testing:
+first pic is the Box Maker surface, second pic is the Shipping system. `.csv` show the logging of the Shipping system from the server/NAS. this is after implementing your 3 fixes from last prompt response. below are the messages from the user side tests, "AutoSync: refresh failed." sums it all up. Shipping system sync is broken again: instead of both Box Maker and Shipments updating according to the processor, their displayed inventory appears to drift from shared stale read-model/overlay state. Box Maker Projected Inv is wrong and Shipping system projected inventory is wrong. below are the recent popup while testing:
 
 ---------------------------
 Microsoft Excel
@@ -108,7 +108,7 @@ The four `Make Boxes` events applied (`Applied=1`) only because they were writin
 
 **Box Maker form shows NAS = 10 / 11 / 71 / 26** — stale pre-6/30-SHIP values because `Refresh=0` means `tblInventoryLog` never received the 6/30 SHIP row. The form is reading from a stale operator cache.
 
-**Shipments form Projected = NAS − 2 or −3** — stacked un-evicted overlays from prior sessions accumulating in the persistent overlay file on disk, because eviction requires `backendQty` to reach `overlayQty`, which never happens when `Refresh=0` keeps NAS stale in the cache.
+**Shipping system Projected = NAS - 2 or -3** - stacked un-evicted overlays from prior sessions accumulating in the persistent overlay file on disk, because eviction requires `backendQty` to reach `overlayQty`, which never happens when `Refresh=0` keeps NAS stale in the cache.
 
 ***
 ## The Actual New Break Introduced by the Fixes
@@ -159,7 +159,7 @@ Until Fix 0 is in place, the overlay file on disk will accumulate entries. Find 
 ? modTS_Shipments.PendingBoxVersionInventoryOverlayPath()
 ```
 
-Delete or empty that file. This resets the Shipments form `Projected Inv` to match `NAS Inv` cleanly on next load, so you can see a clean baseline once the bridge is fixed.
+Delete or empty that file. This resets the Shipping system `Projected Inv` to match `NAS Inv` cleanly on next load, so you can see a clean baseline once the bridge is fixed.
 
 ***
 ### Fix 2 (Rollback of last session's Fix 2): Revert the `SHIP_RESERVE`/`SHIP_RELEASE` removal from `BuildBoxVersionInventoryCache`
@@ -181,7 +181,7 @@ If refreshMs = 0 And processedCount > 0 Then
 End If
 ```
 
-This prevents the Shipments form from falsely concluding its overlay state is clean after a sync where the log didn't refresh. The `AutoSync: refresh failed` message already surfaces, but the form currently proceeds to update its display against stale data anyway.
+This prevents the Shipping system from falsely concluding its overlay state is clean after a sync where the log didn't refresh. The `AutoSync: refresh failed` message already surfaces, but the system currently proceeds to update its display against stale data anyway.
 
 ***
 ## TL;DR
