@@ -16,6 +16,7 @@
 - Keeps Core and both Domain XLAMs separate and headless.
 - Preserves independent role modules, forms, capabilities, staging, inboxes, and event contracts.
 - Adds legacy role-add-in retirement, coexistence prevention, selective project builds, package-manifest validation, and consolidated-package test gates.
+- Adds a scoped test-first development rule for Core, Domain, service, and high-risk form-action work.
 
 ---
 ## Release Strategy
@@ -446,6 +447,43 @@ invSys.Admin.xlam
 - Removes duplicate role bootstrap, connection, sign-in, status, and RibbonX wiring.
 - Shortens normal development packaging from three role binaries to one Operations binary.
 - Preserves the Core/Domain/Role boundaries and distinct operator workflows.
+
+---
+### D13 -- Test-First Development for Core, Domain, Service, and Form-Action Contracts (R1 Locked)
+**Decision:** New behavior and defect corrections must be driven by a failing automated test before implementation wherever VBA can exercise the contract deterministically. The required sequence is **RED -> GREEN -> REFACTOR**. Manual observation may discover a defect or clarify expected behavior, but it is not completion evidence.
+
+**Core, Domain, processor, and service-layer rule:**
+```text
+Before changing Core, Inventory Domain, Designs Domain, processor application,
+typed run-session logic, completion services, event builders, projection
+builders, or other non-visual contract code:
+
+1. Write or select the automated test that expresses the intended contract.
+2. Run it and record RED: it fails for the expected missing/incorrect behavior.
+3. Implement the smallest contract-compliant change.
+4. Run it and record GREEN.
+5. Refactor only while the focused test and relevant regression set remain green.
+```
+
+The RED result must be meaningful. A failure caused only by an unrelated compile error, missing fixture, unavailable workbook, or broken test harness does not prove the target behavior.
+
+**Form, RibbonX, and worksheet-event rule:** Strict unit-level TDD is not required for purely visual layout, native window behavior, or Excel event wiring that cannot be isolated reasonably. High-risk form actions are still test-first at the integration boundary:
+- The packaged two-batch Operations/Production form-action test must be written and observed failing before the Production run-session/completion UI refactor begins.
+- That test must exercise the same form event handlers, selections, Apply, Check In, Complete Run, refresh, and Next Batch behavior used by an operator; calling the completion service directly is not a substitute.
+- Ribbon callbacks and worksheet-bound actions require a failing packaged callback/action test before their behavior is changed.
+- Visual-only work requires acceptance geometry or screenshot criteria defined before implementation, followed by automated bounds/overlap checks where practical and visible inspection.
+
+**Completion prohibition:** A Production/Operations, Core, Domain, processor, or service-layer change is not complete when its first relevant automated test was written only after the implementation had already been observed working manually. A retrospective regression test is valuable, but it does not satisfy D13 for that change. The slice must return to a reproducible RED condition—against the pre-fix code or an equivalent isolated seam—before GREEN completion is claimed.
+
+**Session and drift-prevention rule:** At the start of a development session or slice:
+1. Name the contract being changed and the test that currently protects it.
+2. If no such test exists, create the failing test before editing implementation code.
+3. Record the focused RED/GREEN commands or harness entry points in the slice result or generated implementation/baton artifact.
+4. Treat absence of a pre-implementation failing test as a spec-process violation to resolve, not as an optional documentation concern.
+
+**Evidence rule:** Test result artifacts must distinguish pre-implementation RED evidence from post-implementation GREEN/regression evidence. A generated report may maintain this evidence, but generated documentation does not replace the normative behavior and ordering requirements in this decision.
+
+**Rationale:** VBA's manual harness works well for pure logic, payloads, schemas, event application, projections, and service contracts, but Excel UI automation is less deterministic. This scoped rule puts strict test-first discipline on the layers where it is reliable and requires test-first integration targets for the UI paths that have historically failed after manual-only development.
 
 ---
 ## System Topology (Release 1: VBA-Only)
@@ -1208,6 +1246,8 @@ If any of those are false, LAN architecture may be partially proven, but LAN end
 - [ ] Retire and unregister the standalone `invSys.Receiving.xlam`, `invSys.Production.xlam`, and `invSys.Shipping.xlam` packages; detect and reject stale coexistence
 - [ ] Add selective complete-project builds for `invSys.Operations.xlam` and full five-package builds at integration checkpoints
 - [ ] Add a package manifest/version-coherence check proving exactly the five D12 XLAMs are published
+- [ ] Define the typed Production run-session and completion-service contracts with focused failing tests before implementation begins
+- [ ] Write and record RED for a packaged two-batch Production form-action test before refactoring the Production UI/run-session wiring
 - [ ] Move NAS connection handling, remembered warehouse target selection, and runtime resolver priority into Core per `D-NAS_Procedure_Contract.md`; expose shared storage connection, invSys sign-in, sign-out, and current-user status controls from the Operations ribbon and the Admin ribbon
 - [ ] Prove operator `invSys` tables refresh from snapshot copy/import without mutating local workflow/staging tables
 - [ ] Expose and validate read-model freshness metadata (`LastRefreshUTC`, `SnapshotId`, `SourceType`, `IsStale`) in operator workbooks
@@ -1229,6 +1269,8 @@ If any of those are false, LAN architecture may be partially proven, but LAN end
 - [ ] Test: Operations role groups and write actions enforce their independent capabilities
 - [ ] Test: Legacy standalone role XLAMs are absent after upgrade and diagnostics fail clearly if one is loaded beside `invSys.Operations.xlam`
 - [ ] Test: Operations startup and RibbonX callbacks execute once without duplicate tabs, callback collisions, or duplicate startup mutation
+- [ ] Test: D13 evidence records the focused Production run-session/completion tests failing for the expected reason before implementation and passing afterward
+- [ ] Test: The packaged form-action path completes two consecutive batches through actual Apply, Check In, Complete Run, refresh, and Next Batch handlers
 - [ ] Test: Receiving/Shipping/Production/Admin workflows complete from saved `.xlsm` / `.xlsb` operator workbooks under one-account use
 - [ ] Test: The Operations ribbon can connect to a NAS/server warehouse root, select the intended warehouse target, sign in/out as an invSys user without Admin loaded, show signed-out state without Windows/NAS fallback identity, and retain the selected target across form/ribbon refresh without silently falling back to a local runtime
 - [ ] Test: Manual snapshot refresh updates the operator `invSys` read model without clearing `ReceivedTally`, shipping staging, production staging, or workbook-local logs
@@ -1295,6 +1337,16 @@ If any of those are false, LAN architecture may be partially proven, but LAN end
 - [ ] Release 1.0 ready for production
 
 ## Testing Strategy (Release 1: VBA)
+### Development Order (D13)
+Testing is part of implementation, not a retrospective explanation of manually discovered failures.
+
+- Core, Domain, processor, projection, event-builder, typed run-session, and completion-service changes follow RED -> GREEN -> REFACTOR.
+- The focused test must fail for the expected behavioral reason before implementation changes.
+- Production/Operations form refactors begin only after the packaged two-batch form-action target is written and failing.
+- Purely visual work defines geometry/screenshot acceptance criteria first and uses automated bounds/overlap checks where practical.
+- Result artifacts identify the focused RED evidence, GREEN evidence, and relevant regression set.
+- A test added only after the implementation is manually observed working is a regression test, not D13 test-first evidence.
+
 ### Unit Tests (VBA)
 **Framework:** Manual VBA test harness
 
