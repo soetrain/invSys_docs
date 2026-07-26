@@ -1,7 +1,7 @@
-# invSys Architecture v4.10 - Release 1 Plan
+# invSys Architecture v4.11 - Release 1 Plan
 **Project:** invSys Multi-Warehouse Inventory System  
-**Version:** 4.10 (VBA Release 1)  
-**Date:** June 25, 2026  
+**Version:** 4.11 (VBA Release 1)  
+**Date:** July 26, 2026  
 **Author:** Codex  
 **Purpose:** Complete architectural specification for Release 1 (VBA/Excel only).
 
@@ -10,29 +10,38 @@
 - `https://www.perplexity.ai/search/https-github-com-soetrain-invs-IL_KZ22YSsW5kMph4kOzxA?preview=1#7`
 - `https://www.perplexity.ai/search/this-is-my-retconned-plan-plan-1l63Rt2_SDSKyOklg90qdA#7`
 
+### v4.11 Revision Summary
+- Consolidates Receiving, Production, and Shipping deployment into `invSys.Operations.xlam`.
+- Reduces operator-visible invSys ribbon tabs to one Operations tab, with a second Admin tab only on administrative setups.
+- Keeps Core and both Domain XLAMs separate and headless.
+- Preserves independent role modules, forms, capabilities, staging, inboxes, and event contracts.
+- Adds legacy role-add-in retirement, coexistence prevention, selective project builds, package-manifest validation, and consolidated-package test gates.
+
 ---
 ## Release Strategy
 ### Release 1: VBA-Only Foundation (AUTHORITATIVE FOR SHIPPING)
 **Scope:** Complete event-sourced inventory system implemented entirely in VBA/Excel.
 - Core: Auth, Config, LockManager, Processor (VBA)
 - Domain: InventoryDomain, DesignsDomain (VBA)
-- Role UIs: Receiving, Shipping, Production (VBA + RibbonX)
+- Role UIs: Receiving, Shipping, Production (VBA + RibbonX), packaged together in `invSys.Operations.xlam`
 - Admin: Console, processor orchestration (VBA)
 - HQ: Aggregation via VBA macro (Excel-based)
 - Distribution: SharePoint team document library
-- Deployment: XLAM add-ins + workbooks
+- Published deployment set: Five XLAM add-ins (`Core`, `Inventory.Domain`, `Designs.Domain`, `Operations`, `Admin`) + workbooks
 
 **No external dependencies:** R1 requires only Excel + SharePoint (no Python, .NET, or other runtimes).
 
 ### Operator Deployment Model (R1 Locked)
-- XLAM installation is account-scoped. On a given Windows/Excel account, installed invSys XLAMs load into every workbook opened in that Excel session.
+- XLAM installation is account-scoped. On a given Windows/Excel account, each installed invSys XLAM loads into every workbook opened in that Excel session.
 - This is expected baseline behavior for the simplest end-user workflow and is not itself a defect.
+- An operations-only account installs Core, both Domain XLAMs, and Operations. An administrative account also installs Admin.
+- A normal operator sees one invSys ribbon tab, **Operations**. An administrative setup may show **Operations** and **Admin**. Core and both Domain XLAMs are headless.
 - The normal operator path is a saved workbook (`.xlsm` or `.xlsb`) reopened under that shared XLAM session, not an unsaved transient `Book1`.
 - `Book1` / new-blank-workbook testing remains useful as a diagnostic stress case, but Phase 6 completion cannot be claimed from that path alone.
 - Phase 6 proving must explicitly cover four stages in order: one-account local use, multi-PC LAN use, LAN + WAN use, then central aggregation.
 
 ---
-## Progress Tracking (v4.10)
+## Progress Tracking (v4.11)
 **Legend:** `[ ]` not started, `[x]` complete
 
 ### Release 1 Milestones
@@ -150,13 +159,13 @@ reconciliation is performed.
 
 ---
 ### D-NAS -- Three-Layer Warehouse Connection Model
-**Decision:** Runtime warehouse access is a three-layer connection model owned by Core and shared by all role/Admin XLAMs:
+**Decision:** Runtime warehouse access is a three-layer connection model owned by Core and shared by the role modules inside `invSys.Operations.xlam` and by `invSys.Admin.xlam`:
 1. **NAS / Windows credential layer:** establishes the current Windows/Excel session's SMB access to a warehouse root such as `\\100.84.136.19\invSysWH1`.
 2. **Warehouse target layer:** selects the active warehouse runtime root, config workbook, auth workbook, inbox roots, processor identity, and HQ publication context.
 3. **invSys user layer:** signs in the operator against the selected warehouse's auth workbook and enforces role/capability access.
 
 **Rationale:**
-- Receiving, Shipping, and Production operators may not have `invSys.Admin.xlam` loaded, so Admin cannot be the only place where NAS access is established.
+- Receiving, Shipping, and Production operators may not have `invSys.Admin.xlam` loaded, so Admin cannot be the only place where NAS access is established. The Operations ribbon must expose the normal operator connection and sign-in path.
 - A valid NAS login does not identify the invSys operator; it only proves the Excel session can reach the files.
 - A valid invSys user login is scoped to a selected warehouse target and must be validated against that target's auth workbook.
 - A local fallback such as `C:\invSys\WH1` must not silently override a deliberately selected NAS/server warehouse.
@@ -172,20 +181,20 @@ Priority:
 4. Open workbook-local or active runtime config, when explicitly selected or unambiguous
 5. Default local development root such as C:\invSys\WH1
 
-If a higher-priority NAS/server target is unreachable, role/Admin XLAMs must surface
+If a higher-priority NAS/server target is unreachable, Operations/Admin must surface
 a clear connect/reconnect prompt. They must not silently fall back to a local
 warehouse with the same or similar WarehouseId.
 ```
 
-**Operational rule:** Core owns the shared NAS connection UI/API, remembered warehouse target, current user state, and runtime resolver. Admin may expose richer management forms, but Receiving/Shipping/Production must also expose enough ribbon UI to connect to a NAS/server root, select a warehouse target, and sign in as an invSys user.
+**Operational rule:** Core owns the shared NAS connection UI/API, remembered warehouse target, current user state, and runtime resolver. Admin may expose richer management forms, but the shared Operations ribbon must expose enough UI for Receiving/Shipping/Production operators to connect to a NAS/server root, select a warehouse target, and sign in as an invSys user.
 
-**Operator sign-in workflow:** Role XLAMs must allow a normal operator to work without loading `invSys.Admin.xlam`:
-1. **Connect Server** on role XLAMs revalidates the remembered/current warehouse storage target and refreshes visible server status. It does not open the warehouse storage credential/selection form in Receiving, Shipping, or Production.
+**Operator sign-in workflow:** `invSys.Operations.xlam` must allow a normal operator to work without loading `invSys.Admin.xlam`:
+1. **Connect Server** on the Operations ribbon revalidates the remembered/current warehouse storage target and refreshes visible server status. It does not open the warehouse storage credential/selection form in normal Receiving, Shipping, or Production workflows.
 2. Storage credential/selection UI belongs in Admin/setup or Runtime Context troubleshooting, not in the normal role operator path. This is storage authority only.
 3. **Sign In** authenticates the operator as an invSys user against the selected warehouse auth workbook. If no usable target is selected, Sign In tells the operator to connect/select storage first; it does not show NAS credentials as an invSys login.
 4. Ribbon labels show both server state (`Server: Connected ...` / `Server: Not connected`) and user state (`Sign In` / `User: <id>`). Windows, Office, and NAS account names must not be displayed as the invSys user.
 5. **Sign Out** clears only the invSys user session/capability cache. It does not disconnect the remembered NAS/session target.
-6. Role write/send buttons require an allowed warehouse target, a signed-in invSys user, and the required capability. Admin remains the authority for creating invSys users and assigning capabilities, but role XLAM sign-in must not require Admin to be loaded.
+6. Operations write/send buttons require an allowed warehouse target, a signed-in invSys user, and the required capability. Admin remains the authority for creating invSys users and assigning capabilities, but Operations sign-in must not require Admin to be loaded.
 
 **Procedure contract:** The binding VBA API, resolver behavior, ribbon callback rules, credential handling rules, and Phase 6 D-NAS tests are maintained in `D-NAS_Procedure_Contract.md`. This architecture section defines the model; the procedure contract defines the implementation surface.
 
@@ -194,10 +203,12 @@ warehouse with the same or similar WarehouseId.
 **Decision:**
 - **Core:** Authorization gate, orchestration, config, lock manager, processor runner, shared utilities, NAS connection/session handling, warehouse target selection, current-user state, and runtime resolver
 - **Domain XLAMs:** All writes to authoritative data stores + domain invariants
-- **Role XLAMs:** UI + event creation only
+- **Operations XLAM:** Receiving, Production, and Shipping UI + event creation only; the three roles remain separate internal modules/forms
 - **Admin XLAM:** Orchestration console only (invokes Core + domain routines; does not write domain tables directly)
 
-**D-NAS implementation boundary:** Core-owned NAS connection, warehouse target, current-user, and capability-gate procedures must follow `D-NAS_Procedure_Contract.md`. Role and Admin XLAMs consume that Core API; they must not implement independent NAS credential prompts, warehouse target resolvers, current-user caches, or direct capability checks.
+**D-NAS implementation boundary:** Core-owned NAS connection, warehouse target, current-user, and capability-gate procedures must follow `D-NAS_Procedure_Contract.md`. Operations role modules and Admin consume that Core API; they must not implement independent NAS credential prompts, warehouse target resolvers, current-user caches, or direct capability checks.
+
+**Packaging clarification:** Receiving, Production, and Shipping are packaged together in `invSys.Operations.xlam` per D12. Packaging them together does not permit one role module to mutate another role's local workflow state or bypass its event-creation contract.
 
 **Boundary clarification:**
 ```text
@@ -216,7 +227,7 @@ event.
 **Clarification on Domain Reads:**
 ```text
 RULE: Domain XLAMs expose READ-ONLY query functions (e.g., GetOnHandQty, GetBOM,
-ListDesigns). Admin XLAM and Role XLAMs may call these for UI display. WRITE
+ListDesigns). Admin XLAM and Operations role modules may call these for UI display. WRITE
 operations go through Core.Orchestrate only.
 
 Example:
@@ -227,7 +238,7 @@ Example:
 
 ---
 ### D4 -- Forms Strategy (Role-Specific UI + Shared Core)
-**Decision:** Each role add-in implements role-specific search forms optimized for that workflow (`ufReceivingItemSearch`, `ufShippingItemSearch`, `ufProductionItemSearch`, `ufAdminItemSearch`). Shared search logic lives in `Core.ItemSearch` so bug fixes propagate from one code path without form-copy synchronization.
+**Decision:** Each role module implements role-specific search forms optimized for that workflow (`ufReceivingItemSearch`, `ufShippingItemSearch`, `ufProductionItemSearch`, `ufAdminItemSearch`). Receiving, Shipping, and Production forms are packaged inside `invSys.Operations.xlam`; the Admin form remains in `invSys.Admin.xlam`. Shared search logic lives in `Core.ItemSearch` so bug fixes propagate from one code path without form-copy synchronization.
 
 **Rationale:** Receiving, Shipping, Production, and Admin need different search priorities and defaults (vendor/PO focus vs available-to-pick focus vs BOM/WIP focus vs full diagnostics). A mechanical form sync flow assumes uniform forms and does not hold once role UI diverges.
 
@@ -241,10 +252,13 @@ RULE: Core.ItemSearch contains:
   - Role-aware filtering (for example: RECEIVING includes expected receipts,
     SHIPPING defaults to available inventory, PRODUCTION includes BOM links/WIP)
 
-RULE: Each role XLAM contains:
+RULE: Each role module contains:
   - Its own item-search userform (role-specific name and layout)
   - Role-specific grid columns and default filters
   - UI-only behavior and event wiring; business search rules stay in Core.ItemSearch
+
+RULE: Packaging multiple role modules in invSys.Operations.xlam does not merge
+their forms, staging state, event payloads, or capability requirements.
 ```
 
 **Form Ownership Matrix:**
@@ -390,11 +404,55 @@ A may predict local availability and reserve inventory for the operator experien
 - Shipments Sent queues the final shipment event, clears completed rows/locks, and waits for backend/read-model catch-up to change `NAS Inv`.
 
 ---
+### D12 -- Operations Packaging Consolidation (R1 Locked)
+**Decision:** Receiving, Production, and Shipping ship in one deployed add-in, `invSys.Operations.xlam`. It exposes one Excel ribbon tab named **Operations**, with independently capability-gated Receiving, Production, and Shipping groups. `invSys.Admin.xlam` remains a separately installed add-in with a separate **Admin** ribbon tab for administrative setups. `invSys.Core.xlam`, `invSys.Inventory.Domain.xlam`, and `invSys.Designs.Domain.xlam` remain separate headless add-ins with no ribbon tabs.
+
+**Package set:**
+```text
+invSys.Core.xlam
+invSys.Inventory.Domain.xlam
+invSys.Designs.Domain.xlam
+invSys.Operations.xlam
+invSys.Admin.xlam
+```
+
+**Boundary rule:** This is a packaging and operator-navigation change, not a domain or role-responsibility merge. D3 remains binding. Receiving, Production, and Shipping retain separate internal modules, forms, local workflow state, capability checks, event builders, and tests inside the Operations VBA project. Combining the binary must not produce a shared mutable role-state module or a single monolithic role form.
+
+**Ribbon rules:**
+- The Operations tab owns shared server connection, invSys sign-in/sign-out, current-user, warehouse, and runtime-status controls.
+- Receiving, Production, and Shipping appear as distinct groups or launch surfaces on that tab.
+- Each group and each write action remains gated by its existing capability (`RECEIVE_POST`, `PROD_POST`, `SHIP_POST`, and any more specific capability).
+- A user lacking a role capability must not gain that role merely because its code is present in the same XLAM.
+- Operations-only installations do not require `invSys.Admin.xlam`. Administrative installations may load Admin beside Operations, producing at most two invSys ribbon tabs.
+- Core and Domain packages remain headless and must not create tabs, groups, or operator buttons.
+
+**Source and build rules:**
+- Source responsibilities remain separated by role even if the build project imports them into one XLAM.
+- `build-xlam.ps1` must support selecting the complete Operations project as a build target, plus any changed Core/Domain dependency. VBA modules are not independently deployable build products; selecting one changed Operations module still rebuilds the complete `invSys.Operations.xlam`.
+- Integration checkpoints build and validate the complete five-XLAM package.
+- Published packages require a manifest or equivalent validation proving that exactly the five expected XLAM filenames are present and version-coherent.
+- Temporary staging, candidate, hotfix, and validation packages are disposable build outputs and must not be committed as deployed products.
+
+**Upgrade and coexistence rules:**
+- Installation or upgrade to v4.11 must unregister and remove `invSys.Receiving.xlam`, `invSys.Production.xlam`, and `invSys.Shipping.xlam` from the account-scoped Excel add-in load list.
+- The three legacy role XLAMs must not load in the same Excel session as `invSys.Operations.xlam`; simultaneous loading risks duplicate ribbon tabs, callback collisions, duplicate startup mutation, and ambiguous macro routing.
+- Setup and diagnostics must detect stale standalone role add-ins and provide a clear remediation path.
+- Role inbox workbook names, operator workbook names, event types, and capability names do not change solely because of this package consolidation.
+
+**Failure-isolation rule:** Because a compile or startup failure in the combined Operations package can affect all three operator roles, packaged validation must compile and initialize every role module and open every role form before publication. A failure in one role blocks publication of that Operations build; runtime error handling must still isolate a role-form failure so an already loaded Operations tab can report the failing role clearly.
+
+**Rationale:**
+- Reduces operator-visible invSys ribbon tabs from four to one for normal operations, or two when Admin is also installed.
+- Removes duplicate role bootstrap, connection, sign-in, status, and RibbonX wiring.
+- Shortens normal development packaging from three role binaries to one Operations binary.
+- Preserves the Core/Domain/Role boundaries and distinct operator workflows.
+
+---
 ## System Topology (Release 1: VBA-Only)
 ```mermaid
 flowchart TB
   subgraph Warehouse1["Warehouse 1 (LAN-first)"]
-    W1Stations[Receiving/Shipping/Production stations]
+    W1Stations["Receiving/Shipping/Production stations\ninvSys.Operations.xlam"]
     W1Inbox["Station inbox workbooks\ninvSys.Inbox.*.xlsb"]
     W1Proc["Processor (VBA)\nCore.Processor"]
     W1Auth[WH1.invSys.Auth.xlsb]
@@ -485,7 +543,7 @@ End Sub
 ## Item Search (Release 1)
 **Goal:** Fast, local search without external services.
 **Strategy:** Build a cached index table (e.g., `tblItemSearchIndex`) from Inventory and Designs data at open and after processor apply. Load into a `Scripting.Dictionary` for instant lookup. Put normalization, index query, and role filtering in `Core.ItemSearch`.
-**UI:** Each role XLAM uses a role-specific item-search form (`ufReceivingItemSearch`, `ufShippingItemSearch`, `ufProductionItemSearch`, `ufAdminItemSearch`) and role-specific columns/default filters. Search keys remain normalized (SKU, name, alt codes).
+**UI:** Each role module uses a role-specific item-search form (`ufReceivingItemSearch`, `ufShippingItemSearch`, `ufProductionItemSearch`, `ufAdminItemSearch`) and role-specific columns/default filters. The first three forms ship in `invSys.Operations.xlam`; the Admin form ships in `invSys.Admin.xlam`. Search keys remain normalized (SKU, name, alt codes).
 **Performance:** Target sub-second results for thousands of rows on standard warehouse PCs.
 
 ---
@@ -514,9 +572,7 @@ flowchart TB
   ADDINSCURRENT --> XLAMCORE[invSys.Core.xlam]
   ADDINSCURRENT --> XLAMINV[invSys.Inventory.Domain.xlam]
   ADDINSCURRENT --> XLAMDES[invSys.Designs.Domain.xlam]
-  ADDINSCURRENT --> XLAMRECV[invSys.Receiving.xlam]
-  ADDINSCURRENT --> XLAMSHIP[invSys.Shipping.xlam]
-  ADDINSCURRENT --> XLAMPROD[invSys.Production.xlam]
+  ADDINSCURRENT --> XLAMOPS[invSys.Operations.xlam]
   ADDINSCURRENT --> XLAMADMIN[invSys.Admin.xlam]
 
   EVENTS --> EWH1[WH1.Outbox.Events.xlsb]
@@ -546,19 +602,19 @@ flowchart TB
   SRC --> CORE[Core]
   SRC --> INVDOM[InventoryDomain]
   SRC --> DESDOM[DesignsDomain]
-  SRC --> RECV[Receiving]
-  SRC --> SHIP[Shipping]
-  SRC --> PROD[Production]
+  SRC --> OPS[Operations]
   SRC --> ADMIN[Admin]
 
   CORE --> COREM[Modules]
   CORE --> COREC[ClassModules]
-  CORE --> CORER[Ribbon]
-
-  RECV --> RECVF[Forms]
-  RECV --> RECVR[Ribbon]
+  OPS --> OPSRECV[Receiving modules and forms]
+  OPS --> OPSPROD[Production modules and forms]
+  OPS --> OPSSHIP[Shipping modules and forms]
+  OPS --> OPSR[Shared Operations Ribbon]
 ```
 **Tools (R1):** `export-vba.ps1`, `build-xlam.ps1`.
+
+**Build granularity:** `build-xlam.ps1` must support a project-selection mode. During role development it may build the complete `invSys.Operations.xlam` project plus any explicitly changed Core/Domain dependency. It must not claim to deploy an individual VBA module. Full integration and release validation always builds the five-package set defined by D12.
 
 ---
 ## Component Dependency Graph
@@ -572,9 +628,12 @@ graph TD
   InvApply["InventoryDomain.Apply - VBA"]
   DesSchema["DesignsDomain.Schema - VBA"]
   DesApply["DesignsDomain.Apply - VBA"]
-  RecvUI["Receiving.UI - VBA"]
-  ShipUI["Shipping.UI - VBA"]
-  ProdUI["Production.UI - VBA"]
+  subgraph OpsXLAM["invSys.Operations.xlam"]
+    RecvUI["Receiving.UI - VBA"]
+    ProdUI["Production.UI - VBA"]
+    ShipUI["Shipping.UI - VBA"]
+    OpsRibbon["Operations RibbonX"]
+  end
   AdminUI["Admin.UI - VBA"]
   HQVBA["HQ Aggregator - VBA"]
 
@@ -583,6 +642,12 @@ graph TD
   Auth --> RecvUI
   Auth --> ShipUI
   Auth --> ProdUI
+  OpsRibbon --> RecvUI
+  OpsRibbon --> ShipUI
+  OpsRibbon --> ProdUI
+  RecvUI --> Proc
+  ShipUI --> Proc
+  ProdUI --> Proc
   Auth --> Proc
   Lock --> Proc
   InvSchema --> InvApply
@@ -605,6 +670,7 @@ graph TD
   style RecvUI fill:#6a1b9a,stroke:#4a148c,color:#fff
   style ShipUI fill:#6a1b9a,stroke:#4a148c,color:#fff
   style ProdUI fill:#6a1b9a,stroke:#4a148c,color:#fff
+  style OpsRibbon fill:#6a1b9a,stroke:#4a148c,color:#fff
   style AdminUI fill:#6a1b9a,stroke:#4a148c,color:#fff
   style HQVBA fill:#424242,stroke:#1b1b1b,color:#fff
 ```
@@ -720,6 +786,8 @@ sequenceDiagram
 
 **Status note:** Phase 3 is complete for the intended incremental scope. Current implementation uses worksheet-driven role UI/buttons plus inbox event creation, capability gating, shared search logic, role-specific search form shells/wiring, isolated end-to-end role-flow coverage, and working RibbonX tabs/buttons for all role XLAMs. Full workbook/table-backed user systems and XLAM operational hardening are deferred to Phase 6.
 
+**Superseded packaging note (D12):** These completed tasks and their evidence describe the pre-v4.11 package layout. Receiving, Production, and Shipping now target one `invSys.Operations.xlam` package and one Operations ribbon; their separate internal UI and event-creator responsibilities remain valid.
+
 **Tasks:**
 - [x] Build RibbonX XML for all role XLAMs
 - [x] Build Receiving.UI + EventCreator
@@ -794,16 +862,19 @@ sequenceDiagram
 
 **Status note:** Phase 6 is in progress. The dependency-root bootstrap for canonical Core/Auth/Config runtime workbooks is implemented and validated, and packaged workflow automation is partially green, but the system is not yet operationally proven. Current evidence is still weighted toward controlled Excel automation. Single-account saved-workbook use is the minimum operator baseline; LAN, LAN + WAN, and central aggregation proving remain separate hardening gates. Phase 6 is also where D-NAS, D9, and D10 become operationally binding: Core must own shared NAS connection and warehouse target selection, operator `invSys` tables must prove themselves as snapshot-fed read models, and inventory projections must prove themselves as rebuildable non-authoritative views.
 
+**v4.11 package gate:** All Phase 6 packaging, restart, ribbon, and role-workflow evidence produced before D12 is historical evidence for the underlying role behavior, not proof of the consolidated package. Phase 6 must be rerun against the five-XLAM package and the single Operations ribbon before v4.11 packaging can be marked complete.
+
 **Phase 6 LAN operationalization note:** As of v4.7, the former standalone LAN addendum is merged into this Phase 6 section. The rules below are now part of the main authoritative spec and are binding for LAN user-system proving.
 
 **Operational proving ladder (authoritative):**
-1. **One-account use:** One Windows/Excel account with all invSys XLAMs loaded into that account session; operator works from saved `.xlsm` / `.xlsb` files.
+1. **One-account use:** One Windows/Excel account with the applicable D12 package loaded: four XLAMs for operations-only use, or all five when Admin is under test. The operator works from saved `.xlsm` / `.xlsb` files.
 2. **LAN use:** Multiple PCs within one warehouse share the same warehouse runtime path and processor model over the local network.
 3. **LAN + WAN use:** Multiple warehouses and/or remote PCs operate with intermittent connectivity, SharePoint publication, and delayed synchronization.
 4. **Central aggregation:** HQ aggregation and global snapshot production operate correctly against published warehouse artifacts.
 
 **Phase 6 LAN operationalization requirements (binding):**
-- LAN proving cannot be considered complete until NAS connection handling and warehouse target selection are moved into Core and exposed from Receiving, Shipping, Production, and Admin ribbons according to `D-NAS_Procedure_Contract.md`.
+- LAN proving cannot be considered complete until NAS connection handling and warehouse target selection are moved into Core and exposed from the Operations ribbon (shared by Receiving, Production, and Shipping) and the Admin ribbon according to `D-NAS_Procedure_Contract.md`.
+- Operations packaging is not complete until the three standalone role XLAMs are unregistered, absent from the deployed package, and proven unable to coexist accidentally with `invSys.Operations.xlam`.
 - LAN station bootstrap is not complete until config, inbox, and shared-auth provisioning for the station user are complete.
 - The operator-managed inventory list on each station is the local operator workbook's snapshot-fed `InventoryManagement!invSys` table, not a separate local catalog.
 - When `FF_AutoSnapshot = true`, role workbooks must refresh on open, after successful post/write, and on the configured cadence without mutating local staging tables or workbook-local logs.
@@ -958,7 +1029,7 @@ Warehouse host setup:
 4. confirm the shared warehouse runtime contains config, auth, inventory, snapshot, and outbox files
 
 Station setup:
-1. install or copy the rebuilt `deploy/current` XLAMs locally
+1. install or copy the five rebuilt D12 `deploy/current` XLAMs locally
 2. ensure access to the shared warehouse runtime via authenticated SMB
 3. create and share the station inbox root if the processor must reach it over LAN
 4. run station bootstrap to create:
@@ -1038,6 +1109,8 @@ So the operator must understand:
 - `invSys` changes only after processor + snapshot + refresh
 
 ### Operator workflow dependability requirements
+
+Receiving, Production, and Shipping load from one version-coherent `invSys.Operations.xlam`. LAN acceptance therefore performs one Operations add-in load/version check while continuing to validate each role workflow, inbox, capability, and local staging surface independently.
 
 Receiving is dependable on LAN only when:
 - item picker loads from populated `InventoryManagement!invSys`
@@ -1131,7 +1204,11 @@ If any of those are false, LAN architecture may be partially proven, but LAN end
 - [x] Validate XLAM startup/load order, references, and deployment-path behavior in clean Excel sessions
 - [x] Complete end-to-end ribbon-button testing against real role workbooks and tables
 - [ ] Prove role/Admin workflows from saved operator workbooks (`.xlsm` / `.xlsb`) under one-account use
-- [ ] Move NAS connection handling, remembered warehouse target selection, and runtime resolver priority into Core per `D-NAS_Procedure_Contract.md`; expose separate storage connection, invSys sign-in, sign-out, and current-user status controls from Receiving, Shipping, Production, and Admin ribbons
+- [ ] Package Receiving, Production, and Shipping modules/forms into `invSys.Operations.xlam` with one Operations ribbon and independently capability-gated role groups
+- [ ] Retire and unregister the standalone `invSys.Receiving.xlam`, `invSys.Production.xlam`, and `invSys.Shipping.xlam` packages; detect and reject stale coexistence
+- [ ] Add selective complete-project builds for `invSys.Operations.xlam` and full five-package builds at integration checkpoints
+- [ ] Add a package manifest/version-coherence check proving exactly the five D12 XLAMs are published
+- [ ] Move NAS connection handling, remembered warehouse target selection, and runtime resolver priority into Core per `D-NAS_Procedure_Contract.md`; expose shared storage connection, invSys sign-in, sign-out, and current-user status controls from the Operations ribbon and the Admin ribbon
 - [ ] Prove operator `invSys` tables refresh from snapshot copy/import without mutating local workflow/staging tables
 - [ ] Expose and validate read-model freshness metadata (`LastRefreshUTC`, `SnapshotId`, `SourceType`, `IsStale`) in operator workbooks
 - [ ] Operationalize `FF_AutoSnapshot` for dependable LAN role use: on-open refresh, post-write refresh, optional cadence refresh, and visible stale-state signaling
@@ -1144,11 +1221,16 @@ If any of those are false, LAN architecture may be partially proven, but LAN end
 
 **Tests:**
 - [x] Test: Config/Auth auto-bootstrap creates and opens canonical `WHx.invSys.Config.xlsb` / `WHx.invSys.Auth.xlsb` runtime workbooks with seeded tables/default rows
-- [x] Test: Each role/Admin XLAM opens from deployment path with no VBA compile errors and expected workbook surfaces
+- [x] Test: Each pre-D12 role/Admin XLAM opens from deployment path with no VBA compile errors and expected workbook surfaces (historical package evidence)
 - [x] Test: Ribbon controls execute against live workbook/table systems without missing-object/runtime failures
-- [ ] Test: Full packaged XLAM set loads and remains stable across Excel restart/reopen scenarios
+- [ ] Test: The full five-XLAM D12 package loads and remains stable across Excel restart/reopen scenarios
+- [ ] Test: `invSys.Operations.xlam` compiles and initializes Receiving, Production, and Shipping modules/forms in one clean Excel session
+- [ ] Test: An operations-only account shows one Operations ribbon tab; an administrative setup shows Operations and Admin; Core and Domain packages are headless
+- [ ] Test: Operations role groups and write actions enforce their independent capabilities
+- [ ] Test: Legacy standalone role XLAMs are absent after upgrade and diagnostics fail clearly if one is loaded beside `invSys.Operations.xlam`
+- [ ] Test: Operations startup and RibbonX callbacks execute once without duplicate tabs, callback collisions, or duplicate startup mutation
 - [ ] Test: Receiving/Shipping/Production/Admin workflows complete from saved `.xlsm` / `.xlsb` operator workbooks under one-account use
-- [ ] Test: Receiving/Shipping/Production can connect to a NAS/server warehouse root, select the intended warehouse target, sign in/out as an invSys user without Admin loaded, show signed-out state without Windows/NAS fallback identity, and retain the selected target across form/ribbon refresh without silently falling back to a local runtime
+- [ ] Test: The Operations ribbon can connect to a NAS/server warehouse root, select the intended warehouse target, sign in/out as an invSys user without Admin loaded, show signed-out state without Windows/NAS fallback identity, and retain the selected target across form/ribbon refresh without silently falling back to a local runtime
 - [ ] Test: Manual snapshot refresh updates the operator `invSys` read model without clearing `ReceivedTally`, shipping staging, production staging, or workbook-local logs
 - [ ] Test: Missing/stale snapshot marks the operator workbook stale but does not block `Confirm Writes` / inbox posting
 - [ ] Test: Operator `invSys` read model exposes `LastRefreshUTC`, `SnapshotId`, `SourceType`, and `IsStale`
@@ -1163,6 +1245,8 @@ If any of those are false, LAN architecture may be partially proven, but LAN end
 - [ ] Test: Global snapshot remains clearly advisory in UI/output and never overrides warehouse-local authoritative balances
 
 **Execution evidence:**
+> Packaging note: evidence below dated before v4.11/D12 remains valid for the tested behavior but must be rerun against `invSys.Operations.xlam` and the five-package deployment before it satisfies the v4.11 package gate.
+
 - [x] Phase 6 isolated Excel validation passed on March 22, 2026: `7 passed, 0 failed` in `tests/unit/phase6_test_results.md`
 - [x] Phase 6 packaged XLAM smoke validation passed on March 22, 2026: `25 passed, 0 failed` in `tests/unit/phase6_packaged_xlam_results.md`
 - [x] Phase 6 packaged ribbon baseline validation passed on March 22, 2026: `66 passed, 0 failed` in `tests/unit/phase6_packaged_ribbon_results.md` (RibbonX present, callback mappings verified, safe ribbon action targets executed in clean COM session)
@@ -1177,18 +1261,18 @@ If any of those are false, LAN architecture may be partially proven, but LAN end
 - [ ] LAN + WAN Central aggregator operational proving complete
 
 **Deliverables:**
-- [ ] User systems operational across role/Admin XLAMs, for one account use
+- [ ] User systems operational across Operations/Admin XLAMs, for one account use
 - [ ] Full XLAM operational hardening complete, for one account use
 - [ ] Snapshot-fed operator read models operational, with freshness metadata and non-destructive refresh, for one account use
 - [ ] Rebuildable inventory projections operational and proven non-authoritative, for one account use
-- [ ] User systems operational across role/Admin XLAMs, for LAN use
-- [ ] Core-owned NAS connection and warehouse target selection operational across role/Admin XLAMs per `D-NAS_Procedure_Contract.md`, for LAN use
+- [ ] User systems operational across Operations/Admin XLAMs, for LAN use
+- [ ] Core-owned NAS connection and warehouse target selection operational across Operations/Admin XLAMs per `D-NAS_Procedure_Contract.md`, for LAN use
 - [ ] Full XLAM operational hardening complete, for LAN use
 - [ ] Snapshot-fed operator read models operational, with freshness metadata and non-destructive refresh, for LAN use
 - [ ] Auto-refresh contract operational for LAN role workbooks, including visible stale-state signaling and post-write refresh
 - [ ] Station bootstrap operational for LAN use, including shared auth provisioning and role-ready validation
 - [ ] LAN Central aggregator fully working
-- [ ] User systems operational across role/Admin XLAMs, for LAN + WAN use
+- [ ] User systems operational across Operations/Admin XLAMs, for LAN + WAN use
 - [ ] Full XLAM operational hardening complete, for LAN + WAN use
 - [ ] Snapshot-fed operator read models operational, with freshness metadata and non-destructive refresh, for LAN + WAN use
 - [ ] LAN + WAN Central aggregator fully working
@@ -1428,6 +1512,107 @@ projection values as ground truth if they conflict with the log.
 ```
 
 ---
+### Designs Domain Tables (Release 1)
+**Workbook:** `WHx.invSys.Data.Designs.xlsb` (when Designs is enabled)
+
+**`tblDesignEvents` (authoritative design history):**
+```text
+EventID        (text, PK)
+UndoOfEventId  (text, optional)
+AppliedSeq     (number)
+EventType      (text)   DESIGN_CREATE | DESIGN_RELEASE | DESIGN_OBSOLETE
+OccurredAtUTC  (datetime)
+AppliedAtUTC   (datetime)
+WarehouseId    (text)
+StationId      (text)
+UserId         (text)
+DesignId       (text)
+DesignVersion  (text)
+PayloadJson    (text)
+Note           (text, optional)
+```
+
+**`tblAppliedDesignEvents`:**
+```text
+EventID        (text, PK)
+UndoOfEventId  (text, optional)
+AppliedSeq     (number)
+AppliedAtUTC   (datetime)
+RunId          (text)
+SourceInbox    (text)
+Status         (text)   APPLIED | SKIP_DUP
+```
+
+**Design projections (derived, rebuildable):**
+```text
+tblDesigns
+  DesignId
+  DesignVersion
+  DesignType
+  DesignName
+  Description
+  Status                 DRAFT | RELEASED | OBSOLETE
+  EffectiveFromUTC
+  EffectiveToUTC
+  CreatedAtUTC
+  CreatedByUserId
+  ReleasedAtUTC
+  ReleasedByUserId
+  ObsoletedAtUTC
+  ObsoletedByUserId
+  SourceEventID
+
+tblDesignLines
+  DesignId
+  DesignVersion
+  LineNo
+  Process
+  IOType
+  ComponentSKU
+  ComponentDesignId
+  ComponentDesignVersion
+  Qty
+  UOM
+  Percent
+  Instruction
+```
+
+**Designs contract:**
+```text
+`tblDesignEvents` plus `tblAppliedDesignEvents` are the replay/idempotency
+history. `tblDesigns` and `tblDesignLines` are read projections and may be
+rebuilt from that history.
+
+Loading `invSys.Designs.Domain.xlam` must not inspect or mutate role/operator
+workbooks. The XLAM owns schema, validators, lifecycle invariants, projection
+builders, and read-only queries; live state is stored only in
+`WHx.invSys.Data.Designs.xlsb`.
+
+Role/Admin writes must be expressed as inbox events and applied by the
+processor. Read APIs include `ListDesigns` and `GetBOM`.
+```
+
+**`DESIGN_CREATE` payload contract (Release 1):**
+```text
+PayloadJson is an array of objects. The first object supplies the design
+header and may also be the first BOM/recipe line:
+
+  DesignType, DesignName, Description, EffectiveFromUTC, EffectiveToUTC
+
+Each object that represents a line may supply:
+
+  LineNo, Process, IOType, ComponentSKU, ComponentDesignId,
+  ComponentDesignVersion, Qty, UOM, Percent, Instruction
+
+`DESIGN_RELEASE` and `DESIGN_OBSOLETE` identify their target with DesignId and
+DesignVersion and do not require a payload.
+
+The pair (DesignId, DesignVersion) is immutable after DESIGN_CREATE. Editing a
+released or draft design creates a new version; it never rewrites the event or
+projection rows for an existing version.
+```
+
+---
 ### Operator Workbook Tables (Release 1)
 **Workbook:** Saved operator workbook (for example `FRODECO.inventory_management.xlsb`)
 
@@ -1537,6 +1722,7 @@ WarehouseId              (text, PK)
 WarehouseName            (text)
 Timezone                 (text)
 DefaultLocation          (text)
+UomCatalog               (text)   pipe-delimited warehouse UOM values used by role forms
 BatchSize                (number)
 LockTimeoutMinutes       (number)
 HeartbeatIntervalSeconds (number)
@@ -1571,7 +1757,7 @@ Operational LAN bootstrap note:
 
 ## Appendix: Carried Forward from Archived v2 Docs
 ### Config MVP Keys (R1 baseline)
-- Warehouse scope: `WarehouseId`, `WarehouseName`, `Timezone`, `DefaultLocation`, `BatchSize`, `LockTimeoutMinutes`, `HeartbeatIntervalSeconds`, `MaxLockHoldMinutes`, `SnapshotCadence`, `BackupCadence`, `FF_AutoSnapshot`, `AutoRefreshIntervalSeconds`, `PathDataRoot`, `PathBackupRoot`, `PathSharePointRoot`, `DesignsEnabled`, `PoisonRetryMax`, `AuthCacheTTLSeconds`
+- Warehouse scope: `WarehouseId`, `WarehouseName`, `Timezone`, `DefaultLocation`, `UomCatalog`, `BatchSize`, `LockTimeoutMinutes`, `HeartbeatIntervalSeconds`, `MaxLockHoldMinutes`, `SnapshotCadence`, `BackupCadence`, `FF_AutoSnapshot`, `AutoRefreshIntervalSeconds`, `PathDataRoot`, `PathBackupRoot`, `PathSharePointRoot`, `DesignsEnabled`, `PoisonRetryMax`, `AuthCacheTTLSeconds`
 - Station scope: `StationId`, `StationName`, `PathInboxRoot`, `RoleDefault`
 - Feature flags: `FF_DesignsEnabled`, `FF_OutlookAlerts`, `FF_AutoSnapshot`
 
