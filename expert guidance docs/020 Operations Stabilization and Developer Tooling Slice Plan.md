@@ -1,7 +1,7 @@
 # Operations Stabilization and Developer Tooling Slice Plan
 
-**Status:** Revised implementation guidance  
-**Applies to:** invSys Architecture v4.11, especially D3, D9-D13, and Phase 6  
+**Status:** Revised implementation guidance
+**Applies to:** invSys Architecture v4.11, especially D3, D9-D13, and Phase 6
 **Scope:** Receiving, Production, Boxing, Shipping, Operations packaging, code-bloat control, and generated implementation/runtime evidence
 
 ## 1. Purpose and authority
@@ -215,6 +215,25 @@ Receiving, Production, and Shipping do not have identical state machines. Standa
 
 Production identity should use `ITEM_CODE`/SKU plus Location for inventory allocations. Recipe/design identity, batch identity, event identity, and output identity remain separate fields. Legacy worksheet `ROW` may be retained only as migration/display metadata, never as the canonical session key.
 
+### 5.1 Modeless role-form contract
+
+The main Receiving, Production, and Shipping forms open modelessly so operators
+can inspect and use their workbook while a role form remains open. Modal
+confirmation, credential, or narrowly scoped selection dialogs remain permitted
+when the workflow requires an explicit blocking decision.
+
+Modeless operation must not make `ActiveWorkbook`, `ActiveSheet`, or
+`Selection` authoritative. Each main role form captures its intended operator
+workbook and typed workflow/session context when opened. Every action, refresh,
+and render resolves through that captured context. If the workbook closes,
+changes authority, or is no longer valid, the form disables write actions and
+reports the condition instead of silently rebinding to another workbook.
+
+Only one main form instance per role and captured operator context may own a
+live workflow session. Repeated ribbon launches activate the existing valid
+instance or create a new correctly bound instance; they must not create
+duplicate hidden sessions or event subscriptions.
+
 ## 6. D13 execution protocol for every slice
 
 Before implementation:
@@ -309,7 +328,15 @@ Write and observe meaningful RED for:
 
 - Production two consecutive batches through the actual form actions;
 - Receiving Confirm Writes through the actual form action;
-- Shipping/Boxing through Shipments Sent using the actual form actions; and
+- the main Receiving form exposing a selectable Purchasing stub tab that is
+  clearly non-operational and performs no writes;
+- Shipping/Boxing through Shipments Sent using the actual form actions;
+- the main Receiving, Production, and Shipping forms opening modelessly while
+  the captured operator workbook remains usable, without actions drifting to a
+  subsequently activated workbook;
+- the Operations Shipping launcher opening one main Shipping form whose tabs
+  include Box Builder and Box Maker, with no separate Box Builder or Box Maker
+  buttons on the Operations ribbon; and
 - restart/reopen preservation at the highest-risk boundary currently failing.
 
 These tests must use the same selection, Apply, Check In, Complete Run, Confirm Writes, To Shipments, Shipments Sent, refresh, and Next Batch handlers used by operators. Direct service calls are additional tests, not substitutes.
@@ -382,6 +409,8 @@ Remove or isolate:
 Gate:
 
 - Designs-enabled Production reads released Designs Domain recipes only;
+- the Production form opens modelessly and remains bound to its captured
+  operator workbook/session while the operator uses other workbook surfaces;
 - direct typed calls are used inside the Operations project;
 - cross-XLAM bridges use declared primitive/JSON contracts;
 - two-batch packaged form-action test is GREEN;
@@ -413,10 +442,28 @@ staged -> validated -> submitted -> processor applied -> snapshot refreshed -> c
 
 Retire redundant worksheet mutation and legacy posting paths.
 
+The main Receiving form also reserves a `Purchasing` tab as a visible,
+selectable stub for future work. The stub must:
+
+- identify itself clearly as not yet operational;
+- contain no enabled purchasing write/post controls;
+- submit no events and mutate no workbook, Domain, or runtime state;
+- reuse the Receiving form shell rather than opening a separate form; and
+- create no Purchasing button, group, or launch surface on the Operations
+  ribbon.
+
+Adding the stub does not introduce a Purchasing service, capability, event type,
+Domain contract, or implementation slice. Those require a future normative
+design decision and their own test-first plan.
+
 Gate:
 
 - D13 service RED/GREEN evidence;
 - packaged Confirm Writes form-action test GREEN;
+- the Receiving form opens modelessly and remains bound to its captured
+  operator workbook/session;
+- packaged navigation test proves the Purchasing tab exists, is selectable,
+  remains visibly non-operational, and performs no writes or event submission;
 - event identity/idempotency proof;
 - staging clears only after confirmed submission/application according to contract;
 - snapshot refresh is non-destructive; and
@@ -434,10 +481,35 @@ Shipping is large enough to require its own slice. Preserve D11's A+B event loop
 - NAS/read-model refresh; and
 - lock release/compensation.
 
+The main Shipping form becomes the role shell, following the tabbed navigation
+pattern established by the Production form. Shipping workflow surfaces that
+were launched by separate Excel ribbon buttons move into tabs/pages of that
+form. In particular:
+
+- Box Builder is a tab in the main Shipping form;
+- Box Maker is a tab in the main Shipping form;
+- switching tabs preserves the Shipping session and refreshes only the selected
+  workflow surface according to its contract;
+- the same Shipping capability gates continue to protect each tab's write
+  actions; and
+- the Operations ribbon launches the main Shipping form and does not expose
+  separate Box Builder or Box Maker buttons.
+
+This is a navigation and form-composition change. It does not merge Box Builder,
+Box Maker, shipment staging, or Shipments Sent into one mutable workflow state.
+Their controllers/services remain separated behind the tabbed role shell.
+
 Gate:
 
 - D13 service RED/GREEN evidence;
 - packaged Shipping/Boxing form-action test GREEN;
+- the Shipping form opens modelessly and remains bound to its captured operator
+  workbook/session while its tabs and workbook remain usable;
+- packaged navigation test proves the Shipping launcher opens the main Shipping
+  form, the Box Builder and Box Maker tabs exist, and their existing operator
+  actions remain reachable;
+- packaged RibbonX test proves the Operations ribbon contains no direct Box
+  Builder or Box Maker buttons or callbacks;
 - `NAS Inv` is never mutated by local overlays;
 - `Projected Inv` derives only from D11 inputs;
 - Remove releases the exact active lock;
@@ -473,6 +545,12 @@ Promote the shadow package to the deployed `invSys.Operations.xlam`.
 Implement:
 
 - one Operations ribbon with independently gated Receiving, Production, and Shipping groups;
+- modeless main Receiving, Production, and Shipping form launchers with explicit
+  operator-workbook/session binding and duplicate-instance prevention;
+- one Receiving launch surface whose main form includes the non-operational
+  Purchasing stub tab, with no separate Purchasing ribbon button or group;
+- one Shipping launch surface on that ribbon; Box Builder and Box Maker are
+  tabs in the main Shipping form rather than ribbon buttons;
 - shared connection/sign-in/status controls;
 - five-package build and manifest;
 - selective complete-Operations-project build;
@@ -488,6 +566,12 @@ Gate:
 - administrative setup shows at most Operations and Admin;
 - Core/Domain XLAMs remain headless;
 - legacy role XLAMs are absent;
+- each main role form is modeless, leaves its captured operator workbook usable,
+  and cannot redirect an action to a different active workbook;
+- the main Receiving form exposes the Purchasing stub tab and the Operations
+  ribbon exposes no Purchasing button or group;
+- the Operations ribbon has no Box Builder or Box Maker buttons and the main
+  Shipping form exposes both workflows as tabs;
 - every role form compiles and initializes; and
 - failure diagnostics identify the role without silently disabling the other loaded surfaces.
 
@@ -551,4 +635,3 @@ Operations stabilization is complete only when:
 - static and runtime JSON reports are reproducible and redacted;
 - code-bloat metrics are lower and ratcheted against regrowth; and
 - a new session can reconstruct current implementation/runtime state from generated evidence without relying on chat memory.
-
