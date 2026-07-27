@@ -37,8 +37,12 @@ Last verified: 2026-07-27.
 | Slice 2 | Complete | `8776ee8` |
 | Slice 3 | Complete | `1b2f880` |
 | Slice 4 | Complete | `00e54a4`; `tests/integration/slice4_results.md` records focused RED/GREEN and the 15/15, 19/19, 59/59, 62/62, and 19/19 validation runs |
+| Slice 5 | Complete locally; code push blocked by GitHub credentials | `886f18b`; `tests/integration/slice5_results.md` records the 7/13 pre-refactor lock shape, packaged live layer isolation, saved Shipping 2/2, packaged XLAM 59/59, tooling 62/62, and maintenance baseline 19/19 |
 
-The active next slice is Slice 5, pre-refactor packaged behavior locks.
+The active next slice is Slice 6, shadow Operations package and collision
+harness. The code branch push remains blocked because GitHub authenticates the
+local repository as `soetrain`, which lacks permission to
+`justinwj/invSys`; documentation pushes are unaffected.
 
 ## 2. Current baseline and why tooling comes first
 
