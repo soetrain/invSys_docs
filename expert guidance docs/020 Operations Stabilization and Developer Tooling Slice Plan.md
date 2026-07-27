@@ -39,8 +39,10 @@ Last verified: 2026-07-27.
 | Slice 4 | Complete | `00e54a4`; `tests/integration/slice4_results.md` records focused RED/GREEN and the 15/15, 19/19, 59/59, 62/62, and 19/19 validation runs |
 | Slice 5 | Complete locally; code push blocked by GitHub credentials | `886f18b`; `tests/integration/slice5_results.md` records the 7/13 pre-refactor lock shape, packaged live layer isolation, saved Shipping 2/2, packaged XLAM 59/59, tooling 62/62, and maintenance baseline 19/19 |
 | Slice 6 | Complete locally; code push blocked by GitHub credentials | `ee0a376`; `tests/integration/slice6_results.md` records the 10/10 shadow contract, 13/13 packaged shadow validation, zero collision groups, legacy package 59/59, tooling 62/62, and maintenance baseline 19/19 |
+| Slice 7 | Complete locally; code push blocked by GitHub credentials | `eaed0f6`; `tests/integration/slice7_results.md` records focused 9/9, packaged two-batch PASS, shadow 13/13, packaged XLAM 59/59, tooling 62/62, maintenance 19/19, and restart-safe typed session evidence |
 
-The active next slice is Slice 7, Production session and completion service.
+The active next slice is Slice 8, Production controller, legacy retirement, and
+typed internal calls.
 The code branch push remains blocked because GitHub authenticates the
 local repository as `soetrain`, which lacks permission to
 `justinwj/invSys`; documentation pushes are unaffected.
