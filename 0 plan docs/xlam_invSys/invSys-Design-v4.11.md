@@ -17,6 +17,9 @@
 - Preserves independent role modules, forms, capabilities, staging, inboxes, and event contracts.
 - Adds legacy role-add-in retirement, coexistence prevention, selective project builds, package-manifest validation, and consolidated-package test gates.
 - Adds a scoped test-first development rule for Core, Domain, service, and high-risk form-action work.
+- Replaces worksheet `ROW` identity with immutable system-wide `System_Key`,
+  establishes extensible-header rules with managed `Condition`, and adopts a
+  greenfield Generate Warehouse/demo-seed boundary with no old-inventory import.
 
 ---
 ## Release Strategy
@@ -71,13 +74,17 @@ This document provides a single, coherent, Codex AI-ready specification for the 
 3. **Clear Boundaries:** Core (orchestration) / Domain (writes) / Role (UI) separation.
 4. **Idempotent Processing:** Crash-safe, restart-safe event application.
 5. **VBA-First:** R1 runtime is 100% VBA; external runtimes are out of scope.
+6. **Stable Entity Identity:** Durable inventory entities use immutable
+   system-wide `System_Key`; worksheet position and business labels are not
+   identity.
 
 ### System Capabilities
 - Multi-warehouse inventory tracking (receiving, shipping, production).
 - Offline-capable operations with eventual consistency.
 - Role-based access control with capability enforcement.
 - Event-driven architecture with processor-based batch application.
-- Self-healing table schemas with automatic migration.
+- Greenfield managed schemas with extensible headers and rebuildable
+  projections; no old-business-inventory import.
 
 **Advisory-only global visibility:** The central aggregator's global snapshot is advisory only. Each warehouse's `WHx.invSys.Data.Inventory.xlsb` remains the only authoritative inventory store for that warehouse.
 
@@ -359,9 +366,11 @@ that staleness visibly.
 RULE: All inventory writes flow through inbox events + processor application to
 `tblInventoryLog` / `tblAppliedEvents` in `WHx.invSys.Data.Inventory.xlsb`.
 
-RULE: Projection tables such as `tblSkuBalance` and `tblLocationBalance` are
-derived views only. They may be dropped and rebuilt at any time from the event
-log and applied-event ledger without data loss.
+RULE: Detailed `tblInventoryEntities` plus aggregate `tblSkuBalance` and
+`tblLocationBalance` projections are derived views only. They may be dropped
+and rebuilt at any time from the event log and applied-event ledger without
+data loss. Detailed entity rows preserve `System_Key`; aggregate rows group by
+their declared SKU/Location dimensions.
 
 RULE: If a projection conflicts with the event log, the event log wins.
 Operator-facing inventory views must be regenerated from authoritative log state.
@@ -373,7 +382,7 @@ Operator-facing inventory views must be regenerated from authoritative log state
 
 **Projected Inv rule:**
 ```text
-Projected Inv = NAS Inv - active Shipments list quantity for the same package row and version
+Projected Inv = NAS Inv - active Shipments list quantity for the same package System_Key and BOM version
 ```
 
 `Projected Inv` is a local display calculator only. It does not write to `invSys`, does not repair `NAS Inv`, and does not use sent overlays, backend fallback inventory, local `invSys.TOTAL INV`, or reservation totals as its base.
@@ -484,6 +493,92 @@ The RED result must be meaningful. A failure caused only by an unrelated compile
 **Evidence rule:** Test result artifacts must distinguish pre-implementation RED evidence from post-implementation GREEN/regression evidence. A generated report may maintain this evidence, but generated documentation does not replace the normative behavior and ordering requirements in this decision.
 
 **Rationale:** VBA's manual harness works well for pure logic, payloads, schemas, event application, projections, and service contracts, but Excel UI automation is less deterministic. This scoped rule puts strict test-first discipline on the layers where it is reliable and requires test-first integration targets for the UI paths that have historically failed after manual-only development.
+
+---
+### D14 -- System-Wide Entity Identity and Extensible Headers (R1 Locked)
+**Decision:** Every durable inventory entity uses the exact managed header
+`System_Key` as its immutable, system-wide unique identifier. `System_Key`
+replaces the legacy worksheet `ROW` concept. `ITEM_CODE`/SKU identifies what an
+item is; it does not identify one entity. Location, quantity, `Condition`, and
+custom fields are attributes and may change without changing `System_Key`.
+
+**Identity rules:**
+```text
+RULE: System_Key is generated once at the owning creation/service boundary.
+RULE: System_Key is globally unique across warehouses, stations, workbooks,
+      events, and role surfaces.
+RULE: System_Key is opaque and must not be derived from ROW, worksheet
+      position, ITEM_CODE/SKU, item name, Location, or a mutable attribute.
+RULE: Sorting, filtering, refresh, save/reopen, movement, condition changes,
+      event application, snapshot publication, and projection rebuild preserve
+      the same System_Key for the same durable entity.
+RULE: New received inventory and each new Production output entity receive new
+      System_Key values before their creation event is queued.
+RULE: Shipping, Production consumption, reservations, custom attributes, and
+      other entity relationships reference the exact System_Key.
+RULE: ROW is not a managed runtime header, migration key, display key, or
+      compatibility field in the new system.
+```
+
+`EventID`, `RunId`, `DesignId`/`DesignVersion`, shipment IDs, and other
+specialized identifiers remain when they identify a different record or
+workflow concept. They do not replace the affected inventory entity's
+`System_Key`.
+
+**Aggregate projection rule:** SKU and SKU/Location balance tables are
+rebuildable summaries and may group several entities. They do not impersonate
+one contributing entity. Detailed inventory projections and operator inventory
+rows carry `System_Key`; aggregate views use their declared grouping columns.
+
+**Header-extension rules:**
+- Each managed table defines a required managed-header subset, not an exact
+  closed list of columns.
+- Code resolves managed fields by normalized header name and never by fixed
+  ordinal column position.
+- Unknown/end-user-added columns must not make validation fail.
+- Refresh, table resize, snapshot hydration, and projection rebuild must not
+  delete, clear, reorder, or overwrite unknown local columns.
+- Local display/helper columns remain workbook-local.
+- Shared custom fields persist by `System_Key` through a declared custom-field
+  definition/value or event payload contract; a projection rebuild must be able
+  to rematerialize them.
+- Managed names and aliases are reserved so custom headers cannot silently
+  replace a system field.
+- Sensitive custom fields follow the same runtime-report redaction rules as
+  managed sensitive data.
+
+**Condition rule:** `Condition` is a managed inventory header, not an
+uncontrolled custom field. Seeded demo inventory defaults to `GOOD`. Condition
+may change only through the declared event/service path, and partial condition
+changes split the affected quantity into a separately keyed entity when needed.
+Condition describes physical quality; operational availability/hold state
+remains a separate field or projection rule.
+
+**Greenfield boundary:** R1 does not import, translate, reconcile, repair, or
+map old business inventory into this identity model. No legacy `ROW`-to-
+`System_Key` migration is built. Supported test and demonstration state begins
+with Admin Generate Warehouse/Create Warehouse and optional bootstrap or Admin
+`Seed Demo Inventory`. Old unmanaged inventory is left behind.
+
+**Generate/seed acceptance contract:**
+- Fresh Inventory Domain, snapshot, and operator tables contain the required
+  managed headers, including `System_Key` and `Condition`, and contain no `ROW`
+  header.
+- Every seeded durable inventory entity has a nonblank unique `System_Key`.
+- Repeated seed actions create new keys without collisions or unintended
+  overwrites.
+- Processor application, snapshot publication, operator refresh, and reopen
+  preserve the key.
+- Added custom headers survive their declared local/shared persistence boundary.
+- The supported greenfield generation/seed path does not call legacy inventory
+  import or migration behavior.
+
+**D13 gate:** Before changing identity generation, schemas, Admin generation,
+seeding, Inventory Domain application, snapshots, or role hydration, write and
+observe meaningful RED for the applicable contract. At minimum, packaged tests
+must cover Generate Warehouse, `Seed Demo Inventory`, uniqueness, absence of
+`ROW`, `Condition=GOOD`, custom-header preservation, processor application, and
+snapshot/operator round trip.
 
 ---
 ## System Topology (Release 1: VBA-Only)
@@ -1248,6 +1343,10 @@ If any of those are false, LAN architecture may be partially proven, but LAN end
 - [ ] Add a package manifest/version-coherence check proving exactly the five D12 XLAMs are published
 - [ ] Define the typed Production run-session and completion-service contracts with focused failing tests before implementation begins
 - [ ] Write and record RED for a packaged two-batch Production form-action test before refactoring the Production UI/run-session wiring
+- [ ] Replace every managed runtime `ROW` identity/header with the D14
+  `System_Key` contract; do not build legacy inventory import or key mapping
+- [ ] Make Admin Generate Warehouse/Create Warehouse and `Seed Demo Inventory`
+  produce the complete greenfield D14 schema and fake inventory
 - [ ] Move NAS connection handling, remembered warehouse target selection, and runtime resolver priority into Core per `D-NAS_Procedure_Contract.md`; expose shared storage connection, invSys sign-in, sign-out, and current-user status controls from the Operations ribbon and the Admin ribbon
 - [ ] Prove operator `invSys` tables refresh from snapshot copy/import without mutating local workflow/staging tables
 - [ ] Expose and validate read-model freshness metadata (`LastRefreshUTC`, `SnapshotId`, `SourceType`, `IsStale`) in operator workbooks
@@ -1270,6 +1369,9 @@ If any of those are false, LAN architecture may be partially proven, but LAN end
 - [ ] Test: Legacy standalone role XLAMs are absent after upgrade and diagnostics fail clearly if one is loaded beside `invSys.Operations.xlam`
 - [ ] Test: Operations startup and RibbonX callbacks execute once without duplicate tabs, callback collisions, or duplicate startup mutation
 - [ ] Test: D13 evidence records the focused Production run-session/completion tests failing for the expected reason before implementation and passing afterward
+- [ ] Test: D13 RED/GREEN proves Generate Warehouse and `Seed Demo Inventory`
+  create unique immutable `System_Key` values, default `Condition=GOOD`, preserve
+  added headers, and create no `ROW` header
 - [ ] Test: The packaged form-action path completes two consecutive batches through actual Apply, Check In, Complete Run, refresh, and Next Batch handlers
 - [ ] Test: Receiving/Shipping/Production/Admin workflows complete from saved `.xlsm` / `.xlsb` operator workbooks under one-account use
 - [ ] Test: The Operations ribbon can connect to a NAS/server warehouse root, select the intended warehouse target, sign in/out as an invSys user without Admin loaded, show signed-out state without Windows/NAS fallback identity, and retain the selected target across form/ribbon refresh without silently falling back to a local runtime
@@ -1278,7 +1380,10 @@ If any of those are false, LAN architecture may be partially proven, but LAN end
 - [ ] Test: Operator `invSys` read model exposes `LastRefreshUTC`, `SnapshotId`, `SourceType`, and `IsStale`
 - [ ] Test: `FF_AutoSnapshot = true` refreshes `invSys` on open and after successful post/write without mutating local staging or workbook-local logs
 - [ ] Test: Auto-refresh visibly marks stale state when the snapshot is missing or unreadable
-- [ ] Test: Deleting `tblSkuBalance` / `tblLocationBalance` and rerunning processor rebuilds them from `tblInventoryLog` + `tblAppliedEvents` without data loss
+- [ ] Test: Deleting `tblInventoryEntities`, `tblSkuBalance`, and
+  `tblLocationBalance` and rerunning processor rebuilds them from
+  `tblInventoryLog` + `tblAppliedEvents` without data loss or `System_Key`
+  changes
 - [ ] Test: Saved operator workbook reopened on the same account resumes without runtime workbook pollution, stale-XLAM confusion, or workbook identity drift
 - [ ] Test: Two or more LAN stations can append/process without lock corruption, inbox misrouting, or runtime workbook cross-contamination
 - [ ] Test: `setup_lan_station.ps1` provisions shared auth rows for the station user and emits a role-ready validation report
@@ -1498,9 +1603,12 @@ CreatedAtUTC   (datetime)
 WarehouseId    (text)
 StationId      (text)
 UserId         (text)
+System_Key     (text, globally unique immutable inventory entity key)
 SKU            (text)
 Qty            (number)
 Location       (text)
+Condition      (text)
+AttributesJson (text, optional shared custom-field values)
 Note           (text, optional)
 Status         (text)   NEW | PROCESSED | SKIP_DUP | POISON
 RetryCount     (number)
@@ -1524,9 +1632,12 @@ AppliedAtUTC   (datetime)
 WarehouseId    (text)
 StationId      (text)
 UserId         (text)
+System_Key     (text, globally unique immutable inventory entity key)
 SKU            (text)
 QtyDelta       (number)
 Location       (text)
+Condition      (text)
+AttributesJson (text, optional shared custom-field values)
 Note           (text, optional)
 ```
 
@@ -1543,6 +1654,16 @@ Status         (text)   APPLIED | SKIP_DUP
 
 **Projection tables (derived, rebuildable):**
 ```text
+tblInventoryEntities
+  System_Key      (text, PK)
+  SKU             (text)
+  QtyOnHand       (number)
+  Location        (text)
+  Condition       (text)
+  InventoryState  (text)
+  AttributesJson  (text, optional)
+  LastAppliedUTC  (datetime)
+
 tblSkuBalance
   SKU             (text, PK)
   QtyOnHand       (number)
@@ -1551,6 +1672,7 @@ tblSkuBalance
 tblLocationBalance
   SKU             (text)
   Location        (text)
+  Condition       (text)
   QtyOnHand       (number)
   LastAppliedUTC  (datetime)
 ```
@@ -1561,6 +1683,10 @@ Projection tables are derived read views rebuilt by the processor from
 `tblInventoryLog` and `tblAppliedEvents`. They are not authoritative stores.
 Any projection value may be recomputed by replaying the event log. Do not treat
 projection values as ground truth if they conflict with the log.
+
+`tblInventoryEntities` preserves the authoritative event-carried `System_Key`.
+`tblSkuBalance` and `tblLocationBalance` are aggregates and do not substitute a
+SKU or SKU/Location pair for entity identity.
 ```
 
 ---
@@ -1670,11 +1796,15 @@ projection rows for an existing version.
 
 **`tblInvSys` / operator inventory read model:**
 ```text
-SKU             (text, PK/read-model key)
+System_Key      (text, PK)
+SKU             (text)
 ItemName        (text, optional)
 QtyOnHand       (number)
 QtyAvailable    (number, optional)
-LocationSummary (text, optional)
+Location        (text)
+Condition       (text)
+InventoryState  (text, optional)
+AttributesJson  (text, optional shared custom-field values)
 LastAppliedUTC  (datetime, optional)
 LastRefreshUTC  (datetime)
 SnapshotId      (text)
@@ -1685,9 +1815,12 @@ IsStale         (boolean)
 **Schema note:**
 ```text
 `tblInvSys` is the canonical operator-workbook inventory read model shape for R1.
-Role workbooks may include additional display/helper columns, but these columns
-are the minimum contract required for snapshot-fed inventory visibility and
-freshness signaling.
+Each row represents one durable inventory entity and carries its `System_Key`.
+SKU/location summaries are separate derived views. Role workbooks may include
+additional display/helper columns; these columns are the minimum managed
+contract required for snapshot-fed inventory visibility and freshness
+signaling. Snapshot hydration joins by `System_Key` and preserves unknown local
+columns.
 ```
 
 **Local workflow surfaces:**
@@ -1716,7 +1849,7 @@ authoritative inventory ledger.
 
 **Shipping BOM version contract:**
 ```text
-Shipping shippables are identified by their inventory item / PackageRow.
+Shipping shippables are identified by their inventory entity `System_Key`.
 The bill of materials for that shippable is versioned separately.
 
 Runtime authority:
@@ -1842,6 +1975,7 @@ CreatedAtUTC   (datetime)
 WarehouseId    (text)
 StationId      (text)
 UserId         (text)
+System_Key     (text, exact inventory entity being shipped)
 SKU            (text)
 Qty            (number)
 Location       (text)
@@ -1869,6 +2003,10 @@ DesignId       (text)
 DesignVersion  (text)
 QtyPlanned     (number)
 Location       (text, optional)
+InputAllocationsJson (text, System_Key + quantity entries)
+OutputSystemKey (text, new immutable Production output entity key)
+OutputCondition (text)
+OutputAttributesJson (text, optional shared custom-field values)
 Note           (text, optional)
 Status         (text)   NEW | PROCESSED | SKIP_DUP | POISON
 RetryCount     (number)

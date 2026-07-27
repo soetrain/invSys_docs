@@ -213,9 +213,40 @@ Use composition and shared result/envelope contracts:
 
 Receiving, Production, and Shipping do not have identical state machines. Standardize result shapes and transition rules, not business states that are only superficially similar.
 
-Production identity should use `ITEM_CODE`/SKU plus Location for inventory allocations. Recipe/design identity, batch identity, event identity, and output identity remain separate fields. Legacy worksheet `ROW` may be retained only as migration/display metadata, never as the canonical session key.
+### 5.1 Greenfield `System_Key` and extensible-header contract
 
-### 5.1 Modeless role-form contract
+`System_Key` is the immutable, system-wide unique identifier carried with each
+durable entity wherever Excel displays or processes it. `ITEM_CODE`/SKU
+identifies what an inventory item is; `System_Key` identifies the exact entity.
+Location, quantity, `Condition`, and user-defined fields are attributes, not
+identity.
+
+Rules:
+
+- new runtime tables use the exact managed header `System_Key`;
+- `ROW` is deleted from the new runtime contract and is not renamed, copied, or
+  migrated into `System_Key`;
+- invSys does not import or repair legacy business inventory for this reset;
+- new keys are generated only by the owning creation/service boundary and are
+  globally unique across warehouses, stations, workbooks, and entity types;
+- keys are immutable and survive sorting, filtering, refresh, save/reopen,
+  movement, condition changes, and projection rebuild;
+- events and relationships reference the affected `System_Key`;
+- every table defines a required managed-header subset and tolerates additional
+  end-user columns;
+- refresh, resize, and rebuild logic preserves unknown/local columns and does
+  not use ordinal column positions;
+- shared custom values persist by `System_Key`, while workbook-only display
+  columns remain local; and
+- `Condition` is a managed inventory header even though other headers may be
+  extended.
+
+This is a greenfield cutover. There is no legacy `ROW` mapping, old-inventory
+import, or compatibility requirement. Existing unmanaged business data is left
+behind. Test inventory comes only from a newly generated warehouse or the
+Admin `Seed Demo Inventory` tool.
+
+### 5.2 Modeless role-form contract
 
 The main Receiving, Production, and Shipping forms open modelessly so operators
 can inspect and use their workbook while a role form remains open. Modal
@@ -254,6 +285,23 @@ A compile failure, missing fixture, broken harness, or unavailable workbook is n
 
 ## 7. Revised slice sequence
 
+### Entry gate — normative `System_Key` decision
+
+Before Slice 0 begins, amend the normative design specification and
+`AGENTS.md` so they no longer define `ROW` or `(ITEM_CODE, Location)` as
+canonical identity. The specification must define:
+
+- the `System_Key` generation, immutability, reference, and projection rules;
+- extensible managed/shared/local header behavior;
+- `Condition` as a managed inventory field;
+- the greenfield no-import boundary; and
+- the Admin/Create Warehouse seed acceptance contract.
+
+D14 in the normative specification and the matching `AGENTS.md` invariants
+satisfy this architectural entry gate. No runtime implementation of
+`System_Key` begins before the amendment is reviewed together and the required
+D13 RED tests are recorded.
+
 ### Slice 0 — Tool contracts, schemas, and synthetic fixtures
 
 Write failing tests for the scanner and runtime extractor before implementing either tool.
@@ -263,6 +311,8 @@ Deliver:
 - versioned JSON schemas;
 - synthetic VBA/Ribbon fixtures containing direct, dynamic, event, duplicate, and unreachable examples;
 - synthetic runtime workbook/add-in metadata fixtures;
+- synthetic table fixtures with `System_Key`, managed headers, unknown custom
+  headers, and no `ROW` header;
 - redaction tests;
 - deterministic JSON-to-Markdown rendering tests; and
 - the dynamic-root registry format.
@@ -270,7 +320,9 @@ Deliver:
 Gate:
 
 - fixtures demonstrate RED against the absent tools;
-- schemas distinguish static implementation data from runtime data; and
+- schemas distinguish static implementation data from runtime data;
+- scanner/runtime fixtures distinguish managed headers from preserved custom
+  headers and flag `ROW` as a retired runtime contract; and
 - no operational workbook is required for tool unit tests.
 
 ### Slice 1 — Static scanner MVP
@@ -310,7 +362,7 @@ Classify candidates into:
 - replace duplicate;
 - replace same-project late binding;
 - retain as dynamic root;
-- retain temporarily as legacy migration; and
+- remove or isolate abandoned legacy inventory/import paths; and
 - unresolved/manual investigation.
 
 Gate:
@@ -320,7 +372,38 @@ Gate:
 - the backlog separately identifies Production, Receiving, Shipping, and shared-package work; and
 - module-growth ratchets are recorded.
 
-### Slice 4 — Pre-refactor packaged behavior locks
+### Slice 4 — Greenfield warehouse generation and demo inventory seeding
+
+Do not import, translate, or reconcile old operational inventory. Make the
+supported clean-start tools authoritative:
+
+- Admin Generate Warehouse/Create Warehouse;
+- automatic bootstrap demo seed when selected; and
+- Admin `Seed Demo Inventory`.
+
+Write meaningful RED tests before changing implementation. The packaged actions
+must create a fresh warehouse whose Inventory Domain, snapshots, operator read
+models, and fake inventory use `System_Key` and contain no `ROW` header or
+dependency.
+
+Gate:
+
+- every generated durable inventory entity has a nonblank globally unique
+  `System_Key`;
+- repeated seed actions create new keys and do not collide with or overwrite
+  earlier fake inventory;
+- generated Inventory Domain, snapshot, and operator tables contain the required
+  managed headers and tolerate additional custom headers;
+- `Condition` is present and defaults seeded inventory to the allowed value
+  `GOOD`;
+- processor application, snapshot publication, and operator refresh preserve
+  each key;
+- no generated runtime table contains a `ROW` header;
+- no runtime generation/seed path calls legacy inventory import or migration
+  logic; and
+- packaged Admin Generate Warehouse and `Seed Demo Inventory` tests are GREEN.
+
+### Slice 5 — Pre-refactor packaged behavior locks
 
 This slice must precede service extraction.
 
@@ -347,7 +430,7 @@ Gate:
 - current successful legacy behavior is characterized so refactoring does not erase it accidentally; and
 - the test harness can distinguish UI/controller failure from processor/domain failure.
 
-### Slice 5 — Shadow Operations package and collision harness
+### Slice 6 — Shadow Operations package and collision harness
 
 Create a non-deployed `invSys.Operations.xlam` shadow build early. Import the three role source sets without retiring or registering over the existing role add-ins.
 
@@ -369,14 +452,14 @@ Gate:
 - legacy add-ins remain the active operational package; and
 - no duplicate ribbon is registered for normal use.
 
-### Slice 6 — Production session and completion service
+### Slice 7 — Production session and completion service
 
-Write focused service/session RED tests in addition to the Slice 4 packaged RED test.
+Write focused service/session RED tests in addition to the Slice 5 packaged RED test.
 
 Implement:
 
 - typed Production session state;
-- canonical allocation identity;
+- canonical `System_Key` allocation identity;
 - structured completion result;
 - explicit consume/output event identities;
 - processor result verification;
@@ -392,14 +475,14 @@ Gate:
 - the packaged two-batch target advances toward GREEN without weakening assertions; and
 - session state survives the required restart boundary.
 
-### Slice 7 — Production controller, legacy retirement, and typed internal calls
+### Slice 8 — Production controller, legacy retirement, and typed internal calls
 
 Make `frmProduction` a thin controller/renderer over the Production session/service.
 
 Remove or isolate:
 
 - implicit legacy recipe fallback when Designs is enabled;
-- legacy `ROW` authority;
+- every `ROW` header, lookup, display, hidden-list field, and authority path;
 - same-project `Application.Run`;
 - direct canonical workbook writes;
 - duplicate table/header helpers;
@@ -417,11 +500,11 @@ Gate:
 - scanner confirms the targeted legacy paths are absent; and
 - no runtime module exceeds its previous bloat baseline without an exception.
 
-### Slice 8 — Production layout standardization
+### Slice 9 — Production layout standardization
 
 Replace one-off coordinate arithmetic with the v4.11 Windows API plus anchor-based layout standard.
 
-Do not run this in parallel with Slice 7 when both modify `frmProduction`.
+Do not run this in parallel with Slice 8 when both modify `frmProduction`.
 
 Gate:
 
@@ -432,7 +515,7 @@ Gate:
 - no regression in selection or action handlers; and
 - layout metadata appears in the static manifest where practical.
 
-### Slice 9 — Receiving service and form stabilization
+### Slice 10 — Receiving service and form stabilization
 
 Define Receiving's own workflow state and typed posting service:
 
@@ -469,7 +552,7 @@ Gate:
 - snapshot refresh is non-destructive; and
 - scanner confirms retired paths are gone.
 
-### Slice 10 — Shipping and Boxing service stabilization
+### Slice 11 — Shipping and Boxing service stabilization
 
 Shipping is large enough to require its own slice. Preserve D11's A+B event loop while separating:
 
@@ -516,7 +599,7 @@ Gate:
 - shipment replay is idempotent; and
 - restart does not resurrect completed staging or corrupt locks.
 
-### Slice 11 — Reviewed code-bloat cleanup gate
+### Slice 12 — Reviewed code-bloat cleanup gate
 
 Run a dedicated cleanup only after role contracts are protected.
 
@@ -538,7 +621,7 @@ Gate:
 - no new dynamic-root exceptions are added merely to silence the scanner; and
 - generated reports explain retained legacy code.
 
-### Slice 12 — D12 final Operations cutover
+### Slice 13 — D12 final Operations cutover
 
 Promote the shadow package to the deployed `invSys.Operations.xlam`.
 
@@ -575,12 +658,14 @@ Gate:
 - every role form compiles and initializes; and
 - failure diagnostics identify the role without silently disabling the other loaded surfaces.
 
-### Slice 13 — Full chain, restart, and reconciliation validation
+### Slice 14 — Full chain, restart, and reconciliation validation
 
 Validate the actual operator chain against the consolidated package:
 
 ```text
-Receive inventory
+Generate a fresh warehouse
+-> Seed fake inventory through Admin
+-> Receive inventory
 -> processor apply
 -> snapshot/read-model refresh
 -> Production allocation and two batches
@@ -593,6 +678,11 @@ Receive inventory
 
 Required assertions:
 
+- every durable inventory entity carries a unique immutable `System_Key`;
+- `ROW` is absent from generated, canonical, snapshot, and operator runtime
+  tables;
+- managed `Condition` and added custom headers survive the tested refresh and
+  rebuild boundaries;
 - exact input/output quantities and locations;
 - event IDs, statuses, log rows, and idempotent replay;
 - no negative inventory;
@@ -627,6 +717,11 @@ One agent or workstream owns each overlapping file set. Generated reports may be
 
 Operations stabilization is complete only when:
 
+- a fresh warehouse can be generated and seeded without importing legacy
+  inventory;
+- the runtime uses `System_Key` and contains no `ROW` identity dependency;
+- managed and end-user-added headers survive their declared persistence
+  boundaries;
 - D12 five-package deployment is active;
 - D13 RED/GREEN evidence exists for each changed service/form-action contract;
 - Receiving, Production, Boxing, and Shipping pass their packaged action tests;
