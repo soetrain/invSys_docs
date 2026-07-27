@@ -15,13 +15,15 @@ acceptance proof.
 
 - Repository: `/mnt/c/Users/justu/source/repos/invSys_fork`
 - Branch: `codex/fix-tester-station-nas-setup`
-- HEAD: `258a6cdf712142624898d867c98312cb93c5f356`
-- Latest commit: `258a6cd` — `Clean generated XLAM artifacts`
+- HEAD: `d93ad7331fbecb7e61e1edbc47056c8b77690f41`
+- Latest commit: `d93ad73` — `Add agent guidance and remove LaTeX artifacts`
 - Last verified: 2026-07-26
-- `AGENTS.md` is untracked and contains the new session-start, D13, security,
+- `AGENTS.md` is committed and contains the new session-start, D13, security,
   completion, and decision-centered handoff instructions.
+- The old `tikz_playground` `.aux`, `.fdb_latexmk`, `.fls`, `.log`, and `.pdf`
+  generated files are deleted in the pushed commit.
 - The following tracked files are deleted in the working tree. These deletions
-  predate this handoff and were preserved without staging or reversal:
+  remain uncommitted and were preserved without staging or reversal:
   - `excel_after_enable.png`
   - `excel_normal_launch.png`
   - `excel_open_xlam.png`
@@ -37,26 +39,31 @@ acceptance proof.
   - `ribbon_test_open_v3.png`
   - `settings.json`
   - `temp_modAdminConsole_from_xlam.txt`
-  - `tikz_playground.aux`
-  - `tikz_playground.fdb_latexmk`
-  - `tikz_playground.fls`
-  - `tikz_playground.log`
-  - `tikz_playground.pdf`
   - `trusted_path_after_book1.png`
   - `trusted_path_ribbon_check.png`
   - `vbe_foreground.png`
+- Windows Git also reports the following modified fixture workbooks, while WSL
+  Git did not report them. They were not staged or committed:
+  - `tests/fixtures/WH1.invSys.Auth.sample.xlsx`
+  - `tests/fixtures/WH1.invSys.Auth.xlsb`
+  - `tests/fixtures/WH1.invSys.Config.sample.xlsx`
+  - `tests/fixtures/WH1.invSys.Config.xlsb`
+  - `tests/fixtures/WH1.invSys.Data.Inventory.xlsb`
+  - `tests/fixtures/invSys.Inbox.Production.S1.xlsb`
+  - `tests/fixtures/invSys.Inbox.Receiving.S1.xlsb`
+  - `tests/fixtures/invSys.Inbox.Shipping.S1.xlsb`
 
 ### Documentation repository
 
 - Repository: `/mnt/c/Users/justu/source/repos/invSys_docs`
 - Branch: `agent/update-v4-11-operations-packaging`
-- HEAD: `64c415c1f73bfdf114447f15d7236f9ab9a0a164`
-- Latest commit: `64c415c` — `Operations Stabilization and Developer Tooling Slice Plan`
+- Pushed content commit: `ae53841b14041c0f2bf8add0cc89ccaee42edd94`
+- Latest content commit: `ae53841` — `Finalize Operations plan and session handoff`
+- Resolve the final handoff-refresh commit as the current branch HEAD.
 - Upstream: `fork/agent/update-v4-11-operations-packaging`
+- Pull request: `https://github.com/soetrain/invSys_docs/pull/1`
 - Last verified: 2026-07-26
-- `expert guidance docs/020 Operations Stabilization and Developer Tooling Slice Plan.md`
-  is modified after its committed baseline.
-- The 020 working-tree changes add:
+- The finalized 020 changes are committed and pushed. They add:
   - modeless main Receiving, Production, and Shipping forms;
   - explicit captured operator-workbook/session binding;
   - duplicate modeless-instance prevention;
@@ -65,12 +72,9 @@ acceptance proof.
   - removal of separate Box Builder, Box Maker, and Purchasing launch surfaces
     from the Operations ribbon; and
   - packaged navigation/RibbonX gates for those contracts.
-- These files are untracked:
-  - `0 plan docs/xlam_invSys/CURRENT_SPEC.md`
-  - `expert guidance docs/CURRENT.md`
-  - `expert guidance docs/021 Overfit and Details.md`
-  - `last handoff/CURRENT.md`
-  - this handoff
+- The current-spec, current-plan, and current-handoff pointers are committed.
+- `expert guidance docs/021 Overfit and Details.md` is committed as source
+  guidance; it is not the designated current implementation plan.
 
 ### Excel state
 
@@ -140,20 +144,18 @@ acceptance proof.
 ## Assumptions to Re-verify
 
 - Re-verify that the local branches and HEAD commits above are still current.
-- Re-verify that the three pointer files resolve correctly in the next
-  environment; they are currently untracked.
+- Re-verify that the three committed pointer files resolve correctly in the
+  next environment.
 - Re-verify Excel open/closed state before any Excel automation.
-- Remote PR state was not queried while creating this handoff.
+- Documentation PR #1 was open and draft when last verified on 2026-07-26.
 - The proposed tool entry points in 020 remain guidance until Slice 0 freezes
   their schemas and fixtures.
 
 ## Open questions and blockers
 
 - No architectural question blocks Slice 0.
-- The untracked `AGENTS.md`, pointer files, 021 guidance, this handoff, and the
-  modified 020 plan need an intentional commit/push decision.
-- The pre-existing code-repository deletions need ownership confirmation before
-  they are included in any future commit.
+- The remaining code-repository deletions and Windows-Git-only fixture
+  modifications need ownership confirmation before any future commit.
 
 ## Immediate next action
 
