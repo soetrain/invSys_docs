@@ -25,6 +25,21 @@ The objective is not merely to make the current Production form pass one manual 
 - consolidate the three role packages into `invSys.Operations.xlam` without creating another monolith; and
 - prove the complete Receiving -> Production -> Boxing -> Shipping chain through the packaged operator actions.
 
+### 1.1 Implementation progress
+
+Last verified: 2026-07-27.
+
+| Gate | State | Code commit and evidence |
+|---|---|---|
+| Entry gate | Complete | Authority pointers, branches, pull requests, and baseline state verified |
+| Slice 0 | Complete | `8d9f018` |
+| Slice 1 | Complete | `b9d472b` |
+| Slice 2 | Complete | `8776ee8` |
+| Slice 3 | Complete | `1b2f880` |
+| Slice 4 | Complete | `00e54a4`; `tests/integration/slice4_results.md` records focused RED/GREEN and the 15/15, 19/19, 59/59, 62/62, and 19/19 validation runs |
+
+The active next slice is Slice 5, pre-refactor packaged behavior locks.
+
 ## 2. Current baseline and why tooling comes first
 
 The role source currently has approximately:
