@@ -312,4 +312,3 @@ This corrective plan is complete only when:
 - [ ] the dedicated NAS test-runtime checkpoint passes after clean Excel
   restart; and
 - [ ] the user returns the batched acceptance evidence.
-
