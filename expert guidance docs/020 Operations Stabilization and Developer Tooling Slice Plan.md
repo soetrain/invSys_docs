@@ -41,8 +41,9 @@ Last verified: 2026-07-27.
 | Slice 6 | Complete locally; code push blocked by GitHub credentials | `ee0a376`; `tests/integration/slice6_results.md` records the 10/10 shadow contract, 13/13 packaged shadow validation, zero collision groups, legacy package 59/59, tooling 62/62, and maintenance baseline 19/19 |
 | Slice 7 | Complete locally; code push blocked by GitHub credentials | `eaed0f6`; `tests/integration/slice7_results.md` records focused 9/9, packaged two-batch PASS, shadow 13/13, packaged XLAM 59/59, tooling 62/62, maintenance 19/19, and restart-safe typed session evidence |
 | Slice 8 | Complete locally; code push blocked by GitHub credentials | `bb1111c`; `tests/integration/slice8_results.md` records focused 14/14, source Production 41/41, packaged two-batch PASS, shadow 13/13 with zero collisions, packaged XLAM 59/59, tooling 62/62, maintenance 19/19, deployed fixture stripping, captured-workbook authority, and primitive/JSON bridge evidence |
+| Slice 9 | Complete locally; code push blocked by GitHub credentials | `146c73a`; `tests/integration/slice9_results.md` records focused 8/8, packaged 3-size x 4-page and maximized geometry PASS, native window transitions PASS, inspected screenshots, source Production 45/45, shadow 13/13, packaged XLAM 59/59, tooling 62/62, maintenance 19/19, and the explicit declarative-layout diagnostic bloat exception |
 
-The active next slice is Slice 9, Production layout standardization.
+The active next slice is Slice 10, Receiving service and form stabilization.
 The code branch push remains blocked because GitHub authenticates the
 local repository as `soetrain`, which lacks permission to
 `justinwj/invSys`; documentation pushes are unaffected.
