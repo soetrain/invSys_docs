@@ -43,9 +43,10 @@ Last verified: 2026-07-27.
 | Slice 8 | Complete | `bb1111c`; `tests/integration/slice8_results.md` records focused 14/14, source Production 41/41, packaged two-batch PASS, shadow 13/13 with zero collisions, packaged XLAM 59/59, tooling 62/62, maintenance 19/19, deployed fixture stripping, captured-workbook authority, and primitive/JSON bridge evidence |
 | Slice 9 | Complete | `146c73a`; `tests/integration/slice9_results.md` records focused 8/8, packaged 3-size x 4-page and maximized geometry PASS, native window transitions PASS, inspected screenshots, source Production 45/45, shadow 13/13, packaged XLAM 59/59, tooling 62/62, maintenance 19/19, and the explicit declarative-layout diagnostic bloat exception |
 | Slice 10 | Complete | `51356c6`; `tests/integration/slice10_results.md` records focused 10/10, source Receiving 20/20 across workflow/surface/saved-runtime ranges, packaged Receiving action PASS, event replay proof, shadow 13/13, packaged XLAM 59/59, tooling 62/62, maintenance 19/19, and no static-ratchet regression |
+| Slice 11 | Complete | `29a80fe`; `tests/integration/slice11_results.md` records focused 11/11, exact `System_Key` release/restart/replay proof, packaged XLAM 60/60, live role workflow 46/46, RibbonX 156/156, shadow 13/13 with zero collisions, tooling 62/62, maintenance 19/19, and the reviewed tab-composition bloat exception |
 
-The active next slice is Slice 11, Shipping and Boxing service stabilization.
-The code branch, including Slices 5-10, is pushed to
+The active next slice is Slice 12, the reviewed code-bloat cleanup gate.
+The code branch, including Slices 5-11, is pushed to
 `origin/codex/fix-tester-station-nas-setup` on `soetrain/invSys_fork`;
 documentation continues on the existing documentation branch and pull request.
 
