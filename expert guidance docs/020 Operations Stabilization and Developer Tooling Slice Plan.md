@@ -45,9 +45,10 @@ Last verified: 2026-07-27.
 | Slice 10 | Complete | `51356c6`; `tests/integration/slice10_results.md` records focused 10/10, source Receiving 20/20 across workflow/surface/saved-runtime ranges, packaged Receiving action PASS, event replay proof, shadow 13/13, packaged XLAM 59/59, tooling 62/62, maintenance 19/19, and no static-ratchet regression |
 | Slice 11 | Complete | `29a80fe`; `tests/integration/slice11_results.md` records focused 11/11, exact `System_Key` release/restart/replay proof, packaged XLAM 60/60, live role workflow 46/46, RibbonX 156/156, shadow 13/13 with zero collisions, tooling 62/62, maintenance 19/19, and the reviewed tab-composition bloat exception |
 | Slice 12 | Complete | `cab79a9`; `tests/integration/slice12_results.md` records focused 11/11, protected Boxing behavior 3/3, packaged XLAM 60/60, live role workflow 46/46, RibbonX 156/156, shadow 13/13 with zero collisions, tooling 62/62, maintenance 19/19, five fewer runtime components, 164 fewer procedures, 68 fewer maintenance candidates, and 12 fewer duplicate-body groups |
+| Slice 13 | Complete | `b3d7363`; `tests/integration/slice13_results.md` records focused 14/14, exactly five deployed XLAMs with a hash-verified `R1-5` manifest, packaged compile/surface/restart 54/54, one-tab RibbonX 136/136, live consolidated workflow 46/46, shadow 13/13 with zero collisions, tooling 62/62, maintenance 19/19, typed same-project Ribbon callbacks, and legacy-role coexistence remediation |
 
-The active next slice is Slice 13, the D12 final Operations cutover.
-The code branch, including Slices 5-12, is pushed to
+The active next slice is Slice 14, full-chain restart and reconciliation validation.
+The code branch, including Slices 5-13, is pushed to
 `origin/codex/fix-tester-station-nas-setup` on `soetrain/invSys_fork`;
 documentation continues on the existing documentation branch and pull request.
 
