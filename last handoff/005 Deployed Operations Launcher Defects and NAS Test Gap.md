@@ -53,7 +53,9 @@ saved-workbook/NAS acceptance.
 
 ## Decisions and constraints
 
-- Do not refactor while repairing these defects.
+- Assess and reproduce the defects before choosing an implementation strategy.
+  Refactoring is allowed when the evidence and protecting tests show it is the
+  right correction.
 - The Receiving control must create or open the user's station-local Receiving
   operator workbook when no eligible workbook is open, then bind and show the
   modeless Receiving form.
@@ -122,8 +124,8 @@ Symptom-to-test mapping:
 ## Do Not Repeat
 
 - Do not claim actual NAS validation from a test that uses a `%TEMP%` runtime.
-- Do not refactor Production/Shipping or create a shared launcher framework
-  before focused RED identifies the defects.
+- Do not start coding or commit to a local-patch versus refactor strategy before
+  focused RED identifies the defects and affected boundaries.
 - Do not treat `Type mismatch` alone as sufficient diagnostic evidence; capture
   error number, source, and initialization stage.
 - Do not repair the symptom by accepting any active non-add-in workbook.

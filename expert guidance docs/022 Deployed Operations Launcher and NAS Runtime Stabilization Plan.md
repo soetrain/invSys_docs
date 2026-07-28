@@ -20,7 +20,8 @@ Authority remains:
 2. D12 keeps Receiving, Production, and Shipping in
    `invSys.Operations.xlam`.
 3. D13 requires meaningful behavioral RED before implementation.
-4. This document sequences the narrow corrective work.
+4. This document sequences assessment before implementation; the final code
+   scope is evidence-driven.
 5. User-observed deployed behavior is acceptance evidence, not permission to
    mutate operational NAS workbooks during diagnosis.
 
@@ -69,28 +70,39 @@ It did not use:
 The prior 30/30 full-chain result remains valid for its isolated scope. It is
 not evidence that the deployed NAS-connected launcher path passes.
 
-## 4. Non-refactor constraints
+## 4. Assessment before implementation
 
-Until the focused launcher tests are GREEN:
+Do not choose a patch or refactor strategy from the three visible messages
+alone. Before editing runtime code:
 
-- [ ] do not redesign role services, event contracts, Domain boundaries, or
-  package composition;
-- [ ] do not consolidate the three launcher implementations into a new shared
-  framework;
-- [ ] do not move or split large Production or Shipping modules;
-- [ ] do not change form layouts or navigation;
-- [ ] do not change inventory, staging, processor, snapshot, lock, or
-  idempotency behavior except where a focused launcher test proves it is
-  required;
-- [ ] do not use an arbitrary active workbook, canonical config/auth/inventory
-  workbook, snapshot, inbox, Domain XLAM, or Operations XLAM as an operator
-  workbook;
-- [ ] do not write tests against a non-test operational NAS warehouse; and
-- [ ] do not build or deploy XLAMs while Excel has the relevant add-ins or
+- [ ] complete the read-only deployed-runtime entry gate;
+- [ ] reproduce all three failures through the packaged callbacks;
+- [ ] capture the exact failing stage, error number, sanitized source, and
+  description;
+- [ ] compare the loaded package hashes with the intended deployed package;
+- [ ] inspect the complete workbook-resolution and role-workbook provisioning
+  paths; and
+- [ ] identify whether the defects are isolated mistakes or symptoms of a
+  broader launcher/context design problem.
+
+Refactoring is allowed when the assessment and protecting RED demonstrate that
+it is the safer or more maintainable correction. A justified refactor may
+consolidate duplicated launcher/context logic, split responsibilities, or
+change the affected form/controller boundary. It must:
+
+- [ ] preserve the normative D12 package, Domain authority, event,
+  `System_Key`, extensible-header, and captured-workbook contracts;
+- [ ] state why a local patch is insufficient;
+- [ ] define the bounded files, procedures, and contracts being changed before
+  implementation;
+- [ ] add focused tests for every contract moved or generalized;
+- [ ] remain reversible and preserve plan 020 regression evidence;
+- [ ] never accept an arbitrary active workbook, canonical runtime workbook, or
+  XLAM as operator authority;
+- [ ] never use a non-test operational NAS warehouse for write-capable tests;
+  and
+- [ ] never build or deploy XLAMs while Excel has the relevant add-ins or
   workbooks open.
-
-Fixes should be the smallest reversible changes that satisfy the packaged
-callback contract and preserve plan 020 regression evidence.
 
 ## 5. D13 execution sequence
 
