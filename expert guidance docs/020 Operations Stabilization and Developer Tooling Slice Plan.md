@@ -27,7 +27,7 @@ The objective is not merely to make the current Production form pass one manual 
 
 ### 1.1 Implementation progress
 
-Last verified: 2026-07-27.
+Last verified: 2026-07-28.
 
 | Gate | State | Code commit and evidence |
 |---|---|---|
@@ -46,9 +46,10 @@ Last verified: 2026-07-27.
 | Slice 11 | Complete | `29a80fe`; `tests/integration/slice11_results.md` records focused 11/11, exact `System_Key` release/restart/replay proof, packaged XLAM 60/60, live role workflow 46/46, RibbonX 156/156, shadow 13/13 with zero collisions, tooling 62/62, maintenance 19/19, and the reviewed tab-composition bloat exception |
 | Slice 12 | Complete | `cab79a9`; `tests/integration/slice12_results.md` records focused 11/11, protected Boxing behavior 3/3, packaged XLAM 60/60, live role workflow 46/46, RibbonX 156/156, shadow 13/13 with zero collisions, tooling 62/62, maintenance 19/19, five fewer runtime components, 164 fewer procedures, 68 fewer maintenance candidates, and 12 fewer duplicate-body groups |
 | Slice 13 | Complete | `b3d7363`; `tests/integration/slice13_results.md` records focused 14/14, exactly five deployed XLAMs with a hash-verified `R1-5` manifest, packaged compile/surface/restart 54/54, one-tab RibbonX 136/136, live consolidated workflow 46/46, shadow 13/13 with zero collisions, tooling 62/62, maintenance 19/19, typed same-project Ribbon callbacks, and legacy-role coexistence remediation |
+| Slice 14 | Complete | `39da706`; `tests/integration/slice14_results.md` records meaningful focused and behavioral RED, focused GREEN 9/9, the ordered packaged full chain 30/30, exact identity/balance/location assertions, restart and replay reconciliation, five-package runtime extraction, and the static retired-path ratchet |
 
-The active next slice is Slice 14, full-chain restart and reconciliation validation.
-The code branch, including Slices 5-13, is pushed to
+Release 1 and plan 020's Entry Gate and Slices 0-14 are complete. The code
+branch, including Slices 5-14, is pushed to
 `origin/codex/fix-tester-station-nas-setup` on `soetrain/invSys_fork`;
 documentation continues on the existing documentation branch and pull request.
 
