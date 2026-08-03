@@ -1,1 +1,1 @@
-`006 Operations Launchers Open and Seed Demo Inventory Blocks Control UAT.md`
+`007 Admin Seed Green Awaiting Plan 022 Operator Acceptance.md`
