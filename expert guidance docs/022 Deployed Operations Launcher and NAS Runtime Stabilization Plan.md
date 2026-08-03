@@ -275,6 +275,41 @@ After isolated RED/GREEN and regressions pass:
 Do not point this acceptance run at a warehouse containing non-test operational
 inventory.
 
+### Slice 4a â€” Admin Seed Demo Inventory acceptance blocker
+
+The first downstream Admin control checkpoint on 2026-08-02 found that
+**Seed Demo Inventory** flashed Excel and ended with `Application-defined or
+object-defined error`. This is a newly discovered Release 1 acceptance blocker,
+not a reopening of the GREEN Operations launcher contracts.
+
+Required behavior:
+
+- [x] the packaged test invokes `modAdmin.Seed_DemoInventory`, not only
+  `modAdminConsole.SeedDemoInventoryForAutomation`;
+- [x] a valid current warehouse target is used directly without resolving a
+  canonical Config/Auth/inventory workbook as an Admin operating surface;
+- [x] general View Warehouses scanning remains available outside the seed
+  callback;
+- [x] failures identify context resolution versus queue/processor application
+  with error number, sanitized source, and description;
+- [x] the seed creates three new collision-free `System_Key` values with
+  `Condition=GOOD` and no managed `ROW` header; and
+- [x] Config remains byte-for-byte unchanged, Auth table data remains
+  unchanged, and the intended dedicated test inventory/inbox runtime changes.
+
+Gate:
+
+- [x] meaningful packaged RED records the callback failing to reach/complete
+  the selection path within 45 seconds;
+- [x] packaged callback GREEN is recorded against an isolated generated test
+  warehouse with a canonical Config workbook active and read-only;
+- [x] Create Warehouse / repeated seed D14 lifecycle remains GREEN at 15/15;
+- [x] packaged XLAM validation remains GREEN at 54/54;
+- [x] packaged RibbonX remains GREEN at 136/136;
+- [x] the ordered Release 1 full chain remains GREEN at 30/30; and
+- [ ] the operator confirms the visible Admin **Seed Demo Inventory** control
+  succeeds in the dedicated NAS test warehouse.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.
@@ -298,6 +333,10 @@ Exact steps:
 9. Activate a different ordinary workbook and confirm each open role form
    remains bound to its original operator workbook.
 10. Close and reopen Excel, reconnect/sign in, and repeat steps 4-8.
+11. On the Admin tab, click **Seed Demo Inventory**, keep the selected
+    dedicated NAS test warehouse/station, and click **OK**.
+12. Confirm the success dialog appears, then refresh or reopen one role
+    inventory view and confirm the three demo inventory items are visible.
 
 Expected results:
 
@@ -310,6 +349,9 @@ Expected results:
   visible as an operator workbook.
 - Repeated clicks and restart do not create duplicate forms, workbooks, tabs,
   add-ins, or callback execution.
+- Seed Demo Inventory completes against the selected dedicated test warehouse
+  without flashing/hanging, an application/object-defined error, or Admin
+  sheets/tables appearing in Config/Auth/inventory workbooks.
 
 Evidence to return:
 
@@ -317,6 +359,8 @@ Evidence to return:
 - whether each form opened;
 - the operator workbook filename only, not its full user path;
 - whether the second launch reused the same workbook/form; and
+- the full Seed Demo Inventory result dialog and whether the three demo items
+  appeared after refresh; and
 - screenshots of the Operations ribbon and each successful form, with
   sensitive warehouse/user data redacted.
 
