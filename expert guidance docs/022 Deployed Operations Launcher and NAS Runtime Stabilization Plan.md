@@ -310,6 +310,84 @@ Gate:
 - [ ] the operator confirms the visible Admin **Seed Demo Inventory** control
   succeeds in the dedicated NAS test warehouse.
 
+### Slice 4b — Seed snapshot and operator-read-model round trip
+
+The 2026-08-04 operator checkpoint proved that the corrected public callback
+returns and the processor reports one applied seed event, but the reported
+refresh did not visibly prove the D14 round trip. Later read-only inspection
+found the demo entities in all three saved role projections. The expanded
+packaged test then proved the exact callback-to-Receiving round trip. The
+original visible checkpoint remains failed until repeated on the specified
+Receiving inventory controls.
+
+Required behavior:
+
+- [x] the same public `modAdmin.Seed_DemoInventory` callback queues and applies
+  one batch event containing three new durable entities;
+- [x] the canonical event/entity projections contain exactly three new unique
+  `System_Key` values with `Condition=GOOD`;
+- [x] the processor publishes a snapshot containing those three entities;
+- [x] a captured saved role operator workbook refreshes from that snapshot and
+  exposes the same three entities; and
+- [x] acceptance evidence distinguishes event application, snapshot
+  publication, operator refresh, and Receiving-list visibility instead of
+  treating `Applied=1` alone as end-to-end proof.
+
+Gate:
+
+- [x] extend the packaged public-callback harness through snapshot inspection
+  and a captured operator-workbook refresh;
+- [x] preserve the operator-visible RED while the callback reported an applied
+  event;
+- [x] obtain GREEN for canonical, snapshot, operator counts/keys, and the
+  Receiving Refresh form action; and
+- [ ] repeat the visible dedicated-NAS seed/refresh checkpoint.
+
+### Slice 4c — Production native-window resize acceptance blocker
+
+The 2026-08-04 Production screenshot shows the native form window maximized
+while the MultiPage and child controls retain a small base-size footprint in
+the upper-left corner. Existing Slice 9 evidence proves that the window can
+enter the maximized state and that manually assigned form sizes have no
+overlaps. It does not prove that a native maximize resizes the actual UserForm
+client area and anchored content.
+
+Required behavior:
+
+- [x] the packaged test enters through
+  `mProduction.BtnOpenProductionForm` and one saved Production operator
+  workbook;
+- [x] native maximize/restore changes the measurable UserForm client/content
+  geometry, not only the outer HWND state;
+- [x] `mpProduction`, the status box, Close button, and each active page use
+  the available client area without clipping, overlap, or an unused blank
+  majority; and
+- [x] restore returns to a readable supported size.
+
+Gate:
+
+- [x] record focused native-maximize RED from the same public launcher path;
+- [x] obtain automated bounds/fill/overlap GREEN for all four pages;
+- [x] capture redacted before/after screenshots; and
+- [ ] repeat visible Production maximize/restore acceptance.
+
+### Slice 4d — Shipping `ROW` display-key conflict
+
+The form-control inventory found that `frmShipmentsTally` still creates
+`lblRow`, `txtRow`, `hdrShipRow`, and generated shipment-line `ROW` headers.
+This contradicts v4.11 D14, which prohibits `ROW` as a managed runtime header,
+display key, compatibility field, or authority path.
+
+Gate:
+
+- [ ] add focused packaged form-action RED that proves the visible Shipping
+  selection/staging path still exposes or depends on `ROW`;
+- [ ] replace the form and backing path with exact `System_Key` identity;
+- [ ] retain Shipping/Boxing lock, stage, hold/return, Shipments Sent, restart,
+  and version regressions; and
+- [ ] regenerate static maintenance evidence with no prohibited managed
+  `ROW` control/header.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.
@@ -335,8 +413,14 @@ Exact steps:
 10. Close and reopen Excel, reconnect/sign in, and repeat steps 4-8.
 11. On the Admin tab, click **Seed Demo Inventory**, keep the selected
     dedicated NAS test warehouse/station, and click **OK**.
-12. Confirm the success dialog appears, then refresh or reopen one role
-    inventory view and confirm the three demo inventory items are visible.
+12. Confirm the success dialog appears. Open the Receiving form, leave its
+    **Receiving** tab selected, click **Refresh**, enter `DEMO-` in **Search
+    inventory**, and confirm three additional demo entity rows are visible in
+    the top **Inventory** list. Do not use Production's **Recipe Builder** page
+    or Shipping's shippable-box list for this check: neither is the raw
+    inventory view governed by this acceptance step.
+13. Maximize and restore the Production form and confirm the four pages and
+    their controls resize with the window rather than remaining at base size.
 
 Expected results:
 
@@ -352,6 +436,9 @@ Expected results:
 - Seed Demo Inventory completes against the selected dedicated test warehouse
   without flashing/hanging, an application/object-defined error, or Admin
   sheets/tables appearing in Config/Auth/inventory workbooks.
+- The seed result is not accepted until the three entities appear after
+  snapshot/operator refresh.
+- Production content expands and restores with the native form window.
 
 Evidence to return:
 
