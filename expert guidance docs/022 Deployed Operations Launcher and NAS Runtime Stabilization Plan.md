@@ -307,7 +307,7 @@ Gate:
 - [x] packaged XLAM validation remains GREEN at 54/54;
 - [x] packaged RibbonX remains GREEN at 136/136;
 - [x] the ordered Release 1 full chain remains GREEN at 30/30; and
-- [ ] the operator confirms the visible Admin **Seed Demo Inventory** control
+- [x] the operator confirms the visible Admin **Seed Demo Inventory** control
   succeeds in the dedicated NAS test warehouse.
 
 ### Slice 4b — Seed snapshot and operator-read-model round trip
@@ -341,7 +341,7 @@ Gate:
   event;
 - [x] obtain GREEN for canonical, snapshot, operator counts/keys, and the
   Receiving Refresh form action; and
-- [ ] repeat the visible dedicated-NAS seed/refresh checkpoint.
+- [x] repeat the visible dedicated-NAS seed/refresh checkpoint.
 
 ### Slice 4c — Production native-window resize acceptance blocker
 
@@ -380,13 +380,18 @@ display key, compatibility field, or authority path.
 
 Gate:
 
-- [ ] add focused packaged form-action RED that proves the visible Shipping
+- [x] add focused packaged form-action RED that proves the visible Shipping
   selection/staging path still exposes or depends on `ROW`;
-- [ ] replace the form and backing path with exact `System_Key` identity;
-- [ ] retain Shipping/Boxing lock, stage, hold/return, Shipments Sent, restart,
+- [x] replace the form and backing path with exact `System_Key` identity;
+- [x] retain Shipping/Boxing lock, stage, hold/return, Shipments Sent, restart,
   and version regressions; and
-- [ ] regenerate static maintenance evidence with no prohibited managed
+- [x] regenerate static maintenance evidence with no prohibited managed
   `ROW` control/header.
+
+Evidence: `tests/integration/plan022_slice4_controls_results.md`. The focused
+contract is 12/12 GREEN, the packaged Shipping form-action proof preserves exact
+string `System_Key`, and the static baseline records the bounded oversized-form
+and controller exceptions without dynamic-call or duplicate-body regression.
 
 ### Slice 4e — Release 1 surface cleanup and Inventory Viewer
 
@@ -467,6 +472,69 @@ Gate:
   restore; and
 - [x] retain Shipping launcher, list, Boxing, lock, restart, and resize
   regressions.
+
+### Slice 4h — Boxing form usability and layout
+
+The 2026-08-09 visible checkpoint accepted the general form-resize behavior but
+found that Box Builder and Box Maker were omitted from the anchor registration.
+The same checkpoint found the Builder component inventory too narrow, without
+a search control or reliable column/header alignment. Inventory items without
+a Shipping BOM version must display `NA`; version labels belong only to the
+versioned Shipping BOM/design relationship.
+
+Required behavior:
+
+- [x] the Inventory Viewer ribbon button uses a visible built-in Excel icon;
+- [x] Box Builder and Box Maker list controls resize with the native form while
+  keeping buttons, fields, and lists readable and non-overlapping;
+- [x] Box Builder exposes a component-inventory search that filters the already
+  loaded managed inventory choices without mutating an authority workbook;
+- [x] Box Builder and Box Maker list headers use the same declared widths and
+  resize/move contract as their list columns;
+- [x] non-versioned managed inventory displays `NA` in a Version column, while
+  versioned Shipping BOM packages display their active version label; and
+- [x] the public Shipping launcher remains the packaged entry boundary.
+
+Gate:
+
+- [x] focused public-launcher RED records omitted Boxing anchors, absent search,
+  missing/blank non-versioned display, and header drift;
+- [x] packaged grow/shrink/maximize/restore and component-search proof is GREEN;
+- [x] Box Builder save/version, Box Maker make/unmake, Shipping, and restart
+  regressions remain GREEN; and
+- [ ] the user confirms the two Boxing tabs remain readable after resize.
+
+### Slice 4i — Receiving Entries History
+
+The 2026-08-09 visible checkpoint found that the Receiving form's top
+per-entity inventory list duplicates the at-a-glance Viewer and appears
+duplicated because several durable entities may share one item code. The top
+list is therefore a Receiving Entries History projection, not a second current
+inventory viewer. Selecting what to receive remains a separate, deduplicated
+managed-item control backed by the captured operator read model.
+
+Required behavior:
+
+- [x] the top list is titled **Receiving Entries History** and loads completed
+  entries from the captured workbook's `ReceivedLog` table;
+- [x] history search filters receipt date/user/reference/item/code/location and
+  does not mutate staging or authority workbooks;
+- [x] a separate deduplicated managed-item selector supplies the item code and
+  source `System_Key` needed to stage a new receipt entity;
+- [x] each staged receipt still generates a new immutable `System_Key` before
+  queueing, while history retains `EventId` and `System_Key` logging identity;
+  and
+- [x] Refresh updates history, the managed-item selector, and staging without
+  using the history row as inventory authority.
+
+Gate:
+
+- [x] focused RED proves the top list currently reloads `invSys` rather than
+  `ReceivedLog` and that item selection is not separated from history;
+- [x] the packaged `ShowReceivingForm` Refresh and Confirm Writes paths are
+  GREEN with captured-workbook history and staging preserved; and
+- [x] Receiving D14, snapshot refresh, reopen, and full-chain regressions remain
+  GREEN.
 
 ## 6. Batched user acceptance checkpoint
 

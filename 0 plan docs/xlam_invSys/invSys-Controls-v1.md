@@ -1,8 +1,8 @@
 # invSys Form Controls v1
 
-**Version:** 1.2
+**Version:** 1.4
 
-**Inventory date:** 2026-08-09
+**Inventory date:** 2026-08-10
 
 **Architecture:** invSys v4.11, Release 1
 **Scope:** every checked-in VBA UserForm source file used by Core, Admin,
@@ -53,7 +53,7 @@ Excel and repeating the launches, the session remained stable. The returned
 evidence did not include the three workbook filenames, so this catalog does not
 invent them.
 
-### Seed Demo Inventory: 19-row packaged correction GREEN; visible retest pending
+### Seed Demo Inventory: packaged and visible correction GREEN
 
 `frmSeedInventory` displayed and its public callback reported one applied
 processor event. The operator then refreshed, but the three demo entities were
@@ -68,8 +68,9 @@ cases/boxes, and tins, with new `System_Key`, `Condition=GOOD`, and catalog
 metadata. The packaged public callback is now GREEN through the event,
 canonical inventory, catalog, published snapshot, saved Receiving projection,
 and the Receiving form's actual Refresh handler: all 19 entities were visible,
-all keys were unique, and every condition was `GOOD`. A visible retest against
-the dedicated NAS warehouse remains pending.
+all keys were unique, and every condition was `GOOD`. The 2026-08-09 dedicated
+NAS checkpoint confirmed that the visible Seed Inventory action added the
+inventory successfully.
 
 ### Production resizing: corrected; visible retest pending
 
@@ -98,15 +99,19 @@ Production, or Shipping form and never writes, repairs, processes, or refreshes
 an authority workbook. Packaged validation proved repeated launch reused the
 same form generation, local filtering reduced the list to the matching row,
 three snapshot levels loaded, and the inspected snapshot hash did not change.
+The Operations ribbon entry now uses a visible built-in Excel table icon.
 
-### Shipping still exposes prohibited `ROW` controls
+### Shipping visible identity path: `System_Key` correction packaged GREEN
 
-`frmShipmentsTally` currently creates `lblRow`, `txtRow`, `hdrShipRow`, and two
-generated `hdrLineRow*` labels. D14
-prohibits `ROW` as a managed runtime header, display key, compatibility field,
-or authority path. These controls are listed because they exist, and are
-explicitly marked **architecturally invalid**. They must become
-`System_Key`-based controls under a focused D13 correction.
+`frmShipmentsTally` now exposes `System Key` in the shippable list, line editor,
+shipment list, and hold list. The form passes the exact string key to the
+captured-workbook staging, reservation, hold/return, and Shipments Sent paths;
+the event creator emits `System_Key` without a managed `ROW` field. The focused
+source contract is 12/12 GREEN, and the packaged public Shipping launcher proof
+confirms that the control preserves a nonnumeric key and that the reservation
+key is derived from it. Private legacy worksheet-maintenance routines are not
+represented as Release 1 controls or authority paths; they remain subject to
+separate reachability review before removal.
 
 ## 3. Complete form inventory
 
@@ -409,10 +414,11 @@ anchor manager while remaining readable.
 | Tabs | `tabsReceiving` — **Receiving**, **Purchasing** | Switches between the working Receiving page and a reserved Purchasing page. |
 | Receipt identity | `lblReceiptId`, `txtReceiptId` | Shows a generated, locked receipt ID. |
 | Reference | `lblRef`, `txtRef` | Accepts PO/BOL reference text. |
-| Inventory filter | `lblSearch`, `txtSearch` | Filters visible inventory as the user types. |
+| History filter | `lblSearch`, `txtSearch` | Filters Receiving Entries History as the user types. |
+| Managed item | `lblReceiveItem`, `cboReceiveItem` | Selects one deduplicated managed item by code/name while retaining a hidden source `System_Key`. |
 | Quantity | `lblQty`, `txtQty` | Accepts quantity for the selected item; defaults to 1. |
 | Top actions | `btnRefresh`, `btnAdd` | Reloads views or stages the selected item/quantity. |
-| Inventory | `lblInventoryTitle`, `lblInventoryHeader`, `lstInventory` | Displays System_Key, code, item, UOM, inventory, location, and description/vendor. |
+| Receiving history | `lblInventoryTitle`, `lblInventoryHeader`, `lstInventory` | Displays completed `ReceivedLog` entries: date, user, reference, item, quantity, UOM, vendor, location, and code; one hidden column retains `System_Key`. `EventId` remains in the workbook log. |
 | Staged receipt | `lblStagedTitle`, `lblStagedHeader`, `lstStaged` | Displays local Received Tally rows: reference, item, quantity, System_Key. |
 | Aggregate view | `lblAggregateTitle`, `lblAggregateHeader`, `lstAggregate` | Displays aggregated reference/code/vendor/description/item/UOM/quantity/location/System_Key data. |
 | Write actions | `btnConfirm`, `btnClear` | **Confirm Writes** queues supported Receiving events; **Clear** clears local staging. |
@@ -514,18 +520,17 @@ at `Zoom=100`; the user's visible maximize/restore retest remains pending.
 |---|---|---|
 | Heading/history | `lblTitle`, `btnHistory`, `btnHistorySheet`, `btnRefresh` | Shows Shipments, opens history, exports history to a sheet, and refreshes data. |
 | Search/filter | `lblPicker`, `txtPicker`, `chkUseExisting`, `lblSyncState` | Filters boxes, optionally uses existing shippable inventory, and shows pending/complete sync state. |
-| Shippables | `lstShippables` plus `hdrShipBox`, `hdrShipVersion`, `hdrShipInv`, `hdrShipProjected`, `hdrShipLocked`, `hdrShipUom`, `hdrShipLoc`, `hdrShipRow` | Lists Box, Version, NAS Inv, Projected Inv, Locked, UOM, Location, and the current prohibited ROW display. |
-| Line editor | `txtRef`, `txtBox`, `txtVersion`, `txtQty`, `txtUom`, `txtLocation`, `txtRow`, `txtCarrier`, hidden `txtDescription` | Edits reference, quantity, carrier, and selection-backed box/version/UOM/location/legacy ROW fields. |
-| Line labels | `lblRef`, `lblBox`, `lblVersion`, `lblQty`, `lblUom`, `lblLocation`, `lblRow`, `lblCarrier` | Identify the editor fields. |
+| Shippables | `lstShippables` plus `hdrShipBox`, `hdrShipVersion`, `hdrShipInv`, `hdrShipProjected`, `hdrShipLocked`, `hdrShipUom`, `hdrShipLoc`, `hdrShipSystemKey` | Lists Box, Version, NAS Inv, Projected Inv, Locked, UOM, Location, and immutable System Key. |
+| Line editor | `txtRef`, `txtBox`, `txtVersion`, `txtQty`, `txtUom`, `txtLocation`, `txtSystemKey`, `txtCarrier`, hidden `txtDescription` | Edits reference, quantity, and carrier while preserving the selection-backed box/version/UOM/location/System_Key identity. |
+| Line labels | `lblRef`, `lblBox`, `lblVersion`, `lblQty`, `lblUom`, `lblLocation`, `lblSystemKey`, `lblCarrier` | Identify the editor fields. |
 | Line actions | `btnAdd`, `btnUpdate`, `btnRemove` | Adds, updates, or removes a local shipment row. |
 | Shipments list | `lblShipments`, `lstShipments` | Displays active shipment staging rows. |
-| Shipment headers | generated `hdrRef*`, `hdrLineBox*`, `hdrLineQty*`, `hdrLineUom*`, `hdrLineArea*`, `hdrLineLocked*`, `hdrLineRow*`, `hdrLineDesc*`, `hdrLineCarrier*` | Identify Ref, Box, Qty, UOM, Area, Locked, legacy ROW, Version, and Carrier. One header set is built for each shipment/hold list. |
+| Shipment headers | generated `hdrRef*`, `hdrLineBox*`, `hdrLineQty*`, `hdrLineUom*`, `hdrLineArea*`, `hdrLineLocked*`, `hdrLineSystemKey*`, `hdrLineDesc*`, `hdrLineCarrier*` | Identify Ref, Box, Qty, UOM, Area, Locked, System Key, Version, and Carrier. One header set is built for each shipment/hold list. |
 | Shipment actions | `btnStage`, `btnSend`, `btnHold` | Moves rows to shipment staging, sends completed shipments, or places selected rows on hold. |
 | Hold list | `lblHold`, `lstHold`, `btnReturn` | Displays Not Shipped rows and returns selected rows to active staging. |
 
-**D14 conflict:** `hdrShipRow`, `lblRow`, `txtRow`, and both generated
-`hdrLineRow*` labels are architecturally invalid. Their current locked display
-does not make `ROW` permissible.
+**D14 correction:** the visible form and its reachable Release 1 backing path
+use exact string `System_Key`; no numeric value was relabeled as a key.
 
 The uncalled readiness list and header builder were removed after reachability
 review; they were never constructed by the active layout.
@@ -537,6 +542,7 @@ review; they were never constructed by the active layout.
 | Heading/actions | `lblBoxBuilderPage`, `btnBoxBuilderNewPage`, `btnBoxBuilderRefreshPage` | Starts a box definition and reloads box designs. |
 | Designs | `lstBoxBuilderDesignsPage` | Lists design identity/name/version/status metadata. |
 | Component inventory | `lblBoxBuilderInventory`, `lstBoxBuilderInventoryPage`, `lblBoxBuilderComponentQty`, `txtBoxBuilderComponentQty`, `btnBoxBuilderAddComponentPage`, `btnBoxBuilderRemoveComponentPage` | Selects inventory components and quantities for the box definition. |
+| Component search | `txtBoxBuilderSearch` | Filters loaded component choices locally by code, item, description, UOM, or location. |
 | Definition fields | `lblBoxBuilderName`, `txtBoxBuilderName`, `lblBoxBuilderVersion`, `cboBoxBuilderVersion`, `lblBoxBuilderStatus`, `cboBoxBuilderStatus`, `lblBoxBuilderUom`, `txtBoxBuilderUom`, `lblBoxBuilderLocation`, `txtBoxBuilderLocation`, `lblBoxBuilderDescription`, `txtBoxBuilderDescription` | Edits box name, version, Active/Archived status, UOM, location, and description. |
 | Selected components | `lblBoxBuilderComponents`, `lstBoxBuilderComponentsPage` | Displays the component set for the selected version. |
 | Save/version actions | `btnBoxBuilderSavePage`, `btnBoxBuilderUpdateVersionPage`, `btnBoxBuilderNewVersionPage`, `btnBoxBuilderDeleteVersionPage`, `btnBoxBuilderArchivePage`, `btnBoxBuilderDeletePage` | Saves the box, updates or creates a version, deletes a version, archives the box, or deletes it through guarded paths. |
@@ -549,6 +555,12 @@ review; they were never constructed by the active layout.
 | Designs/version | `lstBoxMakerDesignsPage`, `lblBoxMakerVersion`, `cboBoxMakerVersion` | Selects a released box design and version. |
 | Quantity/actions | `lblBoxMakerQty`, `txtBoxMakerQty`, `btnBoxMakerMakePage`, `btnBoxMakerUnmakePage` | Accepts quantity and makes boxes or unboxes them through the event path. |
 | Components | `lblBoxMakerComponents`, `lstBoxMakerComponentsPage` | Displays selected-version component requirements and availability. |
+
+All Builder/Maker list boxes participate in native form resizing. Each list has
+a monospaced header strip whose position and width are recalculated from the
+list geometry after anchor application. A managed item without a Shipping BOM
+version displays `NA`; only a versioned Shipping BOM/package relationship
+displays `v1`, `v2`, and so on.
 
 ### 9.5 `frmBoxVersionSaveChoice`
 
@@ -572,16 +584,15 @@ review; they were never constructed by the active layout.
 | 1. Necessary for Release 1? | Operations/Admin and the active role-form tabs are sufficient. Unreachable shells and unconstructed controls were removed. Inventory Viewer was added as the one missing overview surface; Purchasing remains the intentional Receiving stub. |
 | 2. Operator wording? | Accepted as good enough for Release 1. |
 | 3. Visibility? | Controls may remain visible to all signed-in users for Release 1. Existing capability checks on mutating actions remain defense-in-depth; Inventory Viewer has no role-capability restriction. |
-| 4. Mutation/queue/admin distinction? | **Pending user review.** |
-| 5. Durable identity uses `System_Key`? | **Pending user review.** Shipping's visible `ROW` path remains a known D14 conflict to correct under this item. |
+| 4. Mutation/queue/admin distinction? | **Codex proposal for review:** Search, filters, history, Viewer Refresh, and role Refresh are read-only projections. Add/Update/Remove/Hold/Return and recipe/BOM editing change only captured-workbook staging until an explicit save/post action. Confirm Writes, Production completion, Make/Unmake, and Shipments Sent queue inventory events; the processor is the only inventory authority writer. Admin controls perform named administrative actions and retain capability/re-auth/audit gates. Status text should state `staged`, `queued`, `applied`, or `refreshed` rather than imply that a local edit immediately changed inventory. |
+| 5. Durable identity uses `System_Key`? | **Accepted rule:** every physical inventory entity, inventory event/log row, reservation, shipment, Production allocation/output, and Shipping BOM package/component reference uses immutable `System_Key`. Aggregate quantity views may group by SKU/location and need not impersonate one key. Designs use their specialized three-digit base-36 `DesignId` plus `DesignVersion`; an inventory entity produced from a design still receives its own `System_Key`. `EventId`, shipment IDs, and run IDs identify their own records. The reachable Shipping form/event path now follows this rule and preserves string identity. |
 | 6. Readable resize proportions? | Required. Production, Shipping `txtStatus`, and Viewer anchor/package checks are GREEN. Production maximize/restore and Shipping grow/shrink remain pending visible retest. |
 | 7. Empty shells? | Retired after source reachability review and focused regression contracts. Only the visible Purchasing stub remains intentionally. |
 
-## 11. Known required follow-up before checklist items 4-5
+## 11. Required follow-up to close the control review
 
-- Repeat visible Admin seed and Receiving Refresh acceptance; require all 19
-  newly seeded demo entities rather than three.
 - Repeat visible Production maximize/restore and Shipping grow/shrink checks.
-- Review checklist items 4 and 5. The existing Shipping `ROW` controls and
-  backing identity path remain explicitly unresolved until item 5 is reviewed
-  and the already-planned D14 correction is completed.
+- Review and adjust the proposed checklist item 4 wording if needed.
+- Review private legacy Shipping worksheet-maintenance routines for reachability
+  before removal; they are outside the packaged Release 1 form/action authority
+  path and must not be reintroduced as compatibility behavior.
