@@ -59,7 +59,7 @@
 
 ### Key Architecture Deliverables
 - [x] Core.ItemSearch module implemented (shared normalization/query/filter logic)
-- [x] Role-specific item search forms implemented (`ufReceivingItemSearch`, `ufShippingItemSearch`, `ufProductionItemSearch`, `ufAdminItemSearch`)
+- [x] Shared Core item-search form implemented with role-aware columns and filters
 - [x] Processor idempotency verified with duplicate-event test
 - [x] Schema self-heal validation verified across required workbooks
 
@@ -245,10 +245,10 @@ Example:
 ```
 
 ---
-### D4 -- Forms Strategy (Role-Specific UI + Shared Core)
-**Decision:** Each role module implements role-specific search forms optimized for that workflow (`ufReceivingItemSearch`, `ufShippingItemSearch`, `ufProductionItemSearch`, `ufAdminItemSearch`). Receiving, Shipping, and Production forms are packaged inside `invSys.Operations.xlam`; the Admin form remains in `invSys.Admin.xlam`. Shared search logic lives in `Core.ItemSearch` so bug fixes propagate from one code path without form-copy synchronization.
+### D4 -- Forms Strategy (Shared Search Form + Role Profiles)
+**Decision:** Item search uses one runtime-built Core form, `frmItemSearch`, with role-aware profiles for Receiving, Shipping, Production, and Admin. The caller supplies the role profile; Core owns the shared form, normalization, query, filtering, and dynamic event wiring. Role packages must not carry empty role-named search forms or unused dynamic-form templates.
 
-**Rationale:** Receiving, Shipping, Production, and Admin need different search priorities and defaults (vendor/PO focus vs available-to-pick focus vs BOM/WIP focus vs full diagnostics). A mechanical form sync flow assumes uniform forms and does not hold once role UI diverges.
+**Rationale:** Receiving, Shipping, Production, and Admin need different search priorities and defaults (vendor/PO focus vs available-to-pick focus vs BOM/WIP focus vs full diagnostics), but the Release 1 layouts are produced from one shared runtime builder. Role-aware profiles provide the required behavioral differences without retaining empty copied form shells or synchronizing duplicate designers.
 
 **UI layout note (v4.8):** For complex VBA userforms, prefer the combined method of **Windows API resize plus Andy Pope's anchor-based layout**. The form receives native corner/edge drag resize behavior via Windows API, while controls resize or reposition declaratively through anchors (`Left`, `Top`, `Right`, `Bottom`) rather than per-form coordinate math. This is the preferred future pattern for Admin and other complex forms, and should be reused instead of introducing new one-off resize logic.
 
@@ -259,11 +259,15 @@ RULE: Core.ItemSearch contains:
   - Index query logic for tblItemSearchIndex (Scripting.Dictionary lookups)
   - Role-aware filtering (for example: RECEIVING includes expected receipts,
     SHIPPING defaults to available inventory, PRODUCTION includes BOM links/WIP)
+  - The single runtime-built frmItemSearch and its dynamic event wiring
 
 RULE: Each role module contains:
-  - Its own item-search userform (role-specific name and layout)
-  - Role-specific grid columns and default filters
-  - UI-only behavior and event wiring; business search rules stay in Core.ItemSearch
+  - A role-profile selection for the shared item-search form
+  - Role-specific entry-point behavior; business search rules and shared form
+    event wiring stay in Core.ItemSearch
+
+RULE: Empty role-named search forms and unused dynamic-form-template shells are
+not Release 1 components and must not be packaged.
 
 RULE: Packaging multiple role modules in invSys.Operations.xlam does not merge
 their forms, staging state, event payloads, or capability requirements.
@@ -273,12 +277,7 @@ their forms, staging state, event payloads, or capability requirements.
 | Component | Receiving | Shipping | Production | Admin |
 |---|---|---|---|---|
 | `Core.ItemSearch` (module) | Shared | Shared | Shared | Shared |
-| `ufReceivingItemSearch` | Owns | No | No | No |
-| `ufShippingItemSearch` | No | Owns | No | No |
-| `ufProductionItemSearch` | No | No | Owns | No |
-| `ufAdminItemSearch` | No | No | No | Owns |
-| `ufDynDesignSearchTemplate` | No | No | Copy | Copy |
-| `ufDynAdminTemplate` | No | No | No | Admin only |
+| `frmItemSearch` (runtime-built Core form) | Shared profile | Shared profile | Shared profile | Shared profile |
 
 ---
 ### D5 -- Core.Config Contract (R1 Locked)
@@ -676,8 +675,13 @@ End Sub
 ## Item Search (Release 1)
 **Goal:** Fast, local search without external services.
 **Strategy:** Build a cached index table (e.g., `tblItemSearchIndex`) from Inventory and Designs data at open and after processor apply. Load into a `Scripting.Dictionary` for instant lookup. Put normalization, index query, and role filtering in `Core.ItemSearch`.
-**UI:** Each role module uses a role-specific item-search form (`ufReceivingItemSearch`, `ufShippingItemSearch`, `ufProductionItemSearch`, `ufAdminItemSearch`) and role-specific columns/default filters. The first three forms ship in `invSys.Operations.xlam`; the Admin form ships in `invSys.Admin.xlam`. Search keys remain normalized (SKU, name, alt codes).
+**UI:** Core owns one runtime-built `frmItemSearch`. Receiving, Shipping, Production, and Admin select role-aware columns/default filters when opening it. Empty role-named form copies are prohibited. Search keys remain normalized (SKU, name, alt codes).
 **Performance:** Target sub-second results for thousands of rows on standard warehouse PCs.
+
+### Inventory Viewer (Release 1)
+**Goal:** Give a signed-in operator an at-a-glance, read-only view of current local inventory levels without opening Receiving, Production, or Shipping.
+**Authority:** The Operations Viewer is a projection only. It reads the current published warehouse inventory snapshot on explicit refresh, reports its freshness, and never writes, repairs, processes, or refreshes an authority workbook.
+**UI:** The Operations ribbon exposes **Inventory Viewer** to every signed-in user. Its resizable modeless form supports local search and displays item code, item name, UOM, quantity, location, and condition. Repeated launch reuses the same form instance for the selected warehouse.
 
 ---
 ## Monitoring and Alerts (Release 1)
@@ -917,7 +921,7 @@ sequenceDiagram
 ### Phase 3: Role UI
 **Goal:** Receiving, Shipping, Production UIs
 
-**Status note:** Phase 3 is complete for the intended incremental scope. Current implementation uses worksheet-driven role UI/buttons plus inbox event creation, capability gating, shared search logic, role-specific search form shells/wiring, isolated end-to-end role-flow coverage, and working RibbonX tabs/buttons for all role XLAMs. Full workbook/table-backed user systems and XLAM operational hardening are deferred to Phase 6.
+**Status note:** Phase 3 is complete for the intended incremental scope. Current implementation uses worksheet-driven role UI/buttons plus inbox event creation, capability gating, shared search logic with one role-profiled Core runtime form, isolated end-to-end role-flow coverage, and the consolidated Operations RibbonX surface plus Admin. Full workbook/table-backed user systems and XLAM operational hardening are deferred to Phase 6.
 
 **Superseded packaging note (D12):** These completed tasks and their evidence describe the pre-v4.11 package layout. Receiving, Production, and Shipping now target one `invSys.Operations.xlam` package and one Operations ribbon; their separate internal UI and event-creator responsibilities remain valid.
 

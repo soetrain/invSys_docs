@@ -1,33 +1,32 @@
 # invSys Form Controls v1
 
-**Version:** 1.0
+**Version:** 1.2
 
-**Inventory date:** 2026-08-04
+**Inventory date:** 2026-08-09
 
 **Architecture:** invSys v4.11, Release 1
 **Scope:** every checked-in VBA UserForm source file used by Core, Admin,
-Receiving, Production, or Shipping, including active controls, runtime-created
-controls, inactive source shells, status surfaces, and generated column labels.
+Operations, Receiving, Production, or Shipping, including active controls,
+runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
 
-This is a readable control catalog. It describes the current implementation;
-it does not make every listed control architecturally valid or release-ready.
-The normative authority remains `invSys-Design-v4.11.md`.
+This is the readable Release 1 control catalog after review-checklist answers
+1-3 and 6-7. It describes the implemented source and explicitly labels packaged
+or visible acceptance still pending. The normative authority remains
+`invSys-Design-v4.11.md`.
 
 The catalog was derived from:
 
-- all 34 checked-in `.frm` files under `src`;
+- the 17 retained `.frm` files under `src` after reviewed reachability cleanup;
 - all four checked-in `.frx` designer blobs;
 - the current deployed five-package set in `deploy/current`;
 - runtime control-construction calls and their event handlers; and
-- the 2026-08-04 operator screenshots and acceptance report.
+- the 2026-08-04 and 2026-08-08 operator screenshots and acceptance reports.
 
-The 34 source files produce 31 distinct deployed form components. The three
-role copies named `ufDynItemSearchTemplate` collide by component name and are
-not imported into the consolidated Operations project. Current search windows
-use the role-named empty shells plus `Core.cDynItemSearch`, which adds their
-controls at runtime.
+The retained forms produce 17 distinct components. Item search uses the single
+Core-owned `frmItemSearch` runtime canvas plus role profiles in
+`Core.cDynItemSearch`; no role-named or duplicate template shell remains.
 
 This document covers forms only. Ribbon controls and worksheet buttons are
 outside its scope. The older `controls.md` remains a broader, historical
@@ -40,22 +39,37 @@ status list; this file supersedes it only for the form-control inventory.
 | Active | A current launcher or workflow constructs and uses the form. |
 | Runtime-generated | The `.frm` has an empty designer and creates controls in VBA. |
 | Designer-backed | Controls are stored in a checked-in `.frx` blob. |
-| Shell | The component is packaged but has no deployed controls or useful current workflow. |
-| Deprecated | Source explicitly identifies the form as superseded. |
+| Stub | A visible, intentional Release 1 placeholder, currently Purchasing in Receiving. |
 
 ## 2. Acceptance findings that affect this catalog
 
-### Seed Demo Inventory: automated round trip GREEN; visible retest pending
+### Role launcher/session stability: visible checkpoint passed
+
+Against `WHT7025AE` / `S1`, repeated Receiving, Production, and Shipping
+launches reused their respective saved workbooks and forms; no additional
+operator workbook opened. Activating another workbook did not rebind the forms,
+and minimizing the bound workbook minimized its form with it. After restarting
+Excel and repeating the launches, the session remained stable. The returned
+evidence did not include the three workbook filenames, so this catalog does not
+invent them.
+
+### Seed Demo Inventory: 19-row packaged correction GREEN; visible retest pending
 
 `frmSeedInventory` displayed and its public callback reported one applied
 processor event. The operator then refreshed, but the three demo entities were
 not visible in that checkpoint. Subsequent read-only inspection found the demo
-entities in all three saved role projections, and the expanded packaged test
-proved the same three unique `System_Key` values with `Condition=GOOD` through
+entities in all three saved role projections, and the packaged test proved the
+same three unique `System_Key` values with `Condition=GOOD` through
 canonical inventory, snapshot, saved Receiving workbook, and the Receiving
-form's actual Refresh handler. The operator checkpoint remains failed until the
-rows are verified in the top Inventory list on the Receiving tab; Recipe
-Builder and Shipping's shippable list are not raw inventory views.
+form's actual Refresh handler. That result is insufficient for a complete
+Receiving-to-Production-to-Shipping workflow. The source correction now queues
+one 19-entity batch containing raw ingredients, WIP, finished/shippable goods,
+cases/boxes, and tins, with new `System_Key`, `Condition=GOOD`, and catalog
+metadata. The packaged public callback is now GREEN through the event,
+canonical inventory, catalog, published snapshot, saved Receiving projection,
+and the Receiving form's actual Refresh handler: all 19 entities were visible,
+all keys were unique, and every condition was `GOOD`. A visible retest against
+the dedicated NAS warehouse remains pending.
 
 ### Production resizing: corrected; visible retest pending
 
@@ -66,10 +80,29 @@ correction holds the form at `Zoom=100`; packaged validation now passes native
 minimize/restore/maximize/restore and bounds/fill/overlap checks for all four
 pages. A visible maximize/restore retest remains required.
 
+### Shipping status/message resizing: packaged correction GREEN; visible retest pending
+
+The 2026-08-08 screenshots show `txtStatus` initially above Search Boxes and
+then translated below Search Boxes after a height resize. It was incorrectly
+anchored Left + Right + Bottom. It is now anchored Left + Top + Right, so its
+Top and Height remain fixed while its Width follows the form. The focused
+source contract and the packaged public-launcher grow/shrink proof are GREEN.
+A visible grow/shrink/maximize/restore retest remains pending.
+
+### Inventory Viewer: Release 1 stub packaged GREEN
+
+Operations now contains a signed-in, capability-neutral **Inventory Viewer**
+entry. It opens one reusable modeless form and reads only the current published
+inventory snapshot on explicit refresh. It does not open a Receiving,
+Production, or Shipping form and never writes, repairs, processes, or refreshes
+an authority workbook. Packaged validation proved repeated launch reused the
+same form generation, local filtering reduced the list to the matching row,
+three snapshot levels loaded, and the inspected snapshot hash did not change.
+
 ### Shipping still exposes prohibited `ROW` controls
 
-`frmShipmentsTally` currently creates `lblRow`, `txtRow`, `hdrShipRow`, two
-generated `hdrLineRow*` labels, and an unused `hdrReadyRow` builder. D14
+`frmShipmentsTally` currently creates `lblRow`, `txtRow`, `hdrShipRow`, and two
+generated `hdrLineRow*` labels. D14
 prohibits `ROW` as a managed runtime header, display key, compatibility field,
 or authority path. These controls are listed because they exist, and are
 explicitly marked **architecturally invalid**. They must become
@@ -80,39 +113,22 @@ explicitly marked **architecturally invalid**. They must become
 | Package/source area | Form | Current status | Control surface |
 |---|---|---|---|
 | Admin | `frmAddInventoryItem` | Active, runtime-generated | Add/edit inventory metadata and custom fields |
-| Admin | `frmAdminControls` | Shell | No deployed controls; two handlers reference absent legacy buttons |
 | Admin | `frmAdminDesignLifecycle` | Active, runtime-generated | Design refresh/import/release/obsolete actions |
-| Admin | `frmAdminEmail` | Shell | No deployed controls or form code |
 | Admin | `frmAdminSettings` | Active, runtime-generated | Config, connection policy, carriers, UOM catalog |
 | Admin | `frmCreateDeleteUser` | Active, runtime-generated | Warehouse user and capability maintenance |
 | Admin | `frmCreateWarehouse` | Active, designer-backed plus runtime buttons | Greenfield warehouse creation |
-| Admin | `frmEditUser` | Shell | No deployed controls; legacy event code references absent controls |
 | Admin | `frmReAuthGate` | Active, designer-backed | Destructive-action re-authentication |
 | Admin | `frmRetireMigrateWarehouse` | Active, designer-backed plus runtime controls | Archive, retire, migrate, or delete warehouse |
 | Admin | `frmSeedInventory` | Active, runtime-generated | Choose target and seed demo inventory |
 | Admin | `frmSetupTesterStation` | Active, reused designer plus runtime controls | Disposable tester-station setup and cleanup |
-| Admin | `ufAdminItemSearch` | Empty shell | No current caller or deployed controls |
-| Admin | `ufDynItemSearchTemplate` | Empty shell | Packaged template name; no controls by itself |
-| Core | `frmItemSearch` | Deprecated/incomplete | Code expects `txtBox` and `lstBox`, but current deployed form has no controls |
+| Core | `frmItemSearch` | Active runtime canvas | Controls and role profiles supplied by `cDynItemSearch` |
 | Core | `frmSignIn` | Active, runtime-generated | invSys user authentication |
 | Core | `frmWarehouseConnection` | Active, runtime-generated | NAS/root connection and warehouse target selection |
-| Production | `frmCreateRecipeTable` | Shell | No deployed controls |
-| Production | `frmCreateSubstitutionList` | Shell | No deployed controls |
-| Production | `frmIngredientPalette` | Shell | No deployed controls |
+| Operations | `frmInventoryViewer` | Active, runtime-generated | Read-only current inventory levels, search, freshness, refresh |
 | Production | `frmProduction` | Active, runtime-generated | Recipe, assignment, run-list, and run-tree workflows |
-| Production | `frmSubstitution` | Shell | No deployed controls |
-| Production | `ufProductionItemSearch` | Runtime template | Four controls added by `cDynItemSearch` when invoked |
-| Production | `ufDynItemSearchTemplate` | Duplicate source shell | Not imported into consolidated Operations package |
 | Receiving | `frmReceiving` | Active, runtime-generated | Receiving and non-operational Purchasing tab |
-| Receiving | `frmReceivingSavedList` | Shell | No deployed controls |
-| Receiving | `ufReceivingItemSearch` | Empty role shell | No current caller; no controls added in the current path |
-| Receiving | `ufDynItemSearchTemplate` | Duplicate source shell | Not imported into consolidated Operations package |
 | Shipping | `frmBoxVersionSaveChoice` | Active, runtime-generated | Choose update-versus-new version behavior |
 | Shipping | `frmShipmentsTally` | Active, runtime-generated | Shipping, Box Builder, and Box Maker tabs |
-| Shipping | `frmShippingCreateList` | Shell | No deployed controls |
-| Shipping | `frmShippingSavedList` | Shell | No deployed controls |
-| Shipping | `ufShippingItemSearch` | Runtime template | Four controls added by `cDynItemSearch` when invoked |
-| Shipping | `ufDynItemSearchTemplate` | Duplicate source shell | Not imported into consolidated Operations package |
 
 ## 4. Admin forms
 
@@ -267,9 +283,10 @@ Runtime-added controls:
 | `btnOK` | Button — **OK** | Accepts the selection; the public callback then queues and processes the seed event. |
 | `btnCancel` | Button — **Cancel** | Cancels without seeding. |
 
-Current acceptance status: the form and callback return, but the required three
-entities are not visible after operator refresh. This form is therefore not
-release-accepted.
+Current acceptance status: the prior three-row seed was not visible in the
+user's Receiving refresh and was not a complete workflow kit. The rebuilt
+package now requests and publishes 19 entities, and packaged Receiving Refresh
+proof is GREEN. Visible dedicated-NAS acceptance remains required.
 
 ### 4.9 `frmSetupTesterStation` — Setup Tester Station
 
@@ -306,15 +323,12 @@ Hidden but still present from the shared designer blob:
 unused original layout positions. They are not part of the visible tester
 workflow.
 
-### 4.10 Admin shells with no deployed controls
+### 4.10 Reviewed Admin cleanup
 
-| Form | Current source state |
-|---|---|
-| `frmAdminControls` | Empty designer in the deployed package; handlers reference absent `btnCreateDeleteUser` and `btnEditUser`. |
-| `frmAdminEmail` | Empty designer and no executable form code. |
-| `frmEditUser` | Empty designer; code references legacy controls that are not present in the deployed form. |
-| `ufAdminItemSearch` | Empty role-named shell with no current caller. |
-| `ufDynItemSearchTemplate` | Empty template shell; it has no controls unless a dynamic controller adds them. |
+Reachability showed that `frmAdminControls`, `frmAdminEmail`, `frmEditUser`,
+`ufAdminItemSearch`, and `ufDynItemSearchTemplate` had no current public
+launcher or useful deployed control surface. They were removed before the
+package rebuild. The nine active Admin forms above are the Release 1 set.
 
 ## 5. Core forms
 
@@ -343,8 +357,9 @@ workflow.
 
 ### 5.3 Dynamic item-search window (`cDynItemSearch`)
 
-The controller adds the following four controls to a role-named empty form
-shell such as `ufProductionItemSearch` or `ufShippingItemSearch`:
+The controller adds the following four controls to the clean Core-owned
+`frmItemSearch` runtime canvas. Callers select a role profile rather than a
+role-named form:
 
 | Control | Type | Purpose |
 |---|---|---|
@@ -357,15 +372,37 @@ The form caption varies by context: Receiving, Shipping, Production, Admin,
 Production Ingredient, Production Palette Item, Production Recipe, or Shipping
 Component Search.
 
-### 5.4 Deprecated/incomplete Core form
+### 5.4 Shared runtime canvas
 
-`frmItemSearch` is explicitly deprecated in source. Its code expects `txtBox`
-and `lstBox`, but its current deployed designer has zero controls. It must not
-be treated as a working alternative to `cDynItemSearch`.
+`frmItemSearch` intentionally contains no designer controls or legacy event
+code. `cDynItemSearch` owns all controls, search behavior, result routing, and
+role-profile wording. This is the only Release 1 item-search form component.
 
-## 6. Receiving forms
+## 6. Operations forms
 
-### 6.1 `frmReceiving` — Receiving
+### 6.1 `frmInventoryViewer` — Current inventory levels
+
+Ribbon entry: Operations > Overview > **Inventory Viewer**. It is visible
+without a role capability restriction, while its action requires a signed-in
+invSys session and selected warehouse.
+
+| Control | Type / displayed text | Purpose |
+|---|---|---|
+| `lblTitle` | Label — **Current inventory levels** | Identifies the read-only overview. |
+| `btnRefresh` | Button — **Refresh** | Reads the current published inventory snapshot; it does not process or alter the snapshot. |
+| `lblSearch`, `txtSearch` | Label and text box — **Search** | Filters the already loaded rows locally across all visible columns. |
+| `lblHeaders` | Header label | Identifies Item Code, Item, UOM, Quantity, Location, and Condition. |
+| `lstInventory` | Six-column list box | Displays inventory levels aggregated by item code, item, UOM, location, and condition. |
+| `lblStatus` | Status/freshness label | Shows row count, snapshot read time, or a no-snapshot/sign-in error. |
+| `btnClose` | Button — **Close** | Closes the Viewer without affecting an operator workbook. |
+
+The modeless form is reused on repeated launch. It is resizable: Search,
+headers, list, and status expand or reposition through the shared Operations
+anchor manager while remaining readable.
+
+## 7. Receiving forms
+
+### 7.1 `frmReceiving` — Receiving
 
 | Area | Controls | Purpose |
 |---|---|---|
@@ -382,17 +419,16 @@ be treated as a working alternative to `cDynItemSearch`.
 | Status/exit | `txtStatus`, `btnClose` | Shows multiline status and closes the form. |
 | Purchasing placeholder | `lblPurchasingStub` | States that Purchasing is not operational and exposes no purchasing write action. |
 
-### 6.2 Receiving shells
+### 7.2 Reviewed Receiving cleanup
 
-| Form | Current source state |
-|---|---|
-| `frmReceivingSavedList` | Empty packaged shell; no deployed controls. |
-| `ufReceivingItemSearch` | Empty role shell; no current controller invocation in Receiving. |
-| `ufDynItemSearchTemplate` | Duplicate source shell; not imported into the consolidated Operations project. |
+`frmReceivingSavedList`, `ufReceivingItemSearch`, and
+`ufDynItemSearchTemplate` were unreachable empty shells and are removed. The
+intentional Purchasing stub remains inside the active `frmReceiving` because
+the reviewed Release 1 workflow reserves Purchasing there.
 
-## 7. Production forms
+## 8. Production forms
 
-### 7.1 `frmProduction` — shared shell
+### 8.1 `frmProduction` — shared role form
 
 | Control | Type | Purpose |
 |---|---|---|
@@ -400,7 +436,7 @@ be treated as a working alternative to `cDynItemSearch`.
 | `txtProductionStatus` | Locked multiline text box | Shows bound workbook, inventory/design authority, validation, and action status. |
 | `btnProductionClose` | Button — **Close** | Closes the Production form. |
 
-### 7.2 Recipe Builder page
+### 8.2 Recipe Builder page
 
 | Control group | Controls | Purpose |
 |---|---|---|
@@ -419,7 +455,7 @@ Generated list-header control families are `hdrBuilderLines1` through
 `hdrManagerOutput1` through `hdrManagerOutput8`. Blank or hidden data columns
 still receive a header control where the runtime builder creates one.
 
-### 7.3 Ingredients Assignment page
+### 8.3 Ingredients Assignment page
 
 | Control group | Controls | Purpose |
 |---|---|---|
@@ -430,7 +466,7 @@ still receive a header control where the runtime builder creates one.
 | Allowed choices | `lstAssignAllowed`, `btnAssignAdd`, `btnAssignRemove` | Lists acceptable substitutions and adds/removes rows. |
 | Labels | Recipes, Recipe Ingredients, Search Inventory, Inventory, Acceptable Items | Identify the page sections. |
 
-### 7.4 Production Run - List page
+### 8.4 Production Run - List page
 
 | Control group | Controls | Purpose |
 |---|---|---|
@@ -442,7 +478,7 @@ still receive a header control where the runtime builder creates one.
 | Run actions | `btnManagerCheckIn`, `btnManagerApplyOutput`, `btnManagerRefresh`, `btnManagerNext`, `btnManagerPrint` | Checks inputs in, completes the run, refreshes, advances to the next batch, or prints recall data. |
 | Labels | Recipes, Loaded Recipe Lines, Process, Run Location, % of Requirement, Qty, Acceptable Inventory For Run, Inventory Check, Production Output, Real Output | Identify the page sections and generated headers. |
 
-### 7.5 Production Run - Tree page
+### 8.5 Production Run - Tree page
 
 | Control group | Controls | Purpose |
 |---|---|---|
@@ -451,33 +487,28 @@ still receive a header control where the runtime builder creates one.
 | Tree navigation | `btnRunTreeExpandAll`, `btnRunTreeCollapseAll` | Expands or collapses all tree groups. |
 | Generated headers | Ingredient, System Key, Inventory Item, % Req, Qty, UOM, Inv, Location | Identify tree columns. |
 
-`mBtnManagerPrepare`, `mBtnManagerUsed`, `mBtnManagerMade`, and
-`mBtnManagerTotal` are declared event variables with handlers but are not
-constructed by the current layout. They are not current visible controls.
+The unconstructed `mBtnManagerPrepare`, `mBtnManagerUsed`,
+`mBtnManagerMade`, and `mBtnManagerTotal` event variables/handlers were removed;
+they were never visible controls. Current packaged geometry validation is GREEN
+at `Zoom=100`; the user's visible maximize/restore retest remains pending.
 
-Current visual acceptance status: **failed**. The native window can maximize,
-but the screenshot shows the page/control layout retaining its base-size
-footprint.
-
-### 7.6 Production shells
+### 8.6 Reviewed Production cleanup
 
 `frmCreateRecipeTable`, `frmCreateSubstitutionList`, `frmIngredientPalette`,
-and `frmSubstitution` are packaged empty shells with no controls.
-`ufProductionItemSearch` receives the four dynamic search controls described in
-section 5.3. `ufDynItemSearchTemplate` is a duplicate source shell and is not
-imported into the consolidated Operations project.
+`frmSubstitution`, `ufProductionItemSearch`, and
+`ufDynItemSearchTemplate` were empty or unreachable shells and are removed.
 
-## 8. Shipping forms
+## 9. Shipping forms
 
-### 8.1 `frmShipmentsTally` — shared shell and tabs
+### 9.1 `frmShipmentsTally` — Shipping/Boxing role form and tabs
 
 | Control | Type | Purpose |
 |---|---|---|
 | `tabsShippingRole` | TabStrip — **Shipping**, **Box Builder**, **Box Maker** | Selects the active Shipping sub-workflow. |
-| `txtStatus` | Locked multiline text box | Displays validation, queue, history, and action status. |
+| `txtStatus` | Locked multiline text box | Displays validation, queue, history, and action status; remains fixed above Search Boxes during resize. |
 | `btnClose` | Button — **Close** | Closes the form. |
 
-### 8.2 Shipping tab
+### 9.2 Shipping tab
 
 | Area | Controls | Purpose |
 |---|---|---|
@@ -496,13 +527,10 @@ imported into the consolidated Operations project.
 `hdrLineRow*` labels are architecturally invalid. Their current locked display
 does not make `ROW` permissible.
 
-The source also contains an uncalled readiness-header builder for
-`hdrReadyType`, `hdrReadyItem`, `hdrReadyReq`, `hdrReadyInv`,
-`hdrReadyStaged`, `hdrReadyUom`, `hdrReadyLoc`, `hdrReadyRow`, and
-`hdrReadyStatus`. These are not constructed by the current form layout;
-`hdrReadyRow` would be another D14 violation if that helper were activated.
+The uncalled readiness list and header builder were removed after reachability
+review; they were never constructed by the active layout.
 
-### 8.3 Box Builder tab
+### 9.3 Box Builder tab
 
 | Area | Controls | Purpose |
 |---|---|---|
@@ -513,7 +541,7 @@ The source also contains an uncalled readiness-header builder for
 | Selected components | `lblBoxBuilderComponents`, `lstBoxBuilderComponentsPage` | Displays the component set for the selected version. |
 | Save/version actions | `btnBoxBuilderSavePage`, `btnBoxBuilderUpdateVersionPage`, `btnBoxBuilderNewVersionPage`, `btnBoxBuilderDeleteVersionPage`, `btnBoxBuilderArchivePage`, `btnBoxBuilderDeletePage` | Saves the box, updates or creates a version, deletes a version, archives the box, or deletes it through guarded paths. |
 
-### 8.4 Box Maker tab
+### 9.4 Box Maker tab
 
 | Area | Controls | Purpose |
 |---|---|---|
@@ -522,7 +550,7 @@ The source also contains an uncalled readiness-header builder for
 | Quantity/actions | `lblBoxMakerQty`, `txtBoxMakerQty`, `btnBoxMakerMakePage`, `btnBoxMakerUnmakePage` | Accepts quantity and makes boxes or unboxes them through the event path. |
 | Components | `lblBoxMakerComponents`, `lstBoxMakerComponentsPage` | Displays selected-version component requirements and availability. |
 
-### 8.5 `frmBoxVersionSaveChoice`
+### 9.5 `frmBoxVersionSaveChoice`
 
 | Control | Type / displayed text | Purpose |
 |---|---|---|
@@ -532,40 +560,28 @@ The source also contains an uncalled readiness-header builder for
 | `btnNewVersion` | Button — **New Version** | Selects append-new-version behavior. |
 | `btnCancel` | Button — **Cancel** | Cancels without saving. |
 
-### 8.6 Shipping shells
+### 9.6 Reviewed Shipping cleanup
 
-`frmShippingCreateList` and `frmShippingSavedList` are packaged empty shells.
-`ufShippingItemSearch` receives the four dynamic search controls described in
-section 5.3. `ufDynItemSearchTemplate` is a duplicate source shell and is not
-imported into the consolidated Operations project.
+`frmShippingCreateList`, `frmShippingSavedList`, `ufShippingItemSearch`, and
+`ufDynItemSearchTemplate` were empty or unreachable shells and are removed.
 
-## 9. Review checklist
+## 10. Review checklist decisions
 
-When reading this catalog, decide for each active form:
+| Item | 2026-08-08 decision / state |
+|---|---|
+| 1. Necessary for Release 1? | Operations/Admin and the active role-form tabs are sufficient. Unreachable shells and unconstructed controls were removed. Inventory Viewer was added as the one missing overview surface; Purchasing remains the intentional Receiving stub. |
+| 2. Operator wording? | Accepted as good enough for Release 1. |
+| 3. Visibility? | Controls may remain visible to all signed-in users for Release 1. Existing capability checks on mutating actions remain defense-in-depth; Inventory Viewer has no role-capability restriction. |
+| 4. Mutation/queue/admin distinction? | **Pending user review.** |
+| 5. Durable identity uses `System_Key`? | **Pending user review.** Shipping's visible `ROW` path remains a known D14 conflict to correct under this item. |
+| 6. Readable resize proportions? | Required. Production, Shipping `txtStatus`, and Viewer anchor/package checks are GREEN. Production maximize/restore and Shipping grow/shrink remain pending visible retest. |
+| 7. Empty shells? | Retired after source reachability review and focused regression contracts. Only the visible Purchasing stub remains intentionally. |
 
-1. Is every control necessary for Release 1?
-2. Is the displayed wording clear to an operator who does not know the VBA
-   module names?
-3. Should the control be visible to all signed-in users or only to a specific
-   capability?
-4. Does the control mutate only local staging, queue an event, or perform an
-   administrative action, and is that distinction visible?
-5. Does the control use `System_Key` whenever one durable inventory entity is
-   identified?
-6. Does resizing preserve readable proportions rather than merely enlarging
-   the native form window?
-7. Is an empty shell still needed, or should it be retired only after reviewed
-   reachability and regression evidence?
+## 11. Known required follow-up before checklist items 4-5
 
-## 10. Known required follow-up
-
-- Create a focused packaged seed-round-trip RED that exercises
-  `modAdmin.Seed_DemoInventory`, processor snapshot publication, and refresh of
-  a captured operator workbook; require exactly three new visible entities.
-- Create native-window Production geometry RED through
-  `mProduction.BtnOpenProductionForm`, not only by assigning `Me.Width` and
-  `Me.Height` inside the form.
-- Replace Shipping `ROW` controls and any backing authority path with
-  `System_Key` under D14 and focused packaged form-action tests.
-- Do not delete empty/deprecated shells solely from this inventory. Apply the
-  repository dead-code policy first.
+- Repeat visible Admin seed and Receiving Refresh acceptance; require all 19
+  newly seeded demo entities rather than three.
+- Repeat visible Production maximize/restore and Shipping grow/shrink checks.
+- Review checklist items 4 and 5. The existing Shipping `ROW` controls and
+  backing identity path remain explicitly unresolved until item 5 is reviewed
+  and the already-planned D14 correction is completed.

@@ -388,6 +388,86 @@ Gate:
 - [ ] regenerate static maintenance evidence with no prohibited managed
   `ROW` control/header.
 
+### Slice 4e — Release 1 surface cleanup and Inventory Viewer
+
+The 2026-08-08 control review approved the current Operations and Admin
+workflows for Release 1, approved controls being visible to every signed-in
+user, and directed removal of nonfunctional shells. The same review identified
+one missing Release 1 surface: a read-only, at-a-glance inventory viewer that
+does not require opening a role form. D4 is corrected first because the runtime
+already uses one shared Core item-search form while four role-named source forms
+and dynamic-template copies are empty shells.
+
+Required behavior:
+
+- [x] package only the reviewed active Admin, Operations, Core, Receiving,
+  Production, and Shipping forms; remove empty or unreachable form shells after
+  static reachability and packaged regression evidence;
+- [x] retain the Purchasing stub in the active Receiving form;
+- [x] expose **Inventory Viewer** on Operations to every signed-in user;
+- [x] open one reusable, modeless, resizable Viewer bound to the selected
+  warehouse and show item code, item, UOM, quantity, location, and condition;
+- [x] load the Viewer only from the published inventory snapshot on explicit
+  refresh and leave every inspected workbook byte-for-byte unchanged; and
+- [x] preserve role-aware item search through the single Core
+  `frmItemSearch` runtime form after obsolete role-named forms are removed.
+
+Gate:
+
+- [x] focused source/package RED records the obsolete shells and absent Viewer;
+- [x] the packaged public Viewer callback, repeated launch, filtering, and
+  read-only snapshot proof are GREEN;
+- [x] Receiving, Production, Shipping, Admin, item-search, RibbonX, collision,
+  and full-chain regressions remain GREEN; and
+- [x] static maintenance evidence records the reviewed form set with no removed
+  component still reachable or packaged.
+
+### Slice 4f — Complete Receiving-to-Production-to-Shipping demo inventory
+
+The three-row bootstrap proved event, snapshot, and role-projection transport,
+but it does not provide enough material classes for an operator to exercise a
+complete Release 1 workflow. The reviewed sanitized demo catalog supplies the
+Release 1 test fixture; its legacy local-table mutation and `ROW` identity path
+are not reused.
+
+Required behavior:
+
+- [x] the public Admin **Seed Demo Inventory** action queues one batch event
+  containing 19 new durable entities: raw ingredients, WIP, finished/shippable
+  goods, cases/boxes, and tins;
+- [x] every entity receives a new unique immutable `System_Key` and
+  `Condition=GOOD`, with item name, UOM, location, description, and category
+  metadata sufficient for the role projections;
+- [x] one applied event publishes all 19 entities to the snapshot and a
+  Receiving refresh exposes all 19; and
+- [x] repeated seeding remains an intentional new-entity action, not an
+  idempotent SKU upsert.
+
+Gate:
+
+- [x] extend the existing packaged public-callback harness and record a
+  meaningful 3-versus-19 RED;
+- [x] obtain GREEN for event, canonical, snapshot, operator, Receiving form,
+  identity, condition, and category coverage; and
+- [x] preserve unchanged Config/Auth evidence and the full D14 lifecycle suite.
+
+### Slice 4g — Shipping fixed status/message anchor
+
+The 2026-08-08 Shipping screenshots prove that height resize currently moves
+the status/message control below Search Boxes. The status area must remain at
+its established top position and may stretch horizontally, while the inventory
+list and lower content consume added height.
+
+Gate:
+
+- [x] a focused test through `BtnOpenShipmentsForm` records that status Top
+  changes after height resize;
+- [x] anchor the status/message control Left + Top + Right with fixed height;
+- [x] prove it remains above Search Boxes through grow, shrink, maximize, and
+  restore; and
+- [x] retain Shipping launcher, list, Boxing, lock, restart, and resize
+  regressions.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.
