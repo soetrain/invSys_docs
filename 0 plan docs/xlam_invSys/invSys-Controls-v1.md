@@ -1,8 +1,8 @@
 # invSys Form Controls v1
 
-**Version:** 1.4
+**Version:** 1.7
 
-**Inventory date:** 2026-08-10
+**Inventory date:** 2026-08-16
 
 **Architecture:** invSys v4.11, Release 1
 **Scope:** every checked-in VBA UserForm source file used by Core, Admin,
@@ -49,11 +49,12 @@ Against `WHT7025AE` / `S1`, repeated Receiving, Production, and Shipping
 launches reused their respective saved workbooks and forms; no additional
 operator workbook opened. Activating another workbook did not rebind the forms,
 and minimizing the bound workbook minimized its form with it. After restarting
-Excel and repeating the launches, the session remained stable. The returned
-evidence did not include the three workbook filenames, so this catalog does not
-invent them.
+Excel and repeating the launches, the session remained stable. The verified
+workbook names are `WHT7025AE.Receiving.Operator.xlsm`,
+`WHT7025AE.Production.Operator.xlsm`, and
+`WHT7025AE.Shipping.Operator.xlsm`.
 
-### Seed Demo Inventory: packaged and visible correction GREEN
+### Seed Demo Inventory: packaged correction GREEN; dedicated UAT pending
 
 `frmSeedInventory` displayed and its public callback reported one applied
 processor event. The operator then refreshed, but the three demo entities were
@@ -63,14 +64,17 @@ same three unique `System_Key` values with `Condition=GOOD` through
 canonical inventory, snapshot, saved Receiving workbook, and the Receiving
 form's actual Refresh handler. That result is insufficient for a complete
 Receiving-to-Production-to-Shipping workflow. The source correction now queues
-one 19-entity batch containing raw ingredients, WIP, finished/shippable goods,
-cases/boxes, and tins, with new `System_Key`, `Condition=GOOD`, and catalog
+one 24-entity batch containing raw ingredients, WIP, finished/shippable goods,
+cases/boxes, tins, shipping cartons, dividers, labels, tape, and void fill,
+with new `System_Key`, `Condition=GOOD`, and catalog
 metadata. The packaged public callback is now GREEN through the event,
 canonical inventory, catalog, published snapshot, saved Receiving projection,
-and the Receiving form's actual Refresh handler: all 19 entities were visible,
-all keys were unique, and every condition was `GOOD`. The 2026-08-09 dedicated
-NAS checkpoint confirmed that the visible Seed Inventory action added the
-inventory successfully.
+and the Receiving form's actual Refresh handler for the complete 24-row kit.
+All 24 entities were visible, all keys were unique, every condition was `GOOD`,
+and the isolated packaged Receiving -> Production -> Box Maker -> Shipping ->
+restart/reconciliation chain passed 30/30. The 2026-08-09 dedicated NAS
+checkpoint confirmed that the visible Seed Inventory action added inventory;
+the expanded 24-row kit still requires the visible dedicated-NAS checkpoint.
 
 ### Production resizing: corrected; visible retest pending
 
@@ -132,8 +136,8 @@ separate reachability review before removal.
 | Operations | `frmInventoryViewer` | Active, runtime-generated | Read-only current inventory levels, search, freshness, refresh |
 | Production | `frmProduction` | Active, runtime-generated | Recipe, assignment, run-list, and run-tree workflows |
 | Receiving | `frmReceiving` | Active, runtime-generated | Receiving and non-operational Purchasing tab |
-| Shipping | `frmBoxVersionSaveChoice` | Active, runtime-generated | Choose update-versus-new version behavior |
-| Shipping | `frmShipmentsTally` | Active, runtime-generated | Shipping, Box Builder, and Box Maker tabs |
+| Shipping | `frmBoxVersionSaveChoice` | Active, runtime-generated | Choose update-versus-new box alternative behavior |
+| Shipping | `frmShipmentsTally` | Active, runtime-generated | Shipping, Box Designer, and Box Maker tabs |
 
 ## 4. Admin forms
 
@@ -144,7 +148,7 @@ workflow. It does not make a worksheet row the durable identity.
 
 | Control | Type / displayed text | Purpose |
 |---|---|---|
-| `btnAddMode` | Button — **Add Item** | Selects add mode and clears add fields. |
+| `btnAddMode` | Button — **Add Item Mode** | Selects add mode and clears add fields. |
 | `btnEditMode` | Button — **Edit Item** | Selects edit mode and exposes inventory search/results. |
 | `cmbEditItem` | Combo box — Inventory item | Accepts or selects the item to edit. |
 | `lstEditItemResults` | List box | Shows candidate inventory items for edit selection. |
@@ -173,6 +177,9 @@ workflow. It does not make a worksheet row the durable identity.
 | `lblEditItem`, `lblItemName`, `lblUom`, `lblQty`, `lblLocation`, `lblCategory`, `lblDescription`, `lblVendorName`, `lblVendorCode`, `lblExternalCode`, `lblImagePath`, `lblEditReason`, `lblCustomName`, `lblCustomValue` | Field labels | Identify the controls listed above. |
 
 ### 4.2 `frmAdminDesignLifecycle` — Designs Lifecycle
+
+The Admin ribbon exposes one **Design Lifecycle** launcher. Release and
+Obsolete are actions inside this form, not separate ribbon launchers.
 
 | Control | Type / displayed text | Purpose |
 |---|---|---|
@@ -225,7 +232,7 @@ Designer-backed controls:
 | `lblIntro` | Intro label | Explains greenfield warehouse creation and initial publication. |
 | `txtWarehouseId` | Text box — Warehouse ID | Required stable warehouse identifier. |
 | `txtWarehouseName` | Text box — Warehouse Name | Required display name. |
-| `txtStationId` | Text box — Station ID | Creates the initial station, default `S1`. |
+| `txtStationId` | Text box — Station ID | Creates the initial station, defaulting to the Windows computer name. |
 | `txtAdminUser` | Text box — Admin User | Creates/scopes the initial admin user. |
 | `txtPathLocal` | Text box — Local Path | Target warehouse hub/runtime path. |
 | `txtPathSharePoint` | Text box — SharePoint Path | Locally synced invSys SharePoint root. |
@@ -280,7 +287,7 @@ Runtime-added controls:
 |---|---|---|
 | `lblTitle` | Label — Seed demo inventory into which warehouse? | Explains the target choice. |
 | `lblWarehouse`, `cmbWarehouse` | Label and combo box — Warehouse | Lists valid current target options and retains WarehouseId/station/root/status metadata. |
-| `lblStation`, `txtStation` | Label and text box — Station | Supplies the station, defaulting to `S1`. |
+| `lblStation`, `txtStation` | Label and locked text box — Station | Shows the Windows computer name used automatically as station identity. |
 | `lblUser`, `txtUser` | Label and text box — Admin user | Supplies the invSys user for the seed event. |
 | `lblRoot`, `lblRootValue` | Labels — Runtime root | Shows the selected runtime root. |
 | `lblStatus` | Status label | Shows target readiness, validation, or inbox-repair result. |
@@ -290,12 +297,17 @@ Runtime-added controls:
 
 Current acceptance status: the prior three-row seed was not visible in the
 user's Receiving refresh and was not a complete workflow kit. The rebuilt
-package now requests and publishes 19 entities, and packaged Receiving Refresh
-proof is GREEN. Visible dedicated-NAS acceptance remains required.
+package now requests and publishes 24 entities, including five explicit
+box-making consumables. The public Admin callback and isolated packaged
+Receiving/Production/Box Maker/Shipping full chain are GREEN; visible
+dedicated-NAS acceptance remains required.
 
-### 4.9 `frmSetupTesterStation` — Setup Tester Station
+### 4.9 `frmSetupTesterStation` — Test Environment Setup
 
-This form reuses the Create Warehouse designer blob. It hides all designer
+This is an Admin-only isolated test-environment provisioner, not the normal
+station identity mechanism and not merely a diagnostics runner. It is retained
+because it creates and cleans up disposable warehouse/operator fixtures used by
+packaged regression tests. The form reuses the Create Warehouse designer blob. It hides all designer
 controls first, then selectively reuses fields and adds new prompt/actions.
 
 Visible input mapping:
@@ -306,7 +318,7 @@ Visible input mapping:
 | `lblPinPrompt` | `txtWarehouseName` | PIN input; the reused field is masked. |
 | `lblConfirmPinPrompt` | `txtConfirmPinRuntime` | Confirms the PIN; masked. |
 | `lblWarehousePrompt` | `txtWarehouseId` | Tester warehouse identifier. |
-| `lblStationPrompt` | `txtStationId` | Tester station identifier. |
+| `lblStationPrompt` | `txtStationId` | Test station identifier; ordinary workflows use the Windows computer name. |
 | `lblPathLocalPrompt` | `txtPathLocal` | NAS warehouse hub path. |
 | `lblSharePointPrompt` | `txtPathSharePoint` | Locally synced SharePoint root. |
 
@@ -356,7 +368,7 @@ package rebuild. The nine active Admin forms above are the Release 1 set.
 | Heading/status | `lblTitle`, `lblStatus` | Shows **Connect Warehouse Storage** and connection guidance/results. |
 | Root | `lblRoot`, `txtRoot`, `btnScan` | Accepts and scans a NAS/server warehouse root. |
 | Credentials | `lblUser`, `txtUser`, `lblPassword`, `txtPassword`, `btnConnect` | Connects the Windows session to the server; password is masked. |
-| Station | `lblStation`, `cboStation`, `chkRequireStation`, `lblStationHelp` | Selects station and controls whether a station inbox is mandatory. |
+| Station | `lblStation`, locked `txtStation`, `lblStationHelp` | Shows the Windows computer name. The role contract still decides whether a station inbox is required; the user does not choose a bespoke station. |
 | Targets | `lblTargets`, `lstTargets` | Lists discovered warehouse runtimes and their readiness. |
 | Confirmation | `btnOK`, `btnCancel` | Selects the highlighted target or cancels. |
 
@@ -415,12 +427,13 @@ anchor manager while remaining readable.
 | Receipt identity | `lblReceiptId`, `txtReceiptId` | Shows a generated, locked receipt ID. |
 | Reference | `lblRef`, `txtRef` | Accepts PO/BOL reference text. |
 | History filter | `lblSearch`, `txtSearch` | Filters Receiving Entries History as the user types. |
-| Managed item | `lblReceiveItem`, `cboReceiveItem` | Selects one deduplicated managed item by code/name while retaining a hidden source `System_Key`. |
+| Managed item search | `lblItemSearch`, `txtItemSearch`, `lblReceiveItemsTitle`, `lblReceiveItemsHeader`, `lstReceiveItems` | Filters and displays a dedicated result list with Code, Item, UOM, Available, Location, Description, and Vendor while retaining hidden source `System_Key`. |
 | Quantity | `lblQty`, `txtQty` | Accepts quantity for the selected item; defaults to 1. |
+| Receipt attributes | `lblReceiveLocation`, `txtReceiveLocation`, `lblLotNumber`, `txtLotNumber` | Requires the receiving location and accepts an optional lot number. Selection defaults Location from the source row, but the operator may change it. |
 | Top actions | `btnRefresh`, `btnAdd` | Reloads views or stages the selected item/quantity. |
-| Receiving history | `lblInventoryTitle`, `lblInventoryHeader`, `lstInventory` | Displays completed `ReceivedLog` entries: date, user, reference, item, quantity, UOM, vendor, location, and code; one hidden column retains `System_Key`. `EventId` remains in the workbook log. |
-| Staged receipt | `lblStagedTitle`, `lblStagedHeader`, `lstStaged` | Displays local Received Tally rows: reference, item, quantity, System_Key. |
-| Aggregate view | `lblAggregateTitle`, `lblAggregateHeader`, `lstAggregate` | Displays aggregated reference/code/vendor/description/item/UOM/quantity/location/System_Key data. |
+| Receiving history | `lblInventoryTitle`, `lblInventoryHeader`, `lstInventory` | Displays completed `ReceivedLog` entries: date, user, reference, item, quantity, UOM, vendor, location, code, and lot; one hidden column retains `System_Key`. `EventId` remains in the workbook log. |
+| Staged receipt | `lblStagedTitle`, `lblStagedHeader`, `lstStaged` | Displays local Received Tally rows: reference, item, quantity, location, lot, and hidden System_Key. |
+| Aggregate view | `lblAggregateTitle`, `lblAggregateHeader`, `lstAggregate` | Displays aggregated reference/code/vendor/description/item/UOM/quantity/location/lot data with hidden System_Key. |
 | Write actions | `btnConfirm`, `btnClear` | **Confirm Writes** queues supported Receiving events; **Clear** clears local staging. |
 | Status/exit | `txtStatus`, `btnClose` | Shows multiline status and closes the form. |
 | Purchasing placeholder | `lblPurchasingStub` | States that Purchasing is not operational and exposes no purchasing write action. |
@@ -477,6 +490,7 @@ still receive a header control where the runtime builder creates one.
 | Control group | Controls | Purpose |
 |---|---|---|
 | Recipe loader | `lstLoaderRecipes`, `lstLoaderLines`, `btnLoaderRefresh`, `btnLoaderLoad`, `btnLoaderClear` | Selects a released recipe, shows its lines, refreshes, loads, or clears a run. |
+| Batch scaling | `txtBatchScalePercent`, `btnApplyBatchScale` | Applies a List-run batch scale from `0.001%` through `1000%`; `100%` preserves the released recipe quantities. |
 | Run inputs | `cmbRunProcess`, `cmbRunLocation`, `txtPaletteSplit`, `txtPaletteQty`, `btnRunApplyPalette` | Chooses process/location and applies either percent-of-requirement or explicit quantity to the selected palette row. |
 | Palette | `lstRunPalette` | Lists ingredient, System Key, inventory choice, requirement %, quantity, UOM, inventory, and location. |
 | Inventory check | `lstManagerCheck` | Lists System Key, code, item, UOM, used quantity, and total inventory. |
@@ -485,6 +499,10 @@ still receive a header control where the runtime builder creates one.
 | Labels | Recipes, Loaded Recipe Lines, Process, Run Location, % of Requirement, Qty, Acceptable Inventory For Run, Inventory Check, Production Output, Real Output | Identify the page sections and generated headers. |
 
 ### 8.5 Production Run - Tree page
+
+This page remains an experimental alternative and is not the Release 1
+workflow focus. Slice 4j intentionally makes no Tree behavior change; Production
+Run - List is the path to validate.
 
 | Control group | Controls | Purpose |
 |---|---|---|
@@ -510,7 +528,7 @@ at `Zoom=100`; the user's visible maximize/restore retest remains pending.
 
 | Control | Type | Purpose |
 |---|---|---|
-| `tabsShippingRole` | TabStrip — **Shipping**, **Box Builder**, **Box Maker** | Selects the active Shipping sub-workflow. |
+| `tabsShippingRole` | TabStrip — **Shipping**, **Box Designer**, **Box Maker** | Selects the active Shipping sub-workflow. |
 | `txtStatus` | Locked multiline text box | Displays validation, queue, history, and action status; remains fixed above Search Boxes during resize. |
 | `btnClose` | Button — **Close** | Closes the form. |
 
@@ -520,12 +538,12 @@ at `Zoom=100`; the user's visible maximize/restore retest remains pending.
 |---|---|---|
 | Heading/history | `lblTitle`, `btnHistory`, `btnHistorySheet`, `btnRefresh` | Shows Shipments, opens history, exports history to a sheet, and refreshes data. |
 | Search/filter | `lblPicker`, `txtPicker`, `chkUseExisting`, `lblSyncState` | Filters boxes, optionally uses existing shippable inventory, and shows pending/complete sync state. |
-| Shippables | `lstShippables` plus `hdrShipBox`, `hdrShipVersion`, `hdrShipInv`, `hdrShipProjected`, `hdrShipLocked`, `hdrShipUom`, `hdrShipLoc`, `hdrShipSystemKey` | Lists Box, Version, NAS Inv, Projected Inv, Locked, UOM, Location, and immutable System Key. |
-| Line editor | `txtRef`, `txtBox`, `txtVersion`, `txtQty`, `txtUom`, `txtLocation`, `txtSystemKey`, `txtCarrier`, hidden `txtDescription` | Edits reference, quantity, and carrier while preserving the selection-backed box/version/UOM/location/System_Key identity. |
+| Shippables | `lstShippables` plus `hdrShipBox`, `hdrShipVersion`, `hdrShipInv`, `hdrShipProjected`, `hdrShipLocked`, `hdrShipUom`, `hdrShipLoc`, `hdrShipSystemKey` | Lists Box, Alternative, NAS Inv, Projected Inv, Locked, UOM, Location, and immutable System Key. |
+| Line editor | `txtRef`, `txtBox`, `txtVersion`, `txtQty`, `txtUom`, `txtLocation`, `txtSystemKey`, `txtCarrier`, hidden `txtDescription` | Edits reference, quantity, and carrier while preserving the selection-backed box/alternative/UOM/location/System_Key identity. |
 | Line labels | `lblRef`, `lblBox`, `lblVersion`, `lblQty`, `lblUom`, `lblLocation`, `lblSystemKey`, `lblCarrier` | Identify the editor fields. |
 | Line actions | `btnAdd`, `btnUpdate`, `btnRemove` | Adds, updates, or removes a local shipment row. |
 | Shipments list | `lblShipments`, `lstShipments` | Displays active shipment staging rows. |
-| Shipment headers | generated `hdrRef*`, `hdrLineBox*`, `hdrLineQty*`, `hdrLineUom*`, `hdrLineArea*`, `hdrLineLocked*`, `hdrLineSystemKey*`, `hdrLineDesc*`, `hdrLineCarrier*` | Identify Ref, Box, Qty, UOM, Area, Locked, System Key, Version, and Carrier. One header set is built for each shipment/hold list. |
+| Shipment headers | generated `hdrRef*`, `hdrLineBox*`, `hdrLineQty*`, `hdrLineUom*`, `hdrLineArea*`, `hdrLineLocked*`, `hdrLineSystemKey*`, `hdrLineDesc*`, `hdrLineCarrier*` | Identify Ref, Box, Qty, UOM, Area, Locked, System Key, Alternative, and Carrier. One header set is built for each shipment/hold list. |
 | Shipment actions | `btnStage`, `btnSend`, `btnHold` | Moves rows to shipment staging, sends completed shipments, or places selected rows on hold. |
 | Hold list | `lblHold`, `lstHold`, `btnReturn` | Displays Not Shipped rows and returns selected rows to active staging. |
 
@@ -535,41 +553,42 @@ use exact string `System_Key`; no numeric value was relabeled as a key.
 The uncalled readiness list and header builder were removed after reachability
 review; they were never constructed by the active layout.
 
-### 9.3 Box Builder tab
+### 9.3 Box Designer tab
 
 | Area | Controls | Purpose |
 |---|---|---|
 | Heading/actions | `lblBoxBuilderPage`, `btnBoxBuilderNewPage`, `btnBoxBuilderRefreshPage` | Starts a box definition and reloads box designs. |
-| Designs | `lstBoxBuilderDesignsPage` | Lists design identity/name/version/status metadata. |
-| Component inventory | `lblBoxBuilderInventory`, `lstBoxBuilderInventoryPage`, `lblBoxBuilderComponentQty`, `txtBoxBuilderComponentQty`, `btnBoxBuilderAddComponentPage`, `btnBoxBuilderRemoveComponentPage` | Selects inventory components and quantities for the box definition. |
+| Designs | `lstBoxBuilderDesignsPage` | Full-width list of design identity/name/alternative/status metadata. |
+| Component inventory | `lblBoxBuilderInventory`, `lstBoxBuilderInventoryPage`, `lblBoxBuilderComponentQty`, `txtBoxBuilderComponentQty`, `btnBoxBuilderAddComponentPage`, `btnBoxBuilderRemoveComponentPage` | Selects inventory entities and quantities for the box definition. Each row retains its hidden immutable `System_Key`; repeated item names can represent distinct physical inventory entities rather than duplicate GUI data. |
 | Component search | `txtBoxBuilderSearch` | Filters loaded component choices locally by code, item, description, UOM, or location. |
-| Definition fields | `lblBoxBuilderName`, `txtBoxBuilderName`, `lblBoxBuilderVersion`, `cboBoxBuilderVersion`, `lblBoxBuilderStatus`, `cboBoxBuilderStatus`, `lblBoxBuilderUom`, `txtBoxBuilderUom`, `lblBoxBuilderLocation`, `txtBoxBuilderLocation`, `lblBoxBuilderDescription`, `txtBoxBuilderDescription` | Edits box name, version, Active/Archived status, UOM, location, and description. |
-| Selected components | `lblBoxBuilderComponents`, `lstBoxBuilderComponentsPage` | Displays the component set for the selected version. |
-| Save/version actions | `btnBoxBuilderSavePage`, `btnBoxBuilderUpdateVersionPage`, `btnBoxBuilderNewVersionPage`, `btnBoxBuilderDeleteVersionPage`, `btnBoxBuilderArchivePage`, `btnBoxBuilderDeletePage` | Saves the box, updates or creates a version, deletes a version, archives the box, or deletes it through guarded paths. |
+| Definition fields | `lblBoxBuilderName`, `txtBoxBuilderName`, `lblBoxBuilderVersion`, `cboBoxBuilderVersion`, `lblBoxBuilderStatus`, `cboBoxBuilderStatus`, `lblBoxBuilderUom`, `txtBoxBuilderUom`, `lblBoxBuilderLocation`, `txtBoxBuilderLocation`, `lblBoxBuilderDescription`, `txtBoxBuilderDescription` | Edits box name, alternative, Active/Archived status, UOM, location, and description. |
+| Selected components | `lblBoxBuilderComponents`, `lstBoxBuilderComponentsPage` | Full-width list of the component set for the selected alternative. The hidden component identity is preserved as `System_Key` and persisted as `ComponentSystemKey` in the Shipping BOM. |
+| Save/alternative actions | `btnBoxBuilderSavePage`, `btnBoxBuilderUpdateVersionPage`, `btnBoxBuilderNewVersionPage`, `btnBoxBuilderDeleteVersionPage`, `btnBoxBuilderArchivePage`, `btnBoxBuilderDeletePage` | Saves the box, updates or creates an alternative, deletes an alternative, archives the box, or deletes it through guarded paths. |
 
 ### 9.4 Box Maker tab
 
 | Area | Controls | Purpose |
 |---|---|---|
 | Heading/refresh | `lblBoxMakerPage`, `btnBoxMakerRefreshPage` | Identifies Box Maker and reloads released designs/inventory state. |
-| Designs/version | `lstBoxMakerDesignsPage`, `lblBoxMakerVersion`, `cboBoxMakerVersion` | Selects a released box design and version. |
+| Designs/alternative | `lstBoxMakerDesignsPage`, `lblBoxMakerVersion`, `cboBoxMakerVersion` | Selects a released box design and alternative. |
 | Quantity/actions | `lblBoxMakerQty`, `txtBoxMakerQty`, `btnBoxMakerMakePage`, `btnBoxMakerUnmakePage` | Accepts quantity and makes boxes or unboxes them through the event path. |
-| Components | `lblBoxMakerComponents`, `lstBoxMakerComponentsPage` | Displays selected-version component requirements and availability. |
+| Components | `lblBoxMakerComponents`, `lstBoxMakerComponentsPage` | Displays selected-alternative component requirements and availability resolved by the exact preserved `ComponentSystemKey`. Make/Unmake event payloads use those string keys and the package `System_Key`, never a numeric row surrogate. |
 
-All Builder/Maker list boxes participate in native form resizing. Each list has
+All Designer/Maker list boxes now use an explicit vertical, full-width layout
+and participate in native form resizing without overlap. Each list has
 a monospaced header strip whose position and width are recalculated from the
 list geometry after anchor application. A managed item without a Shipping BOM
-version displays `NA`; only a versioned Shipping BOM/package relationship
-displays `v1`, `v2`, and so on.
+alternative displays `NA`; only a Shipping BOM/package alternative displays
+the compatible stored labels `v1`, `v2`, and so on.
 
 ### 9.5 `frmBoxVersionSaveChoice`
 
 | Control | Type / displayed text | Purpose |
 |---|---|---|
-| `lblTitle` | Label — Save Box Version | Heading. |
-| `lblBody` | Wrapped label | Explains the choice for the current box version. |
-| `btnUpdate` | Button — **Update Version** | Selects in-place update behavior where allowed. |
-| `btnNewVersion` | Button — **New Version** | Selects append-new-version behavior. |
+| `lblTitle` | Label — Save Box Alternative | Heading. |
+| `lblBody` | Wrapped label | Explains the choice for the current box alternative. |
+| `btnUpdate` | Button — **Update Alternative** | Selects in-place update behavior where allowed. |
+| `btnNewVersion` | Button — **New Alternative** | Creates another box design choice; this is an alternative, not a software release sequence. |
 | `btnCancel` | Button — **Cancel** | Cancels without saving. |
 
 ### 9.6 Reviewed Shipping cleanup
@@ -584,15 +603,18 @@ displays `v1`, `v2`, and so on.
 | 1. Necessary for Release 1? | Operations/Admin and the active role-form tabs are sufficient. Unreachable shells and unconstructed controls were removed. Inventory Viewer was added as the one missing overview surface; Purchasing remains the intentional Receiving stub. |
 | 2. Operator wording? | Accepted as good enough for Release 1. |
 | 3. Visibility? | Controls may remain visible to all signed-in users for Release 1. Existing capability checks on mutating actions remain defense-in-depth; Inventory Viewer has no role-capability restriction. |
-| 4. Mutation/queue/admin distinction? | **Codex proposal for review:** Search, filters, history, Viewer Refresh, and role Refresh are read-only projections. Add/Update/Remove/Hold/Return and recipe/BOM editing change only captured-workbook staging until an explicit save/post action. Confirm Writes, Production completion, Make/Unmake, and Shipments Sent queue inventory events; the processor is the only inventory authority writer. Admin controls perform named administrative actions and retain capability/re-auth/audit gates. Status text should state `staged`, `queued`, `applied`, or `refreshed` rather than imply that a local edit immediately changed inventory. |
+| 4. Mutation/queue/admin distinction? | **Release 1 decision:** Search, filters, history, Viewer Refresh, and role Refresh are read-only projections. Add/Update/Remove/Hold/Return and recipe/BOM editing change only captured-workbook staging until an explicit save/post action. Confirm Writes, Production completion, Make/Unmake, and Shipments Sent queue inventory events; the processor is the only inventory authority writer. Admin controls perform named administrative actions and retain capability/re-auth/audit gates. Status text should state `staged`, `queued`, `applied`, or `refreshed` rather than imply that a local edit immediately changed inventory. |
 | 5. Durable identity uses `System_Key`? | **Accepted rule:** every physical inventory entity, inventory event/log row, reservation, shipment, Production allocation/output, and Shipping BOM package/component reference uses immutable `System_Key`. Aggregate quantity views may group by SKU/location and need not impersonate one key. Designs use their specialized three-digit base-36 `DesignId` plus `DesignVersion`; an inventory entity produced from a design still receives its own `System_Key`. `EventId`, shipment IDs, and run IDs identify their own records. The reachable Shipping form/event path now follows this rule and preserves string identity. |
-| 6. Readable resize proportions? | Required. Production, Shipping `txtStatus`, and Viewer anchor/package checks are GREEN. Production maximize/restore and Shipping grow/shrink remain pending visible retest. |
+| 6. Readable resize proportions? | Required. Production, Shipping `txtStatus`, Viewer, and the explicit full-width Box Designer/Box Maker layouts are source- and packaged-geometry GREEN. Visible maximize/restore/grow/shrink confirmation remains part of the dedicated UAT checkpoint. |
 | 7. Empty shells? | Retired after source reachability review and focused regression contracts. Only the visible Purchasing stub remains intentionally. |
 
 ## 11. Required follow-up to close the control review
 
-- Repeat visible Production maximize/restore and Shipping grow/shrink checks.
-- Review and adjust the proposed checklist item 4 wording if needed.
+- Repeat visible Production maximize/restore and Shipping/Boxing grow/shrink checks.
+- Run the complete 24-row seed-to-ship workflow on the dedicated test warehouse,
+  including Receiving Location/Lot and Production List scaling.
+- Review and adjust checklist item 4 only if an operator test exposes an
+  ambiguous status or mutation boundary.
 - Review private legacy Shipping worksheet-maintenance routines for reachability
   before removal; they are outside the packaged Release 1 form/action authority
   path and must not be reintroduced as compatibility behavior.

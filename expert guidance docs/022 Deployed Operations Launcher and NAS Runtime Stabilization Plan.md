@@ -536,6 +536,82 @@ Gate:
 - [x] Receiving D14, snapshot refresh, reopen, and full-chain regressions remain
   GREEN.
 
+### Slice 4j — Full workflow control readiness
+
+The 2026-08-16 control review deliberately expands Slice 4 after the prior
+Boxing layout was visibly rejected. It preserves the D12 Operations package and
+D13 test-first boundary while making the current controls sufficient for a
+complete Receiving -> Production Run - List -> Box Maker -> Shipping operator
+test. Production Run - Tree remains experimental and is not changed by this
+slice.
+
+Required behavior:
+
+- [x] the saved role workbook names remain exactly
+  `<WarehouseId>.Receiving.Operator.xlsm`,
+  `<WarehouseId>.Production.Operator.xlsm`, and
+  `<WarehouseId>.Shipping.Operator.xlsm`;
+- [x] ordinary station identity is derived from the Windows computer name in
+  warehouse creation, connection, seed, runtime-workbook, Admin, and ribbon
+  fallback paths; the connection form no longer asks the user to select a
+  bespoke station or station-inbox checkbox;
+- [x] Admin exposes one **Design Lifecycle** ribbon launcher, with Release and
+  Obsolete retained as actions inside the lifecycle form;
+- [x] **Test Environment Setup** remains an Admin-only isolated fixture
+  provisioner and cleanup utility, clearly distinguished from ordinary station
+  identity and operator work;
+- [x] the Add/Edit Inventory mode selector reads **Add Item Mode**;
+- [x] Seed Demo Inventory contains 24 new `System_Key` entities, including
+  shipping carton, divider, label, tape, and void-fill consumables needed for
+  Box Designer and Box Maker tests;
+- [x] the visible **Box Designer** and Box Maker pages use explicit full-width
+  vertical layouts, recalculated column headers, and non-overlap geometry after
+  form resize;
+- [x] visible box wording uses **Alternative** rather than software-release
+  **Version**; compatible stored BOM keys such as `v1` remain internal data;
+- [x] Box Designer choices, saved BOM components, Box Maker availability, and
+  Make/Unmake payloads preserve exact string `System_Key` identity end to end;
+- [x] Receiving has a dedicated searchable item-results list, requires a
+  receiving Location, accepts optional Lot number, and carries both through
+  tally, aggregate, event note, and receipt history surfaces; and
+- [x] Production Run - List accepts and applies a batch scale from `0.001%`
+  through `1000%`, defaulting to `100%`.
+
+Gate:
+
+- [x] focused source RED recorded 1 pass / 12 failures before implementation;
+- [x] focused source GREEN is 18/18, with Demo Seed 4/4, R1 final controls
+  12/12, Slice 5 behavior locks 13/13, Slice 10 Receiving 10/10, Slice 11
+  Shipping/Boxing 11/11, Production layout 8/8, and ribbon generation 46/46;
+- [x] static source inventory keeps literal `Application.Run` at 9, unresolved
+  dynamic calls at 48, and improves duplicate-body candidates from 185 to
+  184. The deterministic baseline is 150 components and 4,614 procedures. The
+  reviewed Slice 4j feature exception permits required growth in the existing
+  oversized surfaces and services: `frmShipmentsTally` (+260 lines),
+  `frmProduction` (+145), `frmReceiving` (+123),
+  `modRoleWorkbookSurfaces` (+103), `modTS_Shipments` (+85),
+  `modTS_Received` (+39), `modReceivingPostingService` (+25),
+  `modBoxingService` (+17), `mProduction` (+16),
+  `modAdminInventorySeed` (+10), and `frmSeedInventory` (+2). Those additions implement the requested operator
+  layouts, header alignment, exact `System_Key` BOM/event identity, receiving
+  attributes, seed catalog, and batch-scale contract. The one new component is
+  a bounded 10-line shared computer-station identity module, not a parallel
+  workflow implementation;
+- [x] rebuild Core, Inventory Domain, Designs Domain, Operations, and Admin only
+  after every relevant Excel workbook/add-in is closed;
+- [x] packaged XLAM validation is 74/74 and Ribbon validation is 142/142;
+  packaged Production scaling, Receiving durability/search/header alignment,
+  and Shipping status/Box Designer/Box Maker resize and identity probes each
+  pass their public callback contract;
+- [x] the isolated public Admin callback publishes all 24 unique `System_Key`
+  entities with `Condition=GOOD`, and the ordered isolated Release 1 full-chain
+  validator is GREEN at 30/30 through restart and reconciliation;
+- [ ] repeat the 24-row Admin seed validator and Release 1 full workflow on the
+  dedicated NAS warehouse; and
+- [ ] obtain visible user confirmation for Box Designer/Box Maker resize,
+  Receiving search/location/lot, Production List scaling, and the complete
+  seed-to-ship workflow.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.
@@ -560,15 +636,24 @@ Exact steps:
    remains bound to its original operator workbook.
 10. Close and reopen Excel, reconnect/sign in, and repeat steps 4-8.
 11. On the Admin tab, click **Seed Demo Inventory**, keep the selected
-    dedicated NAS test warehouse/station, and click **OK**.
-12. Confirm the success dialog appears. Open the Receiving form, leave its
-    **Receiving** tab selected, click **Refresh**, enter `DEMO-` in **Search
-    inventory**, and confirm three additional demo entity rows are visible in
-    the top **Inventory** list. Do not use Production's **Recipe Builder** page
-    or Shipping's shippable-box list for this check: neither is the raw
-    inventory view governed by this acceptance step.
-13. Maximize and restore the Production form and confirm the four pages and
-    their controls resize with the window rather than remaining at base size.
+    dedicated NAS test warehouse, confirm Station shows this computer's Windows
+    name, and click **OK**.
+12. Confirm the success dialog appears. Open **Inventory Viewer**, click
+    **Refresh**, enter `DEMO-` in Search, and confirm the complete 24-entity kit
+    is visible, including shipping carton, divider, label, tape, and void fill.
+13. Open Receiving, click **Refresh**, search for an item in **Receive item
+    search**, select it from the dedicated results list, enter required
+    Location and optional Lot, stage it, and confirm the top list remains
+    **Receiving Entries History** rather than a duplicate inventory viewer.
+14. On Production Run - List, load a released recipe and prove scales at the
+    `0.001%`, `100%`, and `1000%` bounds. Production Run - Tree is not part of
+    this checkpoint.
+15. Open Shipping, resize **Box Designer** and **Box Maker** through grow,
+    shrink, maximize, and restore; confirm full-width lists, aligned headers,
+    non-overlapping actions, and `NA` for items without a box alternative.
+16. Use the seeded materials through Box Designer/Box Maker and complete one
+    shipment, confirming each public action reports staged, queued, applied, or
+    refreshed state accurately.
 
 Expected results:
 
@@ -584,8 +669,8 @@ Expected results:
 - Seed Demo Inventory completes against the selected dedicated test warehouse
   without flashing/hanging, an application/object-defined error, or Admin
   sheets/tables appearing in Config/Auth/inventory workbooks.
-- The seed result is not accepted until the three entities appear after
-  snapshot/operator refresh.
+- The expanded seed result is not accepted until all 24 entities, including
+  the five shipping-material rows, appear after Viewer refresh.
 - Production content expands and restores with the native form window.
 
 Evidence to return:
@@ -594,8 +679,8 @@ Evidence to return:
 - whether each form opened;
 - the operator workbook filename only, not its full user path;
 - whether the second launch reused the same workbook/form; and
-- the full Seed Demo Inventory result dialog and whether the three demo items
-  appeared after refresh; and
+- the full Seed Demo Inventory result dialog and whether all 24 demo entities,
+  including the five shipping-material rows, appeared after refresh; and
 - screenshots of the Operations ribbon and each successful form, with
   sensitive warehouse/user data redacted.
 
