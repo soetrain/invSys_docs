@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.8
+**Version:** 1.9
 
 **Inventory date:** 2026-08-17
 
@@ -358,6 +358,12 @@ warehouse. The target line must show the selected Warehouse ID and this
 computer's Windows name before the user enters the warehouse-specific
 credential.
 
+The ribbon entry is explicitly labeled **invSys Sign In** while signed out and
+**invSys Sign Out** while signed in. invSys Sign Out clears only the invSys
+identity/capability session so another user can sign in without repeating the
+server credential. A disconnected invSys Sign In action does not reopen this
+form; it tells the operator to use **Server Sign In** first.
+
 | Control | Type / displayed text | Purpose |
 |---|---|---|
 | `lblTitle` | Label — Sign in to invSys | Form heading. |
@@ -392,6 +398,14 @@ current-computer enrollment, cross-target sign-out, authentication binding, and
 two clean dedicated-NAS sessions against `WHT7025AE` / `X1-PRO-AI`. The visible
 operator sign-in with the user's existing warehouse credential remains the next
 acceptance action.
+
+The separate server control reads **Server Sign In** while disconnected and
+**Server Sign Out** while connected. Server Sign Out also clears invSys
+authentication and the selected target, disconnects the Windows SMB session,
+returns both controls to their Sign In labels, and leaves capability-gated
+operator buttons disabled. Selecting a warehouse through **Send To** now forces
+Excel to requery the deployed Operations dropdown and server/access labels
+immediately; opening Runtime Context is not required to refresh them.
 
 ### 5.3 Dynamic item-search window (`cDynItemSearch`)
 

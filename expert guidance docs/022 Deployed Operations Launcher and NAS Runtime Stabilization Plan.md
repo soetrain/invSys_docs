@@ -655,6 +655,46 @@ Gate:
   target, the sign-in form shows `WHT7025AE` / `X1-PRO-AI`, and the existing
   warehouse-specific credential signs in.
 
+### Slice 4l — Ribbon session-state controls
+
+The 2026-08-17 visible checkpoint confirmed target selection but showed that
+the deployed Operations server label stayed on the prior warehouse until
+Runtime Context caused a later refresh. It also showed ambiguous generic
+Sign In/Sign Out wording and no server-disconnect action. The root cause of the
+stale label was exact: warehouse selection invalidated retired role-specific
+Ribbon IDs but omitted `ddOperationsWarehouseTarget`,
+`lblOperationsServerStatus`, and `lblOperationsAccessStatus`.
+
+Normative clarification:
+
+- **invSys Sign In / invSys Sign Out** controls only the invSys identity and
+  capability session; invSys Sign Out retains server access for user switching;
+- **Server Sign In / Server Sign Out** controls the NAS/Windows SMB layer;
+  Server Sign Out also clears invSys authentication and the selected warehouse;
+- disconnected invSys Sign In fails closed with an instruction to use Server
+  Sign In and must not revive remembered target state; and
+- all capability-gated operator actions remain disabled until server sign-in,
+  target selection, and invSys sign-in are complete.
+
+Gate:
+
+- [x] focused reachable-source RED is 0/8 for the reported ribbon/session
+  behaviors, followed by an 8/9 RED proving disconnected Operations still
+  displayed `Access: Ready`;
+- [x] focused GREEN is 9/9 and same-action Excel tests are 2/2;
+- [x] Core target/auth/session regression is 30/30 and ribbon generation is
+  48/48;
+- [x] packaged XLAM and Ribbon validation are 74/74 and 140/140;
+- [x] dedicated `WHT7025AE` / `X1-PRO-AI` NAS validation is 16/16 across two
+  clean sessions, including immediate selected-target callback state, a real
+  SMB disconnect, and successful reconnect;
+- [x] the isolated ordered Release 1 workflow remains 30/30, Plan 022 launcher
+  contracts remain 24/24, Slice 4j remains 18/18, and the deterministic static
+  baseline remains 19/19; and
+- [ ] the user visibly confirms immediate Send To status refresh, both explicit
+  toggle labels, disabled operator controls after Server Sign Out, and the
+  connect-first prompt from disconnected invSys Sign In.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.
@@ -663,9 +703,9 @@ Exact steps:
 
 1. Close all Excel windows when requested and wait for confirmation that the
    new five-package set is installed.
-2. Open Excel normally, use Operations **Connect Server**, and verify the
+2. Open Excel normally, use Operations **Server Sign In**, and verify the
    dedicated NAS test warehouse is selected.
-3. Sign in to invSys.
+3. Use **invSys Sign In** and authenticate to the selected warehouse.
 4. Close any role operator workbook, then click **Receiving**.
 5. Confirm one saved station-local Receiving operator workbook opens and the
    Receiving form opens modelessly.
@@ -677,7 +717,10 @@ Exact steps:
    open without a type mismatch or missing-workbook instruction.
 9. Activate a different ordinary workbook and confirm each open role form
    remains bound to its original operator workbook.
-10. Close and reopen Excel, reconnect/sign in, and repeat steps 4-8.
+10. Use **Server Sign Out** and confirm both session controls return to their
+    Sign In labels and role controls are disabled. Click **invSys Sign In** and
+    confirm it instructs you to use Server Sign In. Then close and reopen Excel,
+    reconnect/sign in, and repeat steps 4-8.
 11. On the Admin tab, click **Seed Demo Inventory**, keep the selected
     dedicated NAS test warehouse, confirm Station shows this computer's Windows
     name, and click **OK**.

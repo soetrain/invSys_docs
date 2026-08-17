@@ -128,7 +128,7 @@ The modal connection flow (`EnsureWarehouseTargetInteractive`) is triggered only
 
 `EnsureWarehouseTargetInteractive` must never be called from `Workbook_Open`, `Workbook_Activate`, `Application.OnTime` callbacks, ribbon `getEnabled`/`getLabel`/`getImage` callbacks, or background refresh paths.
 
-Storage connection and invSys authentication are separate workflows. The warehouse connection prompt may collect Windows/NAS credentials and select a target, but it must not claim to sign in the invSys operator. Receiving, Shipping, and Production **Connect Server** buttons are non-modal: they re-run target resolution, refresh server status, and fail closed if no acceptable NAS target is available. The Sign In prompt is the invSys user/PIN or user/password action against the selected warehouse auth workbook and must not show NAS credential fields.
+Storage connection and invSys authentication are separate workflows. The warehouse connection prompt may collect Windows/NAS credentials and select a target, but it must not claim to sign in the invSys operator. Operations/Admin **Server Sign In** re-runs target resolution, refreshes server status, and fails closed if no acceptable NAS target is available. **invSys Sign In** is the invSys user/PIN or user/password action against the selected warehouse auth workbook and must not show NAS credential fields. **invSys Sign Out** retains the server session; **Server Sign Out** also clears invSys authentication and the selected target before disconnecting the Windows SMB session.
 
 ### Fallback Policy by Context
 
@@ -251,6 +251,22 @@ Public Sub DisconnectNasRoot( _
 
 **Rules:**
 - If the disconnected root is the current warehouse target's root, `ClearWarehouseTarget` is called automatically before the root is removed.
+
+---
+
+#### `DisconnectCurrentNasSession`
+
+```vb
+Public Function DisconnectCurrentNasSession( _
+    Optional ByVal disconnectWindowsSession As Boolean = True _
+) As String
+```
+
+**Purpose:** Implement the Core-owned Server Sign Out boundary. It clears the
+current target (which signs out invSys), removes every session root on the same
+SMB share, and optionally calls `WNetCancelConnection2` for that share. The
+remembered root/target profile remains available for a later explicit Server
+Sign In.
 
 ---
 
@@ -597,7 +613,10 @@ On failure, logs: `userId`, warehouse, station, timestamp, `AuthStatusCode`. `se
 Public Sub SignOut()
 ```
 
-**Purpose:** Clear the current invSys user session and capability cache. Called automatically by `Core.NasConnection.ClearWarehouseTarget`.
+**Purpose:** Clear the current invSys user session and capability cache. By
+itself this retains the current server session and warehouse target. It is also
+called automatically by `Core.NasConnection.ClearWarehouseTarget`, including
+the Server Sign Out path.
 
 ---
 
@@ -696,13 +715,12 @@ Public Function HasProvisionedCapabilityForSystem( _
 
 | Ribbon element | `onAction` / binding | Enabled condition |
 |---|---|---|
-| **Connect Server** button (role XLAMs) | Non-modal `ResolveWarehouseTarget`; refresh ribbon; no storage credential form | Always enabled |
+| **Server Sign In / Server Sign Out** toggle (Operations/Admin) | Signed out: connect/revalidate server storage. Signed in: clear invSys session and target, then disconnect the session SMB share. | Always enabled; label follows cached server-session state |
 | **Connect / Select Warehouse Storage** button (Admin/setup) | `EnsureWarehouseTargetInteractive(requireNasTarget:=False)` | Always enabled |
 | **Server status** label (role XLAMs) | cached target status label | Always visible; no network probe |
 | **Warehouse status** label | `GetConnectionStatus` | Always visible |
-| **Sign In** button | If target is acceptable, `ShowSignInPrompt(GetCurrentTarget(), requiredCapability)`; otherwise message/status only | `IsSignedIn() = False`; writes remain disabled until target and auth pass |
-| **Sign Out** button | `SignOut` | `IsSignedIn() = True` |
-| **Current user / auth status** label | `IsSignedIn` + `GetCurrentUserDisplayName` + `GetAuthStatus` | Always visible; signed-out display is `Sign In` or `<not signed in>`, never Windows/NAS identity; runtime diagnostics may separately show `UserId` |
+| **invSys Sign In / invSys Sign Out** toggle | Signed out with live server session: `ShowSignInPrompt(GetCurrentTarget(), requiredCapability)`. Signed in: `SignOut` only. | Always enabled; disconnected Sign In shows connect-first guidance; writes remain disabled until target and auth pass |
+| **Current user / auth status** label | `IsSignedIn` + `GetCurrentUserDisplayName` + `GetAuthStatus` | Always visible; signed-out display is `invSys Sign In` or `<not signed in>`, never Windows/NAS identity; runtime diagnostics may separately show `UserId` |
 | **Post / Confirm Writes** button (role XLAMs) | Role event creator | `IsSignedIn() = True` AND `CanPerform(cap, ...)` AND `GetCurrentTarget().SourceType <> WH_SOURCE_FALLBACK` |
 | **Post / Confirm Writes** button (Admin XLAM) | Admin action | `IsSignedIn() = True` AND `CanPerform(cap, ...)` |
 
@@ -728,7 +746,7 @@ Core.NasConnection.ResolveWarehouseTarget tgt, sc
 ribbonUI.Invalidate   ' refresh all ribbon getEnabled / getLabel callbacks
 
 
-' Role Connect Server ribbon button onAction
+' Operations Server Sign In ribbon button onAction
 '
 ' Explicit operator action. No modal storage form.
 
@@ -738,18 +756,27 @@ Call Core.NasConnection.ResolveWarehouseTarget(connectTarget, connectStatus)
 ribbonUI.Invalidate
 
 
-' Sign In ribbon button onAction
+' invSys Sign In ribbon button onAction
 '
 ' Explicit operator action. InvSys auth is separate from storage access.
 
-If Not Core.NasConnection.IsTargetResolved() Then
-    MsgBox "Warehouse storage is not connected. Use Connect Server or Runtime Context before signing in.", vbExclamation
+If Not Core.NasConnection.HasConnectedUncRoot() Then
+    MsgBox "Warehouse storage is not connected. Use Server Sign In before invSys Sign In.", vbExclamation
     Exit Sub
 End If
 Dim result As AuthStatusCode
 result = Core.Auth.ShowSignInPrompt(Core.NasConnection.GetCurrentTarget(), requiredCapability)
 ' AUTH_OK: ribbon write controls enabled by IsSignedIn() getEnabled
 ' AUTH_CANCELLED or failure: ribbon remains in signed-out state
+ribbonUI.Invalidate
+
+
+' Server Sign Out ribbon button onAction
+'
+' Explicit operator action. Clear invSys authority before disconnecting SMB.
+
+Core.Auth.SignOut
+Core.NasConnection.DisconnectCurrentNasSession True
 ribbonUI.Invalidate
 
 
@@ -793,12 +820,16 @@ End If
 | `SelectWarehouseTarget` on folder `invsys_Zenbook_WH` returns `WarehouseId` from config workbook | `SelectWarehouseTarget` | `outTarget.WarehouseId` = config value, not folder name |
 | Select `invsys_Zenbook_WH`, restart Excel, Windows session active: resolves to NAS, not `C:\invSys\WH1` | Priority 2 restore | `outTarget.HubRoot` = NAS path; `SourceType ≠ WH_SOURCE_FALLBACK` |
 | Select `invsys_Zenbook_WH`, restart Excel, Windows session expired: ribbon shows unreachable, no fallback | Priority 2 probe → `NAS_CREDENTIAL_REJECTED` | Returns `False`; `NAS_TARGET_UNREACHABLE`; local root not loaded |
-| Role XLAM Connect Server does not open storage credential form | Ribbon `onAction` | Calls non-modal resolver, refreshes server label, and shows no warehouse connection form |
+| Operations Server Sign In does not open storage credential form when remembered credentials remain usable | Ribbon `onAction` | Calls non-modal resolver, refreshes server label, and shows no warehouse connection form |
 | Role XLAM server status label reflects target state | Ribbon `getLabel` | Shows `Server: Connected ...` for acceptable NAS target; `Server: Not connected` otherwise |
+| Send To immediately refreshes the deployed Operations label | Ribbon `onAction` → `IRibbonUI.Invalidate` | Server status names the newly selected warehouse without opening Runtime Context |
+| Server Sign Out clears both layers | Ribbon `onAction` | `IsSignedIn=False`; no current target; no session UNC root; labels are `Server Sign In` and `invSys Sign In`; capability controls disabled |
+| invSys Sign Out retains the server layer | Ribbon `onAction` | `IsSignedIn=False`; current NAS target/session remain available for another invSys user |
+| Disconnected invSys Sign In fails closed | Ribbon `onAction` | No sign-in form opens and remembered target state is not revived; connect-first guidance is shown |
 | Admin XLAM `EnsureWarehouseTargetInteractive()` accepts fallback without re-prompt | `EnsureWarehouseTargetInteractive` with `WH_SOURCE_FALLBACK` active, `requireNasTarget` default `False` | Returns `True`; no re-prompt |
 | Role XLAM `WH_SOURCE_FALLBACK` target: Post button disabled via `getEnabled` | Ribbon `getEnabled` | `CanPerform = True` but Post button disabled; `SourceType = WH_SOURCE_FALLBACK` |
 | Admin XLAM `WH_SOURCE_FALLBACK` target: Post button enabled | Ribbon `getEnabled` | Post button enabled normally |
-| Signed-out role ribbon user label does not display Windows/NAS identity | Ribbon `getLabel` / runtime status label | Shows `Sign In` or `<not signed in>` until `IsSignedIn() = True` |
+| Signed-out role ribbon user label does not display Windows/NAS identity | Ribbon `getLabel` / runtime status label | Shows `invSys Sign In` or `<not signed in>` until `IsSignedIn() = True` |
 | Role current write rejects signed-out operator | Role event creator using current user | Write blocked before queueing; no fallback user is substituted |
 | Role current write rejects signed-in user without required capability | Role event creator using current user | Write blocked before queueing; capability error surfaced |
 | Role current write rejects fallback target even when auth/capability otherwise pass | Role event creator using current user | Write blocked before queueing; operator is told to connect to NAS warehouse |
