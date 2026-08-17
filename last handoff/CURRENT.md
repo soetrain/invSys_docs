@@ -1,1 +1,1 @@
-`011 Slice 4j Automated Green Awaiting Dedicated NAS UAT.md`
+`012 Slice 4k Warehouse Binding Green Awaiting Sign-In UAT.md`
