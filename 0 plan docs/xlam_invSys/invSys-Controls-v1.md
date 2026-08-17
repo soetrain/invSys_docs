@@ -1,8 +1,8 @@
 # invSys Form Controls v1
 
-**Version:** 1.7
+**Version:** 1.8
 
-**Inventory date:** 2026-08-16
+**Inventory date:** 2026-08-17
 
 **Architecture:** invSys v4.11, Release 1
 **Scope:** every checked-in VBA UserForm source file used by Core, Admin,
@@ -351,6 +351,13 @@ package rebuild. The nine active Admin forms above are the Release 1 set.
 
 ### 5.1 `frmSignIn` — invSys Sign In
 
+The form authenticates only against the current committed warehouse target.
+Changing warehouse, station, or runtime root signs out the prior session so a
+credential can never be silently checked against the previously selected
+warehouse. The target line must show the selected Warehouse ID and this
+computer's Windows name before the user enters the warehouse-specific
+credential.
+
 | Control | Type / displayed text | Purpose |
 |---|---|---|
 | `lblTitle` | Label — Sign in to invSys | Form heading. |
@@ -371,6 +378,20 @@ package rebuild. The nine active Admin forms above are the Release 1 set.
 | Station | `lblStation`, locked `txtStation`, `lblStationHelp` | Shows the Windows computer name. The role contract still decides whether a station inbox is required; the user does not choose a bespoke station. |
 | Targets | `lblTargets`, `lstTargets` | Lists discovered warehouse runtimes and their readiness. |
 | Confirmation | `btnOK`, `btnCancel` | Selects the highlighted target or cancels. |
+
+The Operations **Send To** selector and this form share the same target-binding
+contract. If the selected warehouse still contains only a legacy station such
+as `S1`, selecting it may add this computer's Windows name to station config
+after the warehouse Auth workbook validates. Arbitrary typed or stale station
+names are still rejected. The selected target is committed only after all
+validation succeeds; a failure reports the attempted target and explicitly
+states that the prior current target remains unchanged.
+
+Automated 2026-08-17 evidence is GREEN for the exact ribbon action path,
+current-computer enrollment, cross-target sign-out, authentication binding, and
+two clean dedicated-NAS sessions against `WHT7025AE` / `X1-PRO-AI`. The visible
+operator sign-in with the user's existing warehouse credential remains the next
+acceptance action.
 
 ### 5.3 Dynamic item-search window (`cDynItemSearch`)
 

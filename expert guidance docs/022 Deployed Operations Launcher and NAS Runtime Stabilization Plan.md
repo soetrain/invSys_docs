@@ -612,6 +612,49 @@ Gate:
   Receiving search/location/lot, Production List scaling, and the complete
   seed-to-ship workflow.
 
+### Slice 4k — Selected warehouse/session binding
+
+The 2026-08-17 visible checkpoint showed that **Connect Server** reached the NAS
+but both target choices were rejected because `tblStationConfig` still held the
+legacy station `S1`. The ribbon therefore retained `invsys_Zenbook_WH`, the
+sign-in form displayed `<roaming>`, and the user's WHT credential was checked
+against the wrong Auth workbook. The failure dialog compounded the problem by
+showing the prior connection status rather than the failed attempt status.
+
+Required behavior:
+
+- [x] the exact **Send To** public action accepts the automatically discovered
+  Windows computer name and binds the selected warehouse before sign-in;
+- [x] when that computer is missing from a valid warehouse config, the system
+  safely enrolls only the exact current computer station; arbitrary or stale
+  station identifiers remain rejected;
+- [x] target selection validates before atomically replacing the current
+  warehouse, station, and runtime root;
+- [x] changing any target identity signs out the prior invSys session, so no
+  authenticated state crosses warehouse boundaries;
+- [x] failure dialogs report the attempted selection result and say that the
+  prior target remains current; and
+- [x] NAS automation uses the Windows computer name rather than hard-coded
+  `S1`, and read-only runtime extraction handles one-workbook scalar results
+  without mutating an inspected workbook.
+
+Gate:
+
+- [x] focused behavioral RED is recorded at 0/1 after the valid Excel fixture
+  reaches the legacy-station rejection;
+- [x] focused current-computer selection and same-action ribbon tests are 2/2;
+- [x] Core target/auth/write regression is 28/28;
+- [x] packaged XLAM and Ribbon validation remain 74/74 and 142/142;
+- [x] dedicated NAS validation is 12/12 across two clean Excel sessions for
+  `WHT7025AE` / `X1-PRO-AI`, including selected-target, launcher, package-hash,
+  and runtime read-only-safety checks;
+- [x] the isolated ordered Release 1 workflow remains 30/30 through restart and
+  reconciliation, Tool B remains 62/62, and the deterministic static baseline
+  remains 19/19; and
+- [ ] the user visibly confirms that selecting `WHT7025AE` changes the ribbon
+  target, the sign-in form shows `WHT7025AE` / `X1-PRO-AI`, and the existing
+  warehouse-specific credential signs in.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.
