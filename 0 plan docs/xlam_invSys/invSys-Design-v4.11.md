@@ -571,15 +571,29 @@ map old business inventory into this identity model. No legacy `ROW`-to-
 with Admin Generate Warehouse/Create Warehouse and optional bootstrap or Admin
 `Seed Demo Inventory`. Old unmanaged inventory is left behind.
 
-**Generate/seed acceptance contract:**
+**Generate/demo-inventory lifecycle acceptance contract:**
 - Fresh Inventory Domain, snapshot, and operator tables contain the required
   managed headers, including `System_Key` and `Condition`, and contain no `ROW`
   header.
 - Every seeded durable inventory entity has a nonblank unique `System_Key`.
-- Repeated seed actions create new keys without collisions or unintended
-  overwrites.
+- The Admin demo-inventory form requires the operator to select either the
+  built-in Release 1 workflow kit or an uploaded CSV data set. Selecting a file
+  does not mutate inventory; **Seed Demo Inventory** applies the selected set.
+- Repeating a seed is idempotent for active demo groups identified by item
+  code, location, and condition. Existing active groups are skipped rather
+  than assigned additional durable keys; missing or fully depleted groups are
+  created with new unique keys.
+- **Delete Demo Inventory** confirms the destructive intent and depletes every
+  active `DEMO-` entity through exact-`System_Key` adjustment events. It does
+  not physically delete canonical entity or event history.
+- Uploaded CSV data sets require `ITEM_CODE`, `ITEM`, `QTY`, `UOM`, and
+  `LOCATION`; may supply `CONDITION`, `DESCRIPTION`, `CATEGORY`, and `VENDOR`;
+  require positive quantities and `DEMO-` item codes; and are completely
+  validated before any event is queued.
 - Processor application, snapshot publication, operator refresh, and reopen
   preserve the key.
+- Current Inventory Viewer and Receiving choice projections aggregate active
+  entities by item code/UOM/location/condition and omit nonpositive totals.
 - Added custom headers survive their declared local/shared persistence boundary.
 - The supported greenfield generation/seed path does not call legacy inventory
   import or migration behavior.

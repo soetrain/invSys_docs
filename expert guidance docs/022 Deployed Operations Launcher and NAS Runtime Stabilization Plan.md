@@ -445,8 +445,8 @@ Required behavior:
   metadata sufficient for the role projections;
 - [x] one applied event publishes all 19 entities to the snapshot and a
   Receiving refresh exposes all 19; and
-- [x] repeated seeding remains an intentional new-entity action, not an
-  idempotent SKU upsert.
+- [x] this slice originally treated repeated seed as an intentional new-entity
+  action; Slice 4n supersedes that behavior with active-group idempotence.
 
 Gate:
 
@@ -732,6 +732,41 @@ Gate:
 - [ ] the user visibly signs into Admin as the existing warehouse user and
   confirms the Admin ribbon controls enable at `WHT7025AE` / `X1-PRO-AI`.
 
+### Slice 4n — selectable demo-inventory lifecycle and operator projections
+
+The 2026-08-17 Receiving checkpoint showed duplicate-looking search rows after
+repeated demo seeds. The operator also needs to choose the fixture used for a
+seed and to remove demo state without erasing canonical audit history.
+
+Required behavior:
+
+- [x] the Admin ribbon opens one **Demo Inventory** form with explicit **Seed
+  Demo Inventory**, **Delete Demo Inventory**, and **Upload Demo Inventory**
+  actions;
+- [x] the form selects the built-in Release 1 workflow kit or an uploaded CSV;
+  Upload selects the file and Seed applies the selected data set;
+- [x] repeated built-in or uploaded seeds skip active item/location/condition
+  groups, while missing or fully depleted groups receive new immutable keys;
+- [x] confirmed Delete posts exact-`System_Key` depletion adjustments for every
+  active `DEMO-` entity and retains canonical entity/event history;
+- [x] uploaded CSV validation is all-or-nothing and requires `DEMO-` item codes,
+  positive quantity, complete required fields, and no duplicate active group;
+  and
+- [x] Inventory Viewer and Receiving choice projections aggregate matching
+  active entities and omit nonpositive totals.
+
+Gate:
+
+- [x] focused RED records absent lifecycle actions, repeat-seed duplication,
+  stale zero-quantity projections, and absent selected-data-set routing;
+- [x] packaged public callback GREEN covers built-in selection, repeated seed,
+  exact-key deletion, selected CSV seed, invalid-file rejection, and canceled
+  deletion;
+- [x] Receiving aggregation, Generate Warehouse/Create Warehouse, packaged
+  XLAM, RibbonX, and the ordered Release 1 chain remain GREEN; and
+- [ ] the user visibly confirms the revised form and chosen data set against the
+  dedicated NAS test warehouse.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.
@@ -758,12 +793,15 @@ Exact steps:
     Sign In labels and role controls are disabled. Click **invSys Sign In** and
     confirm it instructs you to use Server Sign In. Then close and reopen Excel,
     reconnect/sign in, and repeat steps 4-8.
-11. On the Admin tab, click **Seed Demo Inventory**, keep the selected
-    dedicated NAS test warehouse, confirm Station shows this computer's Windows
-    name, and click **OK**.
+11. On the Admin tab, click **Demo Inventory**, keep the selected dedicated NAS
+    test warehouse, confirm Station shows this computer's Windows name, select
+    **R1 Workflow Kit (built-in)**, and click **Seed Demo Inventory**.
 12. Confirm the success dialog appears. Open **Inventory Viewer**, click
     **Refresh**, enter `DEMO-` in Search, and confirm the complete 24-entity kit
     is visible, including shipping carton, divider, label, tape, and void fill.
+    Repeat the same built-in Seed and confirm it reports no newly created active
+    groups. Use **Upload Demo Inventory** to choose a validation CSV and confirm
+    the file remains merely selected until **Seed Demo Inventory** is clicked.
 13. Open Receiving, click **Refresh**, search for an item in **Receive item
     search**, select it from the dedicated results list, enter required
     Location and optional Lot, stage it, and confirm the top list remains

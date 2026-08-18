@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.10
+**Version:** 1.11
 
 **Inventory date:** 2026-08-17
 
@@ -54,7 +54,7 @@ workbook names are `WHT7025AE.Receiving.Operator.xlsm`,
 `WHT7025AE.Production.Operator.xlsm`, and
 `WHT7025AE.Shipping.Operator.xlsm`.
 
-### Seed Demo Inventory: packaged correction GREEN; dedicated UAT pending
+### Demo Inventory lifecycle: packaged GREEN; dedicated UAT pending
 
 `frmSeedInventory` displayed and its public callback reported one applied
 processor event. The operator then refreshed, but the three demo entities were
@@ -63,11 +63,15 @@ entities in all three saved role projections, and the packaged test proved the
 same three unique `System_Key` values with `Condition=GOOD` through
 canonical inventory, snapshot, saved Receiving workbook, and the Receiving
 form's actual Refresh handler. That result is insufficient for a complete
-Receiving-to-Production-to-Shipping workflow. The source correction now queues
-one 24-entity batch containing raw ingredients, WIP, finished/shippable goods,
+Receiving-to-Production-to-Shipping workflow. The Demo Inventory form now
+requires a data-set choice: the built-in 24-item Release 1 workflow kit or an
+uploaded CSV chosen by the operator. Upload selects the source; Seed applies
+it. The built-in kit contains raw ingredients, WIP, finished/shippable goods,
 cases/boxes, tins, shipping cartons, dividers, labels, tape, and void fill,
-with new `System_Key`, `Condition=GOOD`, and catalog
-metadata. The packaged public callback is now GREEN through the event,
+with `System_Key`, `Condition=GOOD`, and catalog metadata. Repeating Seed skips
+active item/location/condition groups rather than manufacturing duplicate
+keys. Confirmed Delete depletes active `DEMO-` keys through audited adjustment
+events without erasing history. The packaged public callback is now GREEN through the event,
 canonical inventory, catalog, published snapshot, saved Receiving projection,
 and the Receiving form's actual Refresh handler for the complete 24-row kit.
 All 24 entities were visible, all keys were unique, every condition was `GOOD`,
@@ -140,7 +144,7 @@ separate reachability review before removal.
 | Admin | `frmCreateWarehouse` | Active, designer-backed plus runtime buttons | Greenfield warehouse creation |
 | Admin | `frmReAuthGate` | Active, designer-backed | Destructive-action re-authentication |
 | Admin | `frmRetireMigrateWarehouse` | Active, designer-backed plus runtime controls | Archive, retire, migrate, or delete warehouse |
-| Admin | `frmSeedInventory` | Active, runtime-generated | Choose target and seed demo inventory |
+| Admin | `frmSeedInventory` | Active, runtime-generated | Choose, seed, delete, or upload a demo inventory data set |
 | Admin | `frmSetupTesterStation` | Active, reused designer plus runtime controls | Disposable tester-station setup and cleanup |
 | Core | `frmItemSearch` | Active runtime canvas | Controls and role profiles supplied by `cDynItemSearch` |
 | Core | `frmSignIn` | Active, runtime-generated | invSys user authentication |
@@ -293,26 +297,34 @@ Runtime-added controls:
 | Result panel | `fraResult`, `lblResultSummary` | Displays the final result. |
 | Navigation | `btnBack`, `btnCancel`, `btnOK` | Goes back, cancels, advances/executes, or closes according to the active panel. |
 
-### 4.8 `frmSeedInventory` — Seed Demo Inventory
+### 4.8 `frmSeedInventory` — Demo Inventory
 
 | Control | Type / displayed text | Purpose |
 |---|---|---|
-| `lblTitle` | Label — Seed demo inventory into which warehouse? | Explains the target choice. |
+| `lblTitle` | Label — Demo inventory for which warehouse? | Explains the target choice. |
 | `lblWarehouse`, `cmbWarehouse` | Label and combo box — Warehouse | Lists valid current target options and retains WarehouseId/station/root/status metadata. |
 | `lblStation`, `txtStation` | Label and locked text box — Station | Shows the Windows computer name used automatically as station identity. |
 | `lblUser`, `txtUser` | Label and text box — Admin user | Supplies the invSys user for the seed event. |
 | `lblRoot`, `lblRootValue` | Labels — Runtime root | Shows the selected runtime root. |
+| `lblDemoDataSet`, `cboDemoDataSet` | Label and combo box — Data set | Selects either **R1 Workflow Kit (built-in)** or an uploaded CSV. Switching back to the built-in kit clears the upload choice. |
 | `lblStatus` | Status label | Shows target readiness, validation, or inbox-repair result. |
 | `btnRepairInboxes` | Button — **Repair Inboxes** | Ensures Receiving, Shipping, and Production inboxes exist for the station. |
-| `btnOK` | Button — **OK** | Accepts the selection; the public callback then queues and processes the seed event. |
+| `btnSeedDemoInventory` | Button — **Seed Demo Inventory** | Applies the selected data set. Repeated application skips active item/location/condition groups, while missing or depleted groups receive new keys. |
+| `btnDeleteDemoInventory` | Button — **Delete Demo Inventory** | After confirmation, depletes active `DEMO-` entities through exact-`System_Key` adjustment events; canonical history is retained. |
+| `btnUploadDemoInventory` | Button — **Upload Demo Inventory** | Chooses a CSV and makes it the selected data set. File selection alone does not mutate inventory; the operator then clicks Seed. |
 | `btnCancel` | Button — **Cancel** | Cancels without seeding. |
 
-Current acceptance status: the prior three-row seed was not visible in the
-user's Receiving refresh and was not a complete workflow kit. The rebuilt
-package now requests and publishes 24 entities, including five explicit
-box-making consumables. The public Admin callback and isolated packaged
-Receiving/Production/Box Maker/Shipping full chain are GREEN; visible
-dedicated-NAS acceptance remains required.
+Uploaded CSVs require `ITEM_CODE`, `ITEM`, `QTY`, `UOM`, and `LOCATION`.
+`CONDITION`, `DESCRIPTION`, `CATEGORY`, and `VENDOR` are optional. Every item
+code must begin `DEMO-`, quantities must be positive, required cells must be
+complete, and duplicate item/location/condition groups are rejected before
+anything is queued.
+
+Current acceptance status: the public Admin action contract is GREEN for
+built-in selection, repeated idempotent seed, exact-key deletion, selected CSV
+seed, repeated CSV seed, invalid-file rejection, and canceled deletion. The
+isolated packaged Receiving/Production/Box Maker/Shipping full chain is GREEN;
+visible dedicated-NAS acceptance of the revised form remains required.
 
 ### 4.9 `frmSetupTesterStation` — Test Environment Setup
 
@@ -474,7 +486,7 @@ anchor manager while remaining readable.
 | Receipt identity | `lblReceiptId`, `txtReceiptId` | Shows a generated, locked receipt ID. |
 | Reference | `lblRef`, `txtRef` | Accepts PO/BOL reference text. |
 | History filter | `lblSearch`, `txtSearch` | Filters Receiving Entries History as the user types. |
-| Managed item search | `lblItemSearch`, `txtItemSearch`, `lblReceiveItemsTitle`, `lblReceiveItemsHeader`, `lstReceiveItems` | Filters and displays a dedicated result list with Code, Item, UOM, Available, Location, Description, and Vendor while retaining hidden source `System_Key`. |
+| Managed item search | `lblItemSearch`, `txtItemSearch`, `lblReceiveItemsTitle`, `lblReceiveItemsHeader`, `lstReceiveItems` | Filters and displays a dedicated result list with Code, Item, UOM, Available, Location, Description, and Vendor. Rows with the same item code/UOM/location/condition are aggregated, nonpositive totals are hidden, and one representative hidden `System_Key` is retained only for catalog lookup; confirming a new receipt creates its own durable key. |
 | Quantity | `lblQty`, `txtQty` | Accepts quantity for the selected item; defaults to 1. |
 | Receipt attributes | `lblReceiveLocation`, `txtReceiveLocation`, `lblLotNumber`, `txtLotNumber` | Requires the receiving location and accepts an optional lot number. Selection defaults Location from the source row, but the operator may change it. |
 | Top actions | `btnRefresh`, `btnAdd` | Reloads views or stages the selected item/quantity. |
