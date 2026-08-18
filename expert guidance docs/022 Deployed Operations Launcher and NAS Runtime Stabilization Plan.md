@@ -740,11 +740,16 @@ seed and to remove demo state without erasing canonical audit history.
 
 Required behavior:
 
+- [x] the Admin ribbon mirrors Operations with a Core-owned live **Send To**
+  warehouse selector and shared target-selection callback;
 - [x] the Admin ribbon opens one **Demo Inventory** form with explicit **Seed
-  Demo Inventory**, **Delete Demo Inventory**, and **Upload Demo Inventory**
-  actions;
-- [x] the form selects the built-in Release 1 workflow kit or an uploaded CSV;
-  Upload selects the file and Seed applies the selected data set;
+  Demo Inventory**, **Delete Demo Inventory**, **Upload Data Set**, and **Delete
+  Data Set** actions;
+- [x] the form selects the immutable built-in Release 1 workflow kit or a
+  validated CSV stored in the selected warehouse data-set library; Upload
+  imports a definition and Seed applies the selected definition;
+- [x] Delete Data Set removes only a selected uploaded definition, never the R1
+  kit or inventory already seeded from that definition;
 - [x] repeated built-in or uploaded seeds skip active item/location/condition
   groups, while missing or fully depleted groups receive new immutable keys;
 - [x] confirmed Delete posts exact-`System_Key` depletion adjustments for every
@@ -759,9 +764,10 @@ Gate:
 
 - [x] focused RED records absent lifecycle actions, repeat-seed duplication,
   stale zero-quantity projections, and absent selected-data-set routing;
-- [x] packaged public callback GREEN covers built-in selection, repeated seed,
-  exact-key deletion, selected CSV seed, invalid-file rejection, and canceled
-  deletion;
+- [x] packaged public callback GREEN covers built-in selection, persistent CSV
+  import/selection, repeated seed, exact-key inventory depletion, uploaded
+  definition deletion with seeded stock retained, R1 protection, invalid-file
+  rejection, and canceled deletion;
 - [x] Receiving aggregation, Generate Warehouse/Create Warehouse, packaged
   XLAM, RibbonX, and the ordered Release 1 chain remain GREEN; and
 - [ ] the user visibly confirms the revised form and chosen data set against the
@@ -793,15 +799,19 @@ Exact steps:
     Sign In labels and role controls are disabled. Click **invSys Sign In** and
     confirm it instructs you to use Server Sign In. Then close and reopen Excel,
     reconnect/sign in, and repeat steps 4-8.
-11. On the Admin tab, click **Demo Inventory**, keep the selected dedicated NAS
-    test warehouse, confirm Station shows this computer's Windows name, select
-    **R1 Workflow Kit (built-in)**, and click **Seed Demo Inventory**.
+11. On the Admin tab, use **Send To** to select the dedicated NAS test
+    warehouse and confirm the Operations selector/status updates to the same
+    target. Click **Demo Inventory**, confirm Station shows this computer's
+    Windows name, select **R1 Workflow Kit (built-in)**, and click **Seed Demo
+    Inventory**.
 12. Confirm the success dialog appears. Open **Inventory Viewer**, click
     **Refresh**, enter `DEMO-` in Search, and confirm the complete 24-entity kit
     is visible, including shipping carton, divider, label, tape, and void fill.
     Repeat the same built-in Seed and confirm it reports no newly created active
-    groups. Use **Upload Demo Inventory** to choose a validation CSV and confirm
-    the file remains merely selected until **Seed Demo Inventory** is clicked.
+    groups. Use **Upload Data Set** to import a validation CSV, reopen the form,
+    and confirm it is selectable. Seed it, then use **Delete Data Set** and
+    confirm only the uploaded definition disappears: its seeded inventory
+    remains. Confirm the R1 kit cannot be deleted.
 13. Open Receiving, click **Refresh**, search for an item in **Receive item
     search**, select it from the dedicated results list, enter required
     Location and optional Lot, stage it, and confirm the top list remains

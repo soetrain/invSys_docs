@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.11
+**Version:** 1.12
 
 **Inventory date:** 2026-08-17
 
@@ -306,12 +306,13 @@ Runtime-added controls:
 | `lblStation`, `txtStation` | Label and locked text box — Station | Shows the Windows computer name used automatically as station identity. |
 | `lblUser`, `txtUser` | Label and text box — Admin user | Supplies the invSys user for the seed event. |
 | `lblRoot`, `lblRootValue` | Labels — Runtime root | Shows the selected runtime root. |
-| `lblDemoDataSet`, `cboDemoDataSet` | Label and combo box — Data set | Selects either **R1 Workflow Kit (built-in)** or an uploaded CSV. Switching back to the built-in kit clears the upload choice. |
+| `lblDemoDataSet`, `cboDemoDataSet` | Label and combo box — Data set | Selects **R1 Workflow Kit (built-in)** or any CSV stored in the selected warehouse's managed data-set library. Uploaded definitions remain selectable on later launches. |
 | `lblStatus` | Status label | Shows target readiness, validation, or inbox-repair result. |
 | `btnRepairInboxes` | Button — **Repair Inboxes** | Ensures Receiving, Shipping, and Production inboxes exist for the station. |
 | `btnSeedDemoInventory` | Button — **Seed Demo Inventory** | Applies the selected data set. Repeated application skips active item/location/condition groups, while missing or depleted groups receive new keys. |
 | `btnDeleteDemoInventory` | Button — **Delete Demo Inventory** | After confirmation, depletes active `DEMO-` entities through exact-`System_Key` adjustment events; canonical history is retained. |
-| `btnUploadDemoInventory` | Button — **Upload Demo Inventory** | Chooses a CSV and makes it the selected data set. File selection alone does not mutate inventory; the operator then clicks Seed. |
+| `btnUploadDemoInventory` | Button — **Upload Data Set** | Chooses and validates a CSV, then copies it into the selected warehouse's `admin\demo-inventory-data-sets` library. Upload does not add inventory; reopen the form, select the stored definition, and click Seed. A same-named definition is rejected rather than overwritten. |
+| `btnDeleteDemoDataSet` | Button — **Delete Data Set** | After confirmation, deletes only the selected uploaded CSV definition. It does not reverse or alter inventory already seeded from that definition. The built-in R1 kit is protected and cannot be deleted. |
 | `btnCancel` | Button — **Cancel** | Cancels without seeding. |
 
 Uploaded CSVs require `ITEM_CODE`, `ITEM`, `QTY`, `UOM`, and `LOCATION`.
@@ -320,9 +321,17 @@ code must begin `DEMO-`, quantities must be positive, required cells must be
 complete, and duplicate item/location/condition groups are rejected before
 anything is queued.
 
+The two delete controls have deliberately different authority. **Delete Demo
+Inventory** depletes active demo stock through audited inventory events but
+retains canonical history and all data-set definitions. **Delete Data Set**
+removes an uploaded CSV definition but leaves previously seeded stock and
+inventory history unchanged.
+
 Current acceptance status: the public Admin action contract is GREEN for
-built-in selection, repeated idempotent seed, exact-key deletion, selected CSV
-seed, repeated CSV seed, invalid-file rejection, and canceled deletion. The
+built-in selection, persistent uploaded-definition selection, repeated
+idempotent seed, exact-key inventory depletion, uploaded-definition deletion,
+R1 deletion rejection, selected CSV seed, repeated CSV seed, invalid-file
+rejection, and canceled deletion. The
 isolated packaged Receiving/Production/Box Maker/Shipping full chain is GREEN;
 visible dedicated-NAS acceptance of the revised form remains required.
 

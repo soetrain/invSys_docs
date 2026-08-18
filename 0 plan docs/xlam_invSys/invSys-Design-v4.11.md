@@ -194,7 +194,7 @@ a clear connect/reconnect prompt. They must not silently fall back to a local
 warehouse with the same or similar WarehouseId.
 ```
 
-**Operational rule:** Core owns the shared NAS connection UI/API, remembered warehouse target, current user state, and runtime resolver. Admin may expose richer management forms, but the shared Operations ribbon must expose enough UI for Receiving/Shipping/Production operators to connect to a NAS/server root, select a warehouse target, and sign in as an invSys user.
+**Operational rule:** Core owns the shared NAS connection UI/API, remembered warehouse target, current user state, and runtime resolver. Admin may expose richer management forms, but the shared Operations ribbon must expose enough UI for Receiving/Shipping/Production operators to connect to a NAS/server root, select a warehouse target, and sign in as an invSys user. The Admin ribbon mirrors the same Core-owned live warehouse selector and selection callback; selecting a target from either ribbon invalidates and refreshes both displays.
 
 **Operator sign-in workflow:** `invSys.Operations.xlam` must allow a normal operator to work without loading `invSys.Admin.xlam`:
 1. **Server Sign In** on the Operations ribbon revalidates the remembered/current warehouse storage target and refreshes visible server status. It does not open the warehouse storage credential/selection form in normal Receiving, Shipping, or Production workflows unless Windows has no usable credential for the saved server root.
@@ -577,7 +577,9 @@ with Admin Generate Warehouse/Create Warehouse and optional bootstrap or Admin
   header.
 - Every seeded durable inventory entity has a nonblank unique `System_Key`.
 - The Admin demo-inventory form requires the operator to select either the
-  built-in Release 1 workflow kit or an uploaded CSV data set. Selecting a file
+  built-in Release 1 workflow kit or an uploaded CSV data set. A validated
+  upload is copied into the selected warehouse's managed data-set library and
+  remains selectable on later launches. Uploading or selecting a definition
   does not mutate inventory; **Seed Demo Inventory** applies the selected set.
 - Repeating a seed is idempotent for active demo groups identified by item
   code, location, and condition. Existing active groups are skipped rather
@@ -586,6 +588,10 @@ with Admin Generate Warehouse/Create Warehouse and optional bootstrap or Admin
 - **Delete Demo Inventory** confirms the destructive intent and depletes every
   active `DEMO-` entity through exact-`System_Key` adjustment events. It does
   not physically delete canonical entity or event history.
+- **Delete Data Set** is a separate confirmed action. It deletes only the
+  selected uploaded CSV definition from the selected warehouse library and
+  does not change inventory already seeded from it. The built-in Release 1
+  workflow kit is immutable and cannot be deleted.
 - Uploaded CSV data sets require `ITEM_CODE`, `ITEM`, `QTY`, `UOM`, and
   `LOCATION`; may supply `CONDITION`, `DESCRIPTION`, `CATEGORY`, and `VENDOR`;
   require positive quantities and `DEMO-` item codes; and are completely
