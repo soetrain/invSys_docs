@@ -695,6 +695,43 @@ Gate:
   toggle labels, disabled operator controls after Server Sign Out, and the
   connect-first prompt from disconnected invSys Sign In.
 
+### Slice 4m — current-computer Admin capability transition
+
+The 2026-08-17 visible checkpoint reached the correct `WHT7025AE` Auth
+workbook and displayed station `X1-PRO-AI`, but the Admin invSys sign-in form
+returned **User lacks the required capability**. The credential had passed;
+the remaining failure was exact station scope: the generated warehouse still
+held the user's `ADMIN_MAINT` grant at the obsolete `S1` placeholder while the
+selected target correctly used the Windows computer name.
+
+Normative clarification:
+
+- a valid invSys credential, not Server Sign In or target selection, is the
+  authority boundary for a one-time legacy station transition;
+- only the same user's effective active `S1` capabilities may be copied to the
+  exact current-computer station;
+- validity dates, warehouse scope, existing current-station rows, and denies
+  are preserved; and
+- a user who lacked the requested legacy capability remains denied and gains
+  no current-station capability.
+
+Gate:
+
+- [x] same-path behavioral RED is 1/2: Admin migration fails while the
+  missing-capability security case passes;
+- [x] focused GREEN is 3/3, including explicit current-station deny
+  preservation, and the complete Core NAS/target/auth/session block is 33/33;
+- [x] rebuilt packaged XLAM and Ribbon validation are 74/74 and 140/140;
+- [x] the isolated ordered Release 1 workflow is 30/30, Plan 022 launcher
+  contracts are 24/24, Slice 4j is 18/18, and Slice 4l is 9/9;
+- [x] dedicated `WHT7025AE` NAS validation is 16/16 using the automation user
+  without changing the human UAT credential;
+- [x] regenerated deterministic static evidence is 19/19 with 150 components,
+  4,633 procedures, 8 literal `Application.Run` targets, 47 unresolved dynamic
+  calls, and 184 duplicate-body candidates; and
+- [ ] the user visibly signs into Admin as the existing warehouse user and
+  confirms the Admin ribbon controls enable at `WHT7025AE` / `X1-PRO-AI`.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.

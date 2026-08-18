@@ -204,6 +204,17 @@ warehouse with the same or similar WarehouseId.
 5. **invSys Sign Out** clears only the invSys user session/capability cache. It retains the current NAS/server session so another invSys user can authenticate without reconnecting Windows storage.
 6. **Server Sign Out** first clears the invSys user session, then clears the current warehouse target and disconnects the Windows SMB session established for that server root. Server and invSys controls return to their signed-out labels, server status changes immediately to `Server: Not connected`, and all capability-gated operator controls remain disabled until Server Sign In, warehouse selection, and invSys Sign In succeed again.
 7. Operations write/send buttons require an allowed warehouse target, a signed-in invSys user, and the required capability. Admin remains the authority for creating invSys users and assigning capabilities, but Operations sign-in must not require Admin to be loaded.
+8. A generated warehouse created before computer-name station identity may retain
+   `S1` as a legacy placeholder. After, and only after, the submitted invSys
+   secret validates for the exact user, Core may idempotently transition that
+   same user's effective active `S1` capability rows to the selected station
+   when the selected station exactly equals the current Windows computer name
+   and `S1` remains configured in that warehouse. The transition preserves
+   capability, warehouse scope, and validity dates; it does not overwrite any
+   existing current-station row, does not override a current-station deny, and
+   does not invent a capability absent from the user's effective `S1` scope.
+   Authorization continues against exact current-station rows; `S1` is not a
+   runtime wildcard or permanent alias.
 
 **Procedure contract:** The binding VBA API, resolver behavior, ribbon callback rules, credential handling rules, and Phase 6 D-NAS tests are maintained in `D-NAS_Procedure_Contract.md`. This architecture section defines the model; the procedure contract defines the implementation surface.
 

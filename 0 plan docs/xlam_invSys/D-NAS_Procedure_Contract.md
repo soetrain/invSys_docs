@@ -593,6 +593,25 @@ Public Function ValidateUserCredentialForTarget( _
 - On `AUTH_OK`: replaces in-session user; populates capability cache.
 - On any failure code: does not modify existing in-session user or capability cache.
 
+**Legacy `S1` station transition:**
+- The transition is considered only after `secretText` validates for the exact
+  `userId`; selecting storage alone never mutates authorization.
+- The selected target station must exactly equal
+  `modStationIdentity.CurrentComputerStationId()`, must not itself be `S1`, and
+  the selected warehouse config must still contain the generated legacy `S1`
+  placeholder.
+- With no `requiredCapability`, a valid sign-in may copy all of that user's
+  currently effective active `S1` allows. With a required capability, that
+  capability must first be effective for the same user at `S1`; otherwise the
+  result is `AUTH_NO_CAPABILITIES` and no row is copied.
+- Each copied row keeps its capability, warehouse scope, `ValidFrom`, and
+  `ValidTo`, changing only `StationId` to the current computer name. The copy
+  is idempotent. Any existing current-station row is preserved, and an
+  effective current-station deny prevents the corresponding allow copy.
+- The source `S1` row is retained. Capability evaluation after the transition
+  still uses the exact current station; Core does not treat `S1` as a wildcard
+  or resolve it as a permanent alias.
+
 **Error states:**
 
 | Code | Condition |
@@ -836,6 +855,9 @@ End If
 | Role current write allows signed-in user with required capability on NAS target | Role event creator using current user | Event queued under current invSys user |
 | Sign-in uses exact `UserId`, not `DisplayName` | `ValidateUserCredentialForTarget("DisplayName", ...)` where `DisplayName <> UserId` | Returns `AUTH_USER_NOT_FOUND`; signed-in user unchanged |
 | Password/PIN reset for existing `UserId` works | Admin updates `tblUsers.PinHash`, then `ValidateUserCredentialForTarget(UserId, newSecret, ...)` | Returns `AUTH_OK`; display label may show `DisplayName` |
+| Legacy `S1` admin signs in from the selected current-computer station | `ValidateUserCredentialForTarget(UserId, validSecret, currentComputerTarget, "ADMIN_MAINT")` | Returns `AUTH_OK`; that user's effective `S1` capabilities exist as exact current-station rows; source rows remain |
+| Valid user lacks required capability at legacy `S1` | Same action with `requiredCapability="ADMIN_MAINT"` but only `RECEIVE_POST` at `S1` | Returns `AUTH_NO_CAPABILITIES`; no current-station capability is invented |
+| Current-computer station explicitly denies a legacy-allowed capability | Active `ADMIN_MAINT` at `S1` plus `DENY` at current station | Returns `AUTH_NO_CAPABILITIES`; deny row remains unchanged |
 | Packaged ribbon capability buttons include `getEnabled` callback mapping | Packaged RibbonX validation | Required-capability buttons use centralized enabled callback; missing callback fails validation |
 | `SelectWarehouseTarget` with `requireStationInbox:=True` and `stationId = ""` returns `WH_TARGET_INCOMPLETE` | `SelectWarehouseTarget` | `WH_TARGET_INCOMPLETE`; `outTarget` null |
 | `SelectWarehouseTarget` with `requireStationInbox:=False` and `stationId = ""` returns `NAS_OK` | `SelectWarehouseTarget` | `NAS_OK`; `InboxRoot` = warehouse-global path |

@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.9
+**Version:** 1.10
 
 **Inventory date:** 2026-08-17
 
@@ -75,6 +75,18 @@ and the isolated packaged Receiving -> Production -> Box Maker -> Shipping ->
 restart/reconciliation chain passed 30/30. The 2026-08-09 dedicated NAS
 checkpoint confirmed that the visible Seed Inventory action added inventory;
 the expanded 24-row kit still requires the visible dedicated-NAS checkpoint.
+
+### Admin sign-in at the computer station: corrected; visible retest pending
+
+The selected warehouse and station now resolve as `WHT7025AE` /
+`X1-PRO-AI`, but the first Admin sign-in attempt found the user's capability
+still scoped to the generated `S1` placeholder. The Core form-action boundary
+now transitions only that successfully authenticated user's effective active
+`S1` capabilities to the exact current-computer station. It preserves dates,
+existing target rows, and denies, and cannot manufacture a missing role. The
+focused tests are 3/3, the Core session block is 33/33, and the dedicated NAS
+package run is 16/16. Visible Admin sign-in with the human credential remains
+the next checkpoint.
 
 ### Production resizing: corrected; visible retest pending
 
@@ -645,6 +657,8 @@ the compatible stored labels `v1`, `v2`, and so on.
 
 ## 11. Required follow-up to close the control review
 
+- Sign into Admin at `WHT7025AE` / `X1-PRO-AI` with the existing invSys user
+  and confirm the Admin ribbon controls enable without a capability error.
 - Repeat visible Production maximize/restore and Shipping/Boxing grow/shrink checks.
 - Run the complete 24-row seed-to-ship workflow on the dedicated test warehouse,
   including Receiving Location/Lot and Production List scaling.
