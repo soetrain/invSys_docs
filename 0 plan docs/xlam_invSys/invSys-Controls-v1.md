@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.14
+**Version:** 1.15
 
 **Inventory date:** 2026-08-19
 
@@ -154,7 +154,7 @@ separate reachability review before removal.
 | Core | `frmWarehouseConnection` | Active, runtime-generated | NAS/root connection and warehouse target selection |
 | Operations | `frmInventoryViewer` | Active, runtime-generated | Read-only current inventory levels, search, freshness, refresh |
 | Production | `frmProduction` | Active, runtime-generated | Recipe, assignment, run-list, and run-tree workflows |
-| Receiving | `frmReceiving` | Active, runtime-generated | Receiving, inbound Returns, and non-operational Purchasing tab |
+| Receiving | `frmReceiving` | Active, runtime-generated | Receiving, outbound Return/Dump disposition, and non-operational Purchasing tab |
 | Shipping | `frmBoxVersionSaveChoice` | Active, runtime-generated | Choose update-versus-new box alternative behavior |
 | Shipping | `frmShipmentsTally` | Active, runtime-generated | Shipping, Box Designer, and Box Maker tabs |
 
@@ -489,24 +489,25 @@ anchor manager while remaining readable.
 
 ## 7. Receiving forms
 
-### 7.1 `frmReceiving` — Receiving, inbound Returns, and Purchasing stub
+### 7.1 `frmReceiving` — Receiving, outbound disposition, and Purchasing stub
 
 | Area | Controls | Purpose |
 |---|---|---|
-| Tabs | `tabsReceiving` — **Receiving**, **Returns**, **Purchasing** | Switches between ordinary receipts, inbound returned goods, and the reserved Purchasing page. Receiving and Returns share one captured-workbook staging surface; Purchasing has no write action. |
+| Tabs | `tabsReceiving` — **Receiving**, **Returns**, **Purchasing** | Switches between ordinary receipts, outbound inventory disposition, and the reserved Purchasing page. Receiving and Returns share one captured-workbook staging surface; Purchasing has no write action. |
 | Receipt identity | `lblReceiptId`, `txtReceiptId` | Shows a generated, locked receipt ID. |
-| Reference | `lblRef`, `txtRef` | Accepts PO/BOL reference text on Receiving or Return Ref on Returns. |
+| Reference | `lblRef`, `txtRef` | Accepts PO/BOL reference text on Receiving or a Disposition Ref on Returns. |
 | History filter | `lblSearch`, `txtSearch` | Filters Receiving Entries History as the user types. |
-| Managed item search | `lblItemSearch`, `txtItemSearch`, `lblReceiveItemsTitle`, `lblReceiveItemsHeader`, `lstReceiveItems` | Filters and displays a dedicated result list with Code, Item, UOM, Available, Location, Condition, Description, and Vendor. The Condition column is visible on both Receiving and Returns. Rows with the same item code/UOM/location/condition are aggregated, nonpositive totals are hidden, and one representative hidden `System_Key` is retained only for catalog lookup; confirming a new receipt creates its own durable key. |
+| Managed item search | `lblItemSearch`, `txtItemSearch`, `lblReceiveItemsTitle`, `lblReceiveItemsHeader`, `lstReceiveItems` | Filters and displays a dedicated result list with Code, Item, UOM, Available, Location, Lot, Condition, Description, and Vendor. The Condition column is visible on both Receiving and Returns. Rows with the same item code/UOM/location/lot/condition are aggregated and nonpositive totals are hidden. Receiving uses the hidden representative key for catalog lookup and creates a new durable inventory key. Returns uses the selection to allocate the requested quantity deterministically across the exact existing `System_Key` entities represented by that row. |
 | Quantity | `lblQty`, `txtQty` | Accepts quantity for the selected item; defaults to 1. |
-| Receipt condition | `lblCondition`, `cboCondition` | Establishes physical condition at receipt-line creation. Defaults to `GOOD`; R1 choices are `GOOD`, `BAD`, `DAMAGED`, `EXPIRED`, and `REJECTED`. Condition is not edited in Inventory Viewer. |
-| Receipt attributes | `lblReceiveLocation`, `txtReceiveLocation`, `lblLotNumber`, `txtLotNumber` | Requires the receiving location and accepts an optional lot number. Selection defaults Location from the source row, but the operator may change it. Lot is a traceability grouping, not entity identity or condition. |
-| Inbound return reason | `lblReturnReason`, `txtReturnReason` | Visible and required only on Returns. Describes why returned goods are entering the warehouse. |
-| Top actions | `btnRefresh`, `btnAdd` | Reloads views or stages the selected item/quantity. The add button reads **Add Selected** on Receiving and **Add Return** on Returns. |
+| Receipt condition | `lblCondition`, `cboCondition` | Establishes physical condition at receipt-line creation. Defaults to `GOOD`; R1 choices are `GOOD`, `BAD`, `DAMAGED`, `EXPIRED`, and `REJECTED`. On Returns it is selection-backed and locked so a disposition cannot silently cross a Condition bucket. Condition is not edited in Inventory Viewer. |
+| Receipt/disposition attributes | `lblReceiveLocation`, `txtReceiveLocation`, `lblLotNumber`, `txtLotNumber` | Receiving requires a location and accepts an optional lot; the operator may edit both before staging. On Returns the selected source location and lot are locked so the action preserves the exact inventory boundary. Lot is a traceability grouping, not identity or condition. |
+| Disposition type | `lblDisposition`, `cboDisposition` | Visible and required only on Returns. Offers `RETURN` for goods sent out to a vendor/other party and `DUMP` for goods discarded; defaults to `RETURN`. Both reduce on-hand inventory. |
+| Disposition reason | `lblReturnReason`, `txtReturnReason` | Visible and required only on Returns. Records why the selected inventory is being returned or dumped. |
+| Top actions | `btnRefresh`, `btnAdd` | Reloads views or stages the selected item/quantity. The add button reads **Add Selected** on Receiving and **Add Disposition** on Returns. |
 | Receiving/Return history | `lblInventoryTitle`, `lblInventoryHeader`, `lstInventory` | Displays a ten-column `ReceivedLog` projection: date, receipt type, reference, item, quantity, UOM, location, lot, condition, and return reason. The title is **Receiving Entries History** on Receiving and **Return Entries History** on Returns. Full user/vendor/code/`System_Key`/`EventId` evidence remains in the workbook log. |
 | Staged receipt/return | `lblStagedTitle`, `lblStagedHeader`, `lstStaged` | Displays the ten-column local tally projection: reference, type, item, quantity, UOM, location, lot, vendor, condition, and return reason. The title is **Received Tally** on Receiving and **Return Tally** on Returns. This table, not the aggregate view, is the posting authority; every line retains its separate immutable `System_Key`, item code, source key, event ID, and workflow state. |
 | Aggregate view | `lblAggregateTitle`, `lblAggregateHeader`, `lstAggregate` | Displays **Aggregate Received** or **Aggregate Returns**. It rebuilds from every tally row, groups by receipt type, item code, UOM, location, lot, and Condition, sums quantity, and concatenates distinct PO/BOL/return references in first-seen order. Different Conditions remain on separate rows. Return reasons are likewise concatenated for display. The aggregate is read-only and never collapses the separately keyed posting lines. |
-| Write actions | `btnConfirm`, `btnClear` | **Confirm Writes** queues ordinary receipts; on Returns the button reads **Confirm Returns**. Both queue one authorized `RECEIVE` event per tally line and create a new durable `System_Key`; **Clear** clears local staging. Multi-line confirmation batches queue and persistence work by safe workbook/artifact phase, so save cycles do not grow once per row. |
+| Write actions | `btnConfirm`, `btnClear` | **Confirm Writes** queues ordinary receipts as `RECEIVE` and creates a new durable inventory `System_Key`. On Returns the button reads **Confirm Dispositions** and queues distinct `RETURN` or `DUMP` events against the staged existing keys; the Domain applies the positive action quantity as a negative exact-entity delta and rejects overdraw. **Clear** clears local staging. Multi-line confirmation batches queue and persistence work by safe workbook/artifact phase, so save cycles do not grow once per row. |
 | Status/exit | `txtStatus`, `btnClose` | Shows multiline status and closes the form. |
 | Purchasing placeholder | `lblPurchasingStub` | States that Purchasing is not operational and exposes no purchasing write action. |
 
@@ -680,8 +681,8 @@ the compatible stored labels `v1`, `v2`, and so on.
 | 1. Necessary for Release 1? | Operations/Admin and the active role-form tabs are sufficient. Unreachable shells and unconstructed controls were removed. Inventory Viewer was added as the one missing overview surface; Purchasing remains the intentional Receiving stub. |
 | 2. Operator wording? | Accepted as good enough for Release 1. |
 | 3. Visibility? | Controls may remain visible to all signed-in users for Release 1. Existing capability checks on mutating actions remain defense-in-depth; Inventory Viewer has no role-capability restriction. |
-| 4. Mutation/queue/admin distinction? | **Release 1 decision:** Search, filters, history, Viewer Refresh, and role Refresh are read-only projections. Add/Update/Remove/Hold/Return and recipe/BOM editing change only captured-workbook staging until an explicit save/post action. Confirm Writes, Production completion, Make/Unmake, and Shipments Sent queue inventory events; the processor is the only inventory authority writer. Admin controls perform named administrative actions and retain capability/re-auth/audit gates. Status text should state `staged`, `queued`, `applied`, or `refreshed` rather than imply that a local edit immediately changed inventory. |
-| 5. Durable identity uses `System_Key`? | **Accepted rule:** every physical inventory entity, inventory event/log row, reservation, shipment, Production allocation/output, and Shipping BOM package/component reference uses immutable `System_Key`. Aggregate quantity views may group by SKU/location and need not impersonate one key. Designs use their specialized three-digit base-36 `DesignId` plus `DesignVersion`; an inventory entity produced from a design still receives its own `System_Key`. `EventId`, shipment IDs, and run IDs identify their own records. The reachable Shipping form/event path now follows this rule and preserves string identity. |
+| 4. Mutation/queue/admin distinction? | **Release 1 decision:** Search, filters, history, Viewer Refresh, and role Refresh are read-only projections. Add/Update/Remove/Hold, disposition selection, and recipe/BOM editing change only captured-workbook staging until an explicit save/post action. Confirm Writes, Confirm Dispositions, Production completion, Make/Unmake, and Shipments Sent queue inventory events; the processor is the only inventory authority writer. `RETURN` and `DUMP` are separate audited events but share the Receiving `RECEIVE_POST` capability. Admin controls perform named administrative actions and retain capability/re-auth/audit gates. Status text should state `staged`, `queued`, `applied`, or `refreshed` rather than imply that a local edit immediately changed inventory. |
+| 5. Durable identity uses `System_Key`? | **Accepted rule:** every physical inventory entity, inventory event/log row, reservation, shipment, Production allocation/output, and Shipping BOM package/component reference uses immutable `System_Key`. Aggregate quantity views may group by SKU/location and need not impersonate one key. A Return/Dump aggregate selection must be expanded into exact existing keys before posting; it never creates a replacement key or borrows quantity across item/location/lot/Condition boundaries. Designs use their specialized three-digit base-36 `DesignId` plus `DesignVersion`; an inventory entity produced from a design still receives its own `System_Key`. `EventId`, shipment IDs, and run IDs identify their own records. |
 | 6. Readable resize proportions? | Required. Production, Shipping `txtStatus`, Viewer, and the explicit full-width Box Designer/Box Maker layouts are source- and packaged-geometry GREEN. Visible maximize/restore/grow/shrink confirmation remains part of the dedicated UAT checkpoint. |
 | 7. Empty shells? | Retired after source reachability review and focused regression contracts. Only the visible Purchasing stub remains intentionally. |
 
@@ -691,8 +692,8 @@ the compatible stored labels `v1`, `v2`, and so on.
   and confirm the Admin ribbon controls enable without a capability error.
 - Repeat visible Production maximize/restore and Shipping/Boxing grow/shrink checks.
 - Run the complete 24-row seed-to-ship workflow on the dedicated test warehouse,
-  including Receiving Location/Lot/Condition, one inbound Return, aggregate
-  totals, and Production List scaling.
+  including Receiving Location/Lot/Condition, one `RETURN`, one `DUMP`, their
+  resulting Viewer quantities, aggregate totals, and Production List scaling.
 - Review and adjust checklist item 4 only if an operator test exposes an
   ambiguous status or mutation boundary.
 - Review private legacy Shipping worksheet-maintenance routines for reachability

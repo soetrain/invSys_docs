@@ -565,17 +565,29 @@ changes split the affected quantity into a separately keyed entity when needed.
 Condition describes physical quality; operational availability/hold state
 remains a separate field or projection rule.
 
-**Receiving condition and return rule:** Receiving establishes `Condition` for
-each new receipt line before the event is queued; the Inventory Viewer remains
-read-only. A PO/BOL may contain lines with different conditions, and those
-lines create distinct durable `System_Key` entities even when SKU, location,
-and lot match. `Lot` is an independent provenance/traceability grouping and
-must not be used as entity identity or as a substitute for condition. Release 1
-supports inbound returned goods on a Receiving **Returns** page. Each inbound
-return creates a new entity through the `RECEIVE` event path and carries a
-return reference, reason, location, optional lot, and condition in its declared
-receipt attributes/note. An outbound vendor return is not a Receiving edit and
-is outside this R1 Receiving-return contract.
+**Receiving condition and inventory-disposition rule:** Receiving establishes
+`Condition` for each new receipt line before the event is queued; the Inventory
+Viewer remains read-only. A PO/BOL may contain lines with different conditions,
+and those lines create distinct durable `System_Key` entities even when SKU,
+location, and lot match. `Lot` is an independent provenance/traceability
+grouping and must not be used as entity identity or as a substitute for
+condition.
+
+The Receiving **Returns** page is an outbound inventory-disposition workflow,
+not an inbound receipt workflow. It requires a **Disposition** choice of
+`RETURN` (goods leave the warehouse for a vendor or other external party) or
+`DUMP` (goods are discarded). Both choices reduce on-hand quantity and require
+a reference/reason. They do not create a new inventory entity. Each queued
+event identifies an existing exact `System_Key`, preserves that entity's SKU,
+location, lot, and Condition, and applies a negative quantity delta without
+changing identity. The operator enters a positive action quantity; the domain
+records the corresponding negative inventory delta. A disposition may not
+exceed available quantity or cross item/location/Condition boundaries. When a
+visible choice aggregates several entities, staging deterministically allocates
+the requested quantity across those exact keys and queues one separately
+auditable event per allocation. `RETURN` and `DUMP` remain distinct event/audit
+types and use `RECEIVE_POST` because the workflow is owned by Receiving; they
+do not impersonate Shipping or Admin adjustment actions.
 
 **Receiving aggregate rule:** `ReceivedTally` retains the separately keyed
 staged receipt lines and remains the submission-identity authority.
@@ -592,11 +604,12 @@ staged line; it may not retain a stale or partial projection.
 **Receiving interaction and persistence rule:** The Receiving item-result
 projection includes `Condition`, including on the Returns page. When Returns is
 selected, its three projections are titled **Return Entries History**,
-**Return Tally**, and **Aggregate Returns**. Multi-line Confirm Writes/Confirm
-Returns batches inbox, canonical inventory, outbox, and inbox-status
-persistence at safe artifact boundaries rather than saving once per row. A
-healthy sign-in may read and validate Config/Auth schemas but must not format,
-dirty, or save unchanged Config/Auth workbooks.
+**Return Tally**, and **Aggregate Returns**, and its action selector displays
+`RETURN` or `DUMP`. Multi-line Confirm Writes/Confirm Dispositions batches inbox,
+canonical inventory, outbox, and inbox-status persistence at safe artifact
+boundaries rather than saving once per row. A healthy sign-in may read and
+validate Config/Auth schemas but must not format, dirty, or save unchanged
+Config/Auth workbooks.
 
 **Greenfield boundary:** R1 does not import, translate, reconcile, repair, or
 map old business inventory into this identity model. No legacy `ROW`-to-
@@ -1288,7 +1301,7 @@ post -> processor run -> canonical apply -> snapshot rebuild -> operator refresh
 | Role | Operator verb | Inbox/event path | Required capability | Expected `invSys` effect after successful refresh |
 |---|---|---|---|---|
 | Receiving | Add | `tblInboxReceive` / `RECEIVE` | `RECEIVE_POST` | quantity increases |
-| Receiving | Receive Return | `tblInboxReceive` / `RECEIVE` with return attributes | `RECEIVE_POST` | returned quantity increases as a new `System_Key` entity |
+| Receiving | Return or Dump | `tblInboxReceive` / `RETURN` or `DUMP` against exact existing `System_Key` allocations | `RECEIVE_POST` | quantity decreases; identity, location, lot, and Condition are preserved |
 | Shipping | Deduct | `tblInboxShip` / `SHIP` | `SHIP_POST` | quantity decreases |
 | Production | Use | `tblInboxProd` / `PROD_CONSUME` | `PROD_POST` | component quantity decreases |
 | Production | Make | `tblInboxProd` / `PROD_COMPLETE` | `PROD_POST` | output quantity increases |

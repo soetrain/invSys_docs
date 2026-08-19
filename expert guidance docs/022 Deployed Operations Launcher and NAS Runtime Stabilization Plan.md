@@ -871,6 +871,59 @@ three persistence saves: canonical inventory, one batched outbox append, and one
 inbox-status save. Deterministic maintenance evidence remains GREEN with 150
 components, 4,686 procedures, and 964 scanner candidates.
 
+### Slice 4q — outbound Return/Dump inventory disposition
+
+The 2026-08-19 visible Slice 4p checkpoint proved the revised labels and
+Condition column, then exposed that the underlying Returns contract was
+backwards: returning 50 units of an existing 100-unit DAMAGED entity created a
+new inbound entity and displayed 150. The operator requires both vendor return
+and trash disposal. This slice deliberately supersedes the inbound-return
+behavior recorded in Slice 4o; the normative D14 rule now defines outbound
+disposition.
+
+Required behavior:
+
+- [x] Returns exposes a required **Disposition** selector with `RETURN` and
+  `DUMP`, defaulting to `RETURN`;
+- [x] both actions accept a positive operator quantity but reduce canonical
+  and Viewer on-hand quantity by that amount through distinct `RETURN`/`DUMP`
+  audit event types;
+- [x] disposition targets existing exact `System_Key` entities, creates no new
+  inventory key, preserves item/location/lot/Condition, and rejects overdraw;
+- [x] an aggregate search choice spanning several entities is deterministically
+  allocated into separately keyed staged/event rows without crossing
+  item/location/Condition boundaries;
+- [x] Return Tally, Aggregate Returns, and Return Entries History show the
+  selected disposition and action quantity clearly; and
+- [x] the `RECEIVE_POST` authorization boundary, batched persistence, ordinary
+  Receiving workflow, Inventory Viewer read-only behavior, and D12 package
+  boundary remain intact.
+
+Gate:
+
+- [x] same-handler RED proves the current Return action creates inventory,
+  creates a new key, and lacks the required selector;
+- [x] focused Domain/processor RED proves `RETURN`/`DUMP` are unsupported and
+  overdraw/exact-key rules are absent;
+- [x] focused GREEN proves 100 minus a 50-unit RETURN equals 50, RETURN plus
+  DUMP depletion remains exact-key and condition-separated, and no new entity
+  is created;
+- [x] packaged Returns form action, Viewer refresh, XLAM/Ribbon, full workflow,
+  restart, and static maintenance regressions remain GREEN; and
+- [ ] the user visibly confirms Return/Dump selection and resulting quantities
+  against `WHT7025AE`.
+
+Automated evidence on 2026-08-19: the focused static contract began at 0/6
+and the same-handler and Domain tests both returned 0 before implementation.
+The aligned VBA range is now 7/7, the focused static contract 6/6, and the
+packaged Returns action 5/5. The standalone Viewer proof loaded/filter-reused
+its snapshot without mutation; packaged XLAM is 74/74, RibbonX 142/142, live
+role workflow 46/46, and the clean ordered Release 1 chain 30/30. Static
+maintenance is deterministic 19/19 with 150 components, 4,698 procedures,
+965 scanner candidates, and a narrow protected Slice 4q procedure ceiling;
+the reviewed cleanup contract remains 11/11 with no component, candidate,
+duplicate-body, or late-binding regression.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.
@@ -914,13 +967,19 @@ Exact steps:
     search**, select it from the dedicated results list, enter required
     Location and optional Lot, stage it, and confirm the top list remains
     **Receiving Entries History** rather than a duplicate inventory viewer.
-14. On Production Run - List, load a released recipe and prove scales at the
+14. On Returns, select one Condition-specific row and record its available
+    quantity. Choose `RETURN`, enter a smaller positive quantity and a reason,
+    stage and confirm it, then Refresh and verify both Returns and Inventory
+    Viewer decreased by that amount without changing location, lot, or
+    Condition. Repeat with `DUMP` on remaining inventory and confirm the same
+    depletion behavior. Attempt an overdraw and confirm it is rejected.
+15. On Production Run - List, load a released recipe and prove scales at the
     `0.001%`, `100%`, and `1000%` bounds. Production Run - Tree is not part of
     this checkpoint.
-15. Open Shipping, resize **Box Designer** and **Box Maker** through grow,
+16. Open Shipping, resize **Box Designer** and **Box Maker** through grow,
     shrink, maximize, and restore; confirm full-width lists, aligned headers,
     non-overlapping actions, and `NA` for items without a box alternative.
-16. Use the seeded materials through Box Designer/Box Maker and complete one
+17. Use the seeded materials through Box Designer/Box Maker and complete one
     shipment, confirming each public action reports staged, queued, applied, or
     refreshed state accurately.
 
