@@ -936,6 +936,28 @@ aligned range remains 7/7, packaged Returns remains 5/5 with the extra blank
 row present, packaged XLAM is 74/74, live workflows 46/46, the clean ordered
 chain 30/30, and static maintenance remains 19/19 plus 11/11.
 
+The next visible retest selected a valid 50-unit DAMAGED entity and requested a
+5-unit `RETURN`, but **Add Disposition** failed with Excel error 1004 and only
+the generic text `Application-defined or object-defined error`. Read-only
+diagnostics proved the captured workbook, selected `System_Key`, exact
+item/location/lot/Condition group, available quantity, zero-row staging table,
+and the complete live inventory projection all stage successfully in a
+disposable copy. The remaining live-only risk was re-entrant worksheet events
+during the multi-cell staging write. Disposition staging now suppresses events
+for the complete allocation/aggregate transaction and restores the caller's
+prior event state; manual quantity synchronization likewise suppresses its own
+write event and rebuilds the explicitly captured workbook rather than
+`ActiveWorkbook`. The full-table matcher now exits on the first mismatched
+attribute instead of evaluating unrelated row attributes. A same-handler
+protected-write test recorded RED for the generic message and is GREEN with
+stage, error number, source, and description context. Aligned Returns tests are
+7/7, Slice 4o/4p/4q static contracts are 5/5, 6/6, and 6/6, packaged Returns is
+5/5, packaged XLAM is 74/74, live workflows are 46/46, and the clean Release 1
+chain is 30/30. Deterministic maintenance is 19/19 plus 11/11 with 150
+components, 4,701 procedures, 965 scanner candidates, and an explicitly
+reviewed Slice 4q procedure ceiling. Visible `WHT7025AE` staging and depletion
+confirmation remains open.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.
