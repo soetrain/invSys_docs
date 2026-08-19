@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.13
+**Version:** 1.14
 
 **Inventory date:** 2026-08-19
 
@@ -497,16 +497,16 @@ anchor manager while remaining readable.
 | Receipt identity | `lblReceiptId`, `txtReceiptId` | Shows a generated, locked receipt ID. |
 | Reference | `lblRef`, `txtRef` | Accepts PO/BOL reference text on Receiving or Return Ref on Returns. |
 | History filter | `lblSearch`, `txtSearch` | Filters Receiving Entries History as the user types. |
-| Managed item search | `lblItemSearch`, `txtItemSearch`, `lblReceiveItemsTitle`, `lblReceiveItemsHeader`, `lstReceiveItems` | Filters and displays a dedicated result list with Code, Item, UOM, Available, Location, Description, and Vendor. Rows with the same item code/UOM/location/condition are aggregated, nonpositive totals are hidden, and one representative hidden `System_Key` is retained only for catalog lookup; confirming a new receipt creates its own durable key. |
+| Managed item search | `lblItemSearch`, `txtItemSearch`, `lblReceiveItemsTitle`, `lblReceiveItemsHeader`, `lstReceiveItems` | Filters and displays a dedicated result list with Code, Item, UOM, Available, Location, Condition, Description, and Vendor. The Condition column is visible on both Receiving and Returns. Rows with the same item code/UOM/location/condition are aggregated, nonpositive totals are hidden, and one representative hidden `System_Key` is retained only for catalog lookup; confirming a new receipt creates its own durable key. |
 | Quantity | `lblQty`, `txtQty` | Accepts quantity for the selected item; defaults to 1. |
 | Receipt condition | `lblCondition`, `cboCondition` | Establishes physical condition at receipt-line creation. Defaults to `GOOD`; R1 choices are `GOOD`, `BAD`, `DAMAGED`, `EXPIRED`, and `REJECTED`. Condition is not edited in Inventory Viewer. |
 | Receipt attributes | `lblReceiveLocation`, `txtReceiveLocation`, `lblLotNumber`, `txtLotNumber` | Requires the receiving location and accepts an optional lot number. Selection defaults Location from the source row, but the operator may change it. Lot is a traceability grouping, not entity identity or condition. |
 | Inbound return reason | `lblReturnReason`, `txtReturnReason` | Visible and required only on Returns. Describes why returned goods are entering the warehouse. |
 | Top actions | `btnRefresh`, `btnAdd` | Reloads views or stages the selected item/quantity. The add button reads **Add Selected** on Receiving and **Add Return** on Returns. |
-| Receiving history | `lblInventoryTitle`, `lblInventoryHeader`, `lstInventory` | Displays a ten-column `ReceivedLog` projection: date, receipt type, reference, item, quantity, UOM, location, lot, condition, and return reason. Full user/vendor/code/`System_Key`/`EventId` evidence remains in the workbook log. |
-| Staged receipt | `lblStagedTitle`, `lblStagedHeader`, `lstStaged` | Displays the ten-column local Received Tally projection: reference, type, item, quantity, UOM, location, lot, vendor, condition, and return reason. The backing table retains immutable `System_Key`, item code, source key, event ID, and workflow state. |
-| Aggregate view | `lblAggregateTitle`, `lblAggregateHeader`, `lstAggregate` | Rebuilds from every Received Tally row and displays reference, type, code, item, UOM, accumulated quantity, location, lot, condition, and return reason. Repeated matching lines group by type/reference/item/location/lot/condition/reason. The deliberate ten-column projection avoids the MSForms ListBox limit that previously left only the first aggregate row visible. |
-| Write actions | `btnConfirm`, `btnClear` | **Confirm Writes** queues ordinary receipts; on Returns the button reads **Confirm Returns**. Both use authorized `RECEIVE` events and create a new durable `System_Key`; **Clear** clears local staging. |
+| Receiving/Return history | `lblInventoryTitle`, `lblInventoryHeader`, `lstInventory` | Displays a ten-column `ReceivedLog` projection: date, receipt type, reference, item, quantity, UOM, location, lot, condition, and return reason. The title is **Receiving Entries History** on Receiving and **Return Entries History** on Returns. Full user/vendor/code/`System_Key`/`EventId` evidence remains in the workbook log. |
+| Staged receipt/return | `lblStagedTitle`, `lblStagedHeader`, `lstStaged` | Displays the ten-column local tally projection: reference, type, item, quantity, UOM, location, lot, vendor, condition, and return reason. The title is **Received Tally** on Receiving and **Return Tally** on Returns. This table, not the aggregate view, is the posting authority; every line retains its separate immutable `System_Key`, item code, source key, event ID, and workflow state. |
+| Aggregate view | `lblAggregateTitle`, `lblAggregateHeader`, `lstAggregate` | Displays **Aggregate Received** or **Aggregate Returns**. It rebuilds from every tally row, groups by receipt type, item code, UOM, location, lot, and Condition, sums quantity, and concatenates distinct PO/BOL/return references in first-seen order. Different Conditions remain on separate rows. Return reasons are likewise concatenated for display. The aggregate is read-only and never collapses the separately keyed posting lines. |
+| Write actions | `btnConfirm`, `btnClear` | **Confirm Writes** queues ordinary receipts; on Returns the button reads **Confirm Returns**. Both queue one authorized `RECEIVE` event per tally line and create a new durable `System_Key`; **Clear** clears local staging. Multi-line confirmation batches queue and persistence work by safe workbook/artifact phase, so save cycles do not grow once per row. |
 | Status/exit | `txtStatus`, `btnClose` | Shows multiline status and closes the form. |
 | Purchasing placeholder | `lblPurchasingStub` | States that Purchasing is not operational and exposes no purchasing write action. |
 
@@ -516,6 +516,11 @@ anchor manager while remaining readable.
 `ufDynItemSearchTemplate` were unreachable empty shells and are removed. The
 intentional Purchasing stub remains inside the active `frmReceiving` because
 the reviewed Release 1 workflow reserves Purchasing there.
+
+Healthy invSys sign-in reads existing valid Config/Auth workbooks without
+normalizing or saving them. Schema repair still occurs when a required table or
+header is genuinely missing. This keeps the necessary repair path while
+removing the repeated Saving notices caused by unchanged read-only loads.
 
 ## 8. Production forms
 

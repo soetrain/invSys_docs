@@ -578,10 +578,25 @@ receipt attributes/note. An outbound vendor return is not a Receiving edit and
 is outside this R1 Receiving-return contract.
 
 **Receiving aggregate rule:** `ReceivedTally` retains the separately keyed
-staged receipt lines. `AggregateReceived` is a complete rebuildable summary of
-those lines and groups by receipt type, reference, item code, location, lot,
-and condition, summing quantity for repeated matching lines. Rebuild/refresh
-must include every staged line; it may not retain a stale one-row projection.
+staged receipt lines and remains the submission-identity authority.
+`AggregateReceived` is a read-only, complete, rebuildable summary. It groups
+matching lines by receipt type, item code, UOM, location, lot, and condition;
+different conditions never share an aggregate row. Quantity is summed and
+distinct PO/BOL/return references are concatenated in first-seen order rather
+than forming separate rows. Return reasons are likewise concatenated for the
+display summary. Confirm queues and logs every separately keyed
+`ReceivedTally` line, never the aggregate row, so display aggregation cannot
+collapse `System_Key` or `EventId` identity. Rebuild/refresh must include every
+staged line; it may not retain a stale or partial projection.
+
+**Receiving interaction and persistence rule:** The Receiving item-result
+projection includes `Condition`, including on the Returns page. When Returns is
+selected, its three projections are titled **Return Entries History**,
+**Return Tally**, and **Aggregate Returns**. Multi-line Confirm Writes/Confirm
+Returns batches inbox, canonical inventory, outbox, and inbox-status
+persistence at safe artifact boundaries rather than saving once per row. A
+healthy sign-in may read and validate Config/Auth schemas but must not format,
+dirty, or save unchanged Config/Auth workbooks.
 
 **Greenfield boundary:** R1 does not import, translate, reconcile, repair, or
 map old business inventory into this identity model. No legacy `ROW`-to-

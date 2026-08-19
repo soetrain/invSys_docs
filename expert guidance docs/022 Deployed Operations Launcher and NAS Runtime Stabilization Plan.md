@@ -821,6 +821,56 @@ the ordered deployed Release 1 chain 30/30. Static maintenance evidence is
 deterministic 19/19 with 150 components, 4,680 procedures, 961 scanner
 candidates, 963 reviewed candidates, and 24 oversized-module ratchets.
 
+### Slice 4p — Receiving aggregate semantics, Return labels, and save batching
+
+The 2026-08-19 visible Slice 4o checkpoint proved the aggregate projection is
+complete, then identified that it no longer performs its established tally
+role: matching items from different PO/BOL references appear on separate rows.
+The same checkpoint showed that Returns retains Receiving titles, omits
+Condition from Return Item Results, and produces repeated Excel Saving notices
+(four during sign-in, more than sixty during Confirm Writes, and thirty-three
+during Confirm Returns).
+
+Required behavior:
+
+- [x] Aggregate Received/Returns groups matching receipt lines by receipt type,
+  item code, UOM, location, lot, and Condition, sums quantity, and concatenates
+  distinct references in first-seen order; different Conditions remain on
+  separate rows;
+- [x] `ReceivedTally`, not the aggregate projection, remains the separately
+  keyed queue/log authority so aggregation cannot collapse `System_Key` or
+  `EventId`;
+- [x] Receiving/Return item results display Condition;
+- [x] Returns mode titles its projections **Return Entries History**, **Return
+  Tally**, and **Aggregate Returns** while Receiving mode retains its Receiving
+  titles; and
+- [x] healthy sign-in does not dirty/save unchanged Config/Auth workbooks, and
+  multi-row confirm persists once per safe workbook/artifact phase rather than
+  once per row.
+
+Gate:
+
+- [x] same-handler RED proves reference-separated aggregates, missing Return
+  Condition/title behavior, read-load workbook dirtiness, and per-row processor
+  persistence;
+- [x] focused GREEN proves concatenated references/totals with Condition
+  separation and distinct staged identities through Confirm;
+- [x] packaged form-action and processor evidence reports bounded save cycles
+  independent of receipt-row count;
+- [x] packaged XLAM/Ribbon, D14 identity/durability, ordered Release 1 chain,
+  and static ratchets remain GREEN; and
+- [ ] the user visibly confirms the revised aggregate, Return-mode UI, and
+  bounded Saving notifications against `WHT7025AE`.
+
+Automated evidence recorded 2026-08-19: behavior locks 289-294 are GREEN 6/6
+after the four newly introduced contracts were RED; focused Slice 4p static
+contract 6/6; packaged Slice 4o/4p form actions 5/5; packaged XLAM 74/74;
+packaged RibbonX 142/142; live role workflow 46/46; and the standalone ordered
+Release 1 chain 30/30. The three-event Receiving processor proof reports exactly
+three persistence saves: canonical inventory, one batched outbox append, and one
+inbox-status save. Deterministic maintenance evidence remains GREEN with 150
+components, 4,686 procedures, and 964 scanner candidates.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.
