@@ -1,1 +1,1 @@
-`017 Slice 4o Receiving Condition Returns and Aggregate Green Awaiting Visual UAT.md`
+`018 Slice 4p Receiving Aggregation and Save Batching Green Awaiting Visual UAT.md`
