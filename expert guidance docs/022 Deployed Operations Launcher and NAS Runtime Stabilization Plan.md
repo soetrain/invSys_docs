@@ -924,6 +924,18 @@ maintenance is deterministic 19/19 with 150 components, 4,698 procedures,
 the reviewed cleanup contract remains 11/11 with no component, candidate,
 duplicate-body, or late-binding regression.
 
+The first visible Slice 4q retest exposed an Excel table-placeholder blocker:
+after a valid DAMAGED item was selected, `ReceivedTally` could retain a second
+wholly blank physical row and aggregation rejected it as a business record with
+`ReceivedTally contains a blank System_Key.` The same public Returns form
+action reproduced this as RED (`Returned=0`). Aggregation and confirmation now
+remove only rows whose identity, item, reference, event, and quantity fields
+are all blank; any partially populated row still reaches normal validation and
+cannot be silently discarded. The focused same-handler test is GREEN, the
+aligned range remains 7/7, packaged Returns remains 5/5 with the extra blank
+row present, packaged XLAM is 74/74, live workflows 46/46, the clean ordered
+chain 30/30, and static maintenance remains 19/19 plus 11/11.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.
