@@ -773,6 +773,54 @@ Gate:
 - [ ] the user visibly confirms the revised form and chosen data set against the
   dedicated NAS test warehouse.
 
+### Slice 4o — Receiving condition, inbound returns, and aggregate repair
+
+The 2026-08-19 visible Receiving checkpoint confirmed Demo Inventory seed and
+delete, then exposed three operator-contract gaps: closing Demo Inventory emits
+a misleading cancellation dialog, receipt Condition cannot be established by
+the receiver, and Aggregate Received may remain a stale one-row projection
+while Received Tally contains several lines. The user also requires inbound
+returned goods to be received explicitly rather than hidden inside ordinary
+receipt wording.
+
+Required behavior:
+
+- [x] remove the redundant Demo Inventory **Cancel** button; closing the form
+  without choosing an action is silent and does not report that a completed
+  seed or delete was cancelled;
+- [x] establish editable line-level `Condition` in Receiving, defaulting to
+  `GOOD`, and carry it through tally, aggregate, event, canonical inventory,
+  and receipt history;
+- [x] keep Inventory Viewer read-only and keep `Lot` independent from
+  `Condition` and `System_Key`;
+- [x] rebuild Aggregate Received from every staged line, grouping by receipt
+  type/reference/item/location/lot/condition/return reason and summing repeated
+  matches;
+- [x] add a functional Receiving **Returns** page for inbound returned goods,
+  capturing return reference, reason, quantity, location, optional lot, and
+  condition, and creating a new immutable `System_Key` through the existing
+  `RECEIVE` event boundary; and
+- [x] preserve the Purchasing stub and the ordinary Receiving workflow.
+
+Gate:
+
+- [x] focused same-handler RED records the current Cancel control, absent
+  Condition/Returns contract, and incomplete aggregate rebuild;
+- [x] focused GREEN exercises the Demo Inventory form contract and the public
+  Receiving add/refresh/confirm actions against a generated operator workbook;
+- [x] packaged XLAM/Ribbon, D14 identity, Receiving durability, and the ordered
+  Release 1 chain remain GREEN; and
+- [ ] the user visibly confirms mixed-condition receipt lines, aggregate totals,
+  and one inbound return against `WHT7025AE`.
+
+Automated evidence recorded 2026-08-19: focused source contract 5/5 after its
+0/5 RED; same-form public-action GREEN 4/4 after its 0/2 RED; packaged Slice 4o
+actions 5/5; Receiving workbook-surface regressions 28/28 over the affected
+bootstrap/migration range; packaged XLAM 74/74; packaged RibbonX 142/142; and
+the ordered deployed Release 1 chain 30/30. Static maintenance evidence is
+deterministic 19/19 with 150 components, 4,680 procedures, 961 scanner
+candidates, 963 reviewed candidates, and 24 oversized-module ratchets.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.

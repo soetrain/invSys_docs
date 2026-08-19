@@ -565,6 +565,24 @@ changes split the affected quantity into a separately keyed entity when needed.
 Condition describes physical quality; operational availability/hold state
 remains a separate field or projection rule.
 
+**Receiving condition and return rule:** Receiving establishes `Condition` for
+each new receipt line before the event is queued; the Inventory Viewer remains
+read-only. A PO/BOL may contain lines with different conditions, and those
+lines create distinct durable `System_Key` entities even when SKU, location,
+and lot match. `Lot` is an independent provenance/traceability grouping and
+must not be used as entity identity or as a substitute for condition. Release 1
+supports inbound returned goods on a Receiving **Returns** page. Each inbound
+return creates a new entity through the `RECEIVE` event path and carries a
+return reference, reason, location, optional lot, and condition in its declared
+receipt attributes/note. An outbound vendor return is not a Receiving edit and
+is outside this R1 Receiving-return contract.
+
+**Receiving aggregate rule:** `ReceivedTally` retains the separately keyed
+staged receipt lines. `AggregateReceived` is a complete rebuildable summary of
+those lines and groups by receipt type, reference, item code, location, lot,
+and condition, summing quantity for repeated matching lines. Rebuild/refresh
+must include every staged line; it may not retain a stale one-row projection.
+
 **Greenfield boundary:** R1 does not import, translate, reconcile, repair, or
 map old business inventory into this identity model. No legacy `ROW`-to-
 `System_Key` migration is built. Supported test and demonstration state begins
@@ -1255,6 +1273,7 @@ post -> processor run -> canonical apply -> snapshot rebuild -> operator refresh
 | Role | Operator verb | Inbox/event path | Required capability | Expected `invSys` effect after successful refresh |
 |---|---|---|---|---|
 | Receiving | Add | `tblInboxReceive` / `RECEIVE` | `RECEIVE_POST` | quantity increases |
+| Receiving | Receive Return | `tblInboxReceive` / `RECEIVE` with return attributes | `RECEIVE_POST` | returned quantity increases as a new `System_Key` entity |
 | Shipping | Deduct | `tblInboxShip` / `SHIP` | `SHIP_POST` | quantity decreases |
 | Production | Use | `tblInboxProd` / `PROD_CONSUME` | `PROD_POST` | component quantity decreases |
 | Production | Make | `tblInboxProd` / `PROD_COMPLETE` | `PROD_POST` | output quantity increases |

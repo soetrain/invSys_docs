@@ -1,8 +1,8 @@
 # invSys Form Controls v1
 
-**Version:** 1.12
+**Version:** 1.13
 
-**Inventory date:** 2026-08-17
+**Inventory date:** 2026-08-19
 
 **Architecture:** invSys v4.11, Release 1
 **Scope:** every checked-in VBA UserForm source file used by Core, Admin,
@@ -54,7 +54,7 @@ workbook names are `WHT7025AE.Receiving.Operator.xlsm`,
 `WHT7025AE.Production.Operator.xlsm`, and
 `WHT7025AE.Shipping.Operator.xlsm`.
 
-### Demo Inventory lifecycle: packaged GREEN; dedicated UAT pending
+### Demo Inventory lifecycle: packaged GREEN; seed/delete visibly accepted
 
 `frmSeedInventory` displayed and its public callback reported one applied
 processor event. The operator then refreshed, but the three demo entities were
@@ -77,8 +77,11 @@ and the Receiving form's actual Refresh handler for the complete 24-row kit.
 All 24 entities were visible, all keys were unique, every condition was `GOOD`,
 and the isolated packaged Receiving -> Production -> Box Maker -> Shipping ->
 restart/reconciliation chain passed 30/30. The 2026-08-09 dedicated NAS
-checkpoint confirmed that the visible Seed Inventory action added inventory;
-the expanded 24-row kit still requires the visible dedicated-NAS checkpoint.
+checkpoint confirmed that the visible Seed Inventory action added inventory.
+The 2026-08-19 checkpoint confirmed both Seed Demo Inventory and Delete Demo
+Inventory work against the selected warehouse. The redundant bottom-right
+Cancel button is removed. Closing the form without choosing an action is silent
+and does not imply that a previously completed seed or delete was cancelled.
 
 ### Admin sign-in at the computer station: corrected; visible retest pending
 
@@ -151,7 +154,7 @@ separate reachability review before removal.
 | Core | `frmWarehouseConnection` | Active, runtime-generated | NAS/root connection and warehouse target selection |
 | Operations | `frmInventoryViewer` | Active, runtime-generated | Read-only current inventory levels, search, freshness, refresh |
 | Production | `frmProduction` | Active, runtime-generated | Recipe, assignment, run-list, and run-tree workflows |
-| Receiving | `frmReceiving` | Active, runtime-generated | Receiving and non-operational Purchasing tab |
+| Receiving | `frmReceiving` | Active, runtime-generated | Receiving, inbound Returns, and non-operational Purchasing tab |
 | Shipping | `frmBoxVersionSaveChoice` | Active, runtime-generated | Choose update-versus-new box alternative behavior |
 | Shipping | `frmShipmentsTally` | Active, runtime-generated | Shipping, Box Designer, and Box Maker tabs |
 
@@ -313,7 +316,6 @@ Runtime-added controls:
 | `btnDeleteDemoInventory` | Button — **Delete Demo Inventory** | After confirmation, depletes active `DEMO-` entities through exact-`System_Key` adjustment events; canonical history is retained. |
 | `btnUploadDemoInventory` | Button — **Upload Data Set** | Chooses and validates a CSV, then copies it into the selected warehouse's `admin\demo-inventory-data-sets` library. Upload does not add inventory; reopen the form, select the stored definition, and click Seed. A same-named definition is rejected rather than overwritten. |
 | `btnDeleteDemoDataSet` | Button — **Delete Data Set** | After confirmation, deletes only the selected uploaded CSV definition. It does not reverse or alter inventory already seeded from that definition. The built-in R1 kit is protected and cannot be deleted. |
-| `btnCancel` | Button — **Cancel** | Cancels without seeding. |
 
 Uploaded CSVs require `ITEM_CODE`, `ITEM`, `QTY`, `UOM`, and `LOCATION`.
 `CONDITION`, `DESCRIPTION`, `CATEGORY`, and `VENDOR` are optional. Every item
@@ -487,22 +489,24 @@ anchor manager while remaining readable.
 
 ## 7. Receiving forms
 
-### 7.1 `frmReceiving` — Receiving
+### 7.1 `frmReceiving` — Receiving, inbound Returns, and Purchasing stub
 
 | Area | Controls | Purpose |
 |---|---|---|
-| Tabs | `tabsReceiving` — **Receiving**, **Purchasing** | Switches between the working Receiving page and a reserved Purchasing page. |
+| Tabs | `tabsReceiving` — **Receiving**, **Returns**, **Purchasing** | Switches between ordinary receipts, inbound returned goods, and the reserved Purchasing page. Receiving and Returns share one captured-workbook staging surface; Purchasing has no write action. |
 | Receipt identity | `lblReceiptId`, `txtReceiptId` | Shows a generated, locked receipt ID. |
-| Reference | `lblRef`, `txtRef` | Accepts PO/BOL reference text. |
+| Reference | `lblRef`, `txtRef` | Accepts PO/BOL reference text on Receiving or Return Ref on Returns. |
 | History filter | `lblSearch`, `txtSearch` | Filters Receiving Entries History as the user types. |
 | Managed item search | `lblItemSearch`, `txtItemSearch`, `lblReceiveItemsTitle`, `lblReceiveItemsHeader`, `lstReceiveItems` | Filters and displays a dedicated result list with Code, Item, UOM, Available, Location, Description, and Vendor. Rows with the same item code/UOM/location/condition are aggregated, nonpositive totals are hidden, and one representative hidden `System_Key` is retained only for catalog lookup; confirming a new receipt creates its own durable key. |
 | Quantity | `lblQty`, `txtQty` | Accepts quantity for the selected item; defaults to 1. |
-| Receipt attributes | `lblReceiveLocation`, `txtReceiveLocation`, `lblLotNumber`, `txtLotNumber` | Requires the receiving location and accepts an optional lot number. Selection defaults Location from the source row, but the operator may change it. |
-| Top actions | `btnRefresh`, `btnAdd` | Reloads views or stages the selected item/quantity. |
-| Receiving history | `lblInventoryTitle`, `lblInventoryHeader`, `lstInventory` | Displays completed `ReceivedLog` entries: date, user, reference, item, quantity, UOM, vendor, location, code, and lot; one hidden column retains `System_Key`. `EventId` remains in the workbook log. |
-| Staged receipt | `lblStagedTitle`, `lblStagedHeader`, `lstStaged` | Displays local Received Tally rows: reference, item, quantity, location, lot, and hidden System_Key. |
-| Aggregate view | `lblAggregateTitle`, `lblAggregateHeader`, `lstAggregate` | Displays aggregated reference/code/vendor/description/item/UOM/quantity/location/lot data with hidden System_Key. |
-| Write actions | `btnConfirm`, `btnClear` | **Confirm Writes** queues supported Receiving events; **Clear** clears local staging. |
+| Receipt condition | `lblCondition`, `cboCondition` | Establishes physical condition at receipt-line creation. Defaults to `GOOD`; R1 choices are `GOOD`, `BAD`, `DAMAGED`, `EXPIRED`, and `REJECTED`. Condition is not edited in Inventory Viewer. |
+| Receipt attributes | `lblReceiveLocation`, `txtReceiveLocation`, `lblLotNumber`, `txtLotNumber` | Requires the receiving location and accepts an optional lot number. Selection defaults Location from the source row, but the operator may change it. Lot is a traceability grouping, not entity identity or condition. |
+| Inbound return reason | `lblReturnReason`, `txtReturnReason` | Visible and required only on Returns. Describes why returned goods are entering the warehouse. |
+| Top actions | `btnRefresh`, `btnAdd` | Reloads views or stages the selected item/quantity. The add button reads **Add Selected** on Receiving and **Add Return** on Returns. |
+| Receiving history | `lblInventoryTitle`, `lblInventoryHeader`, `lstInventory` | Displays a ten-column `ReceivedLog` projection: date, receipt type, reference, item, quantity, UOM, location, lot, condition, and return reason. Full user/vendor/code/`System_Key`/`EventId` evidence remains in the workbook log. |
+| Staged receipt | `lblStagedTitle`, `lblStagedHeader`, `lstStaged` | Displays the ten-column local Received Tally projection: reference, type, item, quantity, UOM, location, lot, vendor, condition, and return reason. The backing table retains immutable `System_Key`, item code, source key, event ID, and workflow state. |
+| Aggregate view | `lblAggregateTitle`, `lblAggregateHeader`, `lstAggregate` | Rebuilds from every Received Tally row and displays reference, type, code, item, UOM, accumulated quantity, location, lot, condition, and return reason. Repeated matching lines group by type/reference/item/location/lot/condition/reason. The deliberate ten-column projection avoids the MSForms ListBox limit that previously left only the first aggregate row visible. |
+| Write actions | `btnConfirm`, `btnClear` | **Confirm Writes** queues ordinary receipts; on Returns the button reads **Confirm Returns**. Both use authorized `RECEIVE` events and create a new durable `System_Key`; **Clear** clears local staging. |
 | Status/exit | `txtStatus`, `btnClose` | Shows multiline status and closes the form. |
 | Purchasing placeholder | `lblPurchasingStub` | States that Purchasing is not operational and exposes no purchasing write action. |
 
@@ -682,7 +686,8 @@ the compatible stored labels `v1`, `v2`, and so on.
   and confirm the Admin ribbon controls enable without a capability error.
 - Repeat visible Production maximize/restore and Shipping/Boxing grow/shrink checks.
 - Run the complete 24-row seed-to-ship workflow on the dedicated test warehouse,
-  including Receiving Location/Lot and Production List scaling.
+  including Receiving Location/Lot/Condition, one inbound Return, aggregate
+  totals, and Production List scaling.
 - Review and adjust checklist item 4 only if an operator test exposes an
   ambiguous status or mutation boundary.
 - Review private legacy Shipping worksheet-maintenance routines for reachability
