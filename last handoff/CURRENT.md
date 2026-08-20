@@ -1,1 +1,1 @@
-`027 Slice 4w Operator Responsiveness Events Green Awaiting Visual UAT.md`
+`028 Slice 4w Shipping Remove Event Green Awaiting Visual UAT.md`
