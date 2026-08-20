@@ -1213,8 +1213,9 @@ Required behavior:
   reusable modeless form;
 - [x] canonical inventory events are copied into the published snapshot as
   read-only `tblInventoryEvents` data, preserving Core/Domain authority;
-- [x] Events covers Receipt, Return, Dump, Box Made/Unboxed, Shipped, reservation
-  and release events, supplemented by current saved Box Designs and current Held
+- [x] Events covers Receipt, Return, Dump, Box Made/Unboxed, Shipped, reservation,
+  and Shipping **Remove** (`SHIP_RELEASE`, returning locked inventory to warehouse
+  availability), supplemented by current saved Box Designs and current Held
   Shipments; Production labels are deferred to the Production review; and
 - [x] Receiving/Returns, Production, and Shipping paint a form-owned pending
   status before persistence. Native Office Saving windows remain separate and

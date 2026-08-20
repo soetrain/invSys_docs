@@ -204,7 +204,8 @@ a separate locked, multiline **Selected references** box. The box wraps and
 scrolls, follows resize, and clears when staging is cleared.
 
 Inventory Viewer now has **Inventory** and **Events** tabs. Events is read-only.
-Receipts, Returns, Dumps, Box Made/Unboxed, and Shipped activity come from the
+Receipts, Returns, Dumps, Box Made/Unboxed, Shipped, and Shipping **Remove**
+activity come from the
 published `tblInventoryEvents` snapshot projection. Current saved box
 alternatives and currently held shipment rows supplement that projection as
 `BOX_DESIGNED` and `SHIP_HELD`; these two supplements describe current activity,
@@ -602,7 +603,7 @@ invSys session and selected warehouse.
 | `btnRefresh` | Button — **Refresh** | Reads the current published inventory snapshot or Events projection; it does not process or alter authority workbooks. |
 | `lblSearch`, `txtSearch` | Label and text box — **Search** | Filters the already loaded rows locally across all visible columns. |
 | `lblHeaders` | Header label | Inventory identifies Item Code, Item, UOM, Quantity, Location, and Condition. Events identifies Date, Event, Reference, Item, Qty, UOM, Location, Condition, User, and Details. |
-| `lstInventory` | Six- or ten-column list box | Inventory displays levels aggregated by item code, item, UOM, location, and condition. Events displays Receipts, Returns, Dumps, Box Made/Unboxed, Shipped, shipment reservation/release, current Box Designs, and current Held Shipments. Both views are read-only. |
+| `lstInventory` | Six- or ten-column list box | Inventory displays levels aggregated by item code, item, UOM, location, and condition. Events displays Receipts, Returns, Dumps, Box Made/Unboxed, Shipped, **Remove** (the `SHIP_RELEASE` action that returns locked inventory to warehouse availability), current Box Designs, and current Held Shipments. Both views are read-only. |
 | `lblStatus` | Status/freshness label | Shows row count, snapshot read time, or a no-snapshot/sign-in error. |
 | `btnClose` | Button — **Close** | Closes the Viewer without affecting an operator workbook. |
 
