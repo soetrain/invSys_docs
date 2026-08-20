@@ -1,1 +1,1 @@
-`024 Slice 4t Shipping Canonical Projection Green Awaiting Visual UAT.md`
+`025 Slice 4u Shipping Persistence Feedback Green Awaiting Visual UAT.md`
