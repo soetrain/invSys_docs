@@ -1059,6 +1059,56 @@ its two failures are stale expectations for retired `AggregateBoxBOM_Log` and
 deployed live-role suite is the package-level gate for this slice and passed
 46/46.
 
+### Slice 4t — Shipping canonical post-send projection and bounded publication
+
+The 2026-08-20 operator checkpoint completed a five-package shipment and proved
+the canonical transaction correct: Inventory Viewer changed the selected box
+from 100 to 95. The Shipping form nevertheless remained at NAS Inv 100,
+Projected Inv 100, Locked 0. The action reported about 84 seconds total, about
+58 seconds in `RunBatch`, and twenty native Saving notices. This is a newly
+discovered Slice 4 projection/performance blocker, not an inventory-identity or
+processor-application failure.
+
+Root cause:
+
+- `RunShippingRuntimeQueueRefresh` processed the queued event but returned
+  without refreshing the captured operator workbook;
+- `mBtnSend_Click` recalculated Projected Inv from its pre-send `mShippables`
+  array instead of reloading the canonical read model;
+- timer AutoSync could disarm after completed overlays were evicted, so it did
+  not guarantee the missing refresh; and
+- Shipping called `PublishInventorySnapshotBridge` after `RunBatch`, even
+  though `RunBatch` had already generated/published the canonical snapshot.
+
+Required behavior:
+
+- [x] after processor success, refresh the captured Shipping operator workbook
+  from the processor-generated canonical snapshot;
+- [x] reload form shippables after that refresh and before deriving Projected
+  Inv and Locked;
+- [x] remove the redundant second snapshot publication while retaining the
+  processor's three durability saves;
+- [x] report nonzero read-model refresh timing separately from batch timing;
+- [x] remove the duplicate legacy three-attempt shipment-stage cleanup call;
+  and
+- [ ] visibly confirm the reported box now renders NAS Inv 95, Projected Inv
+  95, Locked 0 and record the new Saving-notice count and elapsed time.
+
+Gate:
+
+- [x] focused behavioral RED was 0/4: no canonical read-model call, no
+  shippables reload, no public-form visible evidence, and duplicate legacy
+  cleanup;
+- [x] focused GREEN is 4/4;
+- [x] the public form-action live workflow refreshes the same operator workbook
+  from `starting quantity - shipped quantity` and is 47/47;
+- [x] packaged XLAM validation is 74/74, Shipping/Boxing is 11/11, final control
+  acceptance is 12/12, workflow readiness is 18/18, and the ordered Release 1
+  full chain is 30/30; and
+- [x] deterministic maintenance is 19/19 with 150 components, 4,702 procedures,
+  964 scanner candidates, 8 literal `Application.Run` targets, 47 unresolved
+  expressions, and 184 duplicate-body groups.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.
@@ -1119,6 +1169,8 @@ Exact steps:
     shipment. Confirm Shipping **Add** reserves the selected box without a
     `ROW`-column error, each public action reports staged, queued, applied, or
     refreshed state accurately, and record whether native Saving notices remain.
+    After the five-box checkpoint, Shipping must show NAS Inv 95, Projected Inv
+    95, and Locked 0 without relying on a later timer refresh.
 
 Expected results:
 

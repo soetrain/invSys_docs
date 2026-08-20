@@ -110,7 +110,7 @@ inside the shared quiet-UI boundary. Packaged evidence confirms quiet UI was
 active during the handler and fully restored afterward; visible receipt and
 Saving-notification retests remain required.
 
-### Shipping exact-key Add and active component choices: packaged GREEN; visible retest pending
+### Shipping exact-key Add and active component choices: Add visibly accepted; component retest pending
 
 The 2026-08-20 Shipping checkpoint proved Box Maker could create shippable
 boxes, but **Add** on the Shipping tab failed with `invSys table missing TOTAL
@@ -126,8 +126,39 @@ Distinct positive entities remain separate even when code, item, location, and
 description match. Shipping Add, Box Designer save, and Box Maker Make/Unmake
 now remain inside the shared quiet-UI boundary; that boundary also hides and
 restores Excel's status bar while required persistence runs. Automated
-exact-key, form-action, live-role, and maintenance evidence is GREEN. Visible
-Add, component-list, and Saving-notification retests remain required.
+exact-key, form-action, live-role, and maintenance evidence is GREEN. The
+2026-08-20 operator checkpoint confirmed Add, Update Row, Remove, Return, To
+Shipments, and Shipments Sent all reached their intended actions. The filtered
+component list and Saving-notification behavior still need a visible retest
+against the new package.
+
+### Shipping post-send inventory projection: packaged GREEN; visible retest pending
+
+The 2026-08-20 shipment of five `12-pack Chai Box v1` packages completed and
+canonical inventory correctly changed from 100 to 95 in Inventory Viewer, but
+the still-open Shipping form kept displaying NAS Inv 100, Projected Inv 100,
+and Locked 0. The action took about 84 seconds, including about 58 seconds in
+the server processor, and surfaced twenty native Saving notices.
+
+The transaction was correct; the stale form was a separate projection defect.
+The Shipping runtime boundary ran the processor but did not refresh the
+captured operator workbook afterward, and the form recalculated from its cached
+shippables array. It also requested a second snapshot publication even though
+`modProcessor.RunBatch` had already generated the canonical snapshot. Shipping
+now reuses that processor snapshot, refreshes the captured operator read model,
+reloads `lstShippables`, and only then derives Projected Inv and Locked. The
+duplicate publication and one duplicate legacy stage-cleanup call are removed;
+the processor's required three durability saves remain.
+
+Focused post-send contracts are 4/4, packaged XLAM is 74/74, live role workflows
+are 47/47, and the ordered Release 1 chain is 30/30. In the live public form
+action, shipping five units from twenty refreshed the same operator workbook to
+fifteen before the form action returned. The exact visible acceptance check for
+the reported warehouse is now NAS Inv 95, Projected Inv 95, Locked 0 immediately
+after Shipments Sent and again after reopening Shipping. Fewer Saving notices
+and lower post-batch time are expected from removal of the duplicate
+publication, but their exact visible counts remain unaccepted until operator
+retest.
 
 ### Production resizing: corrected; visible retest pending
 
@@ -664,6 +695,12 @@ use exact string `System_Key`; no numeric value was relabeled as a key.
 The **Add** reserve step resolves and updates that exact inventory entity on a
 current schema with no managed `ROW` column.
 
+After **Shipments Sent** processes the queued event, the form refreshes its
+captured operator workbook from the processor-generated canonical snapshot,
+reloads the shippables list, and then derives NAS Inv, Projected Inv, and Locked.
+A completed shipment must therefore be visible immediately without depending on
+an old local array or a later timer-driven refresh.
+
 The uncalled readiness list and header builder were removed after reachability
 review; they were never constructed by the active layout.
 
@@ -731,9 +768,11 @@ the compatible stored labels `v1`, `v2`, and so on.
   receipt and disposition batches complete without repeated Saving
   notifications.
 - In Box Designer, confirm Component inventory omits zero-balance rows and does
-  not repeat the same exact entity. Save a box, Make it, then use Shipping
-  **Add** and confirm the exact-key reservation succeeds without a `ROW`
-  requirement. Record whether native Saving notifications remain visible.
+  not repeat the same exact entity. Add, Update Row, Remove, Return, To
+  Shipments, and Shipments Sent are visibly action-reachable; repeat one
+  shipment against the new package and confirm a canonical 95 balance displays
+  as NAS Inv 95, Projected Inv 95, Locked 0. Record the new native Saving-notice
+  count and elapsed time.
 - Run the complete 24-row seed-to-ship workflow on the dedicated test warehouse,
   including Receiving Location/Lot/Condition, one `RETURN`, one `DUMP`, their
   resulting Viewer quantities, aggregate totals, and Production List scaling.
