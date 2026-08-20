@@ -110,6 +110,25 @@ inside the shared quiet-UI boundary. Packaged evidence confirms quiet UI was
 active during the handler and fully restored afterward; visible receipt and
 Saving-notification retests remain required.
 
+### Shipping exact-key Add and active component choices: packaged GREEN; visible retest pending
+
+The 2026-08-20 Shipping checkpoint proved Box Maker could create shippable
+boxes, but **Add** on the Shipping tab failed with `invSys table missing TOTAL
+INV/SHIPMENTS/ROW columns.` The form already carried the selected immutable
+`System_Key`; the local reserve apply step was the remaining legacy `ROW`
+consumer. It now dispatches current-schema reservations by exact `System_Key`
+and retains the numeric path only for isolated legacy test compatibility.
+
+Box Designer's Component inventory also displayed every durable entity,
+including repeated zero-balance entities. The picker now excludes nonpositive
+balances and removes only repeated projections of the same `System_Key`.
+Distinct positive entities remain separate even when code, item, location, and
+description match. Shipping Add, Box Designer save, and Box Maker Make/Unmake
+now remain inside the shared quiet-UI boundary; that boundary also hides and
+restores Excel's status bar while required persistence runs. Automated
+exact-key, form-action, live-role, and maintenance evidence is GREEN. Visible
+Add, component-list, and Saving-notification retests remain required.
+
 ### Production resizing: corrected; visible retest pending
 
 `frmProduction` maximized its native window while the MultiPage and child
@@ -642,6 +661,8 @@ at `Zoom=100`; the user's visible maximize/restore retest remains pending.
 
 **D14 correction:** the visible form and its reachable Release 1 backing path
 use exact string `System_Key`; no numeric value was relabeled as a key.
+The **Add** reserve step resolves and updates that exact inventory entity on a
+current schema with no managed `ROW` column.
 
 The uncalled readiness list and header builder were removed after reachability
 review; they were never constructed by the active layout.
@@ -652,7 +673,7 @@ review; they were never constructed by the active layout.
 |---|---|---|
 | Heading/actions | `lblBoxBuilderPage`, `btnBoxBuilderNewPage`, `btnBoxBuilderRefreshPage` | Starts a box definition and reloads box designs. |
 | Designs | `lstBoxBuilderDesignsPage` | Full-width list of design identity/name/alternative/status metadata. |
-| Component inventory | `lblBoxBuilderInventory`, `lstBoxBuilderInventoryPage`, `lblBoxBuilderComponentQty`, `txtBoxBuilderComponentQty`, `btnBoxBuilderAddComponentPage`, `btnBoxBuilderRemoveComponentPage` | Selects inventory entities and quantities for the box definition. Each row retains its hidden immutable `System_Key`; repeated item names can represent distinct physical inventory entities rather than duplicate GUI data. |
+| Component inventory | `lblBoxBuilderInventory`, `lstBoxBuilderInventoryPage`, `lblBoxBuilderComponentQty`, `txtBoxBuilderComponentQty`, `btnBoxBuilderAddComponentPage`, `btnBoxBuilderRemoveComponentPage` | Selects positive-balance inventory entities and quantities for the box definition. Each row retains its hidden immutable `System_Key`; duplicate projections of the same key and nonpositive balances are omitted, while repeated item names with different keys remain distinct physical entities. |
 | Component search | `txtBoxBuilderSearch` | Filters loaded component choices locally by code, item, description, UOM, or location. |
 | Definition fields | `lblBoxBuilderName`, `txtBoxBuilderName`, `lblBoxBuilderVersion`, `cboBoxBuilderVersion`, `lblBoxBuilderStatus`, `cboBoxBuilderStatus`, `lblBoxBuilderUom`, `txtBoxBuilderUom`, `lblBoxBuilderLocation`, `txtBoxBuilderLocation`, `lblBoxBuilderDescription`, `txtBoxBuilderDescription` | Edits box name, alternative, Active/Archived status, UOM, location, and description. |
 | Selected components | `lblBoxBuilderComponents`, `lstBoxBuilderComponentsPage` | Full-width list of the component set for the selected alternative. The hidden component identity is preserved as `System_Key` and persisted as `ComponentSystemKey` in the Shipping BOM. |
@@ -709,6 +730,10 @@ the compatible stored labels `v1`, `v2`, and so on.
 - Repeat the ordinary Receiving **Add Selected** action, then confirm both
   receipt and disposition batches complete without repeated Saving
   notifications.
+- In Box Designer, confirm Component inventory omits zero-balance rows and does
+  not repeat the same exact entity. Save a box, Make it, then use Shipping
+  **Add** and confirm the exact-key reservation succeeds without a `ROW`
+  requirement. Record whether native Saving notifications remain visible.
 - Run the complete 24-row seed-to-ship workflow on the dedicated test warehouse,
   including Receiving Location/Lot/Condition, one `RETURN`, one `DUMP`, their
   resulting Viewer quantities, aggregate totals, and Production List scaling.

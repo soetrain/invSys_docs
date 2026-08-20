@@ -1011,6 +1011,54 @@ and controller is an explicit Slice 4r exception for the same-handler test,
 stage diagnostics, event cleanup, and quiet-UI restoration; no component,
 procedure, dynamic-call, or duplicate-body count increased.
 
+### Slice 4s — Shipping exact-key reserve and active component projection
+
+The 2026-08-20 visible Shipping checkpoint proved Box Maker could create
+shippable boxes, then exposed three related Release 1 defects. Box Designer's
+Component inventory included zero-balance durable entities that appeared as
+unexpected duplicates. Shipping **Add** carried an exact `System_Key` but its
+local reserve apply boundary still required `TOTAL INV/SHIPMENTS/ROW`. Required
+Shipping and Boxing persistence also surfaced repeated native Saving notices.
+These are newly discovered blockers within Slice 4; they do not change D14 or
+the rule that distinct positive physical entities retain distinct keys.
+
+Required behavior:
+
+- [x] the real Shipping **Add** action reserves inventory by exact immutable
+  `System_Key` on the current schema with no managed `ROW` header;
+- [x] current-schema reserve validation preserves available quantity, existing
+  locks, and inventory-floor enforcement before changing local staging;
+- [x] Box Designer omits nonpositive component balances and removes only
+  repeated projections of the same exact `System_Key`;
+- [x] distinct positive entities remain separate component choices even when
+  their displayed SKU, item, location, and description match;
+- [x] Shipping Add, Box Designer save, and Box Maker Make/Unmake retain a
+  shared quiet-UI boundary across required persistence; and
+- [x] the quiet boundary hides Excel's status bar during the action and restores
+  its previous setting with events, alerts, calculation, and screen updating.
+
+Gate:
+
+- [x] focused RED records the legacy `ROW` rejection, zero-balance picker rows,
+  and missing Shipping quiet boundaries before implementation;
+- [x] the same public `ShipmentsFormCommitLine` action passes on a `ROW`-free
+  exact-key workbook and preserves the staged key and reservation quantity;
+- [x] merge/exact-key/board regressions are 3/3, Slice 4s contracts are 6/6,
+  Shipping/Boxing is 11/11, final control acceptance is 12/12, workflow
+  readiness is 18/18, deployed live-role workflows are 46/46, and the ordered
+  Release 1 full chain is 30/30;
+- [x] deterministic maintenance is 19/19 with 150 components, 4,702 procedures,
+  965 scanner candidates, 8 literal `Application.Run` targets, 47 unresolved
+  expressions, and 184 duplicate-body groups; and
+- [ ] the user visibly confirms the Box Designer list, Shipping Add, and native
+  Saving-notification behavior against `WHT7025AE`.
+
+The generic visible package inspector opened all five add-ins and passed 32/34;
+its two failures are stale expectations for retired `AggregateBoxBOM_Log` and
+`AggregatePackages_Log` support sheets, not active form/action failures. The
+deployed live-role suite is the package-level gate for this slice and passed
+46/46.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.
@@ -1065,10 +1113,12 @@ Exact steps:
     this checkpoint.
 16. Open Shipping, resize **Box Designer** and **Box Maker** through grow,
     shrink, maximize, and restore; confirm full-width lists, aligned headers,
-    non-overlapping actions, and `NA` for items without a box alternative.
+    non-overlapping actions, `NA` for items without a box alternative, and no
+    zero-balance or same-`System_Key` duplicate Component inventory choices.
 17. Use the seeded materials through Box Designer/Box Maker and complete one
-    shipment, confirming each public action reports staged, queued, applied, or
-    refreshed state accurately.
+    shipment. Confirm Shipping **Add** reserves the selected box without a
+    `ROW`-column error, each public action reports staged, queued, applied, or
+    refreshed state accurately, and record whether native Saving notices remain.
 
 Expected results:
 
