@@ -910,7 +910,7 @@ Gate:
   is created;
 - [x] packaged Returns form action, Viewer refresh, XLAM/Ribbon, full workflow,
   restart, and static maintenance regressions remain GREEN; and
-- [ ] the user visibly confirms Return/Dump selection and resulting quantities
+- [x] the user visibly confirms Return/Dump selection and resulting quantities
   against `WHT7025AE`.
 
 Automated evidence on 2026-08-19: the focused static contract began at 0/6
@@ -955,8 +955,61 @@ stage, error number, source, and description context. Aligned Returns tests are
 5/5, packaged XLAM is 74/74, live workflows are 46/46, and the clean Release 1
 chain is 30/30. Deterministic maintenance is 19/19 plus 11/11 with 150
 components, 4,701 procedures, 965 scanner candidates, and an explicitly
-reviewed Slice 4q procedure ceiling. Visible `WHT7025AE` staging and depletion
-confirmation remains open.
+reviewed Slice 4q procedure ceiling. The operator subsequently confirmed
+RETURN, DUMP, reference concatenation, and Return Entries History posting
+against `WHT7025AE`; Slice 4q visible disposition acceptance is complete.
+
+### Slice 4r — ordinary receipt staging isolation and confirmation UI quieting
+
+The next 2026-08-19 visible checkpoint selected Citric Acid for an ordinary
+30-unit receipt at `CLEARVIEW`. **Add Selected** failed with the same generic
+Excel error 1004 previously isolated on disposition staging. The same session
+also exposed eighteen native Saving notifications after a successful batched
+**Confirm Dispositions**, despite the processor remaining within its proven
+three-persistence-save bound. This is a newly discovered Receiving acceptance
+blocker inside Slice 4, not a change to the D14 identity or outbound
+disposition contracts.
+
+Required behavior:
+
+- [x] ordinary `RECEIPT` staging suppresses Excel events for the complete
+  Received Tally plus Aggregate Received transaction and restores the caller's
+  prior event state on success or failure;
+- [x] the real **Add Selected** form handler is protected by a focused action
+  test that first proves detailed protected-write failure context and then
+  proves successful receipt staging;
+- [x] receipt failures identify the exact stage, error number, sanitized
+  source, and description rather than returning generic error 1004 text;
+- [x] the real **Confirm Writes/Confirm Dispositions** form handler enters the
+  shared quiet-UI boundary before queue/processor/refresh work and restores the
+  prior UI/event/calculation state afterward; and
+- [x] batching remains authoritative: multi-row confirmation still persists
+  once per safe artifact phase rather than once per row.
+
+Gate:
+
+- [x] same-handler RED is recorded before the implementation change;
+- [x] focused Receiving tests prove ordinary receipt, Return/Dump, condition
+  separation, exact identity, aggregate semantics, and bounded processor
+  persistence;
+- [x] packaged Receiving, XLAM, live role workflow, ordered Release 1 chain,
+  and deterministic maintenance regressions remain GREEN; and
+- [ ] the user visibly confirms an ordinary receipt stages successfully and
+  that Confirm Writes/Confirm Dispositions no longer surfaces repeated Saving
+  notifications against `WHT7025AE`.
+
+Automated evidence recorded 2026-08-19: the real-form receipt action was RED
+before implementation and GREEN afterward. The aligned Receiving range is
+14/14; Slice 4o/4p/4q static contracts are 5/5, 8/8, and 6/6; packaged
+Receiving/Returns is 5/5; packaged XLAM is 74/74; live role workflow is 46/46
+with `QuietDuring=True` and `QuietRestored=True`; and the ordered Release 1
+chain is 30/30. Deterministic maintenance is 19/19 and the Shipping/Boxing
+regression is 11/11 with 150 components, 4,701 procedures, 8 literal
+`Application.Run` targets, 47 unresolved expressions, and 184 duplicate-body
+candidates. The 88-line bounded growth in the already oversized Receiving form
+and controller is an explicit Slice 4r exception for the same-handler test,
+stage diagnostics, event cleanup, and quiet-UI restoration; no component,
+procedure, dynamic-call, or duplicate-body count increased.
 
 ## 6. Batched user acceptance checkpoint
 

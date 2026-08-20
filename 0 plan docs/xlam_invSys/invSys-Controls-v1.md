@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.15
+**Version:** 1.16
 
 **Inventory date:** 2026-08-19
 
@@ -94,6 +94,21 @@ existing target rows, and denies, and cannot manufacture a missing role. The
 focused tests are 3/3, the Core session block is 33/33, and the dedicated NAS
 package run is 16/16. Visible Admin sign-in with the human credential remains
 the next checkpoint.
+
+### Receiving receipt/disposition actions: packaged GREEN; receipt retest pending
+
+The 2026-08-19 visible checkpoint confirmed that `RETURN`, `DUMP`, and
+reference concatenation worked and that disposition events appeared in Return
+Entries History. The next ordinary Citric Acid receipt failed during **Add
+Selected** with Excel error 1004, while a successful Confirm Dispositions
+surfaced eighteen native Saving notifications. Ordinary receipt staging now
+uses the same complete event-isolated tally/aggregate transaction as
+disposition staging, restores the caller's prior Excel event state, and reports
+the exact failed stage, error number, source, and description. The real form
+confirmation handler now brackets queue, processor, refresh, and local cleanup
+inside the shared quiet-UI boundary. Packaged evidence confirms quiet UI was
+active during the handler and fully restored afterward; visible receipt and
+Saving-notification retests remain required.
 
 ### Production resizing: corrected; visible retest pending
 
@@ -503,11 +518,11 @@ anchor manager while remaining readable.
 | Receipt/disposition attributes | `lblReceiveLocation`, `txtReceiveLocation`, `lblLotNumber`, `txtLotNumber` | Receiving requires a location and accepts an optional lot; the operator may edit both before staging. On Returns the selected source location and lot are locked so the action preserves the exact inventory boundary. Lot is a traceability grouping, not identity or condition. |
 | Disposition type | `lblDisposition`, `cboDisposition` | Visible and required only on Returns. Offers `RETURN` for goods sent out to a vendor/other party and `DUMP` for goods discarded; defaults to `RETURN`. Both reduce on-hand inventory. |
 | Disposition reason | `lblReturnReason`, `txtReturnReason` | Visible and required only on Returns. Records why the selected inventory is being returned or dumped. |
-| Top actions | `btnRefresh`, `btnAdd` | Reloads views or stages the selected item/quantity. The add button reads **Add Selected** on Receiving and **Add Disposition** on Returns. Disposition allocation and aggregate rebuild execute as one event-isolated form action, restore the caller's prior Excel event state, and report the failing stage, error number, source, and description if Excel rejects a write. |
+| Top actions | `btnRefresh`, `btnAdd` | Reloads views or stages the selected item/quantity. The add button reads **Add Selected** on Receiving and **Add Disposition** on Returns. Both ordinary receipt staging and disposition allocation execute their complete tally/aggregate transaction with Excel events isolated, restore the caller's prior event state, and report the failing stage, error number, source, and description if Excel rejects a write. |
 | Receiving/Return history | `lblInventoryTitle`, `lblInventoryHeader`, `lstInventory` | Displays a ten-column `ReceivedLog` projection: date, receipt type, reference, item, quantity, UOM, location, lot, condition, and return reason. The title is **Receiving Entries History** on Receiving and **Return Entries History** on Returns. Full user/vendor/code/`System_Key`/`EventId` evidence remains in the workbook log. |
 | Staged receipt/return | `lblStagedTitle`, `lblStagedHeader`, `lstStaged` | Displays the ten-column local tally projection: reference, type, item, quantity, UOM, location, lot, vendor, condition, and return reason. The title is **Received Tally** on Receiving and **Return Tally** on Returns. This table, not the aggregate view, is the posting authority; every line retains its separate immutable `System_Key`, item code, source key, event ID, and workflow state. |
 | Aggregate view | `lblAggregateTitle`, `lblAggregateHeader`, `lstAggregate` | Displays **Aggregate Received** or **Aggregate Returns**. It rebuilds from every tally row, groups by receipt type, item code, UOM, location, lot, and Condition, sums quantity, and concatenates distinct PO/BOL/return references in first-seen order. Different Conditions remain on separate rows. Return reasons are likewise concatenated for display. The aggregate is read-only and never collapses the separately keyed posting lines. |
-| Write actions | `btnConfirm`, `btnClear` | **Confirm Writes** queues ordinary receipts as `RECEIVE` and creates a new durable inventory `System_Key`. On Returns the button reads **Confirm Dispositions** and queues distinct `RETURN` or `DUMP` events against the staged existing keys; the Domain applies the positive action quantity as a negative exact-entity delta and rejects overdraw. **Clear** clears local staging. Multi-line confirmation batches queue and persistence work by safe workbook/artifact phase, so save cycles do not grow once per row. |
+| Write actions | `btnConfirm`, `btnClear` | **Confirm Writes** queues ordinary receipts as `RECEIVE` and creates a new durable inventory `System_Key`. On Returns the button reads **Confirm Dispositions** and queues distinct `RETURN` or `DUMP` events against the staged existing keys; the Domain applies the positive action quantity as a negative exact-entity delta and rejects overdraw. **Clear** clears local staging. Multi-line confirmation batches queue and persistence work by safe workbook/artifact phase, so save cycles do not grow once per row. The real confirmation handler remains inside the shared quiet-UI boundary for queue, processor, refresh, and cleanup work, then restores the prior Excel UI/event/calculation state. |
 | Status/exit | `txtStatus`, `btnClose` | Shows multiline status and closes the form. |
 | Purchasing placeholder | `lblPurchasingStub` | States that Purchasing is not operational and exposes no purchasing write action. |
 
@@ -691,6 +706,9 @@ the compatible stored labels `v1`, `v2`, and so on.
 - Sign into Admin at `WHT7025AE` / `X1-PRO-AI` with the existing invSys user
   and confirm the Admin ribbon controls enable without a capability error.
 - Repeat visible Production maximize/restore and Shipping/Boxing grow/shrink checks.
+- Repeat the ordinary Receiving **Add Selected** action, then confirm both
+  receipt and disposition batches complete without repeated Saving
+  notifications.
 - Run the complete 24-row seed-to-ship workflow on the dedicated test warehouse,
   including Receiving Location/Lot/Condition, one `RETURN`, one `DUMP`, their
   resulting Viewer quantities, aggregate totals, and Production List scaling.
