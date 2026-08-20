@@ -1,1 +1,1 @@
-`023 Slice 4s Shipping Exact Key Green Awaiting Visual UAT.md`
+`024 Slice 4t Shipping Canonical Projection Green Awaiting Visual UAT.md`
