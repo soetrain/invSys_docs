@@ -189,6 +189,33 @@ summary. Focused persistence feedback is 4/4, packaged XLAM is 74/74, live role
 workflows are 47/47, the ordered Release 1 chain is 30/30, and reviewed cleanup
 is 11/11.
 
+### Connection progress, aggregate reference detail, and Events view: packaged GREEN
+
+Slice 4w renders **Connecting to warehouse storage...** before the synchronous
+Windows SMB authentication call and yields once so the connection form, mouse
+pointer, and Excel status bar update before Windows begins the potentially slow
+network handshake. The underlying `WNetAddConnection2` call remains synchronous;
+on a remote NAS, Windows may still mark Excel busy until authentication returns.
+
+Receiving's aggregate list remains a fixed-height, one-line MSForms ListBox.
+Because that control cannot wrap or vary individual row height, selecting an
+aggregate row now copies its complete concatenated PO/BOL/return reference into
+a separate locked, multiline **Selected references** box. The box wraps and
+scrolls, follows resize, and clears when staging is cleared.
+
+Inventory Viewer now has **Inventory** and **Events** tabs. Events is read-only.
+Receipts, Returns, Dumps, Box Made/Unboxed, and Shipped activity come from the
+published `tblInventoryEvents` snapshot projection. Current saved box
+alternatives and currently held shipment rows supplement that projection as
+`BOX_DESIGNED` and `SHIP_HELD`; these two supplements describe current activity,
+not an immutable revision history. Production event labels are intentionally
+deferred until the Production workflow review reaches that page.
+
+Receiving, Returns, Production, and Shipping now render a form-owned pending
+status and repaint before persistence starts. Excel-native Saving windows cannot
+be moved into a UserForm and may still appear during required NAS saves; invSys
+does not suppress required durability merely to hide Office progress UI.
+
 ### Production resizing: corrected; visible retest pending
 
 `frmProduction` maximized its native window while the MultiPage and child
@@ -207,11 +234,12 @@ Top and Height remain fixed while its Width follows the form. The focused
 source contract and the packaged public-launcher grow/shrink proof are GREEN.
 A visible grow/shrink/maximize/restore retest remains pending.
 
-### Inventory Viewer: Release 1 stub packaged GREEN
+### Inventory Viewer: Inventory and Events views packaged GREEN
 
 Operations now contains a signed-in, capability-neutral **Inventory Viewer**
 entry. It opens one reusable modeless form and reads only the current published
-inventory snapshot on explicit refresh. It does not open a Receiving,
+inventory snapshot on explicit refresh. Its Events tab reads a published event
+projection plus current Shipping design/hold activity. It does not open a Receiving,
 Production, or Shipping form and never writes, repairs, processes, or refreshes
 an authority workbook. Packaged validation proved repeated launch reused the
 same form generation, local filtering reduced the list to the matching row,
@@ -561,7 +589,7 @@ role-profile wording. This is the only Release 1 item-search form component.
 
 ## 6. Operations forms
 
-### 6.1 `frmInventoryViewer` — Current inventory levels
+### 6.1 `frmInventoryViewer` — Inventory levels and events
 
 Ribbon entry: Operations > Overview > **Inventory Viewer**. It is visible
 without a role capability restriction, while its action requires a signed-in
@@ -569,11 +597,12 @@ invSys session and selected warehouse.
 
 | Control | Type / displayed text | Purpose |
 |---|---|---|
+| `tabsInventoryViewer` | Tabs — **Inventory**, **Events** | Switches between the current inventory-level projection and the read-only event/activity projection. |
 | `lblTitle` | Label — **Current inventory levels** | Identifies the read-only overview. |
-| `btnRefresh` | Button — **Refresh** | Reads the current published inventory snapshot; it does not process or alter the snapshot. |
+| `btnRefresh` | Button — **Refresh** | Reads the current published inventory snapshot or Events projection; it does not process or alter authority workbooks. |
 | `lblSearch`, `txtSearch` | Label and text box — **Search** | Filters the already loaded rows locally across all visible columns. |
-| `lblHeaders` | Header label | Identifies Item Code, Item, UOM, Quantity, Location, and Condition. |
-| `lstInventory` | Six-column list box | Displays inventory levels aggregated by item code, item, UOM, location, and condition. |
+| `lblHeaders` | Header label | Inventory identifies Item Code, Item, UOM, Quantity, Location, and Condition. Events identifies Date, Event, Reference, Item, Qty, UOM, Location, Condition, User, and Details. |
+| `lstInventory` | Six- or ten-column list box | Inventory displays levels aggregated by item code, item, UOM, location, and condition. Events displays Receipts, Returns, Dumps, Box Made/Unboxed, Shipped, shipment reservation/release, current Box Designs, and current Held Shipments. Both views are read-only. |
 | `lblStatus` | Status/freshness label | Shows row count, snapshot read time, or a no-snapshot/sign-in error. |
 | `btnClose` | Button — **Close** | Closes the Viewer without affecting an operator workbook. |
 
@@ -601,6 +630,7 @@ anchor manager while remaining readable.
 | Receiving/Return history | `lblInventoryTitle`, `lblInventoryHeader`, `lstInventory` | Displays a ten-column `ReceivedLog` projection: date, receipt type, reference, item, quantity, UOM, location, lot, condition, and return reason. The title is **Receiving Entries History** on Receiving and **Return Entries History** on Returns. Full user/vendor/code/`System_Key`/`EventId` evidence remains in the workbook log. |
 | Staged receipt/return | `lblStagedTitle`, `lblStagedHeader`, `lstStaged` | Displays the ten-column local tally projection: reference, type, item, quantity, UOM, location, lot, vendor, condition, and return reason. The title is **Received Tally** on Receiving and **Return Tally** on Returns. This table, not the aggregate view, is the posting authority; every line retains its separate immutable `System_Key`, item code, source key, event ID, and workflow state. |
 | Aggregate view | `lblAggregateTitle`, `lblAggregateHeader`, `lstAggregate` | Displays **Aggregate Received** or **Aggregate Returns**. It rebuilds from every tally row, groups by receipt type, item code, UOM, location, lot, and Condition, sums quantity, and concatenates distinct PO/BOL/return references in first-seen order. Different Conditions remain on separate rows. Return reasons are likewise concatenated for display. The aggregate is read-only and never collapses the separately keyed posting lines. |
+| Aggregate reference detail | `lblAggregateReferences`, `txtAggregateReferences` — **Selected references** | Shows the complete concatenated PO/BOL/return reference for the selected aggregate row in a locked, wrapped, vertically scrollable box. This is the supported readable alternative to variable-height ListBox rows, which MSForms does not provide. It clears with the aggregate/staging surface. |
 | Write actions | `btnConfirm`, `btnClear` | **Confirm Writes** queues ordinary receipts as `RECEIVE` and creates a new durable inventory `System_Key`. On Returns the button reads **Confirm Dispositions** and queues distinct `RETURN` or `DUMP` events against the staged existing keys; the Domain applies the positive action quantity as a negative exact-entity delta and rejects overdraw. **Clear** clears local staging. Multi-line confirmation batches queue and persistence work by safe workbook/artifact phase, so save cycles do not grow once per row. The real confirmation handler remains inside the shared quiet-UI boundary for queue, processor, refresh, and cleanup work, then restores the prior Excel UI/event/calculation state. A successful confirmation appends one `Persistence summary:` line to `txtStatus`; the processor remains the only snapshot writer. |
 | Status/exit | `txtStatus`, `btnClose` | Shows multiline action, error, and consolidated persistence status and closes the form. Excel-native save-progress windows, if any, are separate Office UI and are not duplicated as invSys dialogs. |
 | Purchasing placeholder | `lblPurchasingStub` | States that Purchasing is not operational and exposes no purchasing write action. |
@@ -812,6 +842,11 @@ the compatible stored labels `v1`, `v2`, and so on.
   post-send NAS/Projected/Locked refresh is visibly accepted. Retest the new
   `Persistence summary:` line and record any remaining Excel-native Saving
   notices separately from the invSys status output.
+- Verify Server Sign In paints its connecting status before the remote NAS wait,
+  select a four-reference Aggregate Received row and read all references in
+  **Selected references**, then open Inventory Viewer > **Events** and confirm
+  receipt/disposition/boxing/shipping activity is visible without changing
+  canonical inventory.
 - Run the complete 24-row seed-to-ship workflow on the dedicated test warehouse,
   including Receiving Location/Lot/Condition, one `RETURN`, one `DUMP`, their
   resulting Viewer quantities, aggregate totals, and Production List scaling.

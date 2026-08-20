@@ -1196,6 +1196,53 @@ Visible follow-up:
   Production Complete Run each produce one form-status persistence summary;
   record any remaining Excel-native Saving notices separately.
 
+### Slice 4w — operator responsiveness and read-only event visibility
+
+The 2026-08-20 follow-up reported a remote NAS connection that eventually
+succeeded after Excel appeared frozen, truncated multi-reference aggregates,
+continued Office-native Saving windows, and the need for a Viewer Events page.
+
+Required behavior:
+
+- [x] manual and ribbon Server Sign In render progress and yield once before
+  the synchronous Windows SMB authentication call, then restore Excel UI state;
+- [x] Receiving keeps its fixed-height aggregate rows and exposes the complete
+  selected concatenated reference in a locked multiline detail surface that
+  clears with staging;
+- [x] Inventory Viewer exposes Inventory and Events tabs through the same
+  reusable modeless form;
+- [x] canonical inventory events are copied into the published snapshot as
+  read-only `tblInventoryEvents` data, preserving Core/Domain authority;
+- [x] Events covers Receipt, Return, Dump, Box Made/Unboxed, Shipped, reservation
+  and release events, supplemented by current saved Box Designs and current Held
+  Shipments; Production labels are deferred to the Production review; and
+- [x] Receiving/Returns, Production, and Shipping paint a form-owned pending
+  status before persistence. Native Office Saving windows remain separate and
+  required durability saves are not removed.
+
+Gate:
+
+- [x] focused behavioral RED was 0/5 before implementation;
+- [x] focused GREEN is 5/5;
+- [x] Receiving/Production feedback is 4/4, Shipping feedback is 4/4,
+  Receiving aggregate/save batching is 8/8, disposition is 6/6, Receiving
+  stabilization is 10/10, Shipping/Boxing is 11/11, and Production layout is
+  8/8;
+- [x] packaged XLAM validation is 74/74, live role workflows are 47/47, and the
+  clean ordered Release 1 full chain is 30/30; and
+- [x] reviewed cleanup is 11/11 with 150 components, 4,729 procedures, 968
+  scanner candidates, 8 literal `Application.Run` targets, 47 unresolved
+  expressions, and 184 duplicate-body groups. Procedure growth is the protected
+  Events/progress implementation; the other ratchets remain improved.
+
+Visible follow-up:
+
+- [ ] confirm pre-connection progress is visible on the remote NAS path, read a
+  four-reference aggregate in **Selected references**, and verify Viewer Events
+  shows current receipt/disposition/boxing/shipping activity;
+- [ ] count any Office-native Saving windows separately from the invSys pending
+  and completion text. They cannot be moved into a UserForm.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.
