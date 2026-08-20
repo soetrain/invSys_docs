@@ -132,7 +132,7 @@ Shipments, and Shipments Sent all reached their intended actions. The filtered
 component list and Saving-notification behavior still need a visible retest
 against the new package.
 
-### Shipping post-send inventory projection: packaged GREEN; visible retest pending
+### Shipping post-send inventory projection: visible acceptance passed
 
 The 2026-08-20 shipment of five `12-pack Chai Box v1` packages completed and
 canonical inventory correctly changed from 100 to 95 in Inventory Viewer, but
@@ -153,12 +153,22 @@ the processor's required three durability saves remain.
 Focused post-send contracts are 4/4, packaged XLAM is 74/74, live role workflows
 are 47/47, and the ordered Release 1 chain is 30/30. In the live public form
 action, shipping five units from twenty refreshed the same operator workbook to
-fifteen before the form action returned. The exact visible acceptance check for
-the reported warehouse is now NAS Inv 95, Projected Inv 95, Locked 0 immediately
-after Shipments Sent and again after reopening Shipping. Fewer Saving notices
-and lower post-batch time are expected from removal of the duplicate
-publication, but their exact visible counts remain unaccepted until operator
-retest.
+fifteen before the form action returned. The 2026-08-20 visible retest then
+shipped six packages and confirmed that the still-open Shipping list showed the
+correct NAS Inv, Projected Inv, and Locked values. The Viewer agreed with the
+deducted balance. Total time improved from about 84 seconds to about 65 seconds;
+the report attributed about 49 seconds to processor batch persistence and 836
+milliseconds to canonical read-model refresh.
+
+Excel still surfaced native Saving progress notices during required NAS writes:
+four during a one-row **Add**, with additional notices during Shipments Sent.
+Slice 4u therefore preserves the inbox, reservation-ledger, and processor
+durability boundaries, adds one `Persistence summary:` line to the existing
+Shipping status/message output, and batches all reservation-ledger row updates
+into one workbook save per multi-row action. Native Excel save-progress windows
+cannot be reparented into a VBA form; the invSys summary is the authoritative
+single action report, while Excel may still display its own progress UI for the
+two logical server saves required by a one-row Add.
 
 ### Production resizing: corrected; visible retest pending
 
@@ -684,7 +694,7 @@ at `Zoom=100`; the user's visible maximize/restore retest remains pending.
 | Shippables | `lstShippables` plus `hdrShipBox`, `hdrShipVersion`, `hdrShipInv`, `hdrShipProjected`, `hdrShipLocked`, `hdrShipUom`, `hdrShipLoc`, `hdrShipSystemKey` | Lists Box, Alternative, NAS Inv, Projected Inv, Locked, UOM, Location, and immutable System Key. |
 | Line editor | `txtRef`, `txtBox`, `txtVersion`, `txtQty`, `txtUom`, `txtLocation`, `txtSystemKey`, `txtCarrier`, hidden `txtDescription` | Edits reference, quantity, and carrier while preserving the selection-backed box/alternative/UOM/location/System_Key identity. |
 | Line labels | `lblRef`, `lblBox`, `lblVersion`, `lblQty`, `lblUom`, `lblLocation`, `lblSystemKey`, `lblCarrier` | Identify the editor fields. |
-| Line actions | `btnAdd`, `btnUpdate`, `btnRemove` | Adds, updates, or removes a local shipment row. |
+| Line actions | `btnAdd`, `btnUpdate`, `btnRemove` | Adds, updates, or removes a shipment row. Exact-key reserve/release writes remain durable; the form reports the completed inbox and reservation-ledger boundaries once in `txtStatus`. |
 | Shipments list | `lblShipments`, `lstShipments` | Displays active shipment staging rows. |
 | Shipment headers | generated `hdrRef*`, `hdrLineBox*`, `hdrLineQty*`, `hdrLineUom*`, `hdrLineArea*`, `hdrLineLocked*`, `hdrLineSystemKey*`, `hdrLineDesc*`, `hdrLineCarrier*` | Identify Ref, Box, Qty, UOM, Area, Locked, System Key, Alternative, and Carrier. One header set is built for each shipment/hold list. |
 | Shipment actions | `btnStage`, `btnSend`, `btnHold` | Moves rows to shipment staging, sends completed shipments, or places selected rows on hold. |
@@ -700,6 +710,12 @@ captured operator workbook from the processor-generated canonical snapshot,
 reloads the shippables list, and then derives NAS Inv, Projected Inv, and Locked.
 A completed shipment must therefore be visible immediately without depending on
 an old local array or a later timer-driven refresh.
+
+Successful Add/Update/Remove, To Shipments, and Shipments Sent reports include
+one `Persistence summary:` line in `txtStatus`; the Shipments Sent modal summary
+contains the same line. Multiple selected rows share one reservation-ledger
+open/save cycle. The summary does not replace or weaken the canonical workbook
+saves, and it does not promise suppression of Excel-native save-progress UI.
 
 The uncalled readiness list and header builder were removed after reachability
 review; they were never constructed by the active layout.
@@ -768,11 +784,11 @@ the compatible stored labels `v1`, `v2`, and so on.
   receipt and disposition batches complete without repeated Saving
   notifications.
 - In Box Designer, confirm Component inventory omits zero-balance rows and does
-  not repeat the same exact entity. Add, Update Row, Remove, Return, To
-  Shipments, and Shipments Sent are visibly action-reachable; repeat one
-  shipment against the new package and confirm a canonical 95 balance displays
-  as NAS Inv 95, Projected Inv 95, Locked 0. Record the new native Saving-notice
-  count and elapsed time.
+  not repeat the same exact entity. Shipping Add, Update Row, Remove, Return,
+  To Shipments, and Shipments Sent are visibly action-reachable, and the
+  post-send NAS/Projected/Locked refresh is visibly accepted. Retest the new
+  `Persistence summary:` line and record any remaining Excel-native Saving
+  notices separately from the invSys status output.
 - Run the complete 24-row seed-to-ship workflow on the dedicated test warehouse,
   including Receiving Location/Lot/Condition, one `RETURN`, one `DUMP`, their
   resulting Viewer quantities, aggregate totals, and Production List scaling.

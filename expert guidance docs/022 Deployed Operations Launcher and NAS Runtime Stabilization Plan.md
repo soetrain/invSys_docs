@@ -1091,8 +1091,11 @@ Required behavior:
 - [x] report nonzero read-model refresh timing separately from batch timing;
 - [x] remove the duplicate legacy three-attempt shipment-stage cleanup call;
   and
-- [ ] visibly confirm the reported box now renders NAS Inv 95, Projected Inv
-  95, Locked 0 and record the new Saving-notice count and elapsed time.
+- [x] visibly confirm the still-open Shipping form renders the same deducted
+  NAS Inv, Projected Inv, and Locked values as Inventory Viewer. The follow-up
+  six-package run completed in about 65 seconds, including about 49 seconds in
+  the processor batch and 836 milliseconds in read-model refresh; a one-row
+  Add still surfaced four Excel-native Saving notices.
 
 Gate:
 
@@ -1108,6 +1111,50 @@ Gate:
 - [x] deterministic maintenance is 19/19 with 150 components, 4,702 procedures,
   964 scanner candidates, 8 literal `Application.Run` targets, 47 unresolved
   expressions, and 184 duplicate-body groups.
+
+### Slice 4u — Shipping consolidated persistence feedback
+
+The 2026-08-20 visible retest accepted the Slice 4t canonical form refresh, but
+confirmed that Excel still displays native Saving progress windows around the
+required NAS workbook writes. This is feedback noise, not failed persistence:
+the one-row Add must durably save the warehouse inbox and reservation ledger,
+and Shipments Sent must also retain the processor's three durability saves.
+Excel-native progress windows cannot be moved into a VBA form. invSys therefore
+provides one authoritative persistence summary in its existing message/status
+surface and removes only avoidable per-row ledger saves.
+
+Required behavior:
+
+- [x] Add/Update/Remove and To Shipments append one `Persistence summary:` line
+  after their required inbox and reservation-ledger writes;
+- [x] Shipments Sent includes the same summary in the existing form status and
+  final action dialog, including the processor's reported durability-save count;
+- [x] a multi-row reservation action opens and saves the reservation ledger
+  once rather than once per selected shipment row;
+- [x] the processor's inventory, outbox, and inbox durability saves remain
+  unchanged; and
+- [x] the quiet-UI boundary remains active across each public form action, while
+  documentation distinguishes invSys feedback from Excel-native progress UI.
+
+Gate:
+
+- [x] focused RED was 1/4: the processor durability contract existed, while Add
+  summary, Shipments Sent summary, and batched reservation persistence were
+  absent;
+- [x] focused GREEN is 4/4 through the real Add and Shipments Sent callbacks;
+- [x] packaged XLAM validation is 74/74, live role workflows are 47/47, and the
+  ordered Release 1 full chain is 30/30;
+- [x] Shipping/Boxing is 11/11, final control acceptance is 12/12, and workflow
+  readiness is 18/18; and
+- [x] reviewed cleanup is 11/11 with the procedure baseline unchanged at 4,702;
+  static evidence remains 150 components, 964 scanner candidates, 8 literal
+  `Application.Run` targets, 47 unresolved expressions, and 184 duplicate-body
+  groups.
+
+Visible follow-up:
+
+- [ ] confirm the new `Persistence summary:` line appears after one Add and one
+  Shipments Sent action, and record Excel-native Saving notices separately.
 
 ## 6. Batched user acceptance checkpoint
 
