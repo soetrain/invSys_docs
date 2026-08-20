@@ -1156,6 +1156,46 @@ Visible follow-up:
 - [ ] confirm the new `Persistence summary:` line appears after one Add and one
   Shipments Sent action, and record Excel-native Saving notices separately.
 
+### Slice 4v — Receiving and Production consolidated persistence feedback
+
+The 2026-08-20 follow-up requests the Shipping Slice 4u feedback behavior in
+Receiving and Production as well. Excel-native Saving progress windows cannot
+be reparented into VBA forms. The operator contract is therefore one
+authoritative `Persistence summary:` in the existing form status surface while
+required NAS durability remains intact.
+
+Required behavior:
+
+- [x] the real Receiving **Confirm Writes/Confirm Dispositions** callback
+  appends one persistence summary after its batched inbox, processor, refresh,
+  and cleanup work;
+- [x] the real Production **Complete Run** callback appends one persistence
+  summary after consume/complete event and processor work;
+- [x] Production completion uses the shared quiet-UI boundary and restores the
+  prior Excel UI state on success or error;
+- [x] shared Receiving/Production run-and-refresh does not publish a second
+  snapshot after the processor has generated the canonical snapshot; and
+- [x] processor inventory, outbox, and inbox durability saves remain unchanged.
+
+Gate:
+
+- [x] focused behavioral RED was 0/4 before implementation;
+- [x] focused GREEN is 4/4 through the real Receiving and Production callbacks;
+- [x] Receiving aggregate/save batching is 8/8, disposition is 6/6, Receiving
+  stabilization is 10/10, Production layout is 8/8, final control acceptance
+  is 12/12, workflow readiness is 18/18, and Shipping/Boxing is 11/11;
+- [x] packaged XLAM validation is 74/74, live role workflows are 47/47, and the
+  ordered Release 1 full chain is 30/30; and
+- [x] reviewed cleanup is 11/11 with 150 components, 4,702 procedures, 964
+  scanner candidates, 8 literal `Application.Run` targets, 47 unresolved
+  expressions, and 184 duplicate-body groups.
+
+Visible follow-up:
+
+- [ ] confirm one Receiving receipt, one Receiving disposition, and one
+  Production Complete Run each produce one form-status persistence summary;
+  record any remaining Excel-native Saving notices separately.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.

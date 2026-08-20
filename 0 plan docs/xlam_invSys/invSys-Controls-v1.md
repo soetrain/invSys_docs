@@ -170,6 +170,25 @@ cannot be reparented into a VBA form; the invSys summary is the authoritative
 single action report, while Excel may still display its own progress UI for the
 two logical server saves required by a one-row Add.
 
+### Receiving and Production persistence feedback: packaged GREEN; visible retest pending
+
+Slice 4v extends the same feedback contract to the other operator forms.
+Successful **Confirm Writes** and **Confirm Dispositions** append one
+`Persistence summary:` line to Receiving's existing multiline status box after
+the batched inbox write, processor application, read-model refresh, and staging
+cleanup. Successful Production **Complete Run** appends one summary to
+Production's existing multiline status box after its consume/complete events
+and processor work. Both public action paths use the shared quiet-UI boundary.
+
+The shared Receiving/Production run-and-refresh path no longer publishes a
+second snapshot after `modProcessor.RunBatch`; the processor remains the sole
+snapshot and durability owner. Its required inventory, outbox, and inbox saves
+are unchanged. Native Excel save-progress windows cannot be moved into a form,
+so any that remain must be counted separately from the one invSys status
+summary. Focused persistence feedback is 4/4, packaged XLAM is 74/74, live role
+workflows are 47/47, the ordered Release 1 chain is 30/30, and reviewed cleanup
+is 11/11.
+
 ### Production resizing: corrected; visible retest pending
 
 `frmProduction` maximized its native window while the MultiPage and child
@@ -582,8 +601,8 @@ anchor manager while remaining readable.
 | Receiving/Return history | `lblInventoryTitle`, `lblInventoryHeader`, `lstInventory` | Displays a ten-column `ReceivedLog` projection: date, receipt type, reference, item, quantity, UOM, location, lot, condition, and return reason. The title is **Receiving Entries History** on Receiving and **Return Entries History** on Returns. Full user/vendor/code/`System_Key`/`EventId` evidence remains in the workbook log. |
 | Staged receipt/return | `lblStagedTitle`, `lblStagedHeader`, `lstStaged` | Displays the ten-column local tally projection: reference, type, item, quantity, UOM, location, lot, vendor, condition, and return reason. The title is **Received Tally** on Receiving and **Return Tally** on Returns. This table, not the aggregate view, is the posting authority; every line retains its separate immutable `System_Key`, item code, source key, event ID, and workflow state. |
 | Aggregate view | `lblAggregateTitle`, `lblAggregateHeader`, `lstAggregate` | Displays **Aggregate Received** or **Aggregate Returns**. It rebuilds from every tally row, groups by receipt type, item code, UOM, location, lot, and Condition, sums quantity, and concatenates distinct PO/BOL/return references in first-seen order. Different Conditions remain on separate rows. Return reasons are likewise concatenated for display. The aggregate is read-only and never collapses the separately keyed posting lines. |
-| Write actions | `btnConfirm`, `btnClear` | **Confirm Writes** queues ordinary receipts as `RECEIVE` and creates a new durable inventory `System_Key`. On Returns the button reads **Confirm Dispositions** and queues distinct `RETURN` or `DUMP` events against the staged existing keys; the Domain applies the positive action quantity as a negative exact-entity delta and rejects overdraw. **Clear** clears local staging. Multi-line confirmation batches queue and persistence work by safe workbook/artifact phase, so save cycles do not grow once per row. The real confirmation handler remains inside the shared quiet-UI boundary for queue, processor, refresh, and cleanup work, then restores the prior Excel UI/event/calculation state. |
-| Status/exit | `txtStatus`, `btnClose` | Shows multiline status and closes the form. |
+| Write actions | `btnConfirm`, `btnClear` | **Confirm Writes** queues ordinary receipts as `RECEIVE` and creates a new durable inventory `System_Key`. On Returns the button reads **Confirm Dispositions** and queues distinct `RETURN` or `DUMP` events against the staged existing keys; the Domain applies the positive action quantity as a negative exact-entity delta and rejects overdraw. **Clear** clears local staging. Multi-line confirmation batches queue and persistence work by safe workbook/artifact phase, so save cycles do not grow once per row. The real confirmation handler remains inside the shared quiet-UI boundary for queue, processor, refresh, and cleanup work, then restores the prior Excel UI/event/calculation state. A successful confirmation appends one `Persistence summary:` line to `txtStatus`; the processor remains the only snapshot writer. |
+| Status/exit | `txtStatus`, `btnClose` | Shows multiline action, error, and consolidated persistence status and closes the form. Excel-native save-progress windows, if any, are separate Office UI and are not duplicated as invSys dialogs. |
 | Purchasing placeholder | `lblPurchasingStub` | States that Purchasing is not operational and exposes no purchasing write action. |
 
 ### 7.2 Reviewed Receiving cleanup
@@ -605,7 +624,7 @@ removing the repeated Saving notices caused by unchanged read-only loads.
 | Control | Type | Purpose |
 |---|---|---|
 | `mpProduction` | MultiPage | Contains four pages: Recipe Builder, Ingredients Assignment, Production Run - List, and Production Run - Tree. |
-| `txtProductionStatus` | Locked multiline text box | Shows bound workbook, inventory/design authority, validation, and action status. |
+| `txtProductionStatus` | Locked multiline text box | Shows bound workbook, inventory/design authority, validation, action, and consolidated persistence status. |
 | `btnProductionClose` | Button — **Close** | Closes the Production form. |
 
 ### 8.2 Recipe Builder page
@@ -648,7 +667,7 @@ still receive a header control where the runtime builder creates one.
 | Palette | `lstRunPalette` | Lists ingredient, System Key, inventory choice, requirement %, quantity, UOM, inventory, and location. |
 | Inventory check | `lstManagerCheck` | Lists System Key, code, item, UOM, used quantity, and total inventory. |
 | Output | `lstManagerOutput`, `txtOutputReal` | Lists process/output/UOM/last/batch/total/recall/inventory ID and accepts real output. |
-| Run actions | `btnManagerCheckIn`, `btnManagerApplyOutput`, `btnManagerRefresh`, `btnManagerNext`, `btnManagerPrint` | Checks inputs in, completes the run, refreshes, advances to the next batch, or prints recall data. |
+| Run actions | `btnManagerCheckIn`, `btnManagerApplyOutput`, `btnManagerRefresh`, `btnManagerNext`, `btnManagerPrint` | Checks inputs in, completes the run, refreshes, advances to the next batch, or prints recall data. **Complete Run** keeps its event/processor work inside the shared quiet-UI boundary and appends one `Persistence summary:` line to the form status after successful consume/complete event persistence. |
 | Labels | Recipes, Loaded Recipe Lines, Process, Run Location, % of Requirement, Qty, Acceptable Inventory For Run, Inventory Check, Production Output, Real Output | Identify the page sections and generated headers. |
 
 ### 8.5 Production Run - Tree page
@@ -780,9 +799,13 @@ the compatible stored labels `v1`, `v2`, and so on.
 - Sign into Admin at `WHT7025AE` / `X1-PRO-AI` with the existing invSys user
   and confirm the Admin ribbon controls enable without a capability error.
 - Repeat visible Production maximize/restore and Shipping/Boxing grow/shrink checks.
-- Repeat the ordinary Receiving **Add Selected** action, then confirm both
-  receipt and disposition batches complete without repeated Saving
-  notifications.
+- Repeat the ordinary Receiving **Add Selected** action, then confirm one
+  receipt batch and one disposition batch. Each successful confirm must show
+  one `Persistence summary:` line in Receiving status; record any remaining
+  Excel-native Saving notices separately.
+- Complete one Production Run - List batch and confirm one `Persistence
+  summary:` line appears in Production status; record any remaining
+  Excel-native Saving notices separately.
 - In Box Designer, confirm Component inventory omits zero-balance rows and does
   not repeat the same exact entity. Shipping Add, Update Row, Remove, Return,
   To Shipments, and Shipments Sent are visibly action-reachable, and the
