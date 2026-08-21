@@ -1213,10 +1213,15 @@ Required behavior:
   reusable modeless form, with no designer/default `Tab1` or `Tab2` pages;
 - [x] canonical inventory events are copied into the published snapshot as
   read-only `tblInventoryEvents` data, preserving Core/Domain authority;
-- [x] Events covers Receipt, Return, Dump, Box Made/Unboxed, Shipped, reservation,
-  and Shipping **Remove** (`SHIP_RELEASE`, returning locked inventory to warehouse
-  availability), supplemented by current saved Box Designs and current Held
-  Shipments; Production labels are deferred to the Production review; and
+- [x] operator-facing Events rows correspond to meaningful control actions and
+  exclude internal processor/staging mechanics that occur while completing an
+  action;
+- [x] Events covers Receipt, Return, Dump, Box Made/Unboxed, Shipped, and Shipping
+  **Remove** (`SHIP_RELEASE`, returning locked inventory to warehouse
+  availability), supplemented by current saved Box Designs and actual current
+  Held Shipments. Internal `SHIP_RESERVE` rows written by ordinary Shipping Add
+  are not rendered as **Shipment Held**; Production labels are deferred to the
+  Production review; and
 - [x] Receiving/Returns, Production, and Shipping paint a form-owned pending
   status before persistence. Native Office Saving windows remain separate and
   required durability saves are not removed;
@@ -1250,15 +1255,19 @@ Gate:
   `Viewer.Events.RemembersDateFilter` failing; GREEN is 11/11, and packaged
   validation restored custom 14 days after unloading and recreating the Viewer
   while restoring the machine's prior test preference afterward;
+- [x] the internal-reservation-noise follow-up RED was 11/12, with only
+  `Viewer.Events.ExcludesInternalReservation` failing; GREEN is 12/12, and the
+  packaged public Viewer action hid the zero-delta `SHIP_RESERVE` fixture while
+  retaining Shipping **Remove** and all range-filter behavior;
 - [x] Receiving/Production feedback is 4/4, Shipping feedback is 4/4,
   Receiving aggregate/save batching is 8/8, disposition is 6/6, Receiving
   stabilization is 10/10, Shipping/Boxing is 11/11, and Production layout is
   8/8;
 - [x] packaged XLAM validation is 74/74, live role workflows are 47/47, and the
   clean ordered Release 1 full chain is 30/30; and
-- [x] reviewed cleanup is 11/11 with 150 components, 4,729 procedures, 968
+- [x] reviewed cleanup is 11/11 with 150 components, 4,729 procedures, 965
   scanner candidates, 8 literal `Application.Run` targets, 47 unresolved
-  expressions, and 184 duplicate-body groups. Procedure growth is the protected
+  expressions, and 185 duplicate-body groups. Procedure growth is the protected
   Events/progress implementation; the other ratchets remain improved.
 
 Visible follow-up:

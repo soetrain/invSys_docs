@@ -206,6 +206,8 @@ scrolls, follows resize, and clears when staging is cleared.
 Inventory Viewer has exactly two tabs: **Inventory** and **Events**. Runtime
 construction reuses the TabStrip's two native pages; operator-visible `Tab1`
 or `Tab2` placeholders are prohibited. Events is read-only.
+Events is an operator-action log: rows correspond to meaningful control clicks,
+not internal processing steps that happen while completing those clicks.
 Receipts, Returns, Dumps, Box Made/Unboxed, Shipped, and Shipping **Remove**
 activity come from the
 published `tblInventoryEvents` snapshot projection. Current saved box
@@ -213,6 +215,11 @@ alternatives and currently held shipment rows supplement that projection as
 `BOX_DESIGNED` and `SHIP_HELD`; these two supplements describe current activity,
 not an immutable revision history. Production event labels are intentionally
 deferred until the Production workflow review reaches that page.
+An ordinary Shipping Add also writes an internal `SHIP_RESERVE` event. That
+staging artifact is not shown as **Shipment Held**, because the operator did not
+use Hold and its zero inventory delta would only report that nothing happened.
+Actual current held-shipment supplements remain visible. Shipping **Remove**
+also remains visible because it records the explicit release of locked inventory.
 Event dates use readable `yyyy-mm-dd hh:mm:ss` text rather than Excel serial
 numbers. **Refresh** replaces the open Events list with the newest published
 projection; it does not process or modify authority workbooks.
@@ -262,6 +269,10 @@ same form generation, local filtering reduced the list to the matching row,
 three snapshot levels loaded, Event ranges produced the expected Day, Week,
 Month, custom 14-day, and All row counts, and the inspected snapshot hash did
 not change.
+The published projection excludes internal `SHIP_RESERVE` rows from the
+operator-facing list; therefore ordinary Shipping Add does not produce a
+misleading zero-quantity **Shipment Held** row. Actual held-shipment supplements
+and explicit Shipping **Remove** activity remain visible.
 The Operations ribbon entry now uses a visible built-in Excel table icon.
 
 ### Shipping visible identity path: `System_Key` correction packaged GREEN
