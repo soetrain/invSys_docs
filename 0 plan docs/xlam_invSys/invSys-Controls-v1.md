@@ -217,11 +217,15 @@ Event dates use readable `yyyy-mm-dd hh:mm:ss` text rather than Excel serial
 numbers. **Refresh** replaces the open Events list with the newest published
 projection; it does not process or modify authority workbooks.
 The Events page exposes an editable **Event range** selector. **All** is the
-default and preserves the complete published view. **Day**, **Week**, and
-**Month** apply rolling 1-, 7-, and 30-day windows; an operator may instead type
-a whole number from 1 to 36500 for a custom rolling window. **Refresh** applies
+first-use default and preserves the complete published view. **Day**, **Week**,
+and **Month** apply rolling 1-, 7-, and 30-day windows; an operator may instead
+type a whole number from 1 to 36500 for a custom rolling window. **Refresh** applies
 the selected range together with the Search text. The control is hidden on the
 Inventory page, so inventory-level filtering remains text-only.
+Each valid applied range is stored through the existing per-Windows-user invSys
+preference convention and restored when a new Viewer form opens, including in a
+later Excel session. Invalid stored text falls back to **All**. This preference
+never enters Config, Inventory, Snapshot, or another warehouse workbook.
 
 Receiving, Returns, Production, and Shipping now render a form-owned pending
 status and repaint before persistence starts. Excel-native Saving windows cannot
