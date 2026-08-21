@@ -203,7 +203,9 @@ aggregate row now copies its complete concatenated PO/BOL/return reference into
 a separate locked, multiline **Selected references** box. The box wraps and
 scrolls, follows resize, and clears when staging is cleared.
 
-Inventory Viewer now has **Inventory** and **Events** tabs. Events is read-only.
+Inventory Viewer has exactly two tabs: **Inventory** and **Events**. Runtime
+construction reuses the TabStrip's two native pages; operator-visible `Tab1`
+or `Tab2` placeholders are prohibited. Events is read-only.
 Receipts, Returns, Dumps, Box Made/Unboxed, Shipped, and Shipping **Remove**
 activity come from the
 published `tblInventoryEvents` snapshot projection. Current saved box

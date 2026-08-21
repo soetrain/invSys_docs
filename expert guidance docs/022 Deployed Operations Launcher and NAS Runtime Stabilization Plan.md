@@ -1209,8 +1209,8 @@ Required behavior:
 - [x] Receiving keeps its fixed-height aggregate rows and exposes the complete
   selected concatenated reference in a locked multiline detail surface that
   clears with staging;
-- [x] Inventory Viewer exposes Inventory and Events tabs through the same
-  reusable modeless form;
+- [x] Inventory Viewer exposes exactly Inventory and Events through the same
+  reusable modeless form, with no designer/default `Tab1` or `Tab2` pages;
 - [x] canonical inventory events are copied into the published snapshot as
   read-only `tblInventoryEvents` data, preserving Core/Domain authority;
 - [x] Events covers Receipt, Return, Dump, Box Made/Unboxed, Shipped, reservation,
@@ -1223,8 +1223,10 @@ Required behavior:
 
 Gate:
 
-- [x] focused behavioral RED was 0/5 before implementation;
-- [x] focused GREEN is 5/5;
+- [x] focused behavioral RED was 0/5 before the original implementation;
+  the Shipping Remove follow-up was 5/6, and the visible duplicate-tab/routing
+  follow-up was 6/7 with only `Viewer.Tabs.ExactlyInventoryAndEvents` failing;
+- [x] focused GREEN is 7/7;
 - [x] Receiving/Production feedback is 4/4, Shipping feedback is 4/4,
   Receiving aggregate/save batching is 8/8, disposition is 6/6, Receiving
   stabilization is 10/10, Shipping/Boxing is 11/11, and Production layout is
