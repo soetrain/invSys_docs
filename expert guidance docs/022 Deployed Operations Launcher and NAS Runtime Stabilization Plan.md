@@ -1225,6 +1225,9 @@ Required behavior:
   reapply the layout;
 - [x] Events renders readable timestamps and explicit Refresh replaces the
   already-open list with the newest published event projection; and
+- [x] Events defaults to All dates and explicit Refresh combines Search with a
+  rolling Day, Week, Month, or typed positive whole-number-of-days window while
+  leaving the Inventory page unaffected; and
 - [x] the normative specification records a later comprehensive Event Viewer as
   post-R1 design work rather than expanding the bounded R1 projection in place.
 
@@ -1236,6 +1239,11 @@ Gate:
 - [x] focused GREEN is 7/7;
 - [x] the resize/readability/refresh follow-up RED was 7/9, with only native
   window-state guarding and readable timestamp refresh failing; GREEN is 9/9;
+- [x] the rolling-date-filter follow-up RED was 9/10, with only
+  `Viewer.Events.RollingDateFilters` failing; GREEN is 10/10;
+- [x] packaged Viewer validation proved Day=2, Week=3, Month=4, custom
+  14-day=3, and All=5 against the same five-row publication while leaving the
+  snapshot hash unchanged;
 - [x] Receiving/Production feedback is 4/4, Shipping feedback is 4/4,
   Receiving aggregate/save batching is 8/8, disposition is 6/6, Receiving
   stabilization is 10/10, Shipping/Boxing is 11/11, and Production layout is

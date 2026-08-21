@@ -216,6 +216,12 @@ deferred until the Production workflow review reaches that page.
 Event dates use readable `yyyy-mm-dd hh:mm:ss` text rather than Excel serial
 numbers. **Refresh** replaces the open Events list with the newest published
 projection; it does not process or modify authority workbooks.
+The Events page exposes an editable **Event range** selector. **All** is the
+default and preserves the complete published view. **Day**, **Week**, and
+**Month** apply rolling 1-, 7-, and 30-day windows; an operator may instead type
+a whole number from 1 to 36500 for a custom rolling window. **Refresh** applies
+the selected range together with the Search text. The control is hidden on the
+Inventory page, so inventory-level filtering remains text-only.
 
 Receiving, Returns, Production, and Shipping now render a form-owned pending
 status and repaint before persistence starts. Excel-native Saving windows cannot
@@ -249,7 +255,9 @@ projection plus current Shipping design/hold activity. It does not open a Receiv
 Production, or Shipping form and never writes, repairs, processes, or refreshes
 an authority workbook. Packaged validation proved repeated launch reused the
 same form generation, local filtering reduced the list to the matching row,
-three snapshot levels loaded, and the inspected snapshot hash did not change.
+three snapshot levels loaded, Event ranges produced the expected Day, Week,
+Month, custom 14-day, and All row counts, and the inspected snapshot hash did
+not change.
 The Operations ribbon entry now uses a visible built-in Excel table icon.
 
 ### Shipping visible identity path: `System_Key` correction packaged GREEN
