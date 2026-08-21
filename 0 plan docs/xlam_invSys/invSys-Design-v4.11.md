@@ -760,6 +760,8 @@ End Sub
 **Goal:** Give a signed-in operator an at-a-glance, read-only view of current local inventory levels without opening Receiving, Production, or Shipping.
 **Authority:** The Operations Viewer is a projection only. It reads the current published warehouse inventory snapshot on explicit refresh, reports its freshness, and never writes, repairs, processes, or refreshes an authority workbook.
 **UI:** The Operations ribbon exposes **Inventory Viewer** to every signed-in user. Its resizable modeless form supports local search and displays item code, item name, UOM, quantity, location, and condition. Repeated launch reuses the same form instance for the selected warehouse.
+**Current Events scope:** The R1 Viewer may expose a bounded, read-only Events page sourced from the published snapshot projection. Explicit Refresh must replace its visible rows with the newest published projection without processing or mutating authority data.
+**Future comprehensive Event Viewer:** After R1, design a comprehensive cross-domain Event Viewer for durable receipt, disposition, design, boxing, production, reservation, release, shipment, and administrative history. Its later design must define canonical event coverage, readable time-zone-aware timestamps, correlation/reference detail, filters, pagination or bounded history, export, retention, capability rules, and freshness indicators before implementation. The bounded R1 Events page is not the authority or a substitute for that design.
 
 ---
 ## Monitoring and Alerts (Release 1)

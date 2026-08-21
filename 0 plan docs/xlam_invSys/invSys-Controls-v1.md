@@ -213,6 +213,9 @@ alternatives and currently held shipment rows supplement that projection as
 `BOX_DESIGNED` and `SHIP_HELD`; these two supplements describe current activity,
 not an immutable revision history. Production event labels are intentionally
 deferred until the Production workflow review reaches that page.
+Event dates use readable `yyyy-mm-dd hh:mm:ss` text rather than Excel serial
+numbers. **Refresh** replaces the open Events list with the newest published
+projection; it does not process or modify authority workbooks.
 
 Receiving, Returns, Production, and Shipping now render a form-owned pending
 status and repaint before persistence starts. Excel-native Saving windows cannot

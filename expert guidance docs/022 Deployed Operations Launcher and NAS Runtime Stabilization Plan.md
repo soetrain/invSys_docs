@@ -1219,7 +1219,14 @@ Required behavior:
   Shipments; Production labels are deferred to the Production review; and
 - [x] Receiving/Returns, Production, and Shipping paint a form-owned pending
   status before persistence. Native Office Saving windows remain separate and
-  required durability saves are not removed.
+  required durability saves are not removed;
+- [x] Viewer anchoring does not enforce form dimensions while the native window
+  is minimized or maximized, and residual error 384 is contained so restore can
+  reapply the layout;
+- [x] Events renders readable timestamps and explicit Refresh replaces the
+  already-open list with the newest published event projection; and
+- [x] the normative specification records a later comprehensive Event Viewer as
+  post-R1 design work rather than expanding the bounded R1 projection in place.
 
 Gate:
 
@@ -1227,6 +1234,8 @@ Gate:
   the Shipping Remove follow-up was 5/6, and the visible duplicate-tab/routing
   follow-up was 6/7 with only `Viewer.Tabs.ExactlyInventoryAndEvents` failing;
 - [x] focused GREEN is 7/7;
+- [x] the resize/readability/refresh follow-up RED was 7/9, with only native
+  window-state guarding and readable timestamp refresh failing; GREEN is 9/9;
 - [x] Receiving/Production feedback is 4/4, Shipping feedback is 4/4,
   Receiving aggregate/save batching is 8/8, disposition is 6/6, Receiving
   stabilization is 10/10, Shipping/Boxing is 11/11, and Production layout is
