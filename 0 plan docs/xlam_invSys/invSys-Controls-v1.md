@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.18
+**Version:** 1.20
 
 **Inventory date:** 2026-08-23
 
@@ -189,17 +189,17 @@ are unchanged. Native Excel save-progress windows cannot be moved into a form,
 so any that remain must be counted separately from the one invSys status
 summary. Focused persistence feedback is 4/4, packaged XLAM is 74/74, live role
 workflows are 47/47, the ordered Release 1 chain is 30/30, and reviewed cleanup
-is 11/11.
+is 13/13.
 
-### Reusable Production Processes and Recipe graphs: headless boundary GREEN; form RED
+### Reusable Production Processes and Recipe graphs: packaged workflow GREEN
 
 Architecture v4.11 D15 and Plan 022 Slice 4x deliberately replace the current
 single **Recipe Builder** page with **Process Designer** and **Recipe Designer**.
-The approved target form has five top-level pages: Process Designer, Recipe
+The packaged form now has five top-level pages: Process Designer, Recipe
 Designer, Ingredients Assignment, Production Run - List, and experimental
-Production Run - Tree. The current four-page form and singular-output run
-session are pre-change behavior and remain measurably RED until the packaged
-operator handlers and revised five-page form are implemented.
+Production Run - Tree. The former four-page Recipe Builder surface is removed.
+The List-run now loads released reusable Recipes and executes their Process
+graph; the legacy single-builder path is not a silent fallback.
 
 Process Designer owns named Process draft/save/release/obsolete/reuse actions,
 requirements, acceptable SKU alternatives, instructions, and one or more output
@@ -218,15 +218,24 @@ Process/Recipe schema, lifecycle events, immutable versions, graph validation,
 released-only lists, exact-version serialized definitions, and released-Recipe
 validation. The same read contracts are GREEN through the Core cross-XLAM and
 Operations primitive bridges. The reusable Production range is 17/17 GREEN,
-the adjacent Designs/Core/Inventory range is 38/39 with only the pre-existing
-legacy picker `ROW` assertion failing, and packaged five-XLAM validation is
-74/74 GREEN. Static candidates are 967 versus the 968 baseline, with literal
-`Application.Run` 8/8 and duplicate-body groups 185/185.
+packaged five-XLAM validation is 74/74 GREEN, and packaged Ribbon validation is
+142/142 GREEN. The final static baseline contains 152 components, 4,985
+procedures, 1,033 candidates, 8 literal `Application.Run` targets, 45 unresolved
+dynamic calls, and 189 duplicate-body groups; deliberate Slice 4x growth is
+bounded by the 13/13 reviewed exception contract.
 
-No operator-form implementation acceptance is claimed by this catalog update.
-Visible control names, exact runtime control IDs, layout geometry, packaged
-form-action GREEN, run/processor behavior, and dedicated-NAS Production UAT
-will be recorded here after their remaining D13 RED and implementation.
+The packaged public-launcher form-action path is GREEN for Process
+save/release/obsolete/reuse, assignment-backed version creation, and Recipe
+select/connect/order/save/release/obsolete. The same run proves captured
+saved-workbook binding and second-launch reuse. Minimum/default/expanded and
+native maximize/restore geometry is GREEN across all five pages. The actual
+List-run handlers are GREEN for inclusive scaling, exact-key allocation,
+insufficiency/stale rejection, two multi-output batches, routed intermediate
+consumption, a 20%-of-10-unit co-product yield basis, retained co-products, and
+correlated persistence. Public Viewer
+Events exposes **Production Input Consumed** and **Production Output Created**.
+Clean-session saved-workbook restart and dedicated-NAS Production UAT remain
+open.
 
 ### Connection progress, aggregate reference detail, and Events view: packaged GREEN
 
@@ -723,43 +732,40 @@ removing the repeated Saving notices caused by unchanged read-only loads.
 
 | Control | Type | Purpose |
 |---|---|---|
-| `mpProduction` | MultiPage | Current pre-Slice 4x source contains four pages and is the expected D13 RED. The approved target contains five pages: **Process Designer**, **Recipe Designer**, **Ingredients Assignment**, **Production Run - List**, and experimental **Production Run - Tree**. |
+| `mpProduction` | MultiPage | Five pages: **Process Designer**, **Recipe Designer**, **Ingredients Assignment**, **Production Run - List**, and experimental **Production Run - Tree**. |
 | `txtProductionStatus` | Locked multiline text box | Shows bound workbook, inventory/design authority, validation, action, and consolidated persistence status. |
 | `btnProductionClose` | Button — **Close** | Closes the Production form. |
 
-### 8.2 Process Designer and Recipe Designer — approved Slice 4x target
-
-Exact runtime control IDs and geometry will be finalized after the focused
-public-launcher/form-action RED. The required operator-visible control groups
-are fixed by D15.
+### 8.2 Process Designer and Recipe Designer
 
 #### Process Designer
 
 | Control group | Required displayed controls/actions | Purpose |
 |---|---|---|
-| Saved Processes | Process versions list; **Refresh**, **New Process**, **Load**, **Reuse as New Version** | Lists named Process ID/version/status records and starts a draft from a blank or reusable definition. |
-| Process identity | Process Name, Process ID, Version, Description | Edits the versioned Process header; ID/version are immutable after save. |
-| Requirements | Requirement list plus Name, Qty, Percent/Yield Basis, UOM; **Add**, **Update**, **Remove**, **Move Up**, **Move Down** | Defines typed external/upstream input requirements. |
-| Outputs | Output list plus Output Name/ID, Item Code, optional Design ID/Version, Qty, Percent/Yield Basis, UOM; **Add**, **Update**, **Remove**, **Move Up**, **Move Down** | Defines one or more output definitions. Save/Release validation rejects a Process with no output. |
-| Instructions | Ordered instruction list and editor; **Add**, **Update**, **Remove**, **Move Up**, **Move Down** | Defines reusable operator instructions independently from input/output rows. |
-| Lifecycle | **Validate**, **Save Draft**, **Release**, **Obsolete**, **Clear** | Validates and queues immutable Designs Domain Process lifecycle events. |
+| Saved Processes | `lstProcesses`; `btnProcessRefresh`, `btnProcessNew`, `btnProcessLoad`, `btnProcessReuse` | Lists named Process ID/version/status records and starts a draft from a blank or reusable definition. |
+| Process identity | `txtProcessName`, `txtProcessId`, `txtProcessVersion`, `txtProcessDescription` | Edits the versioned Process header; ID/version are immutable after save. |
+| Requirements | `lstProcessRequirements`; `txtRequirementId`, `txtRequirementName`, `txtRequirementQty`, `txtRequirementPercent`, `txtRequirementYieldBasis`, `txtRequirementUom`; `btnProcessRequirementAdd`, `btnProcessRequirementUpdate`, `btnProcessRequirementRemove`, `btnProcessRequirementUp`, `btnProcessRequirementDown` | Defines typed external/upstream input requirements. |
+| Outputs | `lstProcessOutputs`; `txtProcessOutputId`, `txtProcessOutputName`, `txtProcessOutputItemCode`, `txtProcessOutputDesignId`, `txtProcessOutputDesignVersion`, `txtProcessOutputQty`, `txtProcessOutputPercent`, `txtProcessOutputYieldBasis`, `txtProcessOutputUom`; `btnProcessOutputAdd`, `btnProcessOutputUpdate`, `btnProcessOutputRemove`, `btnProcessOutputUp`, `btnProcessOutputDown` | Defines one or more output definitions. Save/Release validation rejects a Process with no output. |
+| Instructions | `lstProcessInstructions`, `txtProcessInstruction`; `btnProcessInstructionAdd`, `btnProcessInstructionUpdate`, `btnProcessInstructionRemove`, `btnProcessInstructionUp`, `btnProcessInstructionDown` | Defines reusable operator instructions independently from input/output rows. |
+| Lifecycle | `btnProcessValidate`, `btnProcessSave`, `btnProcessRelease`, `btnProcessObsolete`, `btnProcessClear` | Validates and queues immutable Designs Domain Process lifecycle events. |
 
 #### Recipe Designer
 
 | Control group | Required displayed controls/actions | Purpose |
 |---|---|---|
-| Saved Recipes | Recipe versions list; **Refresh**, **New Recipe**, **Load** | Lists Recipe ID/version/status records and starts or loads a draft. |
-| Recipe identity | Recipe Name, Recipe ID, Version, Description | Edits the versioned Recipe header; ID/version are immutable after save. |
-| Process library/nodes | Released Process list, selected Process-node list; **Add Process**, **Remove Process** | Reuses exact released Process versions and assigns a node identity within this Recipe. |
-| Connections | From Process, Output, To Process, Requirement, Qty/Percent, UOM, connection list; **Connect**, **Update**, **Disconnect** | Routes individual output quantities to compatible downstream requirements. Multiple outputs and multiple downstream edges are supported. |
-| Execution order | Ordered Process-node list; **Move Up**, **Move Down**, **Auto Order** | Controls execution order. Validation rejects an order inconsistent with the directed graph. |
-| Validation/lifecycle | Validation detail list; **Validate Recipe**, **Save Draft**, **Release**, **Obsolete**, **Clear** | Reports unresolved inputs, compatibility, quantity/yield, missing definition, and circular-dependency failures before lifecycle events are queued. |
+| Saved Recipes | `lstRecipes`; `btnRecipeRefresh`, `btnRecipeNew`, `btnRecipeLoad` | Lists Recipe ID/version/status records and starts or loads a draft. |
+| Recipe identity | `txtReusableRecipeName`, `txtReusableRecipeId`, `txtReusableRecipeVersion`, `txtReusableRecipeDescription` | Edits the versioned Recipe header; ID/version are immutable after save. |
+| Process library/nodes | `lstReleasedProcesses`, `lstRecipeNodes`; `btnRecipeAddProcess`, `btnRecipeRemoveProcess` | Reuses exact released Process versions and assigns a node identity within this Recipe. |
+| Connections | `cmbConnectionFromNode`, `cmbConnectionOutput`, `cmbConnectionToNode`, `cmbConnectionRequirement`, `txtConnectionQty`, `txtConnectionPercent`, `txtConnectionUom`, `lstRecipeConnections`; `btnRecipeConnect`, `btnRecipeUpdateConnection`, `btnRecipeDisconnect` | Routes individual output quantities to compatible downstream requirements. Multiple outputs and multiple downstream edges are supported. |
+| Execution order | `lstRecipeNodes`; `btnRecipeMoveUp`, `btnRecipeMoveDown`, `btnRecipeAutoOrder` | Controls execution order. Validation rejects an order inconsistent with the directed graph. |
+| Validation/lifecycle | `lstRecipeValidation`; `btnRecipeValidate`, `btnRecipeSave`, `btnRecipeRelease`, `btnRecipeObsolete`, `btnRecipeClear` | Reports unresolved inputs, compatibility, quantity/yield, missing definition, and circular-dependency failures before lifecycle events are queued. |
 
-### 8.2.1 Pre-Slice 4x Recipe Builder surface — expected D13 RED
+### 8.2.1 Historical pre-Slice 4x Recipe Builder surface
 
-These current controls document the behavior being replaced. They are not the
-approved Release 1 Production acceptance target and must not be relabeled as
-Process/Recipe controls without implementing the D15 authority and handlers.
+These controls document retired historical behavior. `BuildRecipeBuilderPage`
+is retained as unreachable legacy source for reviewed cleanup only; the runtime
+five-page form does not construct it, and it is not a Designs-enabled authority
+or fallback.
 
 | Control group | Controls | Purpose |
 |---|---|---|
@@ -771,24 +777,22 @@ Process/Recipe controls without implementing the D15 authority and handlers.
 | Builder grid | `lstBuilderLines` | Lists Process, I/O, ingredient/output/instruction, %, UOM, amount, and ingredient ID. |
 | Labels | Saved Recipes, Recipe Name, Recipe ID, Row Budget, Description, Process, In/Out, Ingredient / Output / Instruction, Percent, UOM, Amount, Recipe Builder Lines | Identify the controls and generated list headers. |
 
-Current pre-Slice 4x generated list-header control families are `hdrBuilderLines1` through
+Historical pre-Slice 4x generated list-header control families are `hdrBuilderLines1` through
 `hdrBuilderLines8`, `hdrLoaderRecipes1` through `hdrLoaderRecipes3`,
 `hdrLoaderLines1` through `hdrLoaderLines8`, `hdrRunPalette1` through
 `hdrRunPalette10`, `hdrManagerCheck1` through `hdrManagerCheck6`, and
 `hdrManagerOutput1` through `hdrManagerOutput8`. Blank or hidden data columns
-still receive a header control where the runtime builder creates one. Slice 4x
-must replace the Builder header family with distinct Process requirements,
-outputs, instructions, Recipe nodes, connections, validation, and execution
-order header families; exact IDs and widths will be recorded after the focused
-layout/form-action GREEN.
+still received a header control where the old runtime builder created one. The
+current Process/Recipe designer lists use the exact IDs recorded in section
+8.2; their minimum/default/expanded and maximize/restore geometry is GREEN.
 
 ### 8.3 Ingredients Assignment page
 
 | Control group | Controls | Purpose |
 |---|---|---|
-| Processes | Approved target: released Process versions list plus select/refresh actions. Current pre-Slice 4x IDs are `lstAssignRecipes`, `btnAssignRecipe`, `btnAssignRefresh` and are part of the expected RED. | Selects the exact Process version whose requirements are being assigned. |
-| Requirements | Approved target: Process requirement list plus select action. Current pre-Slice 4x IDs are `lstAssignIngredients`, `btnAssignIngredient`. | Selects one declared requirement; connected Recipe requirements do not allocate inventory alternatives during a run. |
-| Assignment actions | `btnAssignSave`, `btnAssignClear` or their Slice 4x replacements | Saves acceptable managed item/SKU alternatives as part of a new Process draft version, or clears the editor. |
+| Processes | `lstAssignRecipes`, `btnAssignRecipe`, `btnAssignRefresh` | Selects the exact Process version whose requirements are being assigned. |
+| Requirements | `lstAssignIngredients`, `btnAssignIngredient` | Selects one declared requirement; connected Recipe requirements do not allocate inventory alternatives during a run. |
+| Assignment actions | `btnAssignSave`, `btnAssignClear` | Saves acceptable managed item/SKU alternatives as part of a new Process draft version, or clears the editor. |
 | Inventory search | `txtInventorySearch`, `lstAssignInventory` | Filters and lists candidate inventory. |
 | Allowed choices | `lstAssignAllowed`, `btnAssignAdd`, `btnAssignRemove` | Lists acceptable managed item/SKU alternatives and adds/removes rows without allocating a physical entity. |
 | Labels | Approved wording: Processes, Ingredient Requirements, Search Inventory, Managed Items, Acceptable Items | Identifies the page sections. |
@@ -802,7 +806,7 @@ layout/form-action GREEN.
 | Run inputs | `cmbRunProcess`, `cmbRunLocation`, `txtPaletteSplit`, `txtPaletteQty`, `btnRunApplyPalette` | Chooses a Process execution/location and applies either percent-of-requirement or explicit quantity to the selected external inventory requirement. Connected intermediate requirements are resolved from their upstream output keys. |
 | Palette | `lstRunPalette` | Lists Process, requirement, exact System Key, acceptable inventory choice, requirement %, quantity, UOM, available inventory, and location. |
 | Inventory check | `lstManagerCheck` | Lists Process/requirement, exact System Key, code, item, UOM, allocated quantity, and current available inventory; insufficiency or stale allocation blocks Check In/completion. |
-| Outputs | `lstManagerOutput`, `txtOutputReal` plus any Slice 4x per-output editor controls | Lists every Process output definition, its distinct preallocated new System Key, scaled yield, actual output, UOM, downstream routed quantity, and finished/co-product balance. Actual quantities are entered per output rather than through one singular run output. |
+| Outputs | `lstManagerOutput`; legacy-only `txtOutputReal` | For a reusable run, lists every Process output definition, its distinct preallocated new System Key, scaled creation quantity, UOM, downstream routed quantity, and finished/co-product balance. `txtOutputReal` remains available only to the preserved legacy run path and is not reusable-Recipe authority. |
 | Run actions | `btnManagerCheckIn`, `btnManagerApplyOutput`, `btnManagerRefresh`, `btnManagerNext`, `btnManagerPrint` | Checks exact inputs in, completes Processes in validated order, refreshes, advances to the next batch, or prints recall data. **Complete Run** keeps event/processor work inside the shared quiet-UI boundary, creates every declared output under its own new key, consumes routed intermediates by exact key, and appends one `Persistence summary:` line after successful correlated persistence. |
 | Labels | Recipes, Validated Process Order, Process, Run Location, % of Requirement, Qty, Acceptable Inventory For Run, Inventory Check, Production Outputs, Actual Output | Identifies the page sections and generated headers. |
 
@@ -822,8 +826,9 @@ Production Run - List is the Release 1 path to validate.
 The unconstructed `mBtnManagerPrepare`, `mBtnManagerUsed`,
 `mBtnManagerMade`, and `mBtnManagerTotal` event variables/handlers were removed;
 they were never visible controls. Current packaged geometry validation is GREEN
-at `Zoom=100` for the pre-Slice 4x four-page form. The revised five-page form
-requires new packaged geometry GREEN and visible maximize/restore acceptance.
+for all five pages at minimum/default/expanded size and through native
+minimize/restore/maximize/restore. Visible dedicated-NAS layout acceptance
+remains open.
 
 ### 8.6 Reviewed Production cleanup
 

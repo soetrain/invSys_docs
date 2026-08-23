@@ -1295,40 +1295,40 @@ testing resumes together with the still-open Slice 4 visual polish checks.
 
 Required behavior:
 
-- [ ] replace the existing Recipe Builder top-level page with **Process
+- [x] replace the existing Recipe Builder top-level page with **Process
   Designer** and **Recipe Designer**, while retaining **Ingredients
   Assignment**, **Production Run - List**, and the experimental out-of-scope
   **Production Run - Tree**;
-- [ ] Process Designer creates, edits, validates, saves, releases, obsoletes,
+- [x] Process Designer creates, edits, validates, saves, releases, obsoletes,
   and reuses named immutable Process versions through the headless Designs
   Domain;
-- [ ] every Process declares input requirements, ordered instructions, one or
+- [x] every Process declares input requirements, ordered instructions, one or
   more output definitions, positive quantity or percentage/yield bases, and
   valid UOMs; every output has its own item/design identity and every Process
   has at least one output;
-- [ ] Ingredients Assignment maps each Process requirement to acceptable
+- [x] Ingredients Assignment maps each Process requirement to acceptable
   managed item/SKU alternatives that are versioned with the Process;
-- [ ] Recipe Designer selects exact released Process versions, connects any
+- [x] Recipe Designer selects exact released Process versions, connects any
   output to compatible downstream requirements, supports multiple outgoing
   connections and unconnected finished/co-product balances, controls execution
   order, and rejects unresolved inputs, incompatible UOM/item/design identity,
   quantity over-allocation, missing/unreleased definitions, and cycles;
-- [ ] Production Run - List selects one released Recipe version, preserves
+- [x] Production Run - List selects one released Recipe version, preserves
   inclusive scaling from `0.001%` through `1000%`, resolves acceptable
   alternatives against current inventory, and allocates exact available
   `System_Key` entities without aggregate identity substitution;
-- [ ] each Process output instance receives a distinct new `System_Key` before
+- [x] each Process output instance receives a distinct new `System_Key` before
   queueing; routed intermediate output is created under that key and consumed
   downstream by the same exact key, while unconsumed outputs remain managed
   finished/co-product inventory;
-- [ ] completion preserves inventory sufficiency checks, deterministic process
+- [x] completion preserves inventory sufficiency checks, deterministic process
   order, correlated consume/complete events, canonical processor authority,
   persistence summaries, and read-only Viewer event labels for Production
   input consumption and output creation;
-- [ ] saved Production operator-workbook reuse, captured-workbook form binding,
+- [x] saved Production operator-workbook reuse, captured-workbook form binding,
   Operations launcher behavior, headless Core/Domain packages, and current
   Seed/Receiving/Shipping/Boxing/Viewer behavior remain unchanged; and
-- [ ] legacy single-builder recipes are never a silent runtime fallback when
+- [x] legacy single-builder recipes are never a silent runtime fallback when
   Designs are enabled. Any retained import is an explicit design-definition
   conversion into valid Process and Recipe versions.
 
@@ -1341,15 +1341,15 @@ D13 RED sequence:
    ingredient alternatives, Process reuse, Recipe graph resolution,
    compatibility, quantities/order, and circular dependencies; record RED for
    the missing event types/projections/validators.
-3. [ ] Add the packaged operator form-action path for Process
+3. [x] Add the packaged operator form-action path for Process
    save/release/obsolete, Recipe select/connect/order/save/release/obsolete, and
    ingredient assignment; service-only calls are supplemental and do not
    replace these handler tests.
-4. [ ] Extend the packaged two-batch run test through the actual recipe select,
+4. [x] Extend the packaged two-batch run test through the actual recipe select,
    scale, palette Apply, Check In, Complete Run, Refresh, and Next Batch
    handlers. Prove `0.001%`, `100%`, and `1000%`, insufficiency, stale
    allocation, multi-output keys, intermediate routing, and co-product balance.
-5. [ ] Add processor/Inventory Domain RED for correlated multi-output
+5. [x] Add processor/Inventory Domain RED for correlated multi-output
    `PROD_COMPLETE` envelopes and exact-key downstream `PROD_CONSUME`, followed
    by snapshot/operator/Event projection assertions.
 
@@ -1357,14 +1357,14 @@ Implementation order after meaningful RED:
 
 1. [x] implement Designs Domain Process/Recipe lifecycle events, schemas,
    projections, validation, and read APIs;
-2. [ ] implement typed Production editor/controller contracts and replace the
+2. [x] implement typed Production editor/controller contracts and replace the
    single Builder page without weakening captured-workbook binding;
-3. [ ] implement Recipe graph validation and ingredient-alternative persistence;
-4. [ ] implement typed multi-Process run plan/session and multi-output completion
+3. [x] implement Recipe graph validation and ingredient-alternative persistence;
+4. [x] implement typed multi-Process run plan/session and multi-output completion
    envelopes with one new key per output;
-5. [ ] implement processor/Inventory Domain application and published Production
+5. [x] implement processor/Inventory Domain application and published Production
    event visibility; and
-6. [ ] refactor only while focused and preserved regression ranges stay GREEN.
+6. [x] refactor only while focused and preserved regression ranges stay GREEN.
 
 Slice 4x Designs Domain evidence: lifecycle/schema/graph RED and GREEN are
 recorded in `tests/integration/plan022_slice4x_designs_domain_*_results.md` and
@@ -1375,23 +1375,41 @@ primitive bridge RED/GREEN are recorded in
 reusable range is 17/17 GREEN, packaged five-XLAM validation is 74/74 GREEN,
 and static candidates are 967 versus the 968 baseline with literal
 `Application.Run` 8/8, duplicate-body groups 185/185, and unresolved dynamic
-calls improved from 47 to 45. The packaged form-action, run, processor, and
-visible gates remain open.
+calls improved from 47 to 45. The packaged public-launcher form-action RED and
+GREEN are recorded in
+`tests/integration/plan022_slice4x_form_action_results.md`: the GREEN proves
+five pages, captured-workbook reuse, Process save/release/obsolete/reuse,
+assignment-backed Process versioning, and Recipe connect/order/save/release/
+obsolete through the actual click handlers. Five-page minimum/default/expanded
+and native maximize/restore geometry is GREEN. The packaged reusable List-run
+GREEN is recorded in
+`tests/integration/plan022_slice4x_reusable_production_results.md`; it proves
+`0.001%`, `100%`, and `1000%`, insufficiency and stale-key rejection, two
+batches, six distinct output keys, exact intermediate consumption, retained
+co-products including a 20%-of-10-unit yield basis, correlated processor
+persistence, and public Viewer Production
+event labels. Packaged XLAM/Ribbon validation is 74/74 and 142/142, deployed
+live-role workflows are 47/47, and the ordered Release 1 chain is 30/30.
+Deterministic maintenance is 19/19 with 152 components, 4,985 procedures,
+1,033 candidates, 8 literal `Application.Run` targets, 45 unresolved dynamic
+calls, and 189 duplicate-body groups; the deliberate Slice 4x growth has a
+bounded reviewed exception at 13/13. Clean-session saved-workbook restart and
+visible dedicated-NAS acceptance remain open.
 
 Automated gate:
 
-- [ ] focused RED and GREEN reports distinguish pre-implementation behavior;
-- [ ] packaged Process/Recipe form actions and two consecutive List batches are
+- [x] focused RED and GREEN reports distinguish pre-implementation behavior;
+- [x] packaged Process/Recipe form actions and two consecutive List batches are
   GREEN through actual operator handlers;
-- [ ] Process/Recipe replay, idempotency, lifecycle, graph, scaling,
+- [x] Process/Recipe replay, idempotency, lifecycle, graph, scaling,
   insufficiency, exact-key allocation, multi-output, persistence, snapshot, and
   Viewer Event assertions are GREEN;
 - [ ] full five-XLAM compile/load/Ribbon validation and saved-workbook restart
   evidence are GREEN;
-- [ ] current launcher, Seed, Receiving, Shipping, Boxing, Viewer, full-chain,
+- [x] current launcher, Seed, Receiving, Shipping, Boxing, Viewer, full-chain,
   maintenance, dynamic-call, and bloat ratchets do not regress without a
   reviewed exception; and
-- [ ] Architecture v4.11, this plan, and `invSys-Controls-v1.md` match the
+- [x] Architecture v4.11, this plan, and `invSys-Controls-v1.md` match the
   implemented operator wording and acceptance state.
 
 Visible Production acceptance after packaged GREEN:
