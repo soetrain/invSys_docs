@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.17
+**Version:** 1.18
 
 **Inventory date:** 2026-08-23
 
@@ -191,15 +191,15 @@ summary. Focused persistence feedback is 4/4, packaged XLAM is 74/74, live role
 workflows are 47/47, the ordered Release 1 chain is 30/30, and reviewed cleanup
 is 11/11.
 
-### Reusable Production Processes and Recipe graphs: approved contract; RED pending
+### Reusable Production Processes and Recipe graphs: headless boundary GREEN; form RED
 
 Architecture v4.11 D15 and Plan 022 Slice 4x deliberately replace the current
 single **Recipe Builder** page with **Process Designer** and **Recipe Designer**.
 The approved target form has five top-level pages: Process Designer, Recipe
 Designer, Ingredients Assignment, Production Run - List, and experimental
 Production Run - Tree. The current four-page form and singular-output run
-session are pre-change behavior and must remain measurably RED until the D13
-tests have been added and run.
+session are pre-change behavior and remain measurably RED until the packaged
+operator handlers and revised five-page form are implemented.
 
 Process Designer owns named Process draft/save/release/obsolete/reuse actions,
 requirements, acceptable SKU alternatives, instructions, and one or more output
@@ -213,10 +213,20 @@ same key, and leaves unconnected output balances as finished/co-product
 inventory. The existing launcher, captured saved workbook, persistence summary,
 quiet-UI boundary, and experimental Tree scope remain unchanged.
 
-No implementation acceptance is claimed by this catalog update. Visible control
-names, exact runtime control IDs, layout geometry, packaged form-action GREEN,
-and dedicated-NAS Production UAT will be recorded here after D13 RED and the
-corresponding implementation.
+The headless Designs Domain boundary is implemented and automated GREEN for
+Process/Recipe schema, lifecycle events, immutable versions, graph validation,
+released-only lists, exact-version serialized definitions, and released-Recipe
+validation. The same read contracts are GREEN through the Core cross-XLAM and
+Operations primitive bridges. The reusable Production range is 17/17 GREEN,
+the adjacent Designs/Core/Inventory range is 38/39 with only the pre-existing
+legacy picker `ROW` assertion failing, and packaged five-XLAM validation is
+74/74 GREEN. Static candidates are 967 versus the 968 baseline, with literal
+`Application.Run` 8/8 and duplicate-body groups 185/185.
+
+No operator-form implementation acceptance is claimed by this catalog update.
+Visible control names, exact runtime control IDs, layout geometry, packaged
+form-action GREEN, run/processor behavior, and dedicated-NAS Production UAT
+will be recorded here after their remaining D13 RED and implementation.
 
 ### Connection progress, aggregate reference detail, and Events view: packaged GREEN
 

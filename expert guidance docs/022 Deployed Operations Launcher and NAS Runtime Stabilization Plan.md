@@ -1334,10 +1334,10 @@ Required behavior:
 
 D13 RED sequence:
 
-1. [ ] Add a focused source/packaged surface test entering through
+1. [x] Add a focused source/packaged surface test entering through
    `mProduction.BtnOpenProductionForm`; record RED because the form still has
    one Recipe Builder page and lacks Process/Recipe designer handlers.
-2. [ ] Add Designs Domain tests for Process lifecycle, minimum one output,
+2. [x] Add Designs Domain tests for Process lifecycle, minimum one output,
    ingredient alternatives, Process reuse, Recipe graph resolution,
    compatibility, quantities/order, and circular dependencies; record RED for
    the missing event types/projections/validators.
@@ -1355,7 +1355,7 @@ D13 RED sequence:
 
 Implementation order after meaningful RED:
 
-1. [ ] implement Designs Domain Process/Recipe lifecycle events, schemas,
+1. [x] implement Designs Domain Process/Recipe lifecycle events, schemas,
    projections, validation, and read APIs;
 2. [ ] implement typed Production editor/controller contracts and replace the
    single Builder page without weakening captured-workbook binding;
@@ -1365,6 +1365,18 @@ Implementation order after meaningful RED:
 5. [ ] implement processor/Inventory Domain application and published Production
    event visibility; and
 6. [ ] refactor only while focused and preserved regression ranges stay GREEN.
+
+Slice 4x Designs Domain evidence: lifecycle/schema/graph RED and GREEN are
+recorded in `tests/integration/plan022_slice4x_designs_domain_*_results.md` and
+`tests/integration/plan022_slice4x_designs_lifecycle_graph_*_results.md`.
+Released Process/Recipe read APIs and their Domain -> Core -> Operations
+primitive bridge RED/GREEN are recorded in
+`tests/integration/plan022_slice4x_designs_read_api_results.md`. The current
+reusable range is 17/17 GREEN, packaged five-XLAM validation is 74/74 GREEN,
+and static candidates are 967 versus the 968 baseline with literal
+`Application.Run` 8/8, duplicate-body groups 185/185, and unresolved dynamic
+calls improved from 47 to 45. The packaged form-action, run, processor, and
+visible gates remain open.
 
 Automated gate:
 
