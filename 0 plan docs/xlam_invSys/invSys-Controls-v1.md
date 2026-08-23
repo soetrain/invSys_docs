@@ -219,7 +219,7 @@ released-only lists, exact-version serialized definitions, and released-Recipe
 validation. The same read contracts are GREEN through the Core cross-XLAM and
 Operations primitive bridges. The reusable Production range is 17/17 GREEN,
 packaged five-XLAM validation is 74/74 GREEN, and packaged Ribbon validation is
-142/142 GREEN. The final static baseline contains 152 components, 4,985
+142/142 GREEN. The final static baseline contains 152 components, 4,987
 procedures, 1,033 candidates, 8 literal `Application.Run` targets, 45 unresolved
 dynamic calls, and 189 duplicate-body groups; deliberate Slice 4x growth is
 bounded by the 13/13 reviewed exception contract.
@@ -234,8 +234,10 @@ insufficiency/stale rejection, two multi-output batches, routed intermediate
 consumption, a 20%-of-10-unit co-product yield basis, retained co-products, and
 correlated persistence. Public Viewer
 Events exposes **Production Input Consumed** and **Production Output Created**.
-Clean-session saved-workbook restart and dedicated-NAS Production UAT remain
-open.
+Clean-session saved-workbook restart is GREEN through the public launcher and
+actual Run List **Load** handler: a second Excel process reopens the same saved
+Production workbook and loads the persisted exact released Recipe. Dedicated-
+NAS Production UAT remains open.
 
 ### Connection progress, aggregate reference detail, and Events view: packaged GREEN
 

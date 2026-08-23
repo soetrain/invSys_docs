@@ -1390,11 +1390,14 @@ co-products including a 20%-of-10-unit yield basis, correlated processor
 persistence, and public Viewer Production
 event labels. Packaged XLAM/Ribbon validation is 74/74 and 142/142, deployed
 live-role workflows are 47/47, and the ordered Release 1 chain is 30/30.
-Deterministic maintenance is 19/19 with 152 components, 4,985 procedures,
+Deterministic maintenance is 19/19 with 152 components, 4,987 procedures,
 1,033 candidates, 8 literal `Application.Run` targets, 45 unresolved dynamic
 calls, and 189 duplicate-body groups; the deliberate Slice 4x growth has a
-bounded reviewed exception at 13/13. Clean-session saved-workbook restart and
-visible dedicated-NAS acceptance remain open.
+bounded reviewed exception at 13/13. A second clean Excel process reopens the
+same saved station-local Production workbook and loads the persisted exact
+released Recipe through the actual Run List **Load** handler; focused source is
+4/4 and packaged restart runtime is 2/2. Visible dedicated-NAS acceptance
+remains open.
 
 Automated gate:
 
@@ -1404,7 +1407,7 @@ Automated gate:
 - [x] Process/Recipe replay, idempotency, lifecycle, graph, scaling,
   insufficiency, exact-key allocation, multi-output, persistence, snapshot, and
   Viewer Event assertions are GREEN;
-- [ ] full five-XLAM compile/load/Ribbon validation and saved-workbook restart
+- [x] full five-XLAM compile/load/Ribbon validation and saved-workbook restart
   evidence are GREEN;
 - [x] current launcher, Seed, Receiving, Shipping, Boxing, Viewer, full-chain,
   maintenance, dynamic-call, and bloat ratchets do not regress without a
