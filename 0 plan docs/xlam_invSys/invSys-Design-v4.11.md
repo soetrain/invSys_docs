@@ -20,6 +20,8 @@
 - Replaces worksheet `ROW` identity with immutable system-wide `System_Key`,
   establishes extensible-header rules with managed `Condition`, and adopts a
   greenfield Generate Warehouse/demo-seed boundary with no old-inventory import.
+- Defines Production as reusable versioned Processes assembled into validated
+  Recipe graphs, with multi-output completion and exact-key run allocation.
 
 ---
 ## Release Strategy
@@ -488,8 +490,15 @@ builders, or other non-visual contract code:
 The RED result must be meaningful. A failure caused only by an unrelated compile error, missing fixture, unavailable workbook, or broken test harness does not prove the target behavior.
 
 **Form, RibbonX, and worksheet-event rule:** Strict unit-level TDD is not required for purely visual layout, native window behavior, or Excel event wiring that cannot be isolated reasonably. High-risk form actions are still test-first at the integration boundary:
-- The packaged two-batch Operations/Production form-action test must be written and observed failing before the Production run-session/completion UI refactor begins.
-- That test must exercise the same form event handlers, selections, Apply, Check In, Complete Run, refresh, and Next Batch behavior used by an operator; calling the completion service directly is not a substitute.
+- The packaged reusable-Process and two-batch Operations/Production form-action
+  tests must be written and observed failing before the Production
+  designer/run-session/completion UI refactor begins.
+- Those tests must enter through `mProduction.BtnOpenProductionForm` and
+  exercise the same Process save/release/obsolete, Recipe graph
+  select/connect/order/save/release/obsolete, ingredient assignment, run
+  selection, Apply, Check In, Complete Run, refresh, and Next Batch handlers
+  used by an operator; calling a Designs query or completion service directly
+  is supplemental evidence, not a substitute.
 - Ribbon callbacks and worksheet-bound actions require a failing packaged callback/action test before their behavior is changed.
 - Visual-only work requires acceptance geometry or screenshot criteria defined before implementation, followed by automated bounds/overlap checks where practical and visible inspection.
 
@@ -658,6 +667,126 @@ must cover Generate Warehouse, `Seed Demo Inventory`, uniqueness, absence of
 snapshot/operator round trip.
 
 ---
+### D15 -- Reusable Production Processes and Recipe Graphs (R1 Locked)
+**Decision:** Production design authority is split into reusable, versioned
+**Processes** and versioned **Recipes**. A Process defines one executable unit
+of work. A Recipe selects released Process versions and connects their outputs
+to compatible downstream input requirements. The former single **Recipe
+Builder** page is retired and replaced by two operator-visible top-level pages:
+**Process Designer** and **Recipe Designer**. **Ingredients Assignment** and
+**Production Run - List** remain separate pages. **Production Run - Tree**
+remains experimental and outside Release 1 acceptance.
+
+**Authority and lifecycle:**
+- Processes and Recipes are Designs Domain definitions stored in
+  `WHx.invSys.Data.Designs.xlsb` when `DesignsEnabled=True`. Operations owns
+  editing and event creation; the headless Designs Domain owns validation,
+  lifecycle invariants, application, projections, and read APIs.
+- Logical identities are `ProcessId` + `ProcessVersion` and `RecipeId` +
+  `RecipeVersion`. Saved versions are immutable event-sourced definitions.
+  Editing and saving creates a new DRAFT version; it never rewrites an existing
+  version. Release and Obsolete are explicit audited lifecycle events.
+- A Recipe pins exact Process versions. The same released Process version may
+  be reused by many Recipe versions. A Process version referenced by a released
+  Recipe may not be obsoleted until dependent released Recipe versions are
+  obsoleted or replaced. Obsolete definitions remain in history but cannot be
+  selected for a new release or run.
+- With `DesignsEnabled=True`, Production reads only released Designs Domain
+  Process/Recipe projections. It must not silently fall back to legacy recipe
+  tables. Explicit design-definition import may convert a legacy recipe into
+  new Process and Recipe versions, but old business inventory is never imported
+  or mapped.
+
+**Process definition contract:**
+```text
+Each Process version declares:
+  ProcessId, ProcessVersion, ProcessName, Description, Status
+  one or more input requirements
+  one or more output definitions
+  ordered instructions
+
+Each input requirement declares:
+  RequirementId, RequirementName, Qty or Percent/YieldBasis, UOM
+  zero or more acceptable managed ITEM_CODE/SKU alternatives
+
+Each output definition declares:
+  OutputId, OutputName, ITEM_CODE/SKU, optional DesignId/DesignVersion,
+  Qty or Percent/YieldBasis, and UOM
+```
+- Every Process has at least one output. Requirement IDs and output IDs are
+  unique within a Process version; quantities/yields are positive and UOMs are
+  present in the warehouse catalog.
+- An output definition is design metadata, not a permanent inventory row and
+  does not own a permanent `System_Key`. Each execution of that output creates
+  a managed inventory entity with a new system-wide unique `System_Key`.
+- Ingredients Assignment edits the acceptable SKU alternatives for each
+  Process requirement. Those alternatives are versioned with the Process and
+  are reused wherever that exact Process version is selected.
+
+**Recipe graph contract:**
+```text
+Each Recipe version declares:
+  RecipeId, RecipeVersion, RecipeName, Description, Status
+  selected exact ProcessId/ProcessVersion nodes
+  directed edges from Process OutputId to downstream RequirementId
+  an explicit execution order consistent with the graph
+```
+- A requirement is resolved either by one compatible upstream output edge or,
+  for an external inventory input, by at least one acceptable managed SKU
+  alternative. It cannot consume both paths implicitly.
+- One Process may expose multiple outputs. Any output may feed one or more later
+  requirements. Unconnected output quantity remains finished/co-product
+  inventory. The sum of quantities routed from one output may not exceed that
+  output's scaled yield.
+- Output/requirement connections validate item/design compatibility, UOM,
+  quantity/yield basis, and execution order. Recipe release fails for an
+  unresolved requirement, missing/obsolete/unreleased Process version,
+  incompatible connection, nonpositive quantity, over-allocation, or circular
+  dependency. The validated execution order is a deterministic topological
+  order; a user order that contradicts the graph is rejected.
+
+**Production Run - List contract:**
+- A run selects one released Recipe version and a batch scale from `0.001%`
+  through `1000%`, inclusive. Scaling applies consistently to every external
+  input requirement, Process output yield, connection quantity, and
+  finished/co-product balance.
+- Before Check In or completion, the run resolves every external requirement's
+  acceptable alternatives against the current inventory read model and
+  allocates exact available `System_Key` entities and quantities. Allocation
+  may span several compatible entities but may not overdraw, cross an
+  undeclared SKU alternative, or substitute aggregate SKU identity for an
+  entity key.
+- The run plan also allocates one new `System_Key` for every Process output
+  instance before its create event is queued. A routed intermediate output is
+  first created under that key and later consumed from the same exact key by
+  downstream Process execution. Any unconsumed balance remains managed
+  finished/co-product inventory.
+- Execution follows the validated Recipe order. Each Process consumes its
+  allocated inputs and creates all declared outputs. Run completion is rejected
+  when inventory is insufficient, an allocation is stale, an output key is
+  missing/duplicated, or actual quantities violate the released definition.
+- Correlated Production events preserve `RunId`, Recipe identity, Process
+  identity/execution ordinal, exact input allocations, every output key, scaled
+  and actual quantities, UOM, location, condition, persistence summary, and
+  processor visibility. The processor remains the only canonical inventory
+  writer.
+- Published operator Events label the resulting inventory actions as
+  **Production Input Consumed** and **Production Output Created**, with
+  Recipe/Process/run references. Design save/release/obsolete history remains
+  Designs Domain audit data and does not impersonate an inventory action.
+
+**D13 gate:** Before changing Production forms, schemas, Designs Domain,
+run-session/completion services, event builders, processor routing, or Inventory
+Domain apply behavior, write and observe meaningful RED through the same public
+launcher and form handlers used by operators. At minimum the focused range must
+cover Process save/release/obsolete/reuse, mandatory multi-output validation,
+Recipe graph connections and cycle/unresolved/quantity/order rejection,
+ingredient alternatives, `0.001%`/`100%`/`1000%` scaling, exact-key sufficiency
+and allocation, one fresh key per output, routed intermediate consumption,
+finished/co-product balances, two consecutive batches, persistence summaries,
+and published Production event visibility.
+
+---
 ## System Topology (Release 1: VBA-Only)
 ```mermaid
 flowchart TB
@@ -761,6 +890,10 @@ End Sub
 **Authority:** The Operations Viewer is a projection only. It reads the current published warehouse inventory snapshot on explicit refresh, reports its freshness, and never writes, repairs, processes, or refreshes an authority workbook.
 **UI:** The Operations ribbon exposes **Inventory Viewer** to every signed-in user. Its resizable modeless form supports local search and displays item code, item name, UOM, quantity, location, and condition. Repeated launch reuses the same form instance for the selected warehouse.
 **Current Events scope:** The R1 Viewer may expose a bounded, read-only Events page sourced from the published snapshot projection. Explicit Refresh must replace its visible rows with the newest published projection without processing or mutating authority data. The page reports meaningful operator control actions, not backend mechanics that merely occur while carrying out an action. Operator-facing **Shipment Held** rows represent actual Hold actions/currently held shipments only. The internal `SHIP_RESERVE` event written by an ordinary Shipping Add is staging/reservation machinery, not evidence that the operator used Hold, and must not be rendered as **Shipment Held**. Shipping **Remove** remains visible because it records an operator-requested release of locked inventory even though its inventory delta is zero.
+Production inventory actions are visible as **Production Input Consumed** and
+**Production Output Created**. Their details identify the correlated Recipe,
+Process, run, and exact entity key without exposing design lifecycle events as
+inventory mutations.
 **Current Events filters:** On first use, the R1 Events page defaults to **All** published dates. On explicit Refresh, an operator may apply a rolling **Day** (1-day), **Week** (7-day), **Month** (30-day), or typed positive whole-number-of-days window; the date window combines with the existing local text search and never applies to the Inventory page. Custom values are bounded to 1-36500 days. Each valid applied range is remembered per Windows user and restored when the Viewer is opened again, including after an Excel restart; an invalid persisted value falls back to **All**. The preference is local UI state and is never written to warehouse authority data. These convenience filters operate on the loaded read-only projection and do not add processing or write authority.
 **Future comprehensive Event Viewer:** After R1, design a comprehensive cross-domain Event Viewer for durable receipt, disposition, design, boxing, production, reservation, release, shipment, and administrative history. Its later design must define canonical event coverage, readable time-zone-aware timestamps, correlation/reference detail, filters, pagination or bounded history, export, retention, capability rules, and freshness indicators before implementation. The bounded R1 Events page is not the authority or a substitute for that design.
 
@@ -1306,8 +1439,8 @@ post -> processor run -> canonical apply -> snapshot rebuild -> operator refresh
 | Receiving | Add | `tblInboxReceive` / `RECEIVE` | `RECEIVE_POST` | quantity increases |
 | Receiving | Return or Dump | `tblInboxReceive` / `RETURN` or `DUMP` against exact existing `System_Key` allocations | `RECEIVE_POST` | quantity decreases; identity, location, lot, and Condition are preserved |
 | Shipping | Deduct | `tblInboxShip` / `SHIP` | `SHIP_POST` | quantity decreases |
-| Production | Use | `tblInboxProd` / `PROD_CONSUME` | `PROD_POST` | component quantity decreases |
-| Production | Make | `tblInboxProd` / `PROD_COMPLETE` | `PROD_POST` | output quantity increases |
+| Production | Use | `tblInboxProd` / `PROD_CONSUME` | `PROD_POST` | exact allocated external or routed-intermediate entity quantity decreases |
+| Production | Make | `tblInboxProd` / `PROD_COMPLETE` | `PROD_POST` | every declared Process output is created under its own new `System_Key`; unconsumed balances remain finished/co-product inventory |
 | Admin or approved role | Adjust | warehouse event path / adjustment event | `ADJ_POST` | quantity increases or decreases with reason |
 
 Role staging tables are not `invSys`.
@@ -1427,8 +1560,14 @@ If any of those are false, LAN architecture may be partially proven, but LAN end
 - [ ] Retire and unregister the standalone `invSys.Receiving.xlam`, `invSys.Production.xlam`, and `invSys.Shipping.xlam` packages; detect and reject stale coexistence
 - [ ] Add selective complete-project builds for `invSys.Operations.xlam` and full five-package builds at integration checkpoints
 - [ ] Add a package manifest/version-coherence check proving exactly the five D12 XLAMs are published
-- [ ] Define the typed Production run-session and completion-service contracts with focused failing tests before implementation begins
-- [ ] Write and record RED for a packaged two-batch Production form-action test before refactoring the Production UI/run-session wiring
+- [ ] Replace the single Recipe Builder contract with D15 Process Designer and
+  Recipe Designer pages backed by released reusable Designs Domain versions
+- [ ] Define the typed multi-Process/multi-output Production run-session and
+  completion-service contracts with focused failing tests before implementation
+  begins
+- [ ] Write and record RED for packaged Process/Recipe lifecycle and two-batch
+  Production form-action tests before refactoring the Production
+  designer/run-session wiring
 - [ ] Replace every managed runtime `ROW` identity/header with the D14
   `System_Key` contract; do not build legacy inventory import or key mapping
 - [ ] Make Admin Generate Warehouse/Create Warehouse and `Seed Demo Inventory`
@@ -1454,11 +1593,22 @@ If any of those are false, LAN architecture may be partially proven, but LAN end
 - [ ] Test: Operations role groups and write actions enforce their independent capabilities
 - [ ] Test: Legacy standalone role XLAMs are absent after upgrade and diagnostics fail clearly if one is loaded beside `invSys.Operations.xlam`
 - [ ] Test: Operations startup and RibbonX callbacks execute once without duplicate tabs, callback collisions, or duplicate startup mutation
-- [ ] Test: D13 evidence records the focused Production run-session/completion tests failing for the expected reason before implementation and passing afterward
+- [ ] Test: D13 evidence records the focused Process/Recipe designer and
+  Production run-session/completion tests failing for the expected reason
+  before implementation and passing afterward
 - [ ] Test: D13 RED/GREEN proves Generate Warehouse and `Seed Demo Inventory`
   create unique immutable `System_Key` values, default `Condition=GOOD`, preserve
   added headers, and create no `ROW` header
-- [ ] Test: The packaged form-action path completes two consecutive batches through actual Apply, Check In, Complete Run, refresh, and Next Batch handlers
+- [ ] Test: The packaged form-action path saves/releases/reuses a multi-output
+  Process, saves/releases a Recipe graph through the actual connection and
+  order handlers, rejects an unresolved/circular/incompatible graph, assigns
+  acceptable ingredient alternatives, and completes two consecutive scaled
+  batches through actual Apply, Check In, Complete Run, refresh, and Next Batch
+  handlers
+- [ ] Test: Each Process output receives a distinct new `System_Key`; a routed
+  intermediate output is consumed by that exact key; unconnected output balance
+  remains finished/co-product inventory; insufficiency and stale allocations
+  fail before canonical application
 - [ ] Test: Receiving/Shipping/Production/Admin workflows complete from saved `.xlsm` / `.xlsb` operator workbooks under one-account use
 - [ ] Test: The Operations ribbon can connect to a NAS/server warehouse root, select the intended warehouse target, sign in/out as an invSys user without Admin loaded, show signed-out state without Windows/NAS fallback identity, and retain the selected target across form/ribbon refresh without silently falling back to a local runtime
 - [ ] Test: Manual snapshot refresh updates the operator `invSys` read model without clearing `ReceivedTally`, shipping staging, production staging, or workbook-local logs
@@ -1784,14 +1934,17 @@ SKU or SKU/Location pair for entity identity.
 EventID        (text, PK)
 UndoOfEventId  (text, optional)
 AppliedSeq     (number)
-EventType      (text)   DESIGN_CREATE | DESIGN_RELEASE | DESIGN_OBSOLETE
+EventType      (text)   PROCESS_SAVE | PROCESS_RELEASE | PROCESS_OBSOLETE |
+                        RECIPE_SAVE | RECIPE_RELEASE | RECIPE_OBSOLETE |
+                        DESIGN_CREATE | DESIGN_RELEASE | DESIGN_OBSOLETE
 OccurredAtUTC  (datetime)
 AppliedAtUTC   (datetime)
 WarehouseId    (text)
 StationId      (text)
 UserId         (text)
-DesignId       (text)
-DesignVersion  (text)
+DefinitionType (text)   PROCESS | RECIPE | LEGACY_DESIGN
+DefinitionId   (text)   ProcessId | RecipeId | imported DesignId
+DefinitionVersion (text)
 PayloadJson    (text)
 Note           (text, optional)
 ```
@@ -1839,6 +1992,90 @@ tblDesignLines
   UOM
   Percent
   Instruction
+
+tblProcesses
+  ProcessId
+  ProcessVersion
+  ProcessName
+  Description
+  Status                 DRAFT | RELEASED | OBSOLETE
+  CreatedAtUTC
+  CreatedByUserId
+  ReleasedAtUTC
+  ReleasedByUserId
+  ObsoletedAtUTC
+  ObsoletedByUserId
+  SourceEventID
+
+tblProcessRequirements
+  ProcessId
+  ProcessVersion
+  RequirementId
+  RequirementName
+  Qty
+  Percent
+  YieldBasis
+  UOM
+  InstructionOrdinal
+
+tblProcessIngredientAlternatives
+  ProcessId
+  ProcessVersion
+  RequirementId
+  AlternativeOrdinal
+  ITEM_CODE
+
+tblProcessOutputs
+  ProcessId
+  ProcessVersion
+  OutputId
+  OutputName
+  ITEM_CODE
+  ComponentDesignId
+  ComponentDesignVersion
+  Qty
+  Percent
+  YieldBasis
+  UOM
+
+tblProcessInstructions
+  ProcessId
+  ProcessVersion
+  InstructionOrdinal
+  Instruction
+
+tblRecipes
+  RecipeId
+  RecipeVersion
+  RecipeName
+  Description
+  Status                 DRAFT | RELEASED | OBSOLETE
+  CreatedAtUTC
+  CreatedByUserId
+  ReleasedAtUTC
+  ReleasedByUserId
+  ObsoletedAtUTC
+  ObsoletedByUserId
+  SourceEventID
+
+tblRecipeProcesses
+  RecipeId
+  RecipeVersion
+  ProcessNodeId
+  ProcessId
+  ProcessVersion
+  ExecutionOrdinal
+
+tblRecipeConnections
+  RecipeId
+  RecipeVersion
+  FromProcessNodeId
+  FromOutputId
+  ToProcessNodeId
+  ToRequirementId
+  Qty
+  Percent
+  UOM
 ```
 
 **Designs contract:**
@@ -1853,11 +2090,29 @@ builders, and read-only queries; live state is stored only in
 `WHx.invSys.Data.Designs.xlsb`.
 
 Role/Admin writes must be expressed as inbox events and applied by the
-processor. Read APIs include `ListDesigns` and `GetBOM`.
+processor. Read APIs include `ListDesigns`, `GetBOM`, `ListProcesses`,
+`GetProcessVersion`, `ListRecipes`, `GetRecipeGraph`, and
+`ValidateReleasedRecipe`.
 ```
 
-**`DESIGN_CREATE` payload contract (Release 1):**
+**Process/Recipe lifecycle payload contract (Release 1):**
 ```text
+PROCESS_SAVE identifies ProcessId/ProcessVersion and serializes the Process
+header, requirements, ingredient alternatives, outputs, and instructions.
+PROCESS_RELEASE and PROCESS_OBSOLETE identify the exact Process version.
+
+RECIPE_SAVE identifies RecipeId/RecipeVersion and serializes the Recipe header,
+selected exact Process versions, directed output-to-requirement connections,
+connection quantities, and execution order. RECIPE_RELEASE and
+RECIPE_OBSOLETE identify the exact Recipe version.
+
+All save payloads are fully validated before application. Lifecycle targets are
+immutable version pairs. Saving an edit creates another version and never
+rewrites a prior event/projection version.
+
+The legacy generic DESIGN_CREATE envelope remains an explicit design-definition
+import boundary only:
+
 PayloadJson is an array of objects. The first object supplies the design
 header and may also be the first BOM/recipe line:
 
@@ -1871,9 +2126,12 @@ Each object that represents a line may supply:
 `DESIGN_RELEASE` and `DESIGN_OBSOLETE` identify their target with DesignId and
 DesignVersion and do not require a payload.
 
-The pair (DesignId, DesignVersion) is immutable after DESIGN_CREATE. Editing a
-released or draft design creates a new version; it never rewrites the event or
-projection rows for an existing version.
+For a legacy generic event, `DefinitionId`/`DefinitionVersion` carry the former
+`DesignId`/`DesignVersion` identity. That pair is immutable after
+DESIGN_CREATE. Imported
+legacy recipe definitions are not executable through silent fallback; an
+explicit conversion must create valid Process and Recipe versions governed by
+D15.
 ```
 
 ---
@@ -2082,17 +2340,21 @@ EventID        (text, PK)
 ParentEventId  (text, optional)
 UndoOfEventId  (text, optional)
 CreatedAtUTC   (datetime)
+EventType      (text)   PROD_CONSUME | PROD_COMPLETE
 WarehouseId    (text)
 StationId      (text)
 UserId         (text)
-DesignId       (text)
-DesignVersion  (text)
-QtyPlanned     (number)
-Location       (text, optional)
-InputAllocationsJson (text, System_Key + quantity entries)
-OutputSystemKey (text, new immutable Production output entity key)
-OutputCondition (text)
-OutputAttributesJson (text, optional shared custom-field values)
+RunId          (text)
+RecipeId       (text)
+RecipeVersion  (text)
+ProcessExecutionId (text)
+ProcessId      (text)
+ProcessVersion (text)
+ExecutionOrdinal (number)
+BatchScalePercent (number, 0.001 through 1000)
+InputAllocationsJson (text, exact System_Key + quantity + requirement entries)
+OutputAllocationsJson (text, one new System_Key + output identity + quantity + UOM + location + condition per declared output)
+PayloadJson    (text, serialized primitive envelope for the event type)
 Note           (text, optional)
 Status         (text)   NEW | PROCESSED | SKIP_DUP | POISON
 RetryCount     (number)
@@ -2100,6 +2362,13 @@ ErrorCode      (text, optional)
 ErrorMessage   (text, optional)
 FailedAtUTC    (datetime, optional)
 ```
+
+One run may queue several correlated `PROD_CONSUME` / `PROD_COMPLETE` rows in
+validated Process execution order. Every `PROD_COMPLETE` output entry carries
+its own preallocated new `System_Key`; a routed intermediate allocation later
+references that same key in `InputAllocationsJson`. The inbox stores serialized
+envelopes and workflow correlation only; canonical authority remains the
+Inventory and Designs Domain event histories.
 
 ### Lock Table (Release 1)
 **Workbook:** `WHx.invSys.Data.Inventory.xlsb` and `WHx.invSys.Data.Designs.xlsb`

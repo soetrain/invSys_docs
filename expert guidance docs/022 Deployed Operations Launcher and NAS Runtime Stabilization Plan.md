@@ -6,7 +6,7 @@
 operator deployment model, and Phase 6 saved-workbook acceptance
 **Scope:** Packaged Operations ribbon launchers, station-local role workbook
 provisioning, deployed-package diagnostics, and dedicated NAS test-runtime
-acceptance
+acceptance, including the D15 reusable-Process Production priority change
 
 ## 1. Purpose and authority
 
@@ -32,6 +32,13 @@ This is consistent with the normative station-bootstrap requirement that each
 station own a local role operator workbook. It does not make the operator
 workbook canonical and does not place it in the warehouse-authoritative NAS
 runtime.
+
+The user-directed Production redesign recorded in Slice 4x is a deliberate
+priority and contract change. It supersedes the former single Recipe Builder
+surface and singular-output run model only after the Architecture v4.11 D15
+contract is updated. It does not reopen completed launcher, Seed, Receiving,
+Shipping, Boxing, or Viewer behavior. Those GREEN contracts remain mandatory
+regressions while Production moves to reusable Processes and Recipe graphs.
 
 ## 2. Observed deployed defects
 
@@ -1278,6 +1285,117 @@ Visible follow-up:
 - [ ] count any Office-native Saving windows separately from the invSys pending
   and completion text. They cannot be moved into a UserForm.
 
+### Slice 4x -- reusable Production Processes and Recipe graphs
+
+This deliberate priority change temporarily supersedes the remaining Slice 4w
+visual checkpoint order. It reconciles Production with Architecture v4.11 D15
+before any conflicting VBA, schema, form, build, or runtime behavior changes.
+After Slice 4x packaged evidence is GREEN, visible saved-workbook/NAS Production
+testing resumes together with the still-open Slice 4 visual polish checks.
+
+Required behavior:
+
+- [ ] replace the existing Recipe Builder top-level page with **Process
+  Designer** and **Recipe Designer**, while retaining **Ingredients
+  Assignment**, **Production Run - List**, and the experimental out-of-scope
+  **Production Run - Tree**;
+- [ ] Process Designer creates, edits, validates, saves, releases, obsoletes,
+  and reuses named immutable Process versions through the headless Designs
+  Domain;
+- [ ] every Process declares input requirements, ordered instructions, one or
+  more output definitions, positive quantity or percentage/yield bases, and
+  valid UOMs; every output has its own item/design identity and every Process
+  has at least one output;
+- [ ] Ingredients Assignment maps each Process requirement to acceptable
+  managed item/SKU alternatives that are versioned with the Process;
+- [ ] Recipe Designer selects exact released Process versions, connects any
+  output to compatible downstream requirements, supports multiple outgoing
+  connections and unconnected finished/co-product balances, controls execution
+  order, and rejects unresolved inputs, incompatible UOM/item/design identity,
+  quantity over-allocation, missing/unreleased definitions, and cycles;
+- [ ] Production Run - List selects one released Recipe version, preserves
+  inclusive scaling from `0.001%` through `1000%`, resolves acceptable
+  alternatives against current inventory, and allocates exact available
+  `System_Key` entities without aggregate identity substitution;
+- [ ] each Process output instance receives a distinct new `System_Key` before
+  queueing; routed intermediate output is created under that key and consumed
+  downstream by the same exact key, while unconsumed outputs remain managed
+  finished/co-product inventory;
+- [ ] completion preserves inventory sufficiency checks, deterministic process
+  order, correlated consume/complete events, canonical processor authority,
+  persistence summaries, and read-only Viewer event labels for Production
+  input consumption and output creation;
+- [ ] saved Production operator-workbook reuse, captured-workbook form binding,
+  Operations launcher behavior, headless Core/Domain packages, and current
+  Seed/Receiving/Shipping/Boxing/Viewer behavior remain unchanged; and
+- [ ] legacy single-builder recipes are never a silent runtime fallback when
+  Designs are enabled. Any retained import is an explicit design-definition
+  conversion into valid Process and Recipe versions.
+
+D13 RED sequence:
+
+1. [ ] Add a focused source/packaged surface test entering through
+   `mProduction.BtnOpenProductionForm`; record RED because the form still has
+   one Recipe Builder page and lacks Process/Recipe designer handlers.
+2. [ ] Add Designs Domain tests for Process lifecycle, minimum one output,
+   ingredient alternatives, Process reuse, Recipe graph resolution,
+   compatibility, quantities/order, and circular dependencies; record RED for
+   the missing event types/projections/validators.
+3. [ ] Add the packaged operator form-action path for Process
+   save/release/obsolete, Recipe select/connect/order/save/release/obsolete, and
+   ingredient assignment; service-only calls are supplemental and do not
+   replace these handler tests.
+4. [ ] Extend the packaged two-batch run test through the actual recipe select,
+   scale, palette Apply, Check In, Complete Run, Refresh, and Next Batch
+   handlers. Prove `0.001%`, `100%`, and `1000%`, insufficiency, stale
+   allocation, multi-output keys, intermediate routing, and co-product balance.
+5. [ ] Add processor/Inventory Domain RED for correlated multi-output
+   `PROD_COMPLETE` envelopes and exact-key downstream `PROD_CONSUME`, followed
+   by snapshot/operator/Event projection assertions.
+
+Implementation order after meaningful RED:
+
+1. [ ] implement Designs Domain Process/Recipe lifecycle events, schemas,
+   projections, validation, and read APIs;
+2. [ ] implement typed Production editor/controller contracts and replace the
+   single Builder page without weakening captured-workbook binding;
+3. [ ] implement Recipe graph validation and ingredient-alternative persistence;
+4. [ ] implement typed multi-Process run plan/session and multi-output completion
+   envelopes with one new key per output;
+5. [ ] implement processor/Inventory Domain application and published Production
+   event visibility; and
+6. [ ] refactor only while focused and preserved regression ranges stay GREEN.
+
+Automated gate:
+
+- [ ] focused RED and GREEN reports distinguish pre-implementation behavior;
+- [ ] packaged Process/Recipe form actions and two consecutive List batches are
+  GREEN through actual operator handlers;
+- [ ] Process/Recipe replay, idempotency, lifecycle, graph, scaling,
+  insufficiency, exact-key allocation, multi-output, persistence, snapshot, and
+  Viewer Event assertions are GREEN;
+- [ ] full five-XLAM compile/load/Ribbon validation and saved-workbook restart
+  evidence are GREEN;
+- [ ] current launcher, Seed, Receiving, Shipping, Boxing, Viewer, full-chain,
+  maintenance, dynamic-call, and bloat ratchets do not regress without a
+  reviewed exception; and
+- [ ] Architecture v4.11, this plan, and `invSys-Controls-v1.md` match the
+  implemented operator wording and acceptance state.
+
+Visible Production acceptance after packaged GREEN:
+
+- [ ] against the dedicated NAS test warehouse, create/release and reuse one
+  named multi-output Process, assemble and release a multi-Process Recipe,
+  prove a rejected unresolved/circular edit, assign acceptable alternatives,
+  and complete two saved-workbook List runs at representative scales;
+- [ ] confirm each produced output appears under a distinct new `System_Key`,
+  routed intermediate inventory is consumed exactly, co-product inventory
+  remains visible, persistence summary appears once, and Viewer Events shows
+  the correlated Production actions; and
+- [ ] maximize/restore the revised five-page form and confirm readable,
+  non-overlapping Process Designer, Recipe Designer, Ingredients Assignment,
+  Run List, and experimental Run Tree layouts.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.
@@ -1327,9 +1445,14 @@ Exact steps:
     Viewer decreased by that amount without changing location, lot, or
     Condition. Repeat with `DUMP` on remaining inventory and confirm the same
     depletion behavior. Attempt an overdraw and confirm it is rejected.
-15. On Production Run - List, load a released recipe and prove scales at the
-    `0.001%`, `100%`, and `1000%` bounds. Production Run - Tree is not part of
-    this checkpoint.
+15. In Process Designer, create/release one reusable Process with at least two
+    outputs. In Recipe Designer, reuse it with another released Process, connect
+    one output downstream, leave one as co-product, and confirm unresolved and
+    circular edits are rejected. In Ingredients Assignment, map each external
+    requirement to acceptable managed SKU alternatives. On Production Run -
+    List, allocate exact inventory keys, complete two batches, and prove scales
+    at the `0.001%`, `100%`, and `1000%` bounds. Production Run - Tree is not
+    part of this checkpoint.
 16. Open Shipping, resize **Box Designer** and **Box Maker** through grow,
     shrink, maximize, and restore; confirm full-width lists, aligned headers,
     non-overlapping actions, `NA` for items without a box alternative, and no
@@ -1357,7 +1480,12 @@ Expected results:
   sheets/tables appearing in Config/Auth/inventory workbooks.
 - The expanded seed result is not accepted until all 24 entities, including
   the five shipping-material rows, appear after Viewer refresh.
-- Production content expands and restores with the native form window.
+- Production content expands and restores with the native form window. The
+  five top-level pages are Process Designer, Recipe Designer, Ingredients
+  Assignment, Production Run - List, and experimental Production Run - Tree.
+- Each completed Process output has a distinct new `System_Key`; routed
+  intermediate output is consumed by that key and unconnected output remains
+  visible as finished/co-product inventory.
 
 Evidence to return:
 
@@ -1381,6 +1509,12 @@ This corrective plan is complete only when:
 - [x] Receiving self-provisions or opens its station-local workbook;
 - [x] Production and Shipping self-provision/reuse station-local workbooks and
   have no launcher type mismatch;
+- [ ] D15 Process Designer, Recipe Designer, Ingredients Assignment, and
+  multi-output Production Run - List contracts are packaged GREEN through the
+  actual operator handlers;
+- [ ] visible saved-workbook/NAS Production acceptance proves reusable
+  Processes, graph validation, exact-key allocation, multi-output creation,
+  intermediate routing, co-products, persistence, and Events visibility;
 - [x] plan 020 role, packaging, restart, static, and bloat regressions remain
   GREEN;
 - [x] the dedicated NAS test-runtime checkpoint passes after clean Excel

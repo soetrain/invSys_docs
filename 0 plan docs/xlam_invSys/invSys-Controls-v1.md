@@ -1,8 +1,8 @@
 # invSys Form Controls v1
 
-**Version:** 1.16
+**Version:** 1.17
 
-**Inventory date:** 2026-08-19
+**Inventory date:** 2026-08-23
 
 **Architecture:** invSys v4.11, Release 1
 **Scope:** every checked-in VBA UserForm source file used by Core, Admin,
@@ -13,7 +13,9 @@ runtime-created controls, status surfaces, and generated column labels.
 
 This is the readable Release 1 control catalog after review-checklist answers
 1-3 and 6-7. It describes the implemented source and explicitly labels packaged
-or visible acceptance still pending. The normative authority remains
+or visible acceptance still pending. For the deliberate D15 Production priority
+change, it also records the approved target controls and separately labels the
+current pre-change surface as expected D13 RED. The normative authority remains
 `invSys-Design-v4.11.md`.
 
 The catalog was derived from:
@@ -189,6 +191,33 @@ summary. Focused persistence feedback is 4/4, packaged XLAM is 74/74, live role
 workflows are 47/47, the ordered Release 1 chain is 30/30, and reviewed cleanup
 is 11/11.
 
+### Reusable Production Processes and Recipe graphs: approved contract; RED pending
+
+Architecture v4.11 D15 and Plan 022 Slice 4x deliberately replace the current
+single **Recipe Builder** page with **Process Designer** and **Recipe Designer**.
+The approved target form has five top-level pages: Process Designer, Recipe
+Designer, Ingredients Assignment, Production Run - List, and experimental
+Production Run - Tree. The current four-page form and singular-output run
+session are pre-change behavior and must remain measurably RED until the D13
+tests have been added and run.
+
+Process Designer owns named Process draft/save/release/obsolete/reuse actions,
+requirements, acceptable SKU alternatives, instructions, and one or more output
+definitions. Recipe Designer selects exact released Process versions, connects
+individual outputs to downstream requirements, controls execution order, and
+shows unresolved-input, compatibility, quantity, and circular-dependency
+validation. Production Run - List preserves `0.001%` through `1000%` scaling,
+allocates exact available inventory `System_Key` entities, creates each Process
+output under a distinct new key, consumes routed intermediate outputs by that
+same key, and leaves unconnected output balances as finished/co-product
+inventory. The existing launcher, captured saved workbook, persistence summary,
+quiet-UI boundary, and experimental Tree scope remain unchanged.
+
+No implementation acceptance is claimed by this catalog update. Visible control
+names, exact runtime control IDs, layout geometry, packaged form-action GREEN,
+and dedicated-NAS Production UAT will be recorded here after D13 RED and the
+corresponding implementation.
+
 ### Connection progress, aggregate reference detail, and Events view: packaged GREEN
 
 Slice 4w renders **Connecting to warehouse storage...** before the synchronous
@@ -213,8 +242,10 @@ activity come from the
 published `tblInventoryEvents` snapshot projection. Current saved box
 alternatives and currently held shipment rows supplement that projection as
 `BOX_DESIGNED` and `SHIP_HELD`; these two supplements describe current activity,
-not an immutable revision history. Production event labels are intentionally
-deferred until the Production workflow review reaches that page.
+not an immutable revision history. Slice 4x adds **Production Input Consumed**
+and **Production Output Created** rows with Recipe/Process/run references after
+the corresponding packaged event-publication contract is GREEN; design
+lifecycle history remains outside this inventory-action projection.
 An ordinary Shipping Add also writes an internal `SHIP_RESERVE` event. That
 staging artifact is not shown as **Shipment Held**, because the operator did not
 use Hold and its zero inventory delta would only report that nothing happened.
@@ -304,7 +335,7 @@ separate reachability review before removal.
 | Core | `frmSignIn` | Active, runtime-generated | invSys user authentication |
 | Core | `frmWarehouseConnection` | Active, runtime-generated | NAS/root connection and warehouse target selection |
 | Operations | `frmInventoryViewer` | Active, runtime-generated | Read-only current inventory levels, search, freshness, refresh |
-| Production | `frmProduction` | Active, runtime-generated | Recipe, assignment, run-list, and run-tree workflows |
+| Production | `frmProduction` | Active, runtime-generated; Slice 4x redesign pending | Process design, Recipe graph design, ingredient assignment, run-list, and experimental run-tree workflows |
 | Receiving | `frmReceiving` | Active, runtime-generated | Receiving, outbound Return/Dump disposition, and non-operational Purchasing tab |
 | Shipping | `frmBoxVersionSaveChoice` | Active, runtime-generated | Choose update-versus-new box alternative behavior |
 | Shipping | `frmShipmentsTally` | Active, runtime-generated | Shipping, Box Designer, and Box Maker tabs |
@@ -631,7 +662,7 @@ invSys session and selected warehouse.
 | `btnRefresh` | Button — **Refresh** | Reads the current published inventory snapshot or Events projection; it does not process or alter authority workbooks. |
 | `lblSearch`, `txtSearch` | Label and text box — **Search** | Filters the already loaded rows locally across all visible columns. |
 | `lblHeaders` | Header label | Inventory identifies Item Code, Item, UOM, Quantity, Location, and Condition. Events identifies Date, Event, Reference, Item, Qty, UOM, Location, Condition, User, and Details. |
-| `lstInventory` | Six- or ten-column list box | Inventory displays levels aggregated by item code, item, UOM, location, and condition. Events displays Receipts, Returns, Dumps, Box Made/Unboxed, Shipped, **Remove** (the `SHIP_RELEASE` action that returns locked inventory to warehouse availability), current Box Designs, and current Held Shipments. Both views are read-only. |
+| `lstInventory` | Six- or ten-column list box | Inventory displays levels aggregated by item code, item, UOM, location, and condition. Events currently displays Receipts, Returns, Dumps, Box Made/Unboxed, Shipped, **Remove** (the `SHIP_RELEASE` action that returns locked inventory to warehouse availability), current Box Designs, and current Held Shipments. Slice 4x adds Production Input Consumed and Production Output Created after packaged GREEN. Both views are read-only. |
 | `lblStatus` | Status/freshness label | Shows row count, snapshot read time, or a no-snapshot/sign-in error. |
 | `btnClose` | Button — **Close** | Closes the Viewer without affecting an operator workbook. |
 
@@ -682,11 +713,43 @@ removing the repeated Saving notices caused by unchanged read-only loads.
 
 | Control | Type | Purpose |
 |---|---|---|
-| `mpProduction` | MultiPage | Contains four pages: Recipe Builder, Ingredients Assignment, Production Run - List, and Production Run - Tree. |
+| `mpProduction` | MultiPage | Current pre-Slice 4x source contains four pages and is the expected D13 RED. The approved target contains five pages: **Process Designer**, **Recipe Designer**, **Ingredients Assignment**, **Production Run - List**, and experimental **Production Run - Tree**. |
 | `txtProductionStatus` | Locked multiline text box | Shows bound workbook, inventory/design authority, validation, action, and consolidated persistence status. |
 | `btnProductionClose` | Button — **Close** | Closes the Production form. |
 
-### 8.2 Recipe Builder page
+### 8.2 Process Designer and Recipe Designer — approved Slice 4x target
+
+Exact runtime control IDs and geometry will be finalized after the focused
+public-launcher/form-action RED. The required operator-visible control groups
+are fixed by D15.
+
+#### Process Designer
+
+| Control group | Required displayed controls/actions | Purpose |
+|---|---|---|
+| Saved Processes | Process versions list; **Refresh**, **New Process**, **Load**, **Reuse as New Version** | Lists named Process ID/version/status records and starts a draft from a blank or reusable definition. |
+| Process identity | Process Name, Process ID, Version, Description | Edits the versioned Process header; ID/version are immutable after save. |
+| Requirements | Requirement list plus Name, Qty, Percent/Yield Basis, UOM; **Add**, **Update**, **Remove**, **Move Up**, **Move Down** | Defines typed external/upstream input requirements. |
+| Outputs | Output list plus Output Name/ID, Item Code, optional Design ID/Version, Qty, Percent/Yield Basis, UOM; **Add**, **Update**, **Remove**, **Move Up**, **Move Down** | Defines one or more output definitions. Save/Release validation rejects a Process with no output. |
+| Instructions | Ordered instruction list and editor; **Add**, **Update**, **Remove**, **Move Up**, **Move Down** | Defines reusable operator instructions independently from input/output rows. |
+| Lifecycle | **Validate**, **Save Draft**, **Release**, **Obsolete**, **Clear** | Validates and queues immutable Designs Domain Process lifecycle events. |
+
+#### Recipe Designer
+
+| Control group | Required displayed controls/actions | Purpose |
+|---|---|---|
+| Saved Recipes | Recipe versions list; **Refresh**, **New Recipe**, **Load** | Lists Recipe ID/version/status records and starts or loads a draft. |
+| Recipe identity | Recipe Name, Recipe ID, Version, Description | Edits the versioned Recipe header; ID/version are immutable after save. |
+| Process library/nodes | Released Process list, selected Process-node list; **Add Process**, **Remove Process** | Reuses exact released Process versions and assigns a node identity within this Recipe. |
+| Connections | From Process, Output, To Process, Requirement, Qty/Percent, UOM, connection list; **Connect**, **Update**, **Disconnect** | Routes individual output quantities to compatible downstream requirements. Multiple outputs and multiple downstream edges are supported. |
+| Execution order | Ordered Process-node list; **Move Up**, **Move Down**, **Auto Order** | Controls execution order. Validation rejects an order inconsistent with the directed graph. |
+| Validation/lifecycle | Validation detail list; **Validate Recipe**, **Save Draft**, **Release**, **Obsolete**, **Clear** | Reports unresolved inputs, compatibility, quantity/yield, missing definition, and circular-dependency failures before lifecycle events are queued. |
+
+### 8.2.1 Pre-Slice 4x Recipe Builder surface — expected D13 RED
+
+These current controls document the behavior being replaced. They are not the
+approved Release 1 Production acceptance target and must not be relabeled as
+Process/Recipe controls without implementing the D15 authority and handlers.
 
 | Control group | Controls | Purpose |
 |---|---|---|
@@ -698,42 +761,46 @@ removing the repeated Saving notices caused by unchanged read-only loads.
 | Builder grid | `lstBuilderLines` | Lists Process, I/O, ingredient/output/instruction, %, UOM, amount, and ingredient ID. |
 | Labels | Saved Recipes, Recipe Name, Recipe ID, Row Budget, Description, Process, In/Out, Ingredient / Output / Instruction, Percent, UOM, Amount, Recipe Builder Lines | Identify the controls and generated list headers. |
 
-Generated list-header control families are `hdrBuilderLines1` through
+Current pre-Slice 4x generated list-header control families are `hdrBuilderLines1` through
 `hdrBuilderLines8`, `hdrLoaderRecipes1` through `hdrLoaderRecipes3`,
 `hdrLoaderLines1` through `hdrLoaderLines8`, `hdrRunPalette1` through
 `hdrRunPalette10`, `hdrManagerCheck1` through `hdrManagerCheck6`, and
 `hdrManagerOutput1` through `hdrManagerOutput8`. Blank or hidden data columns
-still receive a header control where the runtime builder creates one.
+still receive a header control where the runtime builder creates one. Slice 4x
+must replace the Builder header family with distinct Process requirements,
+outputs, instructions, Recipe nodes, connections, validation, and execution
+order header families; exact IDs and widths will be recorded after the focused
+layout/form-action GREEN.
 
 ### 8.3 Ingredients Assignment page
 
 | Control group | Controls | Purpose |
 |---|---|---|
-| Recipes | `lstAssignRecipes`, `btnAssignRecipe`, `btnAssignRefresh` | Lists recipes, selects one, and reloads data. |
-| Ingredients | `lstAssignIngredients`, `btnAssignIngredient` | Lists recipe ingredients and selects one for assignment. |
-| Assignment actions | `btnAssignSave`, `btnAssignClear` | Saves or clears the current assignment context. |
+| Processes | Approved target: released Process versions list plus select/refresh actions. Current pre-Slice 4x IDs are `lstAssignRecipes`, `btnAssignRecipe`, `btnAssignRefresh` and are part of the expected RED. | Selects the exact Process version whose requirements are being assigned. |
+| Requirements | Approved target: Process requirement list plus select action. Current pre-Slice 4x IDs are `lstAssignIngredients`, `btnAssignIngredient`. | Selects one declared requirement; connected Recipe requirements do not allocate inventory alternatives during a run. |
+| Assignment actions | `btnAssignSave`, `btnAssignClear` or their Slice 4x replacements | Saves acceptable managed item/SKU alternatives as part of a new Process draft version, or clears the editor. |
 | Inventory search | `txtInventorySearch`, `lstAssignInventory` | Filters and lists candidate inventory. |
-| Allowed choices | `lstAssignAllowed`, `btnAssignAdd`, `btnAssignRemove` | Lists acceptable substitutions and adds/removes rows. |
-| Labels | Recipes, Recipe Ingredients, Search Inventory, Inventory, Acceptable Items | Identify the page sections. |
+| Allowed choices | `lstAssignAllowed`, `btnAssignAdd`, `btnAssignRemove` | Lists acceptable managed item/SKU alternatives and adds/removes rows without allocating a physical entity. |
+| Labels | Approved wording: Processes, Ingredient Requirements, Search Inventory, Managed Items, Acceptable Items | Identifies the page sections. |
 
 ### 8.4 Production Run - List page
 
 | Control group | Controls | Purpose |
 |---|---|---|
-| Recipe loader | `lstLoaderRecipes`, `lstLoaderLines`, `btnLoaderRefresh`, `btnLoaderLoad`, `btnLoaderClear` | Selects a released recipe, shows its lines, refreshes, loads, or clears a run. |
+| Recipe loader | `lstLoaderRecipes`, `lstLoaderLines`, `btnLoaderRefresh`, `btnLoaderLoad`, `btnLoaderClear` | Selects an exact released Recipe version, shows its validated Process graph/execution order, refreshes, loads, or clears a run. |
 | Batch scaling | `txtBatchScalePercent`, `btnApplyBatchScale` | Applies a List-run batch scale from `0.001%` through `1000%`; `100%` preserves the released recipe quantities. |
-| Run inputs | `cmbRunProcess`, `cmbRunLocation`, `txtPaletteSplit`, `txtPaletteQty`, `btnRunApplyPalette` | Chooses process/location and applies either percent-of-requirement or explicit quantity to the selected palette row. |
-| Palette | `lstRunPalette` | Lists ingredient, System Key, inventory choice, requirement %, quantity, UOM, inventory, and location. |
-| Inventory check | `lstManagerCheck` | Lists System Key, code, item, UOM, used quantity, and total inventory. |
-| Output | `lstManagerOutput`, `txtOutputReal` | Lists process/output/UOM/last/batch/total/recall/inventory ID and accepts real output. |
-| Run actions | `btnManagerCheckIn`, `btnManagerApplyOutput`, `btnManagerRefresh`, `btnManagerNext`, `btnManagerPrint` | Checks inputs in, completes the run, refreshes, advances to the next batch, or prints recall data. **Complete Run** keeps its event/processor work inside the shared quiet-UI boundary and appends one `Persistence summary:` line to the form status after successful consume/complete event persistence. |
-| Labels | Recipes, Loaded Recipe Lines, Process, Run Location, % of Requirement, Qty, Acceptable Inventory For Run, Inventory Check, Production Output, Real Output | Identify the page sections and generated headers. |
+| Run inputs | `cmbRunProcess`, `cmbRunLocation`, `txtPaletteSplit`, `txtPaletteQty`, `btnRunApplyPalette` | Chooses a Process execution/location and applies either percent-of-requirement or explicit quantity to the selected external inventory requirement. Connected intermediate requirements are resolved from their upstream output keys. |
+| Palette | `lstRunPalette` | Lists Process, requirement, exact System Key, acceptable inventory choice, requirement %, quantity, UOM, available inventory, and location. |
+| Inventory check | `lstManagerCheck` | Lists Process/requirement, exact System Key, code, item, UOM, allocated quantity, and current available inventory; insufficiency or stale allocation blocks Check In/completion. |
+| Outputs | `lstManagerOutput`, `txtOutputReal` plus any Slice 4x per-output editor controls | Lists every Process output definition, its distinct preallocated new System Key, scaled yield, actual output, UOM, downstream routed quantity, and finished/co-product balance. Actual quantities are entered per output rather than through one singular run output. |
+| Run actions | `btnManagerCheckIn`, `btnManagerApplyOutput`, `btnManagerRefresh`, `btnManagerNext`, `btnManagerPrint` | Checks exact inputs in, completes Processes in validated order, refreshes, advances to the next batch, or prints recall data. **Complete Run** keeps event/processor work inside the shared quiet-UI boundary, creates every declared output under its own new key, consumes routed intermediates by exact key, and appends one `Persistence summary:` line after successful correlated persistence. |
+| Labels | Recipes, Validated Process Order, Process, Run Location, % of Requirement, Qty, Acceptable Inventory For Run, Inventory Check, Production Outputs, Actual Output | Identifies the page sections and generated headers. |
 
 ### 8.5 Production Run - Tree page
 
 This page remains an experimental alternative and is not the Release 1
-workflow focus. Slice 4j intentionally makes no Tree behavior change; Production
-Run - List is the path to validate.
+workflow focus. Slice 4x intentionally makes no Tree behavior contract change;
+Production Run - List is the Release 1 path to validate.
 
 | Control group | Controls | Purpose |
 |---|---|---|
@@ -745,7 +812,8 @@ Run - List is the path to validate.
 The unconstructed `mBtnManagerPrepare`, `mBtnManagerUsed`,
 `mBtnManagerMade`, and `mBtnManagerTotal` event variables/handlers were removed;
 they were never visible controls. Current packaged geometry validation is GREEN
-at `Zoom=100`; the user's visible maximize/restore retest remains pending.
+at `Zoom=100` for the pre-Slice 4x four-page form. The revised five-page form
+requires new packaged geometry GREEN and visible maximize/restore acceptance.
 
 ### 8.6 Reviewed Production cleanup
 
@@ -848,8 +916,8 @@ the compatible stored labels `v1`, `v2`, and so on.
 | 1. Necessary for Release 1? | Operations/Admin and the active role-form tabs are sufficient. Unreachable shells and unconstructed controls were removed. Inventory Viewer was added as the one missing overview surface; Purchasing remains the intentional Receiving stub. |
 | 2. Operator wording? | Accepted as good enough for Release 1. |
 | 3. Visibility? | Controls may remain visible to all signed-in users for Release 1. Existing capability checks on mutating actions remain defense-in-depth; Inventory Viewer has no role-capability restriction. |
-| 4. Mutation/queue/admin distinction? | **Release 1 decision:** Search, filters, history, Viewer Refresh, and role Refresh are read-only projections. Add/Update/Remove/Hold, disposition selection, and recipe/BOM editing change only captured-workbook staging until an explicit save/post action. Confirm Writes, Confirm Dispositions, Production completion, Make/Unmake, and Shipments Sent queue inventory events; the processor is the only inventory authority writer. `RETURN` and `DUMP` are separate audited events but share the Receiving `RECEIVE_POST` capability. Admin controls perform named administrative actions and retain capability/re-auth/audit gates. Status text should state `staged`, `queued`, `applied`, or `refreshed` rather than imply that a local edit immediately changed inventory. |
-| 5. Durable identity uses `System_Key`? | **Accepted rule:** every physical inventory entity, inventory event/log row, reservation, shipment, Production allocation/output, and Shipping BOM package/component reference uses immutable `System_Key`. Aggregate quantity views may group by SKU/location and need not impersonate one key. A Return/Dump aggregate selection must be expanded into exact existing keys before posting; it never creates a replacement key or borrows quantity across item/location/lot/Condition boundaries. Designs use their specialized three-digit base-36 `DesignId` plus `DesignVersion`; an inventory entity produced from a design still receives its own `System_Key`. `EventId`, shipment IDs, and run IDs identify their own records. |
+| 4. Mutation/queue/admin distinction? | **Release 1 decision:** Search, filters, history, Viewer Refresh, and role Refresh are read-only projections. Add/Update/Remove/Hold and disposition selection change only captured-workbook staging until an explicit post. Process/Recipe edits are local drafts until Save/Release/Obsolete queues a Designs Domain lifecycle event. Confirm Writes, Confirm Dispositions, Production completion, Make/Unmake, and Shipments Sent queue inventory events; the processor is the only inventory authority writer. `RETURN` and `DUMP` are separate audited events but share the Receiving `RECEIVE_POST` capability. Admin controls perform named administrative actions and retain capability/re-auth/audit gates. Status text should state `staged`, `queued`, `applied`, or `refreshed` rather than imply that a local edit immediately changed inventory. |
+| 5. Durable identity uses `System_Key`? | **Accepted rule:** every physical inventory entity, inventory event/log row, reservation, shipment, Production allocation/output, and Shipping BOM package/component reference uses immutable `System_Key`. Every executed Process output receives a new key; an intermediate connection consumes that same exact key and never uses Process output definition identity as physical inventory identity. Aggregate quantity views may group by SKU/location and need not impersonate one key. A Return/Dump aggregate selection must be expanded into exact existing keys before posting; it never creates a replacement key or borrows quantity across item/location/lot/Condition boundaries. Process, Recipe, and other Designs definitions use their specialized version identities; an inventory entity produced from any definition still receives its own `System_Key`. `EventId`, shipment IDs, and run IDs identify their own records. |
 | 6. Readable resize proportions? | Required. Production, Shipping `txtStatus`, Viewer, and the explicit full-width Box Designer/Box Maker layouts are source- and packaged-geometry GREEN. Visible maximize/restore/grow/shrink confirmation remains part of the dedicated UAT checkpoint. |
 | 7. Empty shells? | Retired after source reachability review and focused regression contracts. Only the visible Purchasing stub remains intentionally. |
 
@@ -865,6 +933,11 @@ the compatible stored labels `v1`, `v2`, and so on.
 - Complete one Production Run - List batch and confirm one `Persistence
   summary:` line appears in Production status; record any remaining
   Excel-native Saving notices separately.
+- After Slice 4x packaged GREEN, create/release/reuse a named multi-output
+  Process, connect it in a released Recipe, confirm unresolved/circular graph
+  rejection, assign acceptable alternatives, and complete two saved-workbook
+  List batches with distinct output keys, exact routed-intermediate consumption,
+  co-product balance, and Production Viewer Events.
 - In Box Designer, confirm Component inventory omits zero-balance rows and does
   not repeat the same exact entity. Shipping Add, Update Row, Remove, Return,
   To Shipments, and Shipments Sent are visibly action-reachable, and the
