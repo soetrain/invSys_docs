@@ -1433,6 +1433,80 @@ Visible Production acceptance after packaged GREEN:
   non-overlapping Process Designer, Recipe Designer, Ingredients Assignment,
   Run List, and experimental Run Tree layouts.
 
+### Slice 4y -- Process formulation worksheet round-trip and generated IDs
+
+The 2026-08-23 visible checkpoint accepted **Upload Data Set**, **Seed Demo
+Inventory**, and Inventory Viewer visibility of the uploaded sample. Viewer
+therefore remains a preserved GREEN regression. The checkpoint found that
+Process Designer exposes unexplained **Basis** fields and requires
+operator-entered/GUID identities. The operator requested the existing
+three-character Base-36 identity convention and a formula-driven Process editor
+inside the captured saved Production workbook. This is a deliberate D15
+contract refinement within Slice 4 saved-workbook/NAS acceptance; it does not
+reopen the GREEN launcher, Viewer, or canonical inventory contracts.
+
+Required behavior:
+
+- [x] Process, Recipe, Requirement, and Output IDs are automatically allocated
+  as locked three-character uppercase Base-36 values from `001` through `ZZZ`,
+  with `000` reserved and collision checks in the applicable namespace;
+- [x] replace operator-visible **Basis** wording with **Batch basis quantity**
+  for percentage inputs and **Yield basis quantity** for percentage outputs;
+  at 100% scale, quantity is `Percent / 100 * basis`, before run scaling;
+- [x] add one Process Designer toggle action that sends the current draft to a
+  uniquely named structured table in the exact captured
+  `<WarehouseId>.Production.Operator.xlsm`, then retrieves that same table on
+  the next action and removes it only after successful validation;
+- [x] the worksheet table carries the Process header, requirements, outputs,
+  and instructions; same-UOM input quantity rows use structured formulas to
+  calculate the shared batch basis and percentages totaling 100%;
+- [x] retrieval rejects unresolved identity, incomplete rows, incompatible or
+  mixed UOM percentage formulations, invalid quantities, and missing outputs,
+  leaving the table intact for correction;
+- [x] editing a saved/released Process through the worksheet creates the next
+  immutable DRAFT version; the worksheet never becomes Designs Domain or
+  inventory authority; and
+- [x] form close/reopen and saved workbook reopen rediscover the exact
+  outstanding table without using `ActiveWorkbook`, and the operator can repeat
+  send/retrieve after a successful round trip.
+
+D13 RED sequence:
+
+1. [x] Enter through `mProduction.BtnOpenProductionForm`; record RED because a
+   new Process receives a GUID identity, line IDs are manual, ID controls are
+   editable, and raw **Basis** wording remains.
+2. [x] Invoke the actual Process Designer worksheet toggle handler; record RED
+   because no uniquely bound formulation table, percentage formulas, or
+   retrieve/delete path exists.
+3. [x] Add focused save/reopen, mixed-UOM, invalid-table, and immutable-version
+   tests through that same handler. Service-level formula/parser tests
+   supplement but do not replace the packaged action proof.
+
+Gate:
+
+- [x] normative Architecture v4.11, this plan, and the controls catalog are
+  updated before conflicting implementation;
+- [x] focused Process handler RED/GREEN is recorded while Viewer regressions
+  remain GREEN;
+- [x] the sugar/flour/baking-powder/water example produces a 611.2 lb basis and
+  displayed percentages 16.4%, 32.7%, 1.8%, and 49.1% (100.0% total);
+- [x] successful retrieval updates the form draft and deletes only its owned
+  temporary table; failed retrieval preserves the table and prior form draft;
+- [x] packaged Process lifecycle/reuse, two-batch List run, saved-workbook
+  restart, Viewer, XLAM/Ribbon, dedicated NAS, full-chain, static maintenance,
+  dynamic-call, and bloat regressions remain GREEN; and
+- [x] the operator visibly confirms uploaded inventory visibility; and
+- [ ] the operator visibly confirms one create/edit/retrieve/re-edit Process
+  worksheet round trip against the dedicated NAS test warehouse.
+
+Automated evidence on 2026-08-23: focused source 6/6; packaged Process action
+and clean restart 2/2; packaged XLAM 74/74; Ribbon/compile 142/142; live role
+47/47; ordered Release 1 chain 30/30; launcher contracts 24/24; dedicated NAS
+launcher safety 16/16 across two clean sessions; deterministic static baseline
+19/19; and reviewed cleanup 13/13. The dedicated NAS run observed zero
+canonical file changes from launcher use. Only the visible worksheet/layout UAT
+remains open.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.
@@ -1482,14 +1556,19 @@ Exact steps:
     Viewer decreased by that amount without changing location, lot, or
     Condition. Repeat with `DUMP` on remaining inventory and confirm the same
     depletion behavior. Attempt an overdraw and confirm it is rejected.
-15. In Process Designer, create/release one reusable Process with at least two
-    outputs. In Recipe Designer, reuse it with another released Process, connect
-    one output downstream, leave one as co-product, and confirm unresolved and
-    circular edits are rejected. In Ingredients Assignment, map each external
-    requirement to acceptable managed SKU alternatives. On Production Run -
-    List, allocate exact inventory keys, complete two batches, and prove scales
-    at the `0.001%`, `100%`, and `1000%` bounds. Production Run - Tree is not
-    part of this checkpoint.
+15. In Process Designer, confirm Process/Requirement/Output IDs are generated
+    locked three-character Base-36 values. Use **Edit Process on Sheet** to enter
+    100 lb sugar, 200 lb flour, 11.2 lb baking powder, and 300 lb filtered water;
+    confirm the 611.2 lb batch basis and 100.0% formula total, then use
+    **Retrieve Process from Sheet** and confirm the temporary table is removed.
+    Send the Process back to the sheet once more to prove repeat editing. Create/
+    release the Process with at least two outputs. In Recipe Designer, reuse it
+    with another released Process, connect one output downstream, leave one as
+    co-product, and confirm unresolved and circular edits are rejected. In
+    Ingredients Assignment, map each external requirement to acceptable managed
+    SKU alternatives. On Production Run - List, allocate exact inventory keys,
+    complete two batches, and prove scales at the `0.001%`, `100%`, and `1000%`
+    bounds. Production Run - Tree is not part of this checkpoint.
 16. Open Shipping, resize **Box Designer** and **Box Maker** through grow,
     shrink, maximize, and restore; confirm full-width lists, aligned headers,
     non-overlapping actions, `NA` for items without a box alternative, and no

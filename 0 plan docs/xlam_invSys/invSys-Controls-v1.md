@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.20
+**Version:** 1.22
 
 **Inventory date:** 2026-08-23
 
@@ -241,6 +241,26 @@ NAS launcher readiness is 16/16 across two clean sessions with no canonical
 file changes from launcher use. Visible reusable-workflow and five-page layout
 UAT remain open.
 
+### Slice 4y Process worksheet editing: packaged GREEN, visible UAT pending
+
+The 2026-08-23 checkpoint accepted **Upload Data Set** and **Seed Demo
+Inventory**. The supplied screenshot is Inventory Viewer and proves that the
+uploaded seeded sample is visible there, so Viewer remains accepted and
+unchanged.
+
+The same checkpoint rejected manual/GUID Process identities and the unexplained
+display word **Basis**. The approved target uses locked, automatically generated
+three-character Base-36 Process, Recipe, Requirement, and Output IDs. Process
+Designer adds one **Edit Process on Sheet** toggle. It writes a uniquely named
+formula table to the captured saved Production workbook, changes to **Retrieve
+Process from Sheet**, and deletes only that table after a valid retrieval. Raw
+**Basis** wording is replaced by **Batch basis quantity** for percentage inputs
+and **Yield basis quantity** for percentage outputs. This target is normative in
+Architecture v4.11 D15 and Plan 022 Slice 4y. Focused source is 6/6 GREEN;
+packaged callback/restart is 2/2 GREEN; the dedicated NAS launcher gate is
+16/16 GREEN with no canonical file changes. Visible formulation-table and
+five-page layout UAT remain pending.
+
 ### Connection progress, aggregate reference detail, and Events view: packaged GREEN
 
 Slice 4w renders **Connecting to warehouse storage...** before the synchronous
@@ -358,7 +378,7 @@ separate reachability review before removal.
 | Core | `frmSignIn` | Active, runtime-generated | invSys user authentication |
 | Core | `frmWarehouseConnection` | Active, runtime-generated | NAS/root connection and warehouse target selection |
 | Operations | `frmInventoryViewer` | Active, runtime-generated | Read-only current inventory levels, search, freshness, refresh |
-| Production | `frmProduction` | Active, runtime-generated; Slice 4x redesign pending | Process design, Recipe graph design, ingredient assignment, run-list, and experimental run-tree workflows |
+| Production | `frmProduction` | Active, runtime-generated; Slices 4x and 4y packaged GREEN, visible UAT pending | Process design, worksheet formulation round-trip, Recipe graph design, ingredient assignment, run-list, and experimental run-tree workflows |
 | Receiving | `frmReceiving` | Active, runtime-generated | Receiving, outbound Return/Dump disposition, and non-operational Purchasing tab |
 | Shipping | `frmBoxVersionSaveChoice` | Active, runtime-generated | Choose update-versus-new box alternative behavior |
 | Shipping | `frmShipmentsTally` | Active, runtime-generated | Shipping, Box Designer, and Box Maker tabs |
@@ -747,9 +767,10 @@ removing the repeated Saving notices caused by unchanged read-only loads.
 | Control group | Required displayed controls/actions | Purpose |
 |---|---|---|
 | Saved Processes | `lstProcesses`; `btnProcessRefresh`, `btnProcessNew`, `btnProcessLoad`, `btnProcessReuse` | Lists named Process ID/version/status records and starts a draft from a blank or reusable definition. |
-| Process identity | `txtProcessName`, `txtProcessId`, `txtProcessVersion`, `txtProcessDescription` | Edits the versioned Process header; ID/version are immutable after save. |
-| Requirements | `lstProcessRequirements`; `txtRequirementId`, `txtRequirementName`, `txtRequirementQty`, `txtRequirementPercent`, `txtRequirementYieldBasis`, `txtRequirementUom`; `btnProcessRequirementAdd`, `btnProcessRequirementUpdate`, `btnProcessRequirementRemove`, `btnProcessRequirementUp`, `btnProcessRequirementDown` | Defines typed external/upstream input requirements. |
-| Outputs | `lstProcessOutputs`; `txtProcessOutputId`, `txtProcessOutputName`, `txtProcessOutputItemCode`, `txtProcessOutputDesignId`, `txtProcessOutputDesignVersion`, `txtProcessOutputQty`, `txtProcessOutputPercent`, `txtProcessOutputYieldBasis`, `txtProcessOutputUom`; `btnProcessOutputAdd`, `btnProcessOutputUpdate`, `btnProcessOutputRemove`, `btnProcessOutputUp`, `btnProcessOutputDown` | Defines one or more output definitions. Save/Release validation rejects a Process with no output. |
+| Process identity | `txtProcessName`, locked `txtProcessId`, locked `txtProcessVersion`, `txtProcessDescription` | Edits the versioned Process header. invSys allocates the next available three-character Base-36 ID and version; the operator does not type either identity. |
+| Worksheet editor | `btnProcessWorksheet` -- **Edit Process on Sheet** / **Retrieve Process from Sheet** | Toggles a uniquely named formula table in the exact captured `Production.Operator.xlsm`. Retrieval replaces the form draft only after validation and deletes only its owned temporary table; failure leaves the table for correction. |
+| Requirements | `lstProcessRequirements`; locked `txtRequirementId`, `txtRequirementName`, `txtRequirementQty`, `txtRequirementPercent`, `txtRequirementYieldBasis`, `txtRequirementUom`; `btnProcessRequirementAdd`, `btnProcessRequirementUpdate`, `btnProcessRequirementRemove`, `btnProcessRequirementUp`, `btnProcessRequirementDown` | Defines typed external/upstream input requirements. The displayed label is **ID / Name / Qty / % / Batch basis quantity / UOM**; IDs are generated Base-36 values. Same-UOM worksheet input rows calculate basis and percent formulas. |
+| Outputs | `lstProcessOutputs`; locked `txtProcessOutputId`, `txtProcessOutputName`, `txtProcessOutputItemCode`, `txtProcessOutputDesignId`, `txtProcessOutputDesignVersion`, `txtProcessOutputQty`, `txtProcessOutputPercent`, `txtProcessOutputYieldBasis`, `txtProcessOutputUom`; `btnProcessOutputAdd`, `btnProcessOutputUpdate`, `btnProcessOutputRemove`, `btnProcessOutputUp`, `btnProcessOutputDown` | Defines one or more output definitions. The displayed label uses **Yield basis quantity**, output IDs are generated Base-36 values, and Save/Release rejects a Process with no output. |
 | Instructions | `lstProcessInstructions`, `txtProcessInstruction`; `btnProcessInstructionAdd`, `btnProcessInstructionUpdate`, `btnProcessInstructionRemove`, `btnProcessInstructionUp`, `btnProcessInstructionDown` | Defines reusable operator instructions independently from input/output rows. |
 | Lifecycle | `btnProcessValidate`, `btnProcessSave`, `btnProcessRelease`, `btnProcessObsolete`, `btnProcessClear` | Validates and queues immutable Designs Domain Process lifecycle events. |
 
@@ -758,7 +779,7 @@ removing the repeated Saving notices caused by unchanged read-only loads.
 | Control group | Required displayed controls/actions | Purpose |
 |---|---|---|
 | Saved Recipes | `lstRecipes`; `btnRecipeRefresh`, `btnRecipeNew`, `btnRecipeLoad` | Lists Recipe ID/version/status records and starts or loads a draft. |
-| Recipe identity | `txtReusableRecipeName`, `txtReusableRecipeId`, `txtReusableRecipeVersion`, `txtReusableRecipeDescription` | Edits the versioned Recipe header; ID/version are immutable after save. |
+| Recipe identity | `txtReusableRecipeName`, locked `txtReusableRecipeId`, locked `txtReusableRecipeVersion`, `txtReusableRecipeDescription` | Edits the versioned Recipe header; invSys allocates its three-character Base-36 ID and version automatically. |
 | Process library/nodes | `lstReleasedProcesses`, `lstRecipeNodes`; `btnRecipeAddProcess`, `btnRecipeRemoveProcess` | Reuses exact released Process versions and assigns a node identity within this Recipe. |
 | Connections | `cmbConnectionFromNode`, `cmbConnectionOutput`, `cmbConnectionToNode`, `cmbConnectionRequirement`, `txtConnectionQty`, `txtConnectionPercent`, `txtConnectionUom`, `lstRecipeConnections`; `btnRecipeConnect`, `btnRecipeUpdateConnection`, `btnRecipeDisconnect` | Routes individual output quantities to compatible downstream requirements. Multiple outputs and multiple downstream edges are supported. |
 | Execution order | `lstRecipeNodes`; `btnRecipeMoveUp`, `btnRecipeMoveDown`, `btnRecipeAutoOrder` | Controls execution order. Validation rejects an order inconsistent with the directed graph. |
@@ -952,6 +973,11 @@ the compatible stored labels `v1`, `v2`, and so on.
 - Complete one Production Run - List batch and confirm one `Persistence
   summary:` line appears in Production status; record any remaining
   Excel-native Saving notices separately.
+- Preserve the accepted uploaded-data-set visibility in Inventory Viewer. Then
+  confirm generated locked Base-36 IDs, the clarified batch/yield basis wording,
+  and one complete
+  **Edit Process on Sheet** / **Retrieve Process from Sheet** / repeat-edit
+  round trip with formula percentages totaling 100.0%.
 - After Slice 4x packaged GREEN, create/release/reuse a named multi-output
   Process, connect it in a released Recipe, confirm unresolved/circular graph
   rejection, assign acceptable alternatives, and complete two saved-workbook
