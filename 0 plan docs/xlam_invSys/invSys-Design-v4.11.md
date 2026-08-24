@@ -718,7 +718,7 @@ Each input requirement declares:
   zero or more acceptable managed ITEM_CODE/SKU alternatives
 
 Each output definition declares:
-  OutputId, OutputName, ITEM_CODE/SKU, optional DesignId/DesignVersion,
+  OutputId, OutputName, generated DesignId/DesignVersion,
   Qty or Percent/YieldBasisQty, and UOM
 ```
 - Every Process has at least one output. Requirement IDs and output IDs are
@@ -727,6 +727,12 @@ Each output definition declares:
 - An output definition is design metadata, not a permanent inventory row and
   does not own a permanent `System_Key`. Each execution of that output creates
   a managed inventory entity with a new system-wide unique `System_Key`.
+- An operator does not author an `ITEM_CODE` for a Process output. invSys
+  generates the output Design identity from the Process and Output identities;
+  that identity supplies the system-managed design SKU/`ITEM_CODE` projection
+  required when execution creates physical inventory. Acceptable managed SKUs
+  belong only to Ingredient Assignment records for input requirements and do
+  not become Process-output identity.
 - Ingredients Assignment edits the acceptable SKU alternatives for each
   Process requirement. Those alternatives are versioned with the Process and
   are reused wherever that exact Process version is selected.
@@ -736,29 +742,42 @@ Each output definition declares:
   **Yield basis quantity** is the corresponding reference for a percentage
   output. The run batch scale is applied after that base quantity is resolved.
 
-**Process worksheet round-trip:**
-- Process Designer exposes one toggle action: **Edit Process on Sheet**. It
-  writes the current draft to a uniquely named structured table in the captured
-  saved `Production.Operator.xlsm` and changes to **Retrieve Process from
-  Sheet** while that table is outstanding. The table name and workbook-local
-  metadata bind retrieval to that exact draft; active-workbook fallback is
-  prohibited.
+**Process worksheet workbench:**
+- Process Designer exposes two independent actions: **Create Process Table**
+  and **Retrieve Selected Process**. Create writes the current or new draft to
+  a uniquely named structured table in the captured saved
+  `Production.Operator.xlsm`. Any number of invSys Process tables may coexist;
+  each owns its adjacent Process metadata and is independently retrievable.
+  Retrieve resolves the table containing the selected cell in that exact
+  captured workbook. The current selection may identify a table but
+  `ActiveWorkbook` is never an authority fallback.
 - The worksheet is an operator editing/staging surface only. It is never
   Designs Domain authority, never receives a permanent inventory `System_Key`,
   and cannot save, release, obsolete, or execute a Process by itself.
-- For a same-UOM formulation, input quantity rows calculate batch-basis total
-  and percentage with worksheet formulas. For example, 100 lb + 200 lb +
+- Each table supports pasted/reformatted CSV rows. **Record Type** cells use
+  list validation for `INPUT`, `OUTPUT`, `INSTRUCTION`, and `ALTERNATIVE`.
+  Percent and basis columns are invSys-owned calculated columns: for every
+  same-UOM INPUT row they calculate from quantity and are restored before
+  retrieval rather than accepted as operator-authored percentages. For
+  example, 100 lb + 200 lb +
   11.2 lb + 300 lb has a 611.2 lb batch basis and displays approximately
   16.4%, 32.7%, 1.8%, and 49.1%, totaling 100.0%. Mixed or incompatible UOMs
   require an explicit conversion before percentage calculation and are rejected
   on retrieval when no compatible common basis exists.
+- OUTPUT rows expose a locked/generated Design ID and version derived from the
+  owning Process/Output identities. The worksheet has no operator-authored
+  Item Code column for Process outputs.
+- ALTERNATIVE rows expose Ingredient Assignment in the same Process table:
+  Requirement ID, acceptable managed item display name, and its managed SKU.
+  Existing assignments are exported with the Process. Selecting an acceptable
+  item cell invokes the existing Core item-search interaction, which fills the
+  managed item/SKU projection without allocating a physical `System_Key`.
 - Retrieval runs the same Process draft validation used by the form, replaces
-  the form draft only after the complete table passes, and then deletes only
-  that invSys-owned temporary table/metadata. A failed or cancelled retrieval
-  leaves the table intact for correction. A saved/released Process sent for
-  editing becomes a new generated DRAFT version; no immutable version is
-  rewritten. After successful retrieval or an explicit discard, the same
-  Process may be sent to the sheet again.
+  the form draft only after the selected table passes, and then deletes only
+  that selected invSys-owned table/metadata. Other Process tables remain. A
+  failed or cancelled retrieval leaves the selected table intact for
+  correction. A saved/released Process sent for editing becomes a new generated
+  DRAFT version; no immutable version is rewritten.
 
 **Recipe graph contract:**
 ```text
@@ -822,11 +841,13 @@ ingredient alternatives, `0.001%`/`100%`/`1000%` scaling, exact-key sufficiency
 and allocation, one fresh key per output, routed intermediate consumption,
 finished/co-product balances, two consecutive batches, persistence summaries,
 and published Production event visibility. Changes to generated design IDs or
-the Process worksheet round-trip additionally require RED/GREEN through
-`mProduction.BtnOpenProductionForm` and the actual Process Designer toggle
-handler, including exact table binding, same-UOM percentage formulas,
-mixed-UOM rejection, save/reopen discovery, successful retrieve/delete, and
-failed-retrieve preservation.
+the Process worksheet workbench additionally require RED/GREEN through
+`mProduction.BtnOpenProductionForm` and the actual Process Designer
+create/retrieve handlers, including multiple simultaneous tables, selected-
+table binding, Record Type validation, calculated percentages, generated output
+identity, Ingredient Assignment/item-search projection, mixed-UOM rejection,
+save/reopen discovery, selected-table deletion, and failed-retrieve
+preservation.
 
 ---
 ## System Topology (Release 1: VBA-Only)

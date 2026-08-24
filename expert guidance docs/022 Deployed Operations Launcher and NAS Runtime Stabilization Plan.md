@@ -1507,6 +1507,76 @@ launcher safety 16/16 across two clean sessions; deterministic static baseline
 canonical file changes from launcher use. Only the visible worksheet/layout UAT
 remains open.
 
+### Slice 4z -- multi-table Process import workbench
+
+The 2026-08-24 visible checkpoint accepted creation of the first table on the
+**invSys Process Editor** sheet and deliberately replaced the Slice 4y toggle
+contract. Operators need to create and reformat many Process tables, including
+CSV exports from other systems, before importing selected definitions into
+invSys. This is a D15 contract change; Slice 4y remains historical RED/GREEN
+evidence for the first working round trip.
+
+Required behavior:
+
+- [x] replace the toggle with separate **Create Process Table** and **Retrieve
+  Selected Process** form actions;
+- [x] allow multiple uniquely named Process tables in the captured saved
+  Production workbook, with metadata owned by each table and no outstanding-
+  table singleton restriction;
+- [x] retrieval targets the table containing the selected captured-workbook
+  cell, deletes only that table after success, and preserves every table on a
+  failed import;
+- [x] support paste/reformat of CSV rows into a generated table and add Record
+  Type validation choices `INPUT`, `OUTPUT`, `INSTRUCTION`, and `ALTERNATIVE`;
+- [x] make Percent and batch basis calculated columns for INPUT rows, including
+  rows populated after table creation, and restore those formulas before
+  validation;
+- [x] remove operator-authored output Item Code, generate Design ID/version from
+  Process/Output identity, and derive the inventory design SKU internally;
+- [x] export/import existing Ingredient Assignment alternatives in each Process
+  table without allocating inventory; and
+- [x] invoke the existing Core item-search interaction when the operator selects
+  an acceptable managed item cell, filling its managed item/SKU projection.
+
+D13 RED sequence:
+
+1. [x] Enter through `mProduction.BtnOpenProductionForm` and invoke the actual
+   worksheet action: RED is the one toggle button and singleton-table rejection.
+2. [x] Create two tables, select the first and retrieve it: RED is ambiguous
+   global metadata and the prohibition on multiple outstanding tables.
+3. [x] Populate a blank/pasted INPUT row after creation: RED is missing Percent
+   formula; inspect Record Type for absent list validation and OUTPUT for manual
+   Item Code/Design ID.
+4. [x] Export an assigned requirement and select its acceptable-item cell: RED
+   is absent assignment columns and no Core item-search path.
+
+Gate:
+
+- [x] Architecture v4.11, this plan, and controls v1 are reconciled first;
+- [x] focused source and packaged handler RED/GREEN are committed;
+- [x] two or more tables survive save/reopen and selected retrieval removes only
+  the successful table;
+- [x] pasted rows receive formulas/validation/generated IDs and existing
+  alternatives round-trip through the item-search-backed assignment columns;
+- [x] Process/Recipe lifecycle, two-batch List run, Viewer, XLAM/Ribbon, live
+  roles, full chain, dedicated NAS, static maintenance, dynamic-call, and bloat
+  regressions remain GREEN; and
+- [ ] the operator visibly accepts rapid multi-table creation, CSV reformat,
+  selected retrieval, Ingredient Assignment search, and Recipe ordering.
+
+Automated evidence on 2026-08-24: the focused source contract is 7/7 GREEN.
+The packaged public-launcher gate is 2/2 GREEN: three simultaneous tables were
+created, one selected table was retrieved while two remained, the remaining two
+survived save/reopen, and clean-restart retrieval removed them one at a time.
+The formulation evidence is 611.2 lb with calculated percentages
+16.4/32.7/1.8/49.1 and a 100.0% total. Final regressions are packaged XLAM
+74/74, Ribbon/compile 142/142, live roles 47/47, ordered Release 1 chain 30/30,
+launcher contracts 24/24, dedicated NAS safety 16/16, deterministic static
+baseline 19/19, and reviewed cleanup 13/13. The expanded-page layout RED found
+one Retrieve-button/Description overlap; the polished rebuild is GREEN across
+all five pages at minimum/default/expanded plus minimize/restore/maximize.
+Operator-visible workbench acceptance remains required by the unchecked gate.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.

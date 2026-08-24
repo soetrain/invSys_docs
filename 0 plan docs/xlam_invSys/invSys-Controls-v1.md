@@ -1,8 +1,8 @@
 # invSys Form Controls v1
 
-**Version:** 1.22
+**Version:** 1.23
 
-**Inventory date:** 2026-08-23
+**Inventory date:** 2026-08-24
 
 **Architecture:** invSys v4.11, Release 1
 **Scope:** every checked-in VBA UserForm source file used by Core, Admin,
@@ -250,16 +250,37 @@ unchanged.
 
 The same checkpoint rejected manual/GUID Process identities and the unexplained
 display word **Basis**. The approved target uses locked, automatically generated
-three-character Base-36 Process, Recipe, Requirement, and Output IDs. Process
-Designer adds one **Edit Process on Sheet** toggle. It writes a uniquely named
-formula table to the captured saved Production workbook, changes to **Retrieve
-Process from Sheet**, and deletes only that table after a valid retrieval. Raw
+three-character Base-36 Process, Recipe, Requirement, and Output IDs. Raw
 **Basis** wording is replaced by **Batch basis quantity** for percentage inputs
-and **Yield basis quantity** for percentage outputs. This target is normative in
-Architecture v4.11 D15 and Plan 022 Slice 4y. Focused source is 6/6 GREEN;
-packaged callback/restart is 2/2 GREEN; the dedicated NAS launcher gate is
-16/16 GREEN with no canonical file changes. Visible formulation-table and
-five-page layout UAT remain pending.
+and **Yield basis quantity** for percentage outputs. Slice 4y first proved a
+single-table round trip at focused source 6/6 and packaged callback/restart 2/2;
+its toggle was then deliberately superseded by Slice 4z. The dedicated NAS
+launcher gate remains 16/16 GREEN with no canonical file changes. Visible
+formulation-table and five-page layout UAT remain pending.
+
+### Slice 4z multi-table import workbench: packaged GREEN; visible UAT pending
+
+The 2026-08-24 checkpoint visibly accepted the first generated Process table
+on **invSys Process Editor**. It rejected the single toggle/single-table model,
+operator-authored Percent, output Item Code and Design ID, free-text Record Type,
+and omission of Ingredient Assignment data. The approved target has separate
+create/retrieve actions, multiple simultaneous selected tables, calculated
+Percent/basis columns, validation dropdowns, generated output Design identity,
+and item-search-backed acceptable managed items. Packaged RED/GREEN is complete;
+visible retest remains pending under Plan 022 Slice 4z.
+
+The focused source contract is now 7/7 GREEN and the packaged public-launcher
+gate is 2/2 GREEN. The packaged run created three simultaneous Process tables,
+retrieved only the selected first table, preserved the other two through a clean
+Excel restart, and retrieved those remaining tables one at a time. Formula
+evidence is 611.2 lb with 16.4/32.7/1.8/49.1 percentages totaling 100.0%.
+Final regression evidence is XLAM 74/74, Ribbon/compile 142/142, live roles
+47/47, ordered Release 1 chain 30/30, launcher contracts 24/24, dedicated NAS
+16/16, deterministic static baseline 19/19, and reviewed cleanup 13/13. The
+initial expanded-page layout RED exposed a Retrieve-button/Description overlap;
+the relocated 170-point **Retrieve Selected Process** control is GREEN across
+all five pages and native minimize/restore/maximize transitions. Visible
+operator workbench UAT remains pending.
 
 ### Connection progress, aggregate reference detail, and Events view: packaged GREEN
 
@@ -378,7 +399,7 @@ separate reachability review before removal.
 | Core | `frmSignIn` | Active, runtime-generated | invSys user authentication |
 | Core | `frmWarehouseConnection` | Active, runtime-generated | NAS/root connection and warehouse target selection |
 | Operations | `frmInventoryViewer` | Active, runtime-generated | Read-only current inventory levels, search, freshness, refresh |
-| Production | `frmProduction` | Active, runtime-generated; Slices 4x and 4y packaged GREEN, visible UAT pending | Process design, worksheet formulation round-trip, Recipe graph design, ingredient assignment, run-list, and experimental run-tree workflows |
+| Production | `frmProduction` | Active, runtime-generated; Slices 4x/4y GREEN, Slice 4z packaged GREEN with visible UAT pending | Process design, multi-table worksheet import, Recipe graph design, ingredient assignment, run-list, and experimental run-tree workflows |
 | Receiving | `frmReceiving` | Active, runtime-generated | Receiving, outbound Return/Dump disposition, and non-operational Purchasing tab |
 | Shipping | `frmBoxVersionSaveChoice` | Active, runtime-generated | Choose update-versus-new box alternative behavior |
 | Shipping | `frmShipmentsTally` | Active, runtime-generated | Shipping, Box Designer, and Box Maker tabs |
@@ -768,9 +789,10 @@ removing the repeated Saving notices caused by unchanged read-only loads.
 |---|---|---|
 | Saved Processes | `lstProcesses`; `btnProcessRefresh`, `btnProcessNew`, `btnProcessLoad`, `btnProcessReuse` | Lists named Process ID/version/status records and starts a draft from a blank or reusable definition. |
 | Process identity | `txtProcessName`, locked `txtProcessId`, locked `txtProcessVersion`, `txtProcessDescription` | Edits the versioned Process header. invSys allocates the next available three-character Base-36 ID and version; the operator does not type either identity. |
-| Worksheet editor | `btnProcessWorksheet` -- **Edit Process on Sheet** / **Retrieve Process from Sheet** | Toggles a uniquely named formula table in the exact captured `Production.Operator.xlsm`. Retrieval replaces the form draft only after validation and deletes only its owned temporary table; failure leaves the table for correction. |
+| Worksheet workbench | `btnProcessWorksheetCreate` -- **Create Process Table**; `btnProcessWorksheetRetrieve` -- **Retrieve Selected Process** | Creates any number of uniquely named Process tables in the exact captured `Production.Operator.xlsm`; retrieval targets the table containing the selected cell, validates it, and deletes only that table after success. |
 | Requirements | `lstProcessRequirements`; locked `txtRequirementId`, `txtRequirementName`, `txtRequirementQty`, `txtRequirementPercent`, `txtRequirementYieldBasis`, `txtRequirementUom`; `btnProcessRequirementAdd`, `btnProcessRequirementUpdate`, `btnProcessRequirementRemove`, `btnProcessRequirementUp`, `btnProcessRequirementDown` | Defines typed external/upstream input requirements. The displayed label is **ID / Name / Qty / % / Batch basis quantity / UOM**; IDs are generated Base-36 values. Same-UOM worksheet input rows calculate basis and percent formulas. |
-| Outputs | `lstProcessOutputs`; locked `txtProcessOutputId`, `txtProcessOutputName`, `txtProcessOutputItemCode`, `txtProcessOutputDesignId`, `txtProcessOutputDesignVersion`, `txtProcessOutputQty`, `txtProcessOutputPercent`, `txtProcessOutputYieldBasis`, `txtProcessOutputUom`; `btnProcessOutputAdd`, `btnProcessOutputUpdate`, `btnProcessOutputRemove`, `btnProcessOutputUp`, `btnProcessOutputDown` | Defines one or more output definitions. The displayed label uses **Yield basis quantity**, output IDs are generated Base-36 values, and Save/Release rejects a Process with no output. |
+| Outputs | `lstProcessOutputs`; locked `txtProcessOutputId`, `txtProcessOutputDesignId`, `txtProcessOutputDesignVersion`; `txtProcessOutputName`, `txtProcessOutputQty`, `txtProcessOutputPercent`, `txtProcessOutputYieldBasis`, `txtProcessOutputUom`; hidden/internal `txtProcessOutputItemCode`; `btnProcessOutputAdd`, `btnProcessOutputUpdate`, `btnProcessOutputRemove`, `btnProcessOutputUp`, `btnProcessOutputDown` | Defines one or more output designs. The displayed label uses **Yield basis quantity**; Output and Design identities are generated; no output Item Code is authored by the operator; Save/Release rejects a Process with no output. |
+| Worksheet table columns | **Record Type**, **ID**, **Name**, **Qty**, **Percent**, **Basis Qty**, **UOM**, **Design ID**, **Design Version**, **Instruction**, **Requirement ID**, **Acceptable Managed Item**, managed hidden **Accepted SKU** | Record Type is dropdown-backed; INPUT Percent/basis and OUTPUT Design identity are formula/system managed. ALTERNATIVE rows carry Ingredient Assignment and selecting Acceptable Managed Item opens the Core item search. |
 | Instructions | `lstProcessInstructions`, `txtProcessInstruction`; `btnProcessInstructionAdd`, `btnProcessInstructionUpdate`, `btnProcessInstructionRemove`, `btnProcessInstructionUp`, `btnProcessInstructionDown` | Defines reusable operator instructions independently from input/output rows. |
 | Lifecycle | `btnProcessValidate`, `btnProcessSave`, `btnProcessRelease`, `btnProcessObsolete`, `btnProcessClear` | Validates and queues immutable Designs Domain Process lifecycle events. |
 
