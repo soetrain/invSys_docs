@@ -282,6 +282,25 @@ the relocated 170-point **Retrieve Selected Process** control is GREEN across
 all five pages and native minimize/restore/maximize transitions. Visible
 operator workbench UAT remains pending.
 
+### Slice 4aa text-safe IDs, catalog UOMs, and bulk import: packaged GREEN; visible UAT pending
+
+The accepted worksheet Percent formulas remain unchanged. The Process table now
+requires text-safe generated Base-36 metadata/row identities, automatic INPUT
+Requirement IDs, UOM validation from Settings' **Recipe UOM Catalog**, numbered
+acceptable managed-item/SKU pairs on INPUT rows, actual Core picker opening on
+cell entry, and Ctrl+click multi-table DRAFT import. This is a deliberate D15
+refinement protected through the public Production launcher, worksheet event,
+and Process create/retrieve handlers.
+
+The 2026-08-24 focused RED was `1/8`, with seven missing behavior contracts.
+Focused source is now `8/8` GREEN and historical Slice 4z source remains `7/7`
+GREEN. The packaged Production/restart proof is `2/2` GREEN and records all
+eight bulk-import fields true, including actual `PickerOpened`, multi-area
+selection, and multi-table DRAFT persistence through the public form handler.
+The full packaged, role-workflow, Release 1 chain, NAS, static, reviewed-growth,
+and five-page layout regressions are GREEN. Operator-visible UAT remains
+required before acceptance is checked complete.
+
 ### Connection progress, aggregate reference detail, and Events view: packaged GREEN
 
 Slice 4w renders **Connecting to warehouse storage...** before the synchronous
@@ -789,10 +808,10 @@ removing the repeated Saving notices caused by unchanged read-only loads.
 |---|---|---|
 | Saved Processes | `lstProcesses`; `btnProcessRefresh`, `btnProcessNew`, `btnProcessLoad`, `btnProcessReuse` | Lists named Process ID/version/status records and starts a draft from a blank or reusable definition. |
 | Process identity | `txtProcessName`, locked `txtProcessId`, locked `txtProcessVersion`, `txtProcessDescription` | Edits the versioned Process header. invSys allocates the next available three-character Base-36 ID and version; the operator does not type either identity. |
-| Worksheet workbench | `btnProcessWorksheetCreate` -- **Create Process Table**; `btnProcessWorksheetRetrieve` -- **Retrieve Selected Process** | Creates any number of uniquely named Process tables in the exact captured `Production.Operator.xlsm`; retrieval targets the table containing the selected cell, validates it, and deletes only that table after success. |
+| Worksheet workbench | `btnProcessWorksheetCreate` -- **Create Process Table**; `btnProcessWorksheetRetrieve` -- **Retrieve Selected Process**; `btnProcessWorksheetAddAlternative` -- **Add Acceptable Item** | Creates any number of uniquely named Process tables in the exact captured `Production.Operator.xlsm`; Add Acceptable Item appends one numbered managed-item/hidden-SKU pair to the selected table; retrieval accepts one table or Ctrl+click cells across several tables, imports each confirmed definition as DRAFT, and deletes only successful selected tables. |
 | Requirements | `lstProcessRequirements`; locked `txtRequirementId`, `txtRequirementName`, `txtRequirementQty`, `txtRequirementPercent`, `txtRequirementYieldBasis`, `txtRequirementUom`; `btnProcessRequirementAdd`, `btnProcessRequirementUpdate`, `btnProcessRequirementRemove`, `btnProcessRequirementUp`, `btnProcessRequirementDown` | Defines typed external/upstream input requirements. The displayed label is **ID / Name / Qty / % / Batch basis quantity / UOM**; IDs are generated Base-36 values. Same-UOM worksheet input rows calculate basis and percent formulas. |
 | Outputs | `lstProcessOutputs`; locked `txtProcessOutputId`, `txtProcessOutputDesignId`, `txtProcessOutputDesignVersion`; `txtProcessOutputName`, `txtProcessOutputQty`, `txtProcessOutputPercent`, `txtProcessOutputYieldBasis`, `txtProcessOutputUom`; hidden/internal `txtProcessOutputItemCode`; `btnProcessOutputAdd`, `btnProcessOutputUpdate`, `btnProcessOutputRemove`, `btnProcessOutputUp`, `btnProcessOutputDown` | Defines one or more output designs. The displayed label uses **Yield basis quantity**; Output and Design identities are generated; no output Item Code is authored by the operator; Save/Release rejects a Process with no output. |
-| Worksheet table columns | **Record Type**, **ID**, **Name**, **Qty**, **Percent**, **Basis Qty**, **UOM**, **Design ID**, **Design Version**, **Instruction**, **Requirement ID**, **Acceptable Managed Item**, managed hidden **Accepted SKU** | Record Type is dropdown-backed; INPUT Percent/basis and OUTPUT Design identity are formula/system managed. ALTERNATIVE rows carry Ingredient Assignment and selecting Acceptable Managed Item opens the Core item search. |
+| Worksheet table columns | **Record Type**, text-safe generated **ID**, **Name**, **Qty**, **Percent**, **Basis Qty**, catalog-dropdown **UOM**, generated **Design ID**, **Design Version**, **Instruction**, automatic **Requirement ID**, **Acceptable Managed Item 1** through **4** (and added pairs), with each matching managed hidden **Accepted SKU n** | Record Type is dropdown-backed; INPUT Percent/basis/Requirement ID and OUTPUT Design identity are formula/system managed. Entering any numbered acceptable-item cell by mouse, Tab, or Enter opens Core item search and fills that pair. Historical ALTERNATIVE rows remain import-compatible. |
 | Instructions | `lstProcessInstructions`, `txtProcessInstruction`; `btnProcessInstructionAdd`, `btnProcessInstructionUpdate`, `btnProcessInstructionRemove`, `btnProcessInstructionUp`, `btnProcessInstructionDown` | Defines reusable operator instructions independently from input/output rows. |
 | Lifecycle | `btnProcessValidate`, `btnProcessSave`, `btnProcessRelease`, `btnProcessObsolete`, `btnProcessClear` | Validates and queues immutable Designs Domain Process lifecycle events. |
 

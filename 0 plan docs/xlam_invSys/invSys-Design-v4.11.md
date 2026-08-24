@@ -756,6 +756,11 @@ Each output definition declares:
   and cannot save, release, obsolete, or execute a Process by itself.
 - Each table supports pasted/reformatted CSV rows. **Record Type** cells use
   list validation for `INPUT`, `OUTPUT`, `INSTRUCTION`, and `ALTERNATIVE`.
+  Process metadata identity, row identity, Requirement ID, Output ID, and
+  generated Design identity are retained as text so Excel never removes the
+  leading zeroes required by the locked three-character Base-36 contract.
+  Every INPUT row receives its generated Requirement ID automatically; the
+  operator does not type or maintain it.
   Percent and basis columns are invSys-owned calculated columns: for every
   same-UOM INPUT row they calculate from quantity and are restored before
   retrieval rather than accepted as operator-authored percentages. For
@@ -767,17 +772,27 @@ Each output definition declares:
 - OUTPUT rows expose a locked/generated Design ID and version derived from the
   owning Process/Output identities. The worksheet has no operator-authored
   Item Code column for Process outputs.
-- ALTERNATIVE rows expose Ingredient Assignment in the same Process table:
-  Requirement ID, acceptable managed item display name, and its managed SKU.
-  Existing assignments are exported with the Process. Selecting an acceptable
-  item cell invokes the existing Core item-search interaction, which fills the
-  managed item/SKU projection without allocating a physical `System_Key`.
-- Retrieval runs the same Process draft validation used by the form, replaces
-  the form draft only after the selected table passes, and then deletes only
-  that selected invSys-owned table/metadata. Other Process tables remain. A
-  failed or cancelled retrieval leaves the selected table intact for
-  correction. A saved/released Process sent for editing becomes a new generated
-  DRAFT version; no immutable version is rewritten.
+- INPUT rows expose Ingredient Assignment in the same Process table as numbered
+  pairs: **Acceptable Managed Item 1** plus its hidden managed SKU, followed by
+  **Acceptable Managed Item 2**, **3**, **4**, and further pairs added on
+  demand. Existing assignments are exported horizontally against their owning
+  generated Requirement ID. Entering any acceptable-item cell by mouse, Tab,
+  or Enter invokes the existing Core item-search interaction and fills that
+  exact numbered managed item/SKU pair without allocating a physical
+  `System_Key`. Historical vertical `ALTERNATIVE` rows remain import-compatible
+  but are not the primary operator layout.
+- UOM cells use an in-cell dropdown sourced from the current warehouse **Recipe
+  UOM Catalog** maintained in Settings. Retrieval rejects a UOM absent from
+  that catalog, in addition to the compatible-common-basis checks.
+- Retrieve accepts one selected table or the distinct invSys Process tables
+  intersected by a Ctrl+click multi-area selection in the captured workbook.
+  It validates every selected table, imports each successful definition through
+  the same public Process DRAFT-save authority used by the form, and removes
+  only a table whose DRAFT save is confirmed. Failed and unselected tables
+  remain for correction. Selection area order is not authority; imports run in
+  deterministic worksheet/table order. A saved/released Process sent for
+  editing becomes a new generated DRAFT version; no immutable version is
+  rewritten. Release and obsolete remain explicit operator actions.
 
 **Recipe graph contract:**
 ```text
@@ -845,9 +860,10 @@ the Process worksheet workbench additionally require RED/GREEN through
 `mProduction.BtnOpenProductionForm` and the actual Process Designer
 create/retrieve handlers, including multiple simultaneous tables, selected-
 table binding, Record Type validation, calculated percentages, generated output
-identity, Ingredient Assignment/item-search projection, mixed-UOM rejection,
-save/reopen discovery, selected-table deletion, and failed-retrieve
-preservation.
+identity, text-safe generated Requirement IDs, catalog-backed UOM validation,
+actual item-search form opening, numbered alternative projection, mixed-UOM
+rejection, save/reopen discovery, Ctrl+click multi-table DRAFT import, selected-
+table deletion, and failed-retrieve preservation.
 
 ---
 ## System Topology (Release 1: VBA-Only)

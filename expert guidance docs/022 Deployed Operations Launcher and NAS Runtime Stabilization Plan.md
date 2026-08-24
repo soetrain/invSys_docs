@@ -1577,6 +1577,73 @@ one Retrieve-button/Description overlap; the polished rebuild is GREEN across
 all five pages at minimum/default/expanded plus minimize/restore/maximize.
 Operator-visible workbench acceptance remains required by the unchecked gate.
 
+### Slice 4aa -- text-safe Process identities and bulk assignment import
+
+The 2026-08-24 visible checkpoint accepted the managed Percent formulas and
+exposed the next Process-workbench contract gaps. Excel displayed generated
+`001` identities as `1`, Requirement ID remained operator-facing, UOM lacked
+the Settings catalog dropdown, only one acceptable-item slot was available,
+the Core search did not visibly open on cell entry, and Ctrl+click selections
+could not retrieve several Process tables. This slice deliberately refines the
+D15/Slice 4z worksheet contract while preserving its packaged evidence.
+
+Required behavior:
+
+- [x] preserve Process, Requirement, Output, and generated Design identity as
+  text, including leading zeroes, and generate each INPUT Requirement ID;
+- [x] apply the current Settings **Recipe UOM Catalog** as the UOM-column
+  dropdown and reject values outside that catalog on retrieval;
+- [x] replace the primary vertical alternative-entry layout with numbered
+  **Acceptable Managed Item 1**, **2**, **3**, **4** managed item/SKU pairs on
+  each INPUT row, with an action that appends another pair when needed;
+- [x] open the existing Core item-search form when the operator enters any
+  acceptable-item cell by mouse, Tab, or Enter, and commit into the matching
+  numbered pair;
+- [x] resolve every distinct Process table intersected by a captured-workbook
+  Ctrl+click multi-area selection, validate it, save each successful definition
+  as an immutable DRAFT through the public Process action, and delete only its
+  confirmed table; and
+- [x] preserve historical vertical `ALTERNATIVE` row import compatibility,
+  captured-workbook binding, headless Core/Domain authority, and all prior GREEN
+  regressions.
+
+D13 RED sequence:
+
+1. [x] Enter through `mProduction.BtnOpenProductionForm` and the actual create
+   handler; RED is `1`/`D-1-1`, blank Requirement ID, and absent catalog UOM
+   validation.
+2. [x] Enter an acceptable-item cell through the worksheet selection event;
+   RED is recognition without proof that the Core search form opened, plus the
+   absence of numbered alternative pairs.
+3. [x] Ctrl+click cells in two Process tables and invoke the actual Retrieve
+   handler; RED is single-table resolution and no bulk DRAFT-save result.
+
+Gate:
+
+- [x] Architecture v4.11, this plan, and controls v1 are reconciled before the
+  changed implementation;
+- [x] focused source and packaged public-handler RED/GREEN are recorded;
+- [x] visible identities remain `001`-style text, Requirement IDs are automatic,
+  UOM dropdown values match Settings, and numbered alternatives round-trip;
+- [x] the actual selection event visibly opens Core item search for each
+  numbered acceptable-item column;
+- [x] Ctrl+click import saves and removes successful selected tables only, while
+  failed/unselected tables remain; and
+- [x] prior Production lifecycle/run, Viewer, packaged launcher, saved-workbook,
+  NAS, XLAM/Ribbon, full-chain, static, dynamic-call, and bloat regressions
+  remain GREEN before visible UAT resumes.
+
+Automated evidence recorded 2026-08-24: focused source `8/8`, historical
+Slice 4z source `7/7`, packaged public Production/restart `2/2`, packaged XLAM
+`74/74`, Ribbon/compile `142/142`, live role workflows `47/47`, ordered Release
+1 chain `30/30`, launcher contracts `24/24`, dedicated NAS `16/16`, static
+determinism `19/19`, reviewed cleanup `13/13`, and five-page packaged layout
+GREEN at minimum/default/expanded plus minimize/restore/maximize. The packaged
+bulk result records `TextSafeIds=True`, `RequirementIds=True`,
+`UomCatalog=True`, `NumberedAlternatives=True`, `AddedAlternative=True`,
+`PickerOpened=True`, `MultiAreaSelection=True`, and `MultiTableDrafts=True`.
+Visible operator acceptance of this refined worksheet workflow remains pending.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.
