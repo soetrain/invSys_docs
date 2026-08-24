@@ -1546,7 +1546,7 @@ This corrective plan is complete only when:
 - [x] Receiving self-provisions or opens its station-local workbook;
 - [x] Production and Shipping self-provision/reuse station-local workbooks and
   have no launcher type mismatch;
-- [ ] D15 Process Designer, Recipe Designer, Ingredients Assignment, and
+- [x] D15 Process Designer, Recipe Designer, Ingredients Assignment, and
   multi-output Production Run - List contracts are packaged GREEN through the
   actual operator handlers;
 - [ ] visible saved-workbook/NAS Production acceptance proves reusable
