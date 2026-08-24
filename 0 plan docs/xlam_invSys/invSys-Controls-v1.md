@@ -237,7 +237,9 @@ Events exposes **Production Input Consumed** and **Production Output Created**.
 Clean-session saved-workbook restart is GREEN through the public launcher and
 actual Run List **Load** handler: a second Excel process reopens the same saved
 Production workbook and loads the persisted exact released Recipe. Dedicated-
-NAS Production UAT remains open.
+NAS launcher readiness is 16/16 across two clean sessions with no canonical
+file changes from launcher use. Visible reusable-workflow and five-page layout
+UAT remain open.
 
 ### Connection progress, aggregate reference detail, and Events view: packaged GREEN
 

@@ -1397,7 +1397,11 @@ bounded reviewed exception at 13/13. A second clean Excel process reopens the
 same saved station-local Production workbook and loads the persisted exact
 released Recipe through the actual Run List **Load** handler; focused source is
 4/4 and packaged restart runtime is 2/2. Visible dedicated-NAS acceptance
-remains open.
+remains open. The current package also passes dedicated-NAS launcher readiness
+16/16 across two clean sessions with zero canonical changes from launcher use.
+That gate first reported 14/16 because Production list reads dirtied and saved
+the Designs workbook; idempotent schema formatting and save-on-dirty-only
+resolution corrected the regression under a 6/6 focused source contract.
 
 Automated gate:
 
