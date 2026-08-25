@@ -7,7 +7,8 @@ item/SKU before visible Production acceptance continues.
 # Current verified state
 
 - Last verified 2026-08-25: code `main` at `e11bb6c`; normative/plan/control
-  docs `main` at `a16ec75`; both are intended for `origin/main`.
+  docs commit `a16ec75`; both are pushed to `origin/main` and this handoff is
+  the current docs pointer.
 - Active slice: Plan 022 Slice 4ac, automated GREEN; visible OUTPUT picker and
   retrieval UAT is pending.
 - User visibly accepted that the Process picker now contains current managed
