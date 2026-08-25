@@ -1644,6 +1644,56 @@ bulk result records `TextSafeIds=True`, `RequirementIds=True`,
 `PickerOpened=True`, `MultiAreaSelection=True`, and `MultiTableDrafts=True`.
 Visible operator acceptance of this refined worksheet workflow remains pending.
 
+### Slice 4ab -- Process picker managed-inventory projection blocker
+
+The 2026-08-24 visible checkpoint accepted Process-table creation, added tables,
+and automatic item-search opening. The opened Production picker nevertheless
+reported zero managed inventory rows while Inventory Viewer showed the seeded
+managed inventory. This is a newly discovered Slice 4 acceptance blocker, not a
+D15 architecture change: the Core picker still treated legacy `ROW` as its
+required row identity even though Architecture v4.11 prohibits `ROW` and makes
+`System_Key` the exact managed inventory identity.
+
+Required behavior:
+
+- [x] resolve Process acceptable-item search rows from the current captured
+  warehouse inventory projection using exact nonblank `System_Key` identity;
+- [x] show current managed inventory in the opened picker when the same
+  inventory is visible in Inventory Viewer;
+- [x] keep the Process worksheet assignment projection limited to acceptable
+  managed item/SKU identity and never allocate a physical `System_Key` merely
+  from picker selection; and
+- [x] preserve captured-workbook binding, current-warehouse isolation, Core
+  picker ownership, headless Domain authority, and all Slice 4aa GREEN behavior.
+
+D13 RED sequence:
+
+1. [x] Enter a numbered acceptable-item cell through the actual Production
+   worksheet selection event after managed inventory is available.
+2. [x] Record meaningful RED when the search form opens but its managed
+   inventory result count is zero because the source requires `ROW`.
+3. [x] Re-run the same public packaged action and require both
+   `PickerOpened=True` and `PickerInventoryRows=True`.
+
+Gate:
+
+- [x] Architecture v4.11, this plan, and controls v1 agree that `System_Key` is
+  the only managed inventory row identity and no normative redesign is needed;
+- [x] focused source and packaged public-handler RED/GREEN are recorded;
+- [x] the packaged picker contains current managed inventory while preserving
+  the exact captured workbook and warehouse context; and
+- [x] Slice 4aa, packaged launcher, saved-workbook, NAS, full-chain, static,
+  dynamic-call, and bloat regressions remain GREEN before visible UAT resumes.
+
+Automated evidence recorded 2026-08-25: focused source `4/4`, historical Slice
+4aa source `8/8`, historical Slice 4z source `7/7`, packaged public Production
+and clean restart `2/2`, packaged XLAM `74/74`, Ribbon/compile `142/142`, live
+role workflows `47/47`, ordered Release 1 chain `30/30`, launcher contracts
+`24/24`, dedicated NAS `16/16`, deterministic static baseline `19/19`, and
+reviewed cleanup `13/13`. The packaged result records both
+`PickerOpened=True` and `PickerInventoryRows=True`. Visible confirmation against
+the user's seeded warehouse remains pending.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.

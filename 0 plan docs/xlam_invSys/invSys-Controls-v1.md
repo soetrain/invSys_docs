@@ -301,6 +301,27 @@ The full packaged, role-workflow, Release 1 chain, NAS, static, reviewed-growth,
 and five-page layout regressions are GREEN. Operator-visible UAT remains
 required before acceptance is checked complete.
 
+### Slice 4ab Process picker inventory projection: packaged GREEN; visible retest pending
+
+The 2026-08-24 operator checkpoint accepted Process-table creation, multiple
+tables, and automatic opening of **Production Item Search**. The opened picker
+showed no rows even though seeded managed inventory was visible in Inventory
+Viewer. This is a blocker against the existing control contract: every
+acceptable-item picker result must come from the current warehouse managed
+inventory projection, use exact nonblank `System_Key` identity internally, and
+write only the selected managed item/SKU alternative to the Process table. The
+picker must not require or expose legacy `ROW`, and selecting an alternative
+must not allocate an inventory entity.
+
+The focused source contract is `4/4` GREEN. The packaged public Production
+callback and clean-restart proof is `2/2` GREEN and records both
+`PickerOpened=True` and `PickerInventoryRows=True` after resolving active exact
+Inventory Domain entities and deduplicating them to acceptable SKU alternatives.
+Packaged XLAM, Ribbon/compile, live role, ordered Release 1 chain, launcher, NAS,
+static, and reviewed-growth regressions are GREEN. The user still needs to
+confirm that their seeded warehouse inventory now appears and that selecting an
+item writes the expected acceptable managed item/SKU pair.
+
 ### Connection progress, aggregate reference detail, and Events view: packaged GREEN
 
 Slice 4w renders **Connecting to warehouse storage...** before the synchronous
