@@ -718,7 +718,8 @@ Each input requirement declares:
   zero or more acceptable managed ITEM_CODE/SKU alternatives
 
 Each output definition declares:
-  OutputId, OutputName, generated DesignId/DesignVersion,
+  OutputId, OutputName, managed ITEM_CODE/SKU,
+  generated DesignId/DesignVersion,
   Qty or Percent/YieldBasisQty, and UOM
 ```
 - Every Process has at least one output. Requirement IDs and output IDs are
@@ -727,12 +728,17 @@ Each output definition declares:
 - An output definition is design metadata, not a permanent inventory row and
   does not own a permanent `System_Key`. Each execution of that output creates
   a managed inventory entity with a new system-wide unique `System_Key`.
-- An operator does not author an `ITEM_CODE` for a Process output. invSys
-  generates the output Design identity from the Process and Output identities;
-  that identity supplies the system-managed design SKU/`ITEM_CODE` projection
-  required when execution creates physical inventory. Acceptable managed SKUs
-  belong only to Ingredient Assignment records for input requirements and do
-  not become Process-output identity.
+- Every Process output names a managed inventory item/SKU. The operator selects
+  that managed item through the existing Core item-search interaction; the
+  worksheet displays its item name and retains its `ITEM_CODE`/SKU in a hidden,
+  invSys-managed **Output SKU** column. The operator does not type or maintain
+  an output Item Code. This output catalog identity is distinct from the
+  generated Design identity and never imports or allocates an existing physical
+  inventory entity. Each execution still creates the output under its own new
+  `System_Key`.
+- Acceptable managed SKU alternatives belong to Ingredient Assignment records
+  for input requirements. An output's one required managed SKU is output
+  identity, not an acceptable-input alternative.
 - Ingredients Assignment edits the acceptable SKU alternatives for each
   Process requirement. Those alternatives are versioned with the Process and
   are reused wherever that exact Process version is selected.
@@ -770,8 +776,11 @@ Each output definition declares:
   require an explicit conversion before percentage calculation and are rejected
   on retrieval when no compatible common basis exists.
 - OUTPUT rows expose a locked/generated Design ID and version derived from the
-  owning Process/Output identities. The worksheet has no operator-authored
-  Item Code column for Process outputs.
+  owning Process/Output identities. Entering an OUTPUT **Name** cell by mouse,
+  Tab, or Enter invokes the existing Core item-search interaction and fills the
+  visible Name plus the hidden, system-managed **Output SKU** cell. A selected
+  managed SKU is required on retrieval. The worksheet has no operator-authored
+  Item Code column and does not retain a source inventory `System_Key`.
 - INPUT rows expose Ingredient Assignment in the same Process table as numbered
   pairs: **Acceptable Managed Item 1** plus its hidden managed SKU, followed by
   **Acceptable Managed Item 2**, **3**, **4**, and further pairs added on

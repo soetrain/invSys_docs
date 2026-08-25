@@ -1691,8 +1691,64 @@ and clean restart `2/2`, packaged XLAM `74/74`, Ribbon/compile `142/142`, live
 role workflows `47/47`, ordered Release 1 chain `30/30`, launcher contracts
 `24/24`, dedicated NAS `16/16`, deterministic static baseline `19/19`, and
 reviewed cleanup `13/13`. The packaged result records both
-`PickerOpened=True` and `PickerInventoryRows=True`. Visible confirmation against
-the user's seeded warehouse remains pending.
+`PickerOpened=True` and `PickerInventoryRows=True`. On 2026-08-25 the user
+visibly confirmed that current managed inventory appears in the search tool;
+selection into the numbered INPUT item/SKU pair remains part of final workflow
+acceptance.
+
+### Slice 4ac -- Process OUTPUT managed-item picker
+
+The 2026-08-25 visible checkpoint accepted that Production Item Search now
+shows current managed inventory. It then found that the same search interaction
+is absent for OUTPUT rows. The operator clarified that every Process OUTPUT is
+a managed inventory item. This is a deliberate D15 refinement: INPUTs continue
+to own numbered Ingredient Assignment alternatives, while each OUTPUT must own
+one picker-selected managed item/SKU in addition to its generated Design
+identity.
+
+Required behavior:
+
+- [x] entering an OUTPUT **Name** cell by mouse, Tab, or Enter opens the same
+  Core Production Item Search used by INPUT acceptable-item cells;
+- [x] picker commit fills the visible output Name and a hidden system-managed
+  **Output SKU** value; the operator never types or maintains an Item Code;
+- [x] retrieve/save/release requires and persists that selected output SKU,
+  while Output ID and Design ID/version remain generated;
+- [x] selecting an output catalog item never captures or reuses an inventory
+  `System_Key`; run completion creates every output entity under its own new
+  exact key; and
+- [x] preserve captured-workbook binding, current-warehouse isolation, Core
+  picker ownership, headless Domain authority, numbered INPUT alternatives,
+  and all Slice 4ab GREEN behavior.
+
+D13 RED sequence:
+
+1. [x] Create a Process table through the public form action and enter an
+   OUTPUT Name cell through the actual worksheet selection event.
+2. [x] Record meaningful RED because the cell is not a picker target and the
+   Core commit handler only resolves numbered INPUT alternative columns.
+3. [x] Commit a current managed item through the same picker handler, retrieve
+   the table through the public form action, and require the output Name/SKU to
+   round-trip without any physical `System_Key`.
+
+Gate:
+
+- [x] Architecture v4.11, this plan, and controls v1 agree on the distinct
+  managed output SKU, generated Design identity, and new execution-time key;
+- [x] focused source and packaged public-handler RED/GREEN are recorded;
+- [x] Slice 4ab plus applicable packaged, launcher, NAS, full-chain, static,
+  dynamic-call, and bloat regressions remain GREEN; and
+- [ ] visible operator confirmation proves OUTPUT search and retrieval before
+  Production workflow acceptance resumes.
+
+Automated evidence recorded 2026-08-25: focused RED `1/6`, focused GREEN `6/6`,
+historical Slice 4ab `4/4`, Slice 4aa `8/8`, and Slice 4z `7/7`; packaged public
+Production callback and clean restart `2/2` with `OutputPickerOpened=True`,
+`OutputPickerCommitted=True`, `OutputSkuHidden=True`,
+`OutputSkuRoundTrip=True`, and `NoPhysicalKey=True`; packaged XLAM `74/74`,
+Ribbon/compile `142/142`, live role workflows `47/47`, clean ordered Release 1
+chain `30/30`, launcher contracts `24/24`, dedicated NAS `16/16`, deterministic
+static baseline `19/19`, and reviewed cleanup/growth `13/13`.
 
 ## 6. Batched user acceptance checkpoint
 
