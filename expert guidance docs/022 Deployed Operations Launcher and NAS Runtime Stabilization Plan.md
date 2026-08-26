@@ -1866,6 +1866,68 @@ is `74/74`, Ribbon/compile `142/142`, live roles `47/47`, ordered Release 1
 chain `30/30`, launcher contracts `24/24`, dedicated NAS `16/16`, deterministic
 static baseline `19/19`, and reviewed cleanup/growth `13/13`.
 
+### Slice 4af -- Recipe identity initialization and editable version
+
+The 2026-08-26 visible Recipe Designer checkpoint found that entering a Recipe
+name and adding a released Process still left Recipe ID and Version blank.
+**Save Draft** and **Release** consequently stopped at `Recipe ID, version, and
+name are required.` The operator confirmed that Recipe ID is invSys-owned and
+must be automatic, while Version must receive an automatic proposal but remain
+editable. This is a deliberate D15 contract correction within Slice 4 saved-
+workbook/NAS Production acceptance and supersedes the earlier locked Recipe
+version control requirement.
+
+Required behavior:
+
+- [x] after the Production form initializes its saved Recipe list, a blank
+  Recipe draft displays the next collision-checked three-character Base-36 ID
+  and proposed version `1` without requiring **New Recipe**;
+- [x] **New Recipe** and **Clear** generate the same blank-draft identity, and
+  **Save Draft** and **Release** defensively restore either value if it is blank
+  before validating the operator's Recipe graph;
+- [x] Recipe ID remains locked and operator-inaccessible; Recipe Version is an
+  editable positive whole-number field whose nonblank valid operator value is
+  preserved through the actual Save Draft and Release handlers;
+- [x] a saved Recipe ID/version remains immutable, and the Designs Domain
+  rejects an unavailable or duplicate version rather than overwriting it; and
+- [x] Process identities, Recipe graph validation, captured-workbook binding,
+  packaged launcher reuse, headless Domain authority, and all prior GREEN
+  Production and Release 1 regressions remain unchanged.
+
+D13 RED sequence:
+
+1. [x] Add the focused Slice 4af source contract and record `0/6` RED against
+   the public Recipe Designer control and handler contract.
+2. [x] Extend packaged Production evidence through the actual New Recipe, Save
+   Draft, and Release click handlers to prove automatic ID/version, locked ID,
+   editable Version, and retention of an operator-edited version.
+3. [x] Rebuild and re-run the preserved Production, launcher, NAS, full-chain,
+   static, dynamic-call, and bloat regression gates before visible UAT resumes.
+
+Gate:
+
+- [x] Architecture v4.11, this plan, and controls v1 define the revised Recipe
+  identity contract before implementation;
+- [x] focused RED/GREEN and packaged public-handler GREEN are recorded;
+- [x] applicable regressions remain GREEN; and
+- [ ] visible operator confirmation proves ID/version are already populated,
+  Version can be edited, and Save Draft/Release no longer fail for missing
+  generated identity.
+
+Automated evidence recorded 2026-08-26: focused source RED `0/6` and GREEN
+`6/6`; packaged Production public callback plus clean restart `2/2`. The actual
+form paths record `RecipeIdentityInitialized=True`, `RecipeIdGenerated=True`,
+`RecipeVersionGenerated=True`, `RecipeIdLocked=True`,
+`RecipeVersionEditable=True`, and `EditedRecipeVersionRetained=True` after the
+operator-path test changes Version from `1` to `9` and invokes **Save Draft**
+and **Release**. Historical Slice 4y/4z/4aa/4ab/4ac/4ad/4ae source contracts
+remain GREEN. Packaged XLAM is `74/74`, Ribbon/compile `142/142`, live roles
+`47/47`, ordered Release 1 chain `30/30`, launcher contracts `24/24`, dedicated
+NAS `16/16`, deterministic static baseline `19/19`, and reviewed cleanup/growth
+`13/13`. Static metrics are 153 components, 5,081 procedures, and 1,038
+candidates. Rebuilt packages are registered; visible Recipe Designer acceptance
+remains open.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.

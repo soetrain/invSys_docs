@@ -694,9 +694,18 @@ remains experimental and outside Release 1 acceptance.
   Process draft. Process worksheet INPUT, OUTPUT, and INSTRUCTION rows likewise
   share one table-wide row-ID namespace; changing Record Type or entry order
   must never create or retain a duplicate row ID.
-  ID and version controls are locked projections. A concurrent lifecycle write
-  that makes a proposed identity/version unavailable is rejected and must be
-  retried with the next available generated value.
+  ID controls are locked projections. Process version remains a locked,
+  automatically proposed projection. Recipe Designer automatically supplies
+  the next Recipe ID and version `1` for a new blank draft when the form opens,
+  when **New Recipe** or **Clear** is used, and defensively before **Save Draft**
+  or **Release** validation if either generated value is blank. The Recipe ID
+  control is a locked projection; the Recipe version control is an editable
+  operator field initialized by invSys. An operator may replace the proposed
+  Recipe version with another positive whole-number version before saving or
+  releasing. Saving never rewrites an existing immutable version. A concurrent
+  lifecycle write or operator-entered version that makes a proposed
+  identity/version unavailable is rejected and must be retried with an
+  available version.
 - A Recipe pins exact Process versions. The same released Process version may
   be reused by many Recipe versions. A Process version referenced by a released
   Recipe may not be obsoleted until dependent released Recipe versions are

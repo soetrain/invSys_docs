@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.23
+**Version:** 1.24
 
 **Inventory date:** 2026-08-24
 
@@ -384,6 +384,21 @@ is `2/2` and records `OutputNamePickerSuppressed=True`, `UniqueRowIds=True`, and
 Release 1 chain, launcher, dedicated NAS, deterministic static, and reviewed
 growth gates are GREEN. Rebuilt packages are in `deploy/current`; visible
 operator acceptance remains pending.
+
+### Slice 4af Recipe identity initialization and editable version: packaged GREEN; visible retest pending
+
+Recipe Designer initializes a blank draft with the next collision-checked
+three-character Base-36 Recipe ID and proposed version `1` after the form loads,
+on **New Recipe**, and on **Clear**. Save Draft and Release also supply either
+missing generated value before validation. Recipe ID remains locked. Recipe
+Version is editable, accepts a positive whole number, and preserves the
+operator's valid nonblank value through lifecycle handlers; immutable existing
+versions are never overwritten. Focused test-first RED was `0/6`; focused
+source is `6/6` GREEN and packaged Production plus clean restart is `2/2`
+GREEN through the actual initialization, New Recipe, Save Draft, and Release
+paths. The packaged action changes Version from `1` to `9` and records the
+edited value retained. Rebuilt packages are registered; visible acceptance is
+pending.
 
 ### Connection progress, aggregate reference detail, and Events view: packaged GREEN
 
@@ -904,7 +919,7 @@ removing the repeated Saving notices caused by unchanged read-only loads.
 | Control group | Required displayed controls/actions | Purpose |
 |---|---|---|
 | Saved Recipes | `lstRecipes`; `btnRecipeRefresh`, `btnRecipeNew`, `btnRecipeLoad` | Lists Recipe ID/version/status records and starts or loads a draft. |
-| Recipe identity | `txtReusableRecipeName`, locked `txtReusableRecipeId`, locked `txtReusableRecipeVersion`, `txtReusableRecipeDescription` | Edits the versioned Recipe header; invSys allocates its three-character Base-36 ID and version automatically. |
+| Recipe identity | `txtReusableRecipeName`, locked `txtReusableRecipeId`, editable `txtReusableRecipeVersion`, `txtReusableRecipeDescription` | Edits the versioned Recipe header. invSys allocates the next collision-checked three-character Base-36 Recipe ID and proposes version `1` for a blank draft on form load, New Recipe, Clear, and as a Save Draft/Release fallback. The operator may replace Version with another positive whole number; Recipe ID cannot be typed, and an existing immutable ID/version is never overwritten. |
 | Process library/nodes | `lstReleasedProcesses`, `lstRecipeNodes`; `btnRecipeAddProcess`, `btnRecipeRemoveProcess` | Reuses exact released Process versions and assigns a node identity within this Recipe. |
 | Connections | `cmbConnectionFromNode`, `cmbConnectionOutput`, `cmbConnectionToNode`, `cmbConnectionRequirement`, `txtConnectionQty`, `txtConnectionPercent`, `txtConnectionUom`, `lstRecipeConnections`; `btnRecipeConnect`, `btnRecipeUpdateConnection`, `btnRecipeDisconnect` | Routes individual output quantities to compatible downstream requirements. Multiple outputs and multiple downstream edges are supported. |
 | Execution order | `lstRecipeNodes`; `btnRecipeMoveUp`, `btnRecipeMoveDown`, `btnRecipeAutoOrder` | Controls execution order. Validation rejects an order inconsistent with the directed graph. |
