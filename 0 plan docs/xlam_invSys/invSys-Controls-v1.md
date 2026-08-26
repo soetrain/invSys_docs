@@ -366,6 +366,25 @@ Ribbon/compile, live role, Release 1 chain, launcher, dedicated NAS, static, and
 reviewed-growth gates are GREEN. The user's visible INPUT/OUTPUT retest remains
 required.
 
+### Slice 4ae Process picker cell boundary and row identity: packaged GREEN; visible retest pending
+
+Production Item Search opens only from **Acceptable Managed Item n** cells:
+all numbered alternatives on INPUT/REQUIREMENT and **Acceptable Managed Item
+1** on OUTPUT. OUTPUT Name and every other Process-table cell are not picker
+targets. INPUT, REQUIREMENT, OUTPUT, and INSTRUCTION rows share one automatic,
+text-safe, three-character Base-36 row-ID namespace across the whole table;
+`000` is reserved, existing unique IDs remain stable as rows are entered in any
+order, and duplicates are corrected by the public worksheet change handler.
+
+Focused source RED was `0/6`; packaged ProductionReusable RED was `1/2` with
+OUTPUT Name suppression and row uniqueness false while the prior picker path
+remained functional. Focused source is now `6/6`; packaged ProductionReusable
+is `2/2` and records `OutputNamePickerSuppressed=True`, `UniqueRowIds=True`, and
+`FirstAssignedIdRetained=True`. Packaged XLAM, Ribbon/compile, live role,
+Release 1 chain, launcher, dedicated NAS, deterministic static, and reviewed
+growth gates are GREEN. Rebuilt packages are in `deploy/current`; visible
+operator acceptance remains pending.
+
 ### Connection progress, aggregate reference detail, and Events view: packaged GREEN
 
 Slice 4w renders **Connecting to warehouse storage...** before the synchronous
@@ -876,7 +895,7 @@ removing the repeated Saving notices caused by unchanged read-only loads.
 | Worksheet workbench | `btnProcessWorksheetCreate` -- **Create Process Table**; `btnProcessWorksheetRetrieve` -- **Retrieve Selected Process**; `btnProcessWorksheetAddAlternative` -- **Add Acceptable Item** | Creates any number of uniquely named Process tables in the exact captured `Production.Operator.xlsm`; Add Acceptable Item appends one numbered managed-item/hidden-SKU pair to the selected table; retrieval accepts one table or Ctrl+click cells across several tables, imports each confirmed definition as DRAFT, and deletes only successful selected tables. |
 | Requirements | `lstProcessRequirements`; locked `txtRequirementId`, `txtRequirementName`, `txtRequirementQty`, `txtRequirementPercent`, `txtRequirementYieldBasis`, `txtRequirementUom`; `btnProcessRequirementAdd`, `btnProcessRequirementUpdate`, `btnProcessRequirementRemove`, `btnProcessRequirementUp`, `btnProcessRequirementDown` | Defines typed external/upstream input requirements. The displayed label is **ID / Name / Qty / % / Batch basis quantity / UOM**; IDs are generated Base-36 values. Same-UOM worksheet input rows calculate basis and percent formulas. |
 | Outputs | `lstProcessOutputs`; locked `txtProcessOutputId`, `txtProcessOutputDesignId`, `txtProcessOutputDesignVersion`; `txtProcessOutputName`, `txtProcessOutputQty`, `txtProcessOutputPercent`, `txtProcessOutputYieldBasis`, `txtProcessOutputUom`; hidden/internal `txtProcessOutputItemCode`; `btnProcessOutputAdd`, `btnProcessOutputUpdate`, `btnProcessOutputRemove`, `btnProcessOutputUp`, `btnProcessOutputDown` | Defines one or more output designs. The displayed label uses **Yield basis quantity**; Output and Design identities are generated. A managed output item is picker-selected and its SKU is retained internally; the operator does not type Item Code. Save/Release rejects a Process with no output or an output without a selected managed SKU. |
-| Worksheet table columns | **Record Type**, text-safe generated **ID**, **Name**, **Qty**, **Percent**, **Basis Qty**, catalog-dropdown **UOM**, generated **Design ID**, **Design Version**, **Instruction**, automatic **Requirement ID**, hidden/system-managed **Output SKU**, **Acceptable Managed Item 1** through **4** (and added pairs), with each matching managed hidden **Accepted SKU n** | Record Type is dropdown-backed; INPUT Percent/basis/Requirement ID and OUTPUT Design identity are formula/system managed. Entering **Acceptable Managed Item 1** opens Core item search for INPUT and OUTPUT: INPUT fills that numbered alternative pair; OUTPUT fills the visible managed item and hidden Output SKU while retaining its descriptive Name. OUTPUT Name may also open search as a convenience. Neither path stores a physical `System_Key`; historical ALTERNATIVE rows remain import-compatible. |
+| Worksheet table columns | **Record Type**, text-safe generated **ID**, **Name**, **Qty**, **Percent**, **Basis Qty**, catalog-dropdown **UOM**, generated **Design ID**, **Design Version**, **Instruction**, automatic **Requirement ID**, hidden/system-managed **Output SKU**, **Acceptable Managed Item 1** through **4** (and added pairs), with each matching managed hidden **Accepted SKU n** | Record Type is dropdown-backed. INPUT, OUTPUT, and INSTRUCTION IDs use one table-wide Base-36 namespace and remain unique regardless of entry order; INPUT Percent/basis/Requirement ID and OUTPUT Design identity are formula/system managed. Core item search opens only from a valid **Acceptable Managed Item n** cell: INPUT fills that numbered alternative pair; OUTPUT pair 1 fills the visible managed item and hidden Output SKU while retaining its descriptive Name. OUTPUT Name never opens search. Neither path stores a physical `System_Key`; historical ALTERNATIVE rows remain import-compatible. |
 | Instructions | `lstProcessInstructions`, `txtProcessInstruction`; `btnProcessInstructionAdd`, `btnProcessInstructionUpdate`, `btnProcessInstructionRemove`, `btnProcessInstructionUp`, `btnProcessInstructionDown` | Defines reusable operator instructions independently from input/output rows. |
 | Lifecycle | `btnProcessValidate`, `btnProcessSave`, `btnProcessRelease`, `btnProcessObsolete`, `btnProcessClear` | Validates and queues immutable Designs Domain Process lifecycle events. |
 

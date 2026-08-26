@@ -1808,6 +1808,64 @@ public-handler RED `0/2` with `OutputPickerOpened=False`,
 launcher contracts `24/24`, dedicated NAS `16/16`, deterministic static
 baseline `19/19`, and reviewed cleanup/growth `13/13`.
 
+### Slice 4ae -- Process picker cell boundary and table-wide row identity
+
+The 2026-08-25 visible Slice 4ad retest confirmed OUTPUT picker reachability but
+exposed two contract defects. Entering an OUTPUT **Name** cell still opened
+Production Item Search, although managed-item selection belongs only in
+**Acceptable Managed Item n** cells. Separately, worksheet automation allocated
+INPUT and OUTPUT IDs from different namespaces, allowing the same three-digit
+Base-36 ID to appear twice in one Process table. This is a deliberate Slice 4
+acceptance correction under D15 and supersedes Slice 4ad's OUTPUT Name
+convenience allowance.
+
+Required behavior:
+
+- [x] Production Item Search opens only from an **Acceptable Managed Item n**
+  cell valid for that row type: any numbered pair for INPUT/REQUIREMENT, and
+  pair 1 for OUTPUT;
+- [x] OUTPUT Name and all non-assignment cells never open item search;
+- [x] INPUT, REQUIREMENT, OUTPUT, and INSTRUCTION rows receive text-safe
+  three-character Base-36 IDs from one table-wide namespace, with `000`
+  reserved;
+- [x] an existing valid unique row ID remains stable when other row types are
+  entered later, while any pre-existing duplicate is reassigned automatically;
+  and
+- [x] preserve exact managed-item/SKU commit, Output SKU round-trip,
+  captured-workbook binding, headless Domain authority, and prior GREEN
+  regressions.
+
+D13 RED sequence:
+
+1. [x] Add a focused source contract requiring the cell boundary, shared ID
+   namespace, and packaged public-handler evidence; record `0/6` RED.
+2. [x] Through the public Process worksheet selection handler, prove OUTPUT
+   Name is suppressed and OUTPUT Acceptable Managed Item 1 still opens.
+3. [x] Through `HandleProductionChange`, assign OUTPUT first, then INPUT and
+   INSTRUCTION rows; require uniqueness after each change and retention of the
+   first assigned ID.
+
+Gate:
+
+- [x] Architecture v4.11, this plan, and controls v1 define the corrected cell
+  and row-identity boundaries before implementation;
+- [x] focused and packaged callback/form-handler RED/GREEN are recorded;
+- [x] applicable Production, launcher, NAS, full-chain, static, dynamic-call,
+  and bloat regressions remain GREEN; and
+- [ ] visible operator confirmation proves only Acceptable Managed Item cells
+  open search and row IDs remain unique regardless of entry order.
+
+Automated evidence recorded 2026-08-25: focused source RED `0/6`; packaged
+ProductionReusable RED `1/2` with `OutputNamePickerSuppressed=False` and
+`UniqueRowIds=False` while picker commit and restart remained functional;
+focused GREEN `6/6`; packaged ProductionReusable GREEN `2/2` with
+`OutputNamePickerSuppressed=True`, `UniqueRowIds=True`, and
+`FirstAssignedIdRetained=True`. Historical Slice 4ad/4ac/4ab/4aa/4z/4y source
+contracts remain `6/6`, `6/6`, `4/4`, `8/8`, `7/7`, and `6/6`. Packaged XLAM
+is `74/74`, Ribbon/compile `142/142`, live roles `47/47`, ordered Release 1
+chain `30/30`, launcher contracts `24/24`, dedicated NAS `16/16`, deterministic
+static baseline `19/19`, and reviewed cleanup/growth `13/13`.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.

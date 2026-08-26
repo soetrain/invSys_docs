@@ -690,7 +690,10 @@ remains experimental and outside Release 1 acceptance.
   invSys, not typed by the operator. Each ID is exactly three uppercase Base-36
   characters (`001` through `ZZZ`; `000` is reserved). Process and Recipe IDs
   are collision-checked in their separate Designs Domain namespaces;
-  Requirement and Output IDs are collision-checked within their Process draft.
+  Requirement and Output IDs share one collision-checked namespace within their
+  Process draft. Process worksheet INPUT, OUTPUT, and INSTRUCTION rows likewise
+  share one table-wide row-ID namespace; changing Record Type or entry order
+  must never create or retain a duplicate row ID.
   ID and version controls are locked projections. A concurrent lifecycle write
   that makes a proposed identity/version unavailable is rejected and must be
   retried with the next available generated value.
@@ -723,8 +726,8 @@ Each output definition declares:
   Qty or Percent/YieldBasisQty, and UOM
 ```
 - Every Process has at least one output. Requirement IDs and output IDs are
-  unique within a Process version; quantities/yields are positive and UOMs are
-  present in the warehouse catalog.
+  mutually unique within a Process version; quantities/yields are positive and
+  UOMs are present in the warehouse catalog.
 - An output definition is design metadata, not a permanent inventory row and
   does not own a permanent `System_Key`. Each execution of that output creates
   a managed inventory entity with a new system-wide unique `System_Key`.
@@ -765,8 +768,12 @@ Each output definition declares:
   Process metadata identity, row identity, Requirement ID, Output ID, and
   generated Design identity are retained as text so Excel never removes the
   leading zeroes required by the locked three-character Base-36 contract.
-  Every INPUT row receives its generated Requirement ID automatically; the
-  operator does not type or maintain it.
+  Every INPUT, OUTPUT, and INSTRUCTION row receives its generated ID
+  automatically from one table-wide row-ID namespace. Existing valid unique
+  IDs remain stable as other row types are entered; duplicates are corrected
+  immediately through the worksheet change handler. Every INPUT row's
+  Requirement ID mirrors its generated row ID; the operator does not type or
+  maintain either value.
   Percent and basis columns are invSys-owned calculated columns: for every
   same-UOM INPUT row they calculate from quantity and are restored before
   retrieval rather than accepted as operator-authored percentages. For
@@ -779,11 +786,12 @@ Each output definition declares:
   owning Process/Output identities. **Name** remains the output definition's
   descriptive name. **Acceptable Managed Item 1** is the OUTPUT row's visible
   managed-item selector; for OUTPUT it represents the one produced managed
-  item, not an input alternative. Entering that cell by mouse, Tab, or Enter
-  invokes the same Core item-search interaction as INPUT and fills the visible
-  managed item plus the hidden, system-managed **Output SKU** cell. Entering an
-  OUTPUT Name cell may open the same picker as a convenience, but must not be
-  the only reachable OUTPUT path. A selected managed SKU is required on
+  item, not an input alternative. Production Item Search opens only from an
+  **Acceptable Managed Item n** cell. For OUTPUT that means **Acceptable Managed
+  Item 1**; entering it by mouse, Tab, or Enter invokes the same Core
+  item-search interaction as INPUT and fills the visible managed item plus the
+  hidden, system-managed **Output SKU** cell. Name, Qty, UOM, and every other
+  Process cell never opens item search. A selected managed SKU is required on
   retrieval. The worksheet has no operator-authored Item Code column and does
   not retain a source inventory `System_Key`.
 - INPUT rows expose Ingredient Assignment in the same Process table as numbered
