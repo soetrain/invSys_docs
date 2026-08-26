@@ -1,8 +1,8 @@
 # invSys Form Controls v1
 
-**Version:** 1.24
+**Version:** 1.25
 
-**Inventory date:** 2026-08-24
+**Inventory date:** 2026-08-26
 
 **Architecture:** invSys v4.11, Release 1
 **Scope:** every checked-in VBA UserForm source file used by Core, Admin,
@@ -15,7 +15,7 @@ This is the readable Release 1 control catalog after review-checklist answers
 1-3 and 6-7. It describes the implemented source and explicitly labels packaged
 or visible acceptance still pending. For the deliberate D15 Production priority
 change, it also records the approved target controls and separately labels the
-current pre-change surface as expected D13 RED. The normative authority remains
+the implemented and packaged D13 acceptance state. The normative authority remains
 `invSys-Design-v4.11.md`.
 
 The catalog was derived from:
@@ -398,6 +398,21 @@ source is `6/6` GREEN and packaged Production plus clean restart is `2/2`
 GREEN through the actual initialization, New Recipe, Save Draft, and Release
 paths. The packaged action changes Version from `1` to `9` and records the
 edited value retained. Rebuilt packages are registered; visible acceptance is
+pending.
+
+### Slice 4ag reusable-run actual output and list readability: packaged GREEN
+
+Production Run - List uses the scaled definition as **Planned**, but every
+reusable output requires its own positive **Actual Output** before completion.
+The actual quantity governs created managed inventory and becomes **Last
+Actual** after completion; planned quantity remains visible. Palette, Inventory
+Check, and Production Output display exact identity as readable **System_Key**,
+not **Inventory ID**. Focused test-first RED was `0/6`; focused source is `6/6`
+GREEN and packaged Production plus clean restart is `2/2` GREEN through the
+actual output-row selection/change and Complete Run handlers. Packaged evidence
+records `ActualOutputAccepted=True`, `LastActualDisplayed=True`,
+`ActualInventoryQty=True`, and `SystemKeyHeadersReadable=True`. Full preserved
+regressions are GREEN; visible acceptance in the operator's saved workbook is
 pending.
 
 ### Connection progress, aggregate reference detail, and Events view: packaged GREEN
@@ -969,11 +984,11 @@ current Process/Recipe designer lists use the exact IDs recorded in section
 | Recipe loader | `lstLoaderRecipes`, `lstLoaderLines`, `btnLoaderRefresh`, `btnLoaderLoad`, `btnLoaderClear` | Selects an exact released Recipe version, shows its validated Process graph/execution order, refreshes, loads, or clears a run. |
 | Batch scaling | `txtBatchScalePercent`, `btnApplyBatchScale` | Applies a List-run batch scale from `0.001%` through `1000%`; `100%` preserves the released recipe quantities. |
 | Run inputs | `cmbRunProcess`, `cmbRunLocation`, `txtPaletteSplit`, `txtPaletteQty`, `btnRunApplyPalette` | Chooses a Process execution/location and applies either percent-of-requirement or explicit quantity to the selected external inventory requirement. Connected intermediate requirements are resolved from their upstream output keys. |
-| Palette | `lstRunPalette` | Lists Process, requirement, exact System Key, acceptable inventory choice, requirement %, quantity, UOM, available inventory, and location. |
-| Inventory check | `lstManagerCheck` | Lists Process/requirement, exact System Key, code, item, UOM, allocated quantity, and current available inventory; insufficiency or stale allocation blocks Check In/completion. |
-| Outputs | `lstManagerOutput`; legacy-only `txtOutputReal` | For a reusable run, lists every Process output definition, its distinct preallocated new System Key, scaled creation quantity, UOM, downstream routed quantity, and finished/co-product balance. `txtOutputReal` remains available only to the preserved legacy run path and is not reusable-Recipe authority. |
+| Palette | `lstRunPalette` | Lists Process, requirement, readable exact `System_Key`, acceptable inventory choice, requirement %, quantity, UOM, available inventory, and location. |
+| Inventory check | `lstManagerCheck` | Lists Process/requirement, readable exact `System_Key`, code, item, UOM, allocated quantity, and current available inventory; insufficiency or stale allocation blocks Check In/completion. |
+| Outputs | `lstManagerOutput`, `txtOutputReal` -- **Actual Output** | For a reusable run, lists every Process output definition with **Last Actual**, batch number, scaled **Planned** quantity, recall code, and readable distinct new **System_Key**. Selecting an output row loads its staged actual; editing Actual Output retains a positive per-output quantity. Complete Run requires every actual, creates managed inventory at that actual quantity, and rejects an actual smaller than routed downstream commitments. Legacy completion continues to use the same visible quantity field through its preserved path. |
 | Run actions | `btnManagerCheckIn`, `btnManagerApplyOutput`, `btnManagerRefresh`, `btnManagerNext`, `btnManagerPrint` | Checks exact inputs in, completes Processes in validated order, refreshes, advances to the next batch, or prints recall data. **Complete Run** keeps event/processor work inside the shared quiet-UI boundary, creates every declared output under its own new key, consumes routed intermediates by exact key, and appends one `Persistence summary:` line after successful correlated persistence. |
-| Labels | Recipes, Validated Process Order, Process, Run Location, % of Requirement, Qty, Acceptable Inventory For Run, Inventory Check, Production Outputs, Actual Output | Identifies the page sections and generated headers. |
+| Labels | Recipes, Loaded Recipe Lines, Process, Run Location, % of Requirement, Qty, Acceptable Inventory For Run, Inventory Check, Production Output, Actual Output | Identifies the page sections and generated headers. Exact identity columns display **System_Key**; output quantity columns display **Last Actual**, **Batch**, and **Planned**. |
 
 ### 8.5 Production Run - Tree page
 

@@ -1928,6 +1928,67 @@ NAS `16/16`, deterministic static baseline `19/19`, and reviewed cleanup/growth
 candidates. Rebuilt packages are registered; visible Recipe Designer acceptance
 remains open.
 
+### Slice 4ag -- reusable-run actual output and list readability
+
+The 2026-08-26 visible Production Run - List checkpoint completed the first
+operator-created tea batch and exposed two related acceptance blockers. The
+entered **Real Output** value `430` remained absent from the **Last** column,
+and source inspection proved the reusable-run completion path ignored that
+entry and created inventory at the planned `632`. The same view clipped exact
+identity under narrow **System Key** and **Inventory ID** headers. This is a
+deliberate D15 correction: reusable Production now makes per-output operator
+actuals authoritative for created quantity while preserving the scaled design
+quantity as the visible plan.
+
+Required behavior:
+
+- [x] **Actual Output** accepts and retains one positive operator quantity for
+  each reusable output row through the actual output-row/textbox interaction;
+- [x] **Complete Run** rejects any missing/nonpositive actual, and rejects a
+  routed output whose actual is smaller than its committed downstream amount;
+- [x] each `PROD_COMPLETE` creates the output's new exact `System_Key` entity at
+  the operator-entered actual quantity while recording both planned/scaled and
+  actual quantities in correlated event attributes;
+- [x] after completion, **Last Actual** shows the entered quantity for the most
+  recent batch, **Batch** shows its batch number, and **Planned** continues to
+  show the scaled definition quantity; Next Batch retains Last Actual and
+  clears only the new batch's staged actual entries;
+- [x] palette, Inventory Check, and Production Output identity headers read
+  exactly **System_Key** and have sufficient width for operator readability;
+  Production Output no longer calls that identity **Inventory ID**; and
+- [x] preserve exact-key input consumption, fresh output keys, intermediate
+  routing, co-product balances, scaling, captured-workbook binding, packaged
+  launcher reuse, headless Domain authority, and every prior GREEN regression.
+
+D13 RED sequence:
+
+1. [x] Add focused source/public-handler coverage and record `0/6` RED for the
+   ignored actual quantity, blank Last value, and unreadable identity headers.
+2. [x] Through the packaged public Production callback, select every output
+   row, enter actual quantities through `txtOutputReal`, invoke Check In and
+   Complete Run, and prove Last Actual plus exact created inventory quantity.
+3. [x] Rebuild and re-run the preserved Production, launcher, NAS, full-chain,
+   static, dynamic-call, and bloat gates before visible UAT resumes.
+
+Gate:
+
+- [x] Architecture v4.11, this plan, and controls v1 define the corrected
+  planned-versus-actual and `System_Key` display contract before implementation;
+- [x] focused RED/GREEN and packaged public-handler GREEN are recorded;
+- [x] applicable regressions remain GREEN; and
+- [ ] visible operator confirmation proves the completed tea batch's actual
+  quantity appears under Last Actual and in managed inventory.
+
+Automated GREEN recorded 2026-08-26: focused `6/6`, packaged Production public
+callback plus clean restart `2/2`, packaged XLAM `74/74`, Ribbon/compile
+`142/142`, live role workflows `47/47`, ordered Release 1 chain `30/30`,
+launcher contracts `24/24`, dedicated NAS `16/16`, deterministic static
+baseline `19/19`, and reviewed cleanup/growth `13/13`. Static metrics are 153
+components, 5,092 procedures, and 1,038 candidates. The earlier operator batch
+was already persisted at planned `632` by the superseded build; Slice 4ag does
+not silently rewrite that inventory entity. Visible acceptance therefore uses
+a newly completed batch or an explicitly authorized inventory correction.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.

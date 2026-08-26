@@ -863,15 +863,25 @@ Each Recipe version declares:
   first created under that key and later consumed from the same exact key by
   downstream Process execution. Any unconsumed balance remains managed
   finished/co-product inventory.
+- The released definition and batch scale calculate each output's **Planned**
+  quantity. Before completion, the operator-entered actual quantity must be positive
+  for every output row through **Actual Output**. That operator-entered actual
+  quantity, not the planned quantity, is the quantity created as managed
+  inventory under the output's new `System_Key`. A routed output's actual
+  quantity may not be smaller than its committed downstream quantity. After
+  completion, **Last Actual** displays the exact actual quantity for the most
+  recently completed batch while **Planned** continues to display the scaled
+  definition quantity; advancing to the next batch retains Last Actual as
+  history and clears the new batch's staged actual quantities.
 - Execution follows the validated Recipe order. Each Process consumes its
   allocated inputs and creates all declared outputs. Run completion is rejected
   when inventory is insufficient, an allocation is stale, an output key is
   missing/duplicated, or actual quantities violate the released definition.
 - Correlated Production events preserve `RunId`, Recipe identity, Process
-  identity/execution ordinal, exact input allocations, every output key, scaled
-  and actual quantities, UOM, location, condition, persistence summary, and
-  processor visibility. The processor remains the only canonical inventory
-  writer.
+  identity/execution ordinal, exact input allocations, every output key,
+  planned/scaled and operator-entered actual quantities, UOM, location,
+  condition, persistence summary, and processor visibility. The processor
+  remains the only canonical inventory writer.
 - Published operator Events label the resulting inventory actions as
   **Production Input Consumed** and **Production Output Created**, with
   Recipe/Process/run references. Design save/release/obsolete history remains
