@@ -1750,6 +1750,64 @@ Ribbon/compile `142/142`, live role workflows `47/47`, clean ordered Release 1
 chain `30/30`, launcher contracts `24/24`, dedicated NAS `16/16`, deterministic
 static baseline `19/19`, and reviewed cleanup/growth `13/13`.
 
+### Slice 4ad -- Process picker INPUT/OUTPUT record-type reachability
+
+The 2026-08-25 visible Slice 4ac checkpoint found that Production Item Search
+opens from an INPUT row's **Acceptable Managed Item** cell but does not open
+from the corresponding visible cell when Record Type is OUTPUT. Slice 4ac's
+packaged proof targeted OUTPUT Name and therefore did not protect the operator's
+same-column INPUT/OUTPUT workflow. This is a newly discovered acceptance
+blocker and test-gap correction within D15.
+
+Required behavior:
+
+- [x] entering **Acceptable Managed Item 1** by mouse, Tab, or Enter opens the
+  same Core Production Item Search for both INPUT and OUTPUT record types;
+- [x] for INPUT, commit continues to fill the exact numbered managed item/SKU
+  alternative pair;
+- [x] for OUTPUT, commit fills the visible managed-item selector and hidden
+  system-managed **Output SKU**, retaining a separately authored descriptive
+  Output Name unless it is blank;
+- [x] retrieve/save/release persists the OUTPUT SKU without treating it as an
+  INPUT alternative or storing a source inventory `System_Key`; and
+- [x] preserve OUTPUT Name convenience selection, current managed-inventory
+  projection, captured-workbook binding, headless Domain authority, and all
+  Slice 4ac regressions.
+
+D13 RED sequence:
+
+1. [x] Create a Process table through the public form action and populate an
+   OUTPUT row through the existing formulation handler.
+2. [x] Enter that OUTPUT row's **Acceptable Managed Item 1** cell through the
+   actual worksheet selection event; record RED because the predicate accepts
+   that column only for INPUT/REQUIREMENT rows.
+3. [x] Commit a managed item through the real Core picker handler and retrieve
+   through the public form action; require visible item/hidden Output SKU
+   round-trip and no physical key.
+
+Gate:
+
+- [x] Architecture v4.11, this plan, and controls v1 agree on the visible
+  same-column INPUT/OUTPUT interaction;
+- [x] focused and packaged public-handler RED/GREEN correct the Slice 4ac
+  false-positive test target;
+- [x] Slice 4ac and applicable packaged, launcher, NAS, full-chain, static,
+  dynamic-call, and bloat regressions remain GREEN; and
+- [ ] visible operator confirmation proves the picker opens for both INPUT and
+  OUTPUT record types.
+
+Automated evidence recorded 2026-08-25: focused source RED `5/6`; packaged
+public-handler RED `0/2` with `OutputPickerOpened=False`,
+`OutputPickerCommitted=False`, and `OutputSkuRoundTrip=False`; focused GREEN
+`6/6`; packaged public Production callback and clean restart `2/2` with
+`OutputPickerOpened=True`, `OutputPickerCommitted=True`,
+`OutputSkuRoundTrip=True`, `OutputNameRetained=True`, and
+`NoPhysicalKey=True`. Historical Slice 4ac/4ab/4aa/4z source contracts remain
+`6/6`, `4/4`, `8/8`, and `7/7`. Packaged XLAM is `74/74`, Ribbon/compile
+`142/142`, live role workflows `47/47`, clean ordered Release 1 chain `30/30`,
+launcher contracts `24/24`, dedicated NAS `16/16`, deterministic static
+baseline `19/19`, and reviewed cleanup/growth `13/13`.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.

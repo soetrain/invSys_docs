@@ -776,11 +776,16 @@ Each output definition declares:
   require an explicit conversion before percentage calculation and are rejected
   on retrieval when no compatible common basis exists.
 - OUTPUT rows expose a locked/generated Design ID and version derived from the
-  owning Process/Output identities. Entering an OUTPUT **Name** cell by mouse,
-  Tab, or Enter invokes the existing Core item-search interaction and fills the
-  visible Name plus the hidden, system-managed **Output SKU** cell. A selected
-  managed SKU is required on retrieval. The worksheet has no operator-authored
-  Item Code column and does not retain a source inventory `System_Key`.
+  owning Process/Output identities. **Name** remains the output definition's
+  descriptive name. **Acceptable Managed Item 1** is the OUTPUT row's visible
+  managed-item selector; for OUTPUT it represents the one produced managed
+  item, not an input alternative. Entering that cell by mouse, Tab, or Enter
+  invokes the same Core item-search interaction as INPUT and fills the visible
+  managed item plus the hidden, system-managed **Output SKU** cell. Entering an
+  OUTPUT Name cell may open the same picker as a convenience, but must not be
+  the only reachable OUTPUT path. A selected managed SKU is required on
+  retrieval. The worksheet has no operator-authored Item Code column and does
+  not retain a source inventory `System_Key`.
 - INPUT rows expose Ingredient Assignment in the same Process table as numbered
   pairs: **Acceptable Managed Item 1** plus its hidden managed SKU, followed by
   **Acceptable Managed Item 2**, **3**, **4**, and further pairs added on
