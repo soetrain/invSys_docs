@@ -7,7 +7,8 @@ column for INPUT and OUTPUT Process rows.
 # Current verified state
 
 - Last verified 2026-08-25: code `main` at `dd4649a`; normative/plan/control
-  docs `main` at `4da41d9`; both are ready to push to `origin/main`.
+  docs commit `4da41d9`; both are pushed to `origin/main` and this handoff is
+  the current docs pointer.
 - Active slice: Plan 022 Slice 4ad, automated GREEN; visible INPUT/OUTPUT picker
   retest is pending.
 - Rebuilt Core and Operations packages are in `deploy/current`; Excel is closed.
