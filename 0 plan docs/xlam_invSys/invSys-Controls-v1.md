@@ -1,8 +1,8 @@
 # invSys Form Controls v1
 
-**Version:** 1.28
+**Version:** 1.29
 
-**Inventory date:** 2026-08-26
+**Inventory date:** 2026-08-27
 
 **Architecture:** invSys v4.11, Release 1
 **Scope:** every checked-in VBA UserForm source file used by Core, Admin,
@@ -469,6 +469,27 @@ clean restart is `2/2` and records `BatchHistoryRows=True`,
 handlers. XLAM/Ribbon, live-role, Release 1, NAS, deterministic-static, and
 reviewed-growth gates are GREEN. Visible acceptance is pending.
 
+### Slice 4ak Admin-created inventory visibility and dropdowns: automated GREEN, visible acceptance pending
+
+**Add Item** and inventory worksheet `ADD` create a managed entity through
+`INVENTORY_CREATE` with a new `System_Key`; the operator path may not write a
+blank-key `MIGRATION_SEED` quantity. After processor/snapshot Refresh, a counted
+positive-quantity item is visible in Inventory Viewer and the Production
+managed-item picker. An explicit Edit/Save can create the first entity for a
+catalog-only item produced by the superseded Add defect when the operator
+supplies a positive target. **Default location** and **Category** are editable
+dropdowns populated from distinct current warehouse catalog values, with the
+configured default included for location. Focused RED was `2/7`; focused GREEN
+is `7/7`. The packaged Admin test invokes the real **Add Item** handler and
+records `SubmitHandler=True`, `ExactEntityCreate=True`,
+`LocationDropdown=True`, and `CategoryDropdown=True`; the full packaged handler
+gate is `77/77`. Preserved evidence is: launcher source `24/24`,
+ProductionReusable packaged and restart `2/2`, Ribbon/compile `142/142`, live
+role workflows `47/47`, ordered Release 1 `30/30`, dedicated NAS runtime
+`16/16`, deterministic static `19/19`, and reviewed growth/cleanup `13/13`.
+Visible acceptance remains open for Honey in Viewer and the Production picker
+and for both dropdowns in the deployed form.
+
 ### Connection progress, aggregate reference detail, and Events view: packaged GREEN
 
 Slice 4w renders **Connecting to warehouse storage...** before the synchronous
@@ -609,8 +630,8 @@ workflow. It does not make a worksheet row the durable identity.
 | `txtItemName` | Text box — Item name * | Required descriptive item name. |
 | `cmbUom` | Combo box — UOM * | Selects the unit of measure. |
 | `txtQty` | Combo box — Starting qty * / Set qty / Qty mode | Accepts a numeric quantity for counted inventory or **Utility**, **Service**, or **Not counted** for non-counted catalog items. Utility saves `TRACK_QTY=FALSE` and `ITEM_KIND=UTILITY`. |
-| `txtLocation` | Text box — Default location | Sets the initial/default location attribute. |
-| `txtCategory` | Text box — Category | Stores category metadata. |
+| `cmbLocation` | Editable combo box — Default location | Selects a distinct current catalog location or the configured warehouse default; also accepts a new location value. |
+| `cmbCategory` | Editable combo box — Category | Selects a distinct current catalog category or accepts a new category value. |
 | `txtDescription` | Text box — Description | Stores the long description. |
 | `txtVendorName` | Text box — Vendor(s) | Stores vendor display metadata. |
 | `txtVendorCode` | Text box — Vendor code | Stores the vendor-specific code. |

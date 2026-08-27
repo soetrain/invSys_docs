@@ -697,6 +697,22 @@ with Admin Generate Warehouse/Create Warehouse and optional bootstrap or Admin
   and receive explicit Upload Status/Result text; a runtime failure stops later
   rows and leaves them available for correction/retry without treating the
   worksheet as authority.
+- The single-item **Add Item** action and worksheet `ADD` action create each
+  managed inventory item through `INVENTORY_CREATE`, generating one new
+  immutable `System_Key` at the Admin creation boundary before queueing. A
+  successful processor run and snapshot publication make a counted item with
+  positive starting quantity immediately eligible for Inventory Viewer and the
+  Production managed-item picker after Refresh. `MIGRATION_SEED`, blank-key
+  ledger rows, and catalog-only quantity are prohibited for this operator path.
+- A catalog item created by the superseded blank-key Add path may be completed
+  only by an explicit Admin Edit/Save with a positive target quantity when no
+  managed entity exists. That action creates the item's first new managed
+  entity; it does not translate `ROW`, import old business inventory, or infer a
+  quantity the operator did not submit.
+- The single-item **Default location** and **Category** controls are editable
+  dropdowns. They list distinct current catalog values; Default location also
+  includes the configured warehouse default. Operators may enter a new value,
+  which becomes available in later launches after it is saved.
 
 **D13 gate:** Before changing identity generation, schemas, Admin generation,
 seeding, Inventory Domain application, snapshots, or role hydration, write and

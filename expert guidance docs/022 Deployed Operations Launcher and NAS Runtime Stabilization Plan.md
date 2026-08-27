@@ -2170,6 +2170,54 @@ dedicated two-session NAS gate is `16/16`, deterministic static evidence is
 `19/19`, and reviewed growth/cleanup is `13/13`. Visible acceptance remains
 open.
 
+### Slice 4ak -- Admin-created inventory visibility and catalog dropdowns
+
+The operator added Honey through **Add/Edit Inventory Items**. Honey appeared
+in the form's catalog-backed Edit search but not in Inventory Viewer or the
+Production Process item picker. Inspection shows the Add path queues
+`MIGRATION_SEED` from `CreatePayloadItem`, leaving `System_Key` blank. The
+catalog therefore contains Honey, but no managed inventory entity exists for
+the entity-backed Viewer snapshot or Production exact-key picker. This is a
+newly discovered Release 1 blocker and an existing D14 identity violation, not
+a request to restore legacy migration behavior.
+
+Required behavior:
+
+- [x] the single-item Add handler and worksheet `ADD` use
+  `CreateInventoryEntityPayloadItem` plus `QueueInventoryCreateEvent` with one
+  fresh Admin-generated `System_Key` per row;
+- [x] a counted item with positive starting quantity becomes an active managed
+  entity and appears after Refresh in Inventory Viewer and the Production
+  managed-item picker;
+- [x] a catalog-only item made by the superseded Add path can be completed by an
+  explicit Edit/Save with a positive target only when no entity exists, creating
+  its first new key without mapping `ROW` or importing legacy inventory;
+- [x] Default location and Category are editable dropdowns populated with
+  distinct current catalog values, with the configured warehouse default also
+  present in Default location;
+- [x] preserve Utility/Service/Not Counted metadata, Admin worksheet staging,
+  saved-workbook binding, immutable exact keys, snapshot publication, and all
+  prior GREEN regressions.
+
+D13 RED sequence:
+
+1. [x] Record focused RED for the migration event, blank-key payload, text-box
+   controls, and absent packaged Add/dropdown evidence.
+2. [x] Exercise the real form submit handler and Admin creation service, then
+   prove one exact managed entity is eligible in Viewer and Production query
+   projections after processor/snapshot publication.
+3. [x] Rebuild the five-package set and rerun focused, packaged Admin,
+   Inventory Domain, Viewer/Production, Release 1, NAS, static, and growth gates.
+
+Gate:
+
+- [x] Architecture v4.11, Plan 022, and controls v1 define the corrected
+  identity and dropdown contracts before implementation;
+- [x] focused RED/GREEN and packaged real-handler evidence are recorded;
+- [x] applicable regressions remain GREEN; and
+- [ ] visible operator confirmation shows Honey in Viewer and the Production
+  picker and shows dropdown arrows/options for Category and Default location.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.
