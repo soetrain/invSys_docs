@@ -2040,6 +2040,67 @@ The packaged handler records `ComboSelected=True`, `FieldsLoaded=True`,
 `UtilityReady=True`, and `ValidationReady=True`. Static metrics are 153
 components, 5,096 procedures, and 1,038 candidates.
 
+### Slice 4ai -- Admin bulk inventory worksheet staging
+
+The operator accepted Slice 4ah and deliberately expanded the Admin contract:
+the ribbon launcher must describe both actions, and the Add/Edit form must let
+an administrator create a worksheet table for a pasted or hand-built inventory
+list and upload that selected table through invSys. Architecture v4.11's D14
+Admin inventory worksheet workbench is authoritative for this change.
+
+Required behavior:
+
+- [x] rename the Admin ribbon button from **Add Inventory Item** to **Add/Edit
+  Inventory Items** without changing its `ADMIN_MAINT` capability or public
+  callback;
+- [x] add visible **Create Inventory Table** and **Upload Selected Inventory
+  Table** actions to `frmAddInventoryItem`;
+- [x] bind both actions to the workbook captured when the public Admin launcher
+  opened the form; never switch authority because another workbook activates;
+- [x] create uniquely named tables on **invSys Inventory Editor**, permit
+  multiple simultaneous tables and pasted/reformatted CSV rows, and preserve
+  unknown columns as custom catalog fields;
+- [x] expose normalized managed headers for ADD/EDIT, generated or exact Item
+  Code, item fields, configured UOM, quantity mode/quantity, edit reason, and
+  upload status/result; prohibit `ROW` and `System_Key`;
+- [x] validate every pending row before the first authoritative write; generate
+  text-safe ADD Item Codes, require exact existing Item Code plus reason for
+  EDIT, and preserve counted/Utility/Service/Not-counted behavior;
+- [x] apply through the existing Admin catalog/event/processor boundaries,
+  record per-row outcome, skip already-successful rows, and leave failed or
+  unprocessed rows available for correction; and
+- [x] preserve the accepted single-item Add/Edit workflow, packaged launcher
+  reuse, all five package roles, and every prior GREEN regression.
+
+D13 RED sequence:
+
+1. [x] Record focused RED for old ribbon wording, absent form controls/handlers,
+   absent worksheet controller, and absent packaged action proof.
+2. [x] Through the real create/upload form handlers, create a table in a
+   captured scratch workbook and prove preflight of counted ADD, Utility ADD,
+   and exact EDIT rows without substituting a direct service-only test.
+3. [x] Rebuild the five-package set and re-run Admin/package, Ribbon/compile,
+   Release 1, launcher, NAS, static, dynamic-call, and growth gates.
+
+Gate:
+
+- [x] Architecture v4.11, Plan 022, and the controls catalog define the changed
+  contract before implementation;
+- [x] focused RED/GREEN and packaged handler evidence are recorded;
+- [x] applicable regressions remain GREEN; and
+- [ ] visible operator confirmation creates, edits, and uploads an inventory
+  table from the saved workbook.
+
+Automated GREEN on 2026-08-26: the focused contract is `8/8`; packaged XLAM
+actions are `76/76`, including the real form handlers with table creation,
+whole-table preflight, counted/Utility/exact-EDIT cases, generated codes, and
+row statuses; Ribbon/compile is `142/142`; live roles are `47/47`; the Release 1
+full chain is `30/30`; source/default packaged launcher checks are `24/24` and
+`3/3`; dedicated NAS acceptance is `16/16`; deterministic static checks are
+`19/19`; and reviewed cleanup/growth ratchets are `13/13`. Static inventory is
+154 components, 5,140 procedures, and 1,040 candidates. Visible acceptance
+remains open.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.

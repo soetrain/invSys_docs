@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.26
+**Version:** 1.27
 
 **Inventory date:** 2026-08-26
 
@@ -428,6 +428,27 @@ handler validation is `75/75` GREEN. The packaged handler records
 `ComboSelected=True`, `FieldsLoaded=True`, `UtilityReady=True`, and
 `ValidationReady=True`; visible acceptance is pending.
 
+### Slice 4ai Admin inventory worksheet workbench: packaged GREEN
+
+The Admin ribbon launcher wording changes to **Add/Edit Inventory Items** while
+retaining `btnAdminAddInventoryItem`, `modAdmin.Add_InventoryItem`, and
+`ADMIN_MAINT`. `frmAddInventoryItem` adds **Create Inventory Table** and
+**Upload Selected Inventory Table**. The first creates a uniquely named local
+staging table on **invSys Inventory Editor** in the captured workbook and then
+returns control to the worksheet; the second resolves the selected invSys table
+in that same workbook and runs whole-table preflight before existing Admin
+catalog/event/processor actions. Multiple tables and pasted CSV-shaped rows are
+allowed. ADD Item Code is generated; EDIT uses an exact existing Item Code and
+requires a reason. UOM and Qty Mode are dropdown-backed, extra columns become
+custom fields, `ROW`/`System_Key` are prohibited, and Upload Status/Result make
+successes and retryable failures visible. The focused contract is `8/8` GREEN,
+packaged action validation is `76/76`, and Ribbon/compile validation is
+`142/142`. The packaged action invokes the real form handlers in a captured
+saved workbook and records table creation, whole-table preflight, counted and
+Utility ADD, exact EDIT, generated code, and row-status evidence. Release 1,
+launcher, NAS, static, and growth regressions are GREEN; visible acceptance is
+pending.
+
 ### Connection progress, aggregate reference detail, and Events view: packaged GREEN
 
 Slice 4w renders **Connecting to warehouse storage...** before the synchronous
@@ -561,6 +582,8 @@ workflow. It does not make a worksheet row the durable identity.
 |---|---|---|
 | `btnAddMode` | Button — **Add Item Mode** | Selects add mode and clears add fields. |
 | `btnEditMode` | Button — **Edit Item** | Selects edit mode and exposes inventory search/results. |
+| `btnCreateInventoryTable` | Button — **Create Inventory Table** | Creates a uniquely named bulk ADD/EDIT staging table in the captured workbook and closes the modal form so the worksheet can be edited. |
+| `btnUploadInventoryTable` | Button — **Upload Selected Inventory Table** | Resolves the selected invSys inventory table in the captured workbook, preflights every pending row, then submits valid rows through existing Admin authorities and writes row outcomes. |
 | `cmbEditItem` | Combo box — Inventory item | Typed text filters candidates. Choosing a dropdown row binds its exact catalog SKU and loads that item's editable fields. Visible display text alone is not identity. |
 | `lstEditItemResults` | List box | Shows filtered candidate inventory items; choosing a row converges on the same SKU-backed edit loader as a combo dropdown choice. |
 | `txtItemName` | Text box — Item name * | Required descriptive item name. |
