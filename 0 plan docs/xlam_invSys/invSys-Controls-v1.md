@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.27
+**Version:** 1.28
 
 **Inventory date:** 2026-08-26
 
@@ -400,7 +400,7 @@ paths. The packaged action changes Version from `1` to `9` and records the
 edited value retained. Rebuilt packages are registered; visible acceptance is
 pending.
 
-### Slice 4ag reusable-run actual output and list readability: packaged GREEN
+### Slice 4ag reusable-run actual output and list readability: visibly accepted
 
 Production Run - List uses the scaled definition as **Planned**, but every
 reusable output requires its own positive **Actual Output** before completion.
@@ -412,10 +412,11 @@ GREEN and packaged Production plus clean restart is `2/2` GREEN through the
 actual output-row selection/change and Complete Run handlers. Packaged evidence
 records `ActualOutputAccepted=True`, `LastActualDisplayed=True`,
 `ActualInventoryQty=True`, and `SystemKeyHeadersReadable=True`. Full preserved
-regressions are GREEN; visible acceptance in the operator's saved workbook is
-pending.
+regressions are GREEN. Visible acceptance on 2026-08-26 confirmed the completed
+tea batch's Last Actual, newly managed output inventory, and reusable batch
+behavior.
 
-### Slice 4ah Admin inventory edit selection binding: packaged GREEN
+### Slice 4ah Admin inventory edit selection binding: visibly accepted
 
 In Edit Item mode, selecting a visible `cmbEditItem` dropdown row must bind that
 row's exact catalog SKU and load its editable fields before Save. Typed search
@@ -426,7 +427,9 @@ may filter candidates but is not itself a selection. Combo-dropdown and
 test-first RED was `0/5`; focused source is `5/5` GREEN and packaged XLAM/Admin
 handler validation is `75/75` GREEN. The packaged handler records
 `ComboSelected=True`, `FieldsLoaded=True`, `UtilityReady=True`, and
-`ValidationReady=True`; visible acceptance is pending.
+`ValidationReady=True`. Visible acceptance on 2026-08-26 saved Filtered Water as
+Utility without the false selection error. Slice 4aj separately corrects the
+Production quantity display for that accepted catalog state.
 
 ### Slice 4ai Admin inventory worksheet workbench: packaged GREEN
 
@@ -448,6 +451,23 @@ saved workbook and records table creation, whole-table preflight, counted and
 Utility ADD, exact EDIT, generated code, and row-status evidence. Release 1,
 launcher, NAS, static, and growth regressions are GREEN; visible acceptance is
 pending.
+
+### Slice 4aj Production batch history and Utility projection: packaged GREEN
+
+Production Output retains a distinct completed row per batch and Process output
+instead of overwriting the prior batch. The active batch remains selectable for
+the existing Actual Output handler. The visible heading **Planned** becomes
+**Used Goods**, showing scaled compatible inputs consumed by the Process, and a
+new **Process Total** column shows cumulative actual output for the same
+Process/output/UOM across retained rows. Each completed row keeps its own Last
+Actual, Batch, Recall, and exact `System_Key`. Run palette **Inv** and Inventory
+Check display **Utility** when catalog metadata says `TRACK_QTY=FALSE` or
+`ITEM_KIND=UTILITY`, while required/used quantities continue to show measured
+usage. Focused RED was `1/7`; focused GREEN is `7/7`. Packaged Production plus
+clean restart is `2/2` and records `BatchHistoryRows=True`,
+`ProcessTotal=True`, and `UtilityDisplay=True` through the real operator
+handlers. XLAM/Ribbon, live-role, Release 1, NAS, deterministic-static, and
+reviewed-growth gates are GREEN. Visible acceptance is pending.
 
 ### Connection progress, aggregate reference detail, and Events view: packaged GREEN
 
@@ -1022,9 +1042,9 @@ current Process/Recipe designer lists use the exact IDs recorded in section
 | Run inputs | `cmbRunProcess`, `cmbRunLocation`, `txtPaletteSplit`, `txtPaletteQty`, `btnRunApplyPalette` | Chooses a Process execution/location and applies either percent-of-requirement or explicit quantity to the selected external inventory requirement. Connected intermediate requirements are resolved from their upstream output keys. |
 | Palette | `lstRunPalette` | Lists Process, requirement, readable exact `System_Key`, acceptable inventory choice, requirement %, quantity, UOM, available inventory, and location. |
 | Inventory check | `lstManagerCheck` | Lists Process/requirement, readable exact `System_Key`, code, item, UOM, allocated quantity, and current available inventory; insufficiency or stale allocation blocks Check In/completion. |
-| Outputs | `lstManagerOutput`, `txtOutputReal` -- **Actual Output** | For a reusable run, lists every Process output definition with **Last Actual**, batch number, scaled **Planned** quantity, recall code, and readable distinct new **System_Key**. Selecting an output row loads its staged actual; editing Actual Output retains a positive per-output quantity. Complete Run requires every actual, creates managed inventory at that actual quantity, and rejects an actual smaller than routed downstream commitments. Legacy completion continues to use the same visible quantity field through its preserved path. |
+| Outputs | `lstManagerOutput`, `txtOutputReal` -- **Actual Output** | For a reusable run, retains one row per completed batch/Process output plus the selectable active-batch row. Completed rows show **Last Actual**, Batch, **Used Goods**, cumulative **Process Total**, recall code, and their readable distinct new **System_Key**. Selecting an active output row loads its staged actual; editing Actual Output retains a positive per-output quantity. Complete Run requires every actual, creates managed inventory at that actual quantity, and rejects an actual smaller than routed downstream commitments. Legacy completion continues to use the same visible quantity field through its preserved path. |
 | Run actions | `btnManagerCheckIn`, `btnManagerApplyOutput`, `btnManagerRefresh`, `btnManagerNext`, `btnManagerPrint` | Checks exact inputs in, completes Processes in validated order, refreshes, advances to the next batch, or prints recall data. **Complete Run** keeps event/processor work inside the shared quiet-UI boundary, creates every declared output under its own new key, consumes routed intermediates by exact key, and appends one `Persistence summary:` line after successful correlated persistence. |
-| Labels | Recipes, Loaded Recipe Lines, Process, Run Location, % of Requirement, Qty, Acceptable Inventory For Run, Inventory Check, Production Output, Actual Output | Identifies the page sections and generated headers. Exact identity columns display **System_Key**; output quantity columns display **Last Actual**, **Batch**, and **Planned**. |
+| Labels | Recipes, Loaded Recipe Lines, Process, Run Location, % of Requirement, Qty, Acceptable Inventory For Run, Inventory Check, Production Output, Actual Output | Identifies the page sections and generated headers. Exact identity columns display **System_Key**; output quantity columns display **Last Actual**, **Batch**, **Used Goods**, and **Process Total**. Run palette Inv and Inventory Check show **Utility** rather than a numeric balance for catalog Utility items. |
 
 ### 8.5 Production Run - Tree page
 

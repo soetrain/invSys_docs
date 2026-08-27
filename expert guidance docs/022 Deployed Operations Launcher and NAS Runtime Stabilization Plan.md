@@ -1976,7 +1976,7 @@ Gate:
   planned-versus-actual and `System_Key` display contract before implementation;
 - [x] focused RED/GREEN and packaged public-handler GREEN are recorded;
 - [x] applicable regressions remain GREEN; and
-- [ ] visible operator confirmation proves the completed tea batch's actual
+- [x] visible operator confirmation proves the completed tea batch's actual
   quantity appears under Last Actual and in managed inventory.
 
 Automated GREEN recorded 2026-08-26: focused `6/6`, packaged Production public
@@ -1988,6 +1988,10 @@ components, 5,092 procedures, and 1,038 candidates. The earlier operator batch
 was already persisted at planned `632` by the superseded build; Slice 4ag does
 not silently rewrite that inventory entity. Visible acceptance therefore uses
 a newly completed batch or an explicitly authorized inventory correction.
+
+Visible GREEN recorded 2026-08-26: the operator completed a new tea batch,
+confirmed **Last Actual** on Production Run - List, confirmed the new managed
+inventory entity, and accepted the reusable batch system behavior.
 
 ### Slice 4ah -- Admin inventory edit selection binding
 
@@ -2029,7 +2033,7 @@ Gate:
   non-counted Utility behavior; no normative architecture change is required;
 - [x] focused RED/GREEN and packaged handler evidence are recorded;
 - [x] applicable regressions remain GREEN; and
-- [ ] visible operator confirmation saves Filtered Water as Utility without a
+- [x] visible operator confirmation saves Filtered Water as Utility without a
   false missing-selection message.
 
 Automated GREEN recorded 2026-08-26: focused `5/5`, packaged XLAM/Admin handler
@@ -2039,6 +2043,11 @@ deterministic static baseline `19/19`, and reviewed cleanup/growth `13/13`.
 The packaged handler records `ComboSelected=True`, `FieldsLoaded=True`,
 `UtilityReady=True`, and `ValidationReady=True`. Static metrics are 153
 components, 5,096 procedures, and 1,038 candidates.
+
+Visible GREEN recorded 2026-08-26: Filtered Water was selected, edited, and
+saved as **Utility** without the false missing-selection message. The subsequent
+Production view exposed a separate Utility projection defect handled by Slice
+4aj; it does not reopen the accepted Admin selection/save contract.
 
 ### Slice 4ai -- Admin bulk inventory worksheet staging
 
@@ -2100,6 +2109,66 @@ full chain is `30/30`; source/default packaged launcher checks are `24/24` and
 `19/19`; and reviewed cleanup/growth ratchets are `13/13`. Static inventory is
 154 components, 5,140 procedures, and 1,040 candidates. Visible acceptance
 remains open.
+
+### Slice 4aj -- Production batch history and Utility projection
+
+The accepted reusable tea run proved actual-output persistence and then exposed
+two related operator-display gaps. Production Output overwrites its one visible
+row when Next Batch advances, and the exact-entity projection continues to show
+a legacy numeric balance for a catalog item that Admin successfully changed to
+Utility. This slice deliberately changes the D15 Production Run - List display
+contract without weakening exact-key event identity or Inventory Domain
+authority.
+
+Required behavior:
+
+- [x] retain one Production Output display row for each completed batch and
+  Process output, preserving that batch's Last Actual, recall, and `System_Key`;
+- [x] keep the active unfinished batch as a separate selectable row so Actual
+  Output entry continues through the operator's existing list/text handlers;
+- [x] replace the visible **Planned** heading with **Used Goods**, calculated as
+  the scaled compatible input quantity consumed by that Process for the batch;
+- [x] add **Process Total**, the cumulative actual quantity for the same
+  Process/output/UOM across retained completed rows, without adding unlike UOMs;
+- [x] append catalog `TRACK_QTY`, `ITEM_KIND`, and Category metadata to the
+  read-only exact-entity query envelope and render **Utility** in Run palette
+  Inv and Inventory Check for a Utility-managed item instead of its historical
+  numeric balance;
+- [x] preserve measured Utility usage in the required/used quantity columns,
+  existing non-counted Inventory Domain apply behavior, exact-key allocation,
+  sufficiency/stale checks for counted inventory, multi-output completion,
+  batch scaling, saved-workbook binding, and prior GREEN regressions.
+
+D13 RED sequence:
+
+1. [x] Record focused behavioral RED for the eight-column overwritten output
+   list, Planned heading, absent Process Total, and missing exact-entity
+   quantity-mode metadata.
+2. [x] Through the real packaged Production output-row/textbox, Check In,
+   Complete Run, and Next Batch handlers, complete two batches and prove two
+   retained completed rows plus the active batch, batch-specific keys/actuals,
+   Used Goods, and cumulative Process Total.
+3. [x] Rebuild the affected package set and re-run Production, Inventory Domain,
+   launcher, NAS, Release 1, static, dynamic-call, and growth gates.
+
+Gate:
+
+- [x] Architecture v4.11, this plan, and controls v1 define the changed display
+  and Utility projection contracts before implementation;
+- [x] focused RED/GREEN and packaged real-handler evidence are recorded;
+- [x] applicable regressions remain GREEN; and
+- [ ] visible operator confirmation shows multiple batch rows, Process Total,
+  and **Utility** instead of `19400` for Filtered Water.
+
+Automated GREEN recorded 2026-08-27: focused RED was `1/7` and focused GREEN is
+`7/7`; the packaged Production callback plus clean restart is `2/2` and records
+`BatchHistoryRows=True`, `ProcessTotal=True`, and `UtilityDisplay=True` through
+the real output selection/textbox, Check In, Complete Run, Refresh, and Next
+Batch handlers. Packaged XLAM and Ribbon validation are `76/76` and `142/142`,
+live role workflows are `47/47`, the ordered Release 1 chain is `30/30`, the
+dedicated two-session NAS gate is `16/16`, deterministic static evidence is
+`19/19`, and reviewed growth/cleanup is `13/13`. Visible acceptance remains
+open.
 
 ## 6. Batched user acceptance checkpoint
 

@@ -906,16 +906,27 @@ Each Recipe version declares:
   first created under that key and later consumed from the same exact key by
   downstream Process execution. Any unconsumed balance remains managed
   finished/co-product inventory.
-- The released definition and batch scale calculate each output's **Planned**
+- The released definition and batch scale calculate each output's planned
   quantity. Before completion, the operator-entered actual quantity must be positive
   for every output row through **Actual Output**. That operator-entered actual
-  quantity, not the planned quantity, is the quantity created as managed
+  quantity, not the planned definition quantity, is the quantity created as managed
   inventory under the output's new `System_Key`. A routed output's actual
   quantity may not be smaller than its committed downstream quantity. After
-  completion, **Last Actual** displays the exact actual quantity for the most
-  recently completed batch while **Planned** continues to display the scaled
-  definition quantity; advancing to the next batch retains Last Actual as
-  history and clears the new batch's staged actual quantities.
+  completion, Production Output retains a separate row for that Process output
+  and batch instead of overwriting the prior batch. **Last Actual** displays the
+  row's exact completed quantity, **Used Goods** displays the scaled quantity of
+  compatible input goods consumed by that Process for the batch, and **Process
+  Total** displays cumulative actual output for the same Process/output/UOM
+  across the retained rows. The active unfinished batch remains a separate
+  selectable row for Actual Output staging; advancing clears only the new
+  batch's staged quantities. Each retained row preserves its own recall and new
+  output `System_Key`.
+- Production inventory projections honor catalog quantity mode. When the exact
+  managed item/SKU is marked `TRACK_QTY=FALSE` or `ITEM_KIND=UTILITY`, the Run
+  palette **Inv** column and Inventory Check display **Utility**, never a stale
+  or historical numeric balance. The required quantity continues to record
+  measured usage, and the Inventory Domain applies the existing non-counted
+  event rule rather than decrementing a finite on-hand balance.
 - Execution follows the validated Recipe order. Each Process consumes its
   allocated inputs and creates all declared outputs. Run completion is rejected
   when inventory is insufficient, an allocation is stale, an output key is
