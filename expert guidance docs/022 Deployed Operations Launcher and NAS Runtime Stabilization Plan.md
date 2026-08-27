@@ -1989,6 +1989,57 @@ was already persisted at planned `632` by the superseded build; Slice 4ag does
 not silently rewrite that inventory entity. Visible acceptance therefore uses
 a newly completed batch or an explicitly authorized inventory correction.
 
+### Slice 4ah -- Admin inventory edit selection binding
+
+The 2026-08-26 visible Admin **Edit inventory item** checkpoint selected
+Filtered Water from the Inventory item combo, but Save reported **Choose an
+inventory item to edit**. Source inspection proved the combo Change handler
+treated a real dropdown selection as typed search text, rebuilt the list,
+forced `ListIndex = -1`, and failed to bind the selected SKU even though the
+selected display text remained visible. This is a defect against the existing
+Admin control contract, not an Architecture v4.11 change.
+
+Required behavior:
+
+- [x] choosing a combo dropdown row immediately binds its catalog SKU and loads
+  the same item's name, UOM, location, description, category, vendor, external
+  code, quantity mode, and custom metadata;
+- [x] typed search continues to filter without inventing an item selection;
+- [x] choosing a search-results row and choosing a combo dropdown row converge
+  on the same SKU-backed loader;
+- [x] changing the selected item to **Utility** produces `TRACK_QTY=FALSE` and
+  `ITEM_KIND=UTILITY` for that same item without requiring a numeric quantity;
+  and
+- [x] preserve Add Item, edit-reason audit, exact catalog SKU authority,
+  packaged Admin startup, inventory projection, and every prior GREEN
+  regression.
+
+D13 RED sequence:
+
+1. [x] Record focused `0/5` RED for the selection-clearing Change handler and
+   missing packaged assertion.
+2. [x] Exercise the real combo Change handler with a selected catalog row and
+   prove SKU binding, field loading, and Utility readiness.
+3. [x] Rebuild the five-package set and re-run Admin/package, Release 1, static,
+   dynamic-call, and growth gates before visible UAT resumes.
+
+Gate:
+
+- [x] Existing Architecture v4.11 and controls establish catalog identity and
+  non-counted Utility behavior; no normative architecture change is required;
+- [x] focused RED/GREEN and packaged handler evidence are recorded;
+- [x] applicable regressions remain GREEN; and
+- [ ] visible operator confirmation saves Filtered Water as Utility without a
+  false missing-selection message.
+
+Automated GREEN recorded 2026-08-26: focused `5/5`, packaged XLAM/Admin handler
+`75/75`, Ribbon/compile `142/142`, live role workflows `47/47`, ordered Release
+1 chain `30/30`, launcher contracts `24/24`, dedicated NAS `16/16`,
+deterministic static baseline `19/19`, and reviewed cleanup/growth `13/13`.
+The packaged handler records `ComboSelected=True`, `FieldsLoaded=True`,
+`UtilityReady=True`, and `ValidationReady=True`. Static metrics are 153
+components, 5,096 procedures, and 1,038 candidates.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.

@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.25
+**Version:** 1.26
 
 **Inventory date:** 2026-08-26
 
@@ -415,6 +415,19 @@ records `ActualOutputAccepted=True`, `LastActualDisplayed=True`,
 regressions are GREEN; visible acceptance in the operator's saved workbook is
 pending.
 
+### Slice 4ah Admin inventory edit selection binding: packaged GREEN
+
+In Edit Item mode, selecting a visible `cmbEditItem` dropdown row must bind that
+row's exact catalog SKU and load its editable fields before Save. Typed search
+may filter candidates but is not itself a selection. Combo-dropdown and
+`lstEditItemResults` choices must use the same SKU-backed loader. Selecting
+**Utility** in Qty mode for the bound item emits `TRACK_QTY=FALSE` and
+`ITEM_KIND=UTILITY`, so a numeric tank quantity is not required. Focused
+test-first RED was `0/5`; focused source is `5/5` GREEN and packaged XLAM/Admin
+handler validation is `75/75` GREEN. The packaged handler records
+`ComboSelected=True`, `FieldsLoaded=True`, `UtilityReady=True`, and
+`ValidationReady=True`; visible acceptance is pending.
+
 ### Connection progress, aggregate reference detail, and Events view: packaged GREEN
 
 Slice 4w renders **Connecting to warehouse storage...** before the synchronous
@@ -548,11 +561,11 @@ workflow. It does not make a worksheet row the durable identity.
 |---|---|---|
 | `btnAddMode` | Button — **Add Item Mode** | Selects add mode and clears add fields. |
 | `btnEditMode` | Button — **Edit Item** | Selects edit mode and exposes inventory search/results. |
-| `cmbEditItem` | Combo box — Inventory item | Accepts or selects the item to edit. |
-| `lstEditItemResults` | List box | Shows candidate inventory items for edit selection. |
+| `cmbEditItem` | Combo box — Inventory item | Typed text filters candidates. Choosing a dropdown row binds its exact catalog SKU and loads that item's editable fields. Visible display text alone is not identity. |
+| `lstEditItemResults` | List box | Shows filtered candidate inventory items; choosing a row converges on the same SKU-backed edit loader as a combo dropdown choice. |
 | `txtItemName` | Text box — Item name * | Required descriptive item name. |
 | `cmbUom` | Combo box — UOM * | Selects the unit of measure. |
-| `txtQty` | Combo box — Starting qty * | Accepts the initial quantity in add mode. |
+| `txtQty` | Combo box — Starting qty * / Set qty / Qty mode | Accepts a numeric quantity for counted inventory or **Utility**, **Service**, or **Not counted** for non-counted catalog items. Utility saves `TRACK_QTY=FALSE` and `ITEM_KIND=UTILITY`. |
 | `txtLocation` | Text box — Default location | Sets the initial/default location attribute. |
 | `txtCategory` | Text box — Category | Stores category metadata. |
 | `txtDescription` | Text box — Description | Stores the long description. |
