@@ -507,6 +507,20 @@ Packaged action validation is `79/79`. Ribbon/compile
 deterministic static `19/19`, and reviewed growth/cleanup `13/13` remain GREEN.
 Visible acceptance is pending.
 
+### Slice 4am zero starting quantity: automated GREEN, visible acceptance pending
+
+Counted **Add Item** and inventory worksheet `ADD` accept an explicit numeric
+Starting Qty of zero and reject negative values. Zero creates one active exact
+`System_Key` entity and remains visible in managed inventory, Inventory Viewer,
+Receiving choices, and Process Designer's managed-item picker after Refresh.
+It is not allocatable stock: Production Run exact-key allocation still lists
+positive available counted entities only. Retirement remains the explicit
+Delete Item action. Focused RED was `1/8`, with a strengthened rebuild-state RED
+at `7/8`; focused GREEN is `8/8`. Packaged action validation is `81/81`,
+Ribbon/compile is `142/142`, live roles are `47/47`, ordered Release 1 is
+`30/30`, dedicated NAS runtime is `16/16`, deterministic static is `19/19`,
+and reviewed growth/cleanup is `13/13`. Visible acceptance is pending.
+
 ### Connection progress, aggregate reference detail, and Events view: packaged GREEN
 
 Slice 4w renders **Connecting to warehouse storage...** before the synchronous
@@ -650,7 +664,7 @@ workflow. It does not make a worksheet row the durable identity.
 | `lstEditItemResults` | List box | Shows filtered candidate inventory items; choosing a row converges on the same SKU-backed edit loader as a combo dropdown choice. |
 | `txtItemName` | Text box — Item name * | Required descriptive item name. |
 | `cmbUom` | Combo box — UOM * | Selects the unit of measure. |
-| `txtQty` | Combo box — Starting qty * / Set qty / Qty mode | Accepts a numeric quantity for counted inventory or **Utility**, **Service**, or **Not counted** for non-counted catalog items. Utility saves `TRACK_QTY=FALSE` and `ITEM_KIND=UTILITY`. |
+| `txtQty` | Combo box — Starting qty * / Set qty / Qty mode | For counted Add, accepts a required numeric Starting Qty of zero or greater; negative values are rejected. Zero creates an active managed item before stock arrives or is produced. Edit continues to accept a nonnegative target quantity. **Utility**, **Service**, and **Not counted** remain available for non-counted catalog items; Utility saves `TRACK_QTY=FALSE` and `ITEM_KIND=UTILITY`. |
 | `cmbLocation` | Editable combo box — Default location | Selects a distinct current catalog location or the configured warehouse default; also accepts a new location value. |
 | `cmbCategory` | Editable combo box — Category | Selects a distinct current catalog category or accepts a new category value. |
 | `txtDescription` | Text box — Description | Stores the long description. |
@@ -957,7 +971,7 @@ invSys session and selected warehouse.
 | `btnRefresh` | Button — **Refresh** | Reads the current published inventory snapshot or Events projection; it does not process or alter authority workbooks. |
 | `lblSearch`, `txtSearch` | Label and text box — **Search** | Filters the already loaded rows locally across all visible columns. |
 | `lblHeaders` | Header label | Inventory identifies Item Code, Item, UOM, Quantity, Location, and Condition. Events identifies Date, Event, Reference, Item, Qty, UOM, Location, Condition, User, and Details. |
-| `lstInventory` | Six- or ten-column list box | Inventory displays levels aggregated by item code, item, UOM, location, and condition. Events currently displays Receipts, Returns, Dumps, Box Made/Unboxed, Shipped, **Remove** (the `SHIP_RELEASE` action that returns locked inventory to warehouse availability), **Inventory Adjustment** (including audited Admin item retirement), current Box Designs, and current Held Shipments. Slice 4x adds Production Input Consumed and Production Output Created after packaged GREEN. Both views are read-only. |
+| `lstInventory` | Six- or ten-column list box | Inventory displays active managed levels aggregated by item code, item, UOM, location, and condition, including active zero-quantity items created before stock arrives or is produced; retired items remain omitted. Events currently displays Receipts, Returns, Dumps, Box Made/Unboxed, Shipped, **Remove** (the `SHIP_RELEASE` action that returns locked inventory to warehouse availability), **Inventory Adjustment** (including audited Admin item retirement), current Box Designs, and current Held Shipments. Slice 4x adds Production Input Consumed and Production Output Created after packaged GREEN. Both views are read-only. |
 | `lblStatus` | Status/freshness label | Shows row count, snapshot read time, or a no-snapshot/sign-in error. |
 | `btnClose` | Button — **Close** | Closes the Viewer without affecting an operator workbook. |
 

@@ -2277,6 +2277,61 @@ Gate:
   managed inventory list, Viewer, Production picker, and ordinary Edit search
   after Refresh while Events retain its administrative retirement evidence.
 
+### Slice 4am -- Zero starting quantity for managed inventory creation
+
+The operator confirmed that a managed item definition may be established before
+inventory arrives or is produced. This deliberately supersedes Slice 4ak's
+positive-quantity creation/visibility constraint. It does not weaken the
+nonnegative inventory floor or make zero quantity equivalent to retirement.
+
+Required behavior:
+
+- [x] the real single-item **Add Item** handler accepts required numeric Starting
+  Qty `0` and rejects values below zero;
+- [x] inventory worksheet counted `ADD` accepts explicit numeric Quantity `0`,
+  continues to reject blank/non-numeric and negative quantities, and passes the
+  zero value through the real upload/apply handler;
+- [x] `INVENTORY_CREATE` accepts counted zero and creates one active immutable
+  `System_Key` entity instead of writing catalog-only state or `MIGRATION_SEED`;
+- [x] active zero-quantity managed items remain visible after Refresh in managed
+  inventory, Inventory Viewer, Receiving choices, and the Production managed-
+  item picker, while retired items remain omitted; and
+- [x] later receipt or Production output creates its own new physical entity
+  key and all negative creation paths remain rejected.
+
+D13 RED sequence:
+
+1. [x] Exercise the real Add button handler with counted zero and record RED
+   until it accepts zero while rejecting negative input.
+2. [x] Exercise worksheet preflight/upload and isolated Inventory Domain apply
+   with counted zero and record RED until both preserve an active exact entity.
+3. [x] Rebuild the five-package set and rerun focused, packaged Admin/Domain,
+   Viewer/Production, Release 1, NAS, static, and growth gates.
+
+Focused RED was `1/8`: only the reconciled documentation passed while the form,
+Admin service, worksheet upload, Domain apply, managed picker, Viewer, and
+packaged evidence retained the positive-only rule. Focused GREEN is `8/8`.
+The first packaged Domain run then exposed a rebuild-state defect at `80/81`;
+the strengthened exact-entity test recorded `7/8` RED before zero entities were
+made active. Final packaged action evidence is `81/81`, including the real Add
+handler, zero counted worksheet upload, isolated active exact-key creation, and
+negative rejection. Exact Production Run allocation continues to list positive
+available entities only; Process Designer's managed-item picker uses the active
+catalog projection and can therefore select a zero-stock definition safely.
+Final regression evidence is packaged action `81/81`, Ribbon/compile `142/142`,
+live roles `47/47`, ordered Release 1 `30/30`, dedicated NAS runtime `16/16`,
+deterministic static `19/19`, and reviewed growth/cleanup `13/13` GREEN.
+
+Gate:
+
+- [x] Architecture v4.11, Plan 022, and controls v1 define zero-quantity active
+  creation before implementation;
+- [x] focused RED/GREEN and packaged public-handler evidence are recorded;
+- [x] applicable regressions remain GREEN; and
+- [ ] visible operator confirmation creates a zero-quantity disposable item and
+  shows it in the managed list, Viewer, Receiving, and Production picker after
+  Refresh.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.

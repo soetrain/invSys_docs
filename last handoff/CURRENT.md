@@ -1,1 +1,1 @@
-`051 Slice 4al Delete Handler Compile Fix Green.md`
+`052 Slice 4am Zero Starting Quantity Green Awaiting Visible Acceptance.md`

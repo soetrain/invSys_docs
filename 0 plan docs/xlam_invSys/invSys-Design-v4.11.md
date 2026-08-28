@@ -669,7 +669,9 @@ with Admin Generate Warehouse/Create Warehouse and optional bootstrap or Admin
 - Processor application, snapshot publication, operator refresh, and reopen
   preserve the key.
 - Current Inventory Viewer and Receiving choice projections aggregate active
-  entities by item code/UOM/location/condition and omit nonpositive totals.
+  entities by item code/UOM/location/condition and retain a zero-total group
+  while its catalog/entity state remains active. Zero is visible managed state,
+  not allocatable stock; negative totals and retired groups remain omitted.
 - Added custom headers survive their declared local/shared persistence boundary.
 - The supported greenfield generation/seed path does not call legacy inventory
   import or migration behavior.
@@ -715,10 +717,15 @@ with Admin Generate Warehouse/Create Warehouse and optional bootstrap or Admin
 - The single-item **Add Item** action and worksheet `ADD` action create each
   managed inventory item through `INVENTORY_CREATE`, generating one new
   immutable `System_Key` at the Admin creation boundary before queueing. A
-  successful processor run and snapshot publication make a counted item with
-  positive starting quantity immediately eligible for Inventory Viewer and the
-  Production managed-item picker after Refresh. `MIGRATION_SEED`, blank-key
-  ledger rows, and catalog-only quantity are prohibited for this operator path.
+  counted Starting Qty is required to be numeric and may be zero or greater;
+  negative creation quantity is prohibited. Zero means the managed definition
+  exists before stock arrives or is produced; it is not deletion or retirement.
+  A successful processor run and snapshot publication keep that active zero-
+  quantity entity visible in managed inventory, Inventory Viewer, Receiving
+  choices, and the Production managed-item picker after Refresh. Later receipts
+  or Production completion create their own new immutable physical entity keys.
+  `MIGRATION_SEED`, blank-key ledger rows, and catalog-only quantity are
+  prohibited for this operator path.
 - A catalog item created by the superseded blank-key Add path may be completed
   only by an explicit Admin Edit/Save with a positive target quantity when no
   managed entity exists. That action creates the item's first new managed
