@@ -490,6 +490,21 @@ role workflows `47/47`, ordered Release 1 `30/30`, dedicated NAS runtime
 Visible acceptance remains open for Honey in Viewer and the Production picker
 and for both dropdowns in the deployed form.
 
+### Slice 4al Add/Edit managed-inventory deletion: automated GREEN, visible acceptance pending
+
+In Edit Item mode, **Delete Item** becomes enabled only after the operator
+selects an exact catalog-backed SKU. The real button handler requires a second
+confirmation and a nonblank reason. It retires every active exact `System_Key`
+entity for that SKU through one audited `ADMIN_INVENTORY_ADJUST` event: counted
+balances are reduced to zero and Utility/Service entities receive zero-delta
+retirement evidence. Catalog, entity, and event history remain durable; after
+Refresh, retired rows are omitted from ordinary Edit search, managed inventory,
+Inventory Viewer levels, and Production pickers. Focused RED was `1/7` and
+focused GREEN is `7/7`; packaged action validation is `79/79`. Ribbon/compile
+`142/142`, live roles `47/47`, ordered Release 1 `30/30`, dedicated NAS `16/16`,
+deterministic static `19/19`, and reviewed growth/cleanup `13/13` remain GREEN.
+Visible acceptance is pending.
+
 ### Connection progress, aggregate reference detail, and Events view: packaged GREEN
 
 Slice 4w renders **Connecting to warehouse storage...** before the synchronous
@@ -517,7 +532,10 @@ alternatives and currently held shipment rows supplement that projection as
 not an immutable revision history. Slice 4x adds **Production Input Consumed**
 and **Production Output Created** rows with Recipe/Process/run references after
 the corresponding packaged event-publication contract is GREEN; design
-lifecycle history remains outside this inventory-action projection.
+lifecycle history remains outside this inventory-action projection. Slice 4al
+adds **Inventory Adjustment** for the audited Admin retirement action; its
+reference and details retain the selected SKU, reason, and exact-key event
+evidence without returning the retired entity to active inventory levels.
 An ordinary Shipping Add also writes an internal `SHIP_RESERVE` event. That
 staging artifact is not shown as **Shipment Held**, because the operator did not
 use Hold and its zero inventory delta would only report that nothing happened.
@@ -621,6 +639,7 @@ workflow. It does not make a worksheet row the durable identity.
 
 | Control | Type / displayed text | Purpose |
 |---|---|---|
+| `btnDeleteItem` | Button — **Delete Item** | Visible only in Edit mode. After an exact SKU is selected, requires confirmation and a reason, then retires all active exact `System_Key` entities for that SKU through audited Admin adjustment lines. Counted balances become zero; non-counted Utility/Service entities receive zero-delta retirement evidence. Canonical catalog/entity/event history is retained, while the retired item is removed from ordinary Edit search, managed inventory, Viewer levels, and Production pickers after Refresh. |
 | `btnAddMode` | Button — **Add Item Mode** | Selects add mode and clears add fields. |
 | `btnEditMode` | Button — **Edit Item** | Selects edit mode and exposes inventory search/results. |
 | `btnCreateInventoryTable` | Button — **Create Inventory Table** | Creates a uniquely named bulk ADD/EDIT staging table in the captured workbook and closes the modal form so the worksheet can be edited. |
@@ -936,7 +955,7 @@ invSys session and selected warehouse.
 | `btnRefresh` | Button — **Refresh** | Reads the current published inventory snapshot or Events projection; it does not process or alter authority workbooks. |
 | `lblSearch`, `txtSearch` | Label and text box — **Search** | Filters the already loaded rows locally across all visible columns. |
 | `lblHeaders` | Header label | Inventory identifies Item Code, Item, UOM, Quantity, Location, and Condition. Events identifies Date, Event, Reference, Item, Qty, UOM, Location, Condition, User, and Details. |
-| `lstInventory` | Six- or ten-column list box | Inventory displays levels aggregated by item code, item, UOM, location, and condition. Events currently displays Receipts, Returns, Dumps, Box Made/Unboxed, Shipped, **Remove** (the `SHIP_RELEASE` action that returns locked inventory to warehouse availability), current Box Designs, and current Held Shipments. Slice 4x adds Production Input Consumed and Production Output Created after packaged GREEN. Both views are read-only. |
+| `lstInventory` | Six- or ten-column list box | Inventory displays levels aggregated by item code, item, UOM, location, and condition. Events currently displays Receipts, Returns, Dumps, Box Made/Unboxed, Shipped, **Remove** (the `SHIP_RELEASE` action that returns locked inventory to warehouse availability), **Inventory Adjustment** (including audited Admin item retirement), current Box Designs, and current Held Shipments. Slice 4x adds Production Input Consumed and Production Output Created after packaged GREEN. Both views are read-only. |
 | `lblStatus` | Status/freshness label | Shows row count, snapshot read time, or a no-snapshot/sign-in error. |
 | `btnClose` | Button — **Close** | Closes the Viewer without affecting an operator workbook. |
 

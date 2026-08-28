@@ -2218,6 +2218,61 @@ Gate:
 - [ ] visible operator confirmation shows Honey in Viewer and the Production
   picker and shows dropdown arrows/options for Category and Default location.
 
+### Slice 4al -- Add/Edit managed-inventory deletion
+
+The operator requested deletion directly from **Add/Edit Inventory Items**.
+This is a deliberate Release 1 contract addition. It does not authorize
+physical deletion of immutable entity identity or event history. The Admin
+surface therefore provides an audit-preserving SKU retirement action that
+removes every active exact entity for the selected item from active managed
+inventory, including zero-quantity Utility/Service entities.
+
+Required behavior:
+
+- [x] expose **Delete Item** only in Edit mode after the catalog-backed search
+  has bound an exact SKU;
+- [x] require a second confirmation and nonblank deletion reason through the
+  real button handler;
+- [x] resolve every active entity for the selected SKU and queue one
+  `ADMIN_INVENTORY_ADJUST` payload with a separate exact `System_Key` line per
+  entity, reducing counted quantities to zero and writing zero-delta retirement
+  evidence for non-counted entities;
+- [x] rebuild those entities as `InventoryState=RETIRED`, mark the retained
+  catalog record `RETIRED`, and omit the item from ordinary Edit search,
+  Inventory Viewer inventory levels, and Production managed-item pickers after
+  Refresh; and
+- [x] never erase or reuse a key, physically delete catalog/entity/log rows, or
+  add a worksheet bulk-delete verb in this Release 1 slice.
+
+D13 RED sequence:
+
+1. [x] Exercise the real form Delete handler after selecting a catalog-backed
+   item and record RED because no delete control/action exists.
+2. [x] Apply a counted and a Utility retirement through the Admin service and
+   record RED until exact-key negative/zero-delta retirement lines rebuild as
+   `RETIRED` and disappear from active inventory queries.
+3. [x] Rebuild the five-package set and rerun focused, packaged Admin, Inventory
+   Domain, Viewer/Production, Release 1, NAS, static, and growth gates.
+
+Focused source RED was `1/7`: documentation was present while the form action,
+Admin service, Inventory Domain retirement, active-projection filtering, and
+packaged callbacks were absent. Focused GREEN is `7/7`. The rebuilt packaged
+gate is `79/79`, including the real Delete button handler and isolated counted
+plus Utility retirement through the Inventory Domain. Preserved evidence is
+Ribbon/compile `142/142`, live role workflows `47/47`, ordered Release 1
+`30/30`, dedicated NAS runtime `16/16`, deterministic static `19/19`, and
+reviewed growth/cleanup `13/13`.
+
+Gate:
+
+- [x] Architecture v4.11, Plan 022, and controls v1 define the audit-preserving
+  deletion contract before implementation;
+- [x] focused RED/GREEN and packaged real-handler evidence are recorded;
+- [x] applicable regressions remain GREEN; and
+- [ ] visible operator confirmation shows the selected item is absent from the
+  managed inventory list, Viewer, Production picker, and ordinary Edit search
+  after Refresh while Events retain its administrative retirement evidence.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.

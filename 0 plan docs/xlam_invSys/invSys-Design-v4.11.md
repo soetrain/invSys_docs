@@ -643,6 +643,21 @@ with Admin Generate Warehouse/Create Warehouse and optional bootstrap or Admin
 - **Delete Demo Inventory** confirms the destructive intent and depletes every
   active `DEMO-` entity through exact-`System_Key` adjustment events. It does
   not physically delete canonical entity or event history.
+- The single-item **Add/Edit Inventory Items** form exposes **Delete Item** only
+  in Edit mode after an exact catalog SKU is selected. The action requires a
+  second confirmation and a nonblank reason, retires every currently active
+  managed `System_Key` entity owned by that SKU through one audited
+  `ADMIN_INVENTORY_ADJUST` payload, and never physically deletes catalog,
+  entity, or event history. Each counted entity is reduced to zero by its own
+  exact-key line; Utility, Service, and other non-counted zero-quantity
+  entities receive an exact-key zero-delta retirement line. The durable entity
+  projection records `InventoryState=RETIRED`, so retired entities are omitted
+  from the managed inventory list, Inventory Viewer inventory levels, and
+  Production managed-item pickers after processor publication and Refresh.
+  Retirement is final for an existing key: later inventory of the same SKU is
+  created under a new `System_Key`. The retained catalog record is marked
+  retired and omitted from the form's ordinary Edit search while remaining
+  available to canonical history and event labels.
 - **Delete Data Set** is a separate confirmed action. It deletes only the
   selected uploaded CSV definition from the selected warehouse library and
   does not change inventory already seeded from it. The built-in Release 1
@@ -713,6 +728,14 @@ with Admin Generate Warehouse/Create Warehouse and optional bootstrap or Admin
   dropdowns. They list distinct current catalog values; Default location also
   includes the configured warehouse default. Operators may enter a new value,
   which becomes available in later launches after it is saved.
+- The single-item Edit surface includes **Delete Item**. Its real click handler
+  binds the selected catalog SKU, confirms that all of that SKU's active exact
+  entities will leave managed inventory, captures the required reason, and
+  submits through the Admin event/processor authority. A successful action
+  marks those exact entity projections `RETIRED`, marks the retained catalog
+  definition `RETIRED`, reloads the form without the deleted item in ordinary
+  Edit search, and instructs open role workbooks to Refresh. Worksheet tables
+  do not gain a bulk delete verb in Release 1.
 
 **D13 gate:** Before changing identity generation, schemas, Admin generation,
 seeding, Inventory Domain application, snapshots, or role hydration, write and
@@ -1084,6 +1107,10 @@ Production inventory actions are visible as **Production Input Consumed** and
 **Production Output Created**. Their details identify the correlated Recipe,
 Process, run, and exact entity key without exposing design lifecycle events as
 inventory mutations.
+Audited `ADMIN_INVENTORY_ADJUST` retirement actions are visible as **Inventory
+Adjustment**. Their reference/details retain the selected SKU, reason, and exact
+entity evidence while the retired entities remain absent from active Inventory
+levels and managed-item pickers.
 **Current Events filters:** On first use, the R1 Events page defaults to **All** published dates. On explicit Refresh, an operator may apply a rolling **Day** (1-day), **Week** (7-day), **Month** (30-day), or typed positive whole-number-of-days window; the date window combines with the existing local text search and never applies to the Inventory page. Custom values are bounded to 1-36500 days. Each valid applied range is remembered per Windows user and restored when the Viewer is opened again, including after an Excel restart; an invalid persisted value falls back to **All**. The preference is local UI state and is never written to warehouse authority data. These convenience filters operate on the loaded read-only projection and do not add processing or write authority.
 **Future comprehensive Event Viewer:** After R1, design a comprehensive cross-domain Event Viewer for durable receipt, disposition, design, boxing, production, reservation, release, shipment, and administrative history. Its later design must define canonical event coverage, readable time-zone-aware timestamps, correlation/reference detail, filters, pagination or bounded history, export, retention, capability rules, and freshness indicators before implementation. The bounded R1 Events page is not the authority or a substitute for that design.
 
