@@ -499,8 +499,10 @@ entity for that SKU through one audited `ADMIN_INVENTORY_ADJUST` event: counted
 balances are reduced to zero and Utility/Service entities receive zero-delta
 retirement evidence. Catalog, entity, and event history remain durable; after
 Refresh, retired rows are omitted from ordinary Edit search, managed inventory,
-Inventory Viewer levels, and Production pickers. Focused RED was `1/7` and
-focused GREEN is `7/7`; packaged action validation is `79/79`. Ribbon/compile
+Inventory Viewer levels, and Production pickers. Focused RED was `1/7`. A
+post-deployment declaration-scope regression then recorded `7/8` RED before the
+real public handler declarations were corrected; focused GREEN is now `8/8`.
+Packaged action validation is `79/79`. Ribbon/compile
 `142/142`, live roles `47/47`, ordered Release 1 `30/30`, dedicated NAS `16/16`,
 deterministic static `19/19`, and reviewed growth/cleanup `13/13` remain GREEN.
 Visible acceptance is pending.

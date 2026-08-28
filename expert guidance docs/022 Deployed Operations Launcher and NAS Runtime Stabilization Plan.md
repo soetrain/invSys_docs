@@ -2256,7 +2256,11 @@ D13 RED sequence:
 
 Focused source RED was `1/7`: documentation was present while the form action,
 Admin service, Inventory Domain retirement, active-projection filtering, and
-packaged callbacks were absent. Focused GREEN is `7/7`. The rebuilt packaged
+packaged callbacks were absent. After first deployment, visible launch exposed
+a compile defect because the new delete variables were declared in the adjacent
+worksheet handler instead of `Add_InventoryItem`. The strengthened focused test
+recorded declaration-scope RED at `7/8`; moving both declarations into the real
+public Ribbon handler restored focused GREEN at `8/8`. The rebuilt packaged
 gate is `79/79`, including the real Delete button handler and isolated counted
 plus Utility retirement through the Inventory Domain. Preserved evidence is
 Ribbon/compile `142/142`, live role workflows `47/47`, ordered Release 1
