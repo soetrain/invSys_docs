@@ -848,6 +848,11 @@ Each output definition declares:
   at 100% batch scale, `required quantity = Percent / 100 * BatchBasisQty`.
   **Yield basis quantity** is the corresponding reference for a percentage
   output. The run batch scale is applied after that base quantity is resolved.
+- Process Designer presents the visible Output editor as one compact row in
+  this order: **ID / Output / Design / Ver / Output Qty / Yield % / Yield
+  basis / UOM**. Hidden output SKU state must not reserve a visible gap. Output
+  UOM is selected from a dropdown backed by the current warehouse **Recipe UOM
+  Catalog**; the form does not accept a new free-text Output UOM.
 
 **Process worksheet workbench:**
 - Process Designer exposes two independent actions: **Create Process Table**

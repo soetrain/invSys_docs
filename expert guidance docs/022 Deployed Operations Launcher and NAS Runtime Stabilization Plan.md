@@ -2620,6 +2620,53 @@ Ribbon/VBA compile `142/142`; live roles `47/47`; ordered Release 1 `30/30`;
 dedicated NAS `16/16`; deterministic static `19/19`; and reviewed growth
 `13/13`. The remaining gate is visible operator acceptance.
 
+### Slice 4as -- Compact Process Output editor and catalog UOM
+
+The 2026-08-30 visible Slice 4ar checkpoint found that Process Designer's
+hidden output SKU text box still reserved a blank slot between Output and
+Design, and that Output UOM appeared as a free-text box on a second row. This
+is a newly discovered visible-acceptance blocker. It changes only the
+operator-facing Output editor geometry and UOM selection contract; Process
+identity, output SKU/design identity, quantities/yields, lifecycle authority,
+and worksheet behavior remain unchanged.
+
+Required behavior:
+
+- [x] Architecture v4.11, this plan, and controls v1 require one compact Output
+  editor row and a Recipe UOM Catalog dropdown before implementation;
+- [x] the hidden output SKU control reserves no visible horizontal gap;
+- [x] Design, Version, Output Qty, Yield %, and Yield basis move left into the
+  recovered space, and UOM appears on that same row at the right;
+- [x] Output UOM is a dropdown-list populated from Settings' current Recipe UOM
+  Catalog and restores the saved selection on load; and
+- [x] Add/Update continue through the existing public form handlers and reject
+  an Output UOM that is not in the current catalog.
+
+D13 RED sequence:
+
+1. [x] Add a focused Slice 4as source contract and extend the packaged public
+   reusable-Production action through the real Output Add/Update handlers;
+   record RED against the gap, second-row text box, and missing catalog proof.
+2. [x] Implement only the compact geometry and catalog-backed Output UOM
+   projection, preserving hidden IDs and Designs Domain authority.
+3. [x] Rebuild Operations and rerun focused, packaged Production, layout,
+   Ribbon/compile, Release 1, NAS, static, and reviewed-growth gates.
+
+Gate:
+
+- [x] focused RED/GREEN and packaged real-handler evidence are recorded;
+- [x] applicable regressions remain GREEN; and
+- [ ] visible operator confirmation shows one compact Output editor row with a
+  working catalog UOM dropdown.
+
+Automated evidence recorded 2026-08-30: focused Slice 4as RED `1/6` then
+GREEN `6/6`; prior Slice 4ar `8/8`; Production layout `8/8`; packaged public
+Production actions and clean restart `2/2`; packaged XLAM `81/81`;
+Ribbon/VBA compile `142/142`; live roles `47/47`; ordered Release 1 `30/30`;
+dedicated NAS `16/16`; deterministic static `19/19`; and reviewed growth
+`13/13`. Static metrics are 154 components, 5,210 procedures, and 1,048
+candidates. Visible Process Designer acceptance remains open.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.

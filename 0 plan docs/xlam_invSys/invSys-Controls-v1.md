@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.34
+**Version:** 1.35
 
 **Inventory date:** 2026-08-30
 
@@ -606,6 +606,21 @@ Ribbon/VBA compile `142/142`; live roles `47/47`; ordered Release 1 `30/30`;
 dedicated NAS `16/16`; deterministic static `19/19`; and reviewed growth
 `13/13`. Visible acceptance of the sample four-Process workflow remains open.
 
+### Slice 4as compact Process Output editor: packaged GREEN, visible acceptance pending
+
+Process Designer's visible Output editor is one compact row ordered **ID /
+Output / Design / Ver / Output Qty / Yield % / Yield basis / UOM**. The hidden
+output SKU control retains state without reserving a visible gap. Design,
+Version, Qty, Yield %, and Yield basis move left into that space; UOM moves up
+to the same row and is a dropdown-list populated from the current warehouse
+**Recipe UOM Catalog**. Existing Add/Update handlers remain the action boundary.
+
+Automated evidence recorded 2026-08-30: focused RED `1/6` then GREEN `6/6`;
+packaged public Production actions and clean restart `2/2`; packaged XLAM
+`81/81`; Ribbon/VBA compile `142/142`; live roles `47/47`; ordered Release 1
+`30/30`; dedicated NAS `16/16`; deterministic static `19/19`; and reviewed
+growth `13/13`. Visible confirmation of the compact row/dropdown remains open.
+
 ### Connection progress, aggregate reference detail, and Events view: packaged GREEN
 
 Slice 4w renders **Connecting to warehouse storage...** before the synchronous
@@ -1121,7 +1136,7 @@ removing the repeated Saving notices caused by unchanged read-only loads.
 | Process identity | `txtProcessName`, locked `txtProcessId`, locked `txtProcessVersion`, `txtProcessDescription` | Edits the versioned Process header. invSys allocates the next available three-character Base-36 ID and version; the operator does not type either identity. |
 | Worksheet workbench | `btnProcessWorksheetCreate` -- **Create Process Table**; `btnProcessWorksheetRetrieve` -- **Retrieve Selected Process**; `btnProcessWorksheetAddAlternative` -- **Add Acceptable Item** | Creates any number of uniquely named Process tables in the exact captured `Production.Operator.xlsm`; Add Acceptable Item appends one numbered managed-item/hidden-SKU pair to the selected table; retrieval accepts one table or Ctrl+click cells across several tables, imports each confirmed definition as DRAFT, and deletes only successful selected tables. |
 | Requirements | header-backed `lstProcessRequirements`; locked `txtRequirementId`, `txtRequirementName`, `txtRequirementQty`, `txtRequirementPercent`, `txtRequirementYieldBasis`, `txtRequirementUom`; `btnProcessRequirementAdd`, `btnProcessRequirementUpdate`, `btnProcessRequirementRemove`, `btnProcessRequirementUp`, `btnProcessRequirementDown` | Defines typed external/upstream input requirements under **ID / Requirement / Qty / % / Batch basis / UOM**. IDs are generated Base-36 values. Worksheet input rows calculate basis and percent within each normalized-UOM group, so unlike groups may coexist without implicit conversion. |
-| Outputs | header-backed `lstProcessOutputs`; locked `txtProcessOutputId`, `txtProcessOutputDesignId`, `txtProcessOutputDesignVersion`; `txtProcessOutputName`, `txtProcessOutputQty`, `txtProcessOutputPercent`, `txtProcessOutputYieldBasis`, `txtProcessOutputUom`; hidden/internal `txtProcessOutputItemCode`; `btnProcessOutputAdd`, `btnProcessOutputUpdate`, `btnProcessOutputRemove`, `btnProcessOutputUp`, `btnProcessOutputDown` | Defines one or more output designs under **ID / Output / Design / Ver / Output Qty / Yield % / Yield basis / UOM**. Quantity-defined outputs default to Yield %=100 and Yield basis=Output Qty; explicit percentage/basis values survive Update/save/reload. Output and Design identities are generated. A managed output item is picker-selected and its SKU is retained internally; the operator does not type Item Code. Save/Release rejects a Process with no output or an output without a selected managed SKU. |
+| Outputs | header-backed `lstProcessOutputs`; locked `txtProcessOutputId`, `txtProcessOutputDesignId`, `txtProcessOutputDesignVersion`; `txtProcessOutputName`, `txtProcessOutputQty`, `txtProcessOutputPercent`, `txtProcessOutputYieldBasis`; catalog-dropdown `cmbProcessOutputUom`; hidden/internal `txtProcessOutputItemCode`; `btnProcessOutputAdd`, `btnProcessOutputUpdate`, `btnProcessOutputRemove`, `btnProcessOutputUp`, `btnProcessOutputDown` | Defines one or more output designs in one compact row under **ID / Output / Design / Ver / Output Qty / Yield % / Yield basis / UOM**. The hidden SKU reserves no visible gap. Quantity-defined outputs default to Yield %=100 and Yield basis=Output Qty; explicit percentage/basis values survive Update/save/reload. Output and Design identities are generated. UOM is selected from Settings' Recipe UOM Catalog. A managed output item is picker-selected and its SKU is retained internally; the operator does not type Item Code. Save/Release rejects a Process with no output, a noncatalog UOM, or an output without a selected managed SKU. |
 | Worksheet table columns | **Record Type**, text-safe generated **ID**, **Name**, **Qty**, **Percent**, **Basis Qty**, catalog-dropdown **UOM**, generated **Design ID**, **Design Version**, **Instruction**, automatic **Requirement ID**, hidden/system-managed **Output SKU**, **Acceptable Managed Item 1** through **4** (and added pairs), with each matching managed hidden **Accepted SKU n** | Record Type is dropdown-backed. INPUT, OUTPUT, and INSTRUCTION IDs use one table-wide Base-36 namespace and remain unique regardless of entry order; INPUT Percent/Basis Qty are formula-managed per normalized-UOM group, INPUT Requirement ID and OUTPUT Design identity are system managed, and mixed-UOM assembly rows are valid when every group totals 100.0%. Core item search opens only from a valid **Acceptable Managed Item n** cell: INPUT fills that numbered alternative pair; OUTPUT pair 1 fills the visible managed item and hidden Output SKU while retaining its descriptive Name. OUTPUT Name never opens search. Neither path stores a physical `System_Key`; historical ALTERNATIVE rows remain import-compatible. |
 | Instructions | header-backed `lstProcessInstructions`, `txtProcessInstruction`; `btnProcessInstructionAdd`, `btnProcessInstructionUpdate`, `btnProcessInstructionRemove`, `btnProcessInstructionUp`, `btnProcessInstructionDown` | Lists **Step / Instruction** and defines reusable operator instructions independently from input/output rows. |
 | Lifecycle | `btnProcessValidate`, `btnProcessSave`, `btnProcessRelease`, `btnProcessObsolete`, `btnProcessClear` | Validates and queues immutable Designs Domain Process lifecycle events. |
