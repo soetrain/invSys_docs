@@ -934,6 +934,14 @@ Each Recipe version declares:
   requirements. Unconnected output quantity remains finished/co-product
   inventory. The sum of quantities routed from one output may not exceed that
   output's scaled yield.
+- Recipe Designer presents each connection output by its Process output name,
+  which is the operator's business-facing identity. The generated `OutputId`
+  remains hidden control/domain identity and is the exact value persisted on
+  the Recipe edge; changing the display must never replace or regenerate that
+  ID.
+- Connection UOM is selected from the current warehouse **Recipe UOM Catalog**
+  maintained in Settings. Recipe Designer does not accept a free-text UOM for
+  a new or updated connection.
 - Output/requirement connections validate item/design compatibility, UOM,
   quantity/yield basis, and execution order. Recipe release fails for an
   unresolved requirement, missing/obsolete/unreleased Process version,

@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.30
+**Version:** 1.31
 
 **Inventory date:** 2026-08-29
 
@@ -537,6 +537,19 @@ live roles `47/47`, ordered Release 1 `30/30`, dedicated NAS `16/16`,
 deterministic static `19/19`, and reviewed growth/cleanup `13/13` are GREEN.
 Visible retrieval acceptance is pending.
 
+### Slice 4ao Recipe connection labels and UOM control: automated GREEN, visible acceptance pending
+
+Recipe Designer's connection Output control displays the selected Process
+output name while retaining the generated Output ID as its hidden bound value.
+The connection UOM control is `cmbConnectionUom`, a dropdown-list populated
+from Settings' current Recipe UOM Catalog. Connect and Update continue to stage
+the hidden Output ID and the selected catalog UOM. Focused RED was `0/7` and
+GREEN is `7/7`; packaged public-handler plus clean-restart evidence is `2/2`
+with name display, hidden ID persistence, catalog selection, and Update all
+true. Packaged XLAM `81/81`, Ribbon/compile `142/142`, live roles `47/47`,
+Release 1 `30/30`, NAS `16/16`, static `19/19`, and growth `13/13` remain
+GREEN. Visible acceptance is pending.
+
 ### Connection progress, aggregate reference detail, and Events view: packaged GREEN
 
 Slice 4w renders **Connecting to warehouse storage...** before the synchronous
@@ -1064,7 +1077,7 @@ removing the repeated Saving notices caused by unchanged read-only loads.
 | Saved Recipes | `lstRecipes`; `btnRecipeRefresh`, `btnRecipeNew`, `btnRecipeLoad` | Lists Recipe ID/version/status records and starts or loads a draft. |
 | Recipe identity | `txtReusableRecipeName`, locked `txtReusableRecipeId`, editable `txtReusableRecipeVersion`, `txtReusableRecipeDescription` | Edits the versioned Recipe header. invSys allocates the next collision-checked three-character Base-36 Recipe ID and proposes version `1` for a blank draft on form load, New Recipe, Clear, and as a Save Draft/Release fallback. The operator may replace Version with another positive whole number; Recipe ID cannot be typed, and an existing immutable ID/version is never overwritten. |
 | Process library/nodes | `lstReleasedProcesses`, `lstRecipeNodes`; `btnRecipeAddProcess`, `btnRecipeRemoveProcess` | Reuses exact released Process versions and assigns a node identity within this Recipe. |
-| Connections | `cmbConnectionFromNode`, `cmbConnectionOutput`, `cmbConnectionToNode`, `cmbConnectionRequirement`, `txtConnectionQty`, `txtConnectionPercent`, `txtConnectionUom`, `lstRecipeConnections`; `btnRecipeConnect`, `btnRecipeUpdateConnection`, `btnRecipeDisconnect` | Routes individual output quantities to compatible downstream requirements. Multiple outputs and multiple downstream edges are supported. |
+| Connections | `cmbConnectionFromNode`, name-visible/ID-bound `cmbConnectionOutput`, `cmbConnectionToNode`, `cmbConnectionRequirement`, `txtConnectionQty`, `txtConnectionPercent`, catalog-backed `cmbConnectionUom`, `lstRecipeConnections`; `btnRecipeConnect`, `btnRecipeUpdateConnection`, `btnRecipeDisconnect` | Routes individual output quantities to compatible downstream requirements. Output names are operator-visible while generated Output IDs remain hidden persisted identity. UOM is selected from Settings' Recipe UOM Catalog; free-text connection UOM is not accepted. Multiple outputs and multiple downstream edges are supported. |
 | Execution order | `lstRecipeNodes`; `btnRecipeMoveUp`, `btnRecipeMoveDown`, `btnRecipeAutoOrder` | Controls execution order. Validation rejects an order inconsistent with the directed graph. |
 | Validation/lifecycle | `lstRecipeValidation`; `btnRecipeValidate`, `btnRecipeSave`, `btnRecipeRelease`, `btnRecipeObsolete`, `btnRecipeClear` | Reports unresolved inputs, compatibility, quantity/yield, missing definition, and circular-dependency failures before lifecycle events are queued. |
 

@@ -2390,6 +2390,57 @@ static `19/19`, and reviewed growth/cleanup `13/13`. Static metrics remain 154
 components, 5,177 procedures, and 1,043 candidates. Visible acceptance remains
 open.
 
+### Slice 4ao -- Recipe connection output names and catalog UOM selection
+
+The 2026-08-29 visible Recipe Designer checkpoint confirmed that connections
+work, but the Output selector exposes generated ID `006` rather than the
+operator-facing output name and the connection UOM editor is free text. This is
+a deliberate D15 operator contract correction; graph persistence continues to
+use the exact generated Output ID.
+
+Required behavior:
+
+- [x] Architecture v4.11, this plan, and controls v1 define the corrected
+  operator contract before implementation;
+- [x] Recipe Designer's Output dropdown displays the selected Process output's
+  name while retaining its generated Output ID as hidden selection authority;
+- [x] Connect and Update stage and persist the exact hidden Output ID, never the
+  displayed name;
+- [x] connection UOM is a non-free-text dropdown populated from Settings'
+  current Recipe UOM Catalog and an existing selected connection restores its
+  catalog UOM; and
+- [x] Recipe graph validation, compatible-UOM enforcement, saved definitions,
+  Process/Recipe lifecycle behavior, Production runs, and prior Release 1 GREEN
+  regressions remain unchanged.
+
+D13 RED sequence:
+
+1. [x] Add a focused source contract and extend the packaged public Production
+   form action to exercise the real node/output controls and Connect/Update
+   handlers; record RED while Output displays its ID and UOM is `TextBox`.
+2. [x] Implement a name-visible/ID-bound output combo and catalog-backed UOM
+   combo without changing the Designs Domain connection schema.
+3. [x] Rebuild the affected package set and rerun focused, packaged Production,
+   Ribbon/compile, live-role, Release 1, NAS, static, and reviewed-growth gates.
+
+Gate:
+
+- [x] focused RED/GREEN and packaged real-handler evidence are recorded;
+- [x] applicable regressions remain GREEN; and
+- [ ] visible operator confirmation selects output names and a catalog UOM in
+  Recipe Designer and successfully saves/releases the multi-Process Recipe.
+
+Automated evidence recorded 2026-08-29: focused source RED was `0/7` and
+focused GREEN is `7/7`. The packaged public Production callback plus clean
+restart is `2/2` and records `RecipeOutputNameVisible=True`,
+`RecipeOutputIdPreserved=True`, `RecipeUomCatalog=True`, and
+`RecipeConnectionUpdated=True` through the actual Connect and Update handlers;
+Recipe save/release/obsolete and the two-batch run also remain GREEN. Packaged
+XLAM is `81/81`, Ribbon/compile `142/142`, live roles `47/47`, ordered Release 1
+`30/30`, dedicated NAS runtime `16/16`, deterministic static `19/19`, and
+reviewed growth/cleanup `13/13`. Static metrics are 154 components, 5,180
+procedures, and 1,044 candidates. Visible acceptance remains open.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.
