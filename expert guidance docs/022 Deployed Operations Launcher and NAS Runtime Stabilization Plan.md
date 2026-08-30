@@ -2783,6 +2783,75 @@ procedures, and 1,050 scanner candidates. The current dedicated-NAS rerun was
 not repeated because its configured test root remains unavailable; the prior
 verified result remains `16/16`.
 
+### Slice 4av -- Process-scoped Production execution, plan sufficiency, and run instructions
+
+The 2026-08-30 visible four-Process Recipe checkpoint selected Chai Spice Mix,
+allocated its four ingredients, and then found Check In blocked by unresolved
+Dry Crushed Black Tea belonging to Brewed Black Slurry Tea. The checkpoint also
+showed only four inventory rows and no execution instructions. This is a
+deliberate D15 contract change from atomic whole-Recipe completion to one
+selected Process at a time; Architecture v4.11 and controls v1 define the new
+boundary before implementation.
+
+Required behavior:
+
+- [x] Architecture v4.11, this plan, and controls v1 define Process-scoped
+  Check In/completion and whole-Recipe status before VBA changes;
+- [x] selecting a Process filters its allocation surface and Check In validates
+  only that Process's external inputs and completed upstream commitments;
+- [x] unresolved or insufficient inventory for another Process remains visible
+  in Multi-Process Run Plan but does not block the selected READY Process;
+- [x] the plan displays READY, NEEDS ALLOCATION, WAITING UPSTREAM,
+  ! INSUFFICIENT, or COMPLETE status using the complete Recipe context;
+- [x] independent READY Processes may run in either order, while downstream
+  Processes cannot run before sufficient exact upstream output exists;
+- [x] completing one Process consumes only its inputs and creates each of its
+  outputs under a new exact `System_Key`; the batch completes only when every
+  Recipe Process is complete;
+- [x] Acceptable Inventory For Run shows at least eight ordinary rows at the
+  default size; and
+- [x] the selected released Process's ordered instructions are exposed read-
+  only on Production Run - List.
+
+D13 RED sequence:
+
+1. [x] Add a focused Slice 4av contract and extend the packaged reusable-
+   Production public action through Process-filter change, Check In, Complete
+   Run, and run refresh; record behavioral RED against Recipe-global blocking,
+   missing status/instructions, and four-row palette geometry.
+2. [x] Implement Process-scoped session state, dependency validation, exact
+   intermediate continuity, status projection, instructions, and layout while
+   preserving headless Domain/Core authority and existing exact-key events.
+3. [ ] Rebuild Operations and rerun focused, packaged Production, layout,
+   Ribbon/compile, live-role, Release 1, static, and reviewed-growth gates.
+
+Gate:
+
+- [x] focused RED/GREEN and packaged same-handler evidence are recorded;
+- [x] applicable source, compile, layout, and static regressions remain GREEN;
+- [ ] the complete packaged ProductionReusable sequence reruns without the
+  host-level `OFFICE_MODULE_VERSION_MISMATCH` crash observed twice in the
+  pre-existing Process worksheet bulk-import stress test; and
+- [ ] visible confirmation completes Chai Spice Mix while unrelated Dry Tea is
+  unresolved, shows eight palette rows/instructions, and then permits the next
+  dependency-ready Process.
+
+Automated evidence recorded 2026-08-30: focused source initial RED (1 passed,
+7 RED), then GREEN `8/8`; focused packaged public action `1/1` with
+`SelectedProcessOnly=True`, `RunInstructionsVisible=True`,
+`WholeRecipeStatus=True`, `EightPaletteRows=True`, two completed batches,
+exact input/output keys, routed-intermediate consumption, and retained
+co-product balance; Operations shadow compile/initialization `13/13`; packaged
+Production layout GREEN at minimum/default/expanded and native window states;
+maintained Production source regressions GREEN, including reusable Production
+`10/10`; deterministic static/reviewed-growth `19/19` at 154 components, 5,249
+procedures, 1,050 scanner candidates, and 1,052 reviewed candidates. The full
+ProductionReusable sequence was attempted twice but Excel crashed during the
+older Process worksheet bulk-import test before the new run action, with
+Windows recording `OFFICE_MODULE_VERSION_MISMATCH`; the focused packaged run
+then completed independently and GREEN. Visible operator confirmation remains
+open.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.

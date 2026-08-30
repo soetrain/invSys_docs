@@ -1017,11 +1017,25 @@ Each Recipe version declares:
   finished/co-product balance.
 - The primary run-plan projection shows the complete released multi-Process
   Recipe in validated execution order, with operator-facing Process and
-  requirement/output names, line type, scaled quantity, percentage, and UOM.
+  requirement/output names, line type, scaled quantity, percentage, UOM, and
+  an explicit execution status. Status uses operator-visible wording such as
+  **READY**, **NEEDS ALLOCATION**, **WAITING UPSTREAM**, **! INSUFFICIENT**, and
+  **COMPLETE**; an insufficient line must remain conspicuous in the complete
+  plan even when another Process is selected and runnable.
   Allocation controls may filter one Process, but the default plan view must
   not imply that a multi-Process Recipe is a single-Process run. External
   inventory choices identify their owning Process by name while retaining
   hidden node and requirement identities.
+- Production Run executes one selected Process at a time. Check In validates
+  only that Process's external exact-key allocations, run location, and routed
+  upstream requirements. An unresolved or insufficient input belonging only
+  to another Process remains visible in the complete run plan but does not
+  block the selected Process. A Process with an incoming Recipe connection is
+  runnable only after the producing upstream Process has completed and its
+  exact output key retains enough quantity for the routed commitment.
+- The selected Process's ordered instructions are visible on Production Run -
+  List during allocation, Check In, and completion. The acceptable-inventory
+  list shows at least eight ordinary rows at the default form size.
 - Release 1 may expose a disabled **Scale from target output Qty (coming
   later)** option. It is an explicit future-work stub only: it must not alter
   the released Recipe, batch scale, allocations, or run quantities until a
@@ -1062,10 +1076,16 @@ Each Recipe version declares:
   or historical numeric balance. The required quantity continues to record
   measured usage, and the Inventory Domain applies the existing non-counted
   event rule rather than decrementing a finite on-hand balance.
-- Execution follows the validated Recipe order. Each Process consumes its
-  allocated inputs and creates all declared outputs. Run completion is rejected
-  when inventory is insufficient, an allocation is stale, an output key is
-  missing/duplicated, or actual quantities violate the released definition.
+- Execution follows the validated Recipe dependency order while allowing
+  independent READY Processes in the same stage to be completed in either
+  order. Completing the selected Process consumes only its allocated external
+  inputs and completed upstream output commitments, then creates all outputs
+  declared by that Process. The batch becomes complete only after every Recipe
+  Process completes. Selected-Process completion is rejected when its own
+  inventory is insufficient, an allocation is stale, an upstream output is
+  missing/insufficient, an output key is missing/duplicated, or its actual
+  quantities violate the released definition. Deficiencies belonging only to
+  unselected Processes do not reject the selected Process.
 - Correlated Production events preserve `RunId`, Recipe identity, Process
   identity/execution ordinal, exact input allocations, every output key,
   planned/scaled and operator-entered actual quantities, UOM, location,

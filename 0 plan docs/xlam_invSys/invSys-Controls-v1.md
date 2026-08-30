@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.37
+**Version:** 1.38
 
 **Inventory date:** 2026-08-30
 
@@ -1233,15 +1233,25 @@ current Process/Recipe designer lists use the exact IDs recorded in section
 
 | Control group | Controls | Purpose |
 |---|---|---|
-| Recipe loader | `lstLoaderRecipes`, header-backed `lstLoaderLines` labelled **Multi-Process Run Plan**, `btnLoaderRefresh`, `btnLoaderLoad`, `btnLoaderClear` | Selects an exact released Recipe version and shows the complete validated Process graph/execution order with Process, line type, requirement/output name, scaled Qty, %, and UOM. |
+| Recipe loader | `lstLoaderRecipes`, header-backed `lstLoaderLines` labelled **Multi-Process Run Plan**, `btnLoaderRefresh`, `btnLoaderLoad`, `btnLoaderClear` | Selects an exact released Recipe version and shows the complete validated Process graph/execution order with Process, line type, requirement/output name, scaled Qty, %, UOM, and textual Status. Status keeps **! INSUFFICIENT**, **NEEDS ALLOCATION**, **WAITING UPSTREAM**, **READY**, and **COMPLETE** visible for the whole Recipe while one Process is selected. |
 | Batch scaling | `txtBatchScalePercent`, `btnApplyBatchScale` | Applies a List-run batch scale from `0.001%` through `1000%`; `100%` preserves the released recipe quantities. |
 | Target-output scaling stub | disabled `chkRunTargetOutputScale`, disabled `cmbRunTargetOutput`, disabled `txtRunTargetOutputQty` | Displays **Scale from target output Qty (coming later)** without calculating or changing Recipe/run state in Slice 4ar. |
-| Run inputs | `cmbRunProcess`, `cmbRunLocation`, `txtPaletteSplit`, `txtPaletteQty`, `btnRunApplyPalette` | Chooses a Process execution/location and applies either percent-of-requirement or explicit quantity to the selected external inventory requirement. Connected intermediate requirements are resolved from their upstream output keys. |
-| Palette | `lstRunPalette` | Lists owning **Process**, ingredient requirement, acceptable managed stock, requirement %, allocated quantity, UOM, summed available inventory, and location while retaining hidden node/requirement and representative entity identities. One row represents one SKU/UOM/Location/Condition bucket, not one receipt. Apply expands it into exact-key allocations. |
+| Run inputs | `cmbRunProcess`, `cmbRunLocation`, `txtPaletteSplit`, `txtPaletteQty`, `btnRunApplyPalette` | Selects the one Process to allocate, Check In, and complete at a time, plus its run location. Applies either percent-of-requirement or explicit quantity to the selected external inventory requirement. Connected intermediate requirements become runnable only after their upstream Process output exists under its exact run key. Unresolved inputs belonging only to another Process do not block the selected Process. |
+| Palette | `lstRunPalette` | Lists owning **Process**, ingredient requirement, acceptable managed stock, requirement %, allocated quantity, UOM, summed available inventory, and location while retaining hidden node/requirement and representative entity identities. One row represents one SKU/UOM/Location/Condition bucket, not one receipt. Apply expands it into exact-key allocations. At least eight ordinary result rows are visible at the default form size. |
+| Run instructions | header-backed `lstRunInstructions` | Shows **Step / Instruction** for the selected Process throughout allocation, Check In, and completion. Instructions come from the pinned released Process version and are read-only in Production Run. |
 | Inventory check | `lstManagerCheck` | Lists Process/requirement, readable exact `System_Key`, code, item, UOM, allocated quantity, and current available inventory; insufficiency or stale allocation blocks Check In/completion. |
 | Outputs | `lstManagerOutput`, `txtOutputReal` -- **Actual Output** | For a reusable run, retains one row per completed batch/Process output plus the selectable active-batch row. Completed rows show **Last Actual**, Batch, **Used Goods**, cumulative **Process Total**, recall code, and their readable distinct new **System_Key**. Selecting an active output row loads its staged actual; editing Actual Output retains a positive per-output quantity. Complete Run requires every actual, creates managed inventory at that actual quantity, and rejects an actual smaller than routed downstream commitments. Legacy completion continues to use the same visible quantity field through its preserved path. |
-| Run actions | `btnManagerCheckIn`, `btnManagerApplyOutput`, `btnManagerRefresh`, `btnManagerNext`, `btnManagerPrint` | Checks exact inputs in, completes Processes in validated order, refreshes, advances to the next batch, or prints recall data. **Complete Run** keeps event/processor work inside the shared quiet-UI boundary, creates every declared output under its own new key, consumes routed intermediates by exact key, and appends one `Persistence summary:` line after successful correlated persistence. |
+| Run actions | `btnManagerCheckIn`, `btnManagerApplyOutput`, `btnManagerRefresh`, `btnManagerNext`, `btnManagerPrint` | Checks exact inputs into the selected Process, completes that Process when its dependencies are READY, refreshes, advances after every Recipe Process completes, or prints recall data. **Complete Run** keeps event/processor work inside the shared quiet-UI boundary, creates every selected-Process output under its own new key, consumes routed intermediates by exact key, and appends correlated persistence feedback. Independent READY Processes may complete in either order; downstream Processes wait for their upstream output keys. |
 | Labels | Recipes, Multi-Process Run Plan, Process filter, Run Location, % of Requirement, Qty, Acceptable Inventory For Run, Inventory Check, Production Output, Actual Output | Identifies the page sections and generated headers. Exact identity remains visible in Inventory Check and Production Output but is hidden behind the Run stock-bucket projection. Output quantity columns display **Last Actual**, **Batch**, **Used Goods**, and **Process Total**. Run palette Inv and Inventory Check show **Utility** rather than a numeric balance for catalog Utility items. |
+
+Slice 4av automated acceptance recorded 2026-08-30: the focused public-action
+package completed two multi-Process batches through the operator Check In and
+Complete Run handlers with `SelectedProcessOnly=True`,
+`WholeRecipeStatus=True`, `RunInstructionsVisible=True`, and
+`EightPaletteRows=True`. It also preserved exact-key inputs, distinct output
+keys, routed-intermediate consumption, co-product balance, actual-output
+inventory authority, batch history, Utility display, and stock-bucket
+expansion. Visible operator acceptance of the Chai Recipe remains open.
 
 ### 8.5 Production Run - Tree page
 
