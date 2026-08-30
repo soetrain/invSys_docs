@@ -2560,6 +2560,66 @@ runtime `16/16`; deterministic static `19/19`; reviewed growth/cleanup
 `13/13`. Static metrics are 154 components, 5,201 procedures, and 1,048
 candidates. Visible sample-Recipe acceptance remains open.
 
+### Slice 4ar -- Output-yield clarity, list headers, and multi-Process run plan
+
+The 2026-08-30 visible checkpoint accepted the fork/convergence direction but
+found three blocking projection defects. Recipe Designer showed a downstream
+requirement's consumption quantity and percentage as though they were the
+producing Process output yield; Process Designer could display blank output
+yield defaults and appeared to clear them on Update; and Ingredients
+Assignment plus Production Run did not provide enough named, header-backed
+context for an operator to understand a multi-Process Recipe. This slice is a
+deliberate D15 operator-contract correction; persisted graph identities,
+released quantities, exact-key allocation, and completion authority remain
+unchanged.
+
+Required behavior:
+
+- [x] Architecture v4.11, this plan, and controls v1 distinguish producing
+  **Output Qty / Yield %** from downstream **Required Qty / Required %** before
+  implementation;
+- [x] Output Flow always projects the producing output definition, including
+  75.025 LB / 100% for a quantity-defined Chai Spice Mix output, while the
+  connection editor retains the downstream 9.5 LB requirement separately;
+- [x] quantity-defined outputs normalize blank yield fields to 100% and their
+  output Qty as Yield basis quantity, while explicit percentage/basis values
+  survive Update, save, and reload;
+- [x] Saved Processes, Requirements, Outputs, Instructions, Processes,
+  Ingredient Requirements, Managed Items, and Acceptable Items all have
+  aligned column headers;
+- [x] Acceptable Items shows managed item name, UOM, and item/SKU code while
+  keeping Requirement ID internal;
+- [x] Production Run - List shows the whole released multi-Process plan and
+  identifies each external inventory choice by its owning Process name; and
+- [x] a disabled **Scale from target output Qty (coming later)** option is
+  visible but performs no calculation or state change in this slice.
+
+D13 RED sequence:
+
+1. [x] Add a focused Slice 4ar contract and extend the packaged public
+   Production action through the real output Update, Recipe Output Flow,
+   Ingredients Assignment, and run-load handlers; record RED against the
+   ambiguous/blank/headerless projections.
+2. [x] Implement only the approved projections/default normalization and
+   multi-Process layout, preserving Domain/Core headless authority and hidden
+   identities.
+3. [x] Rebuild and rerun focused, packaged Production, layout, Ribbon/compile,
+   live-role, Release 1, NAS, static, and reviewed-growth gates.
+
+Gate:
+
+- [x] focused RED/GREEN and packaged real-handler evidence are recorded;
+- [x] applicable regressions remain GREEN; and
+- [ ] visible operator confirmation verifies the sample four-Process Recipe,
+  named acceptable items, output yields, and multi-Process run plan.
+
+Automated evidence recorded 2026-08-30: focused Slice 4ar RED `0/8` then
+GREEN `8/8`; prior Output Flow contract `8/8`; Production layout `8/8`;
+packaged public Production actions `2/2`; packaged XLAM regression `81/81`;
+Ribbon/VBA compile `142/142`; live roles `47/47`; ordered Release 1 `30/30`;
+dedicated NAS `16/16`; deterministic static `19/19`; and reviewed growth
+`13/13`. The remaining gate is visible operator acceptance.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.

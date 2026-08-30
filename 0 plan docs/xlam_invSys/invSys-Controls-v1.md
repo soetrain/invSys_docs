@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.33
+**Version:** 1.34
 
 **Inventory date:** 2026-08-30
 
@@ -582,6 +582,30 @@ packaged evidence, and the complete regression set are GREEN. Focused source is
 `30/30`, dedicated NAS `16/16`, deterministic static `19/19`, and reviewed
 growth `13/13` are GREEN. Visible sample-Recipe acceptance remains pending.
 
+### Slice 4ar output-yield clarity and multi-Process run plan: packaged GREEN, visible acceptance pending
+
+Recipe Designer's Output Flow columns are **Stage / Produced by / Output /
+Feeds Process / Output Qty / Yield % / UOM**. Output Qty and Yield % always
+describe the producing Process output. The editor immediately below uses
+**Required Qty / Required % / UOM** for the separate downstream connection.
+Quantity-defined outputs display and retain a default 100% yield and their Qty
+as Yield basis quantity; explicit yield values remain editable and persistent.
+
+Process Designer and Ingredients Assignment list boxes receive aligned headers.
+Acceptable Items displays managed item name, UOM, and item/SKU code rather than
+an opaque Requirement ID/code pair. Production Run - List labels its full graph
+projection **Multi-Process Run Plan**, identifies inventory choices by Process
+name, and exposes the existing Process selector as a filter. A disabled **Scale
+from target output Qty (coming later)** option is visible as a deliberate stub;
+it has no handler that changes run state in Slice 4ar.
+
+Automated evidence recorded 2026-08-30: focused Slice 4ar RED `0/8` then
+GREEN `8/8`; prior Output Flow contract `8/8`; Production layout `8/8`;
+packaged public Production actions `2/2`; packaged XLAM regression `81/81`;
+Ribbon/VBA compile `142/142`; live roles `47/47`; ordered Release 1 `30/30`;
+dedicated NAS `16/16`; deterministic static `19/19`; and reviewed growth
+`13/13`. Visible acceptance of the sample four-Process workflow remains open.
+
 ### Connection progress, aggregate reference detail, and Events view: packaged GREEN
 
 Slice 4w renders **Connecting to warehouse storage...** before the synchronous
@@ -1093,13 +1117,13 @@ removing the repeated Saving notices caused by unchanged read-only loads.
 
 | Control group | Required displayed controls/actions | Purpose |
 |---|---|---|
-| Saved Processes | `lstProcesses`; `btnProcessRefresh`, `btnProcessNew`, `btnProcessLoad`, `btnProcessReuse` | Lists named Process ID/version/status records and starts a draft from a blank or reusable definition. |
+| Saved Processes | header-backed `lstProcesses`; `btnProcessRefresh`, `btnProcessNew`, `btnProcessLoad`, `btnProcessReuse` | Lists **ID / Version / Process / Status** and starts a draft from a blank or reusable definition. |
 | Process identity | `txtProcessName`, locked `txtProcessId`, locked `txtProcessVersion`, `txtProcessDescription` | Edits the versioned Process header. invSys allocates the next available three-character Base-36 ID and version; the operator does not type either identity. |
 | Worksheet workbench | `btnProcessWorksheetCreate` -- **Create Process Table**; `btnProcessWorksheetRetrieve` -- **Retrieve Selected Process**; `btnProcessWorksheetAddAlternative` -- **Add Acceptable Item** | Creates any number of uniquely named Process tables in the exact captured `Production.Operator.xlsm`; Add Acceptable Item appends one numbered managed-item/hidden-SKU pair to the selected table; retrieval accepts one table or Ctrl+click cells across several tables, imports each confirmed definition as DRAFT, and deletes only successful selected tables. |
-| Requirements | `lstProcessRequirements`; locked `txtRequirementId`, `txtRequirementName`, `txtRequirementQty`, `txtRequirementPercent`, `txtRequirementYieldBasis`, `txtRequirementUom`; `btnProcessRequirementAdd`, `btnProcessRequirementUpdate`, `btnProcessRequirementRemove`, `btnProcessRequirementUp`, `btnProcessRequirementDown` | Defines typed external/upstream input requirements. The displayed label is **ID / Name / Qty / % / Batch basis quantity / UOM**; IDs are generated Base-36 values. Worksheet input rows calculate basis and percent within each normalized-UOM group, so unlike groups may coexist without implicit conversion. |
-| Outputs | `lstProcessOutputs`; locked `txtProcessOutputId`, `txtProcessOutputDesignId`, `txtProcessOutputDesignVersion`; `txtProcessOutputName`, `txtProcessOutputQty`, `txtProcessOutputPercent`, `txtProcessOutputYieldBasis`, `txtProcessOutputUom`; hidden/internal `txtProcessOutputItemCode`; `btnProcessOutputAdd`, `btnProcessOutputUpdate`, `btnProcessOutputRemove`, `btnProcessOutputUp`, `btnProcessOutputDown` | Defines one or more output designs. The displayed label uses **Yield basis quantity**; Output and Design identities are generated. A managed output item is picker-selected and its SKU is retained internally; the operator does not type Item Code. Save/Release rejects a Process with no output or an output without a selected managed SKU. |
+| Requirements | header-backed `lstProcessRequirements`; locked `txtRequirementId`, `txtRequirementName`, `txtRequirementQty`, `txtRequirementPercent`, `txtRequirementYieldBasis`, `txtRequirementUom`; `btnProcessRequirementAdd`, `btnProcessRequirementUpdate`, `btnProcessRequirementRemove`, `btnProcessRequirementUp`, `btnProcessRequirementDown` | Defines typed external/upstream input requirements under **ID / Requirement / Qty / % / Batch basis / UOM**. IDs are generated Base-36 values. Worksheet input rows calculate basis and percent within each normalized-UOM group, so unlike groups may coexist without implicit conversion. |
+| Outputs | header-backed `lstProcessOutputs`; locked `txtProcessOutputId`, `txtProcessOutputDesignId`, `txtProcessOutputDesignVersion`; `txtProcessOutputName`, `txtProcessOutputQty`, `txtProcessOutputPercent`, `txtProcessOutputYieldBasis`, `txtProcessOutputUom`; hidden/internal `txtProcessOutputItemCode`; `btnProcessOutputAdd`, `btnProcessOutputUpdate`, `btnProcessOutputRemove`, `btnProcessOutputUp`, `btnProcessOutputDown` | Defines one or more output designs under **ID / Output / Design / Ver / Output Qty / Yield % / Yield basis / UOM**. Quantity-defined outputs default to Yield %=100 and Yield basis=Output Qty; explicit percentage/basis values survive Update/save/reload. Output and Design identities are generated. A managed output item is picker-selected and its SKU is retained internally; the operator does not type Item Code. Save/Release rejects a Process with no output or an output without a selected managed SKU. |
 | Worksheet table columns | **Record Type**, text-safe generated **ID**, **Name**, **Qty**, **Percent**, **Basis Qty**, catalog-dropdown **UOM**, generated **Design ID**, **Design Version**, **Instruction**, automatic **Requirement ID**, hidden/system-managed **Output SKU**, **Acceptable Managed Item 1** through **4** (and added pairs), with each matching managed hidden **Accepted SKU n** | Record Type is dropdown-backed. INPUT, OUTPUT, and INSTRUCTION IDs use one table-wide Base-36 namespace and remain unique regardless of entry order; INPUT Percent/Basis Qty are formula-managed per normalized-UOM group, INPUT Requirement ID and OUTPUT Design identity are system managed, and mixed-UOM assembly rows are valid when every group totals 100.0%. Core item search opens only from a valid **Acceptable Managed Item n** cell: INPUT fills that numbered alternative pair; OUTPUT pair 1 fills the visible managed item and hidden Output SKU while retaining its descriptive Name. OUTPUT Name never opens search. Neither path stores a physical `System_Key`; historical ALTERNATIVE rows remain import-compatible. |
-| Instructions | `lstProcessInstructions`, `txtProcessInstruction`; `btnProcessInstructionAdd`, `btnProcessInstructionUpdate`, `btnProcessInstructionRemove`, `btnProcessInstructionUp`, `btnProcessInstructionDown` | Defines reusable operator instructions independently from input/output rows. |
+| Instructions | header-backed `lstProcessInstructions`, `txtProcessInstruction`; `btnProcessInstructionAdd`, `btnProcessInstructionUpdate`, `btnProcessInstructionRemove`, `btnProcessInstructionUp`, `btnProcessInstructionDown` | Lists **Step / Instruction** and defines reusable operator instructions independently from input/output rows. |
 | Lifecycle | `btnProcessValidate`, `btnProcessSave`, `btnProcessRelease`, `btnProcessObsolete`, `btnProcessClear` | Validates and queues immutable Designs Domain Process lifecycle events. |
 
 #### Recipe Designer
@@ -1110,7 +1134,7 @@ removing the repeated Saving notices caused by unchanged read-only loads.
 | Recipe identity | `txtReusableRecipeName`, locked `txtReusableRecipeId`, editable `txtReusableRecipeVersion`, `txtReusableRecipeDescription` | Edits the versioned Recipe header. invSys allocates the next collision-checked three-character Base-36 Recipe ID and proposes version `1` for a blank draft on form load, New Recipe, Clear, and as a Save Draft/Release fallback. The operator may replace Version with another positive whole number; Recipe ID cannot be typed, and an existing immutable ID/version is never overwritten. |
 | Process library/nodes | header-backed `lstReleasedProcesses`, header-backed `lstRecipeNodes`; `btnRecipeAddProcess`, `btnRecipeRemoveProcess` | Reuses exact released Process versions and assigns a hidden node identity within this Recipe. Operator projections show Process name, version/status/order rather than generated Process codes. The two lists sit side by side above Output Flow. |
 | Output routing | name-visible/ID-bound `cmbConnectionFromNode`, `cmbConnectionOutput`, compatibility-filtered `cmbConnectionToNode` displayed as **Feeds Process**, hidden/internal `cmbConnectionRequirement`, `txtConnectionQty`, `txtConnectionPercent`, catalog-backed `cmbConnectionUom`, internal `lstRecipeConnections`, visible header-backed `lstRecipeConnectionDisplay`; `btnRecipeConnect`, `btnRecipeUpdateConnection`, `btnRecipeDisconnect` | Routes selected outputs to later Processes. Feeds Process contains only nodes with one unresolved requirement whose UOM and Ingredients Assignment item/SKU match the selected output; invSys binds the matching Requirement ID internally. An arbitrary downstream ingredient list is never shown and a same-node self-reference is invalid. |
-| Output Flow | `lstRecipeConnectionDisplay` with **Stage / Produced by / Output / Feeds Process / Qty / % / UOM** | Full-width projection of connected and terminal outputs. Independent outputs can share a stage and converge on one later Process; unconnected outputs display **Finished inventory**. Hidden node/Output/Requirement IDs remain the stored graph identity. |
+| Output Flow | `lstRecipeConnectionDisplay` with **Stage / Produced by / Output / Feeds Process / Output Qty / Yield % / UOM** | Full-width projection of connected and terminal outputs using the producing Process output definition. Independent outputs can share a stage and converge on one later Process; unconnected outputs display **Finished inventory**. The separate editor labels connection values **Required Qty / Required % / UOM**. Hidden node/Output/Requirement IDs remain the stored graph identity. |
 | Execution order | `lstRecipeNodes`; `btnRecipeMoveUp`, `btnRecipeMoveDown`, `btnRecipeAutoOrder` | Auto Order derives deterministic topological execution order and visible stages. Independent Processes may share a visible stage while persisted execution ordinals remain unique. Validation rejects an order inconsistent with the directed graph. |
 | Validation/lifecycle | `lstRecipeValidation`; `btnRecipeValidate`, `btnRecipeSave`, `btnRecipeRelease`, `btnRecipeObsolete`, `btnRecipeClear` | Reports unresolved inputs, compatibility, quantity/yield, missing definition, and circular-dependency failures before lifecycle events are queued. |
 
@@ -1144,25 +1168,26 @@ current Process/Recipe designer lists use the exact IDs recorded in section
 
 | Control group | Controls | Purpose |
 |---|---|---|
-| Processes | `lstAssignRecipes`, `btnAssignRecipe`, `btnAssignRefresh` | Selects the exact Process version whose requirements are being assigned. |
-| Requirements | `lstAssignIngredients`, `btnAssignIngredient` | Selects one declared requirement; connected Recipe requirements do not allocate inventory alternatives during a run. |
+| Processes | header-backed `lstAssignRecipes`, `btnAssignRecipe`, `btnAssignRefresh` | Lists **Version / Process** and selects the exact Process version whose requirements are being assigned. |
+| Requirements | header-backed `lstAssignIngredients`, `btnAssignIngredient` | Lists **Requirement / UOM / Process / Type / Qty / %** and selects one declared requirement; connected Recipe requirements do not allocate inventory alternatives during a run. |
 | Assignment actions | `btnAssignSave`, `btnAssignClear` | Saves acceptable managed item/SKU alternatives as part of a new Process draft version, or clears the editor. |
-| Inventory search | `txtInventorySearch`, `lstAssignInventory` | Filters and lists candidate inventory. |
-| Allowed choices | `lstAssignAllowed`, `btnAssignAdd`, `btnAssignRemove` | Lists acceptable managed item/SKU alternatives and adds/removes rows without allocating a physical entity. |
+| Inventory search | `txtInventorySearch`, header-backed `lstAssignInventory` | Filters and lists **System_Key / Managed Item / UOM / Inv / Location / Description** candidates. |
+| Allowed choices | header-backed `lstAssignAllowed`, `btnAssignAdd`, `btnAssignRemove` | Lists **Managed Item / UOM / Item Code** alternatives and adds/removes rows without exposing Requirement ID or allocating a physical entity. |
 | Labels | Approved wording: Processes, Ingredient Requirements, Search Inventory, Managed Items, Acceptable Items | Identifies the page sections. |
 
 ### 8.4 Production Run - List page
 
 | Control group | Controls | Purpose |
 |---|---|---|
-| Recipe loader | `lstLoaderRecipes`, `lstLoaderLines`, `btnLoaderRefresh`, `btnLoaderLoad`, `btnLoaderClear` | Selects an exact released Recipe version, shows its validated Process graph/execution order, refreshes, loads, or clears a run. |
+| Recipe loader | `lstLoaderRecipes`, header-backed `lstLoaderLines` labelled **Multi-Process Run Plan**, `btnLoaderRefresh`, `btnLoaderLoad`, `btnLoaderClear` | Selects an exact released Recipe version and shows the complete validated Process graph/execution order with Process, line type, requirement/output name, scaled Qty, %, and UOM. |
 | Batch scaling | `txtBatchScalePercent`, `btnApplyBatchScale` | Applies a List-run batch scale from `0.001%` through `1000%`; `100%` preserves the released recipe quantities. |
+| Target-output scaling stub | disabled `chkRunTargetOutputScale`, disabled `cmbRunTargetOutput`, disabled `txtRunTargetOutputQty` | Displays **Scale from target output Qty (coming later)** without calculating or changing Recipe/run state in Slice 4ar. |
 | Run inputs | `cmbRunProcess`, `cmbRunLocation`, `txtPaletteSplit`, `txtPaletteQty`, `btnRunApplyPalette` | Chooses a Process execution/location and applies either percent-of-requirement or explicit quantity to the selected external inventory requirement. Connected intermediate requirements are resolved from their upstream output keys. |
-| Palette | `lstRunPalette` | Lists Process, requirement, readable exact `System_Key`, acceptable inventory choice, requirement %, quantity, UOM, available inventory, and location. |
+| Palette | `lstRunPalette` | Lists owning **Process**, ingredient requirement, readable exact `System_Key`, acceptable inventory choice, requirement %, quantity, UOM, available inventory, and location while retaining hidden node/requirement IDs. |
 | Inventory check | `lstManagerCheck` | Lists Process/requirement, readable exact `System_Key`, code, item, UOM, allocated quantity, and current available inventory; insufficiency or stale allocation blocks Check In/completion. |
 | Outputs | `lstManagerOutput`, `txtOutputReal` -- **Actual Output** | For a reusable run, retains one row per completed batch/Process output plus the selectable active-batch row. Completed rows show **Last Actual**, Batch, **Used Goods**, cumulative **Process Total**, recall code, and their readable distinct new **System_Key**. Selecting an active output row loads its staged actual; editing Actual Output retains a positive per-output quantity. Complete Run requires every actual, creates managed inventory at that actual quantity, and rejects an actual smaller than routed downstream commitments. Legacy completion continues to use the same visible quantity field through its preserved path. |
 | Run actions | `btnManagerCheckIn`, `btnManagerApplyOutput`, `btnManagerRefresh`, `btnManagerNext`, `btnManagerPrint` | Checks exact inputs in, completes Processes in validated order, refreshes, advances to the next batch, or prints recall data. **Complete Run** keeps event/processor work inside the shared quiet-UI boundary, creates every declared output under its own new key, consumes routed intermediates by exact key, and appends one `Persistence summary:` line after successful correlated persistence. |
-| Labels | Recipes, Loaded Recipe Lines, Process, Run Location, % of Requirement, Qty, Acceptable Inventory For Run, Inventory Check, Production Output, Actual Output | Identifies the page sections and generated headers. Exact identity columns display **System_Key**; output quantity columns display **Last Actual**, **Batch**, **Used Goods**, and **Process Total**. Run palette Inv and Inventory Check show **Utility** rather than a numeric balance for catalog Utility items. |
+| Labels | Recipes, Multi-Process Run Plan, Process filter, Run Location, % of Requirement, Qty, Acceptable Inventory For Run, Inventory Check, Production Output, Actual Output | Identifies the page sections and generated headers. Exact identity columns display **System_Key**; output quantity columns display **Last Actual**, **Batch**, **Used Goods**, and **Process Total**. Run palette Inv and Inventory Check show **Utility** rather than a numeric balance for catalog Utility items. |
 
 ### 8.5 Production Run - Tree page
 

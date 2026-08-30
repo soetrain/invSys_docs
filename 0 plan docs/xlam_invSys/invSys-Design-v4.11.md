@@ -964,8 +964,13 @@ Each Recipe version declares:
   Designer does not make the operator browse an arbitrary downstream
   ingredient list or default to the next Process node.
 - The primary Recipe graph projection is **Output Flow**, not a raw edge table.
-  It displays **Stage / Produced by / Output / Feeds Process / Qty / % / UOM**
-  and includes unconnected outputs as **Finished inventory** rows. Two or more
+  It displays **Stage / Produced by / Output / Feeds Process / Output Qty /
+  Yield % / UOM** and includes unconnected outputs as **Finished inventory**
+  rows. Output Qty, Yield %, and UOM always come from the producing Process
+  output definition; they never display the quantity or percentage consumed by
+  the downstream requirement. The connection editor separately labels those
+  edge values **Required Qty / Required % / UOM** and retains them as hidden
+  output-to-requirement binding data. Two or more
   independent outputs may appear in the same stage and converge on different
   requirements of one later Process; that later Process output may then feed
   another stage. Multiple outgoing connections from one output remain valid.
@@ -977,6 +982,11 @@ Each Recipe version declares:
 - Connection UOM is selected from the current warehouse **Recipe UOM Catalog**
   maintained in Settings. Recipe Designer does not accept a free-text UOM for
   a new or updated connection.
+- A quantity-defined Process output with no explicit percentage is normalized
+  as **Yield % = 100** and **Yield basis quantity = Output Qty**. Process
+  Designer shows those defaults, preserves an explicitly entered percentage
+  and positive yield basis through Update/save/reload, and never clears valid
+  output-yield fields as a side effect of Update.
 - Output/requirement connections validate item/design compatibility, UOM,
   quantity/yield basis, and execution order. Recipe release fails for an
   unresolved requirement, missing/obsolete/unreleased Process version,
@@ -989,6 +999,17 @@ Each Recipe version declares:
   through `1000%`, inclusive. Scaling applies consistently to every external
   input requirement, Process output yield, connection quantity, and
   finished/co-product balance.
+- The primary run-plan projection shows the complete released multi-Process
+  Recipe in validated execution order, with operator-facing Process and
+  requirement/output names, line type, scaled quantity, percentage, and UOM.
+  Allocation controls may filter one Process, but the default plan view must
+  not imply that a multi-Process Recipe is a single-Process run. External
+  inventory choices identify their owning Process by name while retaining
+  hidden node, requirement, and exact `System_Key` identities.
+- Release 1 may expose a disabled **Scale from target output Qty (coming
+  later)** option. It is an explicit future-work stub only: it must not alter
+  the released Recipe, batch scale, allocations, or run quantities until a
+  later approved contract and D13 implementation slice defines that solver.
 - Before Check In or completion, the run resolves every external requirement's
   acceptable alternatives against the current inventory read model and
   allocates exact available `System_Key` entities and quantities. Allocation
