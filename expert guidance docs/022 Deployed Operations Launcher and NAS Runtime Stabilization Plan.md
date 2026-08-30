@@ -2728,6 +2728,61 @@ dedicated-NAS rerun remains unchecked because its configured test root was
 unavailable; the last verified prior NAS result remains `16/16`. Visible
 operator confirmation remains open.
 
+### Slice 4au -- Receiving 10-column results and non-wrapping headers
+
+The 2026-08-30 visible Receiving checkpoint exposed a runtime error 380 while
+searching Receive Item Results. Slice 4at had placed the hidden representative
+`System_Key` plus ten operator fields into an eleven-column MSForms ListBox,
+but the control's `.List` projection supports only ten columns. The same
+checkpoint showed header labels wrapping over Received Tally and Aggregate
+Received. Production's corrected one-row-per-location stock projection was
+visibly accepted and remains unchanged.
+
+Required behavior:
+
+- [x] Receive Item Results contains exactly ten visible columns: Code, Item,
+  UOM, Available, Location, blank **Capacity (coming later)**, Lot, Condition,
+  Description, and Vendor;
+- [x] the representative exact `System_Key` remains hidden in an internal row
+  map aligned with the visible results and is used by the real Add Selected and
+  disposition actions;
+- [x] a non-empty search/change action repopulates the result list without an
+  invalid List property write or runtime error 380;
+- [x] Receiving, history, tally, and aggregate column-header labels are fixed
+  to one line and cannot wrap over their ListBoxes; and
+- [x] the blank Capacity stub remains inert and Production allocation remains
+  the accepted location-stock behavior from Slice 4at.
+
+D13 RED sequence:
+
+1. [x] Record focused RED against the eleven-column projection, missing hidden
+   row map, non-empty search evidence, wrapping headers, and missing packaged
+   evidence flags.
+2. [x] Move hidden identity out of the ListBox, remap all selection consumers,
+   and enforce single-line header labels through the existing form actions.
+3. [x] Rebuild Operations and rerun focused, packaged Receiving, compile,
+   Release 1, static, and reviewed-growth gates.
+
+Gate:
+
+- [x] focused RED is recorded as `0/7`;
+- [x] focused GREEN and packaged non-empty search evidence are recorded;
+- [x] applicable regressions remain GREEN; and
+- [ ] visible operator confirmation shows searchable inventory results and
+  readable one-line tally/aggregate headers.
+
+Automated evidence recorded 2026-08-30: focused RED `0/7` then GREEN `7/7`;
+packaged Receiving durability/search/header action `1/1` with
+`SearchRowsLoaded=True`, `HiddenSystemKeyMap=True`,
+`TenColumnItemResults=True`, and `HeadersSingleLine=True`; Receiving
+stabilization `10/10`; prior Slice 4at `7/7`; packaged XLAM `81/81`;
+Ribbon/VBA compile `142/142`; live roles `47/47` after one transient Excel COM
+automation retry; ordered Release 1 `30/30`; deterministic static `19/19`;
+and reviewed growth `13/13`. Static metrics are 154 components, 5,224
+procedures, and 1,050 scanner candidates. The current dedicated-NAS rerun was
+not repeated because its configured test root remains unavailable; the prior
+verified result remains `16/16`.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.

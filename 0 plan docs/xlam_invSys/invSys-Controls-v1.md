@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.36
+**Version:** 1.37
 
 **Inventory date:** 2026-08-30
 
@@ -643,6 +643,23 @@ scanner candidates. The current NAS rerun could not start because the
 configured dedicated test root was unavailable; prior NAS `16/16` remains the
 last verified result. Operator confirmation remains open.
 
+### Slice 4au Receiving result projection: packaged GREEN, visible acceptance pending
+
+Receive Item Results is constrained to ten operator-visible columns because
+MSForms ListBox `.List` does not safely expose an eleventh column. The hidden
+representative exact `System_Key` is held in a row-aligned form collection and
+is still passed to Add Selected and Returns disposition actions. Capacity
+remains the blank, inert sixth visible column. The public Receiving control
+test must load at least one result row and prove the ten-column projection and
+hidden-key map. All four Receiving column-header labels disable wrapping so
+they cannot paint a second line over their ListBoxes.
+
+Automated evidence recorded 2026-08-30: focused RED `0/7` then GREEN `7/7`;
+packaged Receiving public-action evidence `1/1`; packaged XLAM `81/81`;
+Ribbon/VBA compile `142/142`; live roles `47/47`; ordered Release 1 `30/30`;
+deterministic static `19/19`; and reviewed growth `13/13`. Static metrics are
+154 components, 5,224 procedures, and 1,050 scanner candidates.
+
 ### Connection progress, aggregate reference detail, and Events view: packaged GREEN
 
 Slice 4w renders **Connecting to warehouse storage...** before the synchronous
@@ -1111,7 +1128,7 @@ anchor manager while remaining readable.
 | Receipt identity | `lblReceiptId`, `txtReceiptId` | Shows a generated, locked receipt ID. |
 | Reference | `lblRef`, `txtRef` | Accepts PO/BOL reference text on Receiving or a Disposition Ref on Returns. |
 | History filter | `lblSearch`, `txtSearch` | Filters Receiving Entries History as the user types. |
-| Managed item search | `lblItemSearch`, `txtItemSearch`, `lblReceiveItemsTitle`, `lblReceiveItemsHeader`, `lstReceiveItems` | Filters and displays a dedicated result list with Code, Item, UOM, Available, Location, blank **Capacity (coming later)**, Lot, Condition, Description, and Vendor. Capacity is an inert future-work stub. The Condition column is visible on both Receiving and Returns. Rows with the same item code/UOM/location/lot/condition are aggregated and nonpositive totals are hidden. Receiving uses the hidden representative key for catalog lookup and creates a new durable inventory key. Returns uses the selection to allocate the requested quantity deterministically across the exact existing `System_Key` entities represented by that row. |
+| Managed item search | `lblItemSearch`, `txtItemSearch`, `lblReceiveItemsTitle`, `lblReceiveItemsHeader`, `lstReceiveItems` | Filters and displays exactly ten visible result columns: Code, Item, UOM, Available, Location, blank **Capacity (coming later)**, Lot, Condition, Description, and Vendor. Capacity is an inert future-work stub. The representative exact `System_Key` is stored outside the ListBox in a row-aligned internal map, so identity remains available to the action handlers without exceeding the MSForms ten-column `.List` limit. The Condition column is visible on both Receiving and Returns. Rows with the same item code/UOM/location/lot/condition are aggregated and nonpositive totals are hidden. Receiving uses the hidden representative key for catalog lookup and creates a new durable inventory key. Returns uses the selection to allocate the requested quantity deterministically across the exact existing `System_Key` entities represented by that row. The header is single-line and cannot wrap over the list. |
 | Quantity | `lblQty`, `txtQty` | Accepts quantity for the selected item; defaults to 1. |
 | Receipt condition | `lblCondition`, `cboCondition` | Establishes physical condition at receipt-line creation. Defaults to `GOOD`; R1 choices are `GOOD`, `BAD`, `DAMAGED`, `EXPIRED`, and `REJECTED`. On Returns it is selection-backed and locked so a disposition cannot silently cross a Condition bucket. Condition is not edited in Inventory Viewer. |
 | Receipt/disposition attributes | `lblReceiveLocation`, `txtReceiveLocation`, `lblLotNumber`, `txtLotNumber` | Receiving requires a location and accepts an optional lot; the operator may edit both before staging. On Returns the selected source location and lot are locked so the action preserves the exact inventory boundary. Lot is a traceability grouping, not identity or condition. |
