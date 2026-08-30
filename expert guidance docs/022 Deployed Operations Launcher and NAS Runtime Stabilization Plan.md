@@ -2441,6 +2441,65 @@ XLAM is `81/81`, Ribbon/compile `142/142`, live roles `47/47`, ordered Release 1
 reviewed growth/cleanup `13/13`. Static metrics are 154 components, 5,180
 procedures, and 1,044 candidates. Visible acceptance remains open.
 
+### Slice 4ap -- Named Recipe graph layout and finished-output guidance
+
+The 2026-08-29 multi-Process Recipe checkpoint found that the graph technically
+connects but still exposes generated Process/Output/Requirement codes in its
+node and connection projections, supplies no column headers, and confines the
+Connections list beside Recipe Process Nodes. The operator also expected a
+terminal selection for the last output. Under D15, that last output is
+deliberately left unconnected and becomes finished/co-product inventory. This
+slice makes that contract visible without changing graph persistence.
+
+Required behavior:
+
+- [x] Architecture v4.11, this plan, and controls v1 define the named graph and
+  finished-output contract before implementation;
+- [x] From/To Process, Output, and Requirement selectors display names while
+  retaining exact generated IDs as hidden bound values;
+- [x] the editor labels its direction as **Upstream Process / Output /
+  Downstream Process / Input Requirement / Qty / % / UOM** and rejects a
+  same-node connection rather than suggesting that the last Process references
+  itself;
+- [x] Recipe Process Nodes and Connections have aligned column headers and use
+  names instead of three-character Process/Output/Requirement codes;
+- [x] Released Processes and Recipe Process Nodes sit above a full-width
+  Connections list so names and allocation values remain readable;
+- [x] Recipe Designer states that a final/co-product output stays unconnected
+  and becomes managed inventory; and
+- [x] Connect/Update/Disconnect, execution order, graph validation, save,
+  release, restart, and Production runs preserve exact hidden identities and
+  prior Release 1 behavior.
+
+D13 RED sequence:
+
+1. [x] Add a focused Slice 4ap source/layout contract and extend the packaged
+   public Production action through the real named selectors, visible
+   Connections selection, Connect, Update, and Disconnect handlers; record RED
+   against the current ID-visible headerless side-by-side layout.
+2. [x] Implement the name projections, headers, full-width layout, and explicit
+   finished-output guidance while retaining the existing internal graph keys
+   and same-node rejection.
+3. [x] Rebuild and rerun focused, packaged Production, layout, Ribbon/compile,
+   live-role, Release 1, NAS, static, and reviewed-growth gates.
+
+Gate:
+
+- [x] focused RED/GREEN and packaged real-handler evidence are recorded;
+- [x] applicable regressions remain GREEN; and
+- [ ] visible operator confirmation builds and releases the multi-Process
+  Recipe with its last output intentionally left as finished inventory.
+
+Automated evidence on 2026-08-30 is GREEN. The focused source contract recorded
+`2/9` RED and `9/9` GREEN. The packaged Production public action plus clean
+restart is `2/2`, including named node/requirement/connection projections,
+aligned headers, full-width geometry, visible selection, Connect/Update/
+Disconnect, explicit same-node rejection, and finished-output guidance. The
+packaged XLAM gate is `81/81`, Ribbon/VBA compile `142/142`, live roles `47/47`,
+ordered Release 1 `30/30`, dedicated NAS runtime `16/16`, deterministic static
+`19/19`, and reviewed growth/cleanup `13/13`. Static metrics are 154 components,
+5,186 procedures, and 1,045 candidates. Visible acceptance remains open.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.

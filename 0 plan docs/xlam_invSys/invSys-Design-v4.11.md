@@ -939,6 +939,22 @@ Each Recipe version declares:
   remains hidden control/domain identity and is the exact value persisted on
   the Recipe edge; changing the display must never replace or regenerate that
   ID.
+- Recipe Designer likewise presents selected Process nodes and downstream
+  requirements by their operator-facing names. Generated Process, node,
+  Output, and Requirement IDs remain hidden selection/persistence keys; they
+  are not primary list or dropdown labels.
+- The Released Processes and Recipe Process Nodes lists appear above one
+  full-width Connections list. Each list has aligned column headers. The
+  connection editor is labelled **Upstream Process / Output / Downstream
+  Process / Input Requirement / Qty / % / UOM**, and the Connections
+  projection displays those same names/values without exposing the generated
+  edge keys. The upstream and downstream Process must be different Recipe
+  nodes; a same-node connection is an invalid circular self-reference.
+- A final or co-product output requires no terminal connection. Leaving it
+  unconnected is the explicit instruction to create its unconsumed produced
+  quantity as managed finished/co-product inventory; Recipe Designer must say
+  this directly rather than imply that a final downstream requirement is
+  missing.
 - Connection UOM is selected from the current warehouse **Recipe UOM Catalog**
   maintained in Settings. Recipe Designer does not accept a free-text UOM for
   a new or updated connection.
