@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.32
+**Version:** 1.33
 
 **Inventory date:** 2026-08-30
 
@@ -566,6 +566,22 @@ and finished-output guidance. Packaged XLAM `81/81`, Ribbon/compile `142/142`,
 live roles `47/47`, ordered Release 1 `30/30`, NAS `16/16`, static `19/19`, and
 growth `13/13` remain GREEN. Visible acceptance is pending.
 
+### Slice 4aq output-first Recipe routing: packaged GREEN, visible acceptance pending
+
+Recipe Designer selects outputs and offers only compatible **Feeds Process**
+targets. Matching uses output item/SKU identity, Ingredients Assignment, and
+UOM; the exact downstream `RequirementId` remains an internal bound key rather
+than an operator ingredient dropdown. The full-width **Output Flow** shows
+parallel stages, converging outputs, downstream output flow, and terminal
+**Finished inventory** rows. Auto Order derives topological stages while
+preserving unique deterministic execution ordinals. Focused RED/GREEN,
+packaged evidence, and the complete regression set are GREEN. Focused source is
+`8/8`; Slice 4ap `9/9`, Slice 4ao `7/7`, Slice 4an `7/7`, and Production layout
+`8/8` remain GREEN. Packaged Production plus restart is `2/2`; packaged XLAM
+`81/81`, Ribbon/compile `142/142`, live roles `47/47`, ordered Release 1
+`30/30`, dedicated NAS `16/16`, deterministic static `19/19`, and reviewed
+growth `13/13` are GREEN. Visible sample-Recipe acceptance remains pending.
+
 ### Connection progress, aggregate reference detail, and Events view: packaged GREEN
 
 Slice 4w renders **Connecting to warehouse storage...** before the synchronous
@@ -1092,9 +1108,10 @@ removing the repeated Saving notices caused by unchanged read-only loads.
 |---|---|---|
 | Saved Recipes | `lstRecipes`; `btnRecipeRefresh`, `btnRecipeNew`, `btnRecipeLoad` | Lists Recipe ID/version/status records and starts or loads a draft. |
 | Recipe identity | `txtReusableRecipeName`, locked `txtReusableRecipeId`, editable `txtReusableRecipeVersion`, `txtReusableRecipeDescription` | Edits the versioned Recipe header. invSys allocates the next collision-checked three-character Base-36 Recipe ID and proposes version `1` for a blank draft on form load, New Recipe, Clear, and as a Save Draft/Release fallback. The operator may replace Version with another positive whole number; Recipe ID cannot be typed, and an existing immutable ID/version is never overwritten. |
-| Process library/nodes | header-backed `lstReleasedProcesses`, header-backed `lstRecipeNodes`; `btnRecipeAddProcess`, `btnRecipeRemoveProcess` | Reuses exact released Process versions and assigns a hidden node identity within this Recipe. Operator projections show Process name, version/status/order rather than generated Process codes. The two lists sit side by side above Connections. |
-| Connections | name-visible/ID-bound `cmbConnectionFromNode`, `cmbConnectionOutput`, `cmbConnectionToNode`, `cmbConnectionRequirement`, `txtConnectionQty`, `txtConnectionPercent`, catalog-backed `cmbConnectionUom`, internal `lstRecipeConnections`, visible header-backed `lstRecipeConnectionDisplay`; `btnRecipeConnect`, `btnRecipeUpdateConnection`, `btnRecipeDisconnect` | Routes individual output quantities to compatible downstream requirements. The editor reads **Upstream Process / Output / Downstream Process / Input Requirement / Qty / % / UOM**; a same-node self-reference is invalid. The full-width visible projection shows the same names/values while generated node/Output/Requirement IDs remain hidden persisted identity. UOM is selected from Settings' Recipe UOM Catalog. A visible note explains that an unconnected final/co-product output becomes managed inventory. |
-| Execution order | `lstRecipeNodes`; `btnRecipeMoveUp`, `btnRecipeMoveDown`, `btnRecipeAutoOrder` | Controls execution order. Validation rejects an order inconsistent with the directed graph. |
+| Process library/nodes | header-backed `lstReleasedProcesses`, header-backed `lstRecipeNodes`; `btnRecipeAddProcess`, `btnRecipeRemoveProcess` | Reuses exact released Process versions and assigns a hidden node identity within this Recipe. Operator projections show Process name, version/status/order rather than generated Process codes. The two lists sit side by side above Output Flow. |
+| Output routing | name-visible/ID-bound `cmbConnectionFromNode`, `cmbConnectionOutput`, compatibility-filtered `cmbConnectionToNode` displayed as **Feeds Process**, hidden/internal `cmbConnectionRequirement`, `txtConnectionQty`, `txtConnectionPercent`, catalog-backed `cmbConnectionUom`, internal `lstRecipeConnections`, visible header-backed `lstRecipeConnectionDisplay`; `btnRecipeConnect`, `btnRecipeUpdateConnection`, `btnRecipeDisconnect` | Routes selected outputs to later Processes. Feeds Process contains only nodes with one unresolved requirement whose UOM and Ingredients Assignment item/SKU match the selected output; invSys binds the matching Requirement ID internally. An arbitrary downstream ingredient list is never shown and a same-node self-reference is invalid. |
+| Output Flow | `lstRecipeConnectionDisplay` with **Stage / Produced by / Output / Feeds Process / Qty / % / UOM** | Full-width projection of connected and terminal outputs. Independent outputs can share a stage and converge on one later Process; unconnected outputs display **Finished inventory**. Hidden node/Output/Requirement IDs remain the stored graph identity. |
+| Execution order | `lstRecipeNodes`; `btnRecipeMoveUp`, `btnRecipeMoveDown`, `btnRecipeAutoOrder` | Auto Order derives deterministic topological execution order and visible stages. Independent Processes may share a visible stage while persisted execution ordinals remain unique. Validation rejects an order inconsistent with the directed graph. |
 | Validation/lifecycle | `lstRecipeValidation`; `btnRecipeValidate`, `btnRecipeSave`, `btnRecipeRelease`, `btnRecipeObsolete`, `btnRecipeClear` | Reports unresolved inputs, compatibility, quantity/yield, missing definition, and circular-dependency failures before lifecycle events are queued. |
 
 ### 8.2.1 Historical pre-Slice 4x Recipe Builder surface

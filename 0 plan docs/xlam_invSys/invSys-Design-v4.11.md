@@ -955,6 +955,25 @@ Each Recipe version declares:
   quantity as managed finished/co-product inventory; Recipe Designer must say
   this directly rather than imply that a final downstream requirement is
   missing.
+- Recipe Designer is output-first. The operator selects a producing Process
+  and one of its outputs; **Feeds Process** then offers only selected Recipe
+  nodes having exactly one compatible unresolved requirement for that output.
+  Compatibility requires matching UOM and an Ingredients Assignment
+  alternative whose managed item/SKU identity matches the output item
+  identity. invSys binds the matching `RequirementId` internally; Recipe
+  Designer does not make the operator browse an arbitrary downstream
+  ingredient list or default to the next Process node.
+- The primary Recipe graph projection is **Output Flow**, not a raw edge table.
+  It displays **Stage / Produced by / Output / Feeds Process / Qty / % / UOM**
+  and includes unconnected outputs as **Finished inventory** rows. Two or more
+  independent outputs may appear in the same stage and converge on different
+  requirements of one later Process; that later Process output may then feed
+  another stage. Multiple outgoing connections from one output remain valid.
+- **Auto Order** derives deterministic topological execution order and visible
+  stages from the output graph. Independent Processes may share one visible
+  stage even though their persisted `ExecutionOrdinal` values remain unique
+  for deterministic execution. Cycles, same-node edges, ambiguous compatible
+  requirements, and backward dependencies remain invalid.
 - Connection UOM is selected from the current warehouse **Recipe UOM Catalog**
   maintained in Settings. Recipe Designer does not accept a free-text UOM for
   a new or updated connection.

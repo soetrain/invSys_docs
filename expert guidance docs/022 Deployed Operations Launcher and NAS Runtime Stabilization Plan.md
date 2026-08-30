@@ -2500,6 +2500,66 @@ ordered Release 1 `30/30`, dedicated NAS runtime `16/16`, deterministic static
 `19/19`, and reviewed growth/cleanup `13/13`. Static metrics are 154 components,
 5,186 procedures, and 1,045 candidates. Visible acceptance remains open.
 
+### Slice 4aq -- Output-first Recipe routing and fork/convergence flow
+
+The 2026-08-30 visible checkpoint showed that Slice 4ap made graph identities
+readable but still presented the persistence edge editor. Selecting Brewed
+Black Slurry Tea defaulted **Downstream Process** to Chai Spice Mix and exposed
+Chai Spice Mix ingredient requirements, even though both Processes should run
+independently and their outputs should converge on Black Scottie Chai Classic
+Concentrate. This is a deliberate operator-contract correction under D15; the
+stored output-to-requirement graph remains authoritative.
+
+Required behavior:
+
+- [x] Architecture v4.11, this plan, and controls v1 define output-first
+  compatible routing, fork/convergence projection, and derived stages before
+  implementation;
+- [x] selecting a Process output filters **Feeds Process** to Recipe nodes with
+  exactly one compatible unresolved requirement, based on output item/SKU,
+  Ingredients Assignment, and UOM;
+- [x] the compatible `RequirementId` is bound internally; Recipe Designer does
+  not expose an arbitrary ingredient dropdown or automatically choose the next
+  Recipe node;
+- [x] the full-width **Output Flow** projection shows Stage, Produced by,
+  Output, Feeds Process, Qty, %, and UOM, including terminal **Finished
+  inventory** output rows;
+- [x] two independent first-stage outputs can converge on separate requirements
+  of one later Process, whose output can feed the next stage;
+- [x] Auto Order derives visible topological stages while retaining unique
+  deterministic persisted execution ordinals; and
+- [x] Connect/Update/Disconnect, graph validation, lifecycle, restart, and
+  Production Run preserve hidden IDs and existing Release 1 behavior.
+
+D13 RED sequence:
+
+1. [x] Add a focused Slice 4aq source/layout contract and extend the packaged
+   public Production action through output selection, compatible Feeds Process,
+   Connect, Auto Order, visible Output Flow selection, and terminal-output
+   projection; record RED against the arbitrary downstream/ingredient editor.
+2. [x] Implement compatibility filtering, internal requirement binding,
+   fork/convergence stage projection, and terminal output rows without changing
+   Designs Domain graph schema or headless authority.
+3. [x] Rebuild and rerun focused, packaged Production, layout, Ribbon/compile,
+   live-role, Release 1, NAS, static, and reviewed-growth gates.
+
+Gate:
+
+- [x] focused RED/GREEN and packaged real-handler evidence are recorded;
+- [x] applicable regressions remain GREEN; and
+- [ ] visible operator confirmation builds/releases the sample fork:
+  Brewed Black Slurry Tea + Chai Spice Mix -> Black Scottie Chai Classic
+  Concentrate -> Bottle 64oz Chai Classic -> Finished inventory.
+
+Automated evidence (2026-08-30): focused Slice 4aq `2/8` initial contract
+presence and six behavioral REDs, then `8/8` GREEN; Slice 4ap `9/9`, Slice 4ao
+`7/7`, Slice 4an `7/7`, and Production layout `8/8`; packaged Production
+action plus clean restart `2/2`; packaged XLAM `81/81`; Ribbon/compile
+`142/142`; live roles `47/47`; ordered Release 1 `30/30`; dedicated NAS
+runtime `16/16`; deterministic static `19/19`; reviewed growth/cleanup
+`13/13`. Static metrics are 154 components, 5,201 procedures, and 1,048
+candidates. Visible sample-Recipe acceptance remains open.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.
