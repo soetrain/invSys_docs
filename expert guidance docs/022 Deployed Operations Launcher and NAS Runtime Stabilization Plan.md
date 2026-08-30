@@ -2332,6 +2332,64 @@ Gate:
   shows it in the managed list, Viewer, Receiving, and Production picker after
   Refresh.
 
+### Slice 4an -- Mixed-UOM Process assembly retrieval
+
+The operator's bottled chai Process combines one LB material requirement with
+EA bottle and cap requirements and produces one EA bottled output. Retrieval
+currently rejects that valid assembly because the historical Slice 4y contract
+requires one common INPUT UOM. This is a deliberate D15 contract change: unlike
+UOMs are not added or converted, but they may coexist as independently scaled
+groups in one executable Process.
+
+Required behavior:
+
+- [x] Architecture v4.11, this plan, and controls v1 define mixed-UOM grouping
+  before the conflicting retrieval behavior changes;
+- [x] Process worksheet INPUT formulas group rows by normalized UOM, with one
+  Batch basis quantity subtotal and one percentage total per UOM group;
+- [x] every populated UOM group must total `100.0%` independently within the
+  existing tolerance, while blank/catalog-invalid UOM and invalid quantities
+  remain rejected;
+- [x] **Retrieve Selected Process** accepts one Process containing LB material,
+  EA packaging, and an EA output, imports all exact row quantities/UOMs through
+  the real form handler, and deletes only the successfully retrieved table;
+- [x] no implicit conversion is created: Recipe connections still require UOM
+  compatibility and an actual conversion remains its own explicit Process; and
+- [x] batch scaling, exact-key consumption, output creation, persistence,
+  multi-table/Ctrl+click import, failed-table preservation, and prior Release 1
+  GREEN behavior remain unchanged.
+
+D13 RED sequence:
+
+1. [x] Add a focused Slice 4an source contract and change the packaged public
+   Process worksheet action evidence to require mixed-UOM retrieval; record RED
+   while the actual handler returns **one compatible UOM** and preserves the
+   selected table.
+2. [x] Implement per-UOM validation in the worksheet controller without adding
+   a global conversion or alternate authority.
+3. [x] Rebuild the five-package set and rerun focused, packaged Production,
+   Ribbon/compile, live-role, Release 1, NAS, static, and reviewed-growth gates.
+
+Gate:
+
+- [x] focused RED/GREEN and packaged real-handler evidence are recorded;
+- [x] applicable regressions remain GREEN; and
+- [ ] visible operator confirmation retrieves `invSys_Process_004_20260827`
+  with its LB and EA requirements and can save/release the resulting Process.
+
+Automated evidence recorded 2026-08-29: focused source RED `1/7`, then `4/7`
+after public-handler expectations were installed; focused GREEN is `7/7` and
+the superseded Slice 4y source contract remains `6/6`. Packaged public Production
+RED was `0/2` with `MixedUomAccepted=False`, `MixedUomRowsPreserved=False`, and
+the exact one-compatible-UOM message. Final packaged Production plus clean
+restart is `2/2`, using 4.5 LB concentrate, one EA bottle, one EA cap, and one
+EA finished output; it records both mixed-UOM fields true and selected-table-
+only deletion. Packaged XLAM is `81/81`, Ribbon/compile `142/142`, live roles
+`47/47`, ordered Release 1 `30/30`, dedicated NAS runtime `16/16`, deterministic
+static `19/19`, and reviewed growth/cleanup `13/13`. Static metrics remain 154
+components, 5,177 procedures, and 1,043 candidates. Visible acceptance remains
+open.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.

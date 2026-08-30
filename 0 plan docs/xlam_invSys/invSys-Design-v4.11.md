@@ -872,14 +872,19 @@ Each output definition declares:
   immediately through the worksheet change handler. Every INPUT row's
   Requirement ID mirrors its generated row ID; the operator does not type or
   maintain either value.
-  Percent and basis columns are invSys-owned calculated columns: for every
-  same-UOM INPUT row they calculate from quantity and are restored before
-  retrieval rather than accepted as operator-authored percentages. For
+  Percent and basis columns are invSys-owned calculated columns. INPUT rows are
+  partitioned by normalized UOM; each row calculates from the subtotal of its
+  own UOM group, and formulas are restored before retrieval rather than accepted
+  as operator-authored percentages. For
   example, 100 lb + 200 lb +
   11.2 lb + 300 lb has a 611.2 lb batch basis and displays approximately
-  16.4%, 32.7%, 1.8%, and 49.1%, totaling 100.0%. Mixed or incompatible UOMs
-  require an explicit conversion before percentage calculation and are rejected
-  on retrieval when no compatible common basis exists.
+  16.4%, 32.7%, 1.8%, and 49.1%, totaling 100.0% for the LB group. A Process may
+  also contain other groups such as two EA packaging requirements; those rows
+  use an EA basis of 2 and display 50.0% each. Every populated UOM group must
+  total 100.0% independently. Retrieval must not add unlike UOM quantities,
+  invent a mass/count conversion, or reject a valid mixed-UOM assembly Process.
+  Recipe connections remain UOM-compatible and any actual UOM conversion still
+  requires an explicit conversion Process.
 - OUTPUT rows expose a locked/generated Design ID and version derived from the
   owning Process/Output identities. **Name** remains the output definition's
   descriptive name. **Acceptable Managed Item 1** is the OUTPUT row's visible
@@ -1003,8 +1008,8 @@ create/retrieve handlers, including multiple simultaneous tables, selected-
 table binding, Record Type validation, calculated percentages, generated output
 identity, text-safe generated Requirement IDs, catalog-backed UOM validation,
 actual item-search form opening, numbered alternative projection, mixed-UOM
-rejection, save/reopen discovery, Ctrl+click multi-table DRAFT import, selected-
-table deletion, and failed-retrieve preservation.
+group calculation and retrieval, save/reopen discovery, Ctrl+click multi-table
+DRAFT import, selected-table deletion, and failed-retrieve preservation.
 
 ---
 ## System Topology (Release 1: VBA-Only)
