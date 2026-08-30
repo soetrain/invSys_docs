@@ -2667,6 +2667,67 @@ dedicated NAS `16/16`; deterministic static `19/19`; and reviewed growth
 `13/13`. Static metrics are 154 components, 5,210 procedures, and 1,048
 candidates. Visible Process Designer acceptance remains open.
 
+### Slice 4at -- Location-stock Production allocation and Receiving capacity stub
+
+The 2026-08-30 visible checkpoint confirmed that Ingredients Assignment finds
+one Cassia Oil managed stock at CLEARVIEW, but Production Run exposed four
+receipt entities as four operator choices. Architecture v4.11 retains those
+exact keys for audit and consumption, while this deliberate D14/D15 projection
+correction makes the operator choose warehouse stock by managed item and
+location. The same checkpoint found Ingredients Assignment's 45-point
+`System_Key` column unreadable and requested a future Receiving location-
+capacity concept.
+
+Required behavior:
+
+- [x] Architecture v4.11, this plan, and controls v1 distinguish a visible
+  location-stock bucket from its hidden contributing exact entities before
+  implementation;
+- [x] Ingredients Assignment gives `System_Key` enough width to read the
+  selected managed entity without changing the saved SKU alternative;
+- [x] Production Run - List shows one acceptable stock row per managed
+  SKU/UOM/Location/Condition bucket with summed available stock, not one row
+  per Receiving entry;
+- [x] applying a bucket quantity through the existing Apply handler expands it
+  deterministically across sufficient exact keys, and Check In/completion keep
+  exact-key stale/overdraw/location validation;
+- [x] Utility/Service stock remains non-counted and displays its existing
+  nonnumeric quantity-mode label; and
+- [x] Receive Item Results shows a blank **Capacity (coming later)** column
+  that has no validation, persistence, or inventory effect in this slice.
+
+D13 RED sequence:
+
+1. [x] Add a focused Slice 4at contract and extend the packaged Production and
+   Receiving public form actions; record RED against receipt-row choices, the
+   narrow key, missing bucket expansion, and missing Capacity stub.
+2. [x] Implement only the stock projection/allocation adapter, readable key
+   width, and inert Capacity column; preserve exact Domain entities and event
+   payload keys.
+3. [ ] Rebuild Operations and rerun focused, packaged Production/Receiving,
+   layout, Ribbon/compile, live-role, Release 1, NAS, static, and reviewed-
+   growth gates.
+
+Gate:
+
+- [x] focused RED/GREEN and packaged real-handler evidence are recorded;
+- [x] applicable local and isolated packaged regressions remain GREEN; and
+- [ ] visible operator confirmation shows one Cassia Oil/CLEARVIEW stock row,
+  readable assignment identity, and the inert Receiving Capacity column.
+
+Automated evidence recorded 2026-08-30: focused RED `0/7` then GREEN `7/7`;
+packaged Production public actions, two-batch run, and clean restart `2/2` with
+`LocationStockBuckets=True` and `LocationStockExactExpansion=True`; packaged
+Receiving durability `1/1` with `CapacityStub=True`; prior Production source
+regressions `6/6`, `7/7`, `8/8`, and `6/6`; Receiving stabilization `10/10`;
+workflow readiness `18/18`; launcher contracts `24/24`; packaged XLAM `81/81`;
+Ribbon/VBA compile `142/142`; live roles `47/47`; ordered Release 1 `30/30`;
+deterministic static `19/19`; and reviewed growth `13/13`. Static metrics are
+154 components, 5,223 procedures, and 1,050 scanner candidates. The current
+dedicated-NAS rerun remains unchecked because its configured test root was
+unavailable; the last verified prior NAS result remains `16/16`. Visible
+operator confirmation remains open.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.

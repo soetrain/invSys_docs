@@ -549,6 +549,11 @@ workflow concept. They do not replace the affected inventory entity's
 rebuildable summaries and may group several entities. They do not impersonate
 one contributing entity. Detailed inventory projections and operator inventory
 rows carry `System_Key`; aggregate views use their declared grouping columns.
+An operator stock-choice row may aggregate exact entities by managed SKU, UOM,
+Location, and Condition when the row is explicitly a stock bucket rather than
+an entity. Such a row exposes no invented `System_Key`; mutating execution must
+expand the chosen bucket deterministically into its contributing exact keys
+before events are queued.
 
 **Header-extension rules:**
 - Each managed table defines a required managed-header subset, not an exact
@@ -619,6 +624,12 @@ canonical inventory, outbox, and inbox-status persistence at safe artifact
 boundaries rather than saving once per row. A healthy sign-in may read and
 validate Config/Auth schemas but must not format, dirty, or save unchanged
 Config/Auth workbooks.
+
+Release 1 may show an inert **Capacity (coming later)** column in Receive Item
+Results. It is a future location-capacity placeholder only: it is blank, does
+not validate receipt quantity, and does not write inventory, location, or
+configuration data until a later approved contract defines capacity units,
+scope, and enforcement.
 
 **Greenfield boundary:** R1 does not import, translate, reconcile, repair, or
 map old business inventory into this identity model. No legacy `ROW`-to-
@@ -1010,17 +1021,21 @@ Each Recipe version declares:
   Allocation controls may filter one Process, but the default plan view must
   not imply that a multi-Process Recipe is a single-Process run. External
   inventory choices identify their owning Process by name while retaining
-  hidden node, requirement, and exact `System_Key` identities.
+  hidden node and requirement identities.
 - Release 1 may expose a disabled **Scale from target output Qty (coming
   later)** option. It is an explicit future-work stub only: it must not alter
   the released Recipe, batch scale, allocations, or run quantities until a
   later approved contract and D13 implementation slice defines that solver.
 - Before Check In or completion, the run resolves every external requirement's
   acceptable alternatives against the current inventory read model and
-  allocates exact available `System_Key` entities and quantities. Allocation
-  may span several compatible entities but may not overdraw, cross an
-  undeclared SKU alternative, or substitute aggregate SKU identity for an
-  entity key.
+  presents one stock-choice row per compatible managed SKU/UOM/Location/
+  Condition bucket, not one row per receipt entity. The stock row displays the
+  bucket's summed available quantity and keeps contributing exact keys hidden.
+  Applying a quantity deterministically expands that stock choice across the
+  exact available `System_Key` entities in the bucket. Allocation may span
+  several compatible entities but may not overdraw, cross Location/Condition,
+  cross an undeclared SKU alternative, or queue an aggregate identity as an
+  event key. Inventory Check and completion retain the expanded exact keys.
 - The run plan also allocates one new `System_Key` for every Process output
   instance before its create event is queued. A routed intermediate output is
   first created under that key and later consumed from the same exact key by

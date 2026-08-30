@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.35
+**Version:** 1.36
 
 **Inventory date:** 2026-08-30
 
@@ -621,6 +621,28 @@ packaged public Production actions and clean restart `2/2`; packaged XLAM
 `30/30`; dedicated NAS `16/16`; deterministic static `19/19`; and reviewed
 growth `13/13`. Visible confirmation of the compact row/dropdown remains open.
 
+### Slice 4at location-stock allocation and Capacity stub: automated GREEN, NAS rerun and visible acceptance pending
+
+Ingredients Assignment widens its visible managed-item `System_Key` column
+without changing the SKU alternative saved by **Add Acceptable**. Production
+Run's **Acceptable Inventory For Run** projects one row per managed
+SKU/UOM/Location/Condition stock bucket with summed availability. The bucket's
+contributing exact keys remain hidden; **Apply** deterministically expands the
+requested quantity across them, and Inventory Check/completion continue using
+those exact keys. Receive Item Results adds a blank **Capacity (coming later)**
+column. Capacity has no handler, validation, persistence, or inventory effect.
+
+Automated evidence recorded 2026-08-30: focused RED `0/7` then GREEN `7/7`;
+packaged Production real-handler and restart evidence `2/2`, including one
+visible location-stock bucket and deterministic expansion across multiple
+exact keys; packaged Receiving durability `1/1`, including the blank Capacity
+stub; packaged XLAM `81/81`; Ribbon/VBA compile `142/142`; live roles `47/47`;
+ordered Release 1 `30/30`; deterministic static `19/19`; and reviewed growth
+`13/13`. Static metrics are 154 components, 5,223 procedures, and 1,050
+scanner candidates. The current NAS rerun could not start because the
+configured dedicated test root was unavailable; prior NAS `16/16` remains the
+last verified result. Operator confirmation remains open.
+
 ### Connection progress, aggregate reference detail, and Events view: packaged GREEN
 
 Slice 4w renders **Connecting to warehouse storage...** before the synchronous
@@ -1089,7 +1111,7 @@ anchor manager while remaining readable.
 | Receipt identity | `lblReceiptId`, `txtReceiptId` | Shows a generated, locked receipt ID. |
 | Reference | `lblRef`, `txtRef` | Accepts PO/BOL reference text on Receiving or a Disposition Ref on Returns. |
 | History filter | `lblSearch`, `txtSearch` | Filters Receiving Entries History as the user types. |
-| Managed item search | `lblItemSearch`, `txtItemSearch`, `lblReceiveItemsTitle`, `lblReceiveItemsHeader`, `lstReceiveItems` | Filters and displays a dedicated result list with Code, Item, UOM, Available, Location, Lot, Condition, Description, and Vendor. The Condition column is visible on both Receiving and Returns. Rows with the same item code/UOM/location/lot/condition are aggregated and nonpositive totals are hidden. Receiving uses the hidden representative key for catalog lookup and creates a new durable inventory key. Returns uses the selection to allocate the requested quantity deterministically across the exact existing `System_Key` entities represented by that row. |
+| Managed item search | `lblItemSearch`, `txtItemSearch`, `lblReceiveItemsTitle`, `lblReceiveItemsHeader`, `lstReceiveItems` | Filters and displays a dedicated result list with Code, Item, UOM, Available, Location, blank **Capacity (coming later)**, Lot, Condition, Description, and Vendor. Capacity is an inert future-work stub. The Condition column is visible on both Receiving and Returns. Rows with the same item code/UOM/location/lot/condition are aggregated and nonpositive totals are hidden. Receiving uses the hidden representative key for catalog lookup and creates a new durable inventory key. Returns uses the selection to allocate the requested quantity deterministically across the exact existing `System_Key` entities represented by that row. |
 | Quantity | `lblQty`, `txtQty` | Accepts quantity for the selected item; defaults to 1. |
 | Receipt condition | `lblCondition`, `cboCondition` | Establishes physical condition at receipt-line creation. Defaults to `GOOD`; R1 choices are `GOOD`, `BAD`, `DAMAGED`, `EXPIRED`, and `REJECTED`. On Returns it is selection-backed and locked so a disposition cannot silently cross a Condition bucket. Condition is not edited in Inventory Viewer. |
 | Receipt/disposition attributes | `lblReceiveLocation`, `txtReceiveLocation`, `lblLotNumber`, `txtLotNumber` | Receiving requires a location and accepts an optional lot; the operator may edit both before staging. On Returns the selected source location and lot are locked so the action preserves the exact inventory boundary. Lot is a traceability grouping, not identity or condition. |
@@ -1186,7 +1208,7 @@ current Process/Recipe designer lists use the exact IDs recorded in section
 | Processes | header-backed `lstAssignRecipes`, `btnAssignRecipe`, `btnAssignRefresh` | Lists **Version / Process** and selects the exact Process version whose requirements are being assigned. |
 | Requirements | header-backed `lstAssignIngredients`, `btnAssignIngredient` | Lists **Requirement / UOM / Process / Type / Qty / %** and selects one declared requirement; connected Recipe requirements do not allocate inventory alternatives during a run. |
 | Assignment actions | `btnAssignSave`, `btnAssignClear` | Saves acceptable managed item/SKU alternatives as part of a new Process draft version, or clears the editor. |
-| Inventory search | `txtInventorySearch`, header-backed `lstAssignInventory` | Filters and lists **System_Key / Managed Item / UOM / Inv / Location / Description** candidates. |
+| Inventory search | `txtInventorySearch`, header-backed `lstAssignInventory` | Filters and lists **System_Key / Managed Item / UOM / Inv / Location / Description** candidates with a readable-width immutable key. |
 | Allowed choices | header-backed `lstAssignAllowed`, `btnAssignAdd`, `btnAssignRemove` | Lists **Managed Item / UOM / Item Code** alternatives and adds/removes rows without exposing Requirement ID or allocating a physical entity. |
 | Labels | Approved wording: Processes, Ingredient Requirements, Search Inventory, Managed Items, Acceptable Items | Identifies the page sections. |
 
@@ -1198,11 +1220,11 @@ current Process/Recipe designer lists use the exact IDs recorded in section
 | Batch scaling | `txtBatchScalePercent`, `btnApplyBatchScale` | Applies a List-run batch scale from `0.001%` through `1000%`; `100%` preserves the released recipe quantities. |
 | Target-output scaling stub | disabled `chkRunTargetOutputScale`, disabled `cmbRunTargetOutput`, disabled `txtRunTargetOutputQty` | Displays **Scale from target output Qty (coming later)** without calculating or changing Recipe/run state in Slice 4ar. |
 | Run inputs | `cmbRunProcess`, `cmbRunLocation`, `txtPaletteSplit`, `txtPaletteQty`, `btnRunApplyPalette` | Chooses a Process execution/location and applies either percent-of-requirement or explicit quantity to the selected external inventory requirement. Connected intermediate requirements are resolved from their upstream output keys. |
-| Palette | `lstRunPalette` | Lists owning **Process**, ingredient requirement, readable exact `System_Key`, acceptable inventory choice, requirement %, quantity, UOM, available inventory, and location while retaining hidden node/requirement IDs. |
+| Palette | `lstRunPalette` | Lists owning **Process**, ingredient requirement, acceptable managed stock, requirement %, allocated quantity, UOM, summed available inventory, and location while retaining hidden node/requirement and representative entity identities. One row represents one SKU/UOM/Location/Condition bucket, not one receipt. Apply expands it into exact-key allocations. |
 | Inventory check | `lstManagerCheck` | Lists Process/requirement, readable exact `System_Key`, code, item, UOM, allocated quantity, and current available inventory; insufficiency or stale allocation blocks Check In/completion. |
 | Outputs | `lstManagerOutput`, `txtOutputReal` -- **Actual Output** | For a reusable run, retains one row per completed batch/Process output plus the selectable active-batch row. Completed rows show **Last Actual**, Batch, **Used Goods**, cumulative **Process Total**, recall code, and their readable distinct new **System_Key**. Selecting an active output row loads its staged actual; editing Actual Output retains a positive per-output quantity. Complete Run requires every actual, creates managed inventory at that actual quantity, and rejects an actual smaller than routed downstream commitments. Legacy completion continues to use the same visible quantity field through its preserved path. |
 | Run actions | `btnManagerCheckIn`, `btnManagerApplyOutput`, `btnManagerRefresh`, `btnManagerNext`, `btnManagerPrint` | Checks exact inputs in, completes Processes in validated order, refreshes, advances to the next batch, or prints recall data. **Complete Run** keeps event/processor work inside the shared quiet-UI boundary, creates every declared output under its own new key, consumes routed intermediates by exact key, and appends one `Persistence summary:` line after successful correlated persistence. |
-| Labels | Recipes, Multi-Process Run Plan, Process filter, Run Location, % of Requirement, Qty, Acceptable Inventory For Run, Inventory Check, Production Output, Actual Output | Identifies the page sections and generated headers. Exact identity columns display **System_Key**; output quantity columns display **Last Actual**, **Batch**, **Used Goods**, and **Process Total**. Run palette Inv and Inventory Check show **Utility** rather than a numeric balance for catalog Utility items. |
+| Labels | Recipes, Multi-Process Run Plan, Process filter, Run Location, % of Requirement, Qty, Acceptable Inventory For Run, Inventory Check, Production Output, Actual Output | Identifies the page sections and generated headers. Exact identity remains visible in Inventory Check and Production Output but is hidden behind the Run stock-bucket projection. Output quantity columns display **Last Actual**, **Batch**, **Used Goods**, and **Process Total**. Run palette Inv and Inventory Check show **Utility** rather than a numeric balance for catalog Utility items. |
 
 ### 8.5 Production Run - Tree page
 
