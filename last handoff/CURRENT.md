@@ -1,1 +1,1 @@
-`059 Slice 4at Location Stock Green Awaiting Visible Acceptance.md`
+`060 Slice 4au Receiving Results Green Awaiting Visible Acceptance.md`
