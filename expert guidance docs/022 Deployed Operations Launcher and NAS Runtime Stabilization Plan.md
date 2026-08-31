@@ -2996,8 +2996,13 @@ the dedicated NAS human-visible UAT checkbox remains open.
 The user identified the following work as required before Release 1 acceptance.
 These entries preserve priority but do not silently define new architecture:
 
-- [ ] finish and prove the existing Architecture v4.11 central Aggregator with
-  two real warehouses operating on two computers;
+- [ ] complete visible acceptance of the existing Architecture v4.11 central
+  Aggregator with two real warehouses operating on two computers. Automated
+  packaged proof is GREEN: two isolated warehouse roots publish separately,
+  the advisory global snapshot retains `WarehouseId` plus the exact
+  `System_Key` (never collapsing same-SKU entities), and a later receipt at one
+  warehouse catches up from 8 to 11 while the other warehouse remains 5. This
+  proves the package contract, not operation on two physical computers;
 - [ ] reconcile a comprehensive Viewer contract with Architecture v4.11,
   including Admin-configurable detail and an Action Path view that can explain
   operator workflow and user activity;

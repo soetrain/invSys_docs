@@ -1,8 +1,8 @@
 # invSys Form Controls v1
 
-**Version:** 1.39
+**Version:** 1.40
 
-**Inventory date:** 2026-08-30
+**Inventory date:** 2026-08-31
 
 **Architecture:** invSys v4.11, Release 1
 **Scope:** every checked-in VBA UserForm source file used by Core, Admin,
@@ -55,6 +55,16 @@ Excel and repeating the launches, the session remained stable. The verified
 workbook names are `WHT7025AE.Receiving.Operator.xlsm`,
 `WHT7025AE.Production.Operator.xlsm`, and
 `WHT7025AE.Shipping.Operator.xlsm`.
+
+### Central Aggregator global snapshot: packaged GREEN; physical UAT pending
+
+The advisory-only Global Inventory Snapshot now displays the exact immutable
+`System_Key` beside `WarehouseId`, SKU, quantity, timestamp, and source
+snapshot. It preserves distinct same-SKU entities rather than merging them by
+SKU. The packaged two-isolated-warehouse proof is 10/10 GREEN, including a
+same-warehouse catch-up from 8 to 11 while the other warehouse remains 5. This
+does not constitute visible acceptance on two physical computers; that Release
+1 checkpoint remains open.
 
 ### Demo Inventory lifecycle: packaged GREEN; seed/delete visibly accepted
 
