@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.41
+**Version:** 1.42
 
 **Inventory date:** 2026-08-31
 
@@ -1273,6 +1273,9 @@ unchanged Recipe/version/RunId/batch identity across Refresh and Process
 selection. It is GREEN with `ChaiFourProcessesCompleted=True`,
 `ChaiFinalBottlingCompleted=True`, and `ChaiRunNotRestarted=True`. This does
 not replace the dedicated NAS operator-visible Chai UAT, which remains open.
+The current approved five-package set was revalidated on the dedicated NAS
+test leaf in two clean sessions at 16/16, with zero canonical-file changes from
+launcher use; that is deployment/launcher evidence, not a visible Chai run.
 That UAT must visibly preserve the displayed Recipe/version/Run/Batch across
 Refresh and Process selection, show **WAITING UPSTREAM** before upstream
 completion and **READY** only afterward, keep routed inputs read-only and out

@@ -2991,6 +2991,12 @@ uses the packaged form handlers and the same visible Inventory Check and
 Production Output projections as an operator. This is automated evidence only;
 the dedicated NAS human-visible UAT checkbox remains open.
 
+The current approved five-package set was also revalidated on 2026-08-31
+against the dedicated NAS test leaf in two clean Excel sessions: 16/16 launcher,
+package-hash, target-selection, and read-only-safety checks passed with zero
+canonical-file changes from launcher use. That deployment check does not create
+or complete the Chai Recipe and is not human-visible Chai acceptance.
+
 Visible NAS Chai UAT record (open): use only the dedicated test warehouse and
 the approved package set. Load one released four-Process Chai Recipe and note
 the displayed Recipe version, Run ID, and Batch before any Process completes.
