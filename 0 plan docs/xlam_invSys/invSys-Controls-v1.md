@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.40
+**Version:** 1.41
 
 **Inventory date:** 2026-08-31
 
@@ -1273,6 +1273,12 @@ unchanged Recipe/version/RunId/batch identity across Refresh and Process
 selection. It is GREEN with `ChaiFourProcessesCompleted=True`,
 `ChaiFinalBottlingCompleted=True`, and `ChaiRunNotRestarted=True`. This does
 not replace the dedicated NAS operator-visible Chai UAT, which remains open.
+That UAT must visibly preserve the displayed Recipe/version/Run/Batch across
+Refresh and Process selection, show **WAITING UPSTREAM** before upstream
+completion and **READY** only afterward, keep routed inputs read-only and out
+of **Acceptable Inventory For Run**, and retain the exact input/output keys,
+co-product balance, UOM-grouped **Used Goods**, and correlated Viewer Events
+through Final Bottling.
 
 Slice 4aw automated acceptance recorded 2026-08-30: **View Process** distinguishes
 an immutable loaded definition from **Edit as New Version**. The latter keeps

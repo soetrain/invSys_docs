@@ -2991,6 +2991,28 @@ uses the packaged form handlers and the same visible Inventory Check and
 Production Output projections as an operator. This is automated evidence only;
 the dedicated NAS human-visible UAT checkbox remains open.
 
+Visible NAS Chai UAT record (open): use only the dedicated test warehouse and
+the approved package set. Load one released four-Process Chai Recipe and note
+the displayed Recipe version, Run ID, and Batch before any Process completes.
+Before upstream completion, select Convergence and confirm its connected inputs
+read **WAITING UPSTREAM** and that **Acceptable Inventory For Run** contains
+only selectable external stock. Complete Tea Brewing and Spice Blending through
+the public **Check In** and **Complete Run** actions; use normal **Refresh** and
+Process selection to revisit Convergence without clicking **New**, reloading a
+Recipe, or starting a new batch. Confirm the same Recipe/version/Run/Batch is
+still displayed and that Inventory Check now has one read-only row for each
+routed input, identifying source Process/output, downstream requirement, exact
+`System_Key`, committed quantity/UOM, and remaining balance. Complete
+Convergence, then use the same Refresh/navigation sequence before Final
+Bottling and confirm its exact concentrate key appears as a read-only routed
+input. Complete Final Bottling and confirm all four Process statuses are
+complete, the output has a new `System_Key`, any co-product balance remains
+visible, **Used Goods** keeps LB and EA in separate groups, and Viewer Events
+shows correlated Production Input Consumed/Production Output Created entries.
+Return redacted screenshots of the initial waiting state, both routed-input
+checks, final output/co-product state, Viewer Events, and the unchanged
+Recipe/version/Run/Batch context.
+
 ### Remaining Release 1 work recorded at the user checkpoint
 
 The user identified the following work as required before Release 1 acceptance.
