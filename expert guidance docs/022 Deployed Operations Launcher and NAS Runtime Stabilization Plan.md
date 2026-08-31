@@ -3040,6 +3040,10 @@ Required behavior:
   edge follows horizontal form resize; and
 - [x] move the list captions and column headers with their matching list bands
   so audit columns remain visually attributable during resize.
+- [x] keep a vertical page scrollbar visible on **Production Run - List** so
+  constrained-height operators can reach every list and action; and
+- [x] keep the Run Plan **Qty** header in its own header band during vertical
+  resize, rather than treating it as the palette's `Qty` caption.
 
 D13 evidence: the new focused source contract was meaningfully RED at `0/5`
 before implementation and GREEN at `5/5` after it. The change extends the
@@ -3055,6 +3059,14 @@ minimum/default/expanded, minimize/restore/maximize, bounds, overlap, and
 full-client-fill checks using Production Run - List screenshots. A final
 operator drag-resize retest of the deployed package remains open before visible
 acceptance is checked complete.
+
+The two follow-on checks were meaningfully RED at `5/7` and GREEN at `7/7`.
+The public launcher additionally reports `RunListVerticalScrollbar=True` and
+`RunPlanQtyHeaderAligned=True`; the latter proves the `Qty` header remains
+co-band with the other Run Plan headers after vertical resize. Native default
+and expanded captures visibly show both the vertical scrollbar and the retained
+header. This is presentation-only and retains the earlier two-batch and Chai
+handler GREEN results.
 
 ### Remaining Release 1 work recorded at the user checkpoint
 

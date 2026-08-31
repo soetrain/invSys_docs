@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.43
+**Version:** 1.44
 
 **Inventory date:** 2026-08-31
 
@@ -754,6 +754,19 @@ Chai fork/convergence GREEN assertions. Native visual validation passed at
 minimum, default, expanded, minimize, restore, and maximize states, capturing
 the Production Run - List page. A user-visible drag-resize retest on the
 deployed package remains required before visible acceptance is marked complete.
+
+The 4ay follow-on corrects two visible Run List details without changing any
+Production execution or inventory contract: the **Production Run - List** page
+keeps a vertical scrollbar visible so constrained-height operators can reach
+all of its controls, and caption anchoring explicitly excludes `hdr...` column
+labels. This prevents the Run Plan **Qty** header from being assigned to the
+palette-caption band during a vertical resize. The focused contract was
+meaningfully RED at `5/7` and GREEN at `7/7`; the packaged public launcher now
+reports `RunListVerticalScrollbar=True` and
+`RunPlanQtyHeaderAligned=True`. Native default and expanded captures show the
+visible scrollbar and retained **Qty** header. The deployed-package operator
+drag-resize retest remains the only outstanding visible evidence for this
+layout refinement.
 
 ### Shipping status/message resizing: packaged correction GREEN; visible retest pending
 
