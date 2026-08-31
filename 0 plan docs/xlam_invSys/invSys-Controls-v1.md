@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.38
+**Version:** 1.39
 
 **Inventory date:** 2026-08-30
 
@@ -15,7 +15,7 @@ This is the readable Release 1 control catalog after review-checklist answers
 1-3 and 6-7. It describes the implemented source and explicitly labels packaged
 or visible acceptance still pending. For the deliberate D15 Production priority
 change, it also records the approved target controls and separately labels the
-the implemented and packaged D13 acceptance state. The normative authority remains
+implemented and packaged D13 acceptance state. The normative authority remains
 `invSys-Design-v4.11.md`.
 
 The catalog was derived from:
@@ -1171,9 +1171,9 @@ removing the repeated Saving notices caused by unchanged read-only loads.
 
 | Control group | Required displayed controls/actions | Purpose |
 |---|---|---|
-| Saved Processes | header-backed `lstProcesses`; `btnProcessRefresh`, `btnProcessNew`, `btnProcessLoad`, `btnProcessReuse` | Lists **ID / Version / Process / Status** and starts a draft from a blank or reusable definition. |
+| Saved Processes | header-backed `lstProcesses`; `btnProcessRefresh`, `btnProcessNew`, `btnProcessLoad` -- **View Process**, `btnProcessReuse` -- **Edit as New Version** | Lists **ID / Version / Process / Status**. View loads an immutable saved version for reference. Edit as New Version loads its complete definition into the next generated DRAFT version and rebases retained Output Design Versions without rewriting the selected version. |
 | Process identity | `txtProcessName`, locked `txtProcessId`, locked `txtProcessVersion`, `txtProcessDescription` | Edits the versioned Process header. invSys allocates the next available three-character Base-36 ID and version; the operator does not type either identity. |
-| Worksheet workbench | `btnProcessWorksheetCreate` -- **Create Process Table**; `btnProcessWorksheetRetrieve` -- **Retrieve Selected Process**; `btnProcessWorksheetAddAlternative` -- **Add Acceptable Item** | Creates any number of uniquely named Process tables in the exact captured `Production.Operator.xlsm`; Add Acceptable Item appends one numbered managed-item/hidden-SKU pair to the selected table; retrieval accepts one table or Ctrl+click cells across several tables, imports each confirmed definition as DRAFT, and deletes only successful selected tables. |
+| Worksheet workbench | `btnProcessWorksheetCreate` -- **Send Process to Sheet**; `btnProcessWorksheetRetrieve` -- **Retrieve Selected Process**; `btnProcessWorksheetAddAlternative` -- **Add Acceptable Item** | Sends the current new/editable Process to one of any number of uniquely named Process tables in the exact captured `Production.Operator.xlsm`. If the current definition is an existing immutable version, Send first promotes it to the next generated version. Add Acceptable Item appends one numbered managed-item/hidden-SKU pair to the selected table; retrieval accepts one table or Ctrl+click cells across several tables, imports each confirmed definition as DRAFT, and deletes only successful selected tables. |
 | Requirements | header-backed `lstProcessRequirements`; locked `txtRequirementId`, `txtRequirementName`, `txtRequirementQty`, `txtRequirementPercent`, `txtRequirementYieldBasis`, `txtRequirementUom`; `btnProcessRequirementAdd`, `btnProcessRequirementUpdate`, `btnProcessRequirementRemove`, `btnProcessRequirementUp`, `btnProcessRequirementDown` | Defines typed external/upstream input requirements under **ID / Requirement / Qty / % / Batch basis / UOM**. IDs are generated Base-36 values. Worksheet input rows calculate basis and percent within each normalized-UOM group, so unlike groups may coexist without implicit conversion. |
 | Outputs | header-backed `lstProcessOutputs`; locked `txtProcessOutputId`, `txtProcessOutputDesignId`, `txtProcessOutputDesignVersion`; `txtProcessOutputName`, `txtProcessOutputQty`, `txtProcessOutputPercent`, `txtProcessOutputYieldBasis`; catalog-dropdown `cmbProcessOutputUom`; hidden/internal `txtProcessOutputItemCode`; `btnProcessOutputAdd`, `btnProcessOutputUpdate`, `btnProcessOutputRemove`, `btnProcessOutputUp`, `btnProcessOutputDown` | Defines one or more output designs in one compact row under **ID / Output / Design / Ver / Output Qty / Yield % / Yield basis / UOM**. The hidden SKU reserves no visible gap. Quantity-defined outputs default to Yield %=100 and Yield basis=Output Qty; explicit percentage/basis values survive Update/save/reload. Output and Design identities are generated. UOM is selected from Settings' Recipe UOM Catalog. A managed output item is picker-selected and its SKU is retained internally; the operator does not type Item Code. Save/Release rejects a Process with no output, a noncatalog UOM, or an output without a selected managed SKU. |
 | Worksheet table columns | **Record Type**, text-safe generated **ID**, **Name**, **Qty**, **Percent**, **Basis Qty**, catalog-dropdown **UOM**, generated **Design ID**, **Design Version**, **Instruction**, automatic **Requirement ID**, hidden/system-managed **Output SKU**, **Acceptable Managed Item 1** through **4** (and added pairs), with each matching managed hidden **Accepted SKU n** | Record Type is dropdown-backed. INPUT, OUTPUT, and INSTRUCTION IDs use one table-wide Base-36 namespace and remain unique regardless of entry order; INPUT Percent/Basis Qty are formula-managed per normalized-UOM group, INPUT Requirement ID and OUTPUT Design identity are system managed, and mixed-UOM assembly rows are valid when every group totals 100.0%. Core item search opens only from a valid **Acceptable Managed Item n** cell: INPUT fills that numbered alternative pair; OUTPUT pair 1 fills the visible managed item and hidden Output SKU while retaining its descriptive Name. OUTPUT Name never opens search. Neither path stores a physical `System_Key`; historical ALTERNATIVE rows remain import-compatible. |
@@ -1252,6 +1252,23 @@ Complete Run handlers with `SelectedProcessOnly=True`,
 keys, routed-intermediate consumption, co-product balance, actual-output
 inventory authority, batch history, Utility display, and stock-bucket
 expansion. Visible operator acceptance of the Chai Recipe remains open.
+
+Slice 4aw automated acceptance recorded 2026-08-30: **View Process** distinguishes
+an immutable loaded definition from **Edit as New Version**. The latter keeps
+the full definition but generates the next Process version and rebases each
+retained Output Design Version. **Send Process to Sheet** exports the current
+new/editable definition to the captured workbook; sending a viewed existing
+version first promotes it to the next generated version. Retrieval saves that
+edited table through the same public DRAFT authority and never rewrites the
+saved/released source version. Focused source began RED at `0/6` and is GREEN
+at `7/7`. The packaged public action is GREEN at `1/1` with
+`ReleasedProcessEditable=True`, `ExistingProcessExported=True`,
+`ExportRoundTrip=True`, `OutputDesignVersionRebased=True`, and
+`OutputYieldRebased=True`. Packaged XLAM validation is `81/81`, packaged
+Ribbon/VBA compile validation is `142/142`, Production layout validation passes
+at minimum/default/expanded/native sizes, Slice 0 tooling is `62/62`, the full
+Release 1 chain is `30/30`, and live role workflows are `47/47`. Visible
+acceptance of the corrected bottling Process remains open.
 
 ### 8.5 Production Run - Tree page
 

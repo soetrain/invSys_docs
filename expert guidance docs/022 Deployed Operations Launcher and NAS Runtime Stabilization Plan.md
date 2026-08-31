@@ -2852,6 +2852,75 @@ Windows recording `OFFICE_MODULE_VERSION_MISMATCH`; the focused packaged run
 then completed independently and GREEN. Visible operator confirmation remains
 open.
 
+### Slice 4aw -- Released Process editing and worksheet export
+
+The 2026-08-30 visible checkpoint completed the first three Processes in the
+four-Process Chai Recipe, then found that the released mixed-UOM bottling
+Process could be loaded but not saved after its requirement/output quantities
+were changed. The same checkpoint requested an explicit way to send that
+already-made Process to a worksheet table, edit it, and retrieve it. This is a
+correction to the existing Architecture v4.11 D15 immutable-version and Process
+worksheet workbench contract; it does not authorize rewriting a saved version.
+
+Required behavior:
+
+- [x] Architecture v4.11 remains authoritative: a saved or released Process is
+  immutable, and editing creates the next available generated DRAFT version;
+- [x] Process Designer labels the read-only reference action **View Process**
+  and the editable successor action **Edit as New Version** so operators do not
+  mistake a loaded immutable version for a writable draft;
+- [x] **Edit as New Version** loads the complete selected definition, proposes
+  the next version, and rebases every retained Output Design Version to that
+  successor while preserving Process, Requirement, Output, instruction, UOM,
+  managed SKU, and Ingredient Assignment identity;
+- [x] the worksheet action is labelled **Send Process to Sheet** and sends the
+  current new/editable Process—or a viewed saved Process promoted to its next
+  version—to a uniquely named table in the captured
+  `Production.Operator.xlsm`;
+- [x] worksheet retrieval uses the existing public DRAFT-save authority,
+  removes only a successfully saved selected table, and leaves Release as a
+  separate explicit action; and
+- [x] the corrected workflow accepts mixed-UOM assembly quantities such as
+  concentrate in LB plus bottle/cap/output in EA without conversion or
+  immutable-version overwrite.
+
+D13 RED sequence:
+
+1. [x] Add focused Slice 4aw source checks and record RED for ambiguous action
+   wording, missing successor Output Design Version rebasing, and absent
+   packaged edit/export evidence (`0/6`).
+2. [x] Extend the packaged public Production action through selected released
+   Process view, edit-as-successor, row Update, Send Process to Sheet, table
+   edit, Retrieve Selected Process, and resulting DRAFT verification.
+3. [x] Rebuild Operations and rerun focused, packaged Production worksheet/
+   lifecycle, compile/layout, Release 1, static, and reviewed-growth gates.
+
+Gate:
+
+- [x] focused RED/GREEN and packaged same-handler evidence are recorded with
+  `ReleasedProcessEditable=True`, `ExistingProcessExported=True`,
+  `ExportRoundTrip=True`, and `OutputDesignVersionRebased=True`;
+- [x] existing mixed-UOM worksheet, reusable Production, and launcher
+  regressions remain GREEN; and
+- [ ] visible acceptance edits/releases the corrected bottling Process and
+  completes it after its dependency-ready concentrate Process.
+
+Automated evidence recorded 2026-08-30: focused source began RED at `0/6` and
+is GREEN at `7/7`. The focused packaged public action is GREEN at `1/1` with
+`ReleasedProcessEditable=True`, `ExistingProcessExported=True`,
+`ExportRoundTrip=True`, `OutputDesignVersionRebased=True`, and
+`OutputYieldRebased=True`. Packaged XLAM validation is `81/81`, packaged
+Ribbon/VBA compile validation is `142/142`, Production layout validation passes
+at minimum/default/expanded/native sizes, Slice 0 tooling is `62/62`, the full
+Release 1 chain is `30/30`, and live role workflows are `47/47`. Static
+maintenance evidence records 154 components, 5,253 procedures, 1,050
+candidates, and 1,052 reviewed entries. The older combined reusable-Production
+stress sequence still encounters the recorded Office
+`OFFICE_MODULE_VERSION_MISMATCH` crash at its pre-existing output-picker step;
+the isolated same-handler Slice 4aw proof and the Release 1 regressions are
+GREEN. Visible correction and completion of the operator's bottling Process
+remain open.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.
