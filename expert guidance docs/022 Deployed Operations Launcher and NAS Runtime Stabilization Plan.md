@@ -2921,6 +2921,72 @@ the isolated same-handler Slice 4aw proof and the Release 1 regressions are
 GREEN. Visible correction and completion of the operator's bottling Process
 remain open.
 
+### Slice 4ax -- Routed intermediate visibility and full multi-Process acceptance
+
+The 2026-08-30 visible checkpoint selected the final mixed-UOM bottling Process
+and found that its connected upstream concentrate was absent from **Acceptable
+Inventory For Run** while the packaging inputs were present. Source inspection
+shows that the palette intentionally excludes incoming Recipe connections: it
+is an allocation surface for selectable external stock, while a routed
+intermediate must come from the exact output key created by the upstream
+Process in the same active run. The screenshot showed **WAITING UPSTREAM**,
+blank active output keys, and zero Process totals, so it does not establish that
+the earlier Process completions belonged to the currently loaded run.
+
+The same inspection exposed a genuine operator-visibility gap. The completion
+service includes routed intermediate keys in its `USED` event items, but the
+Inventory Check projection enumerates only external allocation records. The
+single numeric **Used Goods** summary also cannot communicate consumption from
+more than one UOM group.
+
+Required next behavior and proof:
+
+- [ ] establish through the public form handlers whether the completed upstream
+  Processes and the selected downstream Process remain in one active run across
+  the exact operator navigation/refresh sequence;
+- [ ] keep incoming Recipe connections out of the selectable external-stock
+  palette, but expose every ready routed intermediate as a read-only exact-key,
+  quantity, UOM, and source-Process row in Inventory Check or an equally clear
+  operator projection;
+- [ ] prove that downstream Check In changes from **WAITING UPSTREAM** to
+  **READY** only after the upstream Process completes in the same run;
+- [ ] prove downstream completion queues and applies the routed output's exact
+  key as `USED`, leaves any uncommitted balance as managed inventory, and makes
+  that consumption visible in Events/Viewer;
+- [ ] reconcile the **Used Goods** display contract for mixed-UOM Processes
+  before changing it; a single unitless total must not add unlike UOMs; and
+- [ ] complete one visible four-Process fork/convergence Recipe from initial
+  allocation through final bottling without clearing, replacing, or silently
+  restarting the active run.
+
+D13 next test: extend the packaged reusable-Production public action through
+upstream completion, refresh/navigation, downstream selection, routed-key
+Inventory Check visibility, exact-key consumption, remaining balance, and
+multi-UOM output history. Record meaningful behavioral RED before changing the
+form or run-session implementation.
+
+### Remaining Release 1 work recorded at the user checkpoint
+
+The user identified the following work as required before Release 1 acceptance.
+These entries preserve priority but do not silently define new architecture:
+
+- [ ] finish and prove the existing Architecture v4.11 central Aggregator with
+  two real warehouses operating on two computers;
+- [ ] reconcile a comprehensive Viewer contract with Architecture v4.11,
+  including Admin-configurable detail and an Action Path view that can explain
+  operator workflow and user activity;
+- [ ] clean and prove the SharePoint, GitHub, and NAS setup for end users, then
+  define an easy-deploy/easy-update and automatic-updater contract before
+  implementation; and
+- [ ] reconcile an Add/Edit Inventory Items worksheet-import contract for
+  historical data used in pattern/reorder analysis, modelled on the Process
+  worksheet workbench without treating imported history as current managed
+  inventory.
+
+The Aggregator item advances existing normative requirements. The Viewer,
+updater, and historical-analysis import require an approved normative contract
+and focused implementation slices before runtime changes.
+
 ## 6. Batched user acceptance checkpoint
 
 Request one user checkpoint only after Slice 4 automated evidence is GREEN.
@@ -2971,10 +3037,10 @@ Exact steps:
     Condition. Repeat with `DUMP` on remaining inventory and confirm the same
     depletion behavior. Attempt an overdraw and confirm it is rejected.
 15. In Process Designer, confirm Process/Requirement/Output IDs are generated
-    locked three-character Base-36 values. Use **Edit Process on Sheet** to enter
+    locked three-character Base-36 values. Use **Send Process to Sheet** to enter
     100 lb sugar, 200 lb flour, 11.2 lb baking powder, and 300 lb filtered water;
     confirm the 611.2 lb batch basis and 100.0% formula total, then use
-    **Retrieve Process from Sheet** and confirm the temporary table is removed.
+    **Retrieve Selected Process** and confirm the temporary table is removed.
     Send the Process back to the sheet once more to prove repeat editing. Create/
     release the Process with at least two outputs. In Recipe Designer, reuse it
     with another released Process, connect one output downstream, leave one as
