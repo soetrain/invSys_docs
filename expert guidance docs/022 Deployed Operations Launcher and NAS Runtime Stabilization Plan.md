@@ -3019,6 +3019,43 @@ Return redacted screenshots of the initial waiting state, both routed-input
 checks, final output/co-product state, Viewer Events, and the unchanged
 Recipe/version/Run/Batch context.
 
+### Slice 4ay Production Run - List responsive readability: packaged GREEN; visible retest pending
+
+The user reported that **Inventory Check** and **Selected Process
+Instructions** were too short, that vertical form resize gave all additional
+space to **Production Output**, and that right-dragging moved the Instructions
+list's left edge. This is a visible Operations layout refinement, not a change
+to D15 Production execution, `System_Key`, run persistence, allocation, or
+completion semantics.
+
+Required behavior:
+
+- [x] reserve at least eight rendered rows for **Inventory Check** and four for
+  **Selected Process Instructions** at the readable `1110 x 800` point
+  baseline;
+- [x] make Recipes, **Multi-Process Run Plan**, **Acceptable Inventory For
+  Run**, **Inventory Check**, **Selected Process Instructions**, and
+  **Production Output** share added/removed vertical space proportionally;
+- [x] keep **Selected Process Instructions** fixed to the left while its right
+  edge follows horizontal form resize; and
+- [x] move the list captions and column headers with their matching list bands
+  so audit columns remain visually attributable during resize.
+
+D13 evidence: the new focused source contract was meaningfully RED at `0/5`
+before implementation and GREEN at `5/5` after it. The change extends the
+Operations-local Andy Pope anchor implementation with declarative proportional
+vertical control registration; the form resize callback still contains no
+one-off coordinate arithmetic. The public
+`mProduction.BtnOpenProductionForm` packaged proof is GREEN with
+`CheckEightRows=True`, `InstructionsFourRows=True`, `AllListsGrew=True`,
+`InstructionLeftStable=True`, `HeadersAligned=True`, and
+`GeometryHealthy=True`; existing reusable two-batch and four-Process Chai
+handler proofs also remain GREEN. The native Windows API validator passed
+minimum/default/expanded, minimize/restore/maximize, bounds, overlap, and
+full-client-fill checks using Production Run - List screenshots. A final
+operator drag-resize retest of the deployed package remains open before visible
+acceptance is checked complete.
+
 ### Remaining Release 1 work recorded at the user checkpoint
 
 The user identified the following work as required before Release 1 acceptance.

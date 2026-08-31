@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.42
+**Version:** 1.43
 
 **Inventory date:** 2026-08-31
 
@@ -725,14 +725,35 @@ status and repaint before persistence starts. Excel-native Saving windows cannot
 be moved into a UserForm and may still appear during required NAS saves; invSys
 does not suppress required durability merely to hide Office progress UI.
 
-### Production resizing: corrected; visible retest pending
+### Production resizing: responsive Run List packaged GREEN; visible retest pending
 
 `frmProduction` maximized its native window while the MultiPage and child
 controls remained near their base dimensions in the upper-left corner. The
 focused validator reproduced the failure at DPI-derived `Zoom=60`. The deployed
 correction holds the form at `Zoom=100`; packaged validation now passes native
-minimize/restore/maximize/restore and bounds/fill/overlap checks for all four
-pages. A visible maximize/restore retest remains required.
+minimize/restore/maximize/restore and bounds/fill/overlap checks for all five
+pages.
+
+Slice 4ay adds responsive readability to **Production Run - List** without
+changing any run, inventory, identity, or completion contract. The form's
+readable baseline is `1110 x 800` points. **Inventory Check** reserves at least
+eight rendered rows and **Selected Process Instructions** at least four. The
+Recipes, **Multi-Process Run Plan**, **Acceptable Inventory For Run**,
+**Inventory Check**, **Selected Process Instructions**, and **Production
+Output** lists share added/removed Run-List height through Operations-local
+proportional anchors. Their captions and relevant column headers follow the
+same bands. **Selected Process Instructions** is Left + Right anchored, so its
+left edge stays fixed while its right edge follows width changes.
+
+Focused D13 RED was `0/5`; source GREEN is `5/5`. The packaged public
+`mProduction.BtnOpenProductionForm` proof reports
+`CheckEightRows=True`, `InstructionsFourRows=True`, `AllListsGrew=True`,
+`InstructionLeftStable=True`, `HeadersAligned=True`, and
+`GeometryHealthy=True`; it also retains the existing reusable two-batch and
+Chai fork/convergence GREEN assertions. Native visual validation passed at
+minimum, default, expanded, minimize, restore, and maximize states, capturing
+the Production Run - List page. A user-visible drag-resize retest on the
+deployed package remains required before visible acceptance is marked complete.
 
 ### Shipping status/message resizing: packaged correction GREEN; visible retest pending
 
