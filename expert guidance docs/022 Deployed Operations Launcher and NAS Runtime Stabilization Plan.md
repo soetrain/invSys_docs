@@ -2941,29 +2941,55 @@ more than one UOM group.
 
 Required next behavior and proof:
 
-- [ ] establish through the public form handlers whether the completed upstream
+- [x] establish through the public form handlers whether the completed upstream
   Processes and the selected downstream Process remain in one active run across
   the exact operator navigation/refresh sequence;
-- [ ] keep incoming Recipe connections out of the selectable external-stock
+- [x] keep incoming Recipe connections out of the selectable external-stock
   palette, but expose every ready routed intermediate as a read-only exact-key,
   quantity, UOM, and source-Process row in Inventory Check or an equally clear
   operator projection;
-- [ ] prove that downstream Check In changes from **WAITING UPSTREAM** to
+- [x] prove that downstream Check In changes from **WAITING UPSTREAM** to
   **READY** only after the upstream Process completes in the same run;
-- [ ] prove downstream completion queues and applies the routed output's exact
+- [x] prove downstream completion queues and applies the routed output's exact
   key as `USED`, leaves any uncommitted balance as managed inventory, and makes
   that consumption visible in Events/Viewer;
-- [ ] reconcile the **Used Goods** display contract for mixed-UOM Processes
+- [x] reconcile the **Used Goods** display contract for mixed-UOM Processes
   before changing it; a single unitless total must not add unlike UOMs; and
 - [ ] complete one visible four-Process fork/convergence Recipe from initial
   allocation through final bottling without clearing, replacing, or silently
   restarting the active run.
+
+Approved 2026-08-30 contract refinement:
+
+- **Used Goods** is a read-only, deterministic UOM-grouped summary for all
+  scaled goods consumed by one Process/batch, such as `5 LB; 12 EA`; it does
+  not add unlike units and repeats consistently on that Process's output rows.
+- `EA`, case-insensitively after UOM normalization, is whole-unit only across
+  definition, staging, allocation, event, and Inventory Domain application
+  boundaries. Fractional EA is rejected without rounding. This is a cross-role
+  invariant, so its D13 proof must include the relevant packaged public handler
+  and the Inventory Domain apply guard.
 
 D13 next test: extend the packaged reusable-Production public action through
 upstream completion, refresh/navigation, downstream selection, routed-key
 Inventory Check visibility, exact-key consumption, remaining balance, and
 multi-UOM output history. Record meaningful behavioral RED before changing the
 form or run-session implementation.
+
+Automated evidence recorded 2026-08-31: focused Slice 4ax source began at
+`5/7` with two named-Chai handler assertions RED, then reached `7/7` GREEN.
+The packaged public Production action created and released the four
+Process **Classic Chai Fork Convergence** graph, completed Tea Brewing and
+Spice Blending, proved both exact routed keys in Convergence Inventory Check,
+consumed both keys, completed Final Bottling from the exact concentrate key,
+and created the final bottled `EA` output under a new key. It recorded
+`ChaiInitialWaitingUpstream=True`, `ChaiRoutedConvergenceInputs=True`,
+`ChaiUpstreamExactKeysConsumed=True`, `ChaiFinalBottlingRoutedInput=True`,
+`ChaiFinalOutputNewKey=True`, `ChaiFourProcessesCompleted=True`,
+`ChaiFinalBottlingCompleted=True`, and `ChaiRunNotRestarted=True`. The test
+uses the packaged form handlers and the same visible Inventory Check and
+Production Output projections as an operator. This is automated evidence only;
+the dedicated NAS human-visible UAT checkbox remains open.
 
 ### Remaining Release 1 work recorded at the user checkpoint
 

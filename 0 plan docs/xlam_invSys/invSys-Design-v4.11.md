@@ -5,6 +5,9 @@
 **Author:** Codex  
 **Purpose:** Complete architectural specification for Release 1 (VBA/Excel only).
 
+# NAS/server:
+"C:\Users\Justin\OneDrive\Documents\invsys-scv.txt"
+
 ---
 ## Reference Links
 - `https://www.perplexity.ai/search/https-github-com-soetrain-invs-IL_KZ22YSsW5kMph4kOzxA?preview=1#7`
@@ -837,6 +840,15 @@ Each output definition declares:
 - Every Process has at least one output. Requirement IDs and output IDs are
   mutually unique within a Process version; quantities/yields are positive and
   UOMs are present in the warehouse catalog.
+- **EA** is a discrete unit of measure. After UOM normalization, `EA` (including
+  operator-entered `ea`) permits only whole quantities. No role, worksheet,
+  event creator, imported definition, or Inventory Domain apply path may round,
+  truncate, or silently convert a fractional EA quantity; it must reject it
+  before queuing or applying the event. This applies to Process definitions,
+  Recipe connection commitments, production actuals and allocations, Receiving,
+  Shipping, Boxing, Admin inventory creation/adjustment, and every inventory
+  event payload. Other catalog UOMs remain fractional unless their own later
+  approved rule says otherwise.
 - An output definition is design metadata, not a permanent inventory row and
   does not own a permanent `System_Key`. Each execution of that output creates
   a managed inventory entity with a new system-wide unique `System_Key`.
@@ -1055,6 +1067,15 @@ Each Recipe version declares:
   first created under that key and later consumed from the same exact key by
   downstream Process execution. Any unconsumed balance remains managed
   finished/co-product inventory.
+- **Acceptable Inventory For Run** remains an external-stock allocation surface:
+  an incoming Recipe connection is never a selectable stock row. After Check
+  In, **Inventory Check** also shows one read-only routed-input row for every
+  incoming connection of the selected Process. That row identifies the
+  downstream requirement, producing Process/output, exact produced
+  `System_Key`, committed quantity, UOM, and current remaining balance. It is
+  audit information, not an editable allocation; it survives Process selection,
+  Refresh, and normal navigation while the same loaded Recipe version, RunId,
+  and batch remain active.
 - The released definition and batch scale calculate each output's planned
   quantity. Before completion, the operator-entered actual quantity must be positive
   for every output row through **Actual Output**. That operator-entered actual
@@ -1063,9 +1084,11 @@ Each Recipe version declares:
   quantity may not be smaller than its committed downstream quantity. After
   completion, Production Output retains a separate row for that Process output
   and batch instead of overwriting the prior batch. **Last Actual** displays the
-  row's exact completed quantity, **Used Goods** displays the scaled quantity of
-  compatible input goods consumed by that Process for the batch, and **Process
-  Total** displays cumulative actual output for the same Process/output/UOM
+  row's exact completed quantity, **Used Goods** displays the scaled input goods
+  consumed by that Process for the batch as a deterministic, normalized-UOM
+  grouped summary (for example, `5 LB; 12 EA`). It must never add unlike UOMs
+  into a unitless numeric total; every output row of the same Process/batch
+  displays the same grouped summary. **Process Total** displays cumulative actual output for the same Process/output/UOM
   across the retained rows. The active unfinished batch remains a separate
   selectable row for Actual Output staging; advancing clears only the new
   batch's staged quantities. Each retained row preserves its own recall and new
