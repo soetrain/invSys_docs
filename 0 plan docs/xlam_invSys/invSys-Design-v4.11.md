@@ -945,6 +945,64 @@ This approved contract adds a versioned
   Legacy serialized requirements without `RequirementQtyMode` are `FIXED` and
   remain immutable.
 
+#### Slice 4bb -- external-stock UOM conversion (approved)
+
+This approved amendment permits a controlled equivalence conversion only when
+allocating **external stock** to a Production requirement. It does not convert a
+physical inventory entity, change a released Process or Recipe definition, or
+relax routed Recipe-edge compatibility.
+
+- The warehouse-owned **UOM Catalog** is a versioned configuration projection.
+  Its captured-workbook workbench table has the managed columns `UOM`,
+  `Dimension`, `Base UOM`, `Units Per Base UOM`, `Convertible`, `Enabled`, and
+  `Notes`. The operator opens it with **Edit UOM Catalog on Sheet**, adds or
+  edits rows, selects the table in the same captured workbook, then uses
+  **Retrieve UOM Catalog**. The worksheet is staging only; retrieval validates
+  the complete table and publishes a new catalog version rather than mutating
+  historical definitions or events. No additional form is introduced.
+- A convertible UOM declares a positive quantity of itself per one Base UOM in
+  its declared Dimension. The current catalog is initialized as `MASS`:
+  `LB=1`, `LBS=1`, `OZ=16`, `KG=2.2046226218`, `G=453.59237` per `LB`; and
+  `VOLUME`: `GAL=1`, `QT=4`, `PT=8`, `L=3.785411784`, `ML=3785.411784` per
+  `GAL`. Additional units become convertible only after a valid same-dimension
+  row is published. The runtime factor is derived as
+  `ToUnitsPerBase / FromUnitsPerBase`; no free-text factor is entered during
+  Production allocation.
+- `EA` remains discrete and nonconvertible; all `EA` quantities remain whole.
+  `CS` is initially nonconvertible packaging stock, because a case-to-each
+  factor varies by item/package and cannot safely be warehouse-global. No
+  conversion rounds, truncates, or silently changes a quantity. A separate,
+  approved SKU/package-conversion contract would be required for `CS <-> EA`.
+- A released requirement and output retain their declared UOM. At Production
+  allocation, compatible external stock in a different UOM is eligible only
+  through enabled catalog rows sharing one Dimension. The palette visibly shows
+  **Requirement UOM**, **Stock UOM**, native availability, and converted
+  requirement-UOM availability. The operator enters Requirement UOM; invSys
+  calculates native stock quantity without rounding before exact-key allocation.
+- Each allocation/consumption event preserves the source entity's immutable
+  `System_Key`, native consumed quantity/UOM, requested requirement
+  quantity/UOM, and exact UOM Catalog version/derived Factor used. Remaining
+  balance stays in native UOM. Historical events never recalculate from a later
+  catalog change.
+- Incoming and outgoing routed Recipe connections remain UOM-equal and retain
+  the existing exact-produced-key rule. A routed intermediate needing a UOM
+  transformation still requires an explicit conversion Process. This contract
+  applies only to external stock in **Acceptable Inventory For Run**.
+- A missing, disabled, cross-dimension, or non-exact conversion makes stock
+  nonselectable with an explanatory status; compatible same-UOM stock is
+  unchanged. Retrieval rejects duplicate UOM codes, blank Dimension/Base UOM,
+  nonpositive Units Per Base UOM, a missing/disabled base row, dimensional base
+  mismatches, or a convertible `EA`/`CS` row.
+
+Before implementation, D13 must record a public Production handler RED/GREEN
+that proves a fixed `OZ` requirement allocates an exact `LB` key only through
+published `LB/OZ` catalog relationship, records both quantities/UOMs and the
+catalog-version/factor evidence, preserves native-key balance through
+Refresh/reopen, exercises the sheet Send/Retrieve public handlers for a new
+same-dimension unit, and rejects missing/cross-dimension/EA/CS conversions.
+This contract supersedes the former explicit-conversion-Process-only rule only
+for the constrained external-stock allocation described here.
+
 **Process worksheet workbench:**
 - Process Designer exposes two independent actions: **Create Process Table**
   and **Retrieve Selected Process**. Create writes the current or new draft to
@@ -979,8 +1037,10 @@ This approved contract adds a versioned
   use an EA basis of 2 and display 50.0% each. Every populated UOM group must
   total 100.0% independently. Retrieval must not add unlike UOM quantities,
   invent a mass/count conversion, or reject a valid mixed-UOM assembly Process.
-  Recipe connections remain UOM-compatible and any actual UOM conversion still
-  requires an explicit conversion Process.
+  Recipe connections remain UOM-compatible and routed UOM transformation still
+  requires an explicit conversion Process. The approved Slice 4bb external-stock
+  allocation conversion is the narrow exception; it does not alter this
+  worksheet calculation or Recipe-edge rule.
 - OUTPUT rows expose a locked/generated Design ID and version derived from the
   owning Process/Output identities. **Name** remains the output definition's
   descriptive name. **Acceptable Managed Item 1** is the OUTPUT row's visible

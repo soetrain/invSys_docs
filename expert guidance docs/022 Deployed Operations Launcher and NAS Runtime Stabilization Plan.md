@@ -3114,7 +3114,7 @@ Operations plus Designs Domain schema/projection authority. A user actively
 rebuilding a Recipe must first release a new version; an existing active run is
 never altered, cleared, or restarted by this feature.
 
-### Slice 4ba -- variable Process quantity modes: approved contract; implementation pending
+### Slice 4ba -- variable Process quantity modes: implementation in progress
 
 Certain Process outputs are indeterminate until production measures them. Add
 versioned `OutputQtyMode` with `FIXED` (current behavior) and `ACTUAL`
@@ -3156,6 +3156,49 @@ input external Check In/refresh/reopen; rejection of a routed variable input;
 and a variable routed-output run that blocks below commitment then consumes the
 exact actual-output `System_Key` at a sufficient actual. Package scope is
 Operations and Designs Domain schema/query/projection authority.
+
+Implementation now persists `RequirementQtyMode` and `OutputQtyMode`, presents
+the two Process Designer mode dropdowns, and adds the Process worksheet **Qty
+Mode** validation/round trip. External `ACTUAL` requirements accept a positive
+measured exact-key allocation at Check In without a planned-quantity cap;
+routed `ACTUAL` requirements remain release-rejected. Focused source and public
+packaged form-action GREEN are recorded; the dedicated actual-input run and
+worksheet round-trip acceptance cases remain required before slice completion.
+
+### Slice 4bb -- external-stock UOM conversion: approved; implementation in progress
+
+The Citrus Oil Production checkpoint released a Recipe whose requirements and
+output are `OZ`, while selected external stock remains physically held in `LB`.
+The current plan/spec correctly preserves the stock's native UOM, but it has no
+approved conversion path; showing it as an ordinary candidate is insufficient.
+
+This approved contract follows Architecture v4.11 Slice 4bb. It
+adds a versioned UOM Catalog workbench without another form: **Edit UOM Catalog
+on Sheet** writes one captured-workbook fill-out table, and **Retrieve UOM
+Catalog** validates the selected table then publishes a new catalog version.
+The table defines `UOM`, Dimension, Base UOM, Units Per Base UOM, Convertible,
+Enabled, and Notes. New mass/volume units automatically interconvert only when
+their published Dimension/base entries are valid. The initial catalog declares
+`LB`, `LBS`, `OZ`, `KG`, and `G` against MASS/LB and `GAL`, `QT`, `PT`, `L`, and
+`ML` against VOLUME/GAL.
+
+Conversion remains external Production allocation only. The palette shows
+Requirement UOM, Stock UOM, native available, and converted available; the
+operator enters Requirement UOM. The exact stock `System_Key` remains native,
+and events retain both quantities/UOMs plus catalog-version/factor evidence.
+`EA` is never convertible. `CS` is initially nonconvertible because its
+case-to-each factor is item/package-specific, not globally safe. Routed Recipe
+edges remain UOM-equal and a routed transformation still requires an explicit
+Process.
+
+Before implementation: create a focused public
+`mProduction.BtnOpenProductionForm` RED using a fixed `OZ` requirement and `LB`
+external key; then prove the published LB/OZ relationship, exact-key native
+balance preservation across Refresh/reopen, event audit fields, UOM-workbench
+Send/Retrieve of an added same-dimension unit, and rejection of missing,
+disabled, cross-dimension, `EA`, and `CS` conversions. Expected packages:
+Core/Inventory configuration authority and Operations Production; Designs
+definitions are not rewritten.
 
 ### Remaining Release 1 work recorded at the user checkpoint
 

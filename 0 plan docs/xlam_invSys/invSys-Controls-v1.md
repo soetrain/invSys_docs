@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.45
+**Version:** 1.46 (Slice 4bb contract approved; implementation in progress)
 
 **Inventory date:** 2026-08-31
 
@@ -795,7 +795,7 @@ settings or an active run. Recipe-node selection remains stable after an
 override is applied or inspected. Packaged form-action and full production
 chain evidence remain required before this control contract is accepted.
 
-### Slice 4ba -- variable Process quantity controls: approved contract; implementation pending
+### Slice 4ba -- variable Process quantity controls: implementation in progress
 
 This approved contract adds **Output Qty mode** to the Process Output editor with two
 choices: **Enter a number** for the existing fixed-yield path, and **Variable
@@ -818,6 +818,10 @@ stock only. A variable input cannot receive a Recipe route in Release 1, so
 unplanned routed consumption is introduced. The worksheet **Qty Mode**
 dropdown applies to INPUT and OUTPUT rows and preserves these choices on
 Send/Retrieve.
+
+The controls and persistence paths are implemented. The packaged public form
+action reports `RequirementActual=True` and `OutputActual=True`; visible
+worksheet Send/Retrieve and actual-input Check In acceptance remain pending.
 
 ### Shipping status/message resizing: packaged correction GREEN; visible retest pending
 
@@ -1338,6 +1342,27 @@ current Process/Recipe designer lists use the exact IDs recorded in section
 | Outputs | `lstManagerOutput`, `txtOutputReal` -- **Actual Output** | For a reusable run, retains one row per completed batch/Process output plus the selectable active-batch row. Completed rows show **Last Actual**, Batch, **Used Goods**, cumulative **Process Total**, recall code, and their readable distinct new **System_Key**. Used Goods is a deterministic per-Process/batch grouped UOM summary such as `5 LB; 12 EA`, never a numeric sum of unlike units. Selecting an active output row loads its staged actual; editing Actual Output retains a positive per-output quantity. Complete Run requires every actual, creates managed inventory at that actual quantity, and rejects an actual smaller than routed downstream commitments. Legacy completion continues to use the same visible quantity field through its preserved path. |
 | Run actions | `btnManagerCheckIn`, `btnManagerApplyOutput`, `btnManagerRefresh`, `btnManagerNext`, `btnManagerPrint` | Checks exact inputs into the selected Process, completes that Process when its dependencies are READY, refreshes, advances after every Recipe Process completes, or prints recall data. **Complete Run** keeps event/processor work inside the shared quiet-UI boundary, creates every selected-Process output under its own new key, consumes routed intermediates by exact key, and appends correlated persistence feedback. Independent READY Processes may complete in either order; downstream Processes wait for their upstream output keys. |
 | Labels | Recipes, Multi-Process Run Plan, Process filter, Run Location, % of Requirement, Qty, Acceptable Inventory For Run, Inventory Check, Production Output, Actual Output | Identifies the page sections and generated headers. Exact identity remains visible in Inventory Check and Production Output but is hidden behind the Run stock-bucket projection. Output quantity columns display **Last Actual**, **Batch**, **Used Goods**, and **Process Total**. Run palette Inv and Inventory Check show **Utility** rather than a numeric balance for catalog Utility items. Normalized `EA` is whole-unit only throughout visible role flows; a fractional value is rejected rather than rounded. |
+
+**Proposed Slice 4bb control contract — approval pending:** when an enabled,
+**Approval record:** user approved Slice 4bb; this contract is now in
+implementation and the preceding draft-status label is superseded.
+
+When an enabled same-dimension external-stock UOM conversion applies,
+`lstRunPalette` will add
+visible **Requirement UOM**, **Stock UOM**, **Native Available**, and
+**Available in Requirement UOM** labels/values. Selected stock retains its
+hidden exact `System_Key`; the allocation editor accepts Requirement UOM and
+does not relabel native stock as converted stock. Rows with no permitted
+conversion are visibly nonselectable with an explanatory status. The Production
+Settings page adds compact **Edit UOM Catalog on Sheet** and **Retrieve UOM
+Catalog** actions, not another form. The first writes a captured-workbook
+fill-out table with **UOM / Dimension / Base UOM / Units Per Base UOM /
+Convertible / Enabled / Notes**; the second retrieves only the selected table,
+reports every validation failure, and publishes a new UOM Catalog version only
+when the complete table is valid. `EA` remains whole-unit only and is never a
+conversion target/source. `CS` remains nonconvertible until a separate
+SKU/package-specific contract is approved. This does not alter read-only routed
+Inventory Check rows or Recipe-edge UOM compatibility.
 
 Slice 4av automated acceptance recorded 2026-08-30: the focused public-action
 package completed two multi-Process batches through the operator Check In and
