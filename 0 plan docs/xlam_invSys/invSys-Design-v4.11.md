@@ -835,11 +835,21 @@ Each input requirement declares:
 Each output definition declares:
   OutputId, OutputName, managed ITEM_CODE/SKU,
   generated DesignId/DesignVersion,
-  Qty or Percent/YieldBasisQty, and UOM
+  Qty or Percent/YieldBasisQty, UOM,
+  optional actual-output regulation: Enabled, FloorQty, CeilingQty
 ```
 - Every Process has at least one output. Requirement IDs and output IDs are
   mutually unique within a Process version; quantities/yields are positive and
   UOMs are present in the warehouse catalog.
+- Actual-output regulation is optional, is defined **per output** (never as a
+  cross-UOM Process total), and defaults disabled. When enabled, FloorQty and
+  CeilingQty use that output's UOM and are positive, FloorQty is not greater
+  than CeilingQty, and normalized `EA` bounds are whole quantities. A Recipe
+  version may retain the exact Process-output default or declare its own
+  output-level override for one selected Process node. The override is pinned
+  to its exact ProcessId/ProcessVersion/OutputId and is immutable after Recipe
+  release. There is no mutable warehouse-global switch that can reinterpret a
+  released Process, Recipe, or active run.
 - **EA** is a discrete unit of measure. After UOM normalization, `EA` (including
   operator-entered `ea`) permits only whole quantities. No role, worksheet,
   event creator, imported definition, or Inventory Domain apply path may round,
@@ -1093,6 +1103,20 @@ Each Recipe version declares:
   selectable row for Actual Output staging; advancing clears only the new
   batch's staged quantities. Each retained row preserves its own recall and new
   output `System_Key`.
+- **Actual Output is authoritative; Planned is comparative.** Release 1 does
+  not derive, enforce, or reconcile an input-to-output mass balance: evaporation,
+  dust/obliteration, measurement variation, water added during processing, and
+  other physical factors are represented only by the operator's measured actual
+  output. When effective output regulation is enabled, its FloorQty and
+  CeilingQty scale with the batch. Completion requires the actual to be within
+  that scaled interval and to satisfy every routed downstream commitment. The
+  effective lower bound is `max(scaled FloorQty, total routed commitment)`;
+  the effective upper bound is scaled CeilingQty. Recipe release rejects an
+  enabled range whose ceiling is smaller than the output's total routed
+  commitment, because no compliant actual could satisfy that route. A floor
+  lower than a routed commitment is valid and merely becomes non-operative for
+  that run; it never authorizes an implicit shortfall. With regulation disabled,
+  the existing positive-actual and exact routed-commitment rules continue.
 - Production inventory projections honor catalog quantity mode. When the exact
   managed item/SKU is marked `TRACK_QTY=FALSE` or `ITEM_KIND=UTILITY`, the Run
   palette **Inv** column and Inventory Check display **Utility**, never a stale

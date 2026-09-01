@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.44
+**Version:** 1.45
 
 **Inventory date:** 2026-08-31
 
@@ -767,6 +767,25 @@ reports `RunListVerticalScrollbar=True` and
 visible scrollbar and retained **Qty** header. The deployed-package operator
 drag-resize retest remains the only outstanding visible evidence for this
 layout refinement.
+
+### Production actual-output regulation: approved controls contract; implementation pending
+
+Slice 4az adds a planned sixth `mpProduction` page, **Production Settings**.
+It will present draft-only Process and Recipe scopes so an operator can select
+an output and define **Regulated**, **Floor**, and **Ceiling** in that output's
+UOM. Recipe scope will either inherit the selected exact Process-version/output
+default or retain an immutable Recipe-version override. It is not a mutable
+warehouse preference and cannot alter an active run or an already released
+definition.
+
+**Actual Output** remains the authoritative quantity created under the new
+`System_Key`; **Planned** remains comparative. The visible effective minimum
+will communicate `max(scaled Floor, routed commitment)`, while the configured
+ceiling remains an upper bound. Thus a configured `600–610 LB` range alongside
+a `610 LB` routed requirement permits only a compliant actual at or above 610;
+no form control will silently turn a 605-LB exact key into 610 LB or derive an
+input/output mass balance. This section records the approved contract only;
+controls and handler evidence are not yet implemented.
 
 ### Shipping status/message resizing: packaged correction GREEN; visible retest pending
 

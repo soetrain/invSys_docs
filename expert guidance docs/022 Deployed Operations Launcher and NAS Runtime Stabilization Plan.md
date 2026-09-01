@@ -3068,6 +3068,42 @@ and expanded captures visibly show both the vertical scrollbar and the retained
 header. This is presentation-only and retains the earlier two-batch and Chai
 handler GREEN results.
 
+### Slice 4az Actual-output regulation and tolerance: approved contract; implementation pending
+
+The observed Chai run correctly rejected `605 LB` where the routed downstream
+commitment is `610 LB`; that exact-key sufficiency rule remains mandatory.
+This slice adds no input-to-output mass-balance model. Planned output remains a
+scaled comparison value while the operator-entered **Actual Output** remains
+the created inventory quantity and the only physical measurement authority.
+
+Approved behavior:
+
+- [ ] add a sixth **Production Settings** page to the packaged Production form;
+  it edits draft versioned definitions, never an active run or released version;
+- [ ] support an output-level Process default and an optional pinned
+  Recipe-node/output override, each with **Regulated**, **Floor**, and
+  **Ceiling** in the output's catalog UOM;
+- [ ] scale enabled bounds with the batch and require actual output in that
+  interval, while retaining exact route sufficiency with effective lower bound
+  `max(scaled Floor, routed commitment)`;
+- [ ] allow a `600–610 LB` regulation range with a `610 LB` route: its effective
+  lower bound is 610; reject only a ceiling below the routed commitment;
+- [ ] retain positive actuals, exact `System_Key` output creation, whole-EA
+  validation, routed consumption, co-product balances, and correlated events;
+  and
+- [ ] leave unregulated outputs under the existing positive-actual plus routed
+  commitment rule.
+
+D13 scope before implementation: a public `mProduction.BtnOpenProductionForm`
+test must be meaningfully RED for draft save/release/reopen of Process defaults
+and Recipe overrides; regulated below-floor, above-ceiling, and below-route
+rejection; valid `610 LB` completion for the `600–610 LB`/`610 LB` case;
+unregulated compatibility; fractional-EA rejection; exact routed-key
+consumption; and no input/output mass-balance comparison. Package scope is
+Operations plus Designs Domain schema/projection authority. A user actively
+rebuilding a Recipe must first release a new version; an existing active run is
+never altered, cleared, or restarted by this feature.
+
 ### Remaining Release 1 work recorded at the user checkpoint
 
 The user identified the following work as required before Release 1 acceptance.
