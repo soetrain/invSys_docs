@@ -3270,6 +3270,52 @@ station entries and a separate historical `WH80` configuration rooted at
 available for this physical UAT. Do not repurpose either target or create a
 live warehouse without the operator's explicit staging approval.
 
+### Slice 4be -- comprehensive Event Viewer, detail profiles, and Action Path: proposed; awaiting explicit approval
+
+This is a proposal only. It must not change the existing read-only **Viewer**,
+its bounded R1 **Events** projection, its list export, or any event payload
+until Architecture v4.11 and the controls catalog are explicitly approved.
+
+The proposed comprehensive Viewer would remain a projection: the processor
+would publish a bounded, cross-domain event snapshot for the selected
+warehouse, and Viewer would read that published snapshot only on explicit
+Refresh. It would never open a canonical event/inventory/design workbook for
+writing, refresh authority, process an inbox, or use a global Aggregator
+snapshot as warehouse authority. Candidate standard columns are readable local
+time, event family/action, reference/correlation, affected item/entity,
+quantity/UOM, location/condition, source role, and user. Exact `System_Key`
+remains available only as the immutable entity identity, never as a row
+surrogate. Filters, row limits/paging, freshness, and retention must be
+specified before implementation.
+
+The proposed Admin detail-profile model is a warehouse-scoped versioned Config
+projection. An Administrator could select only whitelisted event-detail fields
+for each event family and set their display order/labels. The profile changes
+future Viewer rendering only; it never rewrites historical event payloads,
+unhides secret/credential data, or makes an operator projection authoritative.
+The required Admin surface, profile schema, default profile, capability gate,
+and cross-XLAM primitive-envelope boundary remain unapproved design work.
+
+The user requested an optional **Action Path** to speed training by revealing
+the user-facing controls used to perform a task. Approval must choose exactly
+one of these non-hybrid models:
+
+1. **Durable captured path:** role handlers append a bounded sequence of
+   approved user-facing control captions/identifiers to the event at creation;
+   Viewer optionally reveals that recorded sequence. It is audit history, not
+   hidden implementation telemetry.
+2. **Derived training path:** Viewer maps each published event family to a
+   versioned list of user-facing controls; no per-event control sequence is
+   written. It is training guidance, not an audit assertion that every mapped
+   control was clicked.
+
+Both models exclude backend processor calls, hidden controls, credentials,
+workbook paths, and `Application.Run` mechanics. A later D13 slice must begin
+with public packaged Viewer/Admin/role-handler RED proving read-only authority,
+detail-profile capability/configuration boundaries, Action Path correctness,
+filtering/freshness, exact-key visibility, and no regressions to current
+Events/list export. No implementation is authorized by this proposal.
+
 ### Remaining Release 1 work recorded at the user checkpoint
 
 The user identified the following work as required before Release 1 acceptance.
