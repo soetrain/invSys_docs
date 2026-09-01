@@ -887,6 +887,64 @@ Each output definition declares:
   UOM is selected from a dropdown backed by the current warehouse **Recipe UOM
   Catalog**; the form does not accept a new free-text Output UOM.
 
+#### Slice 4ba -- variable Process quantities (approved)
+
+This approved contract adds a versioned
+`OutputQtyMode` field to every Process output, with the two values `FIXED` and
+`ACTUAL`. Process Designer presents an **Output Qty mode** dropdown with
+**Enter a number** (`FIXED`) and **Variable -- determined by Actual Output**
+(`ACTUAL`), alongside the existing Output Qty entry.
+
+- `FIXED` preserves the current contract: a positive Output Qty or
+  Percent/Yield basis is required; quantity-defined outputs normalize to 100%
+  and their Output Qty; and planned yield is batch-scaled.
+- `ACTUAL` means the Process deliberately has no declared output yield. Qty,
+  Yield %, and Yield basis are blank and read-only. The existing per-output
+  **Actual Output** entered at completion remains required, is the sole
+  quantity created under the new `System_Key`, and must be positive and whole
+  for normalized `EA`.
+- A variable output may have one or more fixed-quantity routed Recipe
+  connections. A percentage connection is prohibited because a variable output
+  has no yield basis. Recipe release does not compare its fixed routed total to
+  a non-existent planned yield; completion instead retains the exact-key
+  sufficiency rule: Actual Output must be at least the batch-scaled total
+  routed commitment before a downstream Process can consume that key.
+- Optional output regulation remains compatible with `ACTUAL`: its batch-scaled
+  floor/ceiling applies to Actual Output and its ceiling must still cover any
+  routed commitment. This remains a measured-output comparison, never a mass
+  balance.
+- Process-to-Sheet adds a **Qty Mode** dropdown carrying `FIXED` or `ACTUAL`.
+  A FIXED row retains its numeric Qty/yield fields; an ACTUAL row shows the
+  business text **Variable -- determined by Actual Output**, leaves numeric
+  yield cells blank, and round-trips the explicit mode. Retrieval rejects an
+  unrecognized mode or a variable row that carries Qty, Percent, or Yield
+  basis.
+- Legacy serialized outputs lacking `OutputQtyMode` are interpreted as
+  `FIXED`; no released version is rewritten. New versions persist the explicit
+  field.
+- This proposal also adds versioned `RequirementQtyMode` to each input
+  requirement, using the same `FIXED` and `ACTUAL` values and the same
+  **Enter a number** / **Variable -- determined at Check In** choice in the
+  Input Qty editor. `FIXED` preserves the current Qty or Percent/Batch basis
+  requirement. `ACTUAL` leaves those three planning fields blank and requires
+  the operator, at Check In, to select compatible external stock and commit a
+  positive measured quantity across its expanded exact `System_Key` entities.
+  `EA` remains whole-unit only. The committed amount is the input measurement
+  recorded in the consumption event; it is not inferred from input/output
+  totals or reverse-calculated from Actual Output.
+- To preserve the existing directed-edge and read-only routed-input contracts,
+  an `ACTUAL` requirement is external-only in Release 1: Recipe release rejects
+  an incoming connection to it. A variable upstream output may still feed a
+  fixed downstream requirement under the route-safe actual-output rule above.
+  A future variable routed-input feature would require its own explicit
+  exact-key quantity-commitment contract; it is not silently implied here.
+- Process-to-Sheet's **Qty Mode** applies to both INPUT and OUTPUT rows. An
+  ACTUAL INPUT row displays **Variable -- determined at Check In**, leaves Qty,
+  Percent, and Batch basis blank, and round-trips its explicit mode. Retrieval
+  rejects an unrecognized mode or an actual input that carries those fields.
+  Legacy serialized requirements without `RequirementQtyMode` are `FIXED` and
+  remain immutable.
+
 **Process worksheet workbench:**
 - Process Designer exposes two independent actions: **Create Process Table**
   and **Retrieve Selected Process**. Create writes the current or new draft to
@@ -2398,6 +2456,9 @@ tblProcessRequirements
   UOM
   InstructionOrdinal
 
+  [Slice 4ba]
+  RequirementQtyMode     FIXED | ACTUAL
+
 tblProcessIngredientAlternatives
   ProcessId
   ProcessVersion
@@ -2417,6 +2478,9 @@ tblProcessOutputs
   Percent
   YieldBasis
   UOM
+
+  [Slice 4ba]
+  OutputQtyMode          FIXED | ACTUAL
 
 tblProcessInstructions
   ProcessId

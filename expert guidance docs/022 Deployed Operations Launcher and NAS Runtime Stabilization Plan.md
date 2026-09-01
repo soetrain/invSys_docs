@@ -3068,7 +3068,7 @@ and expanded captures visibly show both the vertical scrollbar and the retained
 header. This is presentation-only and retains the earlier two-batch and Chai
 handler GREEN results.
 
-### Slice 4az Actual-output regulation and tolerance: approved contract; implementation pending
+### Slice 4az Actual-output regulation and tolerance: implementation in progress
 
 The observed Chai run correctly rejected `605 LB` where the routed downstream
 commitment is `610 LB`; that exact-key sufficiency rule remains mandatory.
@@ -3094,6 +3094,16 @@ Approved behavior:
 - [ ] leave unregulated outputs under the existing positive-actual plus routed
   commitment rule.
 
+The visible **Production Settings** page must also include these operator
+instructions: Process defaults are edited only while a Process is DRAFT in
+**Process Designer**; Recipe overrides are edited only while a Recipe is DRAFT
+in **Recipe Designer** after its Process nodes are present; each change then
+requires that respective Draft Save and Release. **Production Run** only reads
+the released Recipe version and cannot modify an active run, a released
+Process, or a released Recipe. Recipe-node selection must persist while the
+operator applies or inspects an override rather than resetting to the first
+node.
+
 D13 scope before implementation: a public `mProduction.BtnOpenProductionForm`
 test must be meaningfully RED for draft save/release/reopen of Process defaults
 and Recipe overrides; regulated below-floor, above-ceiling, and below-route
@@ -3103,6 +3113,49 @@ consumption; and no input/output mass-balance comparison. Package scope is
 Operations plus Designs Domain schema/projection authority. A user actively
 rebuilding a Recipe must first release a new version; an existing active run is
 never altered, cleared, or restarted by this feature.
+
+### Slice 4ba -- variable Process quantity modes: approved contract; implementation pending
+
+Certain Process outputs are indeterminate until production measures them. Add
+versioned `OutputQtyMode` with `FIXED` (current behavior) and `ACTUAL`
+(variable, determined by Actual Output). Process Designer will expose the two
+choices as **Enter a number** and **Variable -- determined by Actual Output**;
+the existing numeric Output Qty entry remains active only for the former.
+
+For `ACTUAL`, Qty, Yield %, and Yield basis are blank, Actual Output is the
+required positive completion measurement, and that exact quantity creates the
+new output `System_Key`. Whole-EA enforcement remains unchanged. An ACTUAL
+output may route to fixed-quantity requirements; recipe release permits no
+percentage connection from it, and execution requires Actual Output to meet
+the batch-scaled routed commitment before downstream exact-key consumption.
+Regulation remains optional and route-safe; it is not an input/output mass
+balance calculation. Process-to-Sheet will add a validated **Qty Mode** column
+and must preserve the mode through Send/Retrieve. Existing definitions without
+the new field read as `FIXED` and are never rewritten.
+
+The expanded proposal also adds `RequirementQtyMode` with `FIXED` and
+`ACTUAL`. A variable input is shown as **Variable -- determined at Check In**:
+it has no planned Qty, Percent, or Batch basis; the operator selects compatible
+external stock through the existing external-only palette and commits the
+positive measured amount by exact `System_Key` at Check In. That committed
+amount is the auditable input fact; Actual Output does not calculate it and no
+mass balance is introduced. Whole-EA validation remains mandatory.
+
+An `ACTUAL` input is external-only in Release 1. Recipe release rejects an
+incoming routed connection to it, which preserves both the current read-only
+routed-input display and the non-negotiable exact routed commitment. The
+already-proposed `ACTUAL` output can still supply a fixed downstream
+requirement when its measured actual is sufficient. Variable routed input is a
+separate future contract, not an implicit hybrid.
+
+D13 scope after approval: public Process Designer Add/Update/Save/Release and
+Send/Retrieve handlers must show RED then GREEN for fixed compatibility,
+variable save/reopen, variable worksheet round trip, fractional-EA rejection,
+rejection of variable numeric yield fields and percentage routes; variable
+input external Check In/refresh/reopen; rejection of a routed variable input;
+and a variable routed-output run that blocks below commitment then consumes the
+exact actual-output `System_Key` at a sufficient actual. Package scope is
+Operations and Designs Domain schema/query/projection authority.
 
 ### Remaining Release 1 work recorded at the user checkpoint
 

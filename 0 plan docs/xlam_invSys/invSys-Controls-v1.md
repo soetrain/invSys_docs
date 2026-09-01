@@ -768,7 +768,7 @@ visible scrollbar and retained **Qty** header. The deployed-package operator
 drag-resize retest remains the only outstanding visible evidence for this
 layout refinement.
 
-### Production actual-output regulation: approved controls contract; implementation pending
+### Production actual-output regulation: implementation in progress
 
 Slice 4az adds a planned sixth `mpProduction` page, **Production Settings**.
 It will present draft-only Process and Recipe scopes so an operator can select
@@ -785,7 +785,39 @@ ceiling remains an upper bound. Thus a configured `600–610 LB` range alongside
 a `610 LB` routed requirement permits only a compliant actual at or above 610;
 no form control will silently turn a 605-LB exact key into 610 LB or derive an
 input/output mass balance. This section records the approved contract only;
-controls and handler evidence are not yet implemented.
+The **Production Settings** page now includes a locked, scrollable **How to
+use** instruction box. It explicitly directs Process-default editing to a
+DRAFT Process in **Process Designer**, Recipe-override editing to a DRAFT
+Recipe with its Process nodes in **Recipe Designer**, and the required Save
+Draft/Release path. It also states that **Production Run** reads a released
+Recipe version only: loading or selecting a Process there cannot modify its
+settings or an active run. Recipe-node selection remains stable after an
+override is applied or inspected. Packaged form-action and full production
+chain evidence remain required before this control contract is accepted.
+
+### Slice 4ba -- variable Process quantity controls: approved contract; implementation pending
+
+This approved contract adds **Output Qty mode** to the Process Output editor with two
+choices: **Enter a number** for the existing fixed-yield path, and **Variable
+-- determined by Actual Output** for an indeterminate output. In the variable
+mode the Qty, Yield %, and Yield basis entries are locked/blank; the existing
+Production Run **Actual Output** field is required at completion and becomes
+the exact quantity created under the new `System_Key`. The Process worksheet
+adds a **Qty Mode** list dropdown with the same two persisted values, preserving
+the mode on Send/Retrieve. This proposed control does not authorize worksheet
+history import or a mass-balance calculation, and cannot alter a released
+Process/Recipe or active run.
+
+The same approved contract adds **Input Qty mode** with **Enter a number** and
+**Variable -- determined at Check In**. Variable inputs lock/blank Qty,
+Percent, and Batch basis. At Check In, the operator uses the existing
+external-stock palette to choose compatible stock and commits the measured
+positive amount by expanded exact `System_Key`; the palette remains external
+stock only. A variable input cannot receive a Recipe route in Release 1, so
+**Inventory Check** remains read-only for every routed intermediate and no
+unplanned routed consumption is introduced. The worksheet **Qty Mode**
+dropdown applies to INPUT and OUTPUT rows and preserves these choices on
+Send/Retrieve.
 
 ### Shipping status/message resizing: packaged correction GREEN; visible retest pending
 
