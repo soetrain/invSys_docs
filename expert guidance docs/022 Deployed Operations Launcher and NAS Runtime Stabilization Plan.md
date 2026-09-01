@@ -3316,6 +3316,49 @@ detail-profile capability/configuration boundaries, Action Path correctness,
 filtering/freshness, exact-key visibility, and no regressions to current
 Events/list export. No implementation is authorized by this proposal.
 
+### Slice 4bf -- clean SharePoint/GitHub/NAS deployment, automatic update, and rollback: proposed; awaiting explicit approval
+
+This proposal preserves Architecture v4.11's five-package deployment and the
+rule that no XLAM is built, copied, replaced, registered, or rolled back while
+Excel has any invSys package or relevant operator workbook open. It introduces
+no live deployment behavior until Architecture v4.11, the controls catalog, and
+this plan are explicitly approved.
+
+The proposed release model is an immutable five-package release directory with
+one manifest containing package name, version, SHA-256, build commit, and
+compatibility metadata. SharePoint/NAS publication would copy a fully verified
+release into a new directory, retain the prior releases, then atomically move a
+small current-release pointer only after all files/hashes are present. GitHub
+remains source/review authority; SharePoint/NAS distribution never replaces a
+Git commit, source export, or code-review record. No package release contains
+warehouse data, auth/config, inbox/outbox, user credentials, or operator
+workbook state.
+
+The proposed station updater runs only before Excel loads invSys or after all
+Excel processes have exited. It verifies the selected release manifest/hashes,
+copies the complete set into a station-local versioned cache, retains the last
+known-good complete set, and then changes only the account-scoped Excel startup
+registration/pointer. It must fail closed and preserve the active known-good
+set if a package, manifest, hash, write, or registration check fails. It never
+updates a loaded XLAM in place, never edits an authority workbook, and emits
+only redacted local diagnostics.
+
+The proposed rollback selects one retained previously verified release, again
+only with Excel closed, validates its full manifest, repoints the station to
+that complete set, and records the reason/time/version locally. Rollback is a
+package/runtime rollback only: it never rolls back processed inventory events,
+warehouse snapshots, designs, config/auth data, or an operator workbook.
+
+Approval must decide the update trigger and user experience: (1) notify and
+apply at the next Excel start, (2) automatically apply at the next Excel start
+without an operator prompt, or (3) an Administrator-approved station action.
+It must also choose the release-retention count, whether an independent
+bootstrap launcher is acceptable, the rollback authorization/capability, and
+the definitive SharePoint/NAS release-root layout. A later D13 slice must first
+prove RED/GREEN for incomplete-release rejection, hash mismatch, Excel-open
+deferral, full five-package update, rollback, Operations/Admin registration
+order, and canonical-workbook hash non-mutation before any real deployment.
+
 ### Remaining Release 1 work recorded at the user checkpoint
 
 The user identified the following work as required before Release 1 acceptance.
