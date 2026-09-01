@@ -3235,6 +3235,41 @@ gating, Viewer event header/list alignment, and ribbon placement. Expected
 package scope is Operations plus the existing Production event builder; Core
 and Domain contracts remain headless and do not gain a Viewer write path.
 
+### Slice 4bd -- two-computer / two-warehouse Aggregator physical acceptance: approved; environment preflight pending
+
+This slice performs the existing Architecture v4.11 physical UAT; it does not
+change Aggregator, inventory, or global-snapshot authority. The documented
+package contract is already GREEN through the isolated 10/10 proof. The
+physical acceptance requires two real Windows/Excel computers and **two
+distinct NAS-backed warehouse runtime roots**, with distinct WarehouseId and
+station identity. Two station rows inside one warehouse configuration, or a
+historical local `C:\\invSys\\...` configuration, do not satisfy this proof.
+
+Before the visible run, each station must prove the current five-package
+manifest is installed, Server Sign In reaches its own runtime root, Send To
+selects only its own warehouse, and invSys Sign In identifies its own station.
+Each warehouse then receives/processes/publishes a small approved test receipt
+under its own exact new System_Key. HQ runs aggregation only after both
+published snapshots are present. The Global Inventory Snapshot must visibly
+identify itself as advisory/read-only and retain each WarehouseId and each
+distinct System_Key; it must never alter either source warehouse.
+
+The final catch-up step receives/processes/publishes an additional approved
+quantity at only one warehouse, reruns HQ aggregation, and proves the changed
+warehouse advances while the other warehouse remains unchanged. Evidence must
+record package versions, the two redacted station identifiers, the two
+WarehouseIds, source snapshot timestamps/hashes, both global-snapshot values,
+and an explicit local-authority unchanged check. It is local runtime evidence
+only and must be redacted/ignored by Git. The proof harness must write a failed
+`Harness.Exception` check for any automation fault; an incomplete report is
+not GREEN.
+
+2026-09-01 read-only NAS preflight found one NAS-backed `WH1` target with two
+station entries and a separate historical `WH80` configuration rooted at
+`C:\\invSys\\WH80`; therefore no second connected warehouse root is currently
+available for this physical UAT. Do not repurpose either target or create a
+live warehouse without the operator's explicit staging approval.
+
 ### Remaining Release 1 work recorded at the user checkpoint
 
 The user identified the following work as required before Release 1 acceptance.

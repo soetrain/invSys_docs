@@ -64,7 +64,14 @@ snapshot. It preserves distinct same-SKU entities rather than merging them by
 SKU. The packaged two-isolated-warehouse proof is 10/10 GREEN, including a
 same-warehouse catch-up from 8 to 11 while the other warehouse remains 5. This
 does not constitute visible acceptance on two physical computers; that Release
-1 checkpoint remains open.
+1 checkpoint remains open. The 2026-09-01 read-only NAS preflight found one
+NAS-backed `WH1` target with two station entries, while the only separate
+`WH80` configuration remains rooted at local `C:\\invSys\\WH80`; it is not a
+second connected warehouse. Physical Aggregator acceptance therefore requires
+explicit staging of a second NAS-backed warehouse root and a second Windows/
+Excel station. The approved UAT sequence and evidence boundary are Plan 022
+Slice 4bd; it must retain WarehouseId/System_Key distinction and mark the
+global snapshot advisory/read-only.
 
 ### Demo Inventory lifecycle: packaged GREEN; seed/delete visibly accepted
 
