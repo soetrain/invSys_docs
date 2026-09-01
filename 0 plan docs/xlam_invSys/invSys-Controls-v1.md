@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.46 (Slice 4bb contract approved; implementation in progress)
+**Version:** 1.47 (Production Slice 4ax-4bb user accepted; Slice 4bc Production portion accepted)
 
 **Inventory date:** 2026-08-31
 
@@ -737,7 +737,7 @@ status and repaint before persistence starts. Excel-native Saving windows cannot
 be moved into a UserForm and may still appear during required NAS saves; invSys
 does not suppress required durability merely to hide Office progress UI.
 
-### Production resizing: responsive Run List packaged GREEN; visible retest pending
+### Production resizing: responsive Run List user accepted
 
 `frmProduction` maximized its native window while the MultiPage and child
 controls remained near their base dimensions in the upper-left corner. The
@@ -780,7 +780,7 @@ visible scrollbar and retained **Qty** header. The deployed-package operator
 drag-resize retest remains the only outstanding visible evidence for this
 layout refinement.
 
-### Production actual-output regulation: implementation in progress
+### Production actual-output regulation: user accepted
 
 Slice 4az adds a planned sixth `mpProduction` page, **Production Settings**.
 It will present draft-only Process and Recipe scopes so an operator can select
@@ -807,7 +807,7 @@ settings or an active run. Recipe-node selection remains stable after an
 override is applied or inspected. Packaged form-action and full production
 chain evidence remain required before this control contract is accepted.
 
-### Slice 4ba -- variable Process quantity controls: implementation in progress
+### Slice 4ba -- variable Process quantity controls: user accepted
 
 This approved contract adds **Output Qty mode** to the Process Output editor with two
 choices: **Enter a number** for the existing fixed-yield path, and **Variable
@@ -1413,7 +1413,11 @@ Refresh and Process selection, show **WAITING UPSTREAM** before upstream
 completion and **READY** only afterward, keep routed inputs read-only and out
 of **Acceptable Inventory For Run**, and retain the exact input/output keys,
 co-product balance, UOM-grouped **Used Goods**, and correlated Viewer Events
-through Final Bottling.
+through Final Bottling. On 2026-09-01 the operator explicitly accepted the
+Production scope as complete enough; that acceptance closes the outstanding
+Production-visible checkpoint while preserving the separate Aggregator,
+comprehensive Viewer, deployment, and historical-analysis work recorded in
+Plan 022.
 
 Slice 4aw automated acceptance recorded 2026-08-30: **View Process** distinguishes
 an immutable loaded definition from **Edit as New Version**. The latter keeps

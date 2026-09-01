@@ -2921,7 +2921,7 @@ the isolated same-handler Slice 4aw proof and the Release 1 regressions are
 GREEN. Visible correction and completion of the operator's bottling Process
 remain open.
 
-### Slice 4ax -- Routed intermediate visibility and full multi-Process acceptance
+### Slice 4ax -- Routed intermediate visibility and full multi-Process acceptance: user accepted
 
 The 2026-08-30 visible checkpoint selected the final mixed-UOM bottling Process
 and found that its connected upstream concentrate was absent from **Acceptable
@@ -3019,7 +3019,7 @@ Return redacted screenshots of the initial waiting state, both routed-input
 checks, final output/co-product state, Viewer Events, and the unchanged
 Recipe/version/Run/Batch context.
 
-### Slice 4ay Production Run - List responsive readability: packaged GREEN; visible retest pending
+### Slice 4ay Production Run - List responsive readability: user accepted
 
 The user reported that **Inventory Check** and **Selected Process
 Instructions** were too short, that vertical form resize gave all additional
@@ -3068,7 +3068,7 @@ and expanded captures visibly show both the vertical scrollbar and the retained
 header. This is presentation-only and retains the earlier two-batch and Chai
 handler GREEN results.
 
-### Slice 4az Actual-output regulation and tolerance: implementation in progress
+### Slice 4az Actual-output regulation and tolerance: user accepted
 
 The observed Chai run correctly rejected `605 LB` where the routed downstream
 commitment is `610 LB`; that exact-key sufficiency rule remains mandatory.
@@ -3114,7 +3114,7 @@ Operations plus Designs Domain schema/projection authority. A user actively
 rebuilding a Recipe must first release a new version; an existing active run is
 never altered, cleared, or restarted by this feature.
 
-### Slice 4ba -- variable Process quantity modes: implementation in progress
+### Slice 4ba -- variable Process quantity modes: user accepted
 
 Certain Process outputs are indeterminate until production measures them. Add
 versioned `OutputQtyMode` with `FIXED` (current behavior) and `ACTUAL`
@@ -3165,7 +3165,7 @@ routed `ACTUAL` requirements remain release-rejected. Focused source and public
 packaged form-action GREEN are recorded; the dedicated actual-input run and
 worksheet round-trip acceptance cases remain required before slice completion.
 
-### Slice 4bb -- external-stock UOM conversion: approved; implementation in progress
+### Slice 4bb -- external-stock UOM conversion: user accepted
 
 The Citrus Oil Production checkpoint released a Recipe whose requirements and
 output are `OZ`, while selected external stock remains physically held in `LB`.
@@ -3200,7 +3200,7 @@ disabled, cross-dimension, `EA`, and `CS` conversions. Expected packages:
 Core/Inventory configuration authority and Operations Production; Designs
 definitions are not rewritten.
 
-### Slice 4bc -- Production batch notes and Viewer clarity/export: approved; implementation in progress
+### Slice 4bc -- Production batch notes and Viewer clarity/export: Production portion user accepted; Viewer remains in Release 1 scope
 
 This user-approved Release 1 slice corrects the visible external-stock UOM
 pairing and completes a bounded operator usability improvement without changing
