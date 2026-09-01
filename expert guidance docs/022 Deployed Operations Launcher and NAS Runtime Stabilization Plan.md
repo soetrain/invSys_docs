@@ -3200,6 +3200,41 @@ disabled, cross-dimension, `EA`, and `CS` conversions. Expected packages:
 Core/Inventory configuration authority and Operations Production; Designs
 definitions are not rewritten.
 
+### Slice 4bc -- Production batch notes and Viewer clarity/export: approved; implementation in progress
+
+This user-approved Release 1 slice corrects the visible external-stock UOM
+pairing and completes a bounded operator usability improvement without changing
+inventory authority. In **Acceptable Inventory For Run**, both paired columns
+use native-first order: **Stock / Requirement UOM** and **Native / Requirement
+Available**. Their header geometry must remain readable at default/minimum and
+responsive sizes.
+
+Production Run - List adds one optional **Batch Note** for the active Recipe
+version/RunId/batch. It is editable until that batch's first Check In, then
+frozen and retained through Refresh and Process navigation. Each production
+consume/create event for that batch preserves the same note as correlated audit
+detail. Next Batch and Clear Run start a distinct blank note. It is not a
+quantity calculation, route override, or authority-write shortcut.
+
+Operations renames the operator-facing **Inventory Viewer** to **Viewer** and
+moves **invSys Sign In** directly to the right of **Runtime Context**. Viewer
+keeps its current Inventory and Events read-only projections, fixes Events
+headers to calculated list-column geometry, and adds **ListBox->Table**. The
+operator enters a declared currently open list-box name and clicks **Export
+ListBox to Table** to write its already loaded visible rows/headings to a new
+worksheet table. The action does not refresh, process, write NAS authority, or
+expose hidden/internal columns. A declared Admin list resolves only for an
+authenticated Administrator.
+
+D13 scope: first observe focused RED through the same Production public Check
+In/Complete handlers for note freeze/Refresh/event detail and through the
+packaged Viewer/ribbon callbacks for label/order/export geometry. GREEN must
+prove native-first UOM pairing, note retention and event correlation, an
+Operations list export with headings/no hidden key, Admin-source capability
+gating, Viewer event header/list alignment, and ribbon placement. Expected
+package scope is Operations plus the existing Production event builder; Core
+and Domain contracts remain headless and do not gain a Viewer write path.
+
 ### Remaining Release 1 work recorded at the user checkpoint
 
 The user identified the following work as required before Release 1 acceptance.

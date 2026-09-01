@@ -976,8 +976,8 @@ relax routed Recipe-edge compatibility.
 - A released requirement and output retain their declared UOM. At Production
   allocation, compatible external stock in a different UOM is eligible only
   through enabled catalog rows sharing one Dimension. The palette visibly shows
-  **Requirement UOM**, **Stock UOM**, native availability, and converted
-  requirement-UOM availability. The operator enters Requirement UOM; invSys
+  **Stock / Requirement UOM** and **Native / Requirement Available**, in that
+  same native-first order. The operator enters Requirement UOM; invSys
   calculates native stock quantity without rounding before exact-key allocation.
 - Each allocation/consumption event preserves the source entity's immutable
   `System_Key`, native consumed quantity/UOM, requested requirement
@@ -1256,6 +1256,13 @@ Each Recipe version declares:
   planned/scaled and operator-entered actual quantities, UOM, location,
   condition, persistence summary, and processor visibility. The processor
   remains the only canonical inventory writer.
+- Each active Recipe version/RunId/batch has one optional **Batch Note**. The
+  operator may set it before that batch's first Check In; the first Check In
+  freezes the exact text for that batch. Every production input-consume and
+  output-create event for the batch carries that frozen note as correlated
+  audit detail. Refresh and Process navigation retain it; Next Batch and Clear
+  Run begin a distinct blank note. The note neither changes quantities nor
+  relaxes output-regulation, UOM, route, or exact-key rules.
 - Published operator Events label the resulting inventory actions as
   **Production Input Consumed** and **Production Output Created**, with
   Recipe/Process/run references. Design save/release/obsolete history remains
@@ -1379,10 +1386,10 @@ End Sub
 **UI:** Core owns one runtime-built `frmItemSearch`. Receiving, Shipping, Production, and Admin select role-aware columns/default filters when opening it. Empty role-named form copies are prohibited. Search keys remain normalized (SKU, name, alt codes).
 **Performance:** Target sub-second results for thousands of rows on standard warehouse PCs.
 
-### Inventory Viewer (Release 1)
+### Viewer (Release 1)
 **Goal:** Give a signed-in operator an at-a-glance, read-only view of current local inventory levels without opening Receiving, Production, or Shipping.
 **Authority:** The Operations Viewer is a projection only. It reads the current published warehouse inventory snapshot on explicit refresh, reports its freshness, and never writes, repairs, processes, or refreshes an authority workbook.
-**UI:** The Operations ribbon exposes **Inventory Viewer** to every signed-in user. Its resizable modeless form supports local search and displays item code, item name, UOM, quantity, location, and condition. Repeated launch reuses the same form instance for the selected warehouse.
+**UI:** The Operations ribbon exposes **Viewer** to every signed-in user. Its resizable modeless form supports local search and displays item code, item name, UOM, quantity, location, and condition. Repeated launch reuses the same form instance for the selected warehouse. Its Events headers use the same calculated column geometry as its list, so each heading is readable and exactly aligned with its displayed values.
 **Current Events scope:** The R1 Viewer may expose a bounded, read-only Events page sourced from the published snapshot projection. Explicit Refresh must replace its visible rows with the newest published projection without processing or mutating authority data. The page reports meaningful operator control actions, not backend mechanics that merely occur while carrying out an action. Operator-facing **Shipment Held** rows represent actual Hold actions/currently held shipments only. The internal `SHIP_RESERVE` event written by an ordinary Shipping Add is staging/reservation machinery, not evidence that the operator used Hold, and must not be rendered as **Shipment Held**. Shipping **Remove** remains visible because it records an operator-requested release of locked inventory even though its inventory delta is zero.
 Production inventory actions are visible as **Production Input Consumed** and
 **Production Output Created**. Their details identify the correlated Recipe,
@@ -1393,7 +1400,18 @@ Adjustment**. Their reference/details retain the selected SKU, reason, and exact
 entity evidence while the retired entities remain absent from active Inventory
 levels and managed-item pickers.
 **Current Events filters:** On first use, the R1 Events page defaults to **All** published dates. On explicit Refresh, an operator may apply a rolling **Day** (1-day), **Week** (7-day), **Month** (30-day), or typed positive whole-number-of-days window; the date window combines with the existing local text search and never applies to the Inventory page. Custom values are bounded to 1-36500 days. Each valid applied range is remembered per Windows user and restored when the Viewer is opened again, including after an Excel restart; an invalid persisted value falls back to **All**. The preference is local UI state and is never written to warehouse authority data. These convenience filters operate on the loaded read-only projection and do not add processing or write authority.
-**Future comprehensive Event Viewer:** After R1, design a comprehensive cross-domain Event Viewer for durable receipt, disposition, design, boxing, production, reservation, release, shipment, and administrative history. Its later design must define canonical event coverage, readable time-zone-aware timestamps, correlation/reference detail, filters, pagination or bounded history, export, retention, capability rules, and freshness indicators before implementation. The bounded R1 Events page is not the authority or a substitute for that design.
+**Viewer list export:** The Viewer includes a **ListBox->Table** tab. The
+operator enters the name of a currently open, declared list box and clicks
+**Export ListBox to Table**. Viewer resolves that named visible list surface and
+writes its currently loaded displayed rows, visible column headings, and values
+to a new worksheet table. It never refreshes a projection, reads or writes
+warehouse authority, includes hidden identity/internal columns, or implies that
+an exported sheet is managed inventory. The entry may name a declared Viewer,
+Receiving, Production, or Shipping/Boxing list surface, so it is not tied to
+one operation. A declared Admin list surface resolves only for an authenticated
+Administrator. The export is a user-requested copy of the existing operator
+projection, not an Admin action or a history/archive facility.
+**Future comprehensive Event Viewer:** After R1, design a comprehensive cross-domain Event Viewer for durable receipt, disposition, design, boxing, production, reservation, release, shipment, and administrative history. Its later design must define canonical event coverage, readable time-zone-aware timestamps, correlation/reference detail, filters, pagination or bounded history, retention, capability rules, and freshness indicators before implementation. The bounded R1 Events page and its displayed-list export are not the authority or a substitute for that design.
 
 ---
 ## Monitoring and Alerts (Release 1)

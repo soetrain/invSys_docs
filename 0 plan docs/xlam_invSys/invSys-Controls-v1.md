@@ -720,6 +720,11 @@ preference convention and restored when a new Viewer form opens, including in a
 later Excel session. Invalid stored text falls back to **All**. This preference
 never enters Config, Inventory, Snapshot, or another warehouse workbook.
 
+**Slice 4bc amendment:** Viewer now has a third native page, **ListBox->Table**;
+the former two-tab-only statement is superseded. Event headers are rebuilt from
+the same calculated widths as the Events list. The ribbon and form caption say
+**Viewer**, not **Inventory Viewer**.
+
 Receiving, Returns, Production, and Shipping now render a form-owned pending
 status and repaint before persistence starts. Excel-native Saving windows cannot
 be moved into a UserForm and may still appear during required NAS saves; invSys
@@ -1202,6 +1207,17 @@ Ribbon entry: Operations > Overview > **Inventory Viewer**. It is visible
 without a role capability restriction, while its action requires a signed-in
 invSys session and selected warehouse.
 
+**Slice 4bc control amendment:** The displayed ribbon/form name is **Viewer**.
+`tabsInventoryViewer` has **Inventory**, **Events**, and **ListBox->Table**.
+The third page exposes `lblExportListBox` -- **ListBox name**,
+`txtExportListBox`, and `btnExportListBox` -- **Export ListBox to Table**. The
+operator enters a declared name of an open Viewer/Receiving/Production/
+Shipping/Boxing list box. The action writes only that list's currently
+displayed headings and values to a new worksheet table. Hidden/internal columns,
+authority refresh/process/write, and export of a declared Admin list without
+Administrator authentication are prohibited. Events headings use the list's
+calculated column geometry and remain readable/aligned during resize.
+
 | Control | Type / displayed text | Purpose |
 |---|---|---|
 | `tabsInventoryViewer` | Tabs — **Inventory**, **Events** | Switches between the current inventory-level projection and the read-only event/activity projection. |
@@ -1335,22 +1351,21 @@ current Process/Recipe designer lists use the exact IDs recorded in section
 | Recipe loader | `lstLoaderRecipes`, header-backed `lstLoaderLines` labelled **Multi-Process Run Plan**, `btnLoaderRefresh`, `btnLoaderLoad`, `btnLoaderClear` | Selects an exact released Recipe version and shows the complete validated Process graph/execution order with Process, line type, requirement/output name, scaled Qty, %, UOM, and textual Status. Status keeps **! INSUFFICIENT**, **NEEDS ALLOCATION**, **WAITING UPSTREAM**, **READY**, and **COMPLETE** visible for the whole Recipe while one Process is selected. |
 | Batch scaling | `txtBatchScalePercent`, `btnApplyBatchScale` | Applies a List-run batch scale from `0.001%` through `1000%`; `100%` preserves the released recipe quantities. |
 | Target-output scaling stub | disabled `chkRunTargetOutputScale`, disabled `cmbRunTargetOutput`, disabled `txtRunTargetOutputQty` | Displays **Scale from target output Qty (coming later)** without calculating or changing Recipe/run state in Slice 4ar. |
-| Run inputs | `cmbRunProcess`, `cmbRunLocation`, `txtPaletteSplit`, `txtPaletteQty`, `btnRunApplyPalette` | Selects the one Process to allocate, Check In, and complete at a time, plus its run location. Applies either percent-of-requirement or explicit quantity to the selected external inventory requirement. Connected intermediate requirements become runnable only after their upstream Process output exists under its exact run key. Unresolved inputs belonging only to another Process do not block the selected Process. |
-| Palette | `lstRunPalette` | Lists owning **Process**, ingredient requirement, acceptable managed stock, requirement %, allocated quantity, UOM, summed available inventory, and location while retaining hidden node/requirement and representative entity identities. One row represents one SKU/UOM/Location/Condition bucket, not one receipt. Apply expands it into exact-key allocations. At least eight ordinary result rows are visible at the approved default and minimum form sizes. |
+| Run inputs | `cmbRunProcess`, `cmbRunLocation`, `txtPaletteSplit`, `txtPaletteQty`, `btnRunApplyPalette`, `txtRunBatchNote` -- **Batch Note** | Selects the one Process to allocate, Check In, and complete at a time, plus its run location. Applies either percent-of-requirement or explicit quantity to the selected external inventory requirement. Connected intermediate requirements become runnable only after their upstream Process output exists under its exact run key. Unresolved inputs belonging only to another Process do not block the selected Process. Batch Note is optional, freezes at the first Check In for the Recipe/version/RunId/batch, and is carried as correlated event detail. |
+| Palette | `lstRunPalette` | Lists owning **Process**, ingredient requirement, acceptable managed stock, requirement %, allocated quantity, **Stock / Requirement UOM**, **Native / Requirement Available**, and location while retaining hidden node/requirement and representative entity identities. The paired UOM/availability values use the same native-first order and their headings remain readable while resizing. One row represents one SKU/UOM/Location/Condition bucket, not one receipt. Apply expands it into exact-key allocations. At least eight ordinary result rows are visible at the approved default and minimum form sizes. |
 | Run instructions | header-backed `lstRunInstructions` | Shows **Step / Instruction** for the selected Process throughout allocation, Check In, and completion. Instructions come from the pinned released Process version and are read-only in Production Run. |
 | Inventory check | `lstManagerCheck` | Lists external allocations plus read-only routed inputs. Every routed row identifies the downstream requirement, source Process/output, readable exact produced `System_Key`, committed quantity, UOM, and remaining balance; it is never selectable stock and survives Process selection, Refresh, and normal navigation in the active Recipe version/RunId/batch. At minimum geometry the compact audit/output bands remain scrollable, so rows are not discarded to fit the form. External rows continue to show exact allocation identity and current available inventory; insufficiency or staleness blocks Check In/completion. |
 | Outputs | `lstManagerOutput`, `txtOutputReal` -- **Actual Output** | For a reusable run, retains one row per completed batch/Process output plus the selectable active-batch row. Completed rows show **Last Actual**, Batch, **Used Goods**, cumulative **Process Total**, recall code, and their readable distinct new **System_Key**. Used Goods is a deterministic per-Process/batch grouped UOM summary such as `5 LB; 12 EA`, never a numeric sum of unlike units. Selecting an active output row loads its staged actual; editing Actual Output retains a positive per-output quantity. Complete Run requires every actual, creates managed inventory at that actual quantity, and rejects an actual smaller than routed downstream commitments. Legacy completion continues to use the same visible quantity field through its preserved path. |
 | Run actions | `btnManagerCheckIn`, `btnManagerApplyOutput`, `btnManagerRefresh`, `btnManagerNext`, `btnManagerPrint` | Checks exact inputs into the selected Process, completes that Process when its dependencies are READY, refreshes, advances after every Recipe Process completes, or prints recall data. **Complete Run** keeps event/processor work inside the shared quiet-UI boundary, creates every selected-Process output under its own new key, consumes routed intermediates by exact key, and appends correlated persistence feedback. Independent READY Processes may complete in either order; downstream Processes wait for their upstream output keys. |
-| Labels | Recipes, Multi-Process Run Plan, Process filter, Run Location, % of Requirement, Qty, Acceptable Inventory For Run, Inventory Check, Production Output, Actual Output | Identifies the page sections and generated headers. Exact identity remains visible in Inventory Check and Production Output but is hidden behind the Run stock-bucket projection. Output quantity columns display **Last Actual**, **Batch**, **Used Goods**, and **Process Total**. Run palette Inv and Inventory Check show **Utility** rather than a numeric balance for catalog Utility items. Normalized `EA` is whole-unit only throughout visible role flows; a fractional value is rejected rather than rounded. |
+| Labels | Recipes, Multi-Process Run Plan, Process filter, Run Location, % of Requirement, Qty, Acceptable Inventory For Run, Inventory Check, Production Output, Actual Output, Batch Note | Identifies the page sections and generated headers. Exact identity remains visible in Inventory Check and Production Output but is hidden behind the Run stock-bucket projection. Output quantity columns display **Last Actual**, **Batch**, **Used Goods**, and **Process Total**. Run palette Inv and Inventory Check show **Utility** rather than a numeric balance for catalog Utility items. Normalized `EA` is whole-unit only throughout visible role flows; a fractional value is rejected rather than rounded. |
 
-**Proposed Slice 4bb control contract — approval pending:** when an enabled,
-**Approval record:** user approved Slice 4bb; this contract is now in
-implementation and the preceding draft-status label is superseded.
+**Slice 4bb control contract — approved:** when an enabled,
+**Approval record:** user approved Slice 4bb; this contract is implemented.
 
 When an enabled same-dimension external-stock UOM conversion applies,
-`lstRunPalette` will add
-visible **Requirement UOM**, **Stock UOM**, **Native Available**, and
-**Available in Requirement UOM** labels/values. Selected stock retains its
+`lstRunPalette` adds visible **Stock / Requirement UOM** and
+**Native / Requirement Available** labels/values in the same native-first
+order. Selected stock retains its
 hidden exact `System_Key`; the allocation editor accepts Requirement UOM and
 does not relabel native stock as converted stock. Rows with no permitted
 conversion are visibly nonselectable with an explanatory status. The Production
