@@ -3359,6 +3359,42 @@ prove RED/GREEN for incomplete-release rejection, hash mismatch, Excel-open
 deferral, full five-package update, rollback, Operations/Admin registration
 order, and canonical-workbook hash non-mutation before any real deployment.
 
+### Slice 4bg -- historical inventory pattern/reorder worksheet workbench: proposed; awaiting explicit approval
+
+This is a proposal only. It must not alter the existing **Create Inventory
+Table** / **Upload Selected Inventory Table** contract, which remains the
+Admin catalog/event path for current managed inventory.
+
+The proposed historical workbench would add a distinct local worksheet/table
+family in the captured saved Admin workbook for pasted historical transactions
+and non-authoritative pattern analysis. Its required typed columns would be
+historical date, item code or source item text, UOM, signed quantity/direction,
+and source/reference; location, supplier/customer, category, cost, and notes
+would be optional. The table must visibly say **Historical Analysis -- Not
+Current Inventory**, never contain `System_Key`, never become an invSys managed
+inventory table, and never be selected by the existing Upload Selected
+Inventory Table action.
+
+The proposed Analyze action would write only local formulas/projections in the
+captured workbook: bounded date-range summaries, receipts/issues by source
+item/UOM/location, period demand/usage, lead-time/reorder inputs when present,
+and advisory reorder-pattern output. It must retain unlike UOMs as separate
+groups, tolerate unknown end-user columns, preserve pasted source data, and
+identify missing/invalid rows without mutating them. Its results are training
+and planning aids; they do not create catalog items, allocate stock, create
+events, affect on-hand/availability, update a warehouse snapshot, or call a
+processor.
+
+Approval must choose whether a history row may resolve an existing catalog item
+for display-only comparison, which period/frequency defaults are appropriate,
+the exact advisory reorder fields/formula, retention of local tables, and
+whether this surface belongs in the existing Add/Edit Inventory Items form or
+as a separately permission-gated Admin worksheet action. A later D13 slice
+must begin with public captured-workbook RED/GREEN proving table separation,
+no `System_Key`, no event/processor/canonical change, unknown-column
+preservation, mixed-UOM separation, analysis correctness, and safe handling of
+invalid history rows before any user-visible workbench implementation.
+
 ### Remaining Release 1 work recorded at the user checkpoint
 
 The user identified the following work as required before Release 1 acceptance.
