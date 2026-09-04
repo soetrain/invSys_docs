@@ -1,0 +1,383 @@
+invSys dev notes
+~~~~~~~~~~~~~~~~~~~~~~TOP SHELF~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- finish Aggregator, set up two warehouse on two computers the aggregator can aggregate
+- finish comprehensive Viewer that can thoroughly track User, level of detail can be customized in Admin settings, tracker can be used to map and show user how to use the system i.e. Action Path.
+- Recall codes need to be able to get to print, system may need to print some tags for warehouse.
+- SharePoint and GitHub need to be setup-cleaned up for easy use by users. an auto updater needs to be developed.
+- Pulling Sales and Expense for QuickBooks to match to inventory doesn't need to finished, Export and Import should be working.
+- some analytics tools, mainly reorder and output data, need some development, User needs to a way bring old data into the system to some pattern analysis going, usining the create a special table and the user adds to it method the Process creation system uses, which i like
+~~~~~~~~~~~~~~~~~~~~~~TOP SHELF~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~
+
+good Editing inventory is working now.
+
+- Add Inventory Items ribbon button name should be changed to Add/Edit Inventory Items.
+- Similar to creating Processes in Production, this form needs a way to create a table on the sheet for the user add or create a list of inventory to manage, and a way to upload the list/table.
+
+
+~~~~~~~~
+
+- "Recipe ID, version, and name are required." Process Designer seems to be working, i am now looking at the Recipe Designer.
+- i see Recipe ID needs to be automated before i can Save Draft or Release.
+- Version should also be automated, but the user needs to be able to edit the version if needed.
+~~~~~~
+
+- in the pic i selected OUTPUT, Name cell, then Production Search Tool opened. Expected behavior: Production Search Tool only opens on Acceptable Managed Item cells.
+- the pic also shows ID 001 is used twice. i chose to enter the OUTPUT first, and the ID changed to 001. Expected behavior: duplicates are never a problem, ID's stay unique as they need to be per row.
+~~~~
+
+Production Item Search picker opens for INPUT on the process table, but does not open for OUTPUT. Expected behavior: Production Item Search form opens for INPUT and OUTPUT record types.
+- 
+~~~~
+
+percent is found! success!
+
+- Requirement ID needs automation, it is an Ai created ID
+- opening search tool in Acceptable Managed Item's capability needs to be added. the old Search Item tool, popped open when clicking on a cell in the appropriate column, tabbing into the column or 'entering' from above to the cell below
+- need a way to add Acceptable Managed Item 2, Acceptable Managed Item 3, Acceptable Managed Item 4 etc... to the tables
+- Recipe UOM Catalog (in Settings form) keeps stored UOM list, so a dropdown should be used for the UOM column in the table.
+- Excel has long supported ctrl+click action to select many individual cells in a spreadsheet. Retrieve Selected Process should support people using ctrl-click to upload there Process tables to invSys.
+- pic 1 shows UOM catalog in Settings, pic 2 shows a mostly filled out Process table, validates the formula's are working.
+~~~~
+
+table posts to invSys Process Editor sheet, success. 
+
+1- there are no Item Codes for recipe items, recipe items are specified in Ingredients Assignment, so Item Code needs to be refactored, see number 5 in this list.
+2- Percent should be found by the formula added to the table 
+3- Design ID is an Ai added invSys code, it should be automatically created
+4- column Dropdowns should be used for Record Type, user selects from the dropdown options
+5- i see now looking at it, that instead of 'Edit Process on Sheet' & 'Retrieve Process from Sheet' being like an on/off switch, they need to be separated. Users will want to be able quickly move their recipes into the system. They may export there data from another system to a CSV file. They may then have to reformat their data, so Retrieve Process from Sheet can accept it. if they are reformatting a data dump, they will want to punch out lots of process tables and fiddle around till they get what they think they want. after, They begin retrieving the process table then ordering them in Recipe Designer. This design change allows users work on many process tables simultaneously. These Process tables need to expose Ingredient Assignment data if it exists too, these cell will need the column search tool.
+~~~~~~~~
+
+Upload Data Set success, Seed Demo Inventory seeded the sample into inventory management, success! accepted the sample and  but i do not it in the inventory viewer. pic 1 is current inventory. i am now trying to create a process. What is a 'Basis'? ID's should be automated, we were using a simple but effective Base-36 3 digit system.
+
+i can see the system could use a button to build process on the `Production.Operator.xlsm`. This button would have a unique name for the table to retrieve it, would put a table on the sheet that has a formula for calculating percent, e.g. 100lb sugar + 200lb flour + 11.2 lb baking powder + 300lb filtered water = 611.2 lb; so sugar is 16.4%, flour is 32.7%, baking powder is 1.8%, water is 49.1% = 100%. getting these numbers right allows the scaling system in Production Run to work. The Clicking the button again would retrieve the finished process from the sheet and delete the table. The user should be able to send the finished process to the sheet for editing, then retrieval back into invSys, if they need or want to.
+
+~~~~
+
+ok, i edited it a little bit, good?
+```txt
+/goal Achieve invSys Release 1 user acceptance under invSys Architecture v4.11 by preserving the working packaged Operations launchers and completed Seed, Receiving, Shipping, Boxing, and Viewer behavior; then resume and complete Plan 022 Slice 4 saved-workbook/NAS control acceptance, beginning with Production.
+
+Read AGENTS.md and every current specification, plan, controls-catalog, and handoff pointer.
+
+Treat the following Production redesign as a deliberate priority and contract change. Reconcile it with Architecture v4.11 and update the normative specification, Plan 022, and invSys-Controls-v1.md before implementing behavior that differs from the current contract.
+
+Redesign Production around reusable Processes:
+
+1. Recipe Builder allows the user to create, edit, save, release, obsolete, and reuse named Processes.
+2. A Recipe selects saved Processes and connects any individual Process output to compatible downstream input requirements. Multiple outputs from one Process may feed different later Processes or remain as finished/co-product inventory. The Recipe validates execution order, quantities, unresolved inputs, and circular dependencies.
+3. Each Process defines its inputs, one or more outputs, instructions, quantities/percentages, UOM, and ingredient requirements. Every Process must declare at least one output. Each output has its own item/design identity, quantity or yield basis, and UOM. Outputs are design definitions rather than permanent physical inventory rows; completing a Production run creates each produced output as managed inventory with its own new System_Key.
+4. Ingredients Assignment maps each ingredient requirement to acceptable managed item/SKU alternatives.
+5. Production Run - List resolves those acceptable alternatives against current inventory and allocates exact available System_Key entities for the run.
+6. Preserve batch scaling from 0.001% through 1000%, inventory sufficiency checks, exact-key consumption, output creation, persistence summaries, and event visibility.
+7. Production Run - Tree remains experimental and outside the current acceptance scope.
+8. Replace the existing Recipe Builder page with two operator-visible top-level pages:
+   - Process Designer — creates, edits, validates, saves, releases, obsoletes, and reuses Processes.
+   - Recipe Designer — selects Processes, connects outputs to downstream requirements, controls execution order, validates the complete recipe, and saves/releases/obsoletes Recipes.
+
+Use D13 test-first development through the same public callbacks and form handlers used by operators. Preserve packaged launcher reuse, captured-workbook binding, headless Core/Domain authority, and existing GREEN regressions.
+
+Complete visible Production workflow testing and polish after packaged evidence is GREEN.
+
+You have standing permission to close Excel whenever required for rebuilding or deployment.
+```
+~~~~
+
+
+
+
+
+
+
+
+
+It will inherit the verified state, pending visual notes, commits, and preserved user changes.
+
+~~~~~~~~~~~~~~~~~~~~~
+
+```txt
+Achieve invSys Release 1 user acceptance under invSys Architecture v4.11 by preserving the working packaged Operations launchers; diagnose and correct the Admin Seed Demo Inventory failure through the public ribbon callback modAdmin.Seed_DemoInventory with meaningful D13 RED/GREEN and required regression evidence; then resume and complete Plan 022 Slice 4 batched saved-workbook/NAS control acceptance.
+```
+where are we at with this currently stalled goal?
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Events Viewers seems to have caused error,
+***
+
+Microsoft Visual Basic
+
+Run-time error '384':
+
+A form can't be moved or sized while minimized or maximized
+
+***
+
+"mLayout.ApplyAnchoredLayout" in frmInventoryViewer
+
+
+Pic 1 shows contents of current Event Viewer. pic 2 shows last two entries. Event Viewer did not receive/update its list to show latest entries, which is what was expected.
+
+Also, add a note in the spec for the creation of a comprehensive Event Viewer, for later.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+mentioned onclick events, or because it was just implemented, nothing till events are performed.
+
+extracting logged data to Excel?
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Add button 4 Saving notices
+
+---------------------------
+Microsoft Excel
+---------------------------
+Shipments sent: 6. package(s).
+Boxes sent:
+- 6. 12-pack Chai Box v1
+Carrier: UPS
+Inbox EventID: NAXV2ESU-LM1Q-JAN7-BL6J-S6R611DWDPJ1
+Server inventory processed SHIP event: Processed=2; StagingReport=No local staged inbox rows.; BatchReport=Applied=2; SkipDup=0; Poison=0; RunId=RUN-WHT7025AE-INVENTORY-20260820120114-453175; EventPersistenceSaves=3; TimingMs=Total:50094;Batch:49258;Refresh:836
+
+Completed in 65,047 ms.
+00000 ms  Shipments Sent click start
+65055 ms  Shipments Sent backend call
+65055 ms  LoadShipmentState start
+65055 ms  LoadShipmentState active lines
+65094 ms  LoadShipmentState hold lines
+65094 ms  LoadShipmentState evict orphaned overlays
+65094 ms  LoadShipmentState update sync label
+65094 ms  Shipments Sent load shipment state
+65094 ms  LoadShippables start
+65098 ms  LoadShippables read local shippables
+65098 ms  LoadShippables preserve previous NAS text
+65098 ms  LoadShippables evict completed overlays
+65098 ms  LoadShippables render
+65098 ms  Shipments Sent reload canoni
+
+***
+
+Shipping Boxes list box showed correct locked, projected an NAS numbers, Success! Can those Saving Notices be moved to the message box instead of popping up many times?
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Shipping's Add button popped 5 Saving notices
+- Remove button 4 or 5 Saving notices
+- Update Row button 1 Saving notice
+- Return button no Saving notice
+- To Shipments button no Saving notice
+- Shipments Sent button 20 Saving notices,
+
+---------------------------
+Microsoft Excel
+---------------------------
+Shipments sent: 5. package(s).
+Boxes sent:
+- 5. 12-pack Chai Box v1
+Carrier: UPS
+Inbox EventID: TFN7NUTL-XVDB-TBVI-F988-6KU4NVUIHPSN
+Server inventory processed SHIP event: Processed=4; StagingReport=No local staged inbox rows.; BatchReport=Applied=4; SkipDup=0; Poison=0; RunId=RUN-WHT7025AE-INVENTORY-20260820110721-590716; EventPersistenceSaves=3; PublishWarning=\\100.84.136.19\invsyswh1\Plan022-R1-UAT-20260728-7025AE7B\WHT7025AE.invSys.Snapshot.Inventory.xlsb; TimingMs=Total:68086;Batch:58137;Refresh:0
+
+Completed in 84,113 ms.
+00000 ms  Shipments Sent click start
+84121 ms  Shipments Sent backend call
+84121 ms  LoadShipmentState start
+84121 ms  LoadShipmentState active lines
+84184 ms  LoadShipmentState hold lines
+84184 ms  LoadShipmentState evict orphaned overlays
+84184 ms  LoadShipmentState update sync label
+84184 ms  Shipments Sent load shipment state
+85594 ms  Shipments Sent refresh projected
+
+***
+
+good news controls seem to be working, bad news, times are really slow. Viewer shows inventory was deducted when Shipments Sent control was used, but Shipping form's Shipping Boxes list box continues to be trouble some, pic 1. You can see in the picture Shipping Boxes list box is not tracking inventory of Shippable boxes, bet the Viewer is.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Receiving form:
+- 18 times Saving popup popped during after clicking Confirm Writes, but was a success.
+- 16 or 17 times Saving popup popped during after clicking Confirm Disposition
+
+Shipping form:
+- Box Designer tab Component inventory is showing a lot of unexpected duplicates, pic 1
+- 3 times Saving popup popped during save of box
+- made some shippable boxes in Box Maker, worked! Saving popup popped a bunch of times
+- 9 times Saving popup popped in Shipping tab
+- pic 2, Clicking Add button in Shipping tab causes message,
+
+---------------------------
+Microsoft Excel
+---------------------------
+invSys table missing TOTAL INV/SHIPMENTS/ROW columns.
+
+Completed in 13 ms.
+00000 ms  CommitCurrentLine ADD start
+00000 ms  CommitCurrentLine resolved selected row/operator
+00013 ms  CommitCurrentLine backend call
+
+***
+
+Regarding the Saving popup's, if they need to be there, that is ok, but it would be preferred if they could be silenced.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Returning, Dumping, and Ref Concatenation all passed, Dispositions posted to Return Entries History. Success!
+- 18 times Saving popup popped during after clicking Confirm Disposition
+
+- in Receiving tab, pic 1 shows what i did, message "Receiving staging failed: Application-defined or object-defined error"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- selected DAMAGED items, chose 5 each to return, clicked Add Disposition, does not work, get message, "Inventory disposition staging failed: Application-defined or object-defined error"
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- pic 1, DAMAGED packing tape strip in the Return tab, total DAMAGED goods 150 in Return Item Results, in Return Entries History there are two entries, a BOL and a return number, these two are being added together. Expected behavior: a return removes inventory from the warehouse, so total inventory for DAMAGED Packing Tape Strip should be 100 not 150. pic show the same problem from the Inventory Viewer.
+
+- i see a need in Returns for a dropdown for the user to choose RETURN or DUMP, because sometimes bad inventory is not returned, it goes in the trash.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+- pic 1, Aggregate Received is showing the goods, good. but, it is not adding same items together. This list box used to tally same items and concatenate the BOL or PO's. this tool should keep items with different Conditions separated.
+
+- pic 2, Return Item Results list box should show Condition too.
+
+- pic 2, Return tab's tally and aggregate list boxes are still titled Received Tally, Aggregate Received and Receiving Entries History. Expected: Return Tally and Aggregate Returns and Return Entries History
+
+fyi:
+- four times a saving-popup appears when signing in
+- Confirm Writes Saving popup popped over 60 times before completing
+- 33 times Saving popup popped during Confirm Returns
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+- Delete Inventory and Seed Inventory worked! good. but, clicking 'Cancel' causes unneeded message,
+---------------------------
+invSys Admin
+---------------------------
+Seed inventory cancelled.
+---------------------------
+
+the message is misleading too, the delete and reseed worked, clicking cancel does not actually cancel anything so i think you can remove the cancel button at bottom right
+
+
+- pic 1, getting into Receiving i see Aggregate Received is not working, it should be listing and giving an accumulated total for items
+
+- Confirm Writes looks like it worked. i'll continue to observe its behavior.
+
+- a field is needed to report the condition of goods per BOL/PO, which reminds me, add a tab in Receiving for returning items. this comes a design question for you, items that are the same often need to be separated from each other for various reasons. invSys has simple divide system, where System Key allows many rows of the same item to be present in the managed items list, so Condition BAD is a bucket, but this is not the same as using Lot system. So what do you think is the best path for managing different status of items?
+
+- pic 2, shows Condition GOOD. This is an uneditable property, which is bad, this pic points back to the question of the best path to managing different status of items.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- A warehouse selection dropdown is needed in Admin too. Just like in Operations `.xlam`
+
+- elaborate how Delete Demo Inventory works. Does it delete the data set or does it delete demo inventory the tool adds to invSys?
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- still some rough edges to fix before getting into full testing. pic 1 show the top left serve message is not updating, it remains at ""Server: Connected - Send To invsys_Zenbook_WH", even though i have selected WHT7025AE. 
+
+- pic 2 shows is what the icon looks like after clicking it to sign out, it does not work, i was able to reach the invSys sign in form after clicking it, instead of receiving a prompt to log in to the server again. Expected behavior: Sign Out button signs the user out of the system and disconnects the user from the NAS, operator buttons grayed out and unusable till user signs in to the server again, Sign Out icon changed changes to Sign In icon. if user clicks invSys Sign In when disconnected from the server, they get a prompt telling them to connect to the NAS/server first. labeling needs improvement: invSys sign in & out should be labeled invSys Sign in and invSys Sign Out, server sign in & out should be labeled Server Sign In & Server Sign Out.
+
+- pic 3 shows that after some fiddling, i think i clicked Runtime Context, the Server message did update correctly. but, expected behavior is message updates whenever user selects a warehouse.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+Clicking connect server returned messages,
+
+---------------------------
+invSys Warehouse Target
+---------------------------
+Warehouse target could not be selected:
+invsys_Zenbook_WH | X1-PRO-AI | \\100.84.136.19\invSysWH1
+
+Connected - invsys_Zenbook_WH (ZenbookWH) at \\100.84.136.19\invSysWH1
+---------------------------
+
+and after selecting WHT7025AE,
+
+---------------------------
+invSys Warehouse Target
+---------------------------
+Warehouse target could not be selected:
+WHT7025AE | X1-PRO-AI | \\100.84.136.19\invsyswh1\Plan022-R1-UAT-20260728-7025AE7B
+
+Connected - invsys_Zenbook_WH (ZenbookWH) at \\100.84.136.19\invSysWH1
+---------------------------
+
+pic 1 shows message after connection, pic 2 shows message after selecting WHT7025AE (notice top left line "Server: Connected - Send To invsys_Zenbook_WH". Expected behavior is to change to WHT7025AE). pic 3 shows i cannot sign in to do any user side tests. problems may be related to adjustments in meaning of Station (whatever computer user is on) i.e. open and sign in to Excel --> goto invSys --> Station(computer or virtual machine) automatically found --> connect to server or NAS --> select Warehouse --> sign to invSys with User name and password, remembering to use the correct user name and password for the warehouse selected. Normally the user would be accessing the NAS from LAN, in this case X1-Pro-Ai Station/computer is not connected to the LAN so has to send and receive over an internet connection.
+
+whatever the case, i cannot log in to the warehouse.
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+ the three workbook filenames: `WHT7025AE.Receiving.Operator.xlsm`, `WHT7025AE.Production.Operator.xlsm`, `WHT7025AE.Shipping.Operator.xlsm`.
+
+- list box headers need to be aligned over their columns
+
+- Box builder tab's GUI is still scrunched (pic 1). pic 2, shows resizing the form causes serious visual problems, overlap, making form unusable. i think you should use a GUI layout similar to the Shipping tabs layout where list box goes across the whole form width, then other controls above and under the list boxes and message boxes. Name should be changed from Box Builder to Box Designer.
+
+-Seed Demo Inventory needs to seed shipping materials so boxes can be made.
+
+-"Admin	frmAdminDesignLifecycle	Active, runtime-generated	Design refresh/import/release/obsolete actions" this was added by Ai. it appears to be for managing recipes created using the production form. it has two buttons on the Admin ribbon: "Release Design" and "Obsolete Design", this needs to be reduced to one.
+
+***
+
+Station:
+station system i think should just grab the computers name as the station rather than creating a bespoke name. after connecting to the server the user would login to invSys like normal.
+	- 4.8 frmSeedInventory — Seed Demo Inventory: "lblStation, txtStation	Label and text box — Station	Supplies the station, defaulting to S1." <-- should get computer name instead.
+	- 5.2 frmWarehouseConnection — Connect Warehouse Storage: "Station	lblStation, cboStation, chkRequireStation, lblStationHelp	Selects station and controls whether a station inbox is mandatory." <-- should get computer name instead.
+
+***
+
+- "Shipping	frmBoxVersionSaveChoice	Active, runtime-generated	Choose update-versus-new version behavior" | old versions are deleted or archived. so its not so much about old vs new, its more about creating alternatives as needed. The word 'version' is being used differently than in computer software development, where version means latest release. here is means 'alternative' i.e. as flavors of soda at a pop machine.
+
+- 4.1 frmAddInventoryItem — Add/Edit Inventory Item: "btnAddMode	Button — Add Item	Selects add mode and clears add fields." two buttons named Add Item on this form, but only one of them adds items. change btnAddMode GUI name to Add Item Mode
+
+- 4.9 frmSetupTesterStation — Setup Tester Station <-- i don't understand the need for a tester station in invSys. This one was created by Ai too. it appears to be intended to run diagnostics on invSys or something, so maybe important. what do you think?
+
+7. Receiving forms <-- Receive item search needs its own list box so the user can see Header details when searching. User needs a way to set a location and optionally lot number too.
+
+8.4 Production Run - List page <-- Scaling tools are needed here so the user can change the size of the batch e.g. from 100% to .001% to 1,000% 
+
+8.5 Production Run - Tree page <-- Tree Page is an experimental alternative way to do inventory production runs, so ignore it for now. List style is the focus.
+
+10. Review checklist decisions
+	6. specific problems mentioned above. will focus on polishing GUI soon. current green is just being readable enough to do the work.
+
+
+You appear to understand what the controls are supposed to do. refactor according to above comments. complete any unfinished work according to the Goal. Wire in all the controls, i want to be able to start testing a full invSys workflow. if no question, proceed.
