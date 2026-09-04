@@ -173,14 +173,21 @@ logged into `jwj-nas-1` and installed the command launcher; target selection
 and invSys authentication remain separate required steps.
 
 **Slice 4bl Explorer-compatible remembered-root revalidation -- implemented;
-visible retry pending:** **Server Sign In** must not report a remembered NAS root
+visible UAT pending:** **Server Sign In** must not report a remembered NAS root
 unreachable solely because the WNet reconnect API fails when File Explorer has
 already established access to that same UNC folder. Core first performs direct
 folder validation under the current Windows session, then retains the existing
 credential/reconnect failure path if that validation fails. No visible role,
 target, or NAS-permission control changes. User-entered roots with accidental
 extra leading backslashes normalize to standard UNC form; protocol-prefixed
-text remains invalid. Focused D13 is GREEN at 5/5; visible retry pending.
+text remains invalid. The public **Scan Roots** button must discover visible
+Windows SMB server/share candidates before consulting the Root textbox, without
+opening a root or listing runtimes. The user selects a root, enters NAS
+credentials, presses **Connect**, and then receives only validated warehouse
+runtimes. A typed root is fallback only when no candidate is discoverable.
+Focused D13 is GREEN at 8/8; five-package compilation and Ribbon generation
+are GREEN. The visible Scan Roots -> Connect -> runtime-selection UAT remains
+pending.
 
 **Slice 4bk account-onboarding packet -- implemented; visible message review
 pending:** the existing `frmCreateDeleteUser.btnCopyPin` control is visibly

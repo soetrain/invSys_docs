@@ -87,6 +87,15 @@ validation fails, the existing reconnect and credential-recovery path remains
 fail-closed; this rule neither broadens NAS ACLs nor changes invSys roles.
 User-entered UNC roots normalize redundant leading backslashes to the canonical
 two-separator UNC form before validation; a protocol prefix remains invalid.
+The Core-owned **Server Sign In** connection form's **Scan Roots** action must
+discover candidate warehouse shares from the current Windows user's visible SMB
+server/share connections, before any root text is required. It presents the
+candidate roots without opening them or selecting a runtime. The operator then
+selects one root, enters Windows/NAS credentials, and uses **Connect**; only a
+successful connection scans and lists that root's warehouse runtimes for final
+selection. Discovery is read-only and does not reconnect, persist a credential,
+create a target, or grant an invSys role. A manually entered root remains an
+explicit fallback when Windows exposes no discoverable SMB server/share.
 
 **Admin user-onboarding packet:** Creating or updating an invSys user does not
 send email, provision a Windows/NAS account, or grant network access. The
@@ -427,7 +436,7 @@ warehouse with the same or similar WarehouseId.
 
 **Operator sign-in workflow:** `invSys.Operations.xlam` must allow a normal operator to work without loading `invSys.Admin.xlam`:
 1. **Server Sign In** on the Operations ribbon revalidates the remembered/current warehouse storage target and refreshes visible server status. It does not open the warehouse storage credential/selection form in normal Receiving, Shipping, or Production workflows unless Windows has no usable credential for the saved server root, or this Windows profile has no remembered NAS root at all.
-2. Storage credential/selection UI normally belongs in Admin/setup or Runtime Context troubleshooting. The first-use exception is an explicit Operations **Server Sign In** click with no remembered NAS root: it opens the same Core-owned connection form so a non-Admin operator can enter an authorized UNC root, scan it through the current Windows SMB session (or explicitly provide Windows/NAS credentials), and select one validated warehouse target. The form persists only the successful current-profile root/target through the existing Core API; it does not grant an invSys role, create or repair a warehouse, change another target, or treat a Windows/NAS identity as an invSys user. **Send To** remains available for an intentional later target change, and **invSys Sign In** remains separate. This is storage authority only.
+2. Storage credential/selection UI normally belongs in Admin/setup or Runtime Context troubleshooting. The first-use exception is an explicit Operations **Server Sign In** click with no remembered NAS root: it opens the same Core-owned connection form so a non-Admin operator can **Scan Roots**, select a discovered authorized UNC root, provide Windows/NAS credentials, connect, then select one validated warehouse runtime. A manually entered root is fallback only when Windows has no discoverable server/share. The form persists only the successful current-profile root/target through the existing Core API; it does not grant an invSys role, create or repair a warehouse, change another target, or treat a Windows/NAS identity as an invSys user. **Send To** remains available for an intentional later target change, and **invSys Sign In** remains separate. This is storage authority only.
 3. **invSys Sign In** authenticates the operator as an invSys user against the selected warehouse auth workbook. If no live server session and usable target are selected, invSys Sign In tells the operator to use Server Sign In and select storage first; it must not revive a remembered target or show NAS credentials as an invSys login.
 4. Ribbon labels show both server state (`Server: Connected ...` / `Server: Not connected`) and user state (`invSys Sign In` / `invSys Sign Out`). Windows, Office, and NAS account names must not be displayed as the invSys user.
 5. **invSys Sign Out** clears only the invSys user session/capability cache. It retains the current NAS/server session so another invSys user can authenticate without reconnecting Windows storage.
