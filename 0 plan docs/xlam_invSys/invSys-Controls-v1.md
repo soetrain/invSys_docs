@@ -98,6 +98,14 @@ after connection, are never saved in the source set, and the form never changes
 the normal Send To warehouse target. Physical two-server/two-computer UAT is
 still pending.
 
+### Curated Action Path storage: NAS-only contract locked; implementation pending
+
+Action Paths will be stored only under the selected warehouse NAS runtime root:
+`<WarehouseRuntimeRoot>\Training\ActionPaths\<WarehouseId>`. This is a
+non-authoritative training library, separate from inventory, events, designs,
+configuration/auth, inboxes, and outboxes. No SharePoint dependency is
+approved for the current Action Path implementation.
+
 ### Curated Action Path: approved; implementation pending
 
 Architecture D18 adds an **Action Path** tab to Viewer. Expected controls are

@@ -185,6 +185,13 @@ claiming that events occurred there. D13 must protect public Viewer and Admin
 handlers for selection/save/search/version-warning/export/import, capability
 denial, package validation, and unchanged event/inventory authority.
 
+**Storage contract:** the warehouse-scoped library root is the selected
+warehouse's NAS runtime root:
+`<WarehouseRuntimeRoot>\Training\ActionPaths\<WarehouseId>`. It contains only
+versioned Action Path JSON records and integrity metadata; it is not an
+inventory/event/design/config/auth/inbox/outbox authority path. The Viewer may
+read it for a signed-in user; only `ACTION_PATH_MAINT` may create a record.
+
 ### D19 -- Admin Event Projection Control and Archive-First Retention (R1 Locked)
 
 **Decision:** `AdminViewerEventLoggingEnabled` is a warehouse-scoped Config
