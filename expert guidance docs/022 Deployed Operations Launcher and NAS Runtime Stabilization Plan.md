@@ -3239,8 +3239,19 @@ and Domain contracts remain headless and do not gain a Viewer write path.
 
 This slice performs the existing Architecture v4.11 physical UAT; it does not
 change Aggregator, inventory, or global-snapshot authority. The documented
-package contract is already GREEN through the isolated 10/10 proof. The
-physical acceptance requires two real Windows/Excel computers and **two
+package contract is already GREEN through the isolated 10/10 proof. Before the
+physical run, `invSys.Admin.xlam` must expose the existing Admin XLAM command
+as an `ADMIN_MAINT`-gated **Aggregate Global Snapshot** action. It must use the
+selected warehouse configuration's `PathSharePointRoot`, write only the
+advisory/read-only global snapshot, record the administrative attempt, and
+give actionable setup guidance when the publish root or source snapshots are
+absent. It must not create, alter, or select a warehouse runtime root.
+The access control introduces three Admin procedures (public Ribbon handler,
+authorized action, and published-snapshot preflight); this is the explicit
+Slice 4bd maintenance exception. Static rescanning must show no new dynamic
+call or unresolved-call paths.
+
+The physical acceptance requires two real Windows/Excel computers and **two
 distinct NAS-backed warehouse runtime roots**, with distinct WarehouseId and
 station identity. Two station rows inside one warehouse configuration, or a
 historical local `C:\\invSys\\...` configuration, do not satisfy this proof.

@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.47 (Production Slice 4ax-4bb user accepted; Slice 4bc Production portion accepted)
+**Version:** 1.48 (Production Slice 4ax-4bb user accepted; Slice 4bc Production portion accepted; Slice 4bd Admin Aggregator command in progress)
 
 **Inventory date:** 2026-08-31
 
@@ -72,6 +72,14 @@ explicit staging of a second NAS-backed warehouse root and a second Windows/
 Excel station. The approved UAT sequence and evidence boundary are Plan 022
 Slice 4bd; it must retain WarehouseId/System_Key distinction and mark the
 global snapshot advisory/read-only.
+
+The Admin ribbon must expose the existing `ADMIN_MAINT`-gated **Aggregate
+Global Snapshot** command before the physical checkpoint. The command is an
+operational entry point for the existing Aggregator service, not a new source
+of inventory authority: it uses the selected warehouse configuration's
+`PathSharePointRoot`, writes only the advisory global snapshot, and reports
+missing configuration or published snapshots with setup guidance. It does not
+create, change, or select a warehouse runtime root.
 
 ### Demo Inventory lifecycle: packaged GREEN; seed/delete visibly accepted
 
