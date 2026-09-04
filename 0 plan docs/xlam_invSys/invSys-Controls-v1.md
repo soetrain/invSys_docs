@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.56 (Production Slice 4ax-4bb user accepted; Slice 4bd connected-server Aggregator UX correction in progress; Slice 4be curated Action Path approved; Slice 4bf deployment accepted; Slice 4bi first-use NAS onboarding and Slice 4bj NAS station setup in progress)
+**Version:** 1.57 (Production Slice 4ax-4bb user accepted; Slice 4bd connected-server Aggregator UX correction in progress; Slice 4be curated Action Path approved; Slice 4bf deployment accepted; Slice 4bi first-use NAS onboarding in progress; Slice 4bj NAS station setup packaged GREEN)
 
 **Inventory date:** 2026-08-31
 
@@ -146,7 +146,8 @@ hash-verified cache/leaf registration, elevated task installation, successful
 on-demand task run, and clean Excel startup all completed without a Git
 checkout or a warehouse-runtime-root deployment path.
 
-**Slice 4bj NAS station-setup contract -- approved, implementation in progress:**
+**Slice 4bj NAS station-setup contract -- implemented; visible clean-user
+acceptance pending:**
 the publisher-controlled NAS deployment share will expose a stable
 **StationSetup** script that a permitted Windows user can run without browsing
 GitHub or selecting individual XLAMs. It retrieves the current immutable
@@ -164,6 +165,11 @@ For ordinary Windows use, the same NAS feed root exposes
 bootstrap with process-scoped execution-policy bypass so a network-share
 script is not rejected before verification; it contains no credentials and
 does not alter the server, selected target, or capability controls.
+Focused station-setup D13 is GREEN at 9/9 (including a temporary NAS
+feed-to-local-cache/leaf-registration run), D16 regression is 18/18 GREEN,
+and the ordinary NAS command launcher physically applied
+`R1-20260904-977d2a2` to this station. A second Windows user must still
+complete the visible installation and sign-in sequence.
 
 ### Demo Inventory lifecycle: packaged GREEN; seed/delete visibly accepted
 
