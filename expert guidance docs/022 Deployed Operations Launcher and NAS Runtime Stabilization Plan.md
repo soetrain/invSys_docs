@@ -3235,7 +3235,7 @@ gating, Viewer event header/list alignment, and ribbon placement. Expected
 package scope is Operations plus the existing Production event builder; Core
 and Domain contracts remain headless and do not gain a Viewer write path.
 
-### Slice 4bd -- two-computer / two-warehouse Aggregator physical acceptance: approved; environment preflight pending
+### Slice 4bd -- superseded single-server physical-UAT wording (see approved 2026-09-03 amendment below)
 
 This slice performs the existing Architecture v4.11 physical UAT; it does not
 change Aggregator, inventory, or global-snapshot authority. The documented
@@ -3281,7 +3281,7 @@ station entries and a separate historical `WH80` configuration rooted at
 available for this physical UAT. Do not repurpose either target or create a
 live warehouse without the operator's explicit staging approval.
 
-### Slice 4be -- comprehensive Event Viewer, detail profiles, and Action Path: proposed; awaiting explicit approval
+### Slice 4be -- superseded proposal wording (see approved 2026-09-03 amendment below)
 
 This is a proposal only. It must not change the existing read-only **Viewer**,
 its bounded R1 **Events** projection, its list export, or any event payload
@@ -3326,6 +3326,62 @@ with public packaged Viewer/Admin/role-handler RED proving read-only authority,
 detail-profile capability/configuration boundaries, Action Path correctness,
 filtering/freshness, exact-key visibility, and no regressions to current
 Events/list export. No implementation is authorized by this proposal.
+
+**2026-09-03 approved amendment — this replaces the conflicting proposal
+language above.**
+
+**Slice 4bd** is now **multi-server Aggregator source selection and physical
+two-warehouse proof: approved; implementation pending**. Architecture D17
+supersedes the single-current-server restriction without changing warehouse
+authority. `invSys.Admin.xlam` will add an `ADMIN_MAINT` aggregation source-set
+form reachable from **Aggregate Global Snapshot**. It discovers warehouses
+readable through the current server connection, lets the user add another
+authenticated NAS/server connection for that session, and selects published
+snapshots to aggregate. It visibly explains selected/skipped/rejected sources
+and leaves the normal Send To target unchanged.
+
+The public action copies/reads only selected published snapshots, validates
+source identity/freshness/compatibility, rejects ambiguous duplicate
+WarehouseIds, and writes an advisory output to the designated existing output
+feed. It never opens source authority for writing, creates a warehouse, or
+stores server credentials. One-source aggregation remains the default when the
+form is not used. D13 begins with packaged Admin form/action RED for current
+and additional-server discovery, selection, duplicate/rejection explanation,
+source-authority non-mutation, and exact WarehouseId/System_Key preservation.
+Only then may physical UAT use two distinct NAS-backed roots and two
+Windows/Excel stations.
+
+**Slice 4be** is now **comprehensive Viewer and curated Action Path: approved;
+implementation pending**. Architecture D18 approves a versioned curated
+training path, not either former captured-control or derived-control model.
+Viewer remains read-only for inventory/event authority. An `ACTION_PATH_MAINT`
+user selects currently visible Events in intended order, supplies
+name/tags/instructions, and saves a non-authoritative Action Path library
+record. Any signed-in Viewer user can search/read published paths. It is never
+executable automation or a claim that selected events occurred at an import
+target.
+
+Action Path shows origin, version, selected-event availability, and a
+non-blocking release/schema age warning. Export/import uses a hashed,
+versioned JSON training package with no credentials, workstation paths, or
+authority data; import assigns a new local identity and preserves origin so a
+fake warehouse can rehearse instructions safely. Admin detail profiles remain
+read-only rendering configuration and require a whitelisted, versioned Config
+contract. D13 begins with public Viewer/Admin handler RED for event
+selection/save, search/version warning, export/import validation, capability
+denial, unchanged authority, current Events/list-export regressions, and
+package restart. Visible acceptance requires create/search/staleness/import
+evidence.
+
+**Slice 4bh — Admin Viewer-event projection control, archive-first retention,
+and save-feedback diagnosis: approved; implementation pending.** Architecture
+D19/D20 lock the default-on `AdminViewerEventLoggingEnabled` setting as a
+Viewer-noise control only: it cannot suppress canonical audit/security or
+authority records. A separate `ADMIN_MAINT` Data Lifecycle surface begins with
+inspection and hashed archive creation for explicitly non-authoritative
+collected data; automatic/destructive retention is disabled. Save notices are
+diagnosed by owner before invSys-owned routine feedback is changed; invSys never
+changes Windows/NAS-client/global Office notification policy.
 
 ### Slice 4bf -- clean SharePoint/GitHub/NAS deployment, automatic update, and rollback: implemented; physical deployment UAT passed
 

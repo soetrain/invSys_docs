@@ -52,6 +52,10 @@
 station-distribution feed is the configured SharePoint team-library Addins root:
 `<PathSharePointRoot>\Addins`. Its release layout is:
 
+GitHub XLAM download and repository cloning are developer-only acquisition
+paths. They are not supported operator installation, update, or rollback
+mechanisms; workstations consume only a verified D16 feed/cache.
+
 ```text
 <PathSharePointRoot>\Addins\
   current-release.json
@@ -116,6 +120,99 @@ while an Excel process is running. D13 must prove incomplete-release rejection,
 hash-mismatch rejection, Excel-open deferral, complete five-package update,
 automatic known-good restoration, manual rollback, Operations/Admin leaf
 registration order, and byte-for-byte non-mutation of authority workbooks.
+
+### D17 -- Multi-Server Advisory Aggregation Source Set (R1 Locked)
+
+**Decision:** The existing single-target **Aggregate Global Snapshot** command
+remains valid, but an `ADMIN_MAINT` user may instead open an Admin aggregation
+source-set form. The form lists only warehouses whose runtime configuration and
+published snapshot are readable through the current authenticated NAS/server
+connection. The user may add another server connection in the same form, then
+select accessible warehouses from that server too. Credentials are supplied to
+the existing Windows storage connection flow only for the current session;
+they are never stored in an aggregation source, configuration, export, event,
+or log.
+
+A source set is session-scoped and explicit: it contains a server endpoint
+descriptor, WarehouseId, published snapshot path/freshness/hash, and selection
+state. It never changes the current operational `Send To` warehouse target,
+authenticates an invSys user, creates a runtime, or makes a remote warehouse
+authoritative. Aggregation copies and reads only selected published snapshots,
+rejects an unreadable/stale/incompatible source and duplicate WarehouseId with
+different source identity, and writes its advisory result only to the
+designated existing aggregation output feed. The source-set form must visibly
+show selected, skipped, and rejected sources with reasons.
+
+The result remains a read-only advisory projection. It preserves every source
+WarehouseId and exact `System_Key`, never merges entities merely by SKU, and
+cannot write inventory, events, designs, configuration/auth, inbox/outbox, or
+operator workbooks on any source server. Two-PC/two-warehouse UAT remains a
+separate proof: two selected sources must be distinct NAS-backed warehouse
+runtimes and station identities. D13 must begin with public Admin-form/action
+RED for current-server discovery, additional-server discovery, selection
+validation, duplicate/source rejection, read-only aggregation, and source
+authority non-mutation.
+
+### D18 -- Curated Action Paths and Viewer Event Projection (R1 Locked)
+
+**Decision:** An Action Path is a user-authored, versioned training record, not
+a macro, automation trace, audit assertion, or substitute for a procedure.
+From the read-only Viewer Events projection, a user with `ACTION_PATH_MAINT`
+may select visible events in an intended sequence and save a named Action Path.
+Any signed-in Viewer user may search and read published Action Paths. No Action
+Path action executes a control, opens an authority workbook, processes an
+inbox, or records backend calls, hidden controls, credentials, workbook paths,
+or `Application.Run` details.
+
+An Action Path has immutable `ActionPathId`, origin WarehouseId, name, integer
+version, lifecycle status, author/time, search tags, human instructions, and
+the ordered selected-event references needed to explain the workflow. It also
+records the producing invSys release/package-set compatibility and schema
+version. Viewer compares that compatibility with the current session and shows
+a non-blocking **older version** warning when the training record predates the
+current supported version. Selected event records are referenced, never
+rewritten or augmented; missing/pruned event detail is shown as unavailable,
+not fabricated.
+
+Action Paths are stored in a non-authoritative, warehouse-scoped training
+library separate from inventory/design/config/auth/event authority. Export is
+a self-contained, versioned JSON training package with integrity hash and no
+secrets or workstation paths. Import validates the package, creates a new local
+ActionPathId with provenance to the exported identity, and permits a test/fake
+warehouse to rehearse the human instructions without importing inventory or
+claiming that events occurred there. D13 must protect public Viewer and Admin
+handlers for selection/save/search/version-warning/export/import, capability
+denial, package validation, and unchanged event/inventory authority.
+
+### D19 -- Admin Event Projection Control and Archive-First Retention (R1 Locked)
+
+**Decision:** `AdminViewerEventLoggingEnabled` is a warehouse-scoped Config
+setting, default `True`, controlling only whether eligible non-inventory Admin
+tool activity is included in the Viewer Events projection. It never suppresses
+canonical processor events, security/audit entries, inventory/design changes,
+authorization failures, or required operational evidence. The Admin Settings
+surface must state that this is a Viewer-noise control, not an audit switch.
+
+Release 1 retention is archive-first and disabled by default. An
+`ADMIN_MAINT` Data Lifecycle tool may inspect counts/size/age and create a
+hashed, manifest-backed archive package for selected derived Viewer snapshots,
+Action Path versions, and other explicitly non-authoritative collected data.
+No automatic or manual R1 tool may delete, compact, rewrite, or silently
+truncate canonical inventory/event/design/config/auth authority. A future
+canonical retention policy requires its own approved duration, legal hold,
+restore, verification, and destructive-action contract. Archive operations are
+audited and must preserve unknown user columns where applicable.
+
+### D20 -- Save Feedback and Notification Ownership (R1 Locked)
+
+**Decision:** invSys will not modify Windows notification policy, registry-wide
+toast settings, NAS-client notification settings, or global Office settings as
+a product behavior. Before changing feedback, D13 diagnosis must distinguish
+an invSys `MsgBox`/form/status message from an operating-system or sync-client
+notification. invSys-owned routine save-success feedback may be replaced by a
+bounded form/status surface; errors, confirmations, and required warnings stay
+explicit. External notifications are documented with their detected owner and
+left under the workstation administrator's control.
 
 ---
 ## Progress Tracking (v4.11)

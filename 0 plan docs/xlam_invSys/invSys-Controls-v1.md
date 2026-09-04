@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.51 (Production Slice 4ax-4bb user accepted; Slice 4bc Production portion accepted; Slice 4bd Admin Aggregator command in progress; Slice 4bf deployment tooling and physical UAT passed)
+**Version:** 1.52 (Production Slice 4ax-4bb user accepted; Slice 4bd multi-server Aggregator and Slice 4be curated Action Path approved for implementation; Slice 4bf deployment accepted)
 
 **Inventory date:** 2026-08-31
 
@@ -80,6 +80,35 @@ of inventory authority: it uses the selected warehouse configuration's
 `PathSharePointRoot`, writes only the advisory global snapshot, and reports
 missing configuration or published snapshots with setup guidance. It does not
 create, change, or select a warehouse runtime root.
+
+### Multi-server Aggregator source set: approved; implementation pending
+
+Architecture D17 adds an `ADMIN_MAINT` source-set form to the existing
+**Aggregate Global Snapshot** command. Expected controls are a current-server
+warehouse list, **Add Server**, additional-server source lists, selected-source
+list, advisory output summary, and aggregate/cancel actions. The form is
+session-only: it uses current Windows storage connections, never stores NAS
+credentials, and never changes the normal Send To warehouse target. It reads
+published snapshots only and visibly marks rejected/skipped sources.
+
+### Curated Action Path: approved; implementation pending
+
+Architecture D18 adds an **Action Path** tab to Viewer. Expected controls are
+selected-Events summary, path name/tags/instructions, **Save**, path search and
+results, version/compatibility warning, **Export**, and capability-gated
+**Import**. The tab is a non-authoritative training library: it does not run
+macros, write selected event records, or import inventory. `ACTION_PATH_MAINT`
+is required for save/import/export; signed-in Viewer users may search/read
+published paths.
+
+### Admin Viewer-event projection and data lifecycle: approved; implementation pending
+
+Admin Settings will expose `AdminViewerEventLoggingEnabled` with wording that
+it controls only eligible non-inventory Admin activity in Viewer, never audit
+or authority records. A separate `ADMIN_MAINT` Data Lifecycle surface will
+inspect size/age/count and create hashed archives of explicitly
+non-authoritative collected data. Automatic/deletion retention controls are not
+approved for Release 1.
 
 ### Automatic update and rollback: tooling and physical UAT passed
 
