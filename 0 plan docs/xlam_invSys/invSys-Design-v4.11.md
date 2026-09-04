@@ -85,6 +85,8 @@ root by direct folder validation before attempting a WNet reconnect. A WNet
 error alone must not make an Explorer-proven root appear unreachable. If direct
 validation fails, the existing reconnect and credential-recovery path remains
 fail-closed; this rule neither broadens NAS ACLs nor changes invSys roles.
+User-entered UNC roots normalize redundant leading backslashes to the canonical
+two-separator UNC form before validation; a protocol prefix remains invalid.
 
 **Admin user-onboarding packet:** Creating or updating an invSys user does not
 send email, provision a Windows/NAS account, or grant network access. The

@@ -178,7 +178,9 @@ unreachable solely because the WNet reconnect API fails when File Explorer has
 already established access to that same UNC folder. Core first performs direct
 folder validation under the current Windows session, then retains the existing
 credential/reconnect failure path if that validation fails. No visible role,
-target, or NAS-permission control changes. Focused D13 is GREEN at 4/4.
+target, or NAS-permission control changes. User-entered roots with accidental
+extra leading backslashes normalize to standard UNC form; protocol-prefixed
+text remains invalid. Focused D13 is GREEN at 5/5; visible retry pending.
 
 **Slice 4bk account-onboarding packet -- implemented; visible message review
 pending:** the existing `frmCreateDeleteUser.btnCopyPin` control is visibly
