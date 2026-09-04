@@ -79,6 +79,13 @@ contains no credentials and does not weaken the independently enforced NAS ACL,
 release/hash validation, Excel-closed rule, invSys authentication, or capability
 checks.
 
+**Explorer-compatible NAS revalidation:** When a remembered UNC root is already
+reachable through the current Windows/Explorer SMB session, Core accepts that
+root by direct folder validation before attempting a WNet reconnect. A WNet
+error alone must not make an Explorer-proven root appear unreachable. If direct
+validation fails, the existing reconnect and credential-recovery path remains
+fail-closed; this rule neither broadens NAS ACLs nor changes invSys roles.
+
 **Admin user-onboarding packet:** Creating or updating an invSys user does not
 send email, provision a Windows/NAS account, or grant network access. The
 Admin **Copy Account & Setup** action may place a human-deliverable packet on
