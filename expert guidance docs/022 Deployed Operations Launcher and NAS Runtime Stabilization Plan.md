@@ -3327,7 +3327,7 @@ detail-profile capability/configuration boundaries, Action Path correctness,
 filtering/freshness, exact-key visibility, and no regressions to current
 Events/list export. No implementation is authorized by this proposal.
 
-### Slice 4bf -- clean SharePoint/GitHub/NAS deployment, automatic update, and rollback: implemented; physical deployment UAT pending
+### Slice 4bf -- clean SharePoint/GitHub/NAS deployment, automatic update, and rollback: implemented; physical deployment UAT passed
 
 This approved slice implements Architecture v4.11 D16 without changing the
 five-package/headless package boundary or warehouse/domain authority. No XLAM
@@ -3410,10 +3410,12 @@ five-package build was published as immutable release `R1-20260903-ad53c52` to
 the separate NAS deployment share's D16 Addins feed; its canonical warehouse
 runtime root was not used. With Excel closed, this station hash-verified the
 feed, cached the release, and repointed only Operations/Admin startup entries.
-The local verified station agent was staged. Windows denied creation of the
-scheduled task from this non-elevated session, and read-only verification found
-no task created. Complete physical UAT therefore remains pending one elevated
-task-installation run and a next-Excel-session visible load check.
+The local verified station agent was staged. The user then installed the
+logon/15-minute `invSys.StationUpdate` task from an elevated session. Read-only
+verification proved it enabled with both triggers and an existing local agent
+updater, an on-demand scheduled run returned `0x00000000` with `APPLIED`
+status for the release, and a clean Excel startup loaded both cached Operations
+and Admin add-ins. The verification Excel instance was closed afterward.
 
 ### Slice 4bg -- historical inventory pattern/reorder worksheet workbench: proposed; awaiting explicit approval
 
