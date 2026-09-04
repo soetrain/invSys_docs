@@ -3405,6 +3405,13 @@ changes Windows/NAS-client/global Office notification policy.
 
 **Slice 4bj -- NAS self-service station setup: approved; implementation in progress.** A user must not obtain an individual XLAM from GitHub to start invSys. The NAS deployment feed will publish a stable **StationSetup** entry point that resolves the current immutable release, validates all five packages against its manifest, installs them side-by-side in the user's local cache, and registers the Operations/Admin startup leaves only when Excel is closed. It may offer periodic-updater registration but must work without it. The entry point is read-only against warehouse data and requires no existing warehouse target or invSys identity; it uses NAS access only to read publisher-controlled deployment files. The post-install path remains Server Sign In -> target selection -> invSys Sign In. Create New Warehouse remains visible/reachable only after a real `ADMIN_MAINT` sign-in and is additionally constrained by current Windows/NAS write permission; setup access is not an authorization grant. D13 begins with public station-setup RED for NAS-only acquisition, release/hash completeness, cache/registration handoff, Excel-open deferral, no Git/warehouse-authority writes, and capability-gated warehouse creation. GREEN requires focused tooling, package compile/Ribbon, D16 regression, static maintenance, and visible clean-user installation evidence.
 
+The feed-root `Install-invSys-Station.cmd` wrapper is the ordinary-user entry
+point. It starts the publisher-controlled NAS bootstrap with a process-scoped
+PowerShell execution-policy bypass so Windows does not reject a network-share
+`.ps1` before it can perform the existing release/hash checks. It contains no
+credential or authority logic and cannot substitute NAS access for invSys
+authentication or `ADMIN_MAINT`.
+
 ### Slice 4bf -- clean SharePoint/GitHub/NAS deployment, automatic update, and rollback: implemented; physical deployment UAT passed
 
 This approved slice implements Architecture v4.11 D16 without changing the

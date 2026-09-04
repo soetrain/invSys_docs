@@ -159,6 +159,12 @@ Admin **Create New Warehouse** control remains capability-gated by
 `ADMIN_MAINT`; Windows/NAS path permission is an additional required boundary,
 not a substitute for invSys authorization.
 
+For ordinary Windows use, the same NAS feed root exposes
+`Install-invSys-Station.cmd`. The wrapper launches the StationSetup PowerShell
+bootstrap with process-scoped execution-policy bypass so a network-share
+script is not rejected before verification; it contains no credentials and
+does not alter the server, selected target, or capability controls.
+
 ### Demo Inventory lifecycle: packaged GREEN; seed/delete visibly accepted
 
 `frmSeedInventory` displayed and its public callback reported one applied

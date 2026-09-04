@@ -71,6 +71,14 @@ the known-good local registration. The deployment share is publisher-write /
 station-read; station setup never writes warehouse runtime, inventory, designs,
 configuration/auth, inbox/outbox, snapshots, or user credentials.
 
+The feed root also exposes a double-clickable `Install-invSys-Station.cmd`
+launcher for ordinary Windows users. It invokes the feed's StationSetup
+bootstrap in a process-scoped PowerShell execution-policy bypass, avoiding a
+local machine-policy prompt for a publisher-controlled NAS script. The wrapper
+contains no credentials and does not weaken the independently enforced NAS ACL,
+release/hash validation, Excel-closed rule, invSys authentication, or capability
+checks.
+
 After setup, the explicit Operations **Server Sign In** -> warehouse target ->
 **invSys Sign In** sequence remains binding. A Windows/NAS identity is not an
 invSys identity. **Create New Warehouse** remains an `ADMIN_MAINT` action for a
