@@ -3331,7 +3331,8 @@ Events/list export. No implementation is authorized by this proposal.
 language above.**
 
 **Slice 4bd** is now **multi-server Aggregator source selection and physical
-two-warehouse proof: approved; implementation pending**. Architecture D17
+two-warehouse proof: implementation in progress; isolated D13 GREEN; physical
+two-computer UAT pending**. Architecture D17
 supersedes the single-current-server restriction without changing warehouse
 authority. `invSys.Admin.xlam` will add an `ADMIN_MAINT` aggregation source-set
 form reachable from **Aggregate Global Snapshot**. It discovers warehouses
@@ -3350,6 +3351,22 @@ and additional-server discovery, selection, duplicate/rejection explanation,
 source-authority non-mutation, and exact WarehouseId/System_Key preservation.
 Only then may physical UAT use two distinct NAS-backed roots and two
 Windows/Excel stations.
+
+**2026-09-03 implementation record.** The public Admin callback now opens
+`frmAggregationSources`. The session-only form pre-fills a configured or known
+NAS root but does not scan it on open; the user explicitly chooses
+**Discover**, or supplies Windows credentials for **Connect + Discover**. A
+source is selectable only when its readable runtime `tblWarehouseConfig`, its
+configured published snapshot, and the snapshot WarehouseId agree. The form
+shows WarehouseId, server root, snapshot path, freshness, source fingerprint,
+READY state, selected-source count, and rejected/skipped state. It does not
+alter Send To. The Admin-to-Core call serializes the selected file list as a
+primitive envelope; Core reads only those files and records their source
+identity in the advisory output. D13 evidence: source-set contract 6/6 GREEN,
+updated Admin callback contract 3/3 GREEN, isolated Core/Admin build GREEN,
+explicit two-source `WarehouseId`/`System_Key` aggregation GREEN, and packaged
+form initialization GREEN. Physical two-server/two-computer UAT remains
+required before Slice 4bd acceptance.
 
 **Slice 4be** is now **comprehensive Viewer and curated Action Path: approved;
 implementation pending**. Architecture D18 approves a versioned curated

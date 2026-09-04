@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.52 (Production Slice 4ax-4bb user accepted; Slice 4bd multi-server Aggregator and Slice 4be curated Action Path approved for implementation; Slice 4bf deployment accepted)
+**Version:** 1.53 (Production Slice 4ax-4bb user accepted; Slice 4bd Aggregator source-set implementation in progress with isolated D13 GREEN; Slice 4be curated Action Path approved; Slice 4bf deployment accepted)
 
 **Inventory date:** 2026-08-31
 
@@ -81,15 +81,21 @@ of inventory authority: it uses the selected warehouse configuration's
 missing configuration or published snapshots with setup guidance. It does not
 create, change, or select a warehouse runtime root.
 
-### Multi-server Aggregator source set: approved; implementation pending
+### Multi-server Aggregator source set: implementation in progress; isolated D13 GREEN; physical UAT pending
 
-Architecture D17 adds an `ADMIN_MAINT` source-set form to the existing
-**Aggregate Global Snapshot** command. Expected controls are a current-server
-warehouse list, **Add Server**, additional-server source lists, selected-source
-list, advisory output summary, and aggregate/cancel actions. The form is
-session-only: it uses current Windows storage connections, never stores NAS
-credentials, and never changes the normal Send To warehouse target. It reads
-published snapshots only and visibly marks rejected/skipped sources.
+Architecture D17 adds `frmAggregationSources` to the existing `ADMIN_MAINT`
+**Aggregate Global Snapshot** command. The form presents a NAS-root field,
+**Discover**, Windows-user/password fields, **Connect + Discover**, a
+multi-select source list, selected-source count, rejected/skipped list,
+**Aggregate Selected Sources**, and **Close**. The source list displays
+WarehouseId, server root, published snapshot path, freshness, source
+fingerprint, and READY state. It pre-fills a known/configured root but does not
+scan on open. Discovery is read-only: only a readable runtime
+`tblWarehouseConfig`, its configured published snapshot, and a matching
+snapshot WarehouseId produce a selectable source. Credentials are cleared
+after connection, are never saved in the source set, and the form never changes
+the normal Send To warehouse target. Physical two-server/two-computer UAT is
+still pending.
 
 ### Curated Action Path: approved; implementation pending
 
