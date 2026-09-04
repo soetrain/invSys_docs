@@ -3353,9 +3353,10 @@ Only then may physical UAT use two distinct NAS-backed roots and two
 Windows/Excel stations.
 
 **2026-09-03 implementation record.** The public Admin callback now opens
-`frmAggregationSources`. The session-only form pre-fills a configured or known
-NAS root but does not scan it on open; the user explicitly chooses
-**Discover**, or supplies Windows credentials for **Connect + Discover**. A
+`frmAggregationSources`. The session-only form discovers currently connected
+and remembered NAS roots on open; the user does not re-enter credentials for an
+existing Windows connection. **Add Server** exposes Windows credentials only
+when an additional server is needed. A
 source is selectable only when its readable runtime `tblWarehouseConfig`, its
 configured published snapshot, and the snapshot WarehouseId agree. The form
 shows WarehouseId, server root, snapshot path, freshness, source fingerprint,

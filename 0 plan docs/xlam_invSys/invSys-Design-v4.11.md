@@ -125,9 +125,10 @@ registration order, and byte-for-byte non-mutation of authority workbooks.
 
 **Decision:** The existing single-target **Aggregate Global Snapshot** command
 remains valid, but an `ADMIN_MAINT` user may instead open an Admin aggregation
-source-set form. The form lists only warehouses whose runtime configuration and
-published snapshot are readable through the current authenticated NAS/server
-connection. The user may add another server connection in the same form, then
+source-set form. On open, the form discovers warehouses available through the
+already connected current and remembered NAS/server roots; it does not require
+the operator to re-enter credentials for an existing Windows connection. The
+user may explicitly choose **Add Server** for another server connection, then
 select accessible warehouses from that server too. Credentials are supplied to
 the existing Windows storage connection flow only for the current session;
 they are never stored in an aggregation source, configuration, export, event,

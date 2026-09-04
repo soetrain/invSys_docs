@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.53 (Production Slice 4ax-4bb user accepted; Slice 4bd Aggregator source-set implementation in progress with isolated D13 GREEN; Slice 4be curated Action Path approved; Slice 4bf deployment accepted)
+**Version:** 1.54 (Production Slice 4ax-4bb user accepted; Slice 4bd connected-server Aggregator UX correction in progress; Slice 4be curated Action Path approved; Slice 4bf deployment accepted)
 
 **Inventory date:** 2026-08-31
 
@@ -84,13 +84,14 @@ create, change, or select a warehouse runtime root.
 ### Multi-server Aggregator source set: implementation in progress; isolated D13 GREEN; physical UAT pending
 
 Architecture D17 adds `frmAggregationSources` to the existing `ADMIN_MAINT`
-**Aggregate Global Snapshot** command. The form presents a NAS-root field,
-**Discover**, Windows-user/password fields, **Connect + Discover**, a
+**Aggregate Global Snapshot** command. The form discovers currently connected
+and remembered NAS roots on open, has a refresh action, and exposes Windows
+user/password fields with **Connect + Discover** only after explicit **Add
+Server**. It also has a
 multi-select source list, selected-source count, rejected/skipped list,
 **Aggregate Selected Sources**, and **Close**. The source list displays
 WarehouseId, server root, published snapshot path, freshness, source
-fingerprint, and READY state. It pre-fills a known/configured root but does not
-scan on open. Discovery is read-only: only a readable runtime
+fingerprint, and READY state. Discovery is read-only: only a readable runtime
 `tblWarehouseConfig`, its configured published snapshot, and a matching
 snapshot WarehouseId produce a selectable source. Credentials are cleared
 after connection, are never saved in the source set, and the form never changes
