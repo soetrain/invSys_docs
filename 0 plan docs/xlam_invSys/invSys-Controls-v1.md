@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.48 (Production Slice 4ax-4bb user accepted; Slice 4bc Production portion accepted; Slice 4bd Admin Aggregator command in progress)
+**Version:** 1.50 (Production Slice 4ax-4bb user accepted; Slice 4bc Production portion accepted; Slice 4bd Admin Aggregator command in progress; Slice 4bf deployment tooling GREEN, physical deployment UAT pending)
 
 **Inventory date:** 2026-08-31
 
@@ -80,6 +80,23 @@ of inventory authority: it uses the selected warehouse configuration's
 `PathSharePointRoot`, writes only the advisory global snapshot, and reports
 missing configuration or published snapshots with setup guidance. It does not
 create, change, or select a warehouse runtime root.
+
+### Automatic update and rollback: tooling GREEN; physical deployment UAT pending
+
+Architecture D16 defines a five-package immutable release feed under the
+configured SharePoint Addins root, with an optional same-layout NAS mirror.
+The implemented publisher creates a hash-verified immutable release and only
+then advances `current-release.json`; the implemented station updater runs only
+with Excel closed, copies into a side-by-side local cache, and repoints only
+the Operations/Admin leaf registration. It automatically defers on an open
+Excel process and restores the prior registration/pointer if registration
+fails. Manual rollback requires a local Windows administrator, an explicit
+non-sensitive reason code, a retained hash-verified release, and closed Excel.
+It never rolls back inventory, designs, configuration/auth, snapshots, or
+operator workbooks. The task installer defaults to preview and requires
+`-Apply` to register the logon/15-minute updater. No new form or Ribbon control
+is introduced by this contract; physical SharePoint/NAS/station UAT remains
+open.
 
 ### Demo Inventory lifecycle: packaged GREEN; seed/delete visibly accepted
 

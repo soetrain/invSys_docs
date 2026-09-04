@@ -3327,48 +3327,75 @@ detail-profile capability/configuration boundaries, Action Path correctness,
 filtering/freshness, exact-key visibility, and no regressions to current
 Events/list export. No implementation is authorized by this proposal.
 
-### Slice 4bf -- clean SharePoint/GitHub/NAS deployment, automatic update, and rollback: proposed; awaiting explicit approval
+### Slice 4bf -- clean SharePoint/GitHub/NAS deployment, automatic update, and rollback: implemented; physical deployment UAT pending
 
-This proposal preserves Architecture v4.11's five-package deployment and the
-rule that no XLAM is built, copied, replaced, registered, or rolled back while
-Excel has any invSys package or relevant operator workbook open. It introduces
-no live deployment behavior until Architecture v4.11, the controls catalog, and
-this plan are explicitly approved.
+This approved slice implements Architecture v4.11 D16 without changing the
+five-package/headless package boundary or warehouse/domain authority. No XLAM
+may be built, copied, replaced, registered, or rolled back while any Excel
+process is open.
 
-The proposed release model is an immutable five-package release directory with
-one manifest containing package name, version, SHA-256, build commit, and
-compatibility metadata. SharePoint/NAS publication would copy a fully verified
-release into a new directory, retain the prior releases, then atomically move a
-small current-release pointer only after all files/hashes are present. GitHub
-remains source/review authority; SharePoint/NAS distribution never replaces a
-Git commit, source export, or code-review record. No package release contains
-warehouse data, auth/config, inbox/outbox, user credentials, or operator
-workbook state.
+The release model is an immutable five-package release directory under
+`<PathSharePointRoot>\Addins\Releases`, with `current-release.json` in the
+parent Addins root. A manifest records package name, package-set version,
+SHA-256, build commit, build time, and compatibility metadata. Publication
+verifies a complete new release before atomically changing the small pointer;
+it retains the current release plus two earlier verified releases. GitHub
+remains source/review authority; an optional NAS mirror preserves that exact
+release layout but is never inside a warehouse runtime root. No package release
+contains warehouse data, auth/config, inbox/outbox, user credentials, or
+operator workbook state.
 
-The proposed station updater runs only before Excel loads invSys or after all
-Excel processes have exited. It verifies the selected release manifest/hashes,
-copies the complete set into a station-local versioned cache, retains the last
-known-good complete set, and then changes only the account-scoped Excel startup
-registration/pointer. It must fail closed and preserve the active known-good
-set if a package, manifest, hash, write, or registration check fails. It never
-updates a loaded XLAM in place, never edits an authority workbook, and emits
-only redacted local diagnostics.
+The station updater is a Windows Task Scheduler job that runs at user logon and
+every 15 minutes, but only applies an update when Excel is closed. It verifies
+the selected release manifest/hashes, copies the complete set into a
+station-local versioned cache, retains the known-good complete set, and then
+changes only the account-scoped Operations/Admin leaf startup registration.
+It fails closed and preserves the active known-good set if a package, manifest,
+hash, write, or registration check fails. It never updates a loaded XLAM in
+place, never edits an authority workbook, and emits only redacted local
+diagnostics. The successful applied version is visible after the next invSys
+session starts; no interactive update prompt interrupts a user.
 
-The proposed rollback selects one retained previously verified release, again
-only with Excel closed, validates its full manifest, repoints the station to
-that complete set, and records the reason/time/version locally. Rollback is a
-package/runtime rollback only: it never rolls back processed inventory events,
-warehouse snapshots, designs, config/auth data, or an operator workbook.
+An update failure after staging automatically restores the last known-good
+release. A deliberate rollback is limited to a local Windows administrator,
+again only with Excel closed: it selects one retained previously verified
+release, validates its full manifest, repoints the station to that complete
+set, and records the reason/time/version locally. Rollback is a package/runtime
+rollback only: it never rolls back processed inventory events, warehouse
+snapshots, designs, config/auth data, or an operator workbook.
 
-Approval must decide the update trigger and user experience: (1) notify and
-apply at the next Excel start, (2) automatically apply at the next Excel start
-without an operator prompt, or (3) an Administrator-approved station action.
-It must also choose the release-retention count, whether an independent
-bootstrap launcher is acceptable, the rollback authorization/capability, and
-the definitive SharePoint/NAS release-root layout. A later D13 slice must first
-prove RED/GREEN for incomplete-release rejection, hash mismatch, Excel-open
-deferral, full five-package update, rollback, Operations/Admin registration
-order, and canonical-workbook hash non-mutation before any real deployment.
+The approved trigger is automatic application before the next Excel/invSys
+session without an operator prompt; the updater defers while Excel is open. It
+retains three complete releases, needs no independent bootstrap launcher, uses
+local Windows-administrator authorization for deliberate rollback, and uses the
+Architecture D16 SharePoint/NAS layout. D13 begins with RED/GREEN for
+incomplete-release rejection, hash mismatch, Excel-open deferral, full
+five-package update, automatic restore, manual rollback, Operations/Admin
+registration order, and canonical-workbook hash non-mutation.
+
+**Implemented interfaces.** `tools/publish_invsys_release.ps1` publishes an
+immutable release from a built `deploy/current` five-package set to the chosen
+SharePoint/NAS Addins feed using an explicit `ReleaseId`. It writes and verifies
+`Releases/<ReleaseId>/release-manifest.json` before atomically advancing
+`current-release.json`. `tools/update_invsys_station.ps1` is the unattended
+station action; it hash-verifies before side-by-side caching and invokes
+`tools/register_current_addins.ps1` only for the Operations/Admin leaf pair.
+`tools/register_invsys_update_task.ps1` displays the proposed task by default
+and creates the logon/15-minute task only with `-Apply`. A local Windows
+administrator uses `tools/rollback_invsys_station_release.ps1 -ReleaseId
+<retained-id> -ReasonCode <approved-code> -ConfirmRollback` with Excel closed.
+The reason code is constrained to a non-sensitive approved value. No script
+reads, writes, copies, or registers an inventory/design/configuration/auth or
+operator workbook.
+
+**D13 evidence (2026-09-03):** `Test-Slice4bfDeployment.ps1` was RED at 0/9
+before the tools existed, then GREEN at 16/16. Its isolated feed proves
+immutable manifest publication, Excel-open deferral, five-package hash
+verification, Operations/Admin-only registration, third-party add-in
+preservation, protected authority-workbook hash non-mutation, non-admin
+rollback refusal, tampered-release rejection, and prior leaf-registration/
+known-good-pointer restoration after injected registration failure. The
+existing five-package Slice 13 cutover regression remains GREEN at 14/14.
 
 ### Slice 4bg -- historical inventory pattern/reorder worksheet workbench: proposed; awaiting explicit approval
 

@@ -5,9 +5,6 @@
 **Author:** Codex  
 **Purpose:** Complete architectural specification for Release 1 (VBA/Excel only).
 
-# NAS/server:
-"C:\Users\Justin\OneDrive\Documents\invsys-scv.txt"
-
 ---
 ## Reference Links
 - `https://www.perplexity.ai/search/https-github-com-soetrain-invs-IL_KZ22YSsW5kMph4kOzxA?preview=1#7`
@@ -48,6 +45,68 @@
 - The normal operator path is a saved workbook (`.xlsm` or `.xlsb`) reopened under that shared XLAM session, not an unsaved transient `Book1`.
 - `Book1` / new-blank-workbook testing remains useful as a diagnostic stress case, but Phase 6 completion cannot be claimed from that path alone.
 - Phase 6 proving must explicitly cover four stages in order: one-account local use, multi-PC LAN use, LAN + WAN use, then central aggregation.
+
+### D16 -- Immutable Five-Package Deployment, Automatic Update, and Rollback (R1 Locked)
+
+**Decision:** GitHub remains invSys source and review authority. The approved
+station-distribution feed is the configured SharePoint team-library Addins root:
+`<PathSharePointRoot>\Addins`. Its release layout is:
+
+```text
+<PathSharePointRoot>\Addins\
+  current-release.json
+  Releases\
+    <ReleaseId>\
+      release-manifest.json
+      invSys.Core.xlam
+      invSys.Inventory.Domain.xlam
+      invSys.Designs.Domain.xlam
+      invSys.Operations.xlam
+      invSys.Admin.xlam
+```
+
+`ReleaseId` is immutable. Its manifest names exactly the five normative XLAMs,
+their SHA-256 hashes, package-set version, Git commit, build timestamp, and
+minimum compatibility metadata. A publisher validates every file and hash in a
+new release directory before atomically replacing `current-release.json`.
+The feed retains the current release plus the two immediately preceding
+verified releases. A NAS may mirror this feed for LAN delivery, but it must
+preserve this layout and may never be placed inside a warehouse's
+`PathDataRoot`, authority workbooks, inbox/outbox, config/auth, or operator
+workbook area.
+
+**Station update rule:** A Windows Task Scheduler station updater checks the
+feed at user logon and every 15 minutes. It applies an available release only
+when no Excel process is running. It verifies the complete remote manifest and
+hashes, copies the complete release side-by-side into a station-local cache,
+verifies the copied hashes, then repoints only the account-scoped Excel startup
+registration to the cached Operations and Admin leaf XLAMs. Core and the Domain
+XLAMs remain headless bridge dependencies; the updater does not register them
+as visible Add-ins. The update is automatic and non-interrupting: it is applied
+before the next Excel/invSys session and its release/status is shown after that
+session starts. There is no in-place replacement of a loaded XLAM.
+
+**Failure and rollback rule:** The updater fails closed. A missing/partial
+release, hash mismatch, cache-copy failure, registration failure, or Excel-open
+condition leaves the active known-good cached release and its registry startup
+paths untouched, records only redacted local diagnostics, and retries later.
+On an update failure after staging, it automatically restores the prior
+verified known-good cached release. A deliberate manual rollback is a
+station-administration operation available only to a local Windows
+administrator while Excel is closed; it selects one of the retained verified
+releases, re-verifies it, repoints the leaf registration, and records the
+reason/time/from/to versions locally. Rollback never reverses inventory or
+design events, snapshots, config/auth data, user data, or operator workbooks.
+
+**Boundary rules:** The deployment scripts and scheduled task are Windows
+deployment utilities, not invSys runtime/domain dependencies. A release never
+contains inventory, designs authority workbooks, config/auth workbooks,
+credentials, inbox/outbox data, snapshots, or operator workbook state. No
+XLAM may be built, copied, replaced, registered, unregistered, or rolled back
+while an Excel process is running. D13 must prove incomplete-release rejection,
+hash-mismatch rejection, Excel-open deferral, complete five-package update,
+automatic known-good restoration, manual rollback, Operations/Admin leaf
+registration order, and byte-for-byte non-mutation of authority workbooks.
 
 ---
 ## Progress Tracking (v4.11)
