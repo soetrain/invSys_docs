@@ -85,3 +85,84 @@ When requesting help, send the support person:
 
 This guide reflects Release 1 Architecture v4.11 and the NAS-only operational
 deployment model. GitHub is developer-only.
+
+## How IT sets up Excel for invSys
+
+Perform these steps once per Windows account through the organization’s normal
+endpoint-management and Office-security process. The operator should not make
+these changes themselves.
+
+### 1. Install and update desktop Excel
+
+Install licensed **Microsoft 365 Apps desktop Excel for Windows** and apply the
+organization’s current Office updates. Confirm Excel can open a local `.xlsx`
+file before adding invSys. Do not use Excel for the web as the invSys runtime.
+
+### 2. Apply a least-privilege macro policy
+
+In Excel, the policy location is **File > Options > Trust Center > Trust Center
+Settings > Macro Settings**. The preferred organizational posture is either:
+
+- **Disable all macros except digitally signed macros**, after invSys is signed
+  by the organization’s trusted publisher; or
+- **Disable all macros with notification**, combined with a tightly managed
+  invSys trusted location while code-signing is being introduced.
+
+Never select **Enable all macros**. It lowers security for every workbook the
+user opens, not just invSys. Microsoft documents these macro settings and their
+effects in its [Excel macro-security guidance](https://support.microsoft.com/en-us/excel/change-macro-security-settings-in-excel).
+
+### 3. Trust only the managed local invSys cache
+
+The station updater copies a hash-verified release to the user’s local cache:
+
+```text
+%LOCALAPPDATA%\invSys\Addins
+```
+
+If a trusted location is required before invSys is code-signed, IT should add
+only that local cache through **Trust Center > Trusted Locations > Add new
+location**, preferably by managed policy. Do not trust:
+
+- the entire NAS share;
+- a user’s Downloads, Documents, Desktop, OneDrive, or temp folder; or
+- a broad drive root such as `C:\`.
+
+A trusted location bypasses normal Trust Center checking for files it contains,
+so it must be narrowly controlled. Microsoft’s [trusted-location guidance](https://support.microsoft.com/en-us/office/security-privacy/add-remove-or-change-a-trusted-location-in-microsoft-office)
+explains this behavior.
+
+### 4. Allow the managed XLAM add-ins
+
+The station updater registers the complete release and maintains the required
+startup leaves. After it runs, open Excel and inspect **File > Options >
+Add-ins** if support needs to verify the result. The expected invSys entries are
+`invSys.Operations` and, where authorized, `invSys.Admin`.
+
+Do not manually browse to an XLAM, add a NAS XLAM directly, or use Excel’s
+Add-ins dialog to repair the installation. Run the managed updater with Excel
+closed instead. If the organization requires application add-ins to be signed
+by a trusted publisher, deploy the publisher certificate through its normal
+certificate/policy channel; otherwise Excel can disable the add-in. See
+Microsoft’s [add-in security settings](https://support.microsoft.com/en-us/office/add-ins/view-manage-and-install-add-ins-for-excel-powerpoint-and-word).
+
+### 5. Keep developer settings off for operators
+
+Operators do not need the **Developer** ribbon tab, **Trust access to the VBA
+project object model**, Visual Basic Editor permissions, or any Git client.
+Those are build/test-machine controls and should not be enabled merely to run
+invSys.
+
+### 6. Verify after setup
+
+1. Close all Excel processes.
+2. Run or wait for the managed station update task.
+3. Start Excel normally and confirm the invSys ribbon appears without a macro
+   warning.
+4. Sign in to the approved NAS server, use **Send To** for an authorized
+   warehouse, then use **invSys Sign In**.
+5. Confirm the role buttons match the user’s invSys capability assignment.
+
+If a policy prevents Trust Center changes, that is expected in managed
+environments: IT must make the change through approved policy rather than
+asking the operator to weaken Excel security.
