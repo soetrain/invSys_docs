@@ -56,6 +56,28 @@ GitHub XLAM download and repository cloning are developer-only acquisition
 paths. They are not supported operator installation, update, or rollback
 mechanisms; workstations consume only a verified D16 feed/cache.
 
+**NAS station-setup entry point:** A NAS D16 feed must also publish a
+user-runnable, versioned **StationSetup** entry point. A Windows user who can
+reach the designated read-only deployment share may explicitly run that entry
+point to retrieve the current release, validate its complete five-package
+manifest and hashes, cache it side-by-side under that user's local invSys
+folder, and register only the Operations/Admin startup leaves for the next
+Excel startup. The entry point uses the existing D16 updater and may offer
+best-effort registration of the periodic updater, but successful first use
+must not depend on Task Scheduler creation, GitHub, a Git checkout, SharePoint,
+or an existing invSys warehouse target. Excel-open deferral, hash mismatch,
+incomplete release, and registration failure remain fail-closed and preserve
+the known-good local registration. The deployment share is publisher-write /
+station-read; station setup never writes warehouse runtime, inventory, designs,
+configuration/auth, inbox/outbox, snapshots, or user credentials.
+
+After setup, the explicit Operations **Server Sign In** -> warehouse target ->
+**invSys Sign In** sequence remains binding. A Windows/NAS identity is not an
+invSys identity. **Create New Warehouse** remains an `ADMIN_MAINT` action for a
+signed-in invSys administrator and can create only at a path that the current
+Windows session is authorized to write; NAS reachability or D16 setup alone
+never grants that capability.
+
 ```text
 <PathSharePointRoot>\Addins\
   current-release.json

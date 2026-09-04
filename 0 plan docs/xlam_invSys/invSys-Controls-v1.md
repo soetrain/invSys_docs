@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.55 (Production Slice 4ax-4bb user accepted; Slice 4bd connected-server Aggregator UX correction in progress; Slice 4be curated Action Path approved; Slice 4bf deployment accepted; Slice 4bi first-use NAS onboarding in progress)
+**Version:** 1.56 (Production Slice 4ax-4bb user accepted; Slice 4bd connected-server Aggregator UX correction in progress; Slice 4be curated Action Path approved; Slice 4bf deployment accepted; Slice 4bi first-use NAS onboarding and Slice 4bj NAS station setup in progress)
 
 **Inventory date:** 2026-08-31
 
@@ -145,6 +145,19 @@ SharePoint/NAS/station UAT passed on 2026-09-03: immutable NAS-feed publication,
 hash-verified cache/leaf registration, elevated task installation, successful
 on-demand task run, and clean Excel startup all completed without a Git
 checkout or a warehouse-runtime-root deployment path.
+
+**Slice 4bj NAS station-setup contract -- approved, implementation in progress:**
+the publisher-controlled NAS deployment share will expose a stable
+**StationSetup** script that a permitted Windows user can run without browsing
+GitHub or selecting individual XLAMs. It retrieves the current immutable
+five-package release, validates the manifest/hashes, caches it locally, and
+registers the Operations/Admin leaves only while Excel is closed. It does not
+create a warehouse, change the selected warehouse, write runtime authority, or
+sign in an invSys user. The usual **Server Sign In**, target selection, and
+**invSys Sign In** controls remain the first in-app sequence. The existing
+Admin **Create New Warehouse** control remains capability-gated by
+`ADMIN_MAINT`; Windows/NAS path permission is an additional required boundary,
+not a substitute for invSys authorization.
 
 ### Demo Inventory lifecycle: packaged GREEN; seed/delete visibly accepted
 
