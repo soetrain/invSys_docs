@@ -147,7 +147,7 @@ on-demand task run, and clean Excel startup all completed without a Git
 checkout or a warehouse-runtime-root deployment path.
 
 **Slice 4bj NAS station-setup contract -- implemented; visible clean-user
-acceptance pending:**
+accepted:**
 the publisher-controlled NAS deployment share will expose a stable
 **StationSetup** script that a permitted Windows user can run without browsing
 GitHub or selecting individual XLAMs. It retrieves the current immutable
@@ -168,8 +168,19 @@ does not alter the server, selected target, or capability controls.
 Focused station-setup D13 is GREEN at 9/9 (including a temporary NAS
 feed-to-local-cache/leaf-registration run), D16 regression is 18/18 GREEN,
 and the ordinary NAS command launcher physically applied
-`R1-20260904-977d2a2` to this station. A second Windows user must still
-complete the visible installation and sign-in sequence.
+`R1-20260904-977d2a2` to this station. On 2026-09-04 a second user successfully
+logged into `jwj-nas-1` and installed the command launcher; target selection
+and invSys authentication remain separate required steps.
+
+**Slice 4bk account-onboarding packet -- implemented; visible message review
+pending:** the existing `frmCreateDeleteUser.btnCopyPin` control is visibly
+captioned **Copy Account & Setup**. It copies, but does not send, the selected
+user's account details and the configured NAS StationSetup command plus the
+network precondition and binding sign-in sequence. It never copies NAS
+credentials or creates a Windows/NAS identity. Focused form-action D13 is
+GREEN at 7/7; D16 remains 18/18 GREEN, StationSetup remains 9/9 GREEN, and
+Ribbon generation is 48/48 GREEN. The user must still review one copied packet
+in the visible Admin form before this control is marked accepted.
 
 ### Demo Inventory lifecycle: packaged GREEN; seed/delete visibly accepted
 
@@ -1075,7 +1086,7 @@ Obsolete are actions inside this form, not separate ribbon launchers.
 | Warehouse selection | `lblWarehouse`, `cmbWarehouse`, `lblAuthPath`, `txtAuthPath`, `lblWarehouses`, `lstWarehouses` | Selects a discovered warehouse and shows its Auth workbook path. |
 | User list | `lblUsers`, `lstUsers`, `btnRefreshUsers` | Lists and reloads users in the selected Auth workbook. |
 | User identity | `lblUserId`, `txtUserId`, `lblDisplay`, `txtDisplayName` | Edits user ID and display name. |
-| Credential | `lblPin`, `txtPin`, `btnGeneratePin`, `btnCopyPin` | Accepts or generates a PIN/password and copies the generated value when allowed. |
+| Credential | `lblPin`, `txtPin`, `btnGeneratePin`, `btnCopyPin` | Accepts or generates a PIN/password. **Copy Account & Setup** copies a human-deliverable account/onboarding packet for the selected warehouse: the configured NAS StationSetup command, required network-access precondition, and install -> Server Sign In -> target -> invSys Sign In sequence. It does not send email, provision NAS access, expose NAS credentials, or grant roles. |
 | Scope | `lblWhScope`, `txtWarehouseId`, `lblStationScope`, `txtStationId`, `chkRoamingStation` | Sets warehouse and station scope; Roaming removes the fixed-station requirement. |
 | Capabilities | `lblRoles`, `chkAdmin`, `chkReceivePost`, `chkReceiveView`, `chkShipPost`, `chkProdPost`, `chkInboxProcess` | Assigns Admin maintenance, Receiving post/view, Shipping post, Production post, and inbox-processor capabilities. |
 | Record actions | `btnClear`, `btnSave`, `btnDeactivate`, `btnDelete` | Clears the editor, creates/updates a user, deactivates the selected user, or deletes it through the guarded action. |

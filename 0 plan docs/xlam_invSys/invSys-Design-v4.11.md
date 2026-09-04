@@ -79,6 +79,18 @@ contains no credentials and does not weaken the independently enforced NAS ACL,
 release/hash validation, Excel-closed rule, invSys authentication, or capability
 checks.
 
+**Admin user-onboarding packet:** Creating or updating an invSys user does not
+send email, provision a Windows/NAS account, or grant network access. The
+Admin **Copy Account & Setup** action may place a human-deliverable packet on
+the administrator's clipboard. For the configured NAS deployment it must state
+the stable `Install-invSys-Station.cmd` path, require the recipient to have
+authorized NAS/Tailscale access before using it, identify the selected
+warehouse scope, and give the binding sequence **install -> Server Sign In ->
+select target -> invSys Sign In**. It must never include a NAS password,
+Windows credential, unselected warehouse, or a claim that installation grants
+an invSys role. The ordinary user still receives the explicit invSys User ID
+and PIN only as the administrator elects to deliver them.
+
 After setup, the explicit Operations **Server Sign In** -> warehouse target ->
 **invSys Sign In** sequence remains binding. A Windows/NAS identity is not an
 invSys identity. **Create New Warehouse** remains an `ADMIN_MAINT` action for a
