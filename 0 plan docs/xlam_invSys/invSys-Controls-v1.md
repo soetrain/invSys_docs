@@ -94,9 +94,10 @@ fails. Manual rollback requires a local Windows administrator, an explicit
 non-sensitive reason code, a retained hash-verified release, and closed Excel.
 It never rolls back inventory, designs, configuration/auth, snapshots, or
 operator workbooks. The task installer defaults to preview and requires
-`-Apply` to register the logon/15-minute updater. No new form or Ribbon control
-is introduced by this contract; physical SharePoint/NAS/station UAT remains
-open.
+`-Apply` to copy/verify the local station-maintenance toolset and register the
+logon/15-minute updater; the task never depends on a Git checkout. No new form
+or Ribbon control is introduced by this contract; physical
+SharePoint/NAS/station UAT remains open.
 
 ### Demo Inventory lifecycle: packaged GREEN; seed/delete visibly accepted
 

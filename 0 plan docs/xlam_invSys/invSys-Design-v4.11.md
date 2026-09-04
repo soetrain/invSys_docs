@@ -86,6 +86,15 @@ as visible Add-ins. The update is automatic and non-interrupting: it is applied
 before the next Excel/invSys session and its release/status is shown after that
 session starts. There is no in-place replacement of a loaded XLAM.
 
+**Station tool location rule:** Git is source/review authority, not a
+workstation dependency. When the update task is installed, it stages the small
+PowerShell station-maintenance toolset into the user's local invSys deployment
+directory and verifies the copied files before registering the task. The task
+targets that local toolset, never a repository checkout. This toolset is not an
+XLAM, is not an independent launcher, is not part of the five-package release,
+and has no access path to warehouse authority other than the explicit Addins
+feed supplied to the updater.
+
 **Failure and rollback rule:** The updater fails closed. A missing/partial
 release, hash mismatch, cache-copy failure, registration failure, or Excel-open
 condition leaves the active known-good cached release and its registry startup

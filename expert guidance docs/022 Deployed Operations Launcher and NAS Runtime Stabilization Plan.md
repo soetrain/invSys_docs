@@ -3350,6 +3350,11 @@ every 15 minutes, but only applies an update when Excel is closed. It verifies
 the selected release manifest/hashes, copies the complete set into a
 station-local versioned cache, retains the known-good complete set, and then
 changes only the account-scoped Operations/Admin leaf startup registration.
+At task installation, the small station-maintenance PowerShell toolset is
+verified and staged under the local invSys deployment directory; the scheduled
+task targets that local copy rather than a Git checkout. Git remains source/
+review authority only. This is not an XLAM, separate launcher, or part of the
+five-package release.
 It fails closed and preserves the active known-good set if a package, manifest,
 hash, write, or registration check fails. It never updates a loaded XLAM in
 place, never edits an authority workbook, and emits only redacted local
@@ -3381,7 +3386,8 @@ SharePoint/NAS Addins feed using an explicit `ReleaseId`. It writes and verifies
 station action; it hash-verifies before side-by-side caching and invokes
 `tools/register_current_addins.ps1` only for the Operations/Admin leaf pair.
 `tools/register_invsys_update_task.ps1` displays the proposed task by default
-and creates the logon/15-minute task only with `-Apply`. A local Windows
+and creates a verified local station-tool copy plus the logon/15-minute task
+only with `-Apply`. A local Windows
 administrator uses `tools/rollback_invsys_station_release.ps1 -ReleaseId
 <retained-id> -ReasonCode <approved-code> -ConfirmRollback` with Excel closed.
 The reason code is constrained to a non-sensitive approved value. No script
@@ -3389,13 +3395,25 @@ reads, writes, copies, or registers an inventory/design/configuration/auth or
 operator workbook.
 
 **D13 evidence (2026-09-03):** `Test-Slice4bfDeployment.ps1` was RED at 0/9
-before the tools existed, then GREEN at 16/16. Its isolated feed proves
+before the tools existed, then GREEN at 17/17. Its isolated feed proves
 immutable manifest publication, Excel-open deferral, five-package hash
 verification, Operations/Admin-only registration, third-party add-in
 preservation, protected authority-workbook hash non-mutation, non-admin
 rollback refusal, tampered-release rejection, and prior leaf-registration/
-known-good-pointer restoration after injected registration failure. The
-existing five-package Slice 13 cutover regression remains GREEN at 14/14.
+known-good-pointer restoration after injected registration failure. It also
+proves that the scheduled-task preview targets a local verified station agent,
+not a Git checkout. The existing five-package Slice 13 cutover regression
+remains GREEN at 14/14.
+
+**Physical deployment evidence (2026-09-03):** the current `ad53c52`
+five-package build was published as immutable release `R1-20260903-ad53c52` to
+the separate NAS deployment share's D16 Addins feed; its canonical warehouse
+runtime root was not used. With Excel closed, this station hash-verified the
+feed, cached the release, and repointed only Operations/Admin startup entries.
+The local verified station agent was staged. Windows denied creation of the
+scheduled task from this non-elevated session, and read-only verification found
+no task created. Complete physical UAT therefore remains pending one elevated
+task-installation run and a next-Excel-session visible load check.
 
 ### Slice 4bg -- historical inventory pattern/reorder worksheet workbench: proposed; awaiting explicit approval
 
