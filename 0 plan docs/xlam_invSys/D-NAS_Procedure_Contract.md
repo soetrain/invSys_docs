@@ -767,7 +767,10 @@ ribbonUI.Invalidate   ' refresh all ribbon getEnabled / getLabel callbacks
 
 ' Operations Server Sign In ribbon button onAction
 '
-' Explicit operator action. No modal storage form.
+' Explicit operator action. Revalidate silently when a remembered root exists.
+' If no root is remembered, or a remembered root has no usable Windows SMB
+' credential, the same explicit click may open the Core-owned connection form.
+' The form establishes/selects storage only; it does not authenticate invSys.
 
 Dim connectTarget As WarehouseTarget
 Dim connectStatus As NasStatusCode
@@ -840,6 +843,7 @@ End If
 | Select `invsys_Zenbook_WH`, restart Excel, Windows session active: resolves to NAS, not `C:\invSys\WH1` | Priority 2 restore | `outTarget.HubRoot` = NAS path; `SourceType ≠ WH_SOURCE_FALLBACK` |
 | Select `invsys_Zenbook_WH`, restart Excel, Windows session expired: ribbon shows unreachable, no fallback | Priority 2 probe → `NAS_CREDENTIAL_REJECTED` | Returns `False`; `NAS_TARGET_UNREACHABLE`; local root not loaded |
 | Operations Server Sign In does not open storage credential form when remembered credentials remain usable | Ribbon `onAction` | Calls non-modal resolver, refreshes server label, and shows no warehouse connection form |
+| Operations Server Sign In, first use with no remembered NAS root | Ribbon `onAction` | Opens the Core-owned connection form after the explicit click; Scan may use an already connected Windows SMB session, or the operator may explicitly supply NAS credentials. A validated selection is remembered only in that Windows/Office profile; no invSys user is authenticated or granted a role. |
 | Role XLAM server status label reflects target state | Ribbon `getLabel` | Shows `Server: Connected ...` for acceptable NAS target; `Server: Not connected` otherwise |
 | Send To immediately refreshes the deployed Operations label | Ribbon `onAction` → `IRibbonUI.Invalidate` | Server status names the newly selected warehouse without opening Runtime Context |
 | Server Sign Out clears both layers | Ribbon `onAction` | `IsSignedIn=False`; no current target; no session UNC root; labels are `Server Sign In` and `invSys Sign In`; capability controls disabled |

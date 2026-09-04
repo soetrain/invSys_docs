@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.54 (Production Slice 4ax-4bb user accepted; Slice 4bd connected-server Aggregator UX correction in progress; Slice 4be curated Action Path approved; Slice 4bf deployment accepted)
+**Version:** 1.55 (Production Slice 4ax-4bb user accepted; Slice 4bd connected-server Aggregator UX correction in progress; Slice 4be curated Action Path approved; Slice 4bf deployment accepted; Slice 4bi first-use NAS onboarding in progress)
 
 **Inventory date:** 2026-08-31
 
@@ -1256,6 +1256,19 @@ operator buttons disabled. Selecting a warehouse through **Send To** now forces
 Excel to requery the deployed Operations dropdown and server/access labels
 immediately; opening Runtime Context is not required to refresh them.
 
+**Slice 4bi onboarding contract — approved, implementation in progress:** On a
+new Windows/Office profile with no remembered NAS root, an explicit Operations
+**Server Sign In** opens this same form; it is not an Admin-only recovery.
+The operator enters an authorized UNC root and clicks **Scan** when Windows is
+already connected to the NAS, or supplies a server account only through the
+masked **Connect** action when Windows credentials are needed. The operator
+then selects a listed runtime and clicks **OK**. This remembers only the
+validated root/target in the current profile. It neither creates nor repairs a
+warehouse, grants an invSys role, or signs in the invSys user; after success,
+the normal **invSys Sign In** action remains required. On later use, a usable
+remembered root remains non-modal. The form must not persist the password or
+display a Windows/NAS account as the invSys user.
+
 ### 5.3 Dynamic item-search window (`cDynItemSearch`)
 
 The controller adds the following four controls to the clean Core-owned
@@ -1367,6 +1380,9 @@ removing the repeated Saving notices caused by unchanged read-only loads.
 | Control group | Required displayed controls/actions | Purpose |
 |---|---|---|
 | Saved Processes | header-backed `lstProcesses`; `btnProcessRefresh`, `btnProcessNew`, `btnProcessLoad` -- **View Process**, `btnProcessReuse` -- **Edit as New Version** | Lists **ID / Version / Process / Status**. View loads an immutable saved version for reference. Edit as New Version loads its complete definition into the next generated DRAFT version and rebases retained Output Design Versions without rewriting the selected version. |
+
+The Saved Processes command row retains a clear vertical gap below its list at
+the minimum form size; its buttons must not overlap the list's rendered border.
 | Process identity | `txtProcessName`, locked `txtProcessId`, locked `txtProcessVersion`, `txtProcessDescription` | Edits the versioned Process header. invSys allocates the next available three-character Base-36 ID and version; the operator does not type either identity. |
 | Worksheet workbench | `btnProcessWorksheetCreate` -- **Send Process to Sheet**; `btnProcessWorksheetRetrieve` -- **Retrieve Selected Process**; `btnProcessWorksheetAddAlternative` -- **Add Acceptable Item** | Sends the current new/editable Process to one of any number of uniquely named Process tables in the exact captured `Production.Operator.xlsm`. If the current definition is an existing immutable version, Send first promotes it to the next generated version. Add Acceptable Item appends one numbered managed-item/hidden-SKU pair to the selected table; retrieval accepts one table or Ctrl+click cells across several tables, imports each confirmed definition as DRAFT, and deletes only successful selected tables. |
 | Requirements | header-backed `lstProcessRequirements`; locked `txtRequirementId`, `txtRequirementName`, `txtRequirementQty`, `txtRequirementPercent`, `txtRequirementYieldBasis`, `txtRequirementUom`; `btnProcessRequirementAdd`, `btnProcessRequirementUpdate`, `btnProcessRequirementRemove`, `btnProcessRequirementUp`, `btnProcessRequirementDown` | Defines typed external/upstream input requirements under **ID / Requirement / Qty / % / Batch basis / UOM**. IDs are generated Base-36 values. Worksheet input rows calculate basis and percent within each normalized-UOM group, so unlike groups may coexist without implicit conversion. |

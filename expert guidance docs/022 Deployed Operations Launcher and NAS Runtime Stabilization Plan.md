@@ -3401,6 +3401,8 @@ collected data; automatic/destructive retention is disabled. Save notices are
 diagnosed by owner before invSys-owned routine feedback is changed; invSys never
 changes Windows/NAS-client/global Office notification policy.
 
+**Slice 4bi — non-Admin first-use NAS onboarding: approved; implementation in progress.** A new Windows/Office profile with the five XLAMs installed can have no remembered NAS root, which previously made Operations **Server Sign In** fail with Admin-only setup wording even if the user's Windows SMB session already had access to the warehouse server. The approved D-NAS correction permits the existing Core-owned connection form only after an explicit Operations **Server Sign In** click when no root is remembered (or a saved root has unusable Windows credentials). The user enters an authorized UNC root, scans using current Windows access or explicitly connects with NAS credentials, and selects a validated target. The result persists through the existing per-profile Core root/target APIs only. It never grants an invSys role, creates/repairs configuration, changes another target, or folds Windows/NAS identity into invSys sign-in. D13 begins with the public `ToggleServerSessionForCapability` RED proving this first-use fallback, non-Admin wording, separate target/user layers, and absence of credential persistence; GREEN requires focused source/public-handler validation, package compilation, static maintenance, and the applicable Release 1 chain.
+
 ### Slice 4bf -- clean SharePoint/GitHub/NAS deployment, automatic update, and rollback: implemented; physical deployment UAT passed
 
 This approved slice implements Architecture v4.11 D16 without changing the
