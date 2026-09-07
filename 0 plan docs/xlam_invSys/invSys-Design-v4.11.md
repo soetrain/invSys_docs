@@ -338,12 +338,11 @@ path for every receipt. An event without capture says **Action Path unavailable*
   their display order, and **Save Profile**; **Reset to Default** stages defaults
   for review and does not persist until Save. A preview uses synthetic values.
 - Store append-only warehouse profile versions in the existing authoritative
-  Config workbook through an Admin-owned profile writer with a Core-verified
-  capability/context gate. This is a new explicit writer boundary: the existing
-  scalar Settings path calls `Core.modConfig.UpdateConfigValue` and must not be
-  mistaken for an Admin-owned writer or extended for these profiles. Core's
-  profile/config reader remains read-only under D5. The same Admin-owned boundary
-  saves the new capture setting. Profile header fields are `ProfileVersion`,
+  Config workbook through the headless Core command service approved in D5,
+  with a Core capability/context gate; Admin owns the editor and orchestration.
+  Core's profile/config reader remains read-only. A later approved implementation
+  adds a dedicated profile command and capture-setting command to this boundary;
+  the scalar compatibility entry is not a profile writer. Profile header fields are `ProfileVersion`,
   `SchemaVersion`, `CreatedAtUTC`, and `CreatedByUserId`; field rows carry
   `ProfileVersion`, `EventFamily`, `FieldId`, `Enabled`, and `DisplayOrder`.
   Versions are positive integers; reject stale-version saves, duplicate fields
@@ -727,7 +726,11 @@ their forms, staging state, event payloads, or capability requirements.
 **Rules:**
 - Precedence is fixed: `tblStationConfig` -> `tblWarehouseConfig` -> hardcoded defaults.
 - Config is strongly typed and schema-validated at load; required missing keys fail validation.
-- `Core.Config` is read-only in R1 with explicit `Load`/`Reload` support.
+- The `Core.Config` read API is read-only in R1 with explicit `Load`/`Reload`
+  support. It must not create, repair, format, dirty, or save configuration while
+  reading. Missing optional fields resolve to defaults in memory; missing required
+  fields/identity fail validation. Explicit Generate Warehouse/station provisioning
+  remains the separate authorized setup path.
 - Missing optional keys use defaults and log warnings.
 - Missing required keys or missing workbook fails closed for write operations.
 
@@ -739,6 +742,44 @@ their forms, staging state, event payloads, or capability requirements.
 - `Reload() As Boolean`
 - `Validate() As String`
 - `GetWarehouseId() As String`, `GetStationId() As String`
+
+**Approved 2026-09-06 -- configuration command service (Slice 4be D5 prerequisite):**
+The user approved separating read access from a headless, authorized Core
+configuration-write service, with Admin remaining UI/orchestration. This replaces
+the proposed Admin-owned profile writer; it does not approve the separate D18
+Action Path replacement proposal.
+
+- `Core.modConfigCommands` owns ordinary configuration mutation. Its scalar
+  `UpdateConfigValue` command requires an active invSys sign-in, current allowed
+  warehouse target, and `ADMIN_MAINT`, checked at the command boundary even when
+  an Admin form has already checked. An explicit expected warehouse/station must
+  match that session target; a stale form must not redirect its save. The writer
+  uses the target's exact ConfigPath, never ActiveWorkbook or an arbitrary cached
+  workbook. It rejects identity-key changes, unknown keys, invalid values,
+  missing/ambiguous target rows, locked/read-only or unrelated dirty workbooks,
+  before writing. Managed headers are resolved by normalized name; unknown
+  columns and other rows are preserved. Successful persistence refreshes the
+  read cache; a failed save never reports success.
+- Existing `modConfig.UpdateConfigValue` may remain as a compatibility entry
+  forwarding directly to that command, with no independent mutation or bypass.
+  New Admin Settings calls use the command service directly. These are typed
+  calls through existing declared project references, not new Application.Run
+  dispatch. Cross-package arguments/results remain primitives.
+- The accepted Production UOM worksheet publication remains available to
+  `PROD_POST` (or `ADMIN_MAINT`) through a separate validated UOM command. That
+  command may change only the three declared UOM catalog/version settings after
+  complete catalog validation, in one save. It cannot authorize a Production
+  user to change arbitrary configuration. Admin UOM add/remove/reset retains its
+  `ADMIN_MAINT` boundary. Existing UOM validation and version behavior remain.
+- Profile persistence for a later approved Event Detail implementation uses
+  this Core command ownership; no profile schema or Action Path model is newly
+  approved by this D5 correction.
+- D13 begins with packaged RED for direct unauthorized mutation, stale captured
+  Settings context, and read-side schema mutation; GREEN must exercise the real
+  Settings save handler, authorized/denied scalar and UOM routes, exact target
+  binding, typed validation, read-only/reopen behavior, unknown-column preservation,
+  and byte-for-byte read non-mutation. Generation, current Settings/UOM, packaged
+  compile, layout, maintenance, live-role and full-chain regressions remain gates.
 
 ---
 ### D6 -- Locking Runtime Rules (R1 Locked)

@@ -3283,6 +3283,33 @@ live warehouse without the operator's explicit staging approval.
 
 ### Slice 4be -- current contract review: comprehensive Events and recorded control usage
 
+**D5 prerequisite approved 2026-09-06; implemented and technically validated.** Following
+the D5 explanation, the user approved a read-only Core configuration API plus
+a separate authorized headless Core write service. This replaces the earlier
+Admin-owned-writer proposal. Admin remains UI/orchestration; existing scalar
+Settings writes require `ADMIN_MAINT` at the command boundary, and the validated
+Production UOM publication retains its narrowly scoped `PROD_POST` path. D18's
+replacement model remains a separate proposal.
+
+Implemented `modConfigCommands`, non-mutating `modConfig` reads, Admin Settings
+save routing and the validated UOM publication route. D13 recorded behavioral
+RED before implementation (5 failures/10 checks), expanded baseline comparison
+(9 failures/17 checks), a later required-schema RED (1 failure/18 checks), then
+18/18 GREEN through packaged Admin-generated
+fixtures and real Settings/UOM form handlers. All five projects compile;
+live-role regression passes 48/48 and the ordered Release 1 chain passes 30/30.
+The live Config fixture now checks a non-creating read before explicit setup,
+replacing its superseded expectation of read-side bootstrapping.
+
+Compile gates also exposed pre-existing Shipping diagnostic name references,
+a Production parameter typo and two unqualified event constants. Repairs bind
+to existing procedures/Core constants without changing identity or workflow.
+Layout and Viewer pass; static candidate/duplicate/dynamic-call counts do not
+grow. The actual Settings save was captured and inspected. See the maintained
+[D5 evidence](../../invSys_fork/tests/integration/plan022_slice4be_d5_config_commands_results.md)
+for exact commands, package hashes and final launcher/reusable Production gates.
+Fresh human UAT and the separate comprehensive Event Viewer acceptance remain open.
+
 **2026-09-06 status: proposed amendment prepared; explicit approval pending.**
 The current user request makes Slice 4be the active priority. It calls Action
 Path optional revelation of controls actually used during a task. Architecture
@@ -3357,7 +3384,7 @@ a clearly inactive proposal changes no runtime or effective architecture.
 | Shipping supplements | `modTS_Shipments.AppendBoxDesignViewerEvents` opens ShippingBOM read-only; `AppendHeldShipmentViewerEvents` reads current hold TSV and uses its file timestamp. | These are current-state sources, not durable Hold/Design event history. Moving reads to publication must preserve visible coverage without claiming historical timestamps/actions. |
 | Designs history | Designs Domain `modDesignsApply` writes `tblDesignEvents` with EventID. | Use its owning read/publication boundary; current inventory-event publication does not include it. |
 | Admin activity | `modAdminConsole.AppendAuditEntry` writes `tblAdminAudit` in the resolved Admin workbook, with no stable event ID. | Do not fabricate an ID from worksheet position or assume a central publisher can discover every station's log. Coverage/correlation for this source remains a design gap to resolve before its implementation. |
-| Admin settings | `frmAdminSettings.mBtnSaveConfig_Click` calls `modConfig.UpdateConfigValue`, which writes/saves in Core. | This observed path conflicts with D5's read-only Config wording. The proposal now explicitly uses a new Admin-owned profile/capture-setting writer with Core authorization; no silent extension of the conflicting scalar path. |
+| Admin settings | Before the approved D5 correction, `frmAdminSettings.mBtnSaveConfig_Click` called the mutating `modConfig.UpdateConfigValue` reader API. | The approved correction routes the handler to headless `Core.modConfigCommands`, keeps the old scalar entry as forwarding compatibility only, and makes ordinary reads non-mutating. Later profile/capture commands use this ownership; their D18 schema/model remains proposed. |
 | Time | Inventory `ApplyEvent` and Admin `AppendAuditEntry` write `Now` into UTC-named fields. | Column names do not prove UTC. The proposal now labels unverified historical zones and requires verified UTC for new publication/load metadata. |
 
 Real action seams include Viewer `OpenInventoryViewer`,

@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.58 (Slice 4be recorded-control replacement proposed; approval pending; existing accepted statuses retained)
+**Version:** 1.59 (D5 Core config command separation approved and implemented; Slice 4be Action Path replacement remains proposed)
 
 **Inventory date:** 2026-08-31
 
@@ -100,6 +100,23 @@ still pending.
 
 ### Slice 4be Event Detail and recorded Action Path: replacement proposed; approval pending
 
+**Approved D5 prerequisite, 2026-09-06:** Admin Settings **Save Value** keeps its
+existing UI but invokes a dedicated Core configuration-write service. Core
+rechecks sign-in, `ADMIN_MAINT`, and the form's captured warehouse/station at save;
+a changed target requires reopening Settings. Production **Retrieve UOM Catalog**
+retains its validated UOM-only `PROD_POST` route; it does not grant general
+configuration access. Config read/Reload must not repair or save source data.
+The successful save status is **Configuration saved.** Missing required
+configuration is rejected before writing and directs the administrator to
+explicit setup; unrelated dirty workbooks are preserved.
+Packaged D13 is GREEN at 18/18, including missing required configuration;
+all five projects compile, live-role regression
+passes 48/48 and the ordered Release 1 chain passes 30/30. The actual Settings
+save was visibly captured and inspected; fresh human acceptance is not claimed.
+See the [D5 evidence](../../../invSys_fork/tests/integration/plan022_slice4be_d5_config_commands_results.md)
+for package hashes, remaining/final regression gates and compile-only repairs.
+The remaining Event Detail/Action Path proposal still awaits its own decision.
+
 The 2026-09-06 proposal following Architecture D18 and the current Plan 022
 Slice 4be section are the approval target. Current D18's curated-path contract
 remains binding until that proposal is explicitly approved. The proposed
@@ -124,9 +141,9 @@ warehouse's NAS-only `Training\ActionPaths\<WarehouseId>` library; an originatin
 authorized role action may append its own record under the proposed replacement
 contract. A capture failure does not block or repeat a business event.
 
-The proposed profile/capture-setting writer is Admin-owned with a Core-verified
-capability/context gate. Existing scalar Settings saving through Core is observed
-implementation, not precedent to override D5. Readiness inspection also requires
+The proposed profile/capture-setting commands use the headless Core ownership
+approved in D5, with Admin UI/orchestration and a Core capability/context gate.
+The Event Detail schema and capture model still require approval. Readiness inspection also requires
 multi-line event selection tests; one EventID can contain several exact keys.
 
 Inventory, current Events labels and remembered date filters, ListBox->Table,
