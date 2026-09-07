@@ -302,11 +302,16 @@ path for every receipt. An event without capture says **Action Path unavailable*
   required for that label. Existing Box Design/Held Shipment current-state
   supplements remain visible as **Current state**; they never fabricate durable
   history or a captured Action Path.
-- The publisher deduplicates by WarehouseId/source kind/source record ID,
-  retaining event correlation and exact keys. Publish the newest 5,000 durable
-  records, sorted by recorded UTC time then source kind/ID, plus separately
-  labelled current-state supplements. A coverage manifest states source families,
-  source counts, publication UTC, earliest/latest included UTC, schema/release,
+- The publisher groups by WarehouseId/source kind/source event ID and retains
+  every contributing detail line, including repeated lines for the same exact
+  `System_Key`. One event can consume/create several entities. Event-level
+  duplicate suppression must never discard those lines, choose one key for the
+  whole event, or sum unlike UOMs. Event Detail shows all contributing lines;
+  source and visible counts distinguish events from detail lines. Publish the
+  newest 5,000 complete durable events, sorted by recorded timestamp then source
+  kind/ID, plus separately labelled current-state supplements. A coverage manifest
+  states source families, source counts, publication UTC, earliest/latest
+  included recorded times with their zone provenance, schema/release,
   and omitted counts. Missing coverage is **Unavailable**, never an empty success.
   No missing historical event is inferred from today's state.
 - Viewer pages 100 matching records at a time. Search, event-family filter,
@@ -314,10 +319,14 @@ path for every receipt. An event without capture says **Action Path unavailable*
   1-36500-day range combine across the complete loaded projection before paging.
   **All** means all available published dates, not unlimited canonical history.
   Display matching/available counts and any publication limit explicitly.
-- Display timestamp as `yyyy-mm-dd hh:mm:ss` with zone/UTC offset. Convert only
-  when a historical offset is known; otherwise label the original time **UTC**.
-  Never relabel a naive timestamp as local time. Display publication time and
-  load time separately. A failed Refresh keeps the prior projection visibly
+- Display timestamp as `yyyy-mm-dd hh:mm:ss` with zone/UTC offset when its source
+  establishes that zone. A UTC-named column alone is insufficient: existing
+  writers can store local `Now` values. Without reliable source-zone evidence,
+  preserve the value as **Recorded time (zone unavailable)**, disclose that
+  cross-source chronological order/date filtering is approximate, and never
+  silently reinterpret it as UTC or local time. New publication/load timestamps
+  use verified UTC. Display publication time and load time separately. A failed
+  Refresh keeps the prior projection visibly
   **Stale**; incompatible schemas fail with guidance and do not read authority.
 - Publication bounds never delete or truncate canonical history. D19's
   archive-first, disabled-destructive-retention rule remains binding.
@@ -329,8 +338,12 @@ path for every receipt. An event without capture says **Action Path unavailable*
   their display order, and **Save Profile**; **Reset to Default** stages defaults
   for review and does not persist until Save. A preview uses synthetic values.
 - Store append-only warehouse profile versions in the existing authoritative
-  Config workbook through the established Admin Config-write boundary. Core's
-  Config reader remains read-only. Profile header fields are `ProfileVersion`,
+  Config workbook through an Admin-owned profile writer with a Core-verified
+  capability/context gate. This is a new explicit writer boundary: the existing
+  scalar Settings path calls `Core.modConfig.UpdateConfigValue` and must not be
+  mistaken for an Admin-owned writer or extended for these profiles. Core's
+  profile/config reader remains read-only under D5. The same Admin-owned boundary
+  saves the new capture setting. Profile header fields are `ProfileVersion`,
   `SchemaVersion`, `CreatedAtUTC`, and `CreatedByUserId`; field rows carry
   `ProfileVersion`, `EventFamily`, `FieldId`, `Enabled`, and `DisplayOrder`.
   Versions are positive integers; reject stale-version saves, duplicate fields
@@ -416,6 +429,9 @@ use. Prove meaningful missing-behavior RED before implementation, then GREEN
 for each coverage family, exact correlation, profile validation/capability
 denial, capture on/off/order/bounds/context reset, missing/old/corrupt capture,
 pagination/date/zone/freshness, and byte-for-byte read-only source preservation.
+Include one multi-line event with different keys, one with repeated contributing
+keys, and unlike UOMs; a locally recorded timestamp under a UTC-named header;
+and proof that profile save uses Admin ownership while Core reads do not save.
 Use generated disposable warehouse fixtures; no operational workbook writes
 are authorized by approval of this product contract.
 

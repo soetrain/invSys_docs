@@ -111,10 +111,10 @@ deferred. No new control below is implemented or user accepted.
 |---|---|
 | Viewer Events scope | **Operator actions** (default) / **All published events**; internal reservation is **Inventory Reserved**, never **Shipment Held**. Current-state supplements are labelled separately. |
 | Viewer family filter | **Event family**, combined with accepted Search/date filters across all loaded records. |
-| Viewer paging | **Previous**, **Next**, page/matching/available counts; 100 matching rows per page, newest 5,000 published durable records, explicit coverage/omission status. |
-| Viewer selected row | **Event Detail**, read-only fields from the current versioned Admin profile; exact event/entity correlation is retained. |
+| Viewer paging | **Previous**, **Next**, page/matching/available counts; 100 matching events per page, newest 5,000 complete published durable events, explicit coverage/omission status. |
+| Viewer selected row | **Event Detail**, read-only fields from the current versioned Admin profile; all contributing exact-key lines remain available, including repeated keys and unlike UOMs. |
 | Viewer path checkbox/pane | **Show Action Path** (off per form session); reveals recorded captions in order, with **Unavailable**, **Partial**, or **Older release** where applicable. Never executes a control. |
-| Viewer freshness | Separate **Published** and **Loaded** times, explicit zone/UTC labels, coverage and **Stale** status after failed Refresh. |
+| Viewer freshness | Separate verified-UTC **Published** and **Loaded** times, coverage and **Stale** status after failed Refresh. Historical values without verified zones read **Recorded time (zone unavailable)**; date filtering/order is labelled approximate. |
 | Admin Settings section | **Event Detail**; event family, allowlisted field selection, enabled state and order, synthetic preview, **Save Profile**, **Reset to Default** (stages only). Core verifies `ADMIN_MAINT` on open/save. |
 | Admin Settings capture option | **Capture Action Paths**; `ViewerActionPathCaptureEnabled=False` by default, saved by `ADMIN_MAINT`; affects subsequent user actions only. |
 
@@ -123,6 +123,11 @@ values, backend mechanics, or credentials. Records remain in the selected
 warehouse's NAS-only `Training\ActionPaths\<WarehouseId>` library; an originating
 authorized role action may append its own record under the proposed replacement
 contract. A capture failure does not block or repeat a business event.
+
+The proposed profile/capture-setting writer is Admin-owned with a Core-verified
+capability/context gate. Existing scalar Settings saving through Core is observed
+implementation, not precedent to override D5. Readiness inspection also requires
+multi-line event selection tests; one EventID can contain several exact keys.
 
 Inventory, current Events labels and remembered date filters, ListBox->Table,
 captured role-workbook binding, and modeless launcher reuse remain regression

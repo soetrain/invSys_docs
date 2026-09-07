@@ -3347,6 +3347,43 @@ No behavioral RED/GREEN, build, deployment, or new visible acceptance is claimed
 for this amendment. D13 implementation ordering begins after approval; preparing
 a clearly inactive proposal changes no runtime or effective architecture.
 
+**2026-09-06 source-readiness evidence (proposal still unapproved):**
+
+| Boundary | Verified source | Consequence for the first packaged tests |
+|---|---|---|
+| Event publication | Core `modWarehouseSync.WriteSnapshotEventRows` copies twelve named fields from `tblInventoryLog` and deletes/recreates target rows. | Preserve unknown columns and every event detail line; add source/coverage evidence without inventing missing history. |
+| Event identity | Inventory Domain `modInventoryApply.ApplyEvent` writes the same EventID/AppliedSeq for every line in `linesToApply`. | An EventID is not a unique log-line key. Multi-output and repeated-key lines must survive grouping and detail selection. |
+| Viewer read envelope | Core `modInventoryViewerData.LoadCurrentInventoryEventViewerData` emits ten display fields, drops EventID/System_Key, and leaves the UOM field blank. | Add protected identity/detail data; test all exact keys and UOMs through actual Viewer selection, not only service output. |
+| Shipping supplements | `modTS_Shipments.AppendBoxDesignViewerEvents` opens ShippingBOM read-only; `AppendHeldShipmentViewerEvents` reads current hold TSV and uses its file timestamp. | These are current-state sources, not durable Hold/Design event history. Moving reads to publication must preserve visible coverage without claiming historical timestamps/actions. |
+| Designs history | Designs Domain `modDesignsApply` writes `tblDesignEvents` with EventID. | Use its owning read/publication boundary; current inventory-event publication does not include it. |
+| Admin activity | `modAdminConsole.AppendAuditEntry` writes `tblAdminAudit` in the resolved Admin workbook, with no stable event ID. | Do not fabricate an ID from worksheet position or assume a central publisher can discover every station's log. Coverage/correlation for this source remains a design gap to resolve before its implementation. |
+| Admin settings | `frmAdminSettings.mBtnSaveConfig_Click` calls `modConfig.UpdateConfigValue`, which writes/saves in Core. | This observed path conflicts with D5's read-only Config wording. The proposal now explicitly uses a new Admin-owned profile/capture-setting writer with Core authorization; no silent extension of the conflicting scalar path. |
+| Time | Inventory `ApplyEvent` and Admin `AppendAuditEntry` write `Now` into UTC-named fields. | Column names do not prove UTC. The proposal now labels unverified historical zones and requires verified UTC for new publication/load metadata. |
+
+Real action seams include Viewer `OpenInventoryViewer`,
+`RunInventoryViewerEventsForTest` -> `frmInventoryViewer.TestEventsReport` ->
+`mBtnRefresh_Click`; Receiving `mBtnAdd_Click`/`mBtnConfirm_Click`; Production
+`mBtnProcessSave_Click`/`mBtnProcessRelease_Click`,
+`mBtnRecipeSave_Click`/`mBtnRecipeRelease_Click`,
+`mBtnManagerCheckIn_Click`/`mBtnManagerApplyOutput_Click` (Complete Run); Shipping
+`mBtnHold_Click`/`mBtnRemove_Click`/`mBtnSend_Click`; and Boxing
+`mBtnBoxBuilderSave_Click`/`mBtnBoxMakerMake_Click`/`mBtnBoxMakerUnmake_Click`.
+The capture allowlist must distinguish genuine operator invocations from
+programmatic handler calls; the source names alone do not prove this distinction.
+
+Validation run against code `0afe05f`: Slice 4bc source assertions **5/5 PASS**
+and Slice 4w source assertions **12/12 PASS**. The regenerated Slice 4w report
+now correctly names all three Viewer tabs. Read-only inspection verified all
+five `deploy/current` XLAM names, sizes, SHA-256 hashes and package-set values
+against `addins-manifest.json`; this does not prove source/build correspondence.
+The checked-in `inventory_viewer_results.md` still describes two tabs although
+the current harness asserts three. Its prior PASS is historical, not a fresh
+packaged baseline. The harness directly constructs Config/Auth/inventory fixtures
+rather than entering through Admin Generate Warehouse; its fixture setup must
+be assessed against D14 before treating a rerun as Release 1 acceptance. No COM
+run, new behavioral RED, compile, layout, deployment, or UAT occurred in this
+readiness pass.
+
 #### Slice 4be historical proposal (superseded by the 2026-09-03 amendment)
 
 This is a proposal only. It must not change the existing read-only **Viewer**,

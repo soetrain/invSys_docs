@@ -8,9 +8,11 @@ packaged D13 implementation.
 
 ## Current verified state
 
-- Last verified 2026-09-06: code `main` at `0afe05f`, clean; documentation `main`
-  started at `cb5c958`. This handoff accompanies the proposal commit; resolve its
-  exact hash with `git log -1` rather than assuming an earlier deployment hash.
+- Last verified 2026-09-06: code `main` at `b108313`, clean; only the existing
+  source-regression report changed after runtime-source baseline `0afe05f`.
+  Documentation `main` started at `cb5c958`; proposal commit was `d891edc`.
+  This update accompanies the readiness-evidence commit; resolve its exact hash
+  with `git log -1` rather than assuming an earlier deployment hash.
 - Architecture v4.11, Plan 022, and controls catalog v1.58 now contain a clearly
   proposed, inactive Slice 4be amendment. Runtime implementation has not changed.
 - The pre-existing user edit to `067 Partial Goal Action Path NAS Contract.md`
@@ -49,6 +51,16 @@ packaged D13 implementation.
 - Documentation-only validation: inspect complete proposal diff, whitespace,
   pointer destinations, consistent pending status and bounded defaults. No
   runtime RED/GREEN, compile, layout, live-role, full-chain or UAT is claimed.
+- Continuation readiness check against code `0afe05f`: Slice 4bc source
+  assertions 5/5 PASS; Slice 4w source assertions 12/12 PASS and its sanitized
+  report refreshed to the existing three-tab contract. Five deployment package
+  names/sizes/SHA-256/package-set values match the local manifest; this is not
+  source/build or runtime proof. The old Viewer runtime report still has two
+  tabs and cannot establish a current baseline.
+- Plan 022 now maps source/action boundaries and known gaps. The still-pending
+  proposal was corrected to retain every contributing event line, distinguish
+  historical unknown time zones, and declare an Admin-owned profile writer
+  rather than extend the existing Core config-write/D5 discrepancy.
 
 ## Do Not Repeat
 
@@ -68,6 +80,9 @@ packaged D13 implementation.
 
 - Explicit approval is pending for the proposed D18 replacement and comprehensive
   Events scope; comparison with the former curated model remains unresolved.
+- Admin audit rows have no stable event IDs and can be station-local. Resolve
+  their publication/correlation contract before implementing that family; do
+  not manufacture historical IDs or treat current state as durable history.
 - Physical Aggregator acceptance and broader Release 1 gates remain open.
 
 ## Immediate next action
