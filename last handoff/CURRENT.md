@@ -1,1 +1,1 @@
-`069 Slice 4be D5 Commands Validated.md`
+`070 Slice 4be Shared Events Contract Review.md`
