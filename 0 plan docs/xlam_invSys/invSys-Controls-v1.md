@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.59 (D5 Core config command separation approved and implemented; Slice 4be Action Path replacement remains proposed)
+**Version:** 1.60 (D5 implemented; shared Events and How-To/Diagnostic Action Path synthesis proposed)
 
 **Inventory date:** 2026-08-31
 
@@ -98,7 +98,7 @@ after connection, are never saved in the source set, and the form never changes
 the normal Send To warehouse target. Physical two-server/two-computer UAT is
 still pending.
 
-### Slice 4be Event Detail and recorded Action Path: replacement proposed; approval pending
+### Slice 4be shared Events and How-To/Diagnostic Action Paths: synthesis proposed; approval pending
 
 **Approved D5 prerequisite, 2026-09-06:** Admin Settings **Save Value** keeps its
 existing UI but invokes a dedicated Core configuration-write service. Core
@@ -117,41 +117,60 @@ See the [D5 evidence](../../../invSys_fork/tests/integration/plan022_slice4be_d5
 for package hashes, remaining/final regression gates and compile-only repairs.
 The remaining Event Detail/Action Path proposal still awaits its own decision.
 
-The 2026-09-06 proposal following Architecture D18 and the current Plan 022
-Slice 4be section are the approval target. Current D18's curated-path contract
-remains binding until that proposal is explicitly approved. The proposed
-replacement moves comprehensive Events into R1 and uses actual user control
-usage for training; curated Save/Import/Export and comparison mode would be
-deferred. No new control below is implemented or user accepted.
+The revised 2026-09-07 amendment following Architecture D18 is the approval
+target, synchronized with Plan 022 Slice 4be. The user directed a synthesis:
+shared event/control evidence supports both a How-To guide and a diagnostic
+sequence, with both presentations available for comparison. This replaces the
+inactive proposal that would have discarded curated Save/Import/Export.
+Current normative D18 and the bounded Viewer contract remain effective until
+the detailed amendment is approved. No new control below is implemented or
+accepted; the existing D5 evidence above remains valid.
 
 | Proposed surface/control | Displayed wording and behavior |
 |---|---|
-| Viewer Events scope | **Operator actions** (default) / **All published events**; internal reservation is **Inventory Reserved**, never **Shipment Held**. Current-state supplements are labelled separately. |
-| Viewer family filter | **Event family**, combined with accepted Search/date filters across all loaded records. |
-| Viewer paging | **Previous**, **Next**, page/matching/available counts; 100 matching events per page, newest 5,000 complete published durable events, explicit coverage/omission status. |
-| Viewer selected row | **Event Detail**, read-only fields from the current versioned Admin profile; all contributing exact-key lines remain available, including repeated keys and unlike UOMs. |
-| Viewer path checkbox/pane | **Show Action Path** (off per form session); reveals recorded captions in order, with **Unavailable**, **Partial**, or **Older release** where applicable. Never executes a control. |
-| Viewer freshness | Separate verified-UTC **Published** and **Loaded** times, coverage and **Stale** status after failed Refresh. Historical values without verified zones read **Recorded time (zone unavailable)**; date filtering/order is labelled approximate. |
-| Admin Settings section | **Event Detail**; event family, allowlisted field selection, enabled state and order, synthetic preview, **Save Profile**, **Reset to Default** (stages only). Core verifies `ADMIN_MAINT` on open/save. |
-| Admin Settings capture option | **Capture Action Paths**; `ViewerActionPathCaptureEnabled=False` by default, saved by `ADMIN_MAINT`; affects subsequent user actions only. |
+| Viewer Events scope | **Operator actions** (default) / **All published events**; Business event/User activity/Current state labels. Internal reservation is **Inventory Reserved**, never **Shipment Held** without Hold. |
+| Viewer filters and paging | Search, **Event family**, source/outcome and accepted remembered date filter; **Previous**, **Next**, matching/available/page counts. 100 matching records per page; newest 5,000 complete durable groups, explicit omissions and coverage. |
+| Viewer selected event | **Event Detail**, with versioned allowlisted profile and all contributing exact-key/UOM lines; **Show Action Path** (off per form session) opens related guide/evidence using the preferred view. Missing control evidence says **Recorded controls unavailable**. |
+| Viewer time/status | **Published**, **Loaded**, **Stale**, **Recorded time (zone unavailable)**, and missing/disabled/excluded source coverage. No false empty-success or invented UTC. |
+| Viewer Action Paths tab | Name, tags, instructions, selected-events summary, path search/results, version/origin/release status, observed-run selection and **How-To**, **Diagnostic**, **Compare both**. Switching preserves path/version/run selection. |
+| How-To editing | Add/remove/reorder selected steps and edit human instructions; **Create Guide from Recording**, **Save**, **Export**, **Import**. Save/export/import require ACTION_PATH_MAINT. **Authored instruction**, **Observed control**, **Business outcome** distinguish provenance; editing never changes observation history. |
+| Diagnostic recording | **Start Recording**, **Stop Recording**, **Cancel Recording**, recording status/counter, expected ordered steps and terminal outcome, **Evaluate**. User performs ordinary permitted role/Admin actions; controls are never replayed. One actor/warehouse sequence may span several forms/submissions. |
+| Diagnostic result | **Conclusion observed**, **Awaiting published result**, **Failed**, **Cancelled**, **Incomplete evidence**; **Interrupted** and **Partial: action limit reached** explain capture completeness. A command-only conclusion says **Command completed; Domain application not asserted**. |
+| Compare both | Same guide version and observed run, How-To instructions beside actual controls/results; matched/missing/extra/failed/unavailable steps. Imported observations say **Origin evidence** and cannot prove a local run. |
+| Admin Settings tabs | **General** retains existing settings/carrier/UOM/connection controls; dedicated **Event Tracking** tab contains Tracking, Event Detail and Action Paths sections. Warehouse policy/profile editing requires ADMIN_MAINT at open/save. |
+| Tracking policy | Family/control catalog with optional collection, Viewer visibility, recorded-sequence eligibility, and **Required** rows that cannot disable canonical/audit collection. Command/result collection defaults on; navigation/selection defaults off. **Capture recorded controls** defaults off and enables eligible navigation during explicit recording. |
+| Eligible Admin activity | AdminViewerEventLoggingEnabled defaults True, controls eligible non-inventory projection visibility only, never required business/security/audit recording. Hidden sources also remain hidden in saved guides; show **Hidden by policy**. |
+| Detail profile | Event family, allowlisted field selection/enabled/order, synthetic preview, displayed version and **Save Detail Profile**. Required identity/outcome/source/time/coverage/freshness remain visible. |
+| Default and personal view | **Preferred Action Path view**: How-To / Diagnostic / Compare both. Warehouse default How-To; user may choose **Use warehouse default** or a local override, scoped by Windows user + invSys user + warehouse and restored after restart. It does not change collection policy. |
+| Operations personal Settings | Viewer **Settings > Event Tracking** exposes the view preference and effective tracking status read-only. Signed-in Operations-only users can save their preference without installing Admin or gaining ADMIN_MAINT. |
+| Settings actions | **Save Tracking Policy**, **Save Detail Profile**, **Save My Preference**, **Reload**, **Reset to Default**. Separate save scopes; Reset stages only, Close discards unsaved edits. No synthetic-preview recording. |
+| Evidence availability | **Not tracked**, **Hidden by policy**, **Tracking unavailable**, **Unavailable**, **Older release**; gaps cannot satisfy a diagnostic conclusion. Counter limit 256 actions; maximum saved record 1 MiB with explicit failure, never silent truncation. |
 
-Capture records at most 64 allowlisted controls per submission, without input
-values, backend mechanics, or credentials. Records remain in the selected
-warehouse's NAS-only `Training\ActionPaths\<WarehouseId>` library; an originating
-authorized role action may append its own record under the proposed replacement
-contract. A capture failure does not block or repeat a business event.
+The activity catalog accounts for all reachable Operations/Admin controls,
+including intentional exclusions. Future eligible Admin activity gains stable
+IDs in a separate NAS `Training\Activity\<WarehouseId>` store; existing
+station-local audit history and pre-sign-in activity are not fabricated as
+complete warehouse history. Action Paths remain in NAS
+`Training\ActionPaths\<WarehouseId>`. Both stores are non-authoritative.
+Neither recording nor evaluation processes or mutates business authority.
 
-The proposed profile/capture-setting commands use the headless Core ownership
-approved in D5, with Admin UI/orchestration and a Core capability/context gate.
-The Event Detail schema and capture model still require approval. Readiness inspection also requires
-multi-line event selection tests; one EventID can contain several exact keys.
+Headless Core owns the activity/library boundaries and versioned policy/profile
+commands; Admin and Operations own their respective UI. Existing D5 scalar/UOM
+behavior remains protected. Optional tracking failure never repeats or blocks a
+business action; loss of context/policy/restart leaves an incomplete sequence.
+Current policy applies to saved-guide rendering as well as Events. Guide
+export/import preserves provenance, excludes secrets and never imports inventory.
 
-Inventory, current Events labels and remembered date filters, ListBox->Table,
-captured role-workbook binding, and modeless launcher reuse remain regression
-requirements. D13 packaged public-handler RED/GREEN, full five-package compile,
-layout/maintenance/live-role/full-chain/restart proof, and visible operator
-acceptance are pending. The older approved target descriptions below record
-the still-effective curated contract, not approval of a mixed implementation.
+Required evidence: focused packaged public-handler RED/GREEN for coverage,
+policy/profile and user preference, recording/conclusions, How-To/Diagnostic/
+Compare both, save/search/version/export/import and read non-mutation; all
+current GREEN regressions plus five-package compile, layout/static/live-role/
+full-chain/restart; visible comparison on the same Operations and Admin tasks,
+including incomplete evidence. Fresh user acceptance remains open.
+
+The approved curated descriptions below remain the current effective target,
+while the proposed amendment above explicitly extends their behavior after
+approval. They do not authorize a conflicting implementation.
 
 ### Curated Action Path storage: NAS-only contract locked; implementation pending
 

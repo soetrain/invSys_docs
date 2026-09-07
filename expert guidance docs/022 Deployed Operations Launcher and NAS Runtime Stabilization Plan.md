@@ -3281,7 +3281,7 @@ station entries and a separate historical `WH80` configuration rooted at
 available for this physical UAT. Do not repurpose either target or create a
 live warehouse without the operator's explicit staging approval.
 
-### Slice 4be -- current contract review: comprehensive Events and recorded control usage
+### Slice 4be -- current contract review: shared Events and How-To/Diagnostic Action Paths
 
 **D5 prerequisite approved 2026-09-06; implemented and technically validated.** Following
 the D5 explanation, the user approved a read-only Core configuration API plus
@@ -3289,7 +3289,7 @@ a separate authorized headless Core write service. This replaces the earlier
 Admin-owned-writer proposal. Admin remains UI/orchestration; existing scalar
 Settings writes require `ADMIN_MAINT` at the command boundary, and the validated
 Production UOM publication retains its narrowly scoped `PROD_POST` path. D18's
-replacement model remains a separate proposal.
+detailed Event Viewer/Action Path amendment remains a separate proposal.
 
 Implemented `modConfigCommands`, non-mutating `modConfig` reads, Admin Settings
 save routing and the validated UOM publication route. D13 recorded behavioral
@@ -3310,69 +3310,97 @@ grow. The actual Settings save was captured and inspected. See the maintained
 for exact commands, package hashes and final launcher/reusable Production gates.
 Fresh human UAT and the separate comprehensive Event Viewer acceptance remain open.
 
-**2026-09-06 status: proposed amendment prepared; explicit approval pending.**
-The current user request makes Slice 4be the active priority. It calls Action
-Path optional revelation of controls actually used during a task. Architecture
-D18 instead defines curated event selections, and the normative Viewer section
-still defers comprehensive history until after R1. The 2026-09-03 amendment
-below cannot resolve those conflicts by itself. The proposal following D18 in
-Architecture v4.11 is the exact approval target; current D18 remains effective
-until approved. The controls catalog records the same pending state.
+**2026-09-07 status: synthesized contract drafted; detailed approval pending.**
+The user confirmed comprehensive Operations/Admin tracking, How-To and diagnostic
+uses, a dedicated Settings tab and user-side comparison. When asked which
+historical pair to retain, the user directed a synthesis of the useful parts.
+The revised amendment following D18 is the exact approval target: one event/
+activity foundation, one versioned Action Path, and How-To, Diagnostic and
+Compare both presentations. This supersedes the inactive 2026-09-06 proposal
+that would have discarded curated Save/Import/Export. Do not implement either
+historical alternative as a separate competing recorder.
 
-Approval of that proposal would explicitly replace the curated model, including
-its Save/Import/Export workflow, with recorded user control usage in the existing
-NAS-only training-library location. It would not approve a derived path or a
-combined comparison model. The edited handoff's request to compare both models
-is unresolved lower-precedence guidance, not authorization to implement both.
+Current normative D18 authorizes curated training records but excludes diagnostic
+assertions; the Viewer section defers comprehensive history until after R1.
+The pending amendment explicitly changes those points and preserves D5/D12/D13
+and D19 required-audit protections. User product direction is confirmed; the
+detailed defaults, scopes, limits and acceptance rules still require approval.
+The prior handoff's comparison note is now clarified by the current user request,
+not a reason to reject both presentations.
 
-**Execution after approval:**
+**Execution after approval -- commit/push each completed subslice:**
 
-1. Establish the current packaged GREEN baseline and map each eligible event
-   family and control to its existing source/public handler. Record unavailable
-   historical coverage rather than synthesizing it from current state.
-2. Add `tools/validate_slice4be_event_viewer.ps1` (proposed new harness) with
-   generated disposable warehouse fixtures. Observe behavioral RED through the
-   actual Viewer launcher/Refresh/selection/detail handlers and Admin Settings
-   handlers for missing profile controls, family coverage and bounded paging.
-   Harness, compile, and missing-fixture failures do not count as RED.
-3. Implement the published projection, labelled coverage/time/freshness, 5,000
-   record boundary, 100-row pages, and versioned allowlisted Admin detail profile.
-   Keep Operator actions as the default and distinguish current-state supplements
-   from durable history. Run focused GREEN before beginning the next contract.
-4. Add and observe RED through each affected role/Admin handler for capture
-   enablement, actual control ordering, submission/event correlation, 64-action
-   completeness, context reset, NAS persistence, capability denial, and optional
-   Show Action Path. Implement and prove GREEN for capture on/off, successful
-   and failed actions, repeat submissions, library failure, corrupt/older records,
-   sign-out/target change/restart, and unchanged event/inventory authority.
-5. Complete five-package build/compile/role initialization, Viewer/Admin and
-   affected role form layout checks, static maintenance, current packaged
-   Viewer/date-filter/list-export/launcher/Seed/Receiving/Shipping/Boxing/
-   inventory-management/reusable Production regressions, live-role proof, and
-   the full Release 1 chain. Record scoped maintenance exceptions for explicit
-   review before accepting metric growth. Commit/push each completed subslice.
-6. Present one visible operator checkpoint after automated GREEN: save an Admin
-   profile, enable capture, perform a receipt and Production task through the
-   actual controls, Refresh Events, filter/page/read detail, reveal the exact
-   recorded sequences, verify unavailable historical paths, and reopen saved
-   workbooks without duplicate launchers or lost binding. Record acceptance
-   separately from automated evidence.
+| Subslice | Public packaged test and meaningful RED | GREEN outcome |
+|---|---|---|
+| 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |
+| 4be.2 Settings policy and profiles | Through actual Settings open/save/reset handlers, expect missing Event Tracking tab, policy/profile persistence, denials and personal view preference. Reject cross-target/stale-version saves and unknown controls/fields. | Admin General/Event Tracking tabs; D5 Core policy/profile commands; required-versus-optional tracking; safe defaults, atomic compatibility settings and unknown-column preservation. Operations personal Settings works without Admin installed; invSys-user/warehouse preference isolation and restart. |
+| 4be.3 Comprehensive Events | Through Viewer launch/Refresh/filter/selection, expect missing family/source/outcome coverage, identities/detail lines and bounded paging. | 5,000 complete published groups, 100-row pages, all contributing lines, labels/zone/freshness/coverage, policy-aware display and read-only authority. |
+| 4be.4 Recorded sequence and conclusions | Start Recording, use actual Receiving/Production/Shipping/Boxing/Admin handlers, Stop/Cancel and evaluate. Expect absent ordered controls, cross-form correlation and terminal results; accepted-but-unapplied, missing or interrupted evidence must not pass. | One explicit actor/warehouse sequence across permitted forms/submissions, immutable attempts/results, 256-action and 1 MiB limits, confirmed-versus-pending/failed/cancelled/incomplete conclusions; policy changes, tracking failure, retries and source authority protected. |
+| 4be.5 How-To and comparison | Select events or a captured sequence, edit/save/search a guide, choose How-To/Diagnostic/Compare both and exercise export/import. Expect missing guide/evidence pairing, method preference and distinction between authored steps and observed results. | Both presentations of one record; stable selection on switch; capability-gated immutable guide versions; validated export/import with origin-only evidence; older-release warning and current policy respected. |
+| 4be.6 Release and visible comparison | Run protecting regressions after focused GREEN; do not create artificial RED for already accepted behavior. | Full five-package build/compile/initialization, layout/static/live-role/full-chain/restart proof and visible user comparison before Slice 4be acceptance. |
 
-**Expected file/package scope:** `frmInventoryViewer.frm`,
-`modInventoryViewer.bas`, Core `modInventoryViewerData.bas` and
-`modWarehouseSync.bas`, existing Config/Auth boundaries, `frmAdminSettings.frm`
-and its Admin controller, affected Receiving/Production/Shipping/Boxing/Admin
-public handlers, a bounded training-record module, package manifests and the
-focused harness. Domain changes are permitted only if source inspection and
-focused RED establish a needed read/publication boundary; no canonical business
-event schema change is proposed. Runtime test reports remain redacted/ignored.
+Use a focused packaged harness such as the proposed
+`tools/validate_slice4be_event_viewer.ps1`, with fixtures entering through Admin
+Generate Warehouse/Create Warehouse and optional Seed. A missing fixture,
+missing callable test seam or compile failure is not behavioral RED; instrument
+actual handlers if needed while preserving their operator path, then assert the
+missing behavior. Direct service checks are supplemental. No new RED/GREEN is
+claimed by this documentation pass.
 
-**Evidence at review preparation:** Source inspection confirms the current
-Viewer has Inventory/Events/ListBox->Table, a ten-column event projection and
-existing public test seams; Action Path and detail-profile handlers are absent.
-No behavioral RED/GREEN, build, deployment, or new visible acceptance is claimed
-for this amendment. D13 implementation ordering begins after approval; preparing
-a clearly inactive proposal changes no runtime or effective architecture.
+**Acceptance cases that must remain explicit:**
+
+- At least one normal Operations task and one Admin task, including multi-event
+  submission and later processor application, appear through the shared Viewer.
+  Every reachable eligible handler has a coverage assertion, not just sample
+  happy paths. Excluded pre-sign-in/creation-without-runtime actions and
+  unavailable old Admin history have visible reasons.
+- How-To and Diagnostic use the same path/version and selected observed run.
+  Authored/reordered steps never alter the original sequence. Compare both
+  identifies matched/missing/extra/failed/unavailable steps. Imported examples,
+  disabled tracking, missing source result, stale publication and partial capture
+  cannot become a successful local conclusion.
+- Recording off/on, command versus navigation collection, current policy
+  visibility (including saved guides), actor/context/capability checks,
+  mid-sequence policy changes, 256-action limit, 1 MiB rejection, NAS failure,
+  duplicate deliveries, cancellation and Excel interruption are protected.
+- Viewer preserves repeated System_Key detail lines, different keys in one
+  event, unlike UOMs, source timestamp provenance, current-state supplements,
+  actual Hold versus internal reservation, accepted date filters/list export,
+  and byte-for-byte non-mutation of inspected source authority.
+- Settings reset stages changes only; whole policy/profile saves reject stale
+  versions, unknown fields and dirty/locked/missing-required Config. Existing
+  scalar Settings/UOM behavior and D5 read non-mutation remain GREEN.
+- Preserve the existing technical baseline: 18/18 D5, 81/81 packaged smoke,
+  48/48 live-role, 30/30 full chain, five explicit compiles, Viewer/layout,
+  all-role launcher and reusable Production restart checks. Add new coverage;
+  do not reduce or relabel those counts to hide regressions. Keep Excel
+  validators serial and check cold-start package references.
+- Regenerate static maintenance; no unexplained growth in bloat/dynamic-call
+  metrics, no scanner-driven deletion. Review source/package hashes, layout
+  geometry and visible forms at default/minimum/maximize/restore.
+- Visible operator evidence: edit tracking/profile on the dedicated tab, choose
+  each view and Compare both, record an Operations task and an Admin task,
+  author/reopen a guide, inspect actual completion and an incomplete run, and
+  reopen saved workbooks without lost binding or duplicate launchers. Fresh
+  human acceptance remains distinct from automated evidence.
+
+**Expected file/package scope:** Operations `frmInventoryViewer.frm`,
+`modInventoryViewer.bas`, an Operations-owned personal Settings surface,
+Admin `frmAdminSettings.frm` and its controller, affected real Operations/Admin
+handlers, Core projection/publication modules and dedicated D5 commands,
+bounded activity/Action Path services, tests and five-package manifests.
+Core/Domain remain headless. Domain changes need focused RED for a necessary
+owning read/publication boundary; no canonical business schema change is
+proposed. Runtime reports are redacted/ignored; no operational workbook writes
+or NAS rollout follow automatically from product-contract approval.
+
+**Evidence at review preparation:** The 2026-09-07 source read confirms Settings
+currently has one runtime canvas and no Event Tracking tab; current Admin audit
+entries use a station workbook with no stable event ID. Prior Viewer inspection
+found Inventory/Events/ListBox->Table and no Action Path/profile handlers. The
+new proposal changes no code, XLAM, active architectural contract or acceptance
+status. Validate document consistency, links/diff and Git status now; D13 begins
+with behavioral RED after contract approval.
 
 **2026-09-06 source-readiness evidence (proposal still unapproved):**
 

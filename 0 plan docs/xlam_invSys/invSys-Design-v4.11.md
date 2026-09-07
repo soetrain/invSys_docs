@@ -252,195 +252,339 @@ versioned Action Path JSON records and integrity metadata; it is not an
 inventory/event/design/config/auth/inbox/outbox authority path. The Viewer may
 read it for a signed-in user; only `ACTION_PATH_MAINT` may create a record.
 
-### Slice 4be amendment for approval -- comprehensive Events and recorded Action Path
+### Slice 4be amendment for approval -- shared Events, How-To and Diagnostic Action Paths
 
-**Status: PROPOSED on 2026-09-06; awaiting explicit user approval.** This
-section is a reviewable replacement contract, not implementation authorization.
-Until approved, D18 above and the current Viewer section remain binding. Approval
-must explicitly replace D18's curated training-record model with the recorded
-control-usage model below and bring comprehensive Events into Release 1. No
-captured/derived/curated hybrid is authorized. Plan 022 Slice 4be and the controls
-catalog carry the same approval boundary.
+**Status: PROPOSED revision on 2026-09-07; detailed contract approval pending.**
+The user explicitly requires comprehensive Operations/Admin tracking, Action
+Paths for How-To training and diagnostics, both methods for comparison, and a
+dedicated Settings tab with a user method choice. After clarification, the user
+directed a synthesis of the earlier approaches: keep the useful parts and
+discard the rest. This revision supersedes the inactive 2026-09-06
+replacement-only proposal. It proposes one tracking foundation and one Action
+Path record with **How-To**, **Diagnostic**, and **Compare both** presentations.
 
-**Operator outcome:** A signed-in operator opens the existing Operations
-**Viewer > Events**, searches the selected warehouse's published history,
-selects an event for readable **Event Detail**, and optionally checks **Show
-Action Path** to see the user-facing controls actually used for that submission.
-For example, a recorded receipt can show **Operations > Receiving**, **Receive**,
-**Add**, **Confirm Writes**, in recorded order. The example is not a generated
-path for every receipt. An event without capture says **Action Path unavailable**.
+Until this detailed amendment is approved, D18 above, D19 and the current Viewer
+section remain binding. Approval extends D18's curated records with actual
+control evidence and diagnostic conclusions, brings comprehensive Events into
+R1, and incorporates the D19-compatible tracking controls below into Slice 4be.
+It preserves curated Save/Search/Export/Import, NAS-only training storage, and
+approved D5 Core command ownership. The following defaults, limits and behavior
+are proposals for approval, not claims of implementation or user acceptance.
 
-**Scope and authority:**
+**Operator entry:** Operations > Viewer > Events retains the accepted inventory,
+Events and ListBox->Table surfaces. Selecting an event opens Event Detail;
+**Show Action Path** defaults off per form session and reveals related steps
+using the preferred view. **Action Paths** opens the searchable guide/recording
+library. Missing observations say **Recorded controls unavailable**; the user
+may still read an authored guide, whose provenance remains visible.
 
-- Core owns publication orchestration and the authenticated read/config API;
-  Inventory and Designs Domain own their existing canonical histories.
-  Operations owns Viewer and role control capture; Admin owns profile editing
-  and capture of its own eligible controls. The five D12 packages remain.
-- Viewer reads only published projections and the selected warehouse's training
-  library. Opening, filtering, paging, viewing detail, and revealing a path never
-  opens canonical workbooks, runs the processor, repairs data, or saves a source.
-  The normal publisher may read existing canonical histories through their
-  owning boundaries to produce the projection; a Viewer refresh cannot invoke it.
-- Repeated launch reuses the Viewer. Every load/action binds the selected
-  warehouse, session, and existing captured role workbook where applicable.
-  Target change or sign-out invalidates loaded detail, paths, and pending capture;
-  no stale action may silently redirect to another warehouse or ActiveWorkbook.
-- Exact `System_Key` and source event identities are preserved. Header lookup
-  uses normalized names and preserves unknown user columns. No new inventory
-  identity, legacy inventory import, or Domain write route is introduced.
+**Shared foundation and ownership:**
 
-**Published event coverage and bounded history:**
+- Core owns publication orchestration, authenticated projection reads, authorized
+  configuration commands, and a separate non-authoritative user-activity append
+  service. Inventory and Designs Domain retain canonical event/state authority.
+  Operations owns Viewer and its role handlers; Admin owns its handlers and
+  policy/profile editor. D12's five packages remain; Core/Domain gain no UI.
+- Viewer reads published projections and the selected warehouse training library.
+  Open/Refresh/filter/detail/path/diagnostic actions never open canonical
+  workbooks, process inboxes, repair data, or trigger publication. The ordinary
+  publisher uses existing owning read boundaries. Training saves write only the
+  training library; personal preferences write only local UI state.
+- Repeated launch reuses Viewer and captured role workbooks. Every action checks
+  its captured warehouse, invSys session and role workbook where applicable.
+  Sign-out, target change or loss of that binding invalidates loaded content and
+  terminates active recording as incomplete; no ActiveWorkbook redirection.
+- Preserve exact source identities and immutable System_Key, every contributing
+  event line, and unknown user columns through normalized header lookup.
+  ActivityId, SequenceId and ActionPathId identify only their own records.
+  No canonical business-event schema change or legacy-inventory import is proposed.
 
-- Cover receipt, Return/Dump, inventory creation/adjustment/retirement, boxing
-  build/unbox, Shipping reserve/release/hold/send, Production input/output,
-  Process/Recipe lifecycle, and eligible Admin activity. Show each record's
-  family, source kind, source identity, and recorded outcome. Design and Admin
-  records are visibly distinguished from inventory changes.
-- Default **Operator actions** preserves current labels and hides internal
-  `SHIP_RESERVE` mechanics. **All published events** additionally exposes those
-  records as **Inventory Reserved**, never **Shipment Held**. An actual Hold is
-  required for that label. Existing Box Design/Held Shipment current-state
-  supplements remain visible as **Current state**; they never fabricate durable
-  history or a captured Action Path.
-- The publisher groups by WarehouseId/source kind/source event ID and retains
-  every contributing detail line, including repeated lines for the same exact
-  `System_Key`. One event can consume/create several entities. Event-level
-  duplicate suppression must never discard those lines, choose one key for the
-  whole event, or sum unlike UOMs. Event Detail shows all contributing lines;
-  source and visible counts distinguish events from detail lines. Publish the
-  newest 5,000 complete durable events, sorted by recorded timestamp then source
-  kind/ID, plus separately labelled current-state supplements. A coverage manifest
-  states source families, source counts, publication UTC, earliest/latest
-  included recorded times with their zone provenance, schema/release,
-  and omitted counts. Missing coverage is **Unavailable**, never an empty success.
-  No missing historical event is inferred from today's state.
-- Viewer pages 100 matching records at a time. Search, event-family filter,
-  Operator actions/All published events, and the accepted All/Day/Week/Month/
-  1-36500-day range combine across the complete loaded projection before paging.
-  **All** means all available published dates, not unlimited canonical history.
-  Display matching/available counts and any publication limit explicitly.
-- Display timestamp as `yyyy-mm-dd hh:mm:ss` with zone/UTC offset when its source
-  establishes that zone. A UTC-named column alone is insufficient: existing
-  writers can store local `Now` values. Without reliable source-zone evidence,
-  preserve the value as **Recorded time (zone unavailable)**, disclose that
-  cross-source chronological order/date filtering is approximate, and never
-  silently reinterpret it as UTC or local time. New publication/load timestamps
-  use verified UTC. Display publication time and load time separately. A failed
-  Refresh keeps the prior projection visibly
-  **Stale**; incompatible schemas fail with guidance and do not read authority.
-- Publication bounds never delete or truncate canonical history. D19's
-  archive-first, disabled-destructive-retention rule remains binding.
+**What is tracked and published:**
 
-**Admin-configurable Event Detail:**
+- Maintain a versioned coverage catalog for every reachable Operations/Admin
+  launcher, form command, deliberate page/selection action and result. Each
+  entry names a stable ControlId, fixed captions, role/family, public handler,
+  existing capability, tracking class, completion-evidence source, and any
+  deliberate exclusion/reason. Retired controls require reachability evidence;
+  unimplemented controls are marked pending. Comprehensive means every reachable
+  action is accounted for, not keystroke or mouse-movement surveillance.
+- Operations coverage includes shared session/target actions, Viewer,
+  Receiving/Return/Dump, inventory creation/adjustment/retirement, Shipping
+  Add/reserve/Remove/Hold/Send, Boxing build/unbox, and active Production
+  Process/Recipe lifecycle, allocation, input, output and run actions.
+  Admin coverage includes Settings, Generate/Create Warehouse, Seed, user
+  management, processor/lock/reissue, snapshots/publication, Aggregator and
+  implemented maintenance commands. Sensitive inputs are never recorded.
+- Distinguish **Business event**, **User activity**, and **Current state**.
+  Business events preserve their canonical identities. New user activity gets
+  immutable generated ActivityId at real handler entry and linked outcome
+  records; one action may reference zero, one or several business events.
+  An attempted click, validation rejection, denial, cancellation, accepted
+  submission, completed command and later Domain application are distinct.
+  Programmatic control changes and backend calls are not user clicks.
+- Activity envelopes carry schema/package version, record/ActivityId, optional
+  SequenceId, WarehouseId, station and invSys actor IDs, ControlId/fixed captions,
+  sequence ordinal, verified UTC, policy version, sanitized outcome code and
+  source-event references. No keystrokes, entered selector values, arbitrary
+  free text, secrets, credential/security internals, workstation/network paths
+  or backend procedure names. User-management activity states action/outcome
+  only; it does not disclose credential or account payloads to ordinary Viewers.
+- Authorized originating handlers append only their eligible records through a
+  Core primitive/serialized boundary to
+  `<WarehouseRuntimeRoot>\Training\Activity\<WarehouseId>`.
+  This new store contains immutable per-record JSON/integrity metadata, separate
+  from canonical audit/event/inventory/design/config/auth/inbox authority.
+  Core validates context, registered control and record type; recording a denied
+  attempt grants no operation. Required audit/security writers remain effective.
+- Use generated filenames, at most 1 MiB per record, warehouse/schema/hash
+  validation and atomic publication. Retries with the same record ID are
+  idempotent; a conflicting duplicate is rejected. Independent stations use
+  distinct IDs. No shared mutable workbook or arbitrary caller-supplied path.
+  Failed optional tracking never retries, blocks or rolls back the business
+  command; show **Tracking unavailable** and incomplete evidence. There is no
+  silent durable local fallback for an unavailable NAS library.
+- New eligible Admin actions use this shared store. Existing station-local
+  tblAdminAudit has no stable event ID or complete central discovery contract:
+  historical coverage is unavailable; do not fabricate IDs from row positions
+  or silently import station logs. Pre-sign-in actions have no trusted warehouse
+  actor and are explicitly excluded from this warehouse activity store; existing
+  security handling remains. Do not later attribute them to a new target/user.
+  Target-changing actions end recording in the original context. Creation with
+  no existing valid runtime cannot log to a nonexistent store.
+- Default **Operator actions** preserves accepted labels and hides internal
+  SHIP_RESERVE mechanics. **All published events** may show **Inventory Reserved**,
+  never **Shipment Held** without an actual Hold. Box Design/Held Shipment
+  supplements remain labelled **Current state**, not invented durable history.
+- Publish the newest 5,000 complete durable business-event/activity groups plus
+  separately labelled current-state supplements. Group by warehouse/source/ID,
+  retaining all detail and outcome lines, including repeated System_Key and
+  unlike UOMs. Never choose one key for a multi-entity event or sum unlike units.
+  Coverage shows source families, available/omitted event and detail-line counts,
+  earliest/latest included times, exclusions, policy version, schema/release,
+  verified publication UTC and missing sources. A group is never split by the
+  publication limit: complete means all available contributing lines, not that
+  an attempted command necessarily succeeded. Sort by recorded timestamp then
+  source kind/ID for deterministic ties, with the zone caveat below. No
+  historical action is inferred from current state.
+- Viewer pages 100 matching records after applying Search, family/source/outcome
+  and accepted All/Day/Week/Month/custom 1-36500-day filters across the loaded
+  projection. Preserve the remembered date preference. All means all published
+  dates, with visible limits and matching/available counts. Saved sequence
+  evidence can be read from its training record beyond this publication window;
+  missing canonical history cannot be fetched by Viewer.
+- Display yyyy-mm-dd hh:mm:ss with verified zone/offset where known. Existing
+  UTC-named fields containing local Now are not proof of UTC: label them
+  **Recorded time (zone unavailable)** and explain approximate cross-source
+  ordering/date filters. Use verified UTC for new activity/publication/load.
+  Display Published and Loaded separately. Failed Refresh retains visibly
+  **Stale** content; incompatible schemas fail with guidance. Missing coverage
+  reads **Unavailable**, never empty success. D19 prohibits destructive retention.
 
-- **Admin > Settings > Event Detail** requires Core-verified `ADMIN_MAINT` at
-  open and save. Select an event family, choose allowed detail fields, arrange
-  their display order, and **Save Profile**; **Reset to Default** stages defaults
-  for review and does not persist until Save. A preview uses synthetic values.
-- Store append-only warehouse profile versions in the existing authoritative
-  Config workbook through the headless Core command service approved in D5,
-  with a Core capability/context gate; Admin owns the editor and orchestration.
-  Core's profile/config reader remains read-only. A later approved implementation
-  adds a dedicated profile command and capture-setting command to this boundary;
-  the scalar compatibility entry is not a profile writer. Profile header fields are `ProfileVersion`,
-  `SchemaVersion`, `CreatedAtUTC`, and `CreatedByUserId`; field rows carry
-  `ProfileVersion`, `EventFamily`, `FieldId`, `Enabled`, and `DisplayOrder`.
-  Versions are positive integers; reject stale-version saves, duplicate fields
-  or order positions, unknown fields/families, and invalid types before writing.
-- The field allowlist is: EventID, event family/type, recorded outcome, source
-  role/kind, WarehouseId, invSys user, station identifier, occurred/applied UTC,
-  reference, parent/undo event, SKU/item name, exact `System_Key`, quantity/UOM,
+**Settings -- dedicated Event Tracking tab:**
+
+- Admin Settings gains **General** (existing controls) and **Event Tracking**
+  tabs. Event Tracking contains **Tracking**, **Event Detail**, and **Action
+  Paths** sections. Operations Viewer also exposes **Settings > Event Tracking**
+  for signed-in users' personal preferences, without requiring Admin installed.
+  This Operations-owned surface shows effective policy read-only; only Admin's
+  editor exposes warehouse policy/profile writes, gated by ADMIN_MAINT at open
+  and save. Existing role capabilities still govern every action.
+- Tracking lists family/control, optional collection, Viewer visibility, and
+  recorded-sequence eligibility. Required canonical/audit collection is labelled
+  **Required** and cannot be disabled. Optional command/result activity defaults
+  on; optional navigation/selection collection defaults off. **Capture recorded
+  controls** (ViewerActionPathCaptureEnabled) defaults off and enables collection
+  of eligible navigational controls during explicit recording only.
+  AdminViewerEventLoggingEnabled remains default True and controls only eligible
+  non-inventory Admin projection visibility, never required audit/business events.
+- Collection affects future activity only; disabling does not erase history.
+  Visibility applies on each authorized read/Refresh, including saved-path
+  rendering, so a hidden source cannot leak through a guide. Show **Hidden by
+  policy**, **Not tracked**, or **Unavailable** as appropriate. Display profiles
+  do not confer access. Self-observation must not recurse: explicit Viewer
+  commands may be eligible, but automatic rendering/refresh internals, tracking
+  writes, preview and preference reads never generate control events.
+- **Preferred Action Path view** offers **How-To**, **Diagnostic**, and **Compare
+  both**; both presentations ship for user comparison. Admin sets a warehouse
+  default, initially How-To. A signed-in user can choose **Use warehouse default**
+  or save a local override scoped by Windows user, invSys user and WarehouseId,
+  restored after Excel restart. Invalid preference falls back to the effective
+  warehouse default. It never writes Config or changes what Admin permits
+  tracking. Show unavailable diagnostic evidence when capture is off.
+- **Save Tracking Policy**, **Save Detail Profile**, **Save My Preference**,
+  **Reload**, and **Reset to Default** have explicit separate scopes. Reset
+  stages defaults; Close discards unsaved edits. Preview uses synthetic values.
+  Headless D5 Core commands persist append-only warehouse policy/profile
+  versions with expected version and captured target, validating the whole
+  request before one save. Reject stale versions, unknown fields/controls,
+  invalid flags/order, missing required Config, capability/context mismatch,
+  locked/read-only or unrelated dirty Config. Preserve unknown columns.
+- Policy metadata is PolicyVersion, SchemaVersion, CatalogVersion, CreatedAtUTC,
+  CreatedByUserId, DefaultView, capture flag, and per-control collection/
+  visibility/sequence flags. Legacy Admin projection and capture settings are
+  compatibility views of that same policy; reject conflicting writes and update
+  them atomically, never maintain independent contradictory policies. Track a
+  policy save by version/outcome only, without storing configuration values.
+- Check effective policy/context at action boundaries. A mid-sequence collection
+  change ends recording as partial before new policy applies. Missing optional
+  policy uses labelled defaults; malformed/unreadable policy disables optional
+  collection with a visible error, never repairs Config or suppresses required
+  audit. D5's fail-closed business-write requirements remain binding.
+
+**Event Detail profile:**
+
+- Admin > Settings > Event Tracking > Event Detail chooses an event family,
+  allowlisted fields, enabled state and order, with synthetic preview and
+  Save Detail Profile. Profile versions are append-only Core-owned Config
+  commands; the scalar compatibility writer is not a profile writer.
+- Header fields: ProfileVersion, SchemaVersion, CreatedAtUTC, CreatedByUserId.
+  Rows: ProfileVersion, EventFamily, FieldId, Enabled, DisplayOrder. Versions
+  are positive integers; reject unknown/duplicate fields, duplicate order
+  positions, invalid types and stale-version saves before writing.
+- Allowlist: source event/activity ID, family/type, outcome, role/source kind,
+  WarehouseId, invSys actor/station, occurred/applied time with provenance,
+  reference/parent/undo event, SKU/item name, exact System_Key, quantity/UOM,
   location/condition, Recipe/Process identity/version, RunId, shipment/BOM
-  reference/version, and sanitized business reason/batch note. A field appears
-  only when supplied by its source; missing data reads **Unavailable**.
-- Event identity, action/outcome, source classification, timestamps, coverage,
-  and freshness remain visible regardless of profile. Default optional fields
-  are reference, item, quantity/UOM, location/condition, source role, invSys user,
-  and business reason; family-specific correlation and exact key are available
-  in selected-event detail. Labels are fixed product wording in Release 1.
-- Profiles control rendering only, not access permissions or audit collection.
-  Apply a saved profile on the next explicit Viewer Refresh, show its version,
-  and never rewrite old event payloads. Missing optional profile uses the
-  labelled built-in default; malformed/unreadable saved configuration reports
-  the problem and uses that same safe default without repairing the source.
-- Never publish raw payloads, arbitrary custom fields, authentication/security
-  internals, credentials, workstation/network paths, or backend procedure names
-  as selectable detail. Sanitize allowed text before publication. D19's
-  `AdminViewerEventLoggingEnabled` remains solely an eligible Admin projection
-  noise control and cannot suppress required audit/security records.
+  reference/version, sanitized business reason/batch note. Source supplies values;
+  unavailable fields are never fabricated. Activity collection excludes input
+  values even when an existing business event exposes an allowed business field.
+- Identity, action/outcome, source classification, time provenance, coverage
+  and freshness always remain visible. Optional defaults: reference, item,
+  quantity/UOM, location/condition, source role, actor, business reason. Exact
+  keys and family correlations are available in selected-event detail, which
+  retains every contributing line. Labels are fixed product wording in R1.
+- A profile affects rendering on explicit Refresh only and shows its version;
+  it never rewrites payloads or changes collection/access policy. Missing profile
+  uses a labelled built-in default. Malformed/unreadable profile reports failure
+  and uses the same safe default without repairs. Raw payloads, arbitrary user
+  columns, paths, secrets and security internals are never selectable fields.
 
-**Action Path -- recorded user control usage, for training:**
+**One Action Path, two useful presentations:**
 
-- Admin Settings exposes warehouse Boolean `ViewerActionPathCaptureEnabled`,
-  default `False`, through `ADMIN_MAINT`. Enabling affects subsequent user
-  actions only. Viewer **Show Action Path** defaults off per form session and
-  only reveals an already recorded path for the selected event. Any signed-in
-  Viewer user may read those paths within the selected warehouse.
-- Capture only an explicit allowlist of user-side launcher, page, selection,
-  and command handlers. Append stable public control ID, its fixed caption and
-  containing page/form captions, ordinal, and UTC time when that user action
-  occurs. Preserve repetitions and order. Do not capture keystrokes, field
-  values, item/customer text from selectors, mouse movement, hidden controls,
-  backend calls, automatic Refresh, or programmatic control-change events.
-- A capture context belongs to one signed-in user, warehouse, and captured
-  role form/workbook. It begins at explicit launch or the first allowed action
-  after the previous submission. Each submission freezes its sequence and
-  associates it with the actual created source event IDs; a multi-event
-  submission shares one path. Clear pending capture on successful submission,
-  explicit cancel/clear, form/workbook close, sign-out, or target change. A
-  failed validation stays an attempted action in that pending sequence, with
-  its outcome recorded; it never claims an inventory change occurred.
-- Bound each sequence to 64 actions. If exceeded, preserve the first 64 and
-  mark **Partial: additional controls omitted**. Never silently trim a path.
-  A reopened form does not invent controls used before capture or before
-  restart. Captured history remains training evidence of recorded controls,
-  not a compliance audit, executable macro, or reconstruction from event type.
-- Persist immutable, versioned JSON training records only under
-  `<WarehouseRuntimeRoot>\Training\ActionPaths\<WarehouseId>` on the selected
-  NAS runtime. Schema fields are `SchemaVersion`, `ActionPathId`, WarehouseId,
-  producing release/package-set version, created UTC, related source kind/event
-  IDs, ordered actions, capture completeness, and content SHA-256. Use generated
-  IDs as filenames, validate warehouse/schema/hash/size (maximum 1 MiB), and
-  publish atomically. No caller-supplied path or arbitrary file traversal is
-  accepted. There is no SharePoint dependency.
-- The authorized originating role/Admin handler may append its own training
-  record via a Core primitive/serialized boundary; this is the explicit
-  replacement for D18's `ACTION_PATH_MAINT` user-authored-save rule. The library
-  remains separate from event/inventory/design/config/auth/inbox authority.
-  Capture failure must not roll back, duplicate, or block a business event;
-  show a bounded training-record failure and subsequently **Unavailable**.
-  Never edit canonical events to retrofit control usage. An orphan training
-  record cannot establish that an event applied.
-- Viewer validates and reads related records only. A missing, corrupt,
-  incompatible, or cross-warehouse record is unavailable with a reason. Show
-  **Older release** when recorded controls belong to an older package set;
-  retain their original captions rather than claiming current controls match.
-- The former curated selection/name/tags/instructions library and its
-  Save/Search/Export/Import workflow are deferred from this replacement R1
-  contract. No comparison mode or derived training path is implicitly approved.
-  Existing displayed-list export remains governed by its own unchanged contract.
+- **How-To** selects tracked events/actions in intended order, adds a name,
+  tags and human instructions, and may begin with a draft populated from a
+  recorded sequence's actual fixed control captions. The author reviews and
+  saves it; labels distinguish **Authored instruction**, **Observed control**
+  and **Business outcome**. Reordering/omitting steps changes the guide only,
+  never the original sequence. A guide cannot assert that an authored step ran.
+  No hand-maintained event-type template is invented as observed evidence.
+- **Diagnostic** shows the immutable observed sequence, repetitions, attempts,
+  failures/cancellations, submissions and correlated outcomes in actual order.
+  A guide may define an expected ordered set of registered actions/outcomes
+  plus a terminal result; evaluation compares that expectation with one selected
+  observed run. It has no arbitrary predicates, VBA, SQL, macro or control replay.
+  A click or saved instruction cannot establish business completion.
+- An expectation contains ordered StepId/ControlId/required outcome and
+  RetryAllowed (default True), plus a terminal StepId with either command
+  completion or application of all source events emitted by that matched step.
+  Bind expected steps to actual ActivityIds in the selected run, in order;
+  repeated required steps require distinct occurrences. A permitted retry may
+  match a later successful occurrence; extra actions remain visible. No match
+  by SKU alone, inferred actor, wall-clock proximity or another run is allowed.
+  Current-state supplements cannot satisfy historical completion. These fixed
+  comparison rules are the R1 diagnostic contract, not a general rules engine.
+- **Compare both** uses the same selected ActionPath/version and observed run,
+  showing How-To instructions beside Diagnostic evidence with matched, missing,
+  extra, failed and unavailable steps. Users can switch presentations without
+  losing selection. Persisted comparison results identify their exact guide
+  version, sequence, source identities and publication/evaluation timestamp.
+- **Start Recording** begins an explicit sequence under the current actor and
+  warehouse. The user then uses ordinary Operations/Admin controls for which
+  they already have capability; the session sequence spans those forms and
+  multiple submissions without merging their mutable role/workbook state.
+  Submissions reference their exact resulting event IDs, including multi-event
+  operations. Other actors' control streams are not silently joined; a later
+  processor result may correlate through those business IDs with its own actor.
+- **Stop Recording** freezes a record, with an optional expected conclusion
+  chosen from supported outcomes: a registered command completed, or a specified
+  set of related source events applied. The guide editor may save an expectation
+  for future runs; captured success is still evaluated only from observed
+  evidence. **Cancel Recording** closes it as cancelled; it does not undo work.
+  A failed validation remains a recorded attempt. Recording never runs a task.
+- Limit sequences to 256 actions across submissions, with a visible counter and
+  1 MiB saved-record maximum. At the action bound, finish as **Partial: action
+  limit reached**; continue ordinary work. Oversize records fail save explicitly
+  without silent truncation. Form/workbook binding loss, sign-out, target change,
+  policy change, Excel interruption and tracking failure cause incomplete
+  evidence. Restart does not resume or reconstruct an unfinished recording.
+  Persist accepted action records incrementally; an absent closing record is
+  **Interrupted**, never a completed sequence.
+- Evaluation statuses are **Conclusion observed**, **Awaiting published result**,
+  **Failed**, **Cancelled**, and **Incomplete evidence**. Conclusion observed
+  requires the required ordered steps plus every selected terminal result from
+  its owning source, with no known relevant tracking gaps. Stop alone cannot
+  satisfy it. A submitted-but-unapplied event awaits publication; missing,
+  disabled, stale, clipped or corrupt required evidence is incomplete. Failed
+  attempts followed by a successful retry remain visible and may satisfy an
+  expectation that allows that retry; they are never erased.
+- **Evaluate** reads the selected run and latest explicitly loaded permitted
+  evidence. An unfinished run with no closing record is never silently resumed.
+  Evaluation results are derived and identify their evidence versions/time;
+  re-evaluation appends a new result rather than rewriting earlier conclusions.
+  A signed-in user may evaluate permitted records; guide editing/publication
+  still requires ACTION_PATH_MAINT. Saving their own recording/derived result
+  cannot modify another actor's observations or publish an edited guide.
+- Do not declare a domain effect from a command acknowledgement when application
+  is asynchronous. A command-only conclusion explicitly says **Command completed;
+  Domain application not asserted**. This is diagnostic evidence of a specific
+  observed run, not a compliance audit or guarantee of future success.
+  Imported examples remain **Origin evidence** and never count as local runs.
 
-**D13 and user acceptance:** Before runtime changes, run a new focused packaged
-test through `modInventoryViewer.OpenInventoryViewer`, the real Viewer
-Refresh/filter/selection/Show Action Path handlers, Admin Settings profile and
-capture-setting handlers, and the same role launch/submit handlers operators
-use. Prove meaningful missing-behavior RED before implementation, then GREEN
-for each coverage family, exact correlation, profile validation/capability
-denial, capture on/off/order/bounds/context reset, missing/old/corrupt capture,
-pagination/date/zone/freshness, and byte-for-byte read-only source preservation.
-Include one multi-line event with different keys, one with repeated contributing
-keys, and unlike UOMs; a locally recorded timestamp under a UTC-named header;
-and proof that profile save uses Admin ownership while Core reads do not save.
-Use generated disposable warehouse fixtures; no operational workbook writes
-are authorized by approval of this product contract.
+**Library, permissions and integrity:**
 
-Completion also requires full five-package build/compile/initialization,
-default/minimum/maximize/restore layout and header checks, regenerated static
-maintenance with no unexplained bloat/dynamic-call regression, packaged live-role
-and full Release 1 chain GREEN, preserved accepted role/Viewer/export/launcher
-and reusable Production regressions, saved-workbook restart proof, and visible
-operator evidence of profile editing and an actually captured task path.
-Automated results do not substitute for user acceptance.
+- Store versioned records only at
+  `<WarehouseRuntimeRoot>\Training\ActionPaths\<WarehouseId>`.
+  Record immutable ActionPathId, warehouse/origin, name, version, lifecycle,
+  author/time/tags/instructions, method-labelled steps, selected source refs,
+  optional SequenceId/expectation/evaluation provenance, schema/package version
+  and SHA-256. Use generated IDs, atomic writes, warehouse/schema/hash validation,
+  and a 1 MiB per-record bound. No SharePoint dependency or authority rewrite.
+- Any signed-in Viewer user may read/search permitted published paths and
+  record their own allowed actions when policy enables recording. Core checks
+  originating context when appending observations. ACTION_PATH_MAINT is required
+  to publish/edit a guide version and export/import a training package; ordinary
+  recording does not grant that maintenance capability.
+- Save creates an immutable version; guide edits cannot overwrite evidence.
+  Export is self-contained versioned JSON with allowlisted training content and
+  integrity metadata, excluding secrets, paths and raw authority payloads.
+  Import validates schema, hash, bounds and provenance, assigns a new local
+  ActionPathId and treats embedded observations solely as origin evidence.
+  It never imports inventory or claims the task occurred locally.
+- Missing/corrupt/cross-warehouse evidence shows unavailable with a reason.
+  Older release records retain original captions and show **Older release**;
+  imported or stale instructions never claim controls still match. Saved paths
+  retain enough sanitized observed controls/outcomes for training, but evaluation
+  cannot invent missing application evidence or conceal current policy limits.
+  D19 permits archive-first non-authoritative handling, with no deletion tools.
+
+**D13 execution and acceptance:**
+
+After approval, establish the current packaged GREEN baseline and create focused
+tests through modInventoryViewer.OpenInventoryViewer, actual Viewer Refresh/
+selection/Settings/guide/record/compare handlers, frmAdminSettings policy/profile
+handlers, and the real Operations/Admin action handlers being tracked. Missing
+behavior must fail before implementation; broken fixtures, absent test seams and
+compile failures are not behavioral RED. Use generated disposable warehouses.
+
+Require RED/GREEN for coverage by family/control, optional versus required
+tracking, policy/capability/context gates, actual versus programmatic actions,
+Admin stable identities, sequence/event/outcome correlation, both presentations
+and comparison, personal preference restart/isolation, guide save/search/version/
+export/import, source non-mutation, tracking-off/failure/overflow/interruption,
+stale/corrupt/imported evidence and incomplete diagnostic conclusions. Include
+multi-event submissions, repeated exact-key lines, unlike UOMs, local timestamps
+under UTC-named columns, asynchronous application, retries, and policy changes.
+
+Completion requires five-package build/explicit compile/initialization, layout
+and header checks at default/minimum/maximize/restore, static maintenance with
+no unexplained bloat/dynamic-call growth, all current GREEN role/Viewer/export/
+launcher/inventory-management/reusable Production regressions, packaged live-role
+and full Release 1 chain, saved-workbook restart/binding proof, and visible
+operator comparison of How-To and Diagnostic for the same Operations task and
+an Admin task, including an incomplete run. Record human acceptance separately.
+Commit/push each completed subslice; approve any further contract change before
+its implementation. No operational workbook modification or NAS rollout is
+authorized merely by approving this specification.
 
 ### D19 -- Admin Event Projection Control and Archive-First Retention (R1 Locked)
 
@@ -1878,10 +2022,11 @@ Administrator. The export is a user-requested copy of the existing operator
 projection, not an Admin action or a history/archive facility.
 **Future comprehensive Event Viewer:** After R1, design a comprehensive cross-domain Event Viewer for durable receipt, disposition, design, boxing, production, reservation, release, shipment, and administrative history. Its later design must define canonical event coverage, readable time-zone-aware timestamps, correlation/reference detail, filters, pagination or bounded history, retention, capability rules, and freshness indicators before implementation. The bounded R1 Events page and its displayed-list export are not the authority or a substitute for that design.
 
-**Pending Slice 4be scope decision (2026-09-06):** The amendment following D18
+**Pending Slice 4be scope decision (revised 2026-09-07):** The amendment following D18
 proposes replacing this after-R1 deferral with the specified bounded
-comprehensive Release 1 projection and replacing curated Action Paths with
-recorded control usage. It is not effective until the user explicitly approves
+comprehensive Release 1 projection and extending curated Action Paths with
+recorded control evidence, How-To/Diagnostic comparison and a dedicated Settings
+tab. It is not effective until the user explicitly approves
 that amendment; current accepted Viewer behavior remains the regression baseline.
 
 ---
