@@ -3310,7 +3310,7 @@ grow. The actual Settings save was captured and inspected. See the maintained
 for exact commands, package hashes and final launcher/reusable Production gates.
 Fresh human UAT and the separate comprehensive Event Viewer acceptance remain open.
 
-**2026-09-07 status: detailed synthesized contract APPROVED; implementation pending.**
+**2026-09-07 status: detailed synthesized contract APPROVED; 4be.1 initial RED recorded.**
 The user approved Architecture D18's shared Events, How-To/Diagnostic and Compare
 both contract, dedicated Event Tracking Settings and personal view choice.
 Architecture now explicitly replaces curated-only D18 and the after-R1 Viewer
@@ -3339,6 +3339,18 @@ silently authorize it. No current implementation plan switch is made:
 
 The user-created critique file and handoff 067 edits are preserved separately;
 their working-tree presence is not an implementation-plan pointer change.
+
+**4be.1 D13 entry, 2026-09-07:** Fresh unchanged-package baseline passes the
+cold-start dependency check, all five explicit compiles and 81/81 packaged
+smoke. The opt-in `Test-Slice4beConfigCommands.ps1 -CheckActivityEvidence`
+reuses real packaged Admin Settings and Production UOM handlers and records
+**19 PASS / 12 FAIL**: all 18 D5 assertions plus the direct-service/non-user
+observation check pass; three real action cases lack the new activity evidence.
+The 12 failures are four assertions for each missing case, not 12 independent
+root causes. See [first activity RED](../../invSys_fork/tests/integration/plan022_slice4be_activity_red_results.md).
+No runtime source/XLAM changed and no 4be.1 GREEN or comprehensive coverage is
+claimed. Initial Excel-open precondition failure was resolved before the RED
+run and is excluded from behavioral evidence.
 
 **Execution -- commit/push each completed subslice:**
 

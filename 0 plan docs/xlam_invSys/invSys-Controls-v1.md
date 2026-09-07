@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.61 (D5 implemented; shared Events and How-To/Diagnostic Action Path contract approved; implementation pending)
+**Version:** 1.61 (D5 implemented; shared Events and How-To/Diagnostic contract approved; initial activity RED recorded)
 
 **Inventory date:** 2026-08-31
 
@@ -154,6 +154,23 @@ materially weaker behavior requires an explicit approved architecture decision.
 The shared recorder is re-entrancy guarded and cannot execute remediation,
 retry a business action or dismiss existing errors. How-To remains advisory;
 RetryAllowed describes comparison with an observed retry only.
+
+**4be.1 first discovered controls and test identities (2026-09-07):** These
+catalog entries implement D18's owner/code/instance distinction; they add no
+capability or workflow action. Packaged observation implementation is pending.
+The first packaged test is RED at 19 PASS / 12 FAIL, including all 18 existing
+D5 checks still GREEN; the two controls below supply three exercised cases.
+See [first activity RED](../../../invSys_fork/tests/integration/plan022_slice4be_activity_red_results.md).
+
+| Stable ControlId | Context / existing handler | Logical owner and facts | Verification / rationale |
+|---|---|---|---|
+| ADMIN_SETTINGS_SAVE_VALUE | Admin Settings Save Value; `frmAdminSettings.mBtnSaveConfig_Click`; captured warehouse/station and ADMIN_MAINT | CORE_CONFIGURATION; CONFIG_SAVE_REQUESTED has Unknown effect; CONFIG_SAVE_COMPLETED has Changed only when a changed value was confirmed saved | First 4be.1 packaged test reuses the actual successful D5 form action; proves shared evidence without moving write ownership into the recorder. |
+| PRODUCTION_UOM_RETRIEVE | Production Retrieve UOM Catalog; `frmProduction.mBtnUomCatalogRetrieve_Click`; validated PROD_POST route, ADMIN_MAINT compatibility | CORE_CONFIGURATION; UOM_RETRIEVE_REQUESTED has Unknown effect; UOM_RETRIEVE_COMPLETED has Changed for a confirmed version increment; UOM_RETRIEVE_DENIED has Unchanged/Blocked after pre-write denial | First 4be.1 test exercises successful and denied real form actions, preserves staging on denial and requires no user-control observation from a direct service call. |
+
+These are the initial test cases, not a claim of comprehensive coverage. The
+full reachable Operations/Admin catalog and remaining result branches are still
+required. New stable codes and controls inherit D18 semantics; they do not
+substitute for immutable RecordId/ActivityId or exact inventory System_Key.
 
 The activity catalog accounts for all reachable Operations/Admin controls,
 including intentional exclusions. Future eligible Admin activity gains stable
