@@ -214,62 +214,37 @@ RED for current-server discovery, additional-server discovery, selection
 validation, duplicate/source rejection, read-only aggregation, and source
 authority non-mutation.
 
-### D18 -- Curated Action Paths and Viewer Event Projection (R1 Locked)
+### D18 -- Shared Events and How-To/Diagnostic Action Paths (R1 Locked)
 
-**Decision:** An Action Path is a user-authored, versioned training record, not
-a macro, automation trace, audit assertion, or substitute for a procedure.
-From the read-only Viewer Events projection, a user with `ACTION_PATH_MAINT`
-may select visible events in an intended sequence and save a named Action Path.
-Any signed-in Viewer user may search and read published Action Paths. No Action
-Path action executes a control, opens an authority workbook, processes an
-inbox, or records backend calls, hidden controls, credentials, workbook paths,
-or `Application.Run` details.
+**Approved 2026-09-07 -- Slice 4be synthesized contract.** The user approved the
+detailed shared Events contract, including comprehensive Operations/Admin
+coverage, one versioned Action Path with How-To, Diagnostic and Compare both
+presentations, dedicated Event Tracking Settings, and personal view selection.
+This decision replaces the earlier curated-only D18 and the after-R1 deferral
+of comprehensive Viewer history. Curated authoring/search/version/export/import
+is retained within this contract; captured observations and diagnostic results
+remain distinct from authored instructions.
 
-An Action Path has immutable `ActionPathId`, origin WarehouseId, name, integer
-version, lifecycle status, author/time, search tags, human instructions, and
-the ordered selected-event references needed to explain the workflow. It also
-records the producing invSys release/package-set compatibility and schema
-version. Viewer compares that compatibility with the current session and shows
-a non-blocking **older version** warning when the training record predates the
-current supported version. Selected event records are referenced, never
-rewritten or augmented; missing/pruned event detail is shown as unavailable,
-not fabricated.
+The inactive replacement-only proposal is superseded. D5 Core command ownership,
+D12 packaging, D13 test-first gates and D19 required-audit/retention boundaries
+remain binding. Contract approval authorizes implementation in tested slices; it
+does not claim runtime implementation, deployment or user acceptance.
 
-Action Paths are stored in a non-authoritative, warehouse-scoped training
-library separate from inventory/design/config/auth/event authority. Export is
-a self-contained, versioned JSON training package with integrity hash and no
-secrets or workstation paths. Import validates the package, creates a new local
-ActionPathId with provenance to the exported identity, and permits a test/fake
-warehouse to rehearse the human instructions without importing inventory or
-claiming that events occurred there. D13 must protect public Viewer and Admin
-handlers for selection/save/search/version-warning/export/import, capability
-denial, package validation, and unchanged event/inventory authority.
+**Semantic inheritance:** More-specific plans, controls, implementation records
+and tests may clarify, implement, test and constrain these rules, including
+newly discovered controls. They must name their governing rule and preserve its
+meaning. A contradiction or material weakening requires an explicit approved
+architecture decision here before implementation, then synchronized Plan 022
+and controls updates. A plan edit, generated report or handoff cannot supply
+that decision. Tightening a test or recording a discovered control within the
+existing rules does not require repeat approval.
 
-**Storage contract:** the warehouse-scoped library root is the selected
-warehouse's NAS runtime root:
-`<WarehouseRuntimeRoot>\Training\ActionPaths\<WarehouseId>`. It contains only
-versioned Action Path JSON records and integrity metadata; it is not an
-inventory/event/design/config/auth/inbox/outbox authority path. The Viewer may
-read it for a signed-in user; only `ACTION_PATH_MAINT` may create a record.
-
-### Slice 4be amendment for approval -- shared Events, How-To and Diagnostic Action Paths
-
-**Status: PROPOSED revision on 2026-09-07; detailed contract approval pending.**
-The user explicitly requires comprehensive Operations/Admin tracking, Action
-Paths for How-To training and diagnostics, both methods for comparison, and a
-dedicated Settings tab with a user method choice. After clarification, the user
-directed a synthesis of the earlier approaches: keep the useful parts and
-discard the rest. This revision supersedes the inactive 2026-09-06
-replacement-only proposal. It proposes one tracking foundation and one Action
-Path record with **How-To**, **Diagnostic**, and **Compare both** presentations.
-
-Until this detailed amendment is approved, D18 above, D19 and the current Viewer
-section remain binding. Approval extends D18's curated records with actual
-control evidence and diagnostic conclusions, brings comprehensive Events into
-R1, and incorporates the D19-compatible tracking controls below into Slice 4be.
-It preserves curated Save/Search/Export/Import, NAS-only training storage, and
-approved D5 Core command ownership. The following defaults, limits and behavior
-are proposals for approval, not claims of implementation or user acceptance.
+**Considered critique, 2026-09-07:** Events remain observations, owners determine
+business effects, and How-To/Diagnostic do not execute recovery. The ownership,
+structured-evidence and re-entrancy details below clarify these existing
+boundaries. Suggested executable Navigate/Retry/Repair/Override Action Path
+types are not adopted: ordinary authorized workflow commands remain separate.
+RetryAllowed describes matching an observed retry, never permission to retry.
 
 **Operator entry:** Operations > Viewer > Events retains the accepted inventory,
 Events and ListBox->Table surfaces. Selecting an event opens Event Detail;
@@ -298,6 +273,48 @@ may still read an authored guide, whose provenance remains visible.
   event line, and unknown user columns through normalized header lookup.
   ActivityId, SequenceId and ActionPathId identify only their own records.
   No canonical business-event schema change or legacy-inventory import is proposed.
+
+**Observation semantics and structured evidence:**
+
+- A record states an observed fact and context; its publication never authorizes,
+  schedules or performs a business/configuration/deployment mutation, repair,
+  retry, guard override or automatic navigation. The shared layer validates and
+  records evidence; the existing workflow/Domain owner alone determines effects,
+  blockers, allowed next actions and canonical outcomes.
+- The coverage catalog adds logical OwnerId and stable EventCode for each
+  supported observation/outcome, plus severity, data-effect mapping, sanitized
+  operator explanation and advisory next step. Source handler names belong in
+  the maintained developer catalog, never in ordinary Viewer payloads. OwnerId
+  is a registered logical workflow identifier, not an executable target.
+- Extend the required activity envelope with OwnerId, EventCode, Severity
+  (Info/Notice/Warning/Blocked/Error), and DataEffect (Changed/Unchanged/Unknown).
+  EventCode identifies the kind of observation; RecordId/ActivityId identify
+  immutable instances. SequenceId is optional outside recording; otherwise it
+  joins the actor/warehouse interaction. ActivityId always correlates an attempt,
+  its result and its source-event references. Optional source references are
+  empty when none exist, not fabricated IDs or null-looking string values.
+- Known fixed codes supply UserMessage and NextStep from the catalog; store only
+  allowlisted cause codes and source references, never raw Err.Description,
+  arbitrary TechnicalDetail, entered data or hidden security material. Existing
+  permitted business-detail fields retain their separate profile contract.
+  Unsupported outcome detail is explicitly unavailable, not invented diagnosis.
+- DataEffect is reported by the owning boundary from facts it actually knows.
+  Handler entry defaults Unknown. Confirmed pre-write rejection/read-only action
+  may report Unchanged; confirmed applied mutation may report Changed. A partial
+  failure or mere submission acknowledgement cannot imply a clean rollback or
+  completed Domain effect. Uncertain status remains Unknown with guidance to
+  inspect the owning workflow. Severe findings retain code, operation, context,
+  plain explanation and uncertainty; logging must not swallow existing errors.
+- Use a re-entrancy guard inside the shared observation path. Logging/preview/
+  rendering failures cannot recursively log themselves, reopen forms or cause
+  business actions. Same record ID is idempotent; distinct repeated user actions
+  retain distinct ActivityIds. Coalesce only repeated tracking-failure notices
+  within the same ActivityId; never deduplicate away attempts or owner errors.
+  Closing/cancelling a guide or recording never invokes or retries a workflow.
+- Diagnostic R1 scope stays the approved evaluation of already permitted
+  projection/training evidence. The critique's broader connectivity/lease/repair
+  tools are not implicitly authorized. Any future command belongs to its owning
+  workflow, with its own authorization, contract decision and D13 evidence.
 
 **What is tracked and published:**
 
@@ -441,7 +458,8 @@ may still read an authored guide, whose provenance remains visible.
   Rows: ProfileVersion, EventFamily, FieldId, Enabled, DisplayOrder. Versions
   are positive integers; reject unknown/duplicate fields, duplicate order
   positions, invalid types and stale-version saves before writing.
-- Allowlist: source event/activity ID, family/type, outcome, role/source kind,
+- Allowlist: source event/activity ID, EventCode, Severity, DataEffect, logical
+  OwnerId, family/type, outcome, role/source kind,
   WarehouseId, invSys actor/station, occurred/applied time with provenance,
   reference/parent/undo event, SKU/item name, exact System_Key, quantity/UOM,
   location/condition, Recipe/Process identity/version, RunId, shipment/BOM
@@ -453,6 +471,8 @@ may still read an authored guide, whose provenance remains visible.
   quantity/UOM, location/condition, source role, actor, business reason. Exact
   keys and family correlations are available in selected-event detail, which
   retains every contributing line. Labels are fixed product wording in R1.
+  Warning/Blocked/Error detail always retains its stable code, severity, owning
+  operation, explanation, data-effect uncertainty and advisory next step.
 - A profile affects rendering on explicit Refresh only and shows its version;
   it never rewrites payloads or changes collection/access policy. Missing profile
   uses a labelled built-in default. Malformed/unreadable profile reports failure
@@ -559,7 +579,7 @@ may still read an authored guide, whose provenance remains visible.
 
 **D13 execution and acceptance:**
 
-After approval, establish the current packaged GREEN baseline and create focused
+Before implementation, establish the current packaged GREEN baseline and create focused
 tests through modInventoryViewer.OpenInventoryViewer, actual Viewer Refresh/
 selection/Settings/guide/record/compare handlers, frmAdminSettings policy/profile
 handlers, and the real Operations/Admin action handlers being tracked. Missing
@@ -2020,14 +2040,12 @@ Receiving, Production, or Shipping/Boxing list surface, so it is not tied to
 one operation. A declared Admin list surface resolves only for an authenticated
 Administrator. The export is a user-requested copy of the existing operator
 projection, not an Admin action or a history/archive facility.
-**Future comprehensive Event Viewer:** After R1, design a comprehensive cross-domain Event Viewer for durable receipt, disposition, design, boxing, production, reservation, release, shipment, and administrative history. Its later design must define canonical event coverage, readable time-zone-aware timestamps, correlation/reference detail, filters, pagination or bounded history, retention, capability rules, and freshness indicators before implementation. The bounded R1 Events page and its displayed-list export are not the authority or a substitute for that design.
-
-**Pending Slice 4be scope decision (revised 2026-09-07):** The amendment following D18
-proposes replacing this after-R1 deferral with the specified bounded
-comprehensive Release 1 projection and extending curated Action Paths with
-recorded control evidence, How-To/Diagnostic comparison and a dedicated Settings
-tab. It is not effective until the user explicitly approves
-that amendment; current accepted Viewer behavior remains the regression baseline.
+**Comprehensive Events and Action Paths (R1 approved 2026-09-07):** D18
+replaces the former after-R1 deferral with a bounded comprehensive Operations/
+Admin projection, How-To/Diagnostic Action Paths and dedicated Event Tracking
+Settings. The current accepted Viewer behaviors above remain protecting
+regressions while that approved extension is implemented under D13. Contract
+approval is distinct from implementation and visible acceptance.
 
 ---
 ## Monitoring and Alerts (Release 1)

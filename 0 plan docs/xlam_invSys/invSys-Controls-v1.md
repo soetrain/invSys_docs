@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.60 (D5 implemented; shared Events and How-To/Diagnostic Action Path synthesis proposed)
+**Version:** 1.61 (D5 implemented; shared Events and How-To/Diagnostic Action Path contract approved; implementation pending)
 
 **Inventory date:** 2026-08-31
 
@@ -98,7 +98,7 @@ after connection, are never saved in the source set, and the form never changes
 the normal Send To warehouse target. Physical two-server/two-computer UAT is
 still pending.
 
-### Slice 4be shared Events and How-To/Diagnostic Action Paths: synthesis proposed; approval pending
+### Slice 4be shared Events and How-To/Diagnostic Action Paths: approved; implementation pending
 
 **Approved D5 prerequisite, 2026-09-06:** Admin Settings **Save Value** keeps its
 existing UI but invokes a dedicated Core configuration-write service. Core
@@ -115,18 +115,18 @@ passes 48/48 and the ordered Release 1 chain passes 30/30. The actual Settings
 save was visibly captured and inspected; fresh human acceptance is not claimed.
 See the [D5 evidence](../../../invSys_fork/tests/integration/plan022_slice4be_d5_config_commands_results.md)
 for package hashes, remaining/final regression gates and compile-only repairs.
-The remaining Event Detail/Action Path proposal still awaits its own decision.
+The separate Event Detail/Action Path contract was approved on 2026-09-07.
 
-The revised 2026-09-07 amendment following Architecture D18 is the approval
-target, synchronized with Plan 022 Slice 4be. The user directed a synthesis:
+Architecture D18 is approved as revised on 2026-09-07 and synchronized with
+Plan 022 Slice 4be. The user approved a synthesis:
 shared event/control evidence supports both a How-To guide and a diagnostic
 sequence, with both presentations available for comparison. This replaces the
 inactive proposal that would have discarded curated Save/Import/Export.
-Current normative D18 and the bounded Viewer contract remain effective until
-the detailed amendment is approved. No new control below is implemented or
-accepted; the existing D5 evidence above remains valid.
+The current normative contract explicitly extends the bounded Viewer baseline.
+The controls below are approved targets; implementation and visible acceptance
+remain pending. Existing D5 evidence above remains valid.
 
-| Proposed surface/control | Displayed wording and behavior |
+| Approved target surface/control | Displayed wording and behavior |
 |---|---|
 | Viewer Events scope | **Operator actions** (default) / **All published events**; Business event/User activity/Current state labels. Internal reservation is **Inventory Reserved**, never **Shipment Held** without Hold. |
 | Viewer filters and paging | Search, **Event family**, source/outcome and accepted remembered date filter; **Previous**, **Next**, matching/available/page counts. 100 matching records per page; newest 5,000 complete durable groups, explicit omissions and coverage. |
@@ -145,6 +145,15 @@ accepted; the existing D5 evidence above remains valid.
 | Operations personal Settings | Viewer **Settings > Event Tracking** exposes the view preference and effective tracking status read-only. Signed-in Operations-only users can save their preference without installing Admin or gaining ADMIN_MAINT. |
 | Settings actions | **Save Tracking Policy**, **Save Detail Profile**, **Save My Preference**, **Reload**, **Reset to Default**. Separate save scopes; Reset stages only, Close discards unsaved edits. No synthetic-preview recording. |
 | Evidence availability | **Not tracked**, **Hidden by policy**, **Tracking unavailable**, **Unavailable**, **Older release**; gaps cannot satisfy a diagnostic conclusion. Counter limit 256 actions; maximum saved record 1 MiB with explicit failure, never silent truncation. |
+| Structured warning/error | Stable EventCode, logical owning workflow, operation/correlation, severity, fixed explanation/next step and **Changed**, **Unchanged**, or **Unknown** operational-data effect. Unknown/partial outcome cannot imply success or rollback. No raw exception text or backend procedure names. |
+
+Every discovered control or safeguard records its governing architecture rule,
+logical owner, handler/reachability, context, status, protecting test and rationale.
+These entries may clarify or constrain the architecture; contradictory or
+materially weaker behavior requires an explicit approved architecture decision.
+The shared recorder is re-entrancy guarded and cannot execute remediation,
+retry a business action or dismiss existing errors. How-To remains advisory;
+RetryAllowed describes comparison with an observed retry only.
 
 The activity catalog accounts for all reachable Operations/Admin controls,
 including intentional exclusions. Future eligible Admin activity gains stable
@@ -168,9 +177,9 @@ current GREEN regressions plus five-package compile, layout/static/live-role/
 full-chain/restart; visible comparison on the same Operations and Admin tasks,
 including incomplete evidence. Fresh user acceptance remains open.
 
-The approved curated descriptions below remain the current effective target,
-while the proposed amendment above explicitly extends their behavior after
-approval. They do not authorize a conflicting implementation.
+The curated descriptions below describe the retained authoring portion of D18;
+the approved shared contract above also includes recorded diagnostic evidence.
+They do not restrict ordinary authorized users from recording their own actions.
 
 ### Curated Action Path storage: NAS-only contract locked; implementation pending
 
@@ -182,7 +191,7 @@ approved for the current Action Path implementation.
 
 ### Curated Action Path: approved; implementation pending
 
-Architecture D18 adds an **Action Path** tab to Viewer. Expected controls are
+Architecture D18 adds an **Action Paths** tab to Viewer. Its authoring controls are
 selected-Events summary, path name/tags/instructions, **Save**, path search and
 results, version/compatibility warning, **Export**, and capability-gated
 **Import**. The tab is a non-authoritative training library: it does not run

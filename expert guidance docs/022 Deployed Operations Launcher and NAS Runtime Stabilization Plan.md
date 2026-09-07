@@ -3281,7 +3281,7 @@ station entries and a separate historical `WH80` configuration rooted at
 available for this physical UAT. Do not repurpose either target or create a
 live warehouse without the operator's explicit staging approval.
 
-### Slice 4be -- current contract review: shared Events and How-To/Diagnostic Action Paths
+### Slice 4be -- approved implementation: shared Events and How-To/Diagnostic Action Paths
 
 **D5 prerequisite approved 2026-09-06; implemented and technically validated.** Following
 the D5 explanation, the user approved a read-only Core configuration API plus
@@ -3289,7 +3289,7 @@ a separate authorized headless Core write service. This replaces the earlier
 Admin-owned-writer proposal. Admin remains UI/orchestration; existing scalar
 Settings writes require `ADMIN_MAINT` at the command boundary, and the validated
 Production UOM publication retains its narrowly scoped `PROD_POST` path. D18's
-detailed Event Viewer/Action Path amendment remains a separate proposal.
+detailed Event Viewer/Action Path contract was separately approved on 2026-09-07.
 
 Implemented `modConfigCommands`, non-mutating `modConfig` reads, Admin Settings
 save routing and the validated UOM publication route. D13 recorded behavioral
@@ -3310,25 +3310,37 @@ grow. The actual Settings save was captured and inspected. See the maintained
 for exact commands, package hashes and final launcher/reusable Production gates.
 Fresh human UAT and the separate comprehensive Event Viewer acceptance remain open.
 
-**2026-09-07 status: synthesized contract drafted; detailed approval pending.**
-The user confirmed comprehensive Operations/Admin tracking, How-To and diagnostic
-uses, a dedicated Settings tab and user-side comparison. When asked which
-historical pair to retain, the user directed a synthesis of the useful parts.
-The revised amendment following D18 is the exact approval target: one event/
-activity foundation, one versioned Action Path, and How-To, Diagnostic and
-Compare both presentations. This supersedes the inactive 2026-09-06 proposal
-that would have discarded curated Save/Import/Export. Do not implement either
-historical alternative as a separate competing recorder.
+**2026-09-07 status: detailed synthesized contract APPROVED; implementation pending.**
+The user approved Architecture D18's shared Events, How-To/Diagnostic and Compare
+both contract, dedicated Event Tracking Settings and personal view choice.
+Architecture now explicitly replaces curated-only D18 and the after-R1 Viewer
+deferral while retaining authoring/search/version/export/import. The defaults,
+bounds and acceptance rules are approved; do not request that approval again.
 
-Current normative D18 authorizes curated training records but excludes diagnostic
-assertions; the Viewer section defers comprehensive history until after R1.
-The pending amendment explicitly changes those points and preserves D5/D12/D13
-and D19 required-audit protections. User product direction is confirmed; the
-detailed defaults, scopes, limits and acceptance rules still require approval.
-The prior handoff's comparison note is now clarified by the current user request,
-not a reason to reject both presentations.
+**Semantic inheritance:** This plan and the control catalog may discover
+controls, clarify implementation and strengthen tests within Architecture v4.11.
+Record governing rule, owner, verification and rationale for each discovery.
+A contradiction or material weakening requires an explicit approved decision
+in Architecture before implementation; neither this plan nor a handoff can
+silently authorize it. No current implementation plan switch is made:
+`023 Slice 4be Critique.md` is user-supplied advisory material, not Plan 023.
 
-**Execution after approval -- commit/push each completed subslice:**
+**Critique disposition (considered 2026-09-07):**
+
+| Advice | Decision under approved D18 |
+|---|---|
+| Events are facts; each event has an owner | Adopt as clarification. Catalog logical OwnerId and EventCode, retain owner decisions and canonical writes. Publication cannot invoke a workflow. |
+| Structured payload, severity and effect | Adopt bounded fields: stable EventCode distinct from instance RecordId/ActivityId, Severity and Changed/Unchanged/Unknown DataEffect. Owner-supplied facts determine effects; unknown or partial commit never becomes rollback/success by inference. |
+| Explain severe errors clearly | Adopt fixed catalog UserMessage/NextStep and sanitized cause codes; preserve existing error/confirmation handling. Reject arbitrary TechnicalDetail/raw Err.Description, paths and secrets. |
+| How-To advisory; diagnostics bounded | Retain approved guide/evidence comparison. Broader runtime connectivity/lease inspection and local UI repair are not added by the critique. |
+| Guide/Navigate/Inspect/Retry/Repair/Override classification | Do not adopt executable Action Path types. D18 prohibits replay/mutation; ordinary authorized operations remain with workflow owners. RetryAllowed matches an observed retry and never executes one. |
+| Recursion/deduplication/cancellation | Adopt observation re-entrancy guard, idempotent same-record retry, per-ActivityId tracking-notice coalescing, and no loss of distinct user attempts. Logging cannot generate recovery commands or reopen forms. |
+| Discovered safeguards feed the catalog | Adopt as required discovery metadata and protecting public-handler assertions. Further architectural changes require normative decisions, not hidden plan exceptions. |
+
+The user-created critique file and handoff 067 edits are preserved separately;
+their working-tree presence is not an implementation-plan pointer change.
+
+**Execution -- commit/push each completed subslice:**
 
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
@@ -3394,7 +3406,7 @@ owning read/publication boundary; no canonical business schema change is
 proposed. Runtime reports are redacted/ignored; no operational workbook writes
 or NAS rollout follow automatically from product-contract approval.
 
-**Evidence at review preparation:** The 2026-09-07 source read confirms Settings
+**Historical evidence at review preparation (before approval):** The 2026-09-07 source read confirms Settings
 currently has one runtime canvas and no Event Tracking tab; current Admin audit
 entries use a station workbook with no stable event ID. Prior Viewer inspection
 found Inventory/Events/ListBox->Table and no Action Path/profile handlers. The
@@ -3402,7 +3414,7 @@ new proposal changes no code, XLAM, active architectural contract or acceptance
 status. Validate document consistency, links/diff and Git status now; D13 begins
 with behavioral RED after contract approval.
 
-**2026-09-06 source-readiness evidence (proposal still unapproved):**
+**Historical 2026-09-06 source-readiness evidence (before approval):**
 
 | Boundary | Verified source | Consequence for the first packaged tests |
 |---|---|---|
@@ -3527,7 +3539,7 @@ explicit two-source `WarehouseId`/`System_Key` aggregation GREEN, and packaged
 form initialization GREEN. Physical two-server/two-computer UAT remains
 required before Slice 4bd acceptance.
 
-**Slice 4be** is now **comprehensive Viewer and curated Action Path: approved;
+**Historical 2026-09-03 Slice 4be record, superseded by current D18:** **comprehensive Viewer and curated Action Path: approved;
 implementation pending**. Architecture D18 approves a versioned curated
 training path, not either former captured-control or derived-control model.
 Viewer remains read-only for inventory/event authority. An `ACTION_PATH_MAINT`
