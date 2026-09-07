@@ -20,7 +20,10 @@ packaged D13 implementation.
   comparison and notes networking/deployment and historical-analysis deferrals.
 - No Excel process was listed during read-only inspection. Recheck before any
   build/deploy; no operational workbook or installed XLAM was touched.
-- The goal is active and incomplete. Release 1 acceptance is not claimed.
+- Last verified 2026-09-06: the goal is blocked awaiting the user's explicit
+  contract decision, after the same approval boundary persisted through three
+  consecutive goal turns. Proposal/readiness work is committed through docs
+  `aa02384` and code evidence `b108313`. Release 1 acceptance is not claimed.
 
 ## Decisions and constraints
 
