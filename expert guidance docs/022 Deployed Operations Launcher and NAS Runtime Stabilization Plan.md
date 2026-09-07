@@ -3281,7 +3281,73 @@ station entries and a separate historical `WH80` configuration rooted at
 available for this physical UAT. Do not repurpose either target or create a
 live warehouse without the operator's explicit staging approval.
 
-### Slice 4be -- superseded proposal wording (see approved 2026-09-03 amendment below)
+### Slice 4be -- current contract review: comprehensive Events and recorded control usage
+
+**2026-09-06 status: proposed amendment prepared; explicit approval pending.**
+The current user request makes Slice 4be the active priority. It calls Action
+Path optional revelation of controls actually used during a task. Architecture
+D18 instead defines curated event selections, and the normative Viewer section
+still defers comprehensive history until after R1. The 2026-09-03 amendment
+below cannot resolve those conflicts by itself. The proposal following D18 in
+Architecture v4.11 is the exact approval target; current D18 remains effective
+until approved. The controls catalog records the same pending state.
+
+Approval of that proposal would explicitly replace the curated model, including
+its Save/Import/Export workflow, with recorded user control usage in the existing
+NAS-only training-library location. It would not approve a derived path or a
+combined comparison model. The edited handoff's request to compare both models
+is unresolved lower-precedence guidance, not authorization to implement both.
+
+**Execution after approval:**
+
+1. Establish the current packaged GREEN baseline and map each eligible event
+   family and control to its existing source/public handler. Record unavailable
+   historical coverage rather than synthesizing it from current state.
+2. Add `tools/validate_slice4be_event_viewer.ps1` (proposed new harness) with
+   generated disposable warehouse fixtures. Observe behavioral RED through the
+   actual Viewer launcher/Refresh/selection/detail handlers and Admin Settings
+   handlers for missing profile controls, family coverage and bounded paging.
+   Harness, compile, and missing-fixture failures do not count as RED.
+3. Implement the published projection, labelled coverage/time/freshness, 5,000
+   record boundary, 100-row pages, and versioned allowlisted Admin detail profile.
+   Keep Operator actions as the default and distinguish current-state supplements
+   from durable history. Run focused GREEN before beginning the next contract.
+4. Add and observe RED through each affected role/Admin handler for capture
+   enablement, actual control ordering, submission/event correlation, 64-action
+   completeness, context reset, NAS persistence, capability denial, and optional
+   Show Action Path. Implement and prove GREEN for capture on/off, successful
+   and failed actions, repeat submissions, library failure, corrupt/older records,
+   sign-out/target change/restart, and unchanged event/inventory authority.
+5. Complete five-package build/compile/role initialization, Viewer/Admin and
+   affected role form layout checks, static maintenance, current packaged
+   Viewer/date-filter/list-export/launcher/Seed/Receiving/Shipping/Boxing/
+   inventory-management/reusable Production regressions, live-role proof, and
+   the full Release 1 chain. Record scoped maintenance exceptions for explicit
+   review before accepting metric growth. Commit/push each completed subslice.
+6. Present one visible operator checkpoint after automated GREEN: save an Admin
+   profile, enable capture, perform a receipt and Production task through the
+   actual controls, Refresh Events, filter/page/read detail, reveal the exact
+   recorded sequences, verify unavailable historical paths, and reopen saved
+   workbooks without duplicate launchers or lost binding. Record acceptance
+   separately from automated evidence.
+
+**Expected file/package scope:** `frmInventoryViewer.frm`,
+`modInventoryViewer.bas`, Core `modInventoryViewerData.bas` and
+`modWarehouseSync.bas`, existing Config/Auth boundaries, `frmAdminSettings.frm`
+and its Admin controller, affected Receiving/Production/Shipping/Boxing/Admin
+public handlers, a bounded training-record module, package manifests and the
+focused harness. Domain changes are permitted only if source inspection and
+focused RED establish a needed read/publication boundary; no canonical business
+event schema change is proposed. Runtime test reports remain redacted/ignored.
+
+**Evidence at review preparation:** Source inspection confirms the current
+Viewer has Inventory/Events/ListBox->Table, a ten-column event projection and
+existing public test seams; Action Path and detail-profile handlers are absent.
+No behavioral RED/GREEN, build, deployment, or new visible acceptance is claimed
+for this amendment. D13 implementation ordering begins after approval; preparing
+a clearly inactive proposal changes no runtime or effective architecture.
+
+#### Slice 4be historical proposal (superseded by the 2026-09-03 amendment)
 
 This is a proposal only. It must not change the existing read-only **Viewer**,
 its bounded R1 **Events** projection, its list export, or any event payload

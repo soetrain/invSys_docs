@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.57 (Production Slice 4ax-4bb user accepted; Slice 4bd connected-server Aggregator UX correction in progress; Slice 4be curated Action Path approved; Slice 4bf deployment accepted; Slice 4bi first-use NAS onboarding in progress; Slice 4bj NAS station setup packaged GREEN)
+**Version:** 1.58 (Slice 4be recorded-control replacement proposed; approval pending; existing accepted statuses retained)
 
 **Inventory date:** 2026-08-31
 
@@ -97,6 +97,39 @@ snapshot WarehouseId produce a selectable source. Credentials are cleared
 after connection, are never saved in the source set, and the form never changes
 the normal Send To warehouse target. Physical two-server/two-computer UAT is
 still pending.
+
+### Slice 4be Event Detail and recorded Action Path: replacement proposed; approval pending
+
+The 2026-09-06 proposal following Architecture D18 and the current Plan 022
+Slice 4be section are the approval target. Current D18's curated-path contract
+remains binding until that proposal is explicitly approved. The proposed
+replacement moves comprehensive Events into R1 and uses actual user control
+usage for training; curated Save/Import/Export and comparison mode would be
+deferred. No new control below is implemented or user accepted.
+
+| Proposed surface/control | Displayed wording and behavior |
+|---|---|
+| Viewer Events scope | **Operator actions** (default) / **All published events**; internal reservation is **Inventory Reserved**, never **Shipment Held**. Current-state supplements are labelled separately. |
+| Viewer family filter | **Event family**, combined with accepted Search/date filters across all loaded records. |
+| Viewer paging | **Previous**, **Next**, page/matching/available counts; 100 matching rows per page, newest 5,000 published durable records, explicit coverage/omission status. |
+| Viewer selected row | **Event Detail**, read-only fields from the current versioned Admin profile; exact event/entity correlation is retained. |
+| Viewer path checkbox/pane | **Show Action Path** (off per form session); reveals recorded captions in order, with **Unavailable**, **Partial**, or **Older release** where applicable. Never executes a control. |
+| Viewer freshness | Separate **Published** and **Loaded** times, explicit zone/UTC labels, coverage and **Stale** status after failed Refresh. |
+| Admin Settings section | **Event Detail**; event family, allowlisted field selection, enabled state and order, synthetic preview, **Save Profile**, **Reset to Default** (stages only). Core verifies `ADMIN_MAINT` on open/save. |
+| Admin Settings capture option | **Capture Action Paths**; `ViewerActionPathCaptureEnabled=False` by default, saved by `ADMIN_MAINT`; affects subsequent user actions only. |
+
+Capture records at most 64 allowlisted controls per submission, without input
+values, backend mechanics, or credentials. Records remain in the selected
+warehouse's NAS-only `Training\ActionPaths\<WarehouseId>` library; an originating
+authorized role action may append its own record under the proposed replacement
+contract. A capture failure does not block or repeat a business event.
+
+Inventory, current Events labels and remembered date filters, ListBox->Table,
+captured role-workbook binding, and modeless launcher reuse remain regression
+requirements. D13 packaged public-handler RED/GREEN, full five-package compile,
+layout/maintenance/live-role/full-chain/restart proof, and visible operator
+acceptance are pending. The older approved target descriptions below record
+the still-effective curated contract, not approval of a mixed implementation.
 
 ### Curated Action Path storage: NAS-only contract locked; implementation pending
 

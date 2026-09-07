@@ -1,1 +1,1 @@
-`067 Partial Goal Action Path NAS Contract.md`
+`068 Slice 4be Contract Proposal Awaiting Approval.md`
