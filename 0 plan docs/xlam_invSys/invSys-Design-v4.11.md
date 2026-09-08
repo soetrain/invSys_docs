@@ -562,6 +562,36 @@ it cannot retry the owner, redirect to ActiveWorkbook, or conceal its failure.
 These discovered controls and precise outcomes refine D18 without weakening
 D5, D12 or D13.
 
+**4be.1 Receiving Open/Close clarification:** Catalog 5 reserves RECEIVING_OPEN
+and RECEIVING_CLOSE, owned by RECEIVING_WORKFLOW, with fixed captions Receiving
+and Close on Operations > Receiving and existing RECEIVE_POST eligibility.
+Catalogs 1-4 retain their definitions; older policies cannot implicitly enable
+these new controls. This is a discovered-control refinement of the approved
+coverage and captured-context rules, not a new permission or business owner.
+
+The actual Receiving Ribbon dispatch records one REQUESTED/Info/Unknown and an
+owner-confirmed OPENED or REUSED outcome (RECEIVE_OPEN_ prefix). Both outcomes
+are Info/Unknown: opening can provision or initialize a local workbook, and
+form visibility alone proves neither a persisted data effect nor Domain success.
+FAILED/Error/Unknown preserves the launcher's visible cause and uncertainty.
+The existing launcher alone resolves/provisions the workbook and establishes
+the form binding. Reuse requires the same still-open workbook and captured
+invSys session/warehouse; a new explicit launch replaces an invalid form without
+attributing the old form's internal unload as a user Close. Initialization,
+direct compatibility macro calls and backend refreshes are not extra clicks.
+
+The Close button and explicit window close each record one correlated REQUESTED
+and CLOSED pair (RECEIVE_CLOSE_ prefix), with CLOSED/Info/Unchanged describing
+only dismissal of the UI, never posting or clearing staged work. Termination,
+internal replacement, workbook shutdown and programmatic Unload add no Close
+activity. A stale session or missing captured workbook still permits dismissal
+but cannot attribute that dismissal to another context. All Open/Close source
+references are empty. Optional tracking failure remains visible through the
+existing operator notification surface and cannot block closing, retry opening,
+redirect a workbook, or replace the underlying failure. Disabled Ribbon actions
+remain subject to their existing capability guard; comprehensive denial coverage
+must be separately proved before claiming the whole launcher surface complete.
+
 **Event Detail profile:**
 
 - Admin > Settings > Event Tracking > Event Detail chooses an event family,

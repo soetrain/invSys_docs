@@ -3538,6 +3538,19 @@ catalog/outcomes, read-model owner/bridge, the Receiving form/controller and
 existing local Clear owner implement this checkpoint. No new business permission
 or canonical writer was added.
 
+**Receiving Open/Close D13 entry, 2026-09-07:** Continue 4be.1 from the preserved
+491-check catalog-4 candidate. Architecture D18's Open/Close clarification
+governs catalog 5: owner-confirmed OPENED/REUSED/FAILED and explicit CLOSED,
+empty business references, no internal-unload attribution, and session/workbook
+validity before reuse. Add actual generated Ribbon callback and Close/QueryClose
+handler tests before runtime changes. Expected RED is missing observations and
+reuse of an old-session form. Preserve earlier GREEN checks, optional-store
+failure behavior, direct-call exclusion and unrelated workbook/authority bytes.
+The Core catalog/outcome definitions, Operations launcher/form and generated
+Receiving Ribbon route are the bounded expected runtime scope. Implementation,
+focused results and release gates for this checkpoint are pending; the previous
+Refresh/Clear checkpoint remains verified. Controls v1.71 records this entry.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |
