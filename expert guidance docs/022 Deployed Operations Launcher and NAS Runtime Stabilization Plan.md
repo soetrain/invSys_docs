@@ -3725,11 +3725,35 @@ passes cold-start/five compiles and matches all 168 extracted VBA components,
 but also crashes at batch scale. An unsaved source-preserving Operations
 recompilation probe likewise crashes at batch scale. Both report the same native
 fault. No cause, regression exemption or checkpoint completion is established.
-Next: isolate candidate Core+Operations together against prior unchanged
-Admin/Domain packages, with actual loaded dependency provenance checked. Do not
-repeat unchanged retries or treat diagnostic combinations as accepted release
-sets. Original/rebuilt hashes remain unchanged and Excel is closed at the final
-2026-09-08 check. See code evidence
+The subsequent provenance comparisons pass 2/2 for candidate Core+Operations
+with prior Domains, all current executing packages relocated, and the original
+candidate at its original location. Actual initial/restart dependencies resolve
+within each intended directory. These inspection variants do not prove a repair;
+Admin is present but not loaded by this harness. A one-second pause without
+project inspection still fails at batch scale. Saving resolved copied packages
+also fails there despite unchanged source and five successful compile checks.
+
+Corrected bounded native observers capture a preceding `0xc0000005`, then
+`0xc0000028` through VBE7/ntdll; both full runs fail at the variable-quantity
+boundary. The first observer run is inconclusive because it could swallow other
+exceptions; stronger synthetic calibration now passes 15/15. An unsaved fixed-stage
+probe fails at ReleaseSource in the released Process edit/export test. None of
+these traces identifies the faulty VBA statement or supplies behavioral RED.
+
+A fresh copied set with all five projects explicitly recompiled **before** saving
+preserves all 168 source components and passes its initial full workflow, but
+fails clean restart: 1 PASS / 1 failure. It is not an accepted build fix or release
+set. A full rerun with 20 fixed harness markers around restart teardown/loading/
+actions passes 2/2 without project inspection or VBA mutation. Timing/intermittency
+remains unresolved. Next: prove the outgoing owned Excel process is terminal
+before new-session construction; the current harness has no explicit exit wait
+after its termination request. This is an unverified hypothesis, not permission
+to weaken the gate or promote either diagnostic result. All 20 pinned packages
+across the four preserved sets remain unchanged; Excel is closed at this check.
+No runtime/architectural contract changed in this diagnostic work. D12/D13/D18
+and every remaining release gate remain binding. See the continued
+[diagnostic evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_provenance_diagnostics.md)
+and the original code evidence
 `tests/integration/plan022_slice4be_receiving_launcher_denial_results.md`.
 
 **Receiving worksheet surface discovery, 2026-09-08:** D18's existing coverage

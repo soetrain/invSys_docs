@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.81 (Receiving launcher-denial implemented; reusable Production gate unresolved)
+**Version:** 1.82 (Receiving launcher-denial implemented; Production diagnostic evidence extended; gate unresolved)
 
 **Inventory date:** 2026-08-31
 
@@ -258,6 +258,21 @@ inventing a key; Training retains its existing failure wording. Plan 022 and the
 retain the RED evidence and explicit three-group event-adapter maintenance
 exception; no business authority or existing size limit is relaxed. Comprehensive
 4be coverage and human acceptance remain open.
+
+**Receiving denial acceptance update, 2026-09-08:** The later candidate still
+requires a passing full reusable Production/restart gate. Read-only dependency
+inspection variants pass 2/2, but timing-only and save-only variants fail. Corrected
+native observers capture `0xc0000005` before `0xc0000028`; the initial observer's
+2/2 result is inconclusive because it could swallow unrelated exceptions.
+Synthetic calibration now passes 15/15. A separately copied five-package set,
+explicitly recompiled before saving with all 168 source components unchanged,
+passes the initial complete workflow and fails restart (1 PASS / 1 failure).
+The same set passes 2/2 with fixed harness restart markers and no VBA/project
+inspection, leaving timing/intermittency unresolved. All 20 pinned packages in
+the four preserved diagnostic sets remain unchanged; Excel is closed.
+No control wording, capability, ownership or runtime source changes in this
+diagnosis; no build fix, checkpoint completion or human acceptance is established.
+See [Production diagnostic evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_provenance_diagnostics.md).
 
 | Stable identity / surface | Existing route and logical owner | Coverage status / protecting evidence required |
 |---|---|---|
