@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.63 (initial activity foundation candidate GREEN; Receiving activity coverage RED)
+**Version:** 1.64 (Receiving Confirm Writes activity candidate GREEN; comprehensive coverage pending)
 
 **Inventory date:** 2026-08-31
 
@@ -184,19 +184,36 @@ before retrieving the catalog.** This enforces D18's captured-session rule;
 optional store failure still permits an otherwise authorized command.
 See [foundation candidate evidence](../../../invSys_fork/tests/integration/plan022_slice4be_activity_foundation_results.md).
 
-**Receiving discovered control, 2026-09-07 -- observation implementation pending:**
+**Receiving discovered control, 2026-09-07 -- focused candidate GREEN:**
 
 | Stable ControlId | Context / existing handler | Logical owner and facts | Verification / rationale |
 |---|---|---|---|
-| RECEIVING_CONFIRM_WRITES | Receiving Receipts tab, Confirm Writes; `frmReceiving.mBtnConfirm_Click` -> `modReceivingPostingService.ExecuteConfirmWrites`; captured role workbook, warehouse/session and RECEIVE_POST | RECEIVING_WORKFLOW; entry effect Unknown; exact source events come from the owning queue operation. Submission or batch-level success alone cannot establish every Domain event's application. | D18 governs. Packaged real Add/Confirm test is 30 PASS / 8 FAIL, retaining all 18 D5 checks. Applied and queued-but-unapplied fixtures pass independent source and binding guards; both lack activity evidence. |
+| RECEIVING_CONFIRM_WRITES | Receiving Receipts tab, Confirm Writes; `frmReceiving.mBtnConfirm_Click` -> `modReceivingActivityAction.ConfirmWrites` -> existing `modReceivingPostingService.ExecuteConfirmWrites`; captured role workbook, warehouse/session and RECEIVE_POST | RECEIVING_WORKFLOW; entry and CONFIRMED/PENDING effects Unknown; every exact source event comes from the owning queue operation. Submission or batch-level success alone cannot establish every Domain event's application. | D18 governs. Initial 30 PASS / 8 FAIL progressed to combined 133/133 GREEN, including all 70 foundation checks. Applied, queued-but-unapplied, stale-session and unavailable-store form cases preserve business/binding/extra-column guards; four actual captures inspected. See current evidence for compatibility, delivery and release gates. |
 
-See [Receiving activity RED](../../../invSys_fork/tests/integration/plan022_slice4be_receiving_activity_red_results.md).
+See [Receiving activity RED](../../../invSys_fork/tests/integration/plan022_slice4be_receiving_activity_red_results.md)
+and [current candidate evidence](../../../invSys_fork/tests/integration/plan022_slice4be_receiving_activity_results.md).
 The Add handler establishes fixture identities but is not yet claimed as an
 implemented tracked control. Confirm Dispositions uses the same button on the
 Returns tab and remains separate pending coverage. This entry records an
 existing reachable control and its D18 evidence requirement; it adds no workflow,
-permission or application authority. Runtime codes/reference validation,
-publication and visible acceptance remain unfinished.
+permission or application authority. Codes and source-reference validation are
+implemented; publication, remaining owner outcome branches and human acceptance
+remain unfinished.
+
+The D18 wire refinement defines `RECEIVE_CONFIRM_REQUESTED`,
+`RECEIVE_CONFIRM_CONFIRMED`, `RECEIVE_CONFIRM_PENDING`,
+`RECEIVE_CONFIRM_DENIED`, `RECEIVE_CONFIRM_REJECTED` and
+`RECEIVE_CONFIRM_FAILED` for this control. CONFIRMED/PENDING have Unknown Domain
+effect; confirmed queue references carry SubmissionState Submitted, uncertain
+submission carries Unknown. Pre-submission rejection/denial has no references.
+Catalog 2 adds the control and retains catalog-1 reads; an older saved policy
+must explicitly include the new control before optional tracking is available.
+The form must reject a stale session before confirmation and append Tracking
+unavailable when optional observation fails without blocking authorized work.
+The setup ownership regression also proves Admin Seed closes only Config opened
+by its implicit station-inbox setup, preserving a pre-existing workbook and its
+unknown columns. No new operator control or permission was introduced by that fix.
+These declarations inherit D18 and remain pending packaged GREEN.
 
 The completed activity catalog must account for all reachable Operations/Admin controls,
 including intentional exclusions. Future eligible Admin activity gains stable

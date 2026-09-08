@@ -3310,7 +3310,7 @@ grow. The actual Settings save was captured and inspected. See the maintained
 for exact commands, package hashes and final launcher/reusable Production gates.
 Fresh human UAT and the separate comprehensive Event Viewer acceptance remain open.
 
-**2026-09-07 status: detailed synthesized contract APPROVED; 4be.1 foundation candidate GREEN; comprehensive coverage pending.**
+**2026-09-07 status: detailed synthesized contract APPROVED; 4be.1 foundation and Receiving confirmation candidates GREEN; comprehensive coverage pending.**
 The user approved Architecture D18's shared Events, How-To/Diagnostic and Compare
 both contract, dedicated Event Tracking Settings and personal view choice.
 Architecture now explicitly replaces curated-only D18 and the after-R1 Viewer
@@ -3394,6 +3394,41 @@ preserve captured context and distinguish submission from Domain application.
 Existing batch-level success is insufficient per-event diagnostic proof. D18's
 approved observation semantics govern this discovered control; no architectural
 contract change or further approval is implied by the test checkpoint.
+
+The D18 Receiving wire clarification now specifies exact WarehouseId/SourceKind/
+EventId/SubmissionState references. Submitted confirms queue acceptance only;
+Unknown retains uncertain submission after failure. CONFIRMED/PENDING retain
+Unknown Domain effect until owning application evidence exists. Catalog 2 adds
+Receiving while reads preserve supported catalog-1 definitions/policies; an old
+saved policy does not implicitly enable a new control. The focused extension
+must reject malformed references, retain valid prior records/policies, and
+exercise stale-session and tracking-store failure through the actual form.
+These are semantic-inheritance clarifications implemented in the candidate.
+
+**Receiving candidate GREEN, 2026-09-07:** The combined packaged suite passes
+**133/133**, retaining all 70 foundation checks. Expanded RED was 54 PASS / 12
+FAIL before implementation. Actual Receiving confirmation now observes through
+a role-owned controller and calls the existing posting service once. Applied,
+pending, stale-session and unavailable-store cases protect exact source
+references, truthful Unknown Domain effect, binding and business behavior.
+
+The test also discovered an implicit Config setup ownership leak during Admin
+Seed. Focused ownership RED was 61 PASS / 10 FAIL; the new ownership assertion
+and nine observation/read assertions failed. Core's implicit resolver now
+reports newly opened Config to the existing cleanup path. Pre-existing Config
+and unknown columns remain intact; policy reads preserve file bytes and refuse
+unrelated dirty open Config. This restores D5 ownership discipline without
+changing setup permissions or observation authority. Compile 5/5, packaged
+81/81, live-role 48/48 and full-chain/restart 30/30 pass. Four actual Receiving
+form captures show completed/pending work, stale rejection and tracking failure;
+human acceptance remains pending. See
+[Receiving candidate evidence](../../invSys_fork/tests/integration/plan022_slice4be_receiving_activity_results.md)
+for the expanded focused run and complete checkpoint gate results. Viewer,
+Production layout/window states, three launcher checks and both reusable
+Production/restart aggregate checks pass. Static candidates (1,077), duplicate
+groups (192) and dynamic-call counts (45 unresolved/eight literal) are unchanged;
+all 28 oversized-module ratchets hold. Comprehensive 4be.1 coverage and later
+subslices remain incomplete.
 
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|

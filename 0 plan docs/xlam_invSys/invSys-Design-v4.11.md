@@ -466,6 +466,34 @@ strings. Verified activity/policy UTC uses a valid calendar/time value in
 rejects a stale session before its command, independently of optional tracking
 availability; re-authenticating the same user does not revive that form binding.
 
+**4be.1 Receiving/source-reference clarification:** Each SourceEventRefs entry
+has exactly string fields WarehouseId, SourceKind, EventId and SubmissionState.
+WarehouseId must match the activity; SourceKind is the registered owning source
+(initially Inventory for Receiving). EventId preserves the exact owner-generated
+identity passed to the submission boundary. Submitted means that boundary
+confirmed acceptance; Unknown retains a possibly submitted identity after an
+uncertain failure. Neither state proves Domain application. Reject duplicate
+references, unknown fields/source/state, cross-warehouse references and invalid
+identity text; never rewrite an identity or silently drop individual references.
+Identity text is bounded to 128 ASCII letters, digits, hyphens or underscores;
+unsupported source identity makes optional evidence unavailable, not a business
+failure. The existing 1 MiB bound applies to the whole record without truncation.
+Attempts and known pre-submission denials/rejections have empty references.
+Receiving command confirmation may report CONFIRMED with Unknown Domain effect;
+a submitted command whose processing/refresh did not finish reports PENDING with
+Unknown effect. Both retain every related source reference, and only later
+owning published evidence can satisfy an all-events-applied conclusion.
+
+Catalog version 2 adds the Receiving confirmation control while retaining the
+version-1 definitions. Reads validate against the record/policy's own supported
+catalog version, preserving original captions and outcomes. A valid version-1
+policy continues governing its two registered controls; a newly introduced
+control absent from that saved version has unavailable optional tracking until
+an explicit whole-policy update includes it. Do not reinterpret that valid older
+policy as a permissive policy for newly introduced controls, repair it on read,
+or fall back from malformed latest policy. This refines D18's versioned coverage
+and older-release rules without changing configuration or business authority.
+
 **Event Detail profile:**
 
 - Admin > Settings > Event Tracking > Event Detail chooses an event family,
