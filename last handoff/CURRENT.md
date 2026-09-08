@@ -1,1 +1,1 @@
-`075 Receiving Staging and Disposition Candidate GREEN.md`
+`076 Receiving Refresh Clear and Freshness GREEN.md`
