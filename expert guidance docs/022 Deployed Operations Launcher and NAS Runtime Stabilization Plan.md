@@ -3501,11 +3501,22 @@ The first run is 322 PASS / 74 FAIL, with two combined fixture-header checks
 excluded from intended RED. Expanded current-table header, closed-workbook and
 catalog-3 policy checks produce **365 PASS / 74 FAIL** with no harness exception;
 all earlier 262 checks remain GREEN. Header and unrelated-workbook guards now
-pass, and all remaining failures match the intended missing behavior. No runtime
-change or GREEN claim is made yet. See the code repository's
+pass, and all remaining failures match the intended missing behavior. The initial
+catalog-4 candidate subsequently passes **439/439** focused checks, five builds,
+explicit compiles and cold start. It is not a completed checkpoint: source
+inspection found that the read-model owner can return True while retaining
+cached inventory or loading a stale fallback. Additional actual-handler tests
+now exercise both source states on Receiving and Returns before a freshness fix.
+Architecture D18 clarifies owner-returned REFRESHED/STALE/FAILED primitives;
+STALE is Warning/Changed for local metadata/projection work, with empty source
+references and preserved visible cause. Boolean compatibility and existing
+snapshot selection remain unchanged. This is a discovered outcome refinement
+under approved semantic inheritance, not a new diagnostic authority. The Core
+read-model owner and its declared bridge join the bounded implementation scope.
+Changed-package release gates remain pending. See the code repository's
 `tests/integration/plan022_slice4be_receiving_local_results.md`.
 Architecture D18 records the precise discovered-control outcomes
-before implementation; controls v1.68 is synchronized. Core catalog/outcomes,
+before implementation; controls v1.69 is synchronized. Core catalog/outcomes,
 the Receiving form/controller and existing local Clear owner are the intended
 implementation sites. No new business permission or canonical writer is proposed.
 

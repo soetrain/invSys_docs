@@ -532,8 +532,20 @@ their captured session, warehouse and still-open role workbook. Stale context
 rejects before the local owner call, independently of optional tracking. Direct
 service calls and internal/programmatic refreshes are not user-control activity.
 
-RECEIVE_REFRESH_REFRESHED/Info/Changed means the existing owner confirmed a
-workbook-local projection refresh. RECEIVE_CLEAR_CLEARED/Info/Changed means the
+RECEIVE_REFRESH_REFRESHED/Info/Changed means the existing read-model owner
+confirmed a workbook-local projection refresh from a non-stale source.
+RECEIVE_REFRESH_STALE/Warning/Changed means that owner retained cached inventory
+or loaded a stale fallback and updated local freshness metadata. Changed refers
+only to local projection/metadata work, not fresh inventory or Domain effect.
+The existing Boolean refresh result remains compatible: True may include STALE.
+The owner additionally returns the primitive string REFRESHED, STALE or FAILED
+through the declared Core/Operations refresh bridge; callers must not infer
+freshness from Boolean success or parse human-readable reports. The actual form
+preserves the owner's cached/stale explanation instead of replacing it with a
+fresh-success message. Unknown/missing outcome evidence cannot assert REFRESHED.
+This clarification inherits the approved owner-fact and freshness rules; it
+changes neither snapshot selection nor business-write authority.
+RECEIVE_CLEAR_CLEARED/Info/Changed means the
 owner cleared nonempty local staging/aggregation; RECEIVE_CLEAR_EMPTY/Info/
 Unchanged means it was already empty. All references remain empty: these actions
 neither submit business events nor establish Domain application. Fixed messages

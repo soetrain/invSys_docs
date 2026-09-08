@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.68 (Receiving Add/Confirm candidate GREEN; Refresh/Clear packaged RED)
+**Version:** 1.69 (Refresh/Clear initial focused GREEN; freshness correction pending)
 
 **Inventory date:** 2026-08-31
 
@@ -242,8 +242,8 @@ changes and preserve the captured workbook/session. No field value is recorded.
 | DISPOSITION_ADD_SELECTED; Returns Add Disposition | Same Add handler -> `StageInventoryDispositionForWorkbook`; RECEIVING_DISPOSITION | Candidate GREEN: allocated existing keys and distinct RETURN/DUMP behavior, staged/rejected/failed observations and optional store failure, with no selected values in activity. |
 | RECEIVING_CONFIRM_WRITES; Receiving Confirm Writes | Actual form -> `modReceivingActivityAction.ConfirmWrites` -> posting owner; RECEIVING_WORKFLOW | Candidate implementation and focused outcomes covered above; publication/sequence consumption still pending. |
 | DISPOSITION_CONFIRM; Returns Confirm Dispositions | Same Confirm handler -> posting/disposition owner; RECEIVING_DISPOSITION | Candidate GREEN: four exact source events retained, independent RETURN/DUMP depletion and application once, Unknown Domain effect in activity. Publication/sequence consumption remains pending. |
-| RECEIVING_REFRESH; Receiving/Returns Refresh | `mBtnRefresh_Click` -> `RefreshClicked` -> `RefreshReceivingUiForWorkbook`; RECEIVING_WORKFLOW | Catalog-4 implementation pending; packaged RED established. REQUESTED, REFRESHED/Changed for local projections, FAILED/Unknown. Preserve an owner-returned failure instead of displaying success; stale context must prevent owner entry. Internal refreshes do not impersonate clicks. |
-| RECEIVING_CLEAR; Receiving/Returns Clear | `mBtnClear_Click` -> `ClearReceivingFormStagingForWorkbook`; RECEIVING_STAGING | Catalog-4 implementation pending; packaged RED established. CLEARED/Changed for nonempty local staging, EMPTY/Unchanged, FAILED/Unknown for an owner failure including a partial two-table deletion. Preserve unknown headers and captured context; no inventory mutation or replay. |
+| RECEIVING_REFRESH; Receiving/Returns Refresh | `mBtnRefresh_Click` -> `RefreshClicked` -> `RefreshReceivingUiForWorkbook`; RECEIVING_WORKFLOW | Initial catalog-4 focused GREEN; freshness correction pending. REQUESTED; REFRESHED/Info/Changed only for owner-confirmed non-stale projection; STALE/Warning/Changed for cached/fallback local metadata or projection; FAILED/Error/Unknown. Preserve the owner's stale/failure cause; Boolean True alone does not prove freshness. Stale context prevents owner entry. Internal refreshes do not impersonate clicks. |
+| RECEIVING_CLEAR; Receiving/Returns Clear | `mBtnClear_Click` -> `ClearReceivingFormStagingForWorkbook`; RECEIVING_STAGING | Initial catalog-4 focused GREEN; final package gates pending. CLEARED/Changed for nonempty local staging, EMPTY/Unchanged, FAILED/Unknown for an owner failure including a partial two-table deletion. Preserve unknown headers and captured context; no inventory mutation or replay. |
 | RECEIVING_CLOSE; Close or window close | `mBtnClose_Click`, `UserForm_QueryClose` and termination; RECEIVING_WORKFLOW | Activity pending; one explicit close observation, no duplicate termination record or record from internal launcher replacement. |
 | RECEIVING_PAGE_RECEIPTS / RECEIVING_PAGE_RETURNS / RECEIVING_PAGE_PURCHASING | `mTabs_Change` -> `ApplyReceivingTab`; RECEIVING_NAVIGATION | Optional selection coverage pending; distinguish operator page selection from programmatic initialization. Purchasing stays the approved non-operational stub. |
 | RECEIVING_SELECT_ITEM / DISPOSITION_SELECT_ITEM | `mLstReceiveItems_Click` -> `LoadSelectedReceiveItemDetails`; RECEIVING_NAVIGATION | Optional coverage pending; account for the two tab-specific item-result surfaces; automatic location/condition fills are not separate user actions. |
@@ -258,15 +258,20 @@ the remaining controls are implemented or that every other Operations/Admin
 surface has been mapped. Runtime catalog version 3 registers six controls:
 the original two configuration actions and four Receiving Add/Confirm actions.
 The catalog-4 target adds the two shared Refresh/Clear controls under D18's
-explicit clarification; it is not yet implemented. Both have empty business
+explicit clarification; its initial candidate passes 439/439 focused checks.
+Additional packaged tests protect real cached/stale source outcomes before
+changing the owner/bridge to report explicit REFRESHED/STALE/FAILED state.
+Both controls have empty business
 source references, fixed local-scope messages, visible optional tracking failure
 and no collection from direct/internal calls. Earlier catalog policies cannot
 implicitly enable them. The new test cases cover both Receiving and Returns.
 Expanded packaged RED is **365 PASS / 74 FAIL**, retaining all previous 262
 GREEN checks with no harness exception. Current-table header checks, partial
 Clear effects, local-only authority bytes and direct/internal negative attribution
-pass; the missing observations, stale guards, closed-workbook feedback and
-false refresh success remain implementation targets. See
+pass. Initial implementation resolves the missing observations, stale guards,
+closed-workbook feedback and False-result success message. A True-but-stale
+result remains a discovered gap; the final candidate and release gates are
+pending. See
 [Refresh/Clear RED evidence](../../../invSys_fork/tests/integration/plan022_slice4be_receiving_local_results.md).
 
 **Catalog-3 outcome definitions (D18; candidate GREEN):** Add Selected
