@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.82 (Receiving launcher-denial implemented; Production diagnostic evidence extended; gate unresolved)
+**Version:** 1.83 (Receiving launcher-denial implemented; Production execute-fault evidence captured; gate unresolved)
 
 **Inventory date:** 2026-08-31
 
@@ -273,6 +273,16 @@ the four preserved diagnostic sets remain unchanged; Excel is closed.
 No control wording, capability, ownership or runtime source changes in this
 diagnosis; no build fix, checkpoint completion or human acceptance is established.
 See [Production diagnostic evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_provenance_diagnostics.md).
+
+The subsequent full exit-boundary diagnostic passes 2/2 with verified terminal
+first process and distinct restarted process, without adding a wait. The original
+candidate still fails at batch scale with a first-chance execute access violation;
+its supplying VBA call remains unknown. Metadata calibration passes 24/24. A
+separate live SaveAs/detector calibration disproves the suspected build-order
+defect: the saved XLAM is not loaded, and the existing builder passes 7/7 external
+edit checks with a 5/5 detector calibration. No build or runtime implementation
+changed; these findings do not close the Production gate or alter any control.
+See [exit/execute evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_exit_and_execute_results.md).
 
 | Stable identity / surface | Existing route and logical owner | Coverage status / protecting evidence required |
 |---|---|---|

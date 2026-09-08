@@ -3745,10 +3745,27 @@ preserves all 168 source components and passes its initial full workflow, but
 fails clean restart: 1 PASS / 1 failure. It is not an accepted build fix or release
 set. A full rerun with 20 fixed harness markers around restart teardown/loading/
 actions passes 2/2 without project inspection or VBA mutation. Timing/intermittency
-remains unresolved. Next: prove the outgoing owned Excel process is terminal
-before new-session construction; the current harness has no explicit exit wait
-after its termination request. This is an unverified hypothesis, not permission
-to weaken the gate or promote either diagnostic result. All 20 pinned packages
+remains unresolved. Subsequent exit verification finds the outgoing process
+terminal in three focused teardown cases and a full workload/restart run (2/2),
+with a distinct restart identity and only in-memory markers. This provides no
+support for an exit-wait repair. The original candidate still fails at batch
+scale under a calibrated native observer: the preceding c0000005 is a first-chance
+execute violation at an unresolved site. Metadata calibration is 24/24; no raw
+addresses, memory contents, stack arguments or operational values are persisted.
+
+A separate apparent RibbonX build-order concern was disproved by live calibration:
+SaveAs to XLAM writes a copy while the source workbook retains its original name
+and empty path. The actual saved artifact is not loaded. The unchanged builder
+passes 7/7 external-edit boundary checks; its exact detector passes 5/5 calibration,
+including rejection of an explicitly opened XLAM and byte preservation. The first
+probe's enumeration/JSON assumptions were harness errors, not behavioral RED.
+No build reorder, new exit wait, runtime change or architectural amendment was
+implemented. The new boundary test protects already-correct package assembly.
+Next: classify the invalid execution site's memory state/type/protection using a
+calibrated read-only metadata probe, without reading its contents. These are
+diagnostic results, not permission to weaken or replace the full gate. See the
+[exit/execute evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_exit_and_execute_results.md).
+All 20 pinned packages
 across the four preserved sets remain unchanged; Excel is closed at this check.
 No runtime/architectural contract changed in this diagnostic work. D12/D13/D18
 and every remaining release gate remain binding. See the continued
