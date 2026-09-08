@@ -93,8 +93,9 @@ with the native observer in an isolated unsaved diagnostic of the actual handler
   Earlier fixed-stage failure stopped at testStage ReleaseSource, after SaveSourceDraft.
 - `tools/validate_plan022_packaged_launchers.ps1`: unchanged full workflow.
 - Ignored `reports/runtime/slice4be-launcher-denial/`: `NativeFrameProbe.cs`,
-  `test-native-frame-probe.ps1`, `test-native-memory-labels.ps1`, both
-  `native-*-calibration-helper-sha256.txt` pins and calibration checks;
+  `test-native-frame-probe.ps1`, `test-native-memory-labels.ps1`,
+  `native-calibration-helper-sha256.txt`, `native-memory-calibration-helper-sha256.txt`
+  and calibration checks;
   `native-stack-probe-v5/`, `native-stack-probe-v6/`,
   `native-restart-memory-probe/`, `memory-diagnostic-package-preservation.json`.
 - `create-native-restart-memory-probe.ps1`, generated restart harness,
