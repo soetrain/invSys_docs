@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.65 (Receiving owner outcomes/retry GREEN; remaining control coverage mapped and pending)
+**Version:** 1.66 (Receiving staging/disposition activity RED; catalog-3 implementation pending)
 
 **Inventory date:** 2026-08-31
 
@@ -256,6 +256,22 @@ This map is a discovery record under the normative contract, not evidence that
 the remaining controls are implemented or that every other Operations/Admin
 surface has been mapped. Runtime catalog version 2 still registers only the
 three implemented controls described above.
+
+**Catalog-3 outcome definitions (D18; implementation pending):** Add Selected
+and Add Disposition use RECEIVE_ADD_ and DISPOSITION_ADD_. REQUESTED is
+Info/Unknown; STAGED is Info/Changed for confirmed workbook-local staging only,
+with no source submission references. Form pre-validation is
+REJECTED/Warning/Unchanged. A failed owning service call/exception remains
+FAILED/Error/Unknown; raw report text cannot manufacture a denial or rollback.
+Confirm Dispositions uses DISPOSITION_CONFIRM_ with the existing confirmation
+outcomes, all exact submitted Inventory references and Unknown Domain effect.
+Versions 1/2 remain readable; older policies do not implicitly enable these new
+controls. Actual-handler RED is 206 PASS / 15 FAIL, retaining the earlier 190
+checks. Independent receipt/RETURN/DUMP application, exact identities, captured
+workbook, extra columns and no activity from direct staging already pass.
+Expanded actual invalid-quantity and protected-sheet cases are **210 PASS /
+35 FAIL**, with the original business errors and staged row values preserved;
+activity implementation and changed-package gates remain pending.
 
 Headless Core owns the activity/library boundaries and versioned policy/profile
 commands; Admin and Operations own their respective UI. Existing D5 scalar/UOM

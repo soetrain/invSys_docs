@@ -494,6 +494,32 @@ policy as a permissive policy for newly introduced controls, repair it on read,
 or fall back from malformed latest policy. This refines D18's versioned coverage
 and older-release rules without changing configuration or business authority.
 
+**4be.1 Receiving staging/disposition clarification:** Catalog version 3 adds
+RECEIVING_ADD_SELECTED (RECEIVING_STAGING), DISPOSITION_ADD_SELECTED and
+DISPOSITION_CONFIRM (RECEIVING_DISPOSITION), preserving versions 1 and 2.
+The older-policy rule above applies to every newly registered control. The
+actual Add handler records REQUESTED before validation; STAGED/Info/Changed
+means its owning service confirmed a change to workbook-local staging only.
+It neither submits an event nor proves an inventory effect. Its source references
+remain empty, including preallocated staging EventIds that have not been submitted.
+Local form validation reports REJECTED/Warning/Unchanged before service entry;
+an unsuccessful service call or exception reports FAILED/Error/Unknown unless
+the owner provides a more specific supported result. Do not classify raw error
+text, assume rollback, or invent a capability denial from a generic failure.
+Add uses fixed prefixes RECEIVE_ADD_ and DISPOSITION_ADD_; its message and next
+step explicitly identify local staging. Direct staging service calls do not
+produce user-control activity. Captured-session rejection precedes staging
+independently of optional tracking; optional append failure preserves the
+authorized staging action and displays Tracking unavailable.
+
+Confirm Dispositions uses DISPOSITION_CONFIRM_ and the same owner-reported
+REQUESTED/CONFIRMED/PENDING/DENIED/REJECTED/FAILED semantics and exact Inventory
+source references as Receiving confirmation. Its captions/messages name inventory
+dispositions. RETURN and DUMP retain their existing exact-entity depletion
+authority; tracking neither reallocates quantities nor initiates retry. These
+are discovered controls and outcome refinements under approved D18, not a new
+business contract or a weakening of D5/D12/D13.
+
 **Event Detail profile:**
 
 - Admin > Settings > Event Tracking > Event Detail chooses an event family,

@@ -3448,6 +3448,28 @@ scope and receipt-identity wording to D18/current ownership; no architectural
 change is proposed. Next, establish actual-handler RED for receipt Add Selected
 and disposition Add/Confirm coverage before expanding the runtime catalog.
 
+**Receiving staging/disposition D13 entry, 2026-09-07:** The expanded packaged
+test is **206 PASS / 15 FAIL** on unchanged candidate code `1689bff`. All previous
+190 checks pass. The new failures are missing Add Selected, Add Disposition and
+Confirm Dispositions observations; independent actual staging and all three exact
+RETURN/DUMP or receipt event applications pass, as do captured-workbook,
+unknown-column and direct-service negative-attribution guards. The RED is preserved
+in the ignored `slice4be-receiving-activity/staging-red.json` report.
+An expanded pre-implementation run adds actual invalid-quantity and protected
+staging-sheet cases: **210 PASS / 35 FAIL**, no harness errors. Each independently
+preserves staged row values and the existing cause; missing activity must
+distinguish REJECTED/Unchanged from FAILED/Unknown. See the code repository's
+`tests/integration/plan022_slice4be_receiving_staging_results.md`.
+
+Architecture D18 now explicitly records the catalog-3 staging/disposition
+refinement before implementation: STAGED describes a confirmed local staging
+change with empty submission references; disposition confirmation retains exact
+submission evidence and Unknown Domain effect. Controls v1.66 records the same
+definitions. The implementation target is Core's versioned catalog/reference
+validation and Operations' actual Add/Confirm handlers; staging/business ownership
+and existing package boundaries remain binding. GREEN and all changed-package
+gates remain pending.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |
