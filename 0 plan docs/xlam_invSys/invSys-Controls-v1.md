@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.64 (Receiving Confirm Writes activity candidate GREEN; comprehensive coverage pending)
+**Version:** 1.65 (Receiving owner outcomes/retry GREEN; remaining control coverage mapped and pending)
 
 **Inventory date:** 2026-08-31
 
@@ -30,9 +30,11 @@ The retained forms produce 17 distinct components. Item search uses the single
 Core-owned `frmItemSearch` runtime canvas plus role profiles in
 `Core.cDynItemSearch`; no role-named or duplicate template shell remains.
 
-This document covers forms only. Ribbon controls and worksheet buttons are
-outside its scope. The older `controls.md` remains a broader, historical
-status list; this file supersedes it only for the form-control inventory.
+The original inventory sections cover forms. Under D18, the activity coverage
+catalog must additionally account for every reachable Operations/Admin Ribbon
+control and worksheet button, including deliberate exclusions and pending
+implementation. The older `controls.md` remains historical guidance; it does not
+limit D18's comprehensive coverage requirement.
 
 ### Status terms
 
@@ -188,7 +190,7 @@ See [foundation candidate evidence](../../../invSys_fork/tests/integration/plan0
 
 | Stable ControlId | Context / existing handler | Logical owner and facts | Verification / rationale |
 |---|---|---|---|
-| RECEIVING_CONFIRM_WRITES | Receiving Receipts tab, Confirm Writes; `frmReceiving.mBtnConfirm_Click` -> `modReceivingActivityAction.ConfirmWrites` -> existing `modReceivingPostingService.ExecuteConfirmWrites`; captured role workbook, warehouse/session and RECEIVE_POST | RECEIVING_WORKFLOW; entry and CONFIRMED/PENDING effects Unknown; every exact source event comes from the owning queue operation. Submission or batch-level success alone cannot establish every Domain event's application. | D18 governs. Initial 30 PASS / 8 FAIL progressed to combined 133/133 GREEN, including all 70 foundation checks. Applied, queued-but-unapplied, stale-session and unavailable-store form cases preserve business/binding/extra-column guards; four actual captures inspected. See current evidence for compatibility, delivery and release gates. |
+| RECEIVING_CONFIRM_WRITES | Receiving Receipts tab, Confirm Writes; `frmReceiving.mBtnConfirm_Click` -> `modReceivingActivityAction.ConfirmWrites` -> existing `modReceivingPostingService.ExecuteConfirmWrites`; captured role workbook, warehouse/session and RECEIVE_POST | RECEIVING_WORKFLOW; entry and CONFIRMED/PENDING effects Unknown; every exact source event comes from the owning queue operation. Submission or batch-level success alone cannot establish every Domain event's application. | D18 governs. Initial 30 PASS / 8 FAIL progressed to 133/133, then 190/190 GREEN on unchanged packages. Applied, pending, stale, unavailable-store, denied, partially validated, uncertain-submission and explicit-retry form cases preserve business/binding/extra-column guards. Eight actual captures inspected. See current evidence for compatibility, delivery and release gates. |
 
 See [Receiving activity RED](../../../invSys_fork/tests/integration/plan022_slice4be_receiving_activity_red_results.md)
 and [current candidate evidence](../../../invSys_fork/tests/integration/plan022_slice4be_receiving_activity_results.md).
@@ -197,8 +199,9 @@ implemented tracked control. Confirm Dispositions uses the same button on the
 Returns tab and remains separate pending coverage. This entry records an
 existing reachable control and its D18 evidence requirement; it adds no workflow,
 permission or application authority. Codes and source-reference validation are
-implemented; publication, remaining owner outcome branches and human acceptance
-remain unfinished.
+implemented; denial, validation rejection, uncertain submission failure and
+explicit retry now have focused real-handler evidence. Publication, remaining
+control coverage and human acceptance remain unfinished.
 
 The D18 wire refinement defines `RECEIVE_CONFIRM_REQUESTED`,
 `RECEIVE_CONFIRM_CONFIRMED`, `RECEIVE_CONFIRM_PENDING`,
@@ -213,7 +216,8 @@ unavailable when optional observation fails without blocking authorized work.
 The setup ownership regression also proves Admin Seed closes only Config opened
 by its implicit station-inbox setup, preserving a pre-existing workbook and its
 unknown columns. No new operator control or permission was introduced by that fix.
-These declarations inherit D18 and remain pending packaged GREEN.
+These declarations inherit D18; the current confirmation cases have packaged
+GREEN evidence, while the remaining outcome/coverage work is identified above.
 
 The completed activity catalog must account for all reachable Operations/Admin controls,
 including intentional exclusions. Future eligible Admin activity gains stable
@@ -222,6 +226,36 @@ station-local audit history and pre-sign-in activity are not fabricated as
 complete warehouse history. Action Paths remain in NAS
 `Training\ActionPaths\<WarehouseId>`. Both stores are non-authoritative.
 Neither recording nor evaluation processes or mutates business authority.
+
+**Receiving coverage discovery, 2026-09-07 (D18; runtime catalog expansion pending):**
+The following reserved identities account for the current Receiving surface.
+They do not claim implementation or enable collection. Command/result defaults
+and optional navigation/selection defaults remain D18's rules. Every future
+handler test must distinguish explicit operator actions from programmatic field
+changes and preserve the captured workbook/session. No field value is recorded.
+
+| Stable identity / surface | Existing route and logical owner | Coverage status / protecting evidence required |
+|---|---|---|
+| RECEIVING_OPEN; Operations Receiving Ribbon button | Generated `RibbonOnActionOperations` dispatch for `btnOperationsReceivingForm` -> `modTS_Received.ShowReceivingForm`; RECEIVING_WORKFLOW | Activity pending; packaged launcher must preserve workbook/form reuse and report open/reuse/failure without treating initialization as extra clicks. |
+| RECEIVING_ADD_SELECTED; Receiving Add Selected | `frmReceiving.mBtnAdd_Click` -> `AddSelectedInventory` -> `modTS_Received.StageReceivingFormItemForWorkbook`; RECEIVING_STAGING | Activity pending; actual Add already protects creation of exact receipt System_Key/EventId. Require attempt/staged/rejected/denied/uncertain result and no activity from direct staging service calls. |
+| DISPOSITION_ADD_SELECTED; Returns Add Disposition | Same Add handler -> `StageInventoryDispositionForWorkbook`; RECEIVING_DISPOSITION | Activity pending; preserve allocated existing keys and distinct RETURN/DUMP semantics, with no selected values in activity. |
+| RECEIVING_CONFIRM_WRITES; Receiving Confirm Writes | Actual form -> `modReceivingActivityAction.ConfirmWrites` -> posting owner; RECEIVING_WORKFLOW | Candidate implementation and focused outcomes covered above; publication/sequence consumption still pending. |
+| DISPOSITION_CONFIRM; Returns Confirm Dispositions | Same Confirm handler -> posting/disposition owner; RECEIVING_DISPOSITION | Activity pending; returned/unusable quantities must remain exact-entity depletion, with all submitted source references and no inferred application. |
+| RECEIVING_REFRESH; Receiving/Returns Refresh | `mBtnRefresh_Click` -> `RefreshClicked` -> `RefreshReceivingUiForWorkbook`; RECEIVING_WORKFLOW | Activity pending; explicit refresh records once, while initialization, filtering and post-command view refresh do not impersonate clicks. |
+| RECEIVING_CLEAR; Receiving/Returns Clear | `mBtnClear_Click` -> `ClearReceivingFormStagingForWorkbook`; RECEIVING_STAGING | Activity pending; protect local staging-only effects and unknown columns; no inventory mutation/replay. |
+| RECEIVING_CLOSE; Close or window close | `mBtnClose_Click`, `UserForm_QueryClose` and termination; RECEIVING_WORKFLOW | Activity pending; one explicit close observation, no duplicate termination record or record from internal launcher replacement. |
+| RECEIVING_PAGE_RECEIPTS / RECEIVING_PAGE_RETURNS / RECEIVING_PAGE_PURCHASING | `mTabs_Change` -> `ApplyReceivingTab`; RECEIVING_NAVIGATION | Optional selection coverage pending; distinguish operator page selection from programmatic initialization. Purchasing stays the approved non-operational stub. |
+| RECEIVING_SELECT_ITEM / DISPOSITION_SELECT_ITEM | `mLstReceiveItems_Click` -> `LoadSelectedReceiveItemDetails`; RECEIVING_NAVIGATION | Optional coverage pending; account for the two tab-specific item-result surfaces; automatic location/condition fills are not separate user actions. |
+| RECEIVING_SELECT_AGGREGATE / DISPOSITION_SELECT_AGGREGATE | `mLstAggregate_Click` -> selected-reference detail; RECEIVING_NAVIGATION | Optional coverage pending; do not put reference text or inventory values in activity. |
+| RECEIVING_SELECT_HISTORY / DISPOSITION_SELECT_HISTORY; RECEIVING_SELECT_STAGED / DISPOSITION_SELECT_STAGED | `lstInventory` / `lstStaged`; no current selection handler; RECEIVING_NAVIGATION | Optional coverage pending; require a deliberate selection boundary before claiming tracked usage. Existing list rendering is not an observation. |
+| RECEIVING_SELECT_CONDITION / DISPOSITION_SELECT_KIND | `cboCondition` on Receiving / `cboDisposition` on Returns; no current selection handler; RECEIVING_NAVIGATION | Optional coverage pending; record control usage only, never selected values or automatic/programmatic changes. Locked Returns condition/location/lot fields do not expose an independent editing action. |
+| Text entry/search, Receipt ID, read-only reference detail/status, labels/headers, scroll/resize/minimize/maximize | Current text Change handlers filter projections; remaining fields are input/display surfaces | Deliberately excluded from warehouse activity as keystroke/input/display/window mechanics. Do not log text changes, focus changes, entered values or automatic repaint/layout. |
+| ReceivedTally `btnConfirmWrites` -> `modTS_Received.ConfirmWrites` | Compatibility worksheet button calls the existing posting service directly | Not claimed as a tracked control. Current launcher hides its support sheet as VeryHidden when another visible sheet exists; public compatibility entry remains in code. Require packaged reachability evidence for any exclusion, or an explicit worksheet-control identity and actual-caller test before claiming coverage. Do not attribute arbitrary macro/service calls to user clicks. |
+
+This map is a discovery record under the normative contract, not evidence that
+the remaining controls are implemented or that every other Operations/Admin
+surface has been mapped. Runtime catalog version 2 still registers only the
+three implemented controls described above.
 
 Headless Core owns the activity/library boundaries and versioned policy/profile
 commands; Admin and Operations own their respective UI. Existing D5 scalar/UOM
@@ -1543,7 +1577,7 @@ anchor manager while remaining readable.
 | Staged receipt/return | `lblStagedTitle`, `lblStagedHeader`, `lstStaged` | Displays the ten-column local tally projection: reference, type, item, quantity, UOM, location, lot, vendor, condition, and return reason. The title is **Received Tally** on Receiving and **Return Tally** on Returns. This table, not the aggregate view, is the posting authority; every line retains its separate immutable `System_Key`, item code, source key, event ID, and workflow state. |
 | Aggregate view | `lblAggregateTitle`, `lblAggregateHeader`, `lstAggregate` | Displays **Aggregate Received** or **Aggregate Returns**. It rebuilds from every tally row, groups by receipt type, item code, UOM, location, lot, and Condition, sums quantity, and concatenates distinct PO/BOL/return references in first-seen order. Different Conditions remain on separate rows. Return reasons are likewise concatenated for display. The aggregate is read-only and never collapses the separately keyed posting lines. |
 | Aggregate reference detail | `lblAggregateReferences`, `txtAggregateReferences` — **Selected references** | Shows the complete concatenated PO/BOL/return reference for the selected aggregate row in a locked, wrapped, vertically scrollable box. This is the supported readable alternative to variable-height ListBox rows, which MSForms does not provide. It clears with the aggregate/staging surface. |
-| Write actions | `btnConfirm`, `btnClear` | **Confirm Writes** queues ordinary receipts as `RECEIVE` and creates a new durable inventory `System_Key`. On Returns the button reads **Confirm Dispositions** and queues distinct `RETURN` or `DUMP` events against the staged existing keys; the Domain applies the positive action quantity as a negative exact-entity delta and rejects overdraw. **Clear** clears local staging. Multi-line confirmation batches queue and persistence work by safe workbook/artifact phase, so save cycles do not grow once per row. The real confirmation handler remains inside the shared quiet-UI boundary for queue, processor, refresh, and cleanup work, then restores the prior Excel UI/event/calculation state. A successful confirmation appends one `Persistence summary:` line to `txtStatus`; the processor remains the only snapshot writer. |
+| Write actions | `btnConfirm`, `btnClear` | **Confirm Writes** queues ordinary receipts as `RECEIVE`, preserving the durable `System_Key` generated once by the owning Add Selected staging boundary. On Returns the button reads **Confirm Dispositions** and queues distinct `RETURN` or `DUMP` events against the staged existing keys; the Domain applies the positive action quantity as a negative exact-entity delta and rejects overdraw. **Clear** clears local staging. Multi-line confirmation batches queue and persistence work by safe workbook/artifact phase, so save cycles do not grow once per row. The real confirmation handler remains inside the shared quiet-UI boundary for queue, processor, refresh, and cleanup work, then restores the prior Excel UI/event/calculation state. A successful confirmation appends one `Persistence summary:` line to `txtStatus`; the processor remains the only snapshot writer. |
 | Status/exit | `txtStatus`, `btnClose` | Shows multiline action, error, and consolidated persistence status and closes the form. Excel-native save-progress windows, if any, are separate Office UI and are not duplicated as invSys dialogs. |
 | Purchasing placeholder | `lblPurchasingStub` | States that Purchasing is not operational and exposes no purchasing write action. |
 

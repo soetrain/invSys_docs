@@ -3430,6 +3430,24 @@ groups (192) and dynamic-call counts (45 unresolved/eight literal) are unchanged
 all 28 oversized-module ratchets hold. Comprehensive 4be.1 coverage and later
 subslices remain incomplete.
 
+**Receiving owner-outcome verification, 2026-09-07:** Unchanged candidate code
+`1689bff` now passes **190/190** combined focused checks, retaining the previous
+133. Actual Confirm handlers cover capability removal after staging, invalid
+second-row validation, and a real saved queue with its acknowledgement withheld.
+Denied has no source references/Unchanged effect; partial validation remains
+Unknown; uncertain submission retains every original EventId with Unknown state.
+A second explicit Confirm applies each original event once, gets a distinct
+ActivityId and leaves previous observations byte-identical. Eight Receiving
+captures have been inspected. No new runtime RED is manufactured for behavior
+that already passes; two fixture/instrumentation failures were excluded.
+
+Controls v1.65 maps remaining Receiving command/navigation/selection identities
+as reserved and pending, plus explicit exclusions and the hidden worksheet
+compatibility entry's reachability question. It corrects historical form-only
+scope and receipt-identity wording to D18/current ownership; no architectural
+change is proposed. Next, establish actual-handler RED for receipt Add Selected
+and disposition Add/Confirm coverage before expanding the runtime catalog.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |
