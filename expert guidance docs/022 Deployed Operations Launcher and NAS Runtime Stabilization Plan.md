@@ -3490,6 +3490,25 @@ hypothesis without establishing the native crash's cause; failed runs remain in
 the evidence. Comprehensive coverage, later 4be subslices and human acceptance
 remain incomplete; no accepted deployment or NAS rollout is implied.
 
+**Receiving Refresh/Clear D13 entry, 2026-09-07:** The next 4be.1 checkpoint
+retains the 262 GREEN cases and tests both Receiving and Returns through their
+actual Refresh/Clear handlers. Expected RED is missing catalog-4 observations,
+stale-context owner calls and false refresh success after an owner returns False.
+Generated fixtures additionally protect local-only writes, unknown columns,
+unchanged authority bytes, internal/direct-call negative attribution, optional
+tracking failure, empty Clear and a real protected-second-table partial failure.
+The first run is 322 PASS / 74 FAIL, with two combined fixture-header checks
+excluded from intended RED. Expanded current-table header, closed-workbook and
+catalog-3 policy checks produce **365 PASS / 74 FAIL** with no harness exception;
+all earlier 262 checks remain GREEN. Header and unrelated-workbook guards now
+pass, and all remaining failures match the intended missing behavior. No runtime
+change or GREEN claim is made yet. See the code repository's
+`tests/integration/plan022_slice4be_receiving_local_results.md`.
+Architecture D18 records the precise discovered-control outcomes
+before implementation; controls v1.68 is synchronized. Core catalog/outcomes,
+the Receiving form/controller and existing local Clear owner are the intended
+implementation sites. No new business permission or canonical writer is proposed.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |

@@ -520,6 +520,36 @@ authority; tracking neither reallocates quantities nor initiates retry. These
 are discovered controls and outcome refinements under approved D18, not a new
 business contract or a weakening of D5/D12/D13.
 
+**4be.1 Receiving Refresh/Clear clarification:** Under the approved coverage,
+owner-outcome and captured-context rules, catalog 4 adds RECEIVING_REFRESH
+(RECEIVING_WORKFLOW) and RECEIVING_CLEAR (RECEIVING_STAGING). Their fixed captions
+are Refresh and Clear on the shared Receiving/Returns surface. Catalogs 1-3
+retain their definitions; an older policy cannot implicitly enable either new
+control. This introduces no new business permission or authority boundary.
+
+Both actual button handlers record REQUESTED/Info/Unknown only after validating
+their captured session, warehouse and still-open role workbook. Stale context
+rejects before the local owner call, independently of optional tracking. Direct
+service calls and internal/programmatic refreshes are not user-control activity.
+
+RECEIVE_REFRESH_REFRESHED/Info/Changed means the existing owner confirmed a
+workbook-local projection refresh. RECEIVE_CLEAR_CLEARED/Info/Changed means the
+owner cleared nonempty local staging/aggregation; RECEIVE_CLEAR_EMPTY/Info/
+Unchanged means it was already empty. All references remain empty: these actions
+neither submit business events nor establish Domain application. Fixed messages
+state the local scope. Required headers and unknown user columns remain governed
+by D14; explicit Clear removes staged rows, not the table's column schema.
+
+Each control uses its RECEIVE_REFRESH_ or RECEIVE_CLEAR_ prefix for REQUESTED
+and FAILED. FAILED/Error/Unknown retains uncertainty after an unsuccessful owner
+call or exception. In particular, failure clearing a second table must not imply
+rollback of an earlier deletion. A false refresh result must retain the owner's
+visible cause rather than report completed refresh. Optional observation failure
+shows Tracking unavailable while preserving the existing authorized local action;
+it cannot retry the owner, redirect to ActiveWorkbook, or conceal its failure.
+These discovered controls and precise outcomes refine D18 without weakening
+D5, D12 or D13.
+
 **Event Detail profile:**
 
 - Admin > Settings > Event Tracking > Event Detail chooses an event family,
