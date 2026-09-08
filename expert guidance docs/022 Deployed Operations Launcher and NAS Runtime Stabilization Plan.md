@@ -3513,12 +3513,30 @@ references and preserved visible cause. Boolean compatibility and existing
 snapshot selection remain unchanged. This is a discovered outcome refinement
 under approved semantic inheritance, not a new diagnostic authority. The Core
 read-model owner and its declared bridge join the bounded implementation scope.
-Changed-package release gates remain pending. See the code repository's
+The expanded test is **463 PASS / 28 FAIL**, followed by **491/491 GREEN** on
+`deploy/validation-receiving-freshness`, retaining all prior checks. All 22
+Receiving Refresh/Clear/freshness captures were inspected. Five builds/compiles,
+cold start, packaged 86/86, live-role 48/48, full chain/restart 30/30, Viewer,
+Production layout and three launchers pass. Dedicated reusable Production is
+2/2 GREEN, including full reusable/Chai cases and clean-process restart. All five
+candidate hashes remain unchanged; Excel is closed. The three Production layout
+captures were inspected. Static candidate/duplicate/dynamic counts and
+all 28 oversized-module limits hold; the read-model owner shrinks three lines.
+
+The initial packaged gate's 81 checks passed but it left a Designs save prompt.
+Its validator lacked runtime-root isolation and complete workbook cleanup.
+The corrected harness retains the 81 checks and adds five explicit Config
+fixture/root/cleanup checks; both Excel sessions close and the saved default
+Designs file remains byte-for-byte unchanged across the corrected runs. An
+intermediate 84/85 run exposed the old external Config fixture dependency; it is
+harness evidence, not D13 product RED. No runtime contract changed for this
+correction. Comprehensive coverage and user comparison remain incomplete. See the code repository's
 `tests/integration/plan022_slice4be_receiving_local_results.md`.
 Architecture D18 records the precise discovered-control outcomes
-before implementation; controls v1.69 is synchronized. Core catalog/outcomes,
-the Receiving form/controller and existing local Clear owner are the intended
-implementation sites. No new business permission or canonical writer is proposed.
+before implementation; controls v1.70 records the candidate evidence. Core
+catalog/outcomes, read-model owner/bridge, the Receiving form/controller and
+existing local Clear owner implement this checkpoint. No new business permission
+or canonical writer was added.
 
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
