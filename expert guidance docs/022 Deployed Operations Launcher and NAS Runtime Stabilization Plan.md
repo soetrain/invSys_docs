@@ -3701,11 +3701,36 @@ schema is authorized. Architecture, Plan and controls must be synchronized befor
 runtime implementation. Full packaged and technical gates remain required after
 focused GREEN; native worksheet input remains independently pending.
 
-The first unchanged-package focused run is **108 PASS / 19 FAIL**, with no
-harness exception. Existing authorization/notice, no launch owner entry,
-preservation and polling/direct-guard/pre-sign-in exclusions pass. Missing
-denial records and optional-store failure notice are meaningful RED. A captured
-session interruption case is being added before runtime implementation.
+The unchanged-package focused runs are **108 PASS / 19 FAIL**, then expanded
+**112 PASS / 21 FAIL**, with no harness exception. The expanded RED includes
+captured-session interruption. Architecture/Plan/controls clarification was
+pushed as docs **f918687** before implementation. The separate denial candidate
+passes focused **133/133**, native-dialog **137/137** and full activity
+**845/845**, retaining all earlier 771 and surface-discovery 105 check identities.
+Both actual fixed denial/tracking dialogs were captured and inspected.
+Existing authorization, no launch owner entry, identity/unknown-column and
+workbook preservation, exclusions and optional-store behavior pass.
+
+Five packages build/compile/cold-start; smoke **86/86**, live-role **48/48**,
+ordered Release 1 chain **30/30**, Viewer, three-size Production layout and
+public launchers **3/3** pass. Current static ratchets preserve all 28 prior
+module caps and component/candidate/duplicate/dynamic-call counts. The historical
+Slice 12 validator retains the same six failures against both old/new baselines;
+it is not reported GREEN. The full reusable Production gate remains unresolved:
+two candidate runs crashed in native Excel at different stages, while the
+preserved prior candidate passes **2/2** in the same harness. Core-only and
+Operations-only substitutions into the other prior packages each pass **2/2**;
+these are diagnostic combinations, not accepted release sets. A clean rebuild
+passes cold-start/five compiles and matches all 168 extracted VBA components,
+but also crashes at batch scale. An unsaved source-preserving Operations
+recompilation probe likewise crashes at batch scale. Both report the same native
+fault. No cause, regression exemption or checkpoint completion is established.
+Next: isolate candidate Core+Operations together against prior unchanged
+Admin/Domain packages, with actual loaded dependency provenance checked. Do not
+repeat unchanged retries or treat diagnostic combinations as accepted release
+sets. Original/rebuilt hashes remain unchanged and Excel is closed at the final
+2026-09-08 check. See code evidence
+`tests/integration/plan022_slice4be_receiving_launcher_denial_results.md`.
 
 **Receiving worksheet surface discovery, 2026-09-08:** D18's existing coverage
 and exclusion-evidence rule governs this test-only discovery. The preserved
