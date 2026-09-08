@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.78 (Receiving navigation/selection and Core identity checkpoint GREEN)
+**Version:** 1.79 (Receiving worksheet surface discovery; native invocation pending)
 
 **Inventory date:** 2026-08-31
 
@@ -275,7 +275,7 @@ exception; no business authority or existing size limit is relaxed. Comprehensiv
 | RECEIVING_SELECT_HISTORY / DISPOSITION_SELECT_HISTORY; RECEIVING_SELECT_STAGED / DISPOSITION_SELECT_STAGED | `mLstInventory_Click` / `mLstStaged_Click` -> `NavigationSelection`; RECEIVING_NAVIGATION | Catalog-6 packaged GREEN (771-check suite); captions Receiving Entries History / Return Entries History and Received Tally / Return Tally. Default off; require a deliberate selection boundary. Existing list rendering is not an observation. |
 | RECEIVING_SELECT_CONDITION / DISPOSITION_SELECT_KIND | `mCboCondition_Click` on Receiving / `mCboDisposition_Click` on Returns -> `NavigationSelection`; RECEIVING_NAVIGATION | Catalog-6 packaged GREEN (771-check suite); captions Condition * / Disposition *. Default off; record usage only, never selected values or automatic/programmatic changes. Locked Returns condition/location/lot fields do not expose an independent editing action. |
 | Text entry/search, Receipt ID, read-only reference detail/status, labels/headers, scroll/resize/minimize/maximize | Current text Change handlers filter projections; remaining fields are input/display surfaces | Deliberately excluded from warehouse activity as keystroke/input/display/window mechanics. Do not log text changes, focus changes, entered values or automatic repaint/layout. |
-| ReceivedTally `btnConfirmWrites` -> `modTS_Received.ConfirmWrites` | Compatibility worksheet button calls the existing posting service directly | Not claimed as a tracked control. Current launcher hides its support sheet as VeryHidden when another visible sheet exists; public compatibility entry remains in code. Require packaged reachability evidence for any exclusion, or an explicit worksheet-control identity and actual-caller test before claiming coverage. Do not attribute arbitrary macro/service calls to user clicks. |
+| ReceivedTally `btnConfirmWrites` -> `modTS_Received.ConfirmWrites` | Compatibility worksheet button calls the existing posting service directly | Packaged surface discovery 105/105 (2026-09-08): the launcher accepts/captures an existing workbook with ReceivedTally as its sole visible sheet and preserves the visible button and expected handler after save/reopen. Ordinary provisioned/reused support sheets remain VeryHidden. It cannot be excluded on visibility grounds. Native caller/handler proof and an explicit worksheet activity identity remain pending; no activity implementation or human acceptance is claimed. Do not attribute arbitrary macro/service calls to user clicks. See [surface evidence](../../../invSys_fork/tests/integration/plan022_slice4be_receiving_surface_results.md). |
 
 **Open/Close packaged RED, 2026-09-07:** The actual generated Ribbon callback
 and Close/QueryClose handler tests produce **531 PASS / 47 FAIL** across 578

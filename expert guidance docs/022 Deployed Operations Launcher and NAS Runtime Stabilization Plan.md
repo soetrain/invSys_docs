@@ -3680,6 +3680,28 @@ event classification using the native evidence; do not delete its live handler.
 This explains functional adapter growth under D18's no-unexplained-growth rule
 without changing runtime/architectural authority or accepting comprehensive 4be.
 
+**Receiving worksheet surface discovery, 2026-09-08:** D18's existing coverage
+and exclusion-evidence rule governs this test-only discovery. The preserved
+navigation/identity candidate passes **105/105** through the real Receiving
+Ribbon callback: provisioned/reused support sheets remain VeryHidden, but an
+eligible saved workbook with ReceivedTally as its only visible sheet retains
+the visible Confirm Writes button and expected handler through save/reopen.
+Captured workbook, unknown header, saved bytes, authority files and unrelated
+workbook checks pass; all five package hashes are unchanged. This is not a new
+runtime contract, activity implementation GREEN or a repeat of all release gates.
+
+Excel normalized the assigned macro to unqualified
+`modTS_Received.ConfirmWrites`; the initial four qualifier assertions were an
+invalid test assumption, not a routing defect. Native-message attempts lacked
+calibrated input delivery, and minimal transport tests could not establish
+foreground ownership / Windows cursor positioning in the session. Neither those
+failures nor the native calibration exception is D13 behavioral RED. Native
+worksheet caller/handler evidence remains pending before its explicit activity
+identity and owner-outcome implementation. Do not exclude the control solely
+because the usual launcher state hides its sheet. Architecture D18 is unchanged;
+controls v1.79 records the discovered surface without weakening any rule. See
+[surface evidence](../../invSys_fork/tests/integration/plan022_slice4be_receiving_surface_results.md).
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |
