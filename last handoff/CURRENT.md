@@ -1,1 +1,1 @@
-`077 Receiving Open Close Packaged RED.md`
+`078 Receiving Lifecycle GREEN.md`
