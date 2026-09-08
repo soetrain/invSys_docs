@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.79 (Receiving worksheet surface discovery; native invocation pending)
+**Version:** 1.80 (Receiving launcher-denial contract synchronized; implementation pending)
 
 **Inventory date:** 2026-08-31
 
@@ -261,7 +261,7 @@ exception; no business authority or existing size limit is relaxed. Comprehensiv
 
 | Stable identity / surface | Existing route and logical owner | Coverage status / protecting evidence required |
 |---|---|---|
-| RECEIVING_OPEN; Operations Receiving Ribbon button | Generated `RibbonOnActionOperations` dispatch for `btnOperationsReceivingForm` -> `modTS_Received.ShowReceivingForm True`; RECEIVING_WORKFLOW | Catalog-5 checkpoint GREEN in the 596-check suite and all release gates: REQUESTED and OPENED/REUSED/FAILED, Unknown data effect, empty references, captured session/workbook reuse, preserved owner failures and no initialization/direct-macro clicks. Existing capability denial remains guarded; denial observation coverage is separately pending. Human acceptance remains open. |
+| RECEIVING_OPEN; Operations Receiving Ribbon button | Generated `RibbonOnActionOperations` dispatch for `btnOperationsReceivingForm` -> `modTS_Received.ShowReceivingForm True`; RECEIVING_WORKFLOW | Accepted REQUESTED/OPENED/REUSED/FAILED behavior remains protected in the 771-check candidate. D18 launcher-denial refinement specifies REQUESTED before the existing Core RECEIVE_POST guard and DENIED/Blocked/Unchanged with empty references when it rejects before launch owner work. Same fixed caption Receiving; RECEIVE_OPEN_DENIED explains "Receiving form launch was not authorized." and advises "Review Receiving permissions before reopening." Repeated attempts stay distinct; getEnabled/direct guard calls and pre-sign-in are excluded. Captured context and optional tracking failure cannot authorize or redirect launch. Denial implementation/RED/GREEN and human acceptance remain pending. |
 | RECEIVING_ADD_SELECTED; Receiving Add Selected | `frmReceiving.mBtnAdd_Click` -> `AddSelectedInventory` -> `modTS_Received.StageReceivingFormItemForWorkbook`; RECEIVING_STAGING | Candidate GREEN: attempt/staged/pre-validation rejection/service failure, stale context, optional store failure and no activity from direct staging. Exact receipt System_Key/EventId and unrelated workbook preserved. Existing validation is extracted to `modReceivingAddInput`; no new business write owner. |
 | DISPOSITION_ADD_SELECTED; Returns Add Disposition | Same Add handler -> `StageInventoryDispositionForWorkbook`; RECEIVING_DISPOSITION | Candidate GREEN: allocated existing keys and distinct RETURN/DUMP behavior, staged/rejected/failed observations and optional store failure, with no selected values in activity. |
 | RECEIVING_CONFIRM_WRITES; Receiving Confirm Writes | Actual form -> `modReceivingActivityAction.ConfirmWrites` -> posting owner; RECEIVING_WORKFLOW | Candidate implementation and focused outcomes covered above; publication/sequence consumption still pending. |

@@ -601,6 +601,30 @@ launch. Termination and reference release are internal lifetime operations, not
 new user actions or the completion clock. This clarifies the existing owner-fact
 rule; it introduces no new close command or authority boundary.
 
+**4be.1 Receiving launcher-denial clarification:** The existing RECEIVING_OPEN
+control also accounts for an authenticated dispatch rejected by the existing
+RECEIVE_POST guard before workbook resolution/provisioning or form opening.
+Record REQUESTED/Info/Unknown at the action boundary, then
+RECEIVE_OPEN_DENIED (DENIED/Blocked/Unchanged) from that guard's actual rejection,
+with empty source references, the fixed explanation "Receiving form launch was
+not authorized." and advisory "Review Receiving permissions before reopening."
+Unchanged describes the rejected launch, not suppression of existing security
+handling. Repeated dispatches remain separate ActivityIds. Catalog 6 gains this
+outcome for its existing control; no prior outcome or control definition changes.
+
+The typed Receiving action entry may perform the existing Core cached capability
+check so an outer generated guard does not discard the attempt before it is
+observed. It must execute that guard exactly once before any launch owner work;
+the Ribbon's capability mapping and getEnabled behavior remain unchanged. This
+clarifies D18 observation placement without weakening D12 capability gating or
+moving authorization ownership out of Core. Polling/getEnabled and direct guard
+calls never create user activity. Pre-sign-in dispatch remains excluded from
+warehouse activity. Capture the session/warehouse before the guard: a change
+during notification cannot attribute completion to a new context. Incomplete
+tracking remains visible and cannot authorize, retry or perform the denied
+launch. The ordinary direct compatibility call retains its existing non-click
+semantics. This is semantic inheritance of approved D18, not a new permission.
+
 **4be.1 Receiving navigation/selection clarification:** Catalog 6 adds the
 thirteen reserved page/selection controls in the maintained catalog, owned by
 RECEIVING_NAVIGATION with existing RECEIVE_POST eligibility. Catalogs 1-5 retain

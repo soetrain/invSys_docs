@@ -3680,6 +3680,33 @@ event classification using the native evidence; do not delete its live handler.
 This explains functional adapter growth under D18's no-unexplained-growth rule
 without changing runtime/architectural authority or accepting comprehensive 4be.
 
+**Receiving launcher-denial D13 entry, 2026-09-08:** Continue 4be.1 under D18's
+launcher-denial clarification, preserving the 771-check navigation/identity
+candidate and 105-check surface discovery. The protecting packaged test is
+`Slice4beReceivingLauncherDenial.ps1`, entered by the actual generated Operations
+Ribbon callback. Expected RED is absent correlated REQUESTED/DENIED observations
+and optional-tracking notice on denied launch. Guard rejection, existing auth
+decision, no provisioning/form opening, untouched staging/identities/unknown
+columns, direct-guard/polling and pre-sign-in exclusions must already hold.
+
+The intended change keeps the actual Core cached RECEIVE_POST guard, moves its
+single action-time invocation into the typed Receiving entry before any owner
+work, and leaves generated getEnabled capability mapping intact. Generator
+metadata must explicitly identify this already-guarded entry; other controls
+retain their generated guard. Register RECEIVE_OPEN_DENIED for the existing
+catalog-6 control with Blocked/Unchanged and empty references. Capture context
+before the guard, preserve denials during optional-store failure and never
+rebind an interrupted completion. No new permission, business owner or canonical
+schema is authorized. Architecture, Plan and controls must be synchronized before
+runtime implementation. Full packaged and technical gates remain required after
+focused GREEN; native worksheet input remains independently pending.
+
+The first unchanged-package focused run is **108 PASS / 19 FAIL**, with no
+harness exception. Existing authorization/notice, no launch owner entry,
+preservation and polling/direct-guard/pre-sign-in exclusions pass. Missing
+denial records and optional-store failure notice are meaningful RED. A captured
+session interruption case is being added before runtime implementation.
+
 **Receiving worksheet surface discovery, 2026-09-08:** D18's existing coverage
 and exclusion-evidence rule governs this test-only discovery. The preserved
 navigation/identity candidate passes **105/105** through the real Receiving
