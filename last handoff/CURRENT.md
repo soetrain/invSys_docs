@@ -1,1 +1,1 @@
-`071 Slice 4be Approved Activity RED.md`
+`072 Slice 4be Activity Foundation Candidate GREEN.md`
