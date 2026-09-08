@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.71 (Receiving Open/Close D13 entry; prior freshness candidate GREEN)
+**Version:** 1.72 (Receiving Open/Close packaged RED; prior freshness candidate GREEN)
 
 **Inventory date:** 2026-08-31
 
@@ -252,6 +252,18 @@ changes and preserve the captured workbook/session. No field value is recorded.
 | RECEIVING_SELECT_CONDITION / DISPOSITION_SELECT_KIND | `cboCondition` on Receiving / `cboDisposition` on Returns; no current selection handler; RECEIVING_NAVIGATION | Optional coverage pending; record control usage only, never selected values or automatic/programmatic changes. Locked Returns condition/location/lot fields do not expose an independent editing action. |
 | Text entry/search, Receipt ID, read-only reference detail/status, labels/headers, scroll/resize/minimize/maximize | Current text Change handlers filter projections; remaining fields are input/display surfaces | Deliberately excluded from warehouse activity as keystroke/input/display/window mechanics. Do not log text changes, focus changes, entered values or automatic repaint/layout. |
 | ReceivedTally `btnConfirmWrites` -> `modTS_Received.ConfirmWrites` | Compatibility worksheet button calls the existing posting service directly | Not claimed as a tracked control. Current launcher hides its support sheet as VeryHidden when another visible sheet exists; public compatibility entry remains in code. Require packaged reachability evidence for any exclusion, or an explicit worksheet-control identity and actual-caller test before claiming coverage. Do not attribute arbitrary macro/service calls to user clicks. |
+
+**Open/Close packaged RED, 2026-09-07:** The actual generated Ribbon callback
+and Close/QueryClose handler tests produce **531 PASS / 47 FAIL** across 578
+checks, preserving all prior 491 GREEN checks with no harness exception.
+Missing observations, old-session form reuse and absent optional-tracking notices
+are the intended failures. Dismissal, staged identities/unknown values, authority
+bytes, unrelated workbooks, older-policy compatibility and same-name workbook
+reopening pass. Three lifecycle captures are inspected; native close interaction
+and human acceptance remain separate. Static metrics and 28 existing size limits
+hold. Catalog 5 and Open/Close observation runtime implementation are still
+pending. See the code repository's
+`tests/integration/plan022_slice4be_receiving_lifecycle_results.md`.
 
 This map is a discovery record under the normative contract, not evidence that
 the remaining controls are implemented or that every other Operations/Admin

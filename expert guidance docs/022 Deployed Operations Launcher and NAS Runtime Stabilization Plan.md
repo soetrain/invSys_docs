@@ -3547,9 +3547,18 @@ handler tests before runtime changes. Expected RED is missing observations and
 reuse of an old-session form. Preserve earlier GREEN checks, optional-store
 failure behavior, direct-call exclusion and unrelated workbook/authority bytes.
 The Core catalog/outcome definitions, Operations launcher/form and generated
-Receiving Ribbon route are the bounded expected runtime scope. Implementation,
-focused results and release gates for this checkpoint are pending; the previous
-Refresh/Clear checkpoint remains verified. Controls v1.71 records this entry.
+Receiving Ribbon route are the bounded expected runtime scope. First packaged
+RED is 515 PASS / 37 FAIL, followed by **531 PASS / 47 FAIL** across 578 checks
+with no harness exception and all prior 491 GREEN checks preserved. The failures
+are absent observation pairs, stale-session reuse and missing tracking-failure
+notices. Valid catalog-4 policies, both dismissals under store failure, staged
+identities/unknown values, authority bytes and same-name workbook reopening
+pass. Reopening is a regression guard, not another confirmed defect. Three
+lifecycle captures are inspected; static metrics and all 28 existing size limits
+hold. No runtime code or package changed; implementation and its release gates
+remain pending. Controls v1.72 and code evidence
+`tests/integration/plan022_slice4be_receiving_lifecycle_results.md` record this
+checkpoint. The prior Refresh/Clear checkpoint remains verified.
 
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
