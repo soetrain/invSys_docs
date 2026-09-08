@@ -3380,6 +3380,21 @@ command boundary; tracking failure alone does not block an authorized command.
 Core session state and role-owned action orchestration use bounded modules;
 Auth shrinks by two lines and Production's existing form does not grow.
 
+**Receiving coverage RED, 2026-09-07:** The unchanged foundation candidate now
+has a focused packaged Receiving test: **30 PASS / 8 FAIL**, with no harness
+exceptions. All 18 D5 checks and twelve independent Receiving business/binding
+guards pass. The real Add/Confirm Writes handlers produce two owner-generated
+events in an applied case and two queued-but-unapplied events in a controlled
+pending case. Both lack the required activity attempt/result and exact source
+correlation. The eight failed assertions describe these missing observations;
+they are not eight independent defects. No runtime implementation or package
+changed. See [Receiving activity RED](../../invSys_fork/tests/integration/plan022_slice4be_receiving_activity_red_results.md).
+The next implementation must obtain source references from the Receiving owner,
+preserve captured context and distinguish submission from Domain application.
+Existing batch-level success is insufficient per-event diagnostic proof. D18's
+approved observation semantics govern this discovered control; no architectural
+contract change or further approval is implied by the test checkpoint.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |

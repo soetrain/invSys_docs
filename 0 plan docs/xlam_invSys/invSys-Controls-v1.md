@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.62 (D5 retained; shared Events contract approved; initial activity foundation candidate GREEN)
+**Version:** 1.63 (initial activity foundation candidate GREEN; Receiving activity coverage RED)
 
 **Inventory date:** 2026-08-31
 
@@ -183,6 +183,20 @@ saving.** Production says **Session or warehouse changed. Reopen Production
 before retrieving the catalog.** This enforces D18's captured-session rule;
 optional store failure still permits an otherwise authorized command.
 See [foundation candidate evidence](../../../invSys_fork/tests/integration/plan022_slice4be_activity_foundation_results.md).
+
+**Receiving discovered control, 2026-09-07 -- observation implementation pending:**
+
+| Stable ControlId | Context / existing handler | Logical owner and facts | Verification / rationale |
+|---|---|---|---|
+| RECEIVING_CONFIRM_WRITES | Receiving Receipts tab, Confirm Writes; `frmReceiving.mBtnConfirm_Click` -> `modReceivingPostingService.ExecuteConfirmWrites`; captured role workbook, warehouse/session and RECEIVE_POST | RECEIVING_WORKFLOW; entry effect Unknown; exact source events come from the owning queue operation. Submission or batch-level success alone cannot establish every Domain event's application. | D18 governs. Packaged real Add/Confirm test is 30 PASS / 8 FAIL, retaining all 18 D5 checks. Applied and queued-but-unapplied fixtures pass independent source and binding guards; both lack activity evidence. |
+
+See [Receiving activity RED](../../../invSys_fork/tests/integration/plan022_slice4be_receiving_activity_red_results.md).
+The Add handler establishes fixture identities but is not yet claimed as an
+implemented tracked control. Confirm Dispositions uses the same button on the
+Returns tab and remains separate pending coverage. This entry records an
+existing reachable control and its D18 evidence requirement; it adds no workflow,
+permission or application authority. Runtime codes/reference validation,
+publication and visible acceptance remain unfinished.
 
 The completed activity catalog must account for all reachable Operations/Admin controls,
 including intentional exclusions. Future eligible Admin activity gains stable
