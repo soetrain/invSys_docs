@@ -1,1 +1,1 @@
-`073 Slice 4be Receiving Activity RED.md`
+`074 Slice 4be Receiving Activity Candidate GREEN.md`
