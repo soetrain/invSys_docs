@@ -3613,6 +3613,73 @@ fixture is harness failure, not product RED. Protect stale/captured context,
 older/disabled/malformed policy, tracking failure, exact keys/unknown columns and
 business authority bytes. Recording integration remains separately pending.
 
+**Navigation focused GREEN, 2026-09-08:** Full unchanged catalog-5 RED is 632/74
+with all 596 prior checks GREEN; expanded mouse/keyboard RED is 118/122 in a
+separate diagnostic run. Catalog-6 candidate `validation-receiving-navigation`
+builds/compiles all five packages and passes 253/253 focused checks. The existing
+form handlers use a typed navigation boundary and form-local input state;
+dropdown open/close clears pending input, including same-choice/cancel paths.
+Full regressions and release gates remain pending. See
+[navigation evidence](../../invSys_fork/tests/integration/plan022_slice4be_receiving_navigation_results.md).
+
+**Discovered D14 identity blocker, 2026-09-08:** Navigation's full form suite is
+767/767 and its additional closed-workbook focused run is 257/257, but the ordered
+Release 1 chain is 29/30: packaged Admin Generate succeeds and Seed is rejected
+with DUPLICATE_SYSTEM_KEY. Preserve that failed chain. The existing Core fallback
+reseeds VBA Rnd for each generated identity; investigate through the unchanged
+packaged CreateSystemKey boundary before altering implementation. The focused
+`Test-PackagedSystemKeyGeneration.ps1` checks 50,000 creations both normally and
+with caller-side RNG resets, reports counts only, and preserves package bytes.
+The existing actual Admin Generate/Seed chain remains the operator-path gate;
+the identity probe supplements it. Expected RED is duplicate keys. This restores
+D14's existing global uniqueness requirement, without changing existing identity
+values, migrating data or relaxing Domain duplicate rejection. Keep 4be.1 active
+and incomplete; no navigation technical completion until this blocker and all
+remaining release gates are GREEN.
+
+The packaged identity probe is meaningful RED: 50,000 normal calls yield 35,017
+unique keys and 14,983 duplicates; the ambient-RNG reset control passes and
+package bytes are unchanged. After that RED, Core extracts its existing native
+GUID implementation into modSystemIdentity. Role entity/event creation and the
+archive collision suffix call it directly; Training keeps its representation and
+failure wording through its existing wrapper. Reviewed callers of the removed
+fallback/normalizer are accounted for. Candidate
+`validation-receiving-navigation-identity` builds/compiles all five projects and
+passes 3/3 focused checks (100,000 creations, zero duplicates/blanks). No stored
+identity changes, migration or relaxed Domain rejection are introduced. The
+source Create Warehouse harness initially omits the new dependency; correct all
+sixteen explicit import lists (parser PASS), then restart the chain. Its source
+integration now passes 15/15. This compile dependency failure is not product RED.
+Final static evidence is 175 components/5,500 procedures with unchanged candidate,
+duplicate and dynamic-call counts from the navigation review below. All 28
+pre-existing module caps still hold.
+
+**Final navigation/identity technical checkpoint GREEN, 2026-09-08:** The corrected
+replacement chain completes 30/30, including Admin Seed and clean restart
+reconciliation. The full activity/form suite is 771/771, retaining all 767 prior
+check identities and incorporating the four closed-workbook guards in one run.
+Five-package build/compile/cold start, smoke 86/86, live roles 48/48, Viewer,
+three-size/five-page layout/native transitions, public launchers 3/3 and full
+ProductionReusable/clean restart 2/2 all pass. No reduced Production flags are
+used. Receiving and Production captures are inspected; duplicate image display
+was checked individually and by file hash before accepting visible evidence.
+Replacement/first-navigation/catalog-5 hashes remain unchanged, as do verified
+catalog-4 hashes. Excel is closed with no Application Error in the final
+Production interval. Code **77a0851**, controls v1.78 and the linked evidence
+record the completed technical checkpoint. Comprehensive 4be.1 coverage and
+human UAT remain open.
+
+**Explicit maintenance exception for this navigation checkpoint:** Retain the
+seventeen required native event roots and three new normalized duplicate groups
+consisting only of short input-reset/mouse-input/form-dispatch callbacks. These
+distinct MSForms interfaces share one typed controller and contain no duplicated
+business logic. Raw duplicate groups remain reported as 192 -> 195; total
+candidates 1,077 -> 1,097 include retained roots. Existing 28 size limits and
+dynamic-call limits remain binding. Correct the missing DropButtonClick class
+event classification using the native evidence; do not delete its live handler.
+This explains functional adapter growth under D18's no-unexplained-growth rule
+without changing runtime/architectural authority or accepting comprehensive 4be.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |

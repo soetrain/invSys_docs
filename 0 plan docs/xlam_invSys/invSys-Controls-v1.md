@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.77 (Receiving navigation/selection test-first entry; lifecycle GREEN retained)
+**Version:** 1.78 (Receiving navigation/selection and Core identity checkpoint GREEN)
 
 **Inventory date:** 2026-08-31
 
@@ -228,12 +228,36 @@ complete warehouse history. Action Paths remain in NAS
 `Training\ActionPaths\<WarehouseId>`. Both stores are non-authoritative.
 Neither recording nor evaluation processes or mutates business authority.
 
-**Receiving coverage discovery, 2026-09-08 (D18; catalog 5 GREEN, catalog 6 pending):**
+**Receiving coverage, 2026-09-08 (D18; catalog 6 packaged GREEN):**
 The following identities account for the current Receiving surface. Rows marked
 pending are reserved and do not enable collection. Command/result defaults
 and optional navigation/selection defaults remain D18's rules. Every future
 handler test must distinguish explicit operator actions from programmatic field
 changes and preserve the captured workbook/session. No field value is recorded.
+
+Candidate `validation-receiving-navigation-identity` passes the complete
+**771/771** activity/form suite, retaining every prior 596/767 check identity.
+All thirteen mouse/keyboard routes, programmatic/internal exclusions, stale or
+closed captured context and optional-policy/store failures are protected.
+`NavigationSelection` preserves existing detail/tab owners;
+`modReceivingNavigation` owns the typed UI boundary/presentation and
+`cReceivingSelectionInput` owns form-local input provenance. Geometry/captions
+are preserved; optional navigation collection defaults off. Recording integration
+remains pending.
+
+The release chain exposed duplicate Core-generated System_Key values during
+Admin Seed. D14's existing uniqueness requirement is restored by the shared
+native GUID utility, with no change to saved identities or Domain rejection.
+Focused identity checks pass 100,000 creations without duplicates; the corrected
+ordered chain passes 30/30. Build/compile, smoke 86/86, live roles 48/48, Viewer,
+layout/native transitions and public launchers 3/3 pass. Full reusable Production
+and clean restart pass 2/2; all technical gates for this checkpoint are GREEN.
+Native identity unavailability raises "System identity unavailable." instead of
+inventing a key; Training retains its existing failure wording. Plan 022 and the
+[navigation evidence](../../../invSys_fork/tests/integration/plan022_slice4be_receiving_navigation_results.md)
+retain the RED evidence and explicit three-group event-adapter maintenance
+exception; no business authority or existing size limit is relaxed. Comprehensive
+4be coverage and human acceptance remain open.
 
 | Stable identity / surface | Existing route and logical owner | Coverage status / protecting evidence required |
 |---|---|---|
@@ -245,11 +269,11 @@ changes and preserve the captured workbook/session. No field value is recorded.
 | RECEIVING_REFRESH; Receiving/Returns Refresh | `mBtnRefresh_Click` -> `RefreshClicked` -> `RefreshReceivingUiForWorkbook`; RECEIVING_WORKFLOW | Candidate GREEN through actual handlers on both tabs. REQUESTED; REFRESHED/Info/Changed only for owner-confirmed non-stale projection; STALE/Warning/Changed for cached/fallback local metadata or projection; FAILED/Error/Unknown. The form preserves the owner's stale/failure cause; Boolean True alone does not prove freshness. Stale context prevents owner entry. Internal refreshes do not impersonate clicks. |
 | RECEIVING_CLEAR; Receiving/Returns Clear | `mBtnClear_Click` -> `ClearReceivingFormStagingForWorkbook`; RECEIVING_STAGING | Candidate GREEN through actual handlers on both tabs. CLEARED/Changed for nonempty local staging, EMPTY/Unchanged, FAILED/Unknown for an owner failure including a partial two-table deletion. Unknown headers and captured context are preserved; no inventory mutation or replay. |
 | RECEIVING_CLOSE; Close or window close | Button and native `UserForm_QueryClose` -> `modReceivingActivityAction.CloseForm`; RECEIVING_WORKFLOW | Checkpoint GREEN in the 596-check suite and all release gates: synchronous native UI dismissal, invalidated reuse and native teardown; button completion follows Unload. Records/notices are immediate, including failed optional storage, with no extra next-launch activity. Internal unload/termination never starts a click. CLOSED stays Info/Unchanged with empty references and staging preserved. Human acceptance remains open. |
-| RECEIVING_PAGE_RECEIPTS / RECEIVING_PAGE_RETURNS / RECEIVING_PAGE_PURCHASING | `mTabs_Change` -> `ApplyReceivingTab`; RECEIVING_NAVIGATION | Catalog-6 test-first entry; captions Receiving / Returns / Purchasing. Optional collection defaults off. REQUESTED then UI-only SELECTED; native input versus programmatic initialization must be proved. Purchasing stays the approved non-operational stub. |
-| RECEIVING_SELECT_ITEM / DISPOSITION_SELECT_ITEM | `mLstReceiveItems_Click` -> `LoadSelectedReceiveItemDetails`; RECEIVING_NAVIGATION | Catalog-6 test-first entry; captions Receive Item Results / Return Item Results. Default off; automatic location/condition fills are not separate user actions. |
-| RECEIVING_SELECT_AGGREGATE / DISPOSITION_SELECT_AGGREGATE | `mLstAggregate_Click` -> selected-reference detail; RECEIVING_NAVIGATION | Catalog-6 test-first entry; captions Aggregate Received / Aggregate Returns. Default off; no reference text or inventory values in activity. |
-| RECEIVING_SELECT_HISTORY / DISPOSITION_SELECT_HISTORY; RECEIVING_SELECT_STAGED / DISPOSITION_SELECT_STAGED | `lstInventory` / `lstStaged`; no current selection handler; RECEIVING_NAVIGATION | Catalog-6 test-first entry; captions Receiving Entries History / Return Entries History and Received Tally / Return Tally. Default off; require a deliberate selection boundary. Existing list rendering is not an observation. |
-| RECEIVING_SELECT_CONDITION / DISPOSITION_SELECT_KIND | `cboCondition` on Receiving / `cboDisposition` on Returns; no current selection handler; RECEIVING_NAVIGATION | Catalog-6 test-first entry; captions Condition * / Disposition *. Default off; record usage only, never selected values or automatic/programmatic changes. Locked Returns condition/location/lot fields do not expose an independent editing action. |
+| RECEIVING_PAGE_RECEIPTS / RECEIVING_PAGE_RETURNS / RECEIVING_PAGE_PURCHASING | `mTabs_Change` -> `ApplyReceivingTab`; RECEIVING_NAVIGATION | Catalog-6 packaged GREEN (771-check suite); captions Receiving / Returns / Purchasing. Optional collection defaults off. REQUESTED then UI-only SELECTED; native input versus programmatic initialization must be proved. Purchasing stays the approved non-operational stub. |
+| RECEIVING_SELECT_ITEM / DISPOSITION_SELECT_ITEM | `mLstReceiveItems_Click` -> `LoadSelectedReceiveItemDetails`; RECEIVING_NAVIGATION | Catalog-6 packaged GREEN (771-check suite); captions Receive Item Results / Return Item Results. Default off; automatic location/condition fills are not separate user actions. |
+| RECEIVING_SELECT_AGGREGATE / DISPOSITION_SELECT_AGGREGATE | `mLstAggregate_Click` -> selected-reference detail; RECEIVING_NAVIGATION | Catalog-6 packaged GREEN (771-check suite); captions Aggregate Received / Aggregate Returns. Default off; no reference text or inventory values in activity. |
+| RECEIVING_SELECT_HISTORY / DISPOSITION_SELECT_HISTORY; RECEIVING_SELECT_STAGED / DISPOSITION_SELECT_STAGED | `mLstInventory_Click` / `mLstStaged_Click` -> `NavigationSelection`; RECEIVING_NAVIGATION | Catalog-6 packaged GREEN (771-check suite); captions Receiving Entries History / Return Entries History and Received Tally / Return Tally. Default off; require a deliberate selection boundary. Existing list rendering is not an observation. |
+| RECEIVING_SELECT_CONDITION / DISPOSITION_SELECT_KIND | `mCboCondition_Click` on Receiving / `mCboDisposition_Click` on Returns -> `NavigationSelection`; RECEIVING_NAVIGATION | Catalog-6 packaged GREEN (771-check suite); captions Condition * / Disposition *. Default off; record usage only, never selected values or automatic/programmatic changes. Locked Returns condition/location/lot fields do not expose an independent editing action. |
 | Text entry/search, Receipt ID, read-only reference detail/status, labels/headers, scroll/resize/minimize/maximize | Current text Change handlers filter projections; remaining fields are input/display surfaces | Deliberately excluded from warehouse activity as keystroke/input/display/window mechanics. Do not log text changes, focus changes, entered values or automatic repaint/layout. |
 | ReceivedTally `btnConfirmWrites` -> `modTS_Received.ConfirmWrites` | Compatibility worksheet button calls the existing posting service directly | Not claimed as a tracked control. Current launcher hides its support sheet as VeryHidden when another visible sheet exists; public compatibility entry remains in code. Require packaged reachability evidence for any exclusion, or an explicit worksheet-control identity and actual-caller test before claiming coverage. Do not attribute arbitrary macro/service calls to user clicks. |
 
