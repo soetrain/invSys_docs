@@ -592,6 +592,15 @@ redirect a workbook, or replace the underlying failure. Disabled Ribbon actions
 remain subject to their existing capability guard; comprehensive denial coverage
 must be separately proved before claiming the whole launcher surface complete.
 
+CLOSED requires committed UI dismissal: cancelling native close while leaving
+the form open cannot satisfy that outcome, even if a nested Unload call returns.
+The native handler may synchronously hide the form, finish that dismissal's
+observation, and allow native window teardown. It must invalidate launcher reuse;
+it cannot retain a hidden reusable form or defer the record/notice until another
+launch. Termination and reference release are internal lifetime operations, not
+new user actions or the completion clock. This clarifies the existing owner-fact
+rule; it introduces no new close command or authority boundary.
+
 **Event Detail profile:**
 
 - Admin > Settings > Event Tracking > Event Detail chooses an event family,

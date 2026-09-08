@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.72 (Receiving Open/Close packaged RED; prior freshness candidate GREEN)
+**Version:** 1.76 (Receiving Open/Close checkpoint GREEN; comprehensive 4be/UAT pending)
 
 **Inventory date:** 2026-08-31
 
@@ -228,7 +228,7 @@ complete warehouse history. Action Paths remain in NAS
 `Training\ActionPaths\<WarehouseId>`. Both stores are non-authoritative.
 Neither recording nor evaluation processes or mutates business authority.
 
-**Receiving coverage discovery, 2026-09-07 (D18; catalog 4 candidate):**
+**Receiving coverage discovery, 2026-09-07 (D18; catalogs 4/5 candidates):**
 The following identities account for the current Receiving surface. Rows marked
 pending are reserved and do not enable collection. Command/result defaults
 and optional navigation/selection defaults remain D18's rules. Every future
@@ -237,14 +237,14 @@ changes and preserve the captured workbook/session. No field value is recorded.
 
 | Stable identity / surface | Existing route and logical owner | Coverage status / protecting evidence required |
 |---|---|---|
-| RECEIVING_OPEN; Operations Receiving Ribbon button | Generated `RibbonOnActionOperations` dispatch for `btnOperationsReceivingForm` -> `modTS_Received.ShowReceivingForm`; RECEIVING_WORKFLOW | Catalog-5 activity pending under D18 Open/Close clarification. Actual callback test must prove REQUESTED and OPENED/REUSED/FAILED, all Unknown data effect, empty references, valid session/workbook reuse, preserved owner failures and no extra initialization/direct-macro clicks. Existing capability denial remains guarded; denial observation coverage is separately pending. |
+| RECEIVING_OPEN; Operations Receiving Ribbon button | Generated `RibbonOnActionOperations` dispatch for `btnOperationsReceivingForm` -> `modTS_Received.ShowReceivingForm True`; RECEIVING_WORKFLOW | Catalog-5 checkpoint GREEN in the 596-check suite and all release gates: REQUESTED and OPENED/REUSED/FAILED, Unknown data effect, empty references, captured session/workbook reuse, preserved owner failures and no initialization/direct-macro clicks. Existing capability denial remains guarded; denial observation coverage is separately pending. Human acceptance remains open. |
 | RECEIVING_ADD_SELECTED; Receiving Add Selected | `frmReceiving.mBtnAdd_Click` -> `AddSelectedInventory` -> `modTS_Received.StageReceivingFormItemForWorkbook`; RECEIVING_STAGING | Candidate GREEN: attempt/staged/pre-validation rejection/service failure, stale context, optional store failure and no activity from direct staging. Exact receipt System_Key/EventId and unrelated workbook preserved. Existing validation is extracted to `modReceivingAddInput`; no new business write owner. |
 | DISPOSITION_ADD_SELECTED; Returns Add Disposition | Same Add handler -> `StageInventoryDispositionForWorkbook`; RECEIVING_DISPOSITION | Candidate GREEN: allocated existing keys and distinct RETURN/DUMP behavior, staged/rejected/failed observations and optional store failure, with no selected values in activity. |
 | RECEIVING_CONFIRM_WRITES; Receiving Confirm Writes | Actual form -> `modReceivingActivityAction.ConfirmWrites` -> posting owner; RECEIVING_WORKFLOW | Candidate implementation and focused outcomes covered above; publication/sequence consumption still pending. |
 | DISPOSITION_CONFIRM; Returns Confirm Dispositions | Same Confirm handler -> posting/disposition owner; RECEIVING_DISPOSITION | Candidate GREEN: four exact source events retained, independent RETURN/DUMP depletion and application once, Unknown Domain effect in activity. Publication/sequence consumption remains pending. |
 | RECEIVING_REFRESH; Receiving/Returns Refresh | `mBtnRefresh_Click` -> `RefreshClicked` -> `RefreshReceivingUiForWorkbook`; RECEIVING_WORKFLOW | Candidate GREEN through actual handlers on both tabs. REQUESTED; REFRESHED/Info/Changed only for owner-confirmed non-stale projection; STALE/Warning/Changed for cached/fallback local metadata or projection; FAILED/Error/Unknown. The form preserves the owner's stale/failure cause; Boolean True alone does not prove freshness. Stale context prevents owner entry. Internal refreshes do not impersonate clicks. |
 | RECEIVING_CLEAR; Receiving/Returns Clear | `mBtnClear_Click` -> `ClearReceivingFormStagingForWorkbook`; RECEIVING_STAGING | Candidate GREEN through actual handlers on both tabs. CLEARED/Changed for nonempty local staging, EMPTY/Unchanged, FAILED/Unknown for an owner failure including a partial two-table deletion. Unknown headers and captured context are preserved; no inventory mutation or replay. |
-| RECEIVING_CLOSE; Close or window close | `mBtnClose_Click`, `UserForm_QueryClose` and termination; RECEIVING_WORKFLOW | Catalog-5 activity pending under D18. Each explicit dismissal has one REQUESTED/CLOSED pair; CLOSED is Info/Unchanged, references empty, staging untouched. Internal replacement/Unload/workbook shutdown/termination are not clicks. Stale-context dismissal remains possible without new-session attribution; optional store failure cannot prevent closing. |
+| RECEIVING_CLOSE; Close or window close | Button and native `UserForm_QueryClose` -> `modReceivingActivityAction.CloseForm`; RECEIVING_WORKFLOW | Checkpoint GREEN in the 596-check suite and all release gates: synchronous native UI dismissal, invalidated reuse and native teardown; button completion follows Unload. Records/notices are immediate, including failed optional storage, with no extra next-launch activity. Internal unload/termination never starts a click. CLOSED stays Info/Unchanged with empty references and staging preserved. Human acceptance remains open. |
 | RECEIVING_PAGE_RECEIPTS / RECEIVING_PAGE_RETURNS / RECEIVING_PAGE_PURCHASING | `mTabs_Change` -> `ApplyReceivingTab`; RECEIVING_NAVIGATION | Optional selection coverage pending; distinguish operator page selection from programmatic initialization. Purchasing stays the approved non-operational stub. |
 | RECEIVING_SELECT_ITEM / DISPOSITION_SELECT_ITEM | `mLstReceiveItems_Click` -> `LoadSelectedReceiveItemDetails`; RECEIVING_NAVIGATION | Optional coverage pending; account for the two tab-specific item-result surfaces; automatic location/condition fills are not separate user actions. |
 | RECEIVING_SELECT_AGGREGATE / DISPOSITION_SELECT_AGGREGATE | `mLstAggregate_Click` -> selected-reference detail; RECEIVING_NAVIGATION | Optional coverage pending; do not put reference text or inventory values in activity. |
@@ -261,15 +261,41 @@ are the intended failures. Dismissal, staged identities/unknown values, authorit
 bytes, unrelated workbooks, older-policy compatibility and same-name workbook
 reopening pass. Three lifecycle captures are inspected; native close interaction
 and human acceptance remain separate. Static metrics and 28 existing size limits
-hold. Catalog 5 and Open/Close observation runtime implementation are still
-pending. See the code repository's
+hold. The subsequent catalog-5 candidate passes **578/578**, five compiles and
+cold start. An independently rebuilt candidate retains module limits after
+internal helper extraction; source regressions pass. Expanded native-window
+close exposes **592 PASS / 4 FAIL** after correcting a fixture window-lookup guard.
+All 578 prior checks remain GREEN; actual native dismissal is the missing behavior.
+The first correction completes its pending observation at termination. All five
+projects compile, but the narrow run stops
+at **131 PASS / 1 harness exception** after native-window destruction, with a
+VBE7 access violation. Unchanged catalog 4 completes without crashing (129/55).
+Diagnostic suppression of termination publication still crashes (125/7); keeping
+the launcher reference avoids the crash but delays records/notices (176/8).
+The next correction commits synchronous UI dismissal before its observation and
+allows native teardown, with reuse invalidated and no immediate cache release.
+The resulting candidate passes five builds/compiles, cold start and **596/596
+GREEN**, preserving all 491/578 prior checks, with both native closures and
+immediate records/notices passing. Three operator captures are inspected; all
+28 module limits and maintenance metrics hold. Packaged 86/86, live-role 48/48,
+full chain 30/30, Viewer, layout and three launchers pass. Reusable Production
+stops with an RPC harness failure/ntdll fault during edit/export; unchanged
+catalog 4 passes 2/2, while a candidate retry fails at a different stage. A
+separate observer test exposes automatic confirmation acceptance (6/1); its
+native modal-only correction passes 7/7 and public launchers 3/3. Full candidate
+Production and clean restart then pass 2/2 with unchanged XLAMs/assertions and no
+new Excel crash. All package hashes remain unchanged and Excel is closed. The
+native crash's cause is unproven; failed runs remain recorded. This completes the
+technical Open/Close checkpoint, not comprehensive 4be coverage or user acceptance.
+See the code repository's
 `tests/integration/plan022_slice4be_receiving_lifecycle_results.md`.
 
 This map is a discovery record under the normative contract, not evidence that
 the remaining controls are implemented or that every other Operations/Admin
-surface has been mapped. Runtime catalog version 4 registers eight controls:
+surface has been mapped. The retained catalog-4 candidate registers eight controls:
 the original two configuration actions, four Receiving Add/Confirm actions and
-the shared Refresh/Clear controls. Its initial candidate passed 439/439 focused
+the shared Refresh/Clear controls. Catalog 5 adds Open/Close for ten controls.
+The initial catalog-4 candidate passed 439/439 focused
 checks. Additional packaged tests exposed incorrect cached/stale source outcomes
 before changing the owner/bridge to report explicit REFRESHED/STALE/FAILED state.
 Both controls have empty business source references, fixed local-scope messages,

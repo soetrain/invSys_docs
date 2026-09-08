@@ -3555,8 +3555,47 @@ notices. Valid catalog-4 policies, both dismissals under store failure, staged
 identities/unknown values, authority bytes and same-name workbook reopening
 pass. Reopening is a regression guard, not another confirmed defect. Three
 lifecycle captures are inspected; static metrics and all 28 existing size limits
-hold. No runtime code or package changed; implementation and its release gates
-remain pending. Controls v1.72 and code evidence
+hold. These RED packages remain preserved. Catalog-5 implementation then passes
+**578/578** on an independently built candidate, including five compiles and cold
+start. Ribbon dispatch explicitly marks the user action; the existing launcher
+owns provisioning/binding and checks captured session/workbook before reuse.
+Close completion follows dismissal, with one pair and retained tracking notices.
+After GREEN, pure header-formatting and message helpers are moved within Receiving
+to keep existing module limits. Source regressions pass. A rebuilt candidate
+adds expanded native-window close checks before the remaining release gates.
+The initial caption-lookup guard yields 542 PASS / 1 harness failure. Exact
+captured-form handle lookup then exposes product RED: **592 PASS / 4 FAIL**, with
+all 578 prior checks retained. Cancelling native close while invoking nested
+Unload leaves the form open but reports CLOSED. D18's committed-dismissal rule
+governs the first correction: allow the native close, release the cached form
+reference, and finish its already-requested observation on termination. Internal
+unloads start no activity. That candidate compiles, but its first narrow
+run stops at **131 PASS / 1 harness exception**: the native window disappears,
+then Excel loses COM connectivity and Windows records a VBE7 access violation.
+Unchanged catalog 4 completes 129/55 without crashing. Suppressing termination
+publication still crashes (125/7); retaining the reference avoids the crash but
+delays completion and its notice (176/8). These are diagnostic runs, not GREEN.
+D18's UI-dismissal clarification governs the next correction: synchronously hide
+on explicit native close, finish that dismissal, invalidate reuse without
+releasing the cache during QueryClose, and allow native teardown. The button
+retains direct Unload completion. The new five-package candidate passes cold
+start, all five compiles and **596/596 GREEN**, preserving every 491/578 prior
+check by name. Both native closures and immediate evidence pass without a crash;
+three operator captures are inspected. Static metrics and all 28 size limits
+hold. Packaged validation passes 86/86, live roles 48/48, full chain/restart
+30/30, Viewer and layout pass, and public launchers pass 3/3. The full reusable
+Production run stops at released Process edit/export with one RPC harness failure
+and an ntdll fault. The unchanged catalog-4 comparison passes 2/2; a candidate
+retry fails at a different stage with the same native signature. Neither is
+proven product RED. A scoped harness test then exposes automatic acceptance of
+an OK/Cancel confirmation (6/1). A native modal-only observer passes 7/7, keeps
+ordinary controls/other processes untouched and retains cooperative shutdown;
+public launchers pass 3/3 with it. The candidate's full Production and clean
+restart then pass 2/2 with unchanged XLAMs/assertions and no new Excel crash.
+Final candidate and catalog-4 hashes remain unchanged; Excel is closed. The
+crash's cause remains unproven and failed runs remain recorded. The technical
+Open/Close checkpoint is complete; comprehensive coverage and human UAT remain
+open. Controls v1.76 and code evidence
 `tests/integration/plan022_slice4be_receiving_lifecycle_results.md` record this
 checkpoint. The prior Refresh/Clear checkpoint remains verified.
 
