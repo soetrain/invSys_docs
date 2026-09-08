@@ -3599,6 +3599,20 @@ open. Controls v1.76 and code evidence
 `tests/integration/plan022_slice4be_receiving_lifecycle_results.md` record this
 checkpoint. The prior Refresh/Clear checkpoint remains verified.
 
+**Receiving navigation/selection D13 entry, 2026-09-08:** Continue 4be.1 from
+the preserved catalog-5 lifecycle candidate and all 596 GREEN checks. D18's
+navigation refinement and controls catalog reserve thirteen page/list/choice
+identities, fixed captions, Navigation/default-off policy, UI-only SELECTED
+outcomes and empty source references. This is semantic inheritance of approved
+coverage/input-exclusion rules, not a new business contract. Before runtime
+changes, extend the packaged harness to distinguish deliberate mouse/keyboard
+selection from programmatic changes, initialization/refresh and dependent fills.
+Expected RED is absent registered/correlated optional observations. Native input
+must independently reach its actual control; unavailable input or a broken
+fixture is harness failure, not product RED. Protect stale/captured context,
+older/disabled/malformed policy, tracking failure, exact keys/unknown columns and
+business authority bytes. Recording integration remains separately pending.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |

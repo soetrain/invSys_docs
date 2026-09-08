@@ -601,6 +601,35 @@ launch. Termination and reference release are internal lifetime operations, not
 new user actions or the completion clock. This clarifies the existing owner-fact
 rule; it introduces no new close command or authority boundary.
 
+**4be.1 Receiving navigation/selection clarification:** Catalog 6 adds the
+thirteen reserved page/selection controls in the maintained catalog, owned by
+RECEIVING_NAVIGATION with existing RECEIVE_POST eligibility. Catalogs 1-5 retain
+their definitions. These controls are Navigation class, default collection off;
+an explicit current whole-policy Collect flag may enable them. The capture flag
+alone does not collect outside an explicit recording. An older saved policy
+cannot implicitly enable them. This refines the approved comprehensive coverage
+and optional-navigation rules without adding permission or business authority.
+
+Record one REQUESTED/Info/Unknown and SELECTED/Info/Unchanged pair for a
+deliberate committed page or list/choice selection through the actual form's
+mouse/keyboard interaction boundary. SELECTED describes only UI selection and
+its existing local detail presentation, never staging, submission or inventory
+completion. Use the stable ControlId plus underscore as the EventCode prefix,
+fixed product captions and empty source references. Never include selected
+values, list positions, item identities, input text or physical key/button data.
+Programmatic Value/ListIndex changes, initialization, automatic sole-item choice,
+refresh, dependent field fills and direct detail-loader calls are not user
+selections. Focus, typing, scroll and window mechanics remain excluded.
+
+The form validates its captured session/warehouse and live role workbook before
+presenting newly selected business detail; stale forms require reopening and
+cannot attribute observations to a new context. Optional tracking failure shows
+Tracking unavailable while preserving an otherwise valid selection and the
+owner's result. FAILED/Error/Unknown is permitted only when the existing local
+selection/detail owner reports failure; the recorder does not infer success from
+input delivery alone. Purchasing remains the non-operational stub. No input
+surveillance, command replay or new selection-driven business write is added.
+
 **Event Detail profile:**
 
 - Admin > Settings > Event Tracking > Event Detail chooses an event family,
