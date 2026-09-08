@@ -3310,7 +3310,7 @@ grow. The actual Settings save was captured and inspected. See the maintained
 for exact commands, package hashes and final launcher/reusable Production gates.
 Fresh human UAT and the separate comprehensive Event Viewer acceptance remain open.
 
-**2026-09-07 status: detailed synthesized contract APPROVED; 4be.1 foundation and Receiving confirmation candidates GREEN; comprehensive coverage pending.**
+**2026-09-07 status: detailed synthesized contract APPROVED; 4be.1 foundation and Receiving Add/Confirm candidates GREEN; comprehensive coverage pending.**
 The user approved Architecture D18's shared Events, How-To/Diagnostic and Compare
 both contract, dedicated Event Tracking Settings and personal view choice.
 Architecture now explicitly replaces curated-only D18 and the after-R1 Viewer
@@ -3467,8 +3467,28 @@ change with empty submission references; disposition confirmation retains exact
 submission evidence and Unknown Domain effect. Controls v1.66 records the same
 definitions. The implementation target is Core's versioned catalog/reference
 validation and Operations' actual Add/Confirm handlers; staging/business ownership
-and existing package boundaries remain binding. GREEN and all changed-package
-gates remain pending.
+and existing package boundaries remain binding.
+
+**Catalog-3 candidate implementation, 2026-09-07:** First focused GREEN is
+245/245; expanded compatibility, stale Add, optional store-failure and readable
+catalog-3 tests pass **262/262**. Receipt and disposition confirmation each retain
+all four independently applied exact events, including unobserved/direct staging
+without invented user actions. Eleven new actual form captures were inspected.
+Five explicit compiles and 81/81 packaged smoke pass. Static candidates (1,077),
+duplicate groups (192), unresolved dynamic calls (45) and literal calls (eight)
+do not regress; all 28 oversized ratchets hold and Receiving shrinks 24 lines.
+Controls v1.67 is synchronized. Live-role 48/48, full-chain/restart 30/30,
+Viewer, Production layout/window states and all three packaged launchers pass
+on the new candidate hashes. Two initial reusable Production runs and an
+independently built/compiled pre-change baseline fail with native Excel/RPC
+interruption. After cooperative dialog-observer shutdown replaces forced job
+termination, the unchanged candidate passes two independent full reusable
+Production/clean-restart runs, each 2/2, and all three launchers again. Both full
+runs close Excel normally, preserve all five package hashes and record no Excel
+native crash event. All checkpoint gates pass. This supports the harness
+hypothesis without establishing the native crash's cause; failed runs remain in
+the evidence. Comprehensive coverage, later 4be subslices and human acceptance
+remain incomplete; no accepted deployment or NAS rollout is implied.
 
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|

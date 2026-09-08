@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.66 (Receiving staging/disposition activity RED; catalog-3 implementation pending)
+**Version:** 1.67 (Receiving staging/disposition candidate GREEN; all checkpoint gates pass)
 
 **Inventory date:** 2026-08-31
 
@@ -194,9 +194,10 @@ See [foundation candidate evidence](../../../invSys_fork/tests/integration/plan0
 
 See [Receiving activity RED](../../../invSys_fork/tests/integration/plan022_slice4be_receiving_activity_red_results.md)
 and [current candidate evidence](../../../invSys_fork/tests/integration/plan022_slice4be_receiving_activity_results.md).
-The Add handler establishes fixture identities but is not yet claimed as an
-implemented tracked control. Confirm Dispositions uses the same button on the
-Returns tab and remains separate pending coverage. This entry records an
+The catalog-3 extension now tracks Add Selected, Add Disposition and Confirm
+Dispositions through their actual handlers; see the coverage record below and
+[staging/disposition evidence](../../../invSys_fork/tests/integration/plan022_slice4be_receiving_staging_results.md).
+This entry records an
 existing reachable control and its D18 evidence requirement; it adds no workflow,
 permission or application authority. Codes and source-reference validation are
 implemented; denial, validation rejection, uncertain submission failure and
@@ -227,9 +228,9 @@ complete warehouse history. Action Paths remain in NAS
 `Training\ActionPaths\<WarehouseId>`. Both stores are non-authoritative.
 Neither recording nor evaluation processes or mutates business authority.
 
-**Receiving coverage discovery, 2026-09-07 (D18; runtime catalog expansion pending):**
-The following reserved identities account for the current Receiving surface.
-They do not claim implementation or enable collection. Command/result defaults
+**Receiving coverage discovery, 2026-09-07 (D18; catalog 3 candidate):**
+The following identities account for the current Receiving surface. Rows marked
+pending are reserved and do not enable collection. Command/result defaults
 and optional navigation/selection defaults remain D18's rules. Every future
 handler test must distinguish explicit operator actions from programmatic field
 changes and preserve the captured workbook/session. No field value is recorded.
@@ -237,10 +238,10 @@ changes and preserve the captured workbook/session. No field value is recorded.
 | Stable identity / surface | Existing route and logical owner | Coverage status / protecting evidence required |
 |---|---|---|
 | RECEIVING_OPEN; Operations Receiving Ribbon button | Generated `RibbonOnActionOperations` dispatch for `btnOperationsReceivingForm` -> `modTS_Received.ShowReceivingForm`; RECEIVING_WORKFLOW | Activity pending; packaged launcher must preserve workbook/form reuse and report open/reuse/failure without treating initialization as extra clicks. |
-| RECEIVING_ADD_SELECTED; Receiving Add Selected | `frmReceiving.mBtnAdd_Click` -> `AddSelectedInventory` -> `modTS_Received.StageReceivingFormItemForWorkbook`; RECEIVING_STAGING | Activity pending; actual Add already protects creation of exact receipt System_Key/EventId. Require attempt/staged/rejected/denied/uncertain result and no activity from direct staging service calls. |
-| DISPOSITION_ADD_SELECTED; Returns Add Disposition | Same Add handler -> `StageInventoryDispositionForWorkbook`; RECEIVING_DISPOSITION | Activity pending; preserve allocated existing keys and distinct RETURN/DUMP semantics, with no selected values in activity. |
+| RECEIVING_ADD_SELECTED; Receiving Add Selected | `frmReceiving.mBtnAdd_Click` -> `AddSelectedInventory` -> `modTS_Received.StageReceivingFormItemForWorkbook`; RECEIVING_STAGING | Candidate GREEN: attempt/staged/pre-validation rejection/service failure, stale context, optional store failure and no activity from direct staging. Exact receipt System_Key/EventId and unrelated workbook preserved. Existing validation is extracted to `modReceivingAddInput`; no new business write owner. |
+| DISPOSITION_ADD_SELECTED; Returns Add Disposition | Same Add handler -> `StageInventoryDispositionForWorkbook`; RECEIVING_DISPOSITION | Candidate GREEN: allocated existing keys and distinct RETURN/DUMP behavior, staged/rejected/failed observations and optional store failure, with no selected values in activity. |
 | RECEIVING_CONFIRM_WRITES; Receiving Confirm Writes | Actual form -> `modReceivingActivityAction.ConfirmWrites` -> posting owner; RECEIVING_WORKFLOW | Candidate implementation and focused outcomes covered above; publication/sequence consumption still pending. |
-| DISPOSITION_CONFIRM; Returns Confirm Dispositions | Same Confirm handler -> posting/disposition owner; RECEIVING_DISPOSITION | Activity pending; returned/unusable quantities must remain exact-entity depletion, with all submitted source references and no inferred application. |
+| DISPOSITION_CONFIRM; Returns Confirm Dispositions | Same Confirm handler -> posting/disposition owner; RECEIVING_DISPOSITION | Candidate GREEN: four exact source events retained, independent RETURN/DUMP depletion and application once, Unknown Domain effect in activity. Publication/sequence consumption remains pending. |
 | RECEIVING_REFRESH; Receiving/Returns Refresh | `mBtnRefresh_Click` -> `RefreshClicked` -> `RefreshReceivingUiForWorkbook`; RECEIVING_WORKFLOW | Activity pending; explicit refresh records once, while initialization, filtering and post-command view refresh do not impersonate clicks. |
 | RECEIVING_CLEAR; Receiving/Returns Clear | `mBtnClear_Click` -> `ClearReceivingFormStagingForWorkbook`; RECEIVING_STAGING | Activity pending; protect local staging-only effects and unknown columns; no inventory mutation/replay. |
 | RECEIVING_CLOSE; Close or window close | `mBtnClose_Click`, `UserForm_QueryClose` and termination; RECEIVING_WORKFLOW | Activity pending; one explicit close observation, no duplicate termination record or record from internal launcher replacement. |
@@ -254,10 +255,10 @@ changes and preserve the captured workbook/session. No field value is recorded.
 
 This map is a discovery record under the normative contract, not evidence that
 the remaining controls are implemented or that every other Operations/Admin
-surface has been mapped. Runtime catalog version 2 still registers only the
-three implemented controls described above.
+surface has been mapped. Runtime catalog version 3 registers six controls:
+the original two configuration actions and four Receiving Add/Confirm actions.
 
-**Catalog-3 outcome definitions (D18; implementation pending):** Add Selected
+**Catalog-3 outcome definitions (D18; candidate GREEN):** Add Selected
 and Add Disposition use RECEIVE_ADD_ and DISPOSITION_ADD_. REQUESTED is
 Info/Unknown; STAGED is Info/Changed for confirmed workbook-local staging only,
 with no source submission references. Form pre-validation is
@@ -271,7 +272,17 @@ checks. Independent receipt/RETURN/DUMP application, exact identities, captured
 workbook, extra columns and no activity from direct staging already pass.
 Expanded actual invalid-quantity and protected-sheet cases are **210 PASS /
 35 FAIL**, with the original business errors and staged row values preserved;
-activity implementation and changed-package gates remain pending.
+first GREEN is **245/245**, expanded to **262/262** with catalog-2 policy
+compatibility, actual catalog-3 reads, stale Add and unavailable tracking tests.
+Eleven new actual form captures were inspected. Five compiles, static maintenance,
+81/81 packaged smoke, 48/48 live-role, 30/30 full-chain/restart, Viewer, Production
+layout/window states and three packaged launchers pass. Following native
+Excel/RPC interruptions in candidate and pre-change builds, cooperative dialog
+observer shutdown passes two independent full reusable Production/clean-restart
+runs, each 2/2, and the three launchers again. Both runs close Excel normally,
+preserve package hashes and record no native crash event. All checkpoint gates
+pass. See the linked staging/disposition evidence for retained failures and the
+limits of the harness hypothesis. This is not Release 1 or human acceptance.
 
 Headless Core owns the activity/library boundaries and versioned policy/profile
 commands; Admin and Operations own their respective UI. Existing D5 scalar/UOM
