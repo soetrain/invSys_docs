@@ -3761,9 +3761,20 @@ including rejection of an explicitly opened XLAM and byte preservation. The firs
 probe's enumeration/JSON assumptions were harness errors, not behavioral RED.
 No build reorder, new exit wait, runtime change or architectural amendment was
 implemented. The new boundary test protects already-correct package assembly.
-Next: classify the invalid execution site's memory state/type/protection using a
-calibrated read-only metadata probe, without reading its contents. These are
-diagnostic results, not permission to weaken or replace the full gate. See the
+The memory-metadata extension subsequently passes 27/27 observer checks after
+24 PASS / 3 FAIL for absent labels, plus 10/10 live-allocation checks. It records
+finite state/type/protection labels without reading page contents or persisting
+addresses. Original-candidate initial observation and compiled-candidate restart
+observation each complete the full workflow 2/2 without capturing an exception;
+the first observer's 180-second window covers only part of the full workflow.
+A bounded original-candidate capture repeat also passes 2/2 without an exception.
+All three runs end with Excel closed and all 20 package pins preserved.
+The failing target's memory state remains unknown. Next: calibrate finer fixed
+markers around the existing Process Release queue/processor/status/list-refresh
+boundaries and combine them with native observation in an isolated unsaved
+diagnostic. No runtime/build repair or standard-gate replacement is established.
+See [memory diagnostic evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_memory_diagnostics.md).
+These are diagnostic results, not permission to weaken or replace the full gate. See the
 [exit/execute evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_exit_and_execute_results.md).
 All 20 pinned packages
 across the four preserved sets remain unchanged; Excel is closed at this check.

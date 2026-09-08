@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.83 (Receiving launcher-denial implemented; Production execute-fault evidence captured; gate unresolved)
+**Version:** 1.84 (Receiving launcher-denial implemented; Production memory probe calibrated; gate unresolved)
 
 **Inventory date:** 2026-08-31
 
@@ -283,6 +283,15 @@ defect: the saved XLAM is not loaded, and the existing builder passes 7/7 extern
 edit checks with a 5/5 detector calibration. No build or runtime implementation
 changed; these findings do not close the Production gate or alter any control.
 See [exit/execute evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_exit_and_execute_results.md).
+
+Memory-metadata calibration now passes 27/27 observer and 10/10 allocation checks.
+Initial-session and fresh-restart observed full workflows each pass 2/2 without
+an exception capture, as does one bounded original-candidate repeat. The actual
+failing memory region remains unclassified; all 20 package pins are preserved.
+No runtime/control change or Production acceptance follows from these diagnostic
+passes. Native worksheet input also remains unproved: the current session lacks
+input-desktop access and a foreground window. See
+[memory diagnostic evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_memory_diagnostics.md).
 
 | Stable identity / surface | Existing route and logical owner | Coverage status / protecting evidence required |
 |---|---|---|
