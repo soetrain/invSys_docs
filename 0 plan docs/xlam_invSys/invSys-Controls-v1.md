@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.61 (D5 implemented; shared Events and How-To/Diagnostic contract approved; initial activity RED recorded)
+**Version:** 1.62 (D5 retained; shared Events contract approved; initial activity foundation candidate GREEN)
 
 **Inventory date:** 2026-08-31
 
@@ -98,7 +98,7 @@ after connection, are never saved in the source set, and the form never changes
 the normal Send To warehouse target. Physical two-server/two-computer UAT is
 still pending.
 
-### Slice 4be shared Events and How-To/Diagnostic Action Paths: approved; implementation pending
+### Slice 4be shared Events and How-To/Diagnostic Action Paths: approved; foundation in progress
 
 **Approved D5 prerequisite, 2026-09-06:** Admin Settings **Save Value** keeps its
 existing UI but invokes a dedicated Core configuration-write service. Core
@@ -157,8 +157,9 @@ RetryAllowed describes comparison with an observed retry only.
 
 **4be.1 first discovered controls and test identities (2026-09-07):** These
 catalog entries implement D18's owner/code/instance distinction; they add no
-capability or workflow action. Packaged observation implementation is pending.
-The first packaged test is RED at 19 PASS / 12 FAIL, including all 18 existing
+capability or workflow action. Their candidate observation implementation passes
+70/70 focused checks; full catalog coverage and user acceptance remain pending.
+The first packaged test was RED at 19 PASS / 12 FAIL, including all 18 existing
 D5 checks still GREEN; the two controls below supply three exercised cases.
 See [first activity RED](../../../invSys_fork/tests/integration/plan022_slice4be_activity_red_results.md).
 
@@ -171,8 +172,19 @@ These are the initial test cases, not a claim of comprehensive coverage. The
 full reachable Operations/Admin catalog and remaining result branches are still
 required. New stable codes and controls inherit D18 semantics; they do not
 substitute for immutable RecordId/ActivityId or exact inventory System_Key.
+The initial foundation reads D18's versioned Config policy tables; built-in
+policy is explicitly version 0, while malformed policy reports tracking
+unavailable. A training-store failure appends **Tracking unavailable** to the
+owning form's normal result without suppressing that result or repeating work.
+The actual Save Value and Retrieve UOM Catalog handlers also reject a changed
+invSys session before executing the command, including sign-out/sign-in as the
+same actor. Settings says **Session or warehouse changed. Reopen Settings before
+saving.** Production says **Session or warehouse changed. Reopen Production
+before retrieving the catalog.** This enforces D18's captured-session rule;
+optional store failure still permits an otherwise authorized command.
+See [foundation candidate evidence](../../../invSys_fork/tests/integration/plan022_slice4be_activity_foundation_results.md).
 
-The activity catalog accounts for all reachable Operations/Admin controls,
+The completed activity catalog must account for all reachable Operations/Admin controls,
 including intentional exclusions. Future eligible Admin activity gains stable
 IDs in a separate NAS `Training\Activity\<WarehouseId>` store; existing
 station-local audit history and pre-sign-in activity are not fabricated as

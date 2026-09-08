@@ -448,6 +448,24 @@ may still read an authored guide, whose provenance remains visible.
   collection with a visible error, never repairs Config or suppresses required
   audit. D5's fail-closed business-write requirements remain binding.
 
+**4be.1 implementation clarification:** Persisted policy metadata uses
+`tblEventTrackingPolicies` and per-control rows use `tblEventTrackingControls`
+in authoritative Config. Both tables absent means built-in PolicyVersion 0;
+saved versions are positive integers. A partial pair, duplicate version/control,
+unknown catalog entry or malformed latest version is an error, never fallback
+to an older permissive policy. Header lookup is normalized and unknown columns
+are preserved. Activity SchemaVersion/CatalogVersion begin at 1; RecordId and
+ActivityId are generated GUIDs. Activity JSON is UTF-8 without a BOM, with
+non-ASCII characters escaped losslessly; ContentSha256 is the final property
+and hashes the complete JSON object before that property is appended. These
+wire/table choices refine the approved contract without adding authority.
+Schema, catalog, policy and ordinal fields are JSON integers, not coercible
+strings. Verified activity/policy UTC uses a valid calendar/time value in
+`yyyy-mm-ddTHH:mm:ss.fffZ` format. An activity outside a recording has ordinal
+0; a recorded action has an ordinal from 1 through 256. The originating form
+rejects a stale session before its command, independently of optional tracking
+availability; re-authenticating the same user does not revive that form binding.
+
 **Event Detail profile:**
 
 - Admin > Settings > Event Tracking > Event Detail chooses an event family,

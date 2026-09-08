@@ -3310,7 +3310,7 @@ grow. The actual Settings save was captured and inspected. See the maintained
 for exact commands, package hashes and final launcher/reusable Production gates.
 Fresh human UAT and the separate comprehensive Event Viewer acceptance remain open.
 
-**2026-09-07 status: detailed synthesized contract APPROVED; 4be.1 initial RED recorded.**
+**2026-09-07 status: detailed synthesized contract APPROVED; 4be.1 foundation candidate GREEN; comprehensive coverage pending.**
 The user approved Architecture D18's shared Events, How-To/Diagnostic and Compare
 both contract, dedicated Event Tracking Settings and personal view choice.
 Architecture now explicitly replaces curated-only D18 and the after-R1 Viewer
@@ -3348,11 +3348,37 @@ reuses real packaged Admin Settings and Production UOM handlers and records
 observation check pass; three real action cases lack the new activity evidence.
 The 12 failures are four assertions for each missing case, not 12 independent
 root causes. See [first activity RED](../../invSys_fork/tests/integration/plan022_slice4be_activity_red_results.md).
-No runtime source/XLAM changed and no 4be.1 GREEN or comprehensive coverage is
-claimed. Initial Excel-open precondition failure was resolved before the RED
+That initial RED changed no runtime source/XLAM and claimed no GREEN or
+comprehensive coverage. Initial Excel-open precondition failure was resolved before the RED
 run and is excluded from behavioral evidence.
 
 **Execution -- commit/push each completed subslice:**
+
+4be.1 implements the D18 observation foundation first, using Config tables
+`tblEventTrackingPolicies` / `tblEventTrackingControls` (both absent -> built-in
+version 0; malformed/partial -> tracking unavailable). The later 4be.2 editor
+will write that same approved policy. The first wire format uses GUID instance
+IDs and hash-verified UTF-8 JSON as clarified in D18. Storage failure must remain
+visible while ordinary authorized commands still run. Initial expanded tests
+add independent hash validation and a real Settings command against a blocked
+training-store path before runtime implementation.
+
+**Foundation candidate checkpoint, 2026-09-07:** The first two catalogued
+handlers now append correlated, hash-verified observations through headless
+Core (code commit `03f7f20`, pushed). Supplemental boundary RED was 62 PASS / 5 FAIL (strict JSON types,
+calendar-valid UTC, policy values and sequence ordinals); real-handler
+stale-session RED was 68 PASS / 2 FAIL. The candidate focused suite is
+70/70 GREEN, preserving all 18 D5 checks. Candidate cold-start and five-project
+compile pass; packaged smoke is 81/81, live-role is 48/48, and the ordered
+Release 1 chain is 30/30. Viewer/layout pass; all-role launchers are 3/3 and
+reusable Production including fresh restart is 2/2. Full 4be.1 control coverage and later
+subslice gates remain open. The candidate has not replaced `deploy/current`.
+See [activity foundation evidence](../../invSys_fork/tests/integration/plan022_slice4be_activity_foundation_results.md)
+for current regression status and boundaries. Both Settings Save Value and
+Production Retrieve UOM Catalog reject stale captured sessions at the role
+command boundary; tracking failure alone does not block an authorized command.
+Core session state and role-owned action orchestration use bounded modules;
+Auth shrinks by two lines and Production's existing form does not grow.
 
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
