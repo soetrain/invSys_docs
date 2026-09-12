@@ -3798,9 +3798,9 @@ inspection or reduced-workflow flags. This is a current standard-gate GREEN;
 the earlier native failure remains unexplained and no causal fix is claimed.
 All 20 pins remain unchanged; Excel is closed. Native 27/27 and memory 10/10
 calibrations were rechecked after recovery. No runtime, builder, static baseline
-or architecture changed. Next: calibrate native worksheet-button input in a minimal
-disposable fixture before the packaged Receiving caller test; comprehensive 4be
-coverage and human acceptance remain incomplete. See
+or architecture changed. The subsequent native worksheet caller checkpoint below
+advances coverage discovery; comprehensive 4be coverage and human acceptance remain
+incomplete. See
 [Release/recovery evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_release_boundary_diagnostics.md).
 
 **Receiving worksheet surface discovery, 2026-09-08:** D18's existing coverage
@@ -3824,6 +3824,23 @@ identity and owner-outcome implementation. Do not exclude the control solely
 because the usual launcher state hides its sheet. Architecture D18 is unchanged;
 controls v1.79 records the discovered surface without weakening any rule. See
 [surface evidence](../../invSys_fork/tests/integration/plan022_slice4be_receiving_surface_results.md).
+
+**Receiving native worksheet caller proof, 2026-09-12:** Minimal disposable input
+calibration is **8/8**. The original pinned launcher-denial candidate then passes
+**115/115**, retaining all prior 105 surface check identities. Native clicks on
+the visible sole-staging-sheet and saved/reopened controls enter the actual
+Operations `ConfirmWrites` handler with exact `btnConfirmWrites` caller identity.
+Saved bytes, captured form binding, unknown header, authority and unrelated
+workbook checks pass. Both worksheet captures were inspected. Earlier coordinate,
+window/context and COM setup failures remain harness failures, not product RED.
+The working harness explicitly activates the disposable workbook's own window;
+its Visible property was already true before preparation. All 20 candidate pins
+remain unchanged, Excel is closed, and no runtime/architecture/static baseline
+changed. No human UAT or repeated full release gates are claimed. Under D18's
+existing coverage rule, next refine the worksheet control identity and protect
+missing activity through meaningful native-action RED before implementation.
+Controls v1.86 and [surface evidence](../../invSys_fork/tests/integration/plan022_slice4be_receiving_surface_results.md)
+record this checkpoint; the broader 4be.1-4be.6 scope remains open.
 
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|

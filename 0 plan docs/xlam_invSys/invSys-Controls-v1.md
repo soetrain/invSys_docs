@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.85 (Receiving launcher-denial implemented; standard Production gate GREEN after recovery; visible acceptance pending)
+**Version:** 1.86 (Receiving native worksheet caller proven; worksheet activity and visible acceptance pending)
 
 **Inventory date:** 2026-08-31
 
@@ -299,7 +299,8 @@ debugger, source instrumentation, project inspection or reduced workflow. The
 earlier native crash remains unexplained; no runtime fix or human acceptance is
 claimed. The separate Release-marker diagnostic also passes 2/2 with 11 complete
 sequences. All 20 package pins are preserved and Excel is closed. Desktop access
-is now available; native worksheet-button input still needs calibration and proof.
+is now available. Subsequent native input calibration passes 8/8 and the packaged
+worksheet caller proof passes 115/115; see the coverage row and surface evidence below.
 See [Release/recovery evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_release_boundary_diagnostics.md).
 
 | Stable identity / surface | Existing route and logical owner | Coverage status / protecting evidence required |
@@ -318,7 +319,7 @@ See [Release/recovery evidence](../../../invSys_fork/tests/integration/plan022_s
 | RECEIVING_SELECT_HISTORY / DISPOSITION_SELECT_HISTORY; RECEIVING_SELECT_STAGED / DISPOSITION_SELECT_STAGED | `mLstInventory_Click` / `mLstStaged_Click` -> `NavigationSelection`; RECEIVING_NAVIGATION | Catalog-6 packaged GREEN (771-check suite); captions Receiving Entries History / Return Entries History and Received Tally / Return Tally. Default off; require a deliberate selection boundary. Existing list rendering is not an observation. |
 | RECEIVING_SELECT_CONDITION / DISPOSITION_SELECT_KIND | `mCboCondition_Click` on Receiving / `mCboDisposition_Click` on Returns -> `NavigationSelection`; RECEIVING_NAVIGATION | Catalog-6 packaged GREEN (771-check suite); captions Condition * / Disposition *. Default off; record usage only, never selected values or automatic/programmatic changes. Locked Returns condition/location/lot fields do not expose an independent editing action. |
 | Text entry/search, Receipt ID, read-only reference detail/status, labels/headers, scroll/resize/minimize/maximize | Current text Change handlers filter projections; remaining fields are input/display surfaces | Deliberately excluded from warehouse activity as keystroke/input/display/window mechanics. Do not log text changes, focus changes, entered values or automatic repaint/layout. |
-| ReceivedTally `btnConfirmWrites` -> `modTS_Received.ConfirmWrites` | Compatibility worksheet button calls the existing posting service directly | Packaged surface discovery 105/105 (2026-09-08): the launcher accepts/captures an existing workbook with ReceivedTally as its sole visible sheet and preserves the visible button and expected handler after save/reopen. Ordinary provisioned/reused support sheets remain VeryHidden. It cannot be excluded on visibility grounds. Native caller/handler proof and an explicit worksheet activity identity remain pending; no activity implementation or human acceptance is claimed. Do not attribute arbitrary macro/service calls to user clicks. See [surface evidence](../../../invSys_fork/tests/integration/plan022_slice4be_receiving_surface_results.md). |
+| ReceivedTally `btnConfirmWrites` -> `modTS_Received.ConfirmWrites` | Compatibility worksheet button calls the existing posting service directly | Native discovery 115/115 (2026-09-12), retaining prior 105 checks: sole-visible-ReceivedTally and saved/reopened cases enter the actual packaged handler with exact `btnConfirmWrites` caller; both captures inspected. Minimal input calibration 8/8 distinguishes programmatic invocation and rejects the wrong workbook/window. Captured binding, unknown header, saved bytes and authority checks pass; all 20 candidate pins unchanged. Ordinary provisioned/reused support sheets remain VeryHidden. Explicit worksheet activity identity, owner-outcome RED/GREEN and human acceptance remain pending. This is test-only coverage under D18, not a runtime/architecture change. See [surface evidence](../../../invSys_fork/tests/integration/plan022_slice4be_receiving_surface_results.md). |
 
 **Open/Close packaged RED, 2026-09-07:** The actual generated Ribbon callback
 and Close/QueryClose handler tests produce **531 PASS / 47 FAIL** across 578
