@@ -3898,13 +3898,63 @@ gate fails twice after Receiving at Production's batch-scale test; the pinned
 original passes3/3. This is an unresolved release-regression gate, not full
 acceptance and not evidence for a speculative source repair. A separate identical-
 source five-package rebuild passes build/compile/cold-start and that same launcher
-gate3/3. Its focused210 and remaining package regressions are being verified
-separately; no build-defect or native-crash repair is inferred. Source/test/static/
+gate3/3 and focused worksheet210/210. Its remaining package regressions are being
+verified separately; all30 package pins remain unchanged. No build-defect or
+native-crash repair is inferred. Source/test/static/
 evidence checkpoint **01891bb** is committed and pushed; it is not Slice4be
 acceptance or deployment. The layout-validation screenshot also shows a
 partly clipped Committed / Used heading; recheck the normal launched Production
 form before assigning a layout defect or claiming visible acceptance. All outcomes
 and remaining context/denial guards are retained in the worksheet evidence.
+
+**Worksheet guard-test entry, 2026-09-12:** Continue4be.1 under the existing D18
+captured-entry/owner-fact rules. Supplemental packaged native tests cover Denied,
+SignedOut, SwitchWorkbook, SignOutDuringTracking, CloseDuringTracking and a change
+to a different generated, signed-in warehouse during tracking. Unsaved
+seams are installed before fixture/form creation; they observe existing posting-
+owner counts/binding and interrupt only the optional-tracking return in isolated
+fixtures. Actual `btnConfirmWrites` input remains mandatory. Protect no owner
+retry or workbook redirection, no business mutation on rejected actions, exact
+source references on authorized completion, preserved unknown fields, and no
+invented conclusion after context loss. A failed interruption or fixture setup
+is not behavioral RED. These tests add coverage without changing runtime; any
+concrete failure must protect a subsequent correction before that correction is
+implemented. The normal combined launcher and complete Release1 gates remain
+required independently of these instrumented guard proofs.
+
+**Worksheet resumed verification, 2026-09-12:** The prior guard process is terminal
+at215/215 GREEN (the five-case predecessor was201/201). The rebuilt full activity
+suite is845/845 with every prior identity retained and no duplicates; smoke86/86
+also passes. The rebuilt live-role gate stops at39PASS/1harness exception during
+Production Complete Run, with RPC0x800706BE and Windows native c0000028/ntdll.dll.
+Recovery files were preserved through the inspected keep-for-later prompt. No
+runtime repair is inferred. The pinned original comparison and unchanged clean
+rebuild subsequently both pass48/48; the original failure remains recorded.
+The rebuilt full chain passes30/30, Viewer passes, and layout geometry/window
+checks pass. A Windows c0000005/combase.dll record during the successful chain
+still prevents any claim that native stability is resolved. The rebuilt default
+layout capture retains the clipped Committed / Used heading; normal populated-
+form and human review remain open. Full reusable Production/restart passes2/2
+without reduced flags, debugger or diagnostic mutations.
+The strengthened guard passes215/215 with the actual second warehouse ID,
+runtime root and signed-in actor verified, preserving all check identities. Its
+first attempt stopped94/1 before native input because the fixture could not obtain
+the foreground window; that setup failure remains separate from behavioral RED.
+The unchanged retry required no input-helper/runtime repair. All30 package pins
+and four runtime source pins match; Excel is closed. Static JSON contracts and
+all28 module limits pass. Native stability, visible/human acceptance and
+comprehensive4be.1-4be.6 remain open.
+Code checkpoint **6c9d2a1** records the guarded215 test, rebuilt package gate
+evidence and Shipping/Boxing source discovery. Runtime remains the01891bb
+candidate; accepted deployment/NAS and unrelated user files are unchanged.
+
+**Shipping/Boxing discovery, 2026-09-12:** The maintained
+[source coverage map](../../invSys_fork/tests/integration/plan022_slice4be_shipping_coverage.md)
+identifies current form commands, owner boundaries, navigation and unresolved
+worksheet/Ribbon reachability under D18. Shared activity remains unimplemented.
+The source distinguishes SHIP_POST save/make actions from ADMIN_MAINT box
+maintenance; the observation layer must preserve both. This is non-contract
+source discovery, not D13 RED, a new catalog version or Shipping acceptance.
 
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
