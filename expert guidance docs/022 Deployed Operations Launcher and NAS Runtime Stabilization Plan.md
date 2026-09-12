@@ -3769,10 +3769,10 @@ observation each complete the full workflow 2/2 without capturing an exception;
 the first observer's 180-second window covers only part of the full workflow.
 A bounded original-candidate capture repeat also passes 2/2 without an exception.
 All three runs end with Excel closed and all 20 package pins preserved.
-The failing target's memory state remains unknown. Next: calibrate finer fixed
-markers around the existing Process Release queue/processor/status/list-refresh
-boundaries and combine them with native observation in an isolated unsaved
-diagnostic. No runtime/build repair or standard-gate replacement is established.
+The failing target's memory state remains unknown. Finer fixed markers are then
+calibrated around the existing Process Release queue/processor/status/list-refresh
+boundaries and combined with native observation in an isolated unsaved diagnostic.
+No runtime/build repair is established.
 See [memory diagnostic evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_memory_diagnostics.md).
 These are diagnostic results, not permission to weaken or replace the full gate. See the
 [exit/execute evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_exit_and_execute_results.md).
@@ -3783,6 +3783,25 @@ and every remaining release gate remain binding. See the continued
 [diagnostic evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_provenance_diagnostics.md)
 and the original code evidence
 `tests/integration/plan022_slice4be_receiving_launcher_denial_results.md`.
+
+**Recovery/current standard gate, 2026-09-12:** After the user's reported outage,
+the old diagnostic handle is absent and its retained report proves a setup failure
+before callbacks. Excel's `.Name` -> `.name` normalization defeated a case-sensitive
+marker match. Actual-loaded-source calibration goes 0/3 -> 3/3; placement remains
+13/13 and error-preserving transport 5/5. The corrected full diagnostic passes 2/2
+and records 11 complete Release sequences, without a native fault capture.
+
+Input-desktop access and a foreground window are now available. In this changed
+environment the unchanged standard validator against the original pinned candidate
+passes **2/2**, including clean restart, without debugger, markers, project
+inspection or reduced-workflow flags. This is a current standard-gate GREEN;
+the earlier native failure remains unexplained and no causal fix is claimed.
+All 20 pins remain unchanged; Excel is closed. Native 27/27 and memory 10/10
+calibrations were rechecked after recovery. No runtime, builder, static baseline
+or architecture changed. Next: calibrate native worksheet-button input in a minimal
+disposable fixture before the packaged Receiving caller test; comprehensive 4be
+coverage and human acceptance remain incomplete. See
+[Release/recovery evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_release_boundary_diagnostics.md).
 
 **Receiving worksheet surface discovery, 2026-09-08:** D18's existing coverage
 and exclusion-evidence rule governs this test-only discovery. The preserved

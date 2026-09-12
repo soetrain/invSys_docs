@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.84 (Receiving launcher-denial implemented; Production memory probe calibrated; gate unresolved)
+**Version:** 1.85 (Receiving launcher-denial implemented; standard Production gate GREEN after recovery; visible acceptance pending)
 
 **Inventory date:** 2026-08-31
 
@@ -289,13 +289,22 @@ Initial-session and fresh-restart observed full workflows each pass 2/2 without
 an exception capture, as does one bounded original-candidate repeat. The actual
 failing memory region remains unclassified; all 20 package pins are preserved.
 No runtime/control change or Production acceptance follows from these diagnostic
-passes. Native worksheet input also remains unproved: the current session lacks
-input-desktop access and a foreground window. See
+passes. Native worksheet input remained unproved on 2026-09-08, when the session
+lacked input-desktop access and a foreground window. See
 [memory diagnostic evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_memory_diagnostics.md).
+
+**Current verification, 2026-09-12:** The unchanged original candidate now passes
+the unmodified full Production/restart gate **2/2** after outage recovery, with no
+debugger, source instrumentation, project inspection or reduced workflow. The
+earlier native crash remains unexplained; no runtime fix or human acceptance is
+claimed. The separate Release-marker diagnostic also passes 2/2 with 11 complete
+sequences. All 20 package pins are preserved and Excel is closed. Desktop access
+is now available; native worksheet-button input still needs calibration and proof.
+See [Release/recovery evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_release_boundary_diagnostics.md).
 
 | Stable identity / surface | Existing route and logical owner | Coverage status / protecting evidence required |
 |---|---|---|
-| RECEIVING_OPEN; Operations Receiving Ribbon button | Generated `RibbonOnActionOperations` dispatch for `btnOperationsReceivingForm` -> `modTS_Received.ShowReceivingForm True`; RECEIVING_WORKFLOW | D18 REQUESTED precedes the existing Core RECEIVE_POST guard; its pre-owner rejection records DENIED/Blocked/Unchanged with empty references. Same fixed caption Receiving; RECEIVE_OPEN_DENIED explains "Receiving form launch was not authorized." and advises "Review Receiving permissions before reopening." Repeated attempts stay distinct; getEnabled/direct guard calls and pre-sign-in are excluded. Captured context and optional tracking failure cannot authorize or redirect launch. Meaningful RED 112/21 -> focused GREEN 133/133; native-dialog GREEN 137/137 with both actual notices inspected; full activity 845/845 retains prior 771 and discovery 105 identities. Full reusable Production gate remains unresolved after native Excel crashes, including same-source rebuild/recompilation diagnostics; prior candidate comparison and each single-package substitution pass 2/2. No checkpoint completion or human acceptance is claimed. |
+| RECEIVING_OPEN; Operations Receiving Ribbon button | Generated `RibbonOnActionOperations` dispatch for `btnOperationsReceivingForm` -> `modTS_Received.ShowReceivingForm True`; RECEIVING_WORKFLOW | D18 REQUESTED precedes the existing Core RECEIVE_POST guard; its pre-owner rejection records DENIED/Blocked/Unchanged with empty references. Same fixed caption Receiving; RECEIVE_OPEN_DENIED explains "Receiving form launch was not authorized." and advises "Review Receiving permissions before reopening." Repeated attempts stay distinct; getEnabled/direct guard calls and pre-sign-in are excluded. Captured context and optional tracking failure cannot authorize or redirect launch. Meaningful RED 112/21 -> focused GREEN 133/133; native-dialog GREEN 137/137 with both actual notices inspected; full activity 845/845 retains prior 771 and discovery 105 identities. The unchanged full reusable Production/restart gate passes 2/2 after recovery on 2026-09-12; earlier native crashes remain unexplained and are retained in evidence. No human acceptance or comprehensive 4be completion is claimed. |
 | RECEIVING_ADD_SELECTED; Receiving Add Selected | `frmReceiving.mBtnAdd_Click` -> `AddSelectedInventory` -> `modTS_Received.StageReceivingFormItemForWorkbook`; RECEIVING_STAGING | Candidate GREEN: attempt/staged/pre-validation rejection/service failure, stale context, optional store failure and no activity from direct staging. Exact receipt System_Key/EventId and unrelated workbook preserved. Existing validation is extracted to `modReceivingAddInput`; no new business write owner. |
 | DISPOSITION_ADD_SELECTED; Returns Add Disposition | Same Add handler -> `StageInventoryDispositionForWorkbook`; RECEIVING_DISPOSITION | Candidate GREEN: allocated existing keys and distinct RETURN/DUMP behavior, staged/rejected/failed observations and optional store failure, with no selected values in activity. |
 | RECEIVING_CONFIRM_WRITES; Receiving Confirm Writes | Actual form -> `modReceivingActivityAction.ConfirmWrites` -> posting owner; RECEIVING_WORKFLOW | Candidate implementation and focused outcomes covered above; publication/sequence consumption still pending. |
