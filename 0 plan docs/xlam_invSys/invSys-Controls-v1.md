@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.89 (Receiving worksheet native guards GREEN; rebuilt release and visible acceptance pending)
+**Version:** 1.90 (Shipping activity/source-reference RED established; Receiving checkpoint preserved)
 
 **Inventory date:** 2026-08-31
 
@@ -475,6 +475,17 @@ Shipping/Boxing D18 observation coverage is still pending. The
 records actual form-handler/owner routes, separate SHIP_POST and ADMIN_MAINT
 permissions, navigation/exclusions and unresolved native/worksheet reachability.
 It registers no new ControlIds and claims no packaged activity acceptance.
+The first packaged test now targets the actual Shipping Add/Update/Remove/Hold/
+Return/Stage/Sent handlers using a generated, authorized fixture and captured
+launcher form. Missing shared activity is the expected RED; independent staging,
+exact-key and workbook guards must pass first. Exact source/outcome definitions
+and Domain evidence remain required before implementation, as recorded in Plan022.
+The self-contained run now records105PASS/32FAIL, expanded to125PASS/40FAIL with
+all failures confined to missing activity. Independent exact-key shipment
+application and ten-made/eight-left reconciliation, staging/binding, unknown
+Update/Stage values and source-read non-mutation pass. This is D13 RED, not
+implementation or acceptance; negative/pending cases and precise catalog/owner
+outcomes remain next. See [Shipping activity evidence](../../../invSys_fork/tests/integration/plan022_slice4be_shipping_activity_results.md).
 
 ### Curated Action Path storage: NAS-only contract locked; implementation pending
 

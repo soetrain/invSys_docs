@@ -3956,6 +3956,41 @@ The source distinguishes SHIP_POST save/make actions from ADMIN_MAINT box
 maintenance; the observation layer must preserve both. This is non-contract
 source discovery, not D13 RED, a new catalog version or Shipping acceptance.
 
+**Shipping activity D13 test entry, 2026-09-12:** Continue4be.1 through the
+public Shipping launcher and actual Add/Update/Remove/Send Hold/Return/To
+Shipments/Shipments Sent form handlers. `Test-Slice4beConfigCommands.ps1
+-CheckActivityEvidence -CheckActivityFoundation -CheckShippingActivity` adds a
+separate ignored report directory and generated warehouse with a genuinely
+authorized SHIP_POST user. Unsaved facades expose the current handlers without
+auth bypass; only existing report presentation is intercepted. First require
+observable staging results, exact selected System_Key, captured workbook,
+unknown headers, Config bytes and unrelated workbook preservation. Expected
+behavioral RED is missing attempt/result, stable correlation, owner/context and
+sanitized activity. These initial assertions do not yet establish exact source
+references or Domain application; strengthen that owner evidence and record
+precise catalog/outcome definitions under D18 before runtime implementation.
+No Shipping/Boxing runtime or catalog version changes in this test entry.
+
+**Shipping activity RED, 2026-09-12:** Initial68/1 stopped before Add because
+seed inventory alone did not supply a saved shippable box. The fixture now uses
+real Box Designer/Box Maker handlers; an owned single-OK observer makes the test
+self-contained without accepting confirmations or retaining dialog text.
+The reproducible105PASS/32FAIL run expands to125PASS/40FAIL with every failure
+confined to missing Shipping activity. Independent staging/key/binding/header,
+Update/Stage unknown-value, Config/unrelated-book and source-read non-mutation
+checks pass. Domain evidence proves one quantity2 shipment and ten-made/eight-left
+balance for the exact box key. No harness exception or duplicate check exists.
+All30 package/four runtime source pins remain unchanged; no runtime implementation
+is claimed. [Shipping activity evidence](../../invSys_fork/tests/integration/plan022_slice4be_shipping_activity_results.md)
+records exact runs and the remaining negative/pending cases and contract refinement.
+Code **7420b7f** is committed and pushed. Static contracts pass with unchanged
+runtime175 components/5503 procedures,8 literal/45 unresolved dynamic calls and
+all28 module limits; only test reachability metadata grows. Controls v1.90 records
+the same RED scope. Next protect rejected/stale-context/pending/failure outcomes,
+then refine the Shipping catalog and owning result envelope under approved D18
+before implementing observation. Receiving and the full Release1 goal remain open
+at their existing acceptance boundaries; no narrower completion is claimed.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |
