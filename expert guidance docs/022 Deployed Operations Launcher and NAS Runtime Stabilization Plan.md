@@ -3863,6 +3863,49 @@ change or RED/GREEN result is claimed by this contract/test entry; the full
 4be.1-4be.6 and Release1 gates remain required. Controls v1.87 carries the same
 reserved identity and pending acceptance state.
 
+**Receiving worksheet candidate checkpoint, 2026-09-12:** The unchanged original
+package gives meaningful native activity RED at 121 PASS/12 FAIL with no harness
+exception; the isolated catalog7 candidate passes the same 133 checks. Both actual
+worksheet entries/callers and owner rejection are proven; direct macro invocation
+remains unattributed. All five candidate packages build and compile, Operations
+cold start passes, and the preserved full activity regression passes 845/845.
+Source/tooling checks pass 6/6 control surface,14/14 cutover,10/10 Receiving and
+62/62 tool contracts. Expanded native submission/failure/context/policy evidence
+and remaining candidate release/visible gates are still required. A fixture
+window-index exception during expanded testing is not behavioral RED and does not
+justify a runtime workaround. The maintained [worksheet evidence](../../invSys_fork/tests/integration/plan022_slice4be_receiving_worksheet_activity_results.md)
+records exact local reports and pending gates. This checkpoint does not complete
+worksheet acceptance, comprehensive 4be.1 coverage, or 4be.2-4be.6.
+
+Expanded native submission proof now finishes RED175PASS/35FAIL -> GREEN210/210,
+with the same210 check identities and no duplicates or harness exceptions. Applied,
+Pending, UnknownSubmission, StoreFailure and OlderPolicy all enter the actual
+worksheet handler; independent inbox/Domain checks retain every exact identity and
+uncertainty. Unknown headers, pending custom values, Config bytes and unrelated
+workbooks are preserved. Tracking failures do not block business success and their
+notices reach the existing notification surface. Packaged smoke86/86 and final
+static generation pass; no dynamic-call/duplicate metric or oversized-module cap
+regresses. Native context/denial edge cases and remaining release/visible gates
+remain open;210/210 is not full worksheet or Slice4be acceptance.
+
+**Worksheet candidate regression status, 2026-09-12:** Live roles48/48, Viewer,
+layout geometry/native-window checks and isolated full Production/restart2/2 pass.
+The first full-chain run stopped after4 Admin/Seed checks with an Excel RPC/native
+failure; the pinned original comparison and unchanged clean candidate rerun both
+pass30/30. Native exceptions remain unexplained, including a Windows crash record
+during the successful chain's time window. The candidate combined public-launcher
+gate fails twice after Receiving at Production's batch-scale test; the pinned
+original passes3/3. This is an unresolved release-regression gate, not full
+acceptance and not evidence for a speculative source repair. A separate identical-
+source five-package rebuild passes build/compile/cold-start and that same launcher
+gate3/3. Its focused210 and remaining package regressions are being verified
+separately; no build-defect or native-crash repair is inferred. Source/test/static/
+evidence checkpoint **01891bb** is committed and pushed; it is not Slice4be
+acceptance or deployment. The layout-validation screenshot also shows a
+partly clipped Committed / Used heading; recheck the normal launched Production
+form before assigning a layout defect or claiming visible acceptance. All outcomes
+and remaining context/denial guards are retained in the worksheet evidence.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |

@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.87 (Receiving worksheet activity identity reserved under D18; implementation and visible acceptance pending)
+**Version:** 1.88 (Receiving worksheet activity candidate focused GREEN; expanded and visible acceptance pending)
 
 **Inventory date:** 2026-08-31
 
@@ -310,9 +310,25 @@ RECEIVE_POST eligibility, caption Confirm Writes, surface Operations > Receiving
 captures its worksheet/workbook and trusted session, retains that binding, and
 rechecks context before owner entry. Programmatic macro/service calls remain
 unattributed. Owner REJECTED retains Warning/Unknown; no rollback is implied.
-Catalogs1-6 and prior controls remain unchanged. The native115/115 proof below
-protects reachability only; worksheet activity/context/outcome RED and implementation
-are pending. Plan022 records the same scope and remaining gates.
+Catalogs1-6 and prior controls remain unchanged. Native115/115 protects
+reachability; the isolated candidate now passes focused worksheet activity133/133
+after meaningful RED121PASS/12FAIL and preserves full activity845/845. Expanded
+native submission scenarios now pass175PASS/35FAIL RED ->210/210 GREEN, including
+pending/unknown references and tracking-failure notification-boundary checks. Native context/
+denial edge cases and remaining release/visible acceptance remain pending. Plan022
+and the worksheet evidence below record the same scope and remaining gates.
+
+Candidate regression limits: live48/48, Viewer, layout geometry and standard
+isolated Production/restart2/2 pass; the unchanged clean full chain passes30/30
+after an earlier native failure. Combined public launchers still fail twice at
+Production's batch-scale check after Receiving, while the pinned original passes
+3/3. Native crash causes remain unresolved. An identical-source rebuild passes
+the combined launcher gate3/3 and all five compiles; its focused and remaining
+package regressions are being verified separately. Source checkpoint01891bb is
+pushed; neither set is an accepted deployment. The empty layout
+validation form also shows partial clipping of the **Committed / Used** heading;
+normal-form recheck and visible acceptance remain pending. No Production layout
+source changed in this worksheet checkpoint.
 
 | Stable identity / surface | Existing route and logical owner | Coverage status / protecting evidence required |
 |---|---|---|
@@ -330,7 +346,7 @@ are pending. Plan022 records the same scope and remaining gates.
 | RECEIVING_SELECT_HISTORY / DISPOSITION_SELECT_HISTORY; RECEIVING_SELECT_STAGED / DISPOSITION_SELECT_STAGED | `mLstInventory_Click` / `mLstStaged_Click` -> `NavigationSelection`; RECEIVING_NAVIGATION | Catalog-6 packaged GREEN (771-check suite); captions Receiving Entries History / Return Entries History and Received Tally / Return Tally. Default off; require a deliberate selection boundary. Existing list rendering is not an observation. |
 | RECEIVING_SELECT_CONDITION / DISPOSITION_SELECT_KIND | `mCboCondition_Click` on Receiving / `mCboDisposition_Click` on Returns -> `NavigationSelection`; RECEIVING_NAVIGATION | Catalog-6 packaged GREEN (771-check suite); captions Condition * / Disposition *. Default off; record usage only, never selected values or automatic/programmatic changes. Locked Returns condition/location/lot fields do not expose an independent editing action. |
 | Text entry/search, Receipt ID, read-only reference detail/status, labels/headers, scroll/resize/minimize/maximize | Current text Change handlers filter projections; remaining fields are input/display surfaces | Deliberately excluded from warehouse activity as keystroke/input/display/window mechanics. Do not log text changes, focus changes, entered values or automatic repaint/layout. |
-| ReceivedTally `btnConfirmWrites` -> `modTS_Received.ConfirmWrites` | Compatibility worksheet button calls the existing posting service directly | Native discovery 115/115 (2026-09-12), retaining prior 105 checks: sole-visible-ReceivedTally and saved/reopened cases enter the actual packaged handler with exact `btnConfirmWrites` caller; both captures inspected. Minimal input calibration 8/8 distinguishes programmatic invocation and rejects the wrong workbook/window. Captured binding, unknown header, saved bytes and authority checks pass; all 20 candidate pins unchanged. Ordinary provisioned/reused support sheets remain VeryHidden. Explicit worksheet activity identity, owner-outcome RED/GREEN and human acceptance remain pending. This is test-only coverage under D18, not a runtime/architecture change. See [surface evidence](../../../invSys_fork/tests/integration/plan022_slice4be_receiving_surface_results.md). |
+| ReceivedTally `btnConfirmWrites` -> `modTS_Received.ConfirmWrites` | Catalog7 candidate registers `RECEIVING_WORKSHEET_CONFIRM` through the Receiving activity adapter and existing posting owner; programmatic compatibility calls remain unattributed | Native115/115 and calibration8/8 retained. First candidate: worksheet RED175PASS/35FAIL ->210/210GREEN, full activity845/845, build/compile/cold-start PASS (2026-09-12). Native empty rejection and exact multi-event Applied/Pending/UnknownSubmission, optional store failure, older-policy notice, unknown columns and unrelated-workbook checks pass. Ordinary support sheets remain VeryHidden. Native context/denial edges and human acceptance are pending. Combined launcher failures and the separate rebuild's3/3 are scoped above; rebuilt-package regression validation remains in progress. See [worksheet evidence](../../../invSys_fork/tests/integration/plan022_slice4be_receiving_worksheet_activity_results.md). |
 
 **Open/Close packaged RED, 2026-09-07:** The actual generated Ribbon callback
 and Close/QueryClose handler tests produce **531 PASS / 47 FAIL** across 578
