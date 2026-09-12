@@ -662,6 +662,30 @@ identity and unknown-column rules remain binding. These details inherit D18's
 approved coverage, owner-fact and captured-action rules; they do not weaken D5,
 D12 or D13 or alter the posting service's business contract.
 
+**4be.1 Shipping mutation-context clarification:** The existing shared captured-
+context rule applies before Shipping Add, Update Row, Remove, Send Hold, Return,
+To Shipments and Shipments Sent enter their owning workflow. Capture the trusted
+session/warehouse once for a new form; setting its workbook, refreshing or
+relaunching must not renew that old form's session. A signed-out, reauthenticated,
+changed-target or closed-workbook form cannot mutate staging, submit, or attribute
+activity to a new context. This check is independent of optional collection.
+Recheck after any intervening UI yield and before owner entry. Keep existing Core
+capability checks and their authority; observation does not confer a permission.
+
+Use the fixed context notice **Session or warehouse changed. Reopen Shipping
+before continuing.** A lost workbook instead identifies the unavailable captured
+Shipping workbook. Mark the old form unusable for commands and cancel its automatic
+synchronization. An explicit authorized launcher invocation replaces a stale form
+with a newly captured form bound to the same eligible workbook, preserving active
+and held staging, exact keys and unknown columns. It does not silently rebind or
+revive the old instance. Repeated launch within the same valid context retains
+the accepted form/workbook reuse; ordinary Close behavior remains unchanged.
+
+These are implementation constraints inherited from approved D18's context,
+owner-fact and workbook-preservation rules, not new ControlIds, outcomes, catalog
+versions, permissions or authority stores. Shipping activity/source-reference
+definitions and remaining control coverage require their own protecting evidence.
+
 **4be.1 Receiving navigation/selection clarification:** Catalog 6 adds the
 thirteen reserved page/selection controls in the maintained catalog, owned by
 RECEIVING_NAVIGATION with existing RECEIVE_POST eligibility. Catalogs 1-5 retain

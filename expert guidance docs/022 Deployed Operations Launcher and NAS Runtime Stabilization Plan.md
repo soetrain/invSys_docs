@@ -4023,6 +4023,32 @@ and runtime metrics and all 28 module limits are unchanged.
 Code checkpoint **8e64268** is committed and pushed; the next test-first work is
 the remaining Shipping mutation/context matrix before the D18 guard repair.
 
+**Shipping mutation/context matrix and repair entry, 2026-09-12:** Architecture
+D18's Shipping mutation-context clarification constrains the repair to seven
+actual mutation controls and explicit recovery through the authorized launcher.
+The new `Slice4beShippingContext.ps1` probe calibrates each healthy handler at its
+existing owner boundary, then stops the owner there to test stale dispatch without
+business effects. The preserved normal sequence still runs real owners and proves
+staging/source/application behavior. Probe success is not Domain acceptance.
+
+Signed-out, reauthenticated and changed-target handlers must reject visibly before
+owner entry. A valid launcher must reuse its form; an explicit launch after stale
+context must replace the old form on the same workbook and preserve active/held
+staging. Any UI yield requires a fresh context check before owner entry. Automatic
+sync must stop for the rejected form. Existing Core capability ownership and normal
+Close remain binding. Focused RED precedes runtime changes to `frmShipmentsTally`,
+the Shipping launcher and bounded context/timing helpers. Timing extraction, if
+needed to keep the form within its size limit, retains the existing status text
+and has packaged normal-action status assertions. No new activity catalog is added.
+
+Matrix RED on the unchanged packages is **242 PASS / 91 FAIL**: all seven healthy
+owner calibrations pass; 21 stale-context cases each fail pre-owner rejection and
+the context notice. The prior 49 failures remain. Every prior check and GREEN
+result is retained. The initial matrix stopped at a test-only availability threshold
+of five for a two-unit Add (136 PASS / 50 FAIL including one harness failure);
+correcting that threshold yields the meaningful calibrated RED. Explicit launcher
+recovery coverage is being established separately before implementation.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |

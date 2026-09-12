@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.91 (Shipping rejection/context RED; stale-form staging breach identified)
+**Version:** 1.92 (Shipping mutation-context matrix and explicit launcher recovery contract)
 
 **Inventory date:** 2026-08-31
 
@@ -503,6 +503,16 @@ quantity stops before submission. All earlier checks and GREEN results survive.
 No canonical application is observed in the stale case, but submission acceptance
 or absence of pending work is not established. The repair must reject the stale
 form before owner entry under the existing D18 rule.
+
+D18 now explicitly constrains all seven Shipping mutation controls to reject an
+invalid captured session before owner entry, including after a UI yield, with
+**Session or warehouse changed. Reopen Shipping before continuing.** A lost
+workbook has its own unavailable-workbook notice. Rejection stops automatic sync.
+Explicit authorized relaunch replaces the stale form on its eligible captured
+workbook and preserves active/held staging and unknown columns; repeated valid
+launch still reuses the same form. Ordinary Close remains unchanged. This inherits
+approved D18; implementation and packaged GREEN remain pending. The dedicated
+matrix uses stopped-owner probes alongside the preserved real-owner sequence.
 
 ### Curated Action Path storage: NAS-only contract locked; implementation pending
 
