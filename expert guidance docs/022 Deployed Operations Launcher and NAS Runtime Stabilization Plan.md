@@ -3842,6 +3842,27 @@ missing activity through meaningful native-action RED before implementation.
 Controls v1.86 and [surface evidence](../../invSys_fork/tests/integration/plan022_slice4be_receiving_surface_results.md)
 record this checkpoint; the broader 4be.1-4be.6 scope remains open.
 
+**Receiving worksheet activity D13 entry, 2026-09-12:** Continue 4be.1 under
+the approved D18 coverage/owner-fact rules, following native115/115 and minimal
+input8/8. The normative worksheet clarification registers catalog7 control
+RECEIVING_WORKSHEET_CONFIRM and its fixed worksheet surface/prefix, preserving
+catalogs1-6 and existing business authority. Actual native entry must capture its
+worksheet/workbook and trusted session, retain that binding, and recheck context
+before posting. Direct macro/service calls remain unattributed. Owner rejection
+retains Unknown effect, since validation can follow local staging normalization.
+
+First focused RED: actual worksheet clicks in the existing sole-visible-sheet
+and saved/reopened cases lack attempt/result records, stable correlation and
+registered-readable metadata; the same programmatic macro call must add no user
+activity. Extend coverage to exact multi-event submissions, pending/uncertain
+results, denials, changed context, unavailable tracking, older policies and
+unknown-column/authority preservation before claiming worksheet implementation
+complete. Expected runtime changes are bounded to the Operations Receiving entry/
+activity controller and Core catalog/outcome/reference validation. No runtime
+change or RED/GREEN result is claimed by this contract/test entry; the full
+4be.1-4be.6 and Release1 gates remain required. Controls v1.87 carries the same
+reserved identity and pending acceptance state.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |

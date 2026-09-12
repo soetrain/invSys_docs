@@ -625,6 +625,43 @@ tracking remains visible and cannot authorize, retry or perform the denied
 launch. The ordinary direct compatibility call retains its existing non-click
 semantics. This is semantic inheritance of approved D18, not a new permission.
 
+**4be.1 Receiving worksheet confirmation clarification:** Catalog 7 registers
+RECEIVING_WORKSHEET_CONFIRM, a Command owned by RECEIVING_WORKFLOW, caption
+Confirm Writes, surface Operations > Receiving > Received Tally, and existing
+RECEIVE_POST eligibility. Its EventCode prefix is RECEIVE_WORKSHEET_CONFIRM_.
+Catalogs 1-6 retain their definitions; older saved policies cannot implicitly
+enable this newly registered control. This accounts for the native worksheet
+button proven reachable in the 115-check packaged discovery. It does not add a
+business command, permission, mandatory form-opening step or authority store.
+
+The existing `modTS_Received.ConfirmWrites` boundary distinguishes a native
+`btnConfirmWrites` caller on ReceivedTally from a programmatic macro call. A
+native action captures its actual worksheet/workbook and the current trusted
+warehouse/session at entry, verifies that same eligible Receiving workbook,
+and retains those references through the owning command and observation.
+Recheck the captured session before owner entry, including after optional
+tracking work; a changed context cannot submit or attribute to a new target.
+Never resolve a different eligible workbook or revisit ActiveWorkbook after
+capture. This action binding neither revives a stale form/recording nor changes
+their existing lifetime rules. Direct compatibility/service calls retain their
+existing non-click semantics and do not emit worksheet user-control activity.
+
+Use the existing Receiving owner's REQUESTED, CONFIRMED, PENDING, DENIED,
+REJECTED and FAILED facts, severities and data effects. In particular REJECTED
+remains Warning/Unknown: validation may follow local staging normalization and
+does not establish an untouched workbook or rollback. DENIED is Blocked/Unchanged
+from the existing pre-write capability guard. Confirmation and pending submission
+remain Unknown Domain effect; all exact owner-returned Inventory event references
+are retained under the existing Submitted/Unknown rules. Attempts and pre-submit
+denials/rejections have empty references. Fixed explanations and advisory next
+steps identify the worksheet workflow; they contain no entered values or handler
+names. Optional tracking failure remains visible through Receiving's existing
+notification surface without preventing, repeating or rolling back the authorized
+command, and without replacing its failure. Whole-policy/version, immutable
+identity and unknown-column rules remain binding. These details inherit D18's
+approved coverage, owner-fact and captured-action rules; they do not weaken D5,
+D12 or D13 or alter the posting service's business contract.
+
 **4be.1 Receiving navigation/selection clarification:** Catalog 6 adds the
 thirteen reserved page/selection controls in the maintained catalog, owned by
 RECEIVING_NAVIGATION with existing RECEIVE_POST eligibility. Catalogs 1-5 retain

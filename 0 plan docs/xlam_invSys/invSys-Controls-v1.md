@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.86 (Receiving native worksheet caller proven; worksheet activity and visible acceptance pending)
+**Version:** 1.87 (Receiving worksheet activity identity reserved under D18; implementation and visible acceptance pending)
 
 **Inventory date:** 2026-08-31
 
@@ -302,6 +302,17 @@ sequences. All 20 package pins are preserved and Excel is closed. Desktop access
 is now available. Subsequent native input calibration passes 8/8 and the packaged
 worksheet caller proof passes 115/115; see the coverage row and surface evidence below.
 See [Release/recovery evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_release_boundary_diagnostics.md).
+
+**Worksheet activity refinement, 2026-09-12:** D18 reserves catalog7
+RECEIVING_WORKSHEET_CONFIRM, a Command owned by RECEIVING_WORKFLOW with existing
+RECEIVE_POST eligibility, caption Confirm Writes, surface Operations > Receiving
+> Received Tally, and prefix RECEIVE_WORKSHEET_CONFIRM_. Actual native entry
+captures its worksheet/workbook and trusted session, retains that binding, and
+rechecks context before owner entry. Programmatic macro/service calls remain
+unattributed. Owner REJECTED retains Warning/Unknown; no rollback is implied.
+Catalogs1-6 and prior controls remain unchanged. The native115/115 proof below
+protects reachability only; worksheet activity/context/outcome RED and implementation
+are pending. Plan022 records the same scope and remaining gates.
 
 | Stable identity / surface | Existing route and logical owner | Coverage status / protecting evidence required |
 |---|---|---|
