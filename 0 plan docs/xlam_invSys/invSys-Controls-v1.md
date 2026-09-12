@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.90 (Shipping activity/source-reference RED established; Receiving checkpoint preserved)
+**Version:** 1.91 (Shipping rejection/context RED; stale-form staging breach identified)
 
 **Inventory date:** 2026-08-31
 
@@ -486,6 +486,23 @@ application and ten-made/eight-left reconciliation, staging/binding, unknown
 Update/Stage values and source-read non-mutation pass. This is D13 RED, not
 implementation or acceptance; negative/pending cases and precise catalog/owner
 outcomes remain next. See [Shipping activity evidence](../../../invSys_fork/tests/integration/plan022_slice4be_shipping_activity_results.md).
+
+The negative extension records 137 PASS / 47 FAIL while retaining all prior checks
+and GREEN results. Actual Add rejects zero quantity without changing staging or
+canonical history, but its rejection activity is absent. After verified sign-out
+and same-user sign-in, the existing form still changes local staging; this is
+RED against D18's captured-session rule. No new canonical application is observed.
+Owner/submission boundary checks and the remaining context/pending/failure matrix
+must protect the eventual repair. No runtime, catalog-version or architectural
+contract change is claimed by this test checkpoint.
+
+Strengthened RED is 139 PASS / 49 FAIL: 46 missing-activity assertions and three
+stale-session guards. Normal actions calibrate unsaved boundary counters;
+the stale Add reaches both the staging owner and submission boundary. Invalid
+quantity stops before submission. All earlier checks and GREEN results survive.
+No canonical application is observed in the stale case, but submission acceptance
+or absence of pending work is not established. The repair must reject the stale
+form before owner entry under the existing D18 rule.
 
 ### Curated Action Path storage: NAS-only contract locked; implementation pending
 
