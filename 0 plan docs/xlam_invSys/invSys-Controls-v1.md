@@ -529,8 +529,6 @@ An Excel c0000005/combase.dll fault during the passing full-chain window remains
 unresolved. Broader context/activity coverage and human acceptance remain open;
 see [context evidence](../../../invSys_fork/tests/integration/plan022_slice4be_shipping_context_results.md).
 
-### Curated Action Path storage: NAS-only contract locked; implementation pending
-
 Shipping's registered automatic-sync callback must independently validate the
 captured session/workbook before sync or overlay maintenance and stop rescheduling
 with the same context notice when stale. Healthy pending scheduling remains;
@@ -538,7 +536,31 @@ internal dispatch is not a user-control event. This inherits D18, adding no cont
 or permission. Unchanged-package interruption tests record319 PASS /49 FAIL:
 all18 real pending-yield checks pass, while signed-out timer owner rejection,
 rescheduling rejection and its notice fail. The other46 failures remain missing
-activity. Repair and packaged GREEN are pending; see the context evidence above.
+activity. This RED precedes the repair result below; see the context evidence above.
+
+The timer candidate now passes all30 interruption/timer checks:322 PASS /46
+missing-activity FAIL overall, retaining every prior GREEN. Build/compile/cold-start
+and static gates pass; candidate release results follow. An initial native Excel
+c0000028/ntdll.dll failure is retained separately from the successful retry.
+The new capture shows the same legible notice and existing key-editor/header
+crowding as the preceding guard candidate. This is focused timer acceptance;
+comprehensive activity, native stability and human layout acceptance remain open.
+
+Candidate smoke passes86/86. Live-role validation fails at Production Complete
+Run after39 passing checks on both the timer candidate and the preceding pinned
+guard candidate, with the same native c0000028/ntdll.dll fault. Live-role acceptance
+remains open; the passing Shipping timer checks do not clear this gate.
+
+Independent candidate gates pass full-chain30/30, Viewer, launchers3/3 and Shipping
+layout1/1; a combase.dll/c0000005 fault during the passing chain remains open.
+Reusable Production first fails fixture sign-in; its fresh full-settings retry
+signs in but fails with RPC/native c0000028 at the batch-scale contract. No current
+reusable Production/restart acceptance is claimed. A fixed-phase Complete Run
+diagnostic stops between quiet-UI entry/typed completion and output restoration;
+the source cause is unresolved. All tests are terminal; Excel is closed and40
+package/eight source pins match. No accepted deployment/NAS or user files changed.
+
+### Curated Action Path storage: NAS-only contract locked; implementation pending
 
 Action Paths will be stored only under the selected warehouse NAS runtime root:
 `<WarehouseRuntimeRoot>\Training\ActionPaths\<WarehouseId>`. This is a

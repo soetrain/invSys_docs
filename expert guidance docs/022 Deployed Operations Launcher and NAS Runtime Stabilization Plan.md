@@ -4093,7 +4093,38 @@ observation rules without a new permission or catalog version. Repair is confine
 to `frmShipmentsTally`; removing its timing-start pass-through retains the existing
 typed timer and eight packaged timing checks while preserving the module limit.
 `Slice4beShippingInterruptions.ps1` protects the real callback and UI-yield paths.
-Focused GREEN and candidate gates remain pending.
+This RED precedes the focused GREEN and candidate gates recorded below.
+
+The isolated `deploy/validation-shipping-timer-context` repair now records
+**322 PASS /46 missing-activity FAIL** across the same368 checks, preserving every
+prior GREEN. The three timer failures and all30 interruption/timer checks pass.
+Build/all-five compile/cold-start and static contracts pass; the form shrinks by
+three lines and all28 module limits hold with unchanged dynamic/duplicate counts.
+The first attempt stopped before Shipping with RPC failure and Excel
+c0000028/ntdll.dll; the unchanged pinned retry supplies the focused GREEN, not a
+native-stability clearance. Visible comparison with the preceding guard candidate
+retains the legible rejection notice and the same key-editor/header crowding.
+Candidate release-gate results follow. See the linked context evidence for exact
+reports and scope; this does not close broader4be.1 or4be.2-4be.6.
+
+Smoke passes86/86, but live-role stops39 PASS /1 harness failure at Production
+Complete Run with c0000028/ntdll.dll. The preceding pinned guard package set
+reproduces39/1 at that same step and fault; this is also observable without the
+timer repair, not a cleared native defect. Independent gates pass full-chain30/30,
+Viewer, launchers3/3 and Shipping layout1/1. A combase.dll/c0000005 fault within
+the passing chain still prevents native clearance. The fixed-phase diagnostic
+reproduces39/1 and reaches P08 before quiet-UI entry/typed Production completion,
+but never P09 before output restoration; narrow that interval before a runtime fix.
+
+Reusable Production first fails fixture sign-in (0/2, not behavioral RED). Its
+full-settings fresh retry signs in, then fails0/1 with RPC/native c0000028 at the
+batch-scale contract. No candidate reusable Production/restart GREEN is claimed.
+All test handles are terminal, Excel is closed and40 package/eight current source
+pins match. The timer is a focused GREEN checkpoint; live-role/native/Production
+acceptance and the full4be activity/Settings/Viewer/Action Path scope remain open.
+Code checkpoint **0aa0084** is committed and pushed. Preserve the pinned candidate
+and all existing GREEN evidence while narrowing the native failure; do not label
+this checkpoint a completed Slice4be or substitute it for user acceptance.
 
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
