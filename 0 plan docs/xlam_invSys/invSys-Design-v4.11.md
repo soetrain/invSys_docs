@@ -448,6 +448,22 @@ may still read an authored guide, whose provenance remains visible.
   collection with a visible error, never repairs Config or suppresses required
   audit. D5's fail-closed business-write requirements remain binding.
 
+**4be.2 personal preference storage refinement:** The local preference uses the
+existing current-Windows-user settings mechanism (`SaveSetting`/`GetSetting`,
+HKCU), under invSys / ActionPathPreferencesV1. Its value key encodes the exact
+invSys user and WarehouseId separately, without delimiter collisions. The only
+stored value is one of the four fixed choices above. A missing or invalid value
+selects Use warehouse default; reads never repair it. Core validates the
+captured signed-in context at each personal read/save and verifies a save by
+reading back the exact choice. No ADMIN_MAINT capability is added to the personal
+boundary; Admin's existing form gate remains, and Operations must expose its own
+signed-in surface without an Admin dependency. Invalid/unreadable warehouse
+policy is shown as unavailable effective policy/evidence, never an invented
+effective default or permission. It does not prevent saving a valid local choice.
+Preference reads, rendering and synthetic previews create no activity. These
+storage and failure-display details implement the approved local preference
+scope under semantic inheritance; full restart/role/UI acceptance remains required.
+
 **4be.1 implementation clarification:** Persisted policy metadata uses
 `tblEventTrackingPolicies` and per-control rows use `tblEventTrackingControls`
 in authoritative Config. Both tables absent means built-in PolicyVersion 0;

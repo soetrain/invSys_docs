@@ -4705,6 +4705,25 @@ with Event Detail profiles/personal preferences; retain policy edge cases,
 new-control coverage, policy-save observations and broader acceptance as open.
 The Settings evidence record names exact RED/GREEN reports and limitations.
 
+**4be.2 personal preference continuation, 2026-09-13:** Add packaged surface and
+real Save/Reload/Reset/Close tests before local persistence. D18's storage
+refinement uses current-Windows-user settings with exact invSys-user/warehouse
+keys and fixed choices, without Config writes or an Admin capability at the
+personal Core boundary. Admin owns its form controls; Operations without Admin,
+restart/isolation, invalid-preference fallback and policy/evidence display remain
+required gates. Surface RED is 107 PASS / 5 FAIL; real no-write Save RED is
+123 PASS / 1 FAIL. All 141 local Settings checks now pass, retaining the
+42 profile / 34 policy GREEN checks. The added restart phase encountered an
+Excel native fault during extra fixture bootstrap; it now reuses the preserved
+second Admin-generated fixture. Keep that failed setup evidence and the two
+corrected fixture errors separate from runtime RED/GREEN (see Settings evidence).
+The corrected complete run passes 145/145, including a handler-saved choice
+restored after Excel restart with no Admin package loaded. Five packages compile,
+cold start passes, smoke is 86/86 and the Action Paths capture was inspected.
+Static limits and all 105 prior package / 16 protected source pins hold. Operations
+personal Settings, Viewer profile/preference consumption and comprehensive new
+control activity remain unimplemented; this is not Slice 4be or user acceptance.
+
 **4be.2 Event Detail profile work, 2026-09-13:** Settings keeps General/Event
 Tracking and introduces the approved Tracking/Event Detail/Action Paths sections
 as nested tabs. D18's schema/editor refinement names the complete display profile,

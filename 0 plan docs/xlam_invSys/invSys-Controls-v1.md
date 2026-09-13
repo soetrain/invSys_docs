@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.105 (Event Detail profile persistence GREEN; preferences pending)
+**Version:** 1.106 (Admin personal preference and Core restart GREEN)
 
 **Inventory date:** 2026-08-31
 
@@ -10,6 +10,18 @@ Operations, Receiving, Production, or Shipping, including active controls,
 runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
+
+**2026-09-13, Slice 4be.2, personal preference continuation:** Protect the four
+fixed view choices, separate Save My Preference / Reset to Default / Reload,
+effective-view and diagnostic-availability labels through the actual Settings
+surface. D18 specifies the local storage/failure-display refinement. Surface RED
+is 107 PASS / 5 FAIL; clean action RED is 123 PASS / 1 FAIL. All 141 local
+Settings checks pass; the complete run is 145/145 with the added new-Excel-process
+restoration and Core read with no Admin package loaded. Every prior GREEN remains.
+Five packages compile, smoke is 86/86 and the capture was inspected. Static limits
+and 105 prior package / 16 protected source pins hold. A native failure in an
+extra restart-fixture bootstrap remains documented. Operations UI without Admin,
+Viewer consumption, comprehensive activity and human acceptance remain pending.
 
 **2026-09-13, Slice 4be.2, Event Detail profile work:** Event Tracking now has
 Tracking, Event Detail and Action Paths section tabs. The profile editor stages
@@ -1848,13 +1860,16 @@ Obsolete are actions inside this form, not separate ribbon launchers.
 | Area | Controls | Purpose |
 |---|---|---|
 | Settings pages | `mpSettings` | **General** is the default page and contains the existing editors. **Event Tracking** contains the three approved sections. Page navigation does not save configuration; activity instrumentation for these new page controls remains pending under 4be.1. |
-| Event Tracking sections | `mpEventTracking`; `lblTracking`, `lblEventDetail`, `lblActionPaths`, `lblActionPathAvailability` | Nested **Tracking**, **Event Detail**, **Action Paths** section tabs inside the existing Event Tracking tab. Tracking and Event Detail have their own editors; **Action Path preferences unavailable.** remains explicit. Section-selection activity is pending registration/instrumentation. |
+| Event Tracking sections | `mpEventTracking`; `lblTracking`, `lblEventDetail`, `lblActionPaths` | Nested **Tracking**, **Event Detail**, **Action Paths** section tabs inside the existing Event Tracking tab. Each section has a separate staged editor. Section-selection activity is pending registration/instrumentation. |
 | Warehouse tracking flags | `chkCaptureControls`, `chkAdminEventsVisible`, `cmbWarehouseDefaultView`, `lblRequiredTracking` | **Capture recorded controls** defaults off; **Show optional Admin events** defaults on. **Warehouse default view** offers How-To, Diagnostic and Compare both. Required business/audit collection is labelled Required and cannot be disabled. These controls stage the policy; the warehouse default is not a personal preference. |
 | Per-control tracking | `lstTrackingControls`, `chkControlCollect`, `chkControlVisible`, `chkControlSequence` | Lists the currently registered family/control and Collect, Visible, Sequence and Availability fields. **Collect selected control**, **Visible in Viewer**, **Eligible for recorded sequence** stage those flags. Logical family IDs are currently displayed; broader catalog coverage and final operator wording/interaction acceptance remain pending. |
 | Tracking policy actions | `btnSaveTrackingPolicy`, `btnResetTrackingPolicy`, `btnReloadTrackingPolicy`, `lblTrackingPolicyStatus`; `cAdminTrackingPolicy.SavePolicy`, `.ResetPolicy`, `.ReloadPolicy` | **Save Tracking Policy**, **Reset to Default**, **Reload**. Separate policy status reports staged changes or saved version. Save enters headless Core with captured context and expected version, appending one complete validated version. A cancelled Excel save reports that persistence could not be verified and retains staged edits. Reset stages defaults; Reload discards staging; Close discards unsaved changes. New-control activity IDs and save version/outcome observations remain pending under 4be.1. |
 | Detail family and fields | `cmbDetailFamily`, `lstDetailFields`, `chkDetailEnabled`, `lblDetailRequired`, `lblDetailVersion`; `cAdminEventDetail` | **Event family**, field caption / Show / Order / Required list, **Show selected field**. Nine display families and 42 allowlisted fields; required identity, outcome, source, time and safety context cannot be disabled. The selector and checkbox stage the complete profile, retaining other families' edits. |
 | Detail field order | `btnDetailMoveUp`, `btnDetailMoveDown`; `cAdminEventDetail.mUp_Click`, `.mDown_Click` | **Move Up**, **Move Down** swap adjacent display positions within the selected family. Boundary buttons are disabled; ordering changes display staging only. |
 | Detail synthetic preview | `txtDetailPreview`, `lblDetailPreview` | **Synthetic preview** is locked, multiline and scrollable, with fixed labelled examples. Preview/rendering do not observe or execute user actions and do not read live event data. |
+| Personal Action Path view | `cmbPreferredActionPathView`, `lblActionPathPreference`, `lblActionPathPreferenceScope`; `cAdminActionPathPreference` | **Preferred Action Path view**: Use warehouse default, How-To, Diagnostic, Compare both. Selection stages a personal choice scoped to Windows user, invSys sign-in and warehouse; it grants no tracking permission. |
+| Personal effective status | `lblActionPathEffectiveView`, `lblActionPathEvidence` | Shows the saved effective choice and policy version, or unavailable policy; capture off explicitly reports unavailable diagnostic evidence. Selecting a view does not create evidence. |
+| Personal preference actions | `btnSaveActionPathPreference`, `btnResetActionPathPreference`, `btnReloadActionPathPreference`, `lblActionPathPreferenceStatus`; `cAdminActionPathPreference.SavePreference`, `.ResetPreference`, `.ReloadPreference` | **Save My Preference**, **Reset to Default**, **Reload** have local personal scope only. Reset stages Use warehouse default; Close discards staging. Core local persistence, isolation, fallback, Config preservation and Excel restart pass. New-control activity, Operations UI access and human acceptance remain pending. |
 | Detail profile actions | `btnSaveDetailProfile`, `btnResetDetailProfile`, `btnReloadDetailProfile`, `lblDetailProfileStatus`; `cAdminEventDetail.SaveProfile`, `.ResetProfile`, `.ReloadProfile` | **Save Detail Profile**, **Reset to Default**, **Reload** have profile-only scopes. Core validates captured Admin context, the whole request and expected version, appending one complete profile version. Reset stages defaults; Close discards unsaved profile edits. Profile selection/toggle/order/save/reset/reload activity registration and save version/outcome observations remain pending; persistence does not yet imply Viewer application. |
 | Heading/context | `lblTitle`, `lblConfigWorkbook`, `lblStatus` | Shows **Warehouse Settings**, the current config workbook, and action status. |
 | Config grid | `lblConfigKeyHeader`, `lblConfigValueHeader`, `lblConfigTypeHeader`, `lblConfigScopeHeader`, `lblConfigRequiredHeader`, `lstConfig` | Lists config key, value, type, scope, and required status. |
