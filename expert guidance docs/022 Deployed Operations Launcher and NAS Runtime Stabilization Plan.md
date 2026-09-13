@@ -4941,6 +4941,45 @@ All 175 package pins and 16 protected source pins match with Excel closed. See
 [Shipping publication RED](../../invSys_fork/tests/integration/plan022_slice4be_shipping_publication_red.md).
 The Core-owned publisher, declared Shipping owner read, combined Viewer gates
 and complete Release 1 acceptance remain required.
+Implementation now declares the fixed Core-to-Operations Shipping owner read in
+D18. One additional literal Application.Run site is a scoped D12 bridge exception
+to the current eight-literal maintenance baseline; no arbitrary target dispatch
+or new same-project dynamic call is authorized. Core retains the Inventory
+Boolean/path contract and supplies a separate Events notice, reported by the
+explicit Admin snapshot action. Bootstrap without a matching allowed target
+defers Events without retargeting. The existing 26/21 packaged RED protects the
+first implementation; atomic failure and unavailable-source assertions must also
+be exercised before publication acceptance. No GREEN is claimed by this entry.
+The snapshot orchestrator has a scoped four-line size exception (1,753 to 1,757)
+for the optional Events result, per-call publisher instance, source capture and
+publication delegation. The implementation stays in the new bounded Core class;
+this exception does not approve other oversized-module growth. Shipping reuses
+its existing field-escape routine through a direct same-project call, preserving
+the duplicate-body baseline rather than adding another codec implementation.
+
+**2026-09-13, Events publisher candidate:** Calibrated public-Admin RED is
+27 PASS / 39 FAIL; `validation-events-publication-atomic` passes all66 focused
+checks for complete groups, exact permitted owner lines, source bytes, truthful
+coverage and failure/recovery. The Shipping fixture now adds its unknown column
+through a calibrated VBA edit and requires a read-only reopen. Earlier unreadable
+PowerShell-COM fixture output is not evidence for a runtime Shipping repair.
+All five packages compile; Detail34, Refresh16, Settings187, populated Viewer and
+smoke86 are GREEN. Two unchanged atomic full-chain attempts fail natively at
+projection rebuild (live32/1); an unsaved compile-invalidation diagnostic passes
+live48/48 but is not acceptance. A separate saved-compilation candidate preserves
+all199 component hashes yet fails natively during Production (live27/1); saving
+compilation state does not resolve the gate. Full-chain/Receiving acceptance remains
+pending. The added actual Box Maker assertion proves immediate publication of its
+durable owner event before explicit Admin publication; all prior65 checks remain
+GREEN with no missing or duplicate IDs. Preservation matches
+175 historical and15 candidate package pins,15 exact protected sources and one
+reviewed visibility-only Shipping source change. Three packaged additions/six intended edits and34 capitalization-
+only changes with identical literals are reviewed; no unexpected difference.
+Static counts are206 components/5700 procedures/127033 lines,9 literal/45 unresolved
+calls,189 duplicate groups and28 size ratchets with only the stated four-line
+exception. This advances publication; combined Viewer projection/paging, complete
+Operations/Admin coverage, Action Paths and physical/human acceptance remain open.
+See [Events publication evidence](../../invSys_fork/tests/integration/plan022_slice4be_events_publication_results.md).
 
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|

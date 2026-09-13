@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.114 (Shipping publication test entry)
+**Version:** 1.115 (Events publication candidate)
 
 **Inventory date:** 2026-08-31
 
@@ -10,6 +10,28 @@ Operations, Receiving, Production, or Shipping, including active controls,
 runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
+
+**Current Events publication checkpoint (2026-09-13):** Core's ordinary snapshot
+path now publishes the separate bounded Events artifact under D18. The public
+Admin Generate Inventory Snapshot API returns its independent Events notice;
+this does not establish a new Ribbon control or complete visible Admin acceptance.
+Calibrated pre-implementation RED is **27 PASS / 39 FAIL**; the isolated candidate
+passes **66/66** focused publication checks, including every permitted Shipping
+field, atomic replacement/recovery and missing/dirty-source coverage. Five XLAMs
+compile. Event Detail **34/34**, Refresh **16/16** and Settings **187/187** remain
+GREEN, as do populated Viewer and smoke86. Full-chain acceptance is pending after
+native failures in both the original and saved-compilation candidates; the passing
+48-check compile-invalidation diagnostic is not acceptance. Receiving remains
+pending. The actual Box Maker handler now proves immediate publication of its
+durable owner event before the explicit Admin command, preserving all prior65
+check identities and GREEN results. Preservation matches
+175 historical/15 candidate package pins,15 exact sources and one reviewed
+visibility-only Shipping source change. Viewer paging/reads, remaining control coverage and Action Paths
+remain open. The existing held-line capture cannot prove a completed shipment.
+The Shipping fixture's unknown-column edit is now calibrated in VBA and must
+survive a read-only reopen; earlier unreadable fixture output did not justify
+a runtime Shipping repair. See
+[Events publication evidence](../../../invSys_fork/tests/integration/plan022_slice4be_events_publication_results.md).
 
 **Shipping publication test entry:** D18 requires current-state ShippingBOM and
 station-profile ShippingHolds evidence, retaining every permitted line and exact
@@ -24,6 +46,10 @@ durable owner-event fixture checks pass. The inspected held-line capture retains
 pending sync; it cannot prove a completed shipment or Action Path conclusion.
 All 175 package pins/16 protected source pins match and Excel is closed. See
 [Shipping publication RED](../../../invSys_fork/tests/integration/plan022_slice4be_shipping_publication_red.md).
+The next publisher implementation follows D18's fixed Core/Operations source
+bridge and separate Events result. Admin Generate Inventory Snapshot retains its
+permission and inventory path contract while reporting Events success, failure or
+bootstrap deferral separately. No Viewer publication action is introduced.
 
 **Slice 4be.3 publication/paging, test entry:** D18's approved complete-group,
 published-only read and 100-record page rules govern the next focused packaged

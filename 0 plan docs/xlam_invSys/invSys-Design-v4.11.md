@@ -509,6 +509,25 @@ are asserted through the public Admin publisher, not inferred from a helper's
 empty-success result. This clarifies D18's existing current-state and owner-read
 rules; it adds no write authority or new operator action.
 
+**4be.3 publication implementation boundaries:** Core calls the fixed Operations
+entry `modShippingPublicationSource.ReadForPublication` with source name,
+expected WarehouseId and runtime root, using only primitive strings. This is a
+declared cross-XLAM owner-read boundary under D12, never a Viewer fallback or a
+dynamic workflow dispatcher. Shipping validates the matching allowed target and
+returns the `EVTSRC1` envelope convention used by Designs, with the named
+Shipping source and its permitted headers. Missing/dirty/unreadable/malformed
+sources return unavailable with a fixed reason; only transient read-only source
+handles are closed. Hold reads remain limited to the current station profile.
+
+The Inventory snapshot's existing Boolean/path result is independent of Events
+publication. Core supplies a separate Events result/notice; Admin's explicit
+Generate Inventory Snapshot report includes it. Failure never claims Events
+success or replaces the prior complete Events file. Bootstrap without a matching
+allowed target retains inventory creation and explicitly defers Events publication
+until an ordinary publication runs with that context. No target is synthesized
+or changed to make an owner query succeed. The Events JSON parser may read the
+complete bounded-group artifact; Activity/guide parsers retain their 1 MiB limits.
+
 **Settings -- dedicated Event Tracking tab:**
 
 - Admin Settings gains **General** (existing controls) and **Event Tracking**
