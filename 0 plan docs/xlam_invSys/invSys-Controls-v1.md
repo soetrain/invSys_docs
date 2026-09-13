@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.93 (Shipping automatic-sync captured-context constraint)
+**Version:** 1.94 (Shipping mutation permission constraint)
 
 **Inventory date:** 2026-08-31
 
@@ -583,6 +583,25 @@ Excel-open refusal before Shipping remain separate harness failures. The normal
 close needs no runtime repair. Excel is closed;45 package/eight current source
 pins match. This does not substitute for capability-loss, uncertain submission,
 a separately retained stale-form test or full4be.1-4be.6/human acceptance.
+
+Shipping capability-loss testing now covers Add, Update Row, Remove, Send Hold,
+Return, To Shipments and Shipments Sent under existing SHIP_POST eligibility.
+It verifies actual Core denial with the same signed-in session, calibrated handler
+boundaries, and a real Send Hold action's local effect. Results are pending;
+this is D18/D13 test-first coverage, with no new control, permission or runtime
+behavior. All379 prior checks and333 GREENs remain required.
+
+Under D18's Shipping mutation permission constraint, these seven handlers must
+verify current SHIP_POST through Core before entering local/submission mutation
+owners, rechecking after yields and between separate row mutations. Keep captured
+context validation around the permission check. Failed verification stops the
+new mutation and cancels pending sync with the fixed notice **Shipping permission
+could not be verified. Review Shipping access before continuing.** The wording
+does not infer a specific credential/configuration cause or rollback. Core's
+permission/security ownership and service guards remain; the automatic timer's
+existing context checks, normal Close and launcher reuse/recovery do not change.
+This consistent D18 constraint adds no permission or catalog version. Runtime
+implementation and its focused GREEN remain pending.
 
 ### Curated Action Path storage: NAS-only contract locked; implementation pending
 

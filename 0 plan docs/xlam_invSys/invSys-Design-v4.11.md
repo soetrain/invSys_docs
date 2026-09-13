@@ -687,6 +687,27 @@ rejected the stale form. Rejection shows the same context notice and exits witho
 scheduling another callback. Healthy pending synchronization retains its existing
 owner and scheduling behavior. This internal callback is not a user-control event.
 
+**Shipping mutation permission constraint:** D18's existing role-capability rule
+also applies to local staging mutations, including Send Hold and Return, which
+may emit no event. Before the seven mutation handlers above enter an owning
+mutation boundary, verify the current SHIP_POST permission through the existing
+Core role-access check, independently of optional activity collection. A valid
+captured session or a previously enabled launcher is not a fresh permission result.
+Recheck permission after intervening UI yields and between separately entered
+multi-row mutations, retaining the captured session/workbook check around that
+authorization work. A denied or unavailable check stops the new mutation and
+cancels pending automatic synchronization through the form's existing rejection
+path. Show **Shipping permission could not be verified. Review Shipping access
+before continuing.** This wording does not diagnose a missing permission from
+an unavailable Auth/Config read or claim rollback of earlier completed work.
+
+Core retains permission and required security-decision ownership; existing service
+and event-writer checks remain. Automatic synchronization retains its existing
+context/owner checks and is not reclassified as a user mutation or observation.
+Ordinary Close and explicit launcher reuse/recovery remain unchanged. This
+constraint inherits the approved D18 capability/owner-fact rules: it introduces
+no new permission, actor, activity outcome, catalog version or authority store.
+
 These are implementation constraints inherited from approved D18's context,
 owner-fact and workbook-preservation rules, not new ControlIds, outcomes, catalog
 versions, permissions or authority stores. Shipping activity/source-reference

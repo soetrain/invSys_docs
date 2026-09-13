@@ -4176,6 +4176,32 @@ Code checkpoint **97c74eb** is committed and pushed. This checkpoint changes tes
 maintenance metadata and evidence only; runtime remains0aa0084 and no Slice4be
 completion or native-stability repair is claimed.
 
+**Shipping capability-loss D13 entry, 2026-09-12:** Continue4be.1 under D18's
+existing role-capability and owner-fact rules. `Slice4beShippingCapability.ps1`
+starts from genuinely staged active/held rows and a live authorized Shipping form.
+Calibrate all seven mutation handlers at their owner entry, revoke only SHIP_POST
+in the disposable Auth fixture, and verify Core denies that capability while the
+same session remains signed in. Repeating the handlers must reject visibly before
+mutation. Stopped-owner probes distinguish handler entry from owner authorization;
+a separate real Hold action proves whether local staging is actually protected.
+Expected behavioral RED is unauthorized local movement or missing pre-mutation
+denial, not an Auth/fixture failure. Preserve all379 prior checks/333 GREENs,
+captured workbook, exact keys, unknown values, canonical bytes and unrelated work.
+No runtime edit or new capability is introduced in this test entry.
+
+D18's Shipping mutation permission constraint now explicitly applies the existing
+SHIP_POST requirement before local mutation owners as well as submission. Recheck
+after yields/between separate row mutations and retain captured context around
+Core authorization. The fixed notice is **Shipping permission could not be
+verified. Review Shipping access before continuing.** A failed check cancels the
+form's pending sync without implying a specific Auth/Config cause or rollback.
+Core permission/security ownership, service checks, timer's existing context-only
+entry contract and launcher/Close behavior remain. This semantic-inheritance
+constraint adds no permission or activity catalog and is recorded before repair.
+The bounded Shipping context helper can own the combined check; the form's
+existing guard delegates to it without exceeding its current3019-line limit.
+Focused RED must precede that implementation.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |
