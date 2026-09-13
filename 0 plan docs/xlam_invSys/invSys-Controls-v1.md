@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.101 (Event Tracking Settings surface RED; broader acceptance open)
+**Version:** 1.102 (Settings tabs implemented; tracking editors remain incomplete)
 
 **Inventory date:** 2026-08-31
 
@@ -11,7 +11,16 @@ runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
 
-**2026-09-13, Slice 4be.2:** The packaged Settings surface now has protecting
+**2026-09-13, Slice 4be.2, current UI checkpoint:** General/Event Tracking tabs
+and section headings are implemented in the isolated tabbed candidate; the
+tracking editors are explicitly unavailable pending implementation. Focused
+tab/layout checks pass 10/10 and D5 remains 18/18. The overall 31-check run is
+28 PASS / 3 FAIL for the still-missing save actions, capture control and personal
+selector. Five packages build/compile, cold start passes and smoke is 86/86.
+This is not completed Settings, Action Path or Release 1 acceptance. See the
+linked Settings evidence below and section 4.3 for the actual controls.
+
+**2026-09-13, Slice 4be.2, initial RED:** The packaged Settings surface has protecting
 RED: 26 checks, 21 PASS / 5 FAIL, preserving all 18 prior D5 identities and GREENs.
 The live form still lacks the approved General/Event Tracking tabs, tracking
 sections/actions, capture-off control and Action Path view selector. Opening
@@ -1801,6 +1810,8 @@ Obsolete are actions inside this form, not separate ribbon launchers.
 
 | Area | Controls | Purpose |
 |---|---|---|
+| Settings pages | `mpSettings` | **General** is the default page and contains the existing editors. **Event Tracking** contains the three approved sections. Page navigation does not save configuration; activity instrumentation for these new page controls remains pending under 4be.1. |
+| Event Tracking sections | `lblTracking`, `lblEventDetail`, `lblActionPaths`; `lblTrackingAvailability`, `lblDetailAvailability`, `lblActionPathAvailability` | **Tracking**, **Event Detail**, **Action Paths**. The current intermediate implementation explicitly says **Tracking policy editor unavailable.**, **Event detail profile editor unavailable.**, and **Action Path preferences unavailable.** Save actions, policy/profile persistence and personal preferences remain incomplete; the page is not accepted as the finished Settings contract. |
 | Heading/context | `lblTitle`, `lblConfigWorkbook`, `lblStatus` | Shows **Warehouse Settings**, the current config workbook, and action status. |
 | Config grid | `lblConfigKeyHeader`, `lblConfigValueHeader`, `lblConfigTypeHeader`, `lblConfigScopeHeader`, `lblConfigRequiredHeader`, `lstConfig` | Lists config key, value, type, scope, and required status. |
 | Selected config | `lblSelectedKey`, `txtConfigKey`, `lblSelectedValue`, `txtConfigValue` | Shows the selected key and permits value editing. |
@@ -1809,6 +1820,10 @@ Obsolete are actions inside this form, not separate ribbon launchers.
 | Carrier catalog | `lblSection`, `lblCarrier`, `txtCarrier`, `btnAdd`, `btnRemove`, `btnReset`, `lstCarriers` | Adds, removes, resets, and lists Shipping carriers. |
 | UOM catalog | `lblUomSection`, `lblUom`, `txtUom`, `btnUomAdd`, `btnUomRemove`, `btnUomReset`, `lstUoms` | Adds, removes, resets, and lists recipe UOM values. |
 | Exit | `btnClose` — **Close** | Closes the settings form. |
+
+The default form size is 744 by 696 points. Close/status stay outside `mpSettings`
+and remain available on both pages. The height includes room for the native
+resizable frame; both displayed page layouts pass their packaged bounds checks.
 
 ### 4.4 `frmCreateDeleteUser` — Users & Roles
 

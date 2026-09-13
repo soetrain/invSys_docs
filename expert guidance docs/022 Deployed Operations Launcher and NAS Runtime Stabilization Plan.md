@@ -4646,6 +4646,22 @@ run has no observed Excel fault and its form capture was inspected. No runtime
 or architecture changes; 65 package / 16 source pins remain. See
 [Settings evidence and required next gates](../../invSys_fork/tests/integration/plan022_slice4be_tracking_settings_results.md).
 
+**4be.2 tabbed UI checkpoint, 2026-09-13:** Code `3ea260f` is committed and pushed.
+Admin Settings now has General and
+Event Tracking pages in `deploy/validation-tracking-settings-tabs-final`.
+Existing editors/handlers stay on General; Close/status remain shared. The three
+tracking sections explicitly show that their editors are unavailable. This is
+an intermediate implementation, not completion of the approved Settings scope.
+Expanded old-package RED is 23 PASS / 8 FAIL across 31 checks; the final candidate
+is 28 PASS / 3 FAIL with all prior identities/GREENs retained. Focused tab/layout
+checks pass 10/10; D5 remains 18/18. Both displayed pages fit after a measured
+footer overflow was corrected by increasing form height to 696 points. All five
+packages build/compile, Operations cold start passes, and packaged smoke is
+86/86. Final General save/status and Event Tracking captures were inspected.
+Save actions, capture control and personal selector remain RED. Policy/profile
+persistence, preference isolation, new page activity coverage and all broader
+acceptance gates remain open. See the updated Settings evidence above.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |
