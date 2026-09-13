@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.96 (Shipping activity candidate; expanded acceptance gates pending)
+**Version:** 1.97 (Shipping owner evidence; expanded acceptance and native gates open)
 
 **Inventory date:** 2026-08-31
 
@@ -748,6 +748,27 @@ before later sign-out, and preserve the exact primary access message while allow
 the separately required fixed tracking-unavailable notice. No post-loss record or
 new-context attribution is permitted. Expanded timing/notice/fallback/store-failure
 tests and remaining release gates are pending; seven D8-A findings remain unapproved.
+
+Checkpoint2026-09-13: the expanded prior-package route completes953 checks at
+828/125, preserving all890 preceding identities. Failures are117 missing activity,
+seven pending D8-A findings and one independently proven/corrected hash-format
+assertion. Candidate setup still fails during Admin Seed; no expanded GREEN is
+claimed. Five builds/compiles, smoke86/86, Viewer and combined launchers3/3 pass.
+Separate live-role39/1 fails natively. Full chain reports30/30 (ordered child48/48)
+but has an Excel fault in its window, and its runner does not validate the child
+exit code; those assertions do not yet establish accepted full-chain completion.
+The actual child-decision test now records2 PASS/2 FAIL before correction and
+4 PASS/0 FAIL afterward. The runner checks child completion explicitly; the
+corrected packaged rerun completes31/31 with every prior check retained, but a
+repeat Excel native fault keeps native-clean chain acceptance open. Independent reusable
+Production/restart2/2 and Shipping layout1/1 pass.
+
+The seven controls retain their existing D18 captions/outcomes and independent
+captured-context/permission checks. An allocated-only submission identity must not
+appear in activity; Core can allocate before writing, so actual dual-route
+pre-write failure needs a protecting test before that owner-fact refinement.
+Partial/mixed results, policy variations, remaining coverage, visible comparison
+and human acceptance remain open. See [owner activity evidence](../../../invSys_fork/tests/integration/plan022_slice4be_shipping_owner_activity_results.md).
 
 ### Curated Action Path storage: NAS-only contract locked; implementation pending
 

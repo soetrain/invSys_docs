@@ -4538,6 +4538,37 @@ assertions for the required pre-loss attempt and tracking notice, plus actual
 fallback/uncertain-submission and unavailable-store handler coverage. Retain the
 first873/17 result; do not retrospectively label it full GREEN or erase its evidence.
 
+**Shipping owner checkpoint, 2026-09-13 (code `ec8110a`, pushed):** The implemented Operations candidate
+retains the original873/17 evidence. Expanded prior-package testing completes953
+checks at828/125:117 missing activity assertions, seven pending D8-A findings and
+one test-only SHA-256 formatting mismatch, independently calibrated and corrected.
+All890 preceding check identities remain. The diagnostic prepares the same three
+Admin-generated fixtures before Shipping probes and consumes each once; it does
+not skip bootstrap or explicit Seed. Candidate attempts still fail in Admin Seed
+(5/1, then1/1 with a removed Seed-order experiment), so expanded GREEN is pending.
+
+All five candidate builds/compiles, smoke86/86, Viewer and combined launchers3/3
+pass. Live-role remains39/1 with a native failure. Full chain reports30/30 and its
+ordered child48/48, but the window includes an Excel native fault and source review
+finds that the runner ignores the ordered child's exit code. Retain the assertions;
+full-chain acceptance remains unproven. The runner's actual child-decision test
+records2 PASS/2 FAIL before adding OrderedLiveProcessCompleted and4 PASS/0 FAIL
+afterward. The corrected packaged chain completes31/31, preserving all30 prior
+identities, but again records Excel combase.dll/c0000005 in its window. The child
+exit requirement is proven; native-clean full-chain acceptance remains open.
+Independent reusable Production/restart2/2 and Shipping layout1/1 also pass.
+Maintenance preserves all28 prior module limits and8/45/195 dynamic/duplicate
+counts; the16 extracted Shipping helpers preserve their bodies exactly. All60
+package pins and14 current source pins match after the runs; Excel is closed.
+
+Next required source-reference case: actual Add with both submission routes
+refused before writing. Core allocates the ID before inbox availability/schema
+checks; a nonempty ID alone cannot establish an attempted write. D18 prohibits
+allocated-only references. Prove that failure before refining the primitive owner
+facts, and keep partial/mixed outcomes, policy variations, remaining coverage,
+release/visible gates and the separate D14 TSV correction open. D8-A is still
+pending explicit approval. See [owner activity evidence](../../invSys_fork/tests/integration/plan022_slice4be_shipping_owner_activity_results.md).
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |
