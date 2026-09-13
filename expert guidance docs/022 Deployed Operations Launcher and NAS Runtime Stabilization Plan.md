@@ -4614,6 +4614,24 @@ same-process ownership alone is not that proof. Final65 package/16 source pins
 match with Excel closed. See
 [pre-write identity evidence](../../invSys_fork/tests/integration/plan022_slice4be_shipping_prewrite_refusal_results.md).
 
+**Receiving native-target follow-up, 2026-09-13:** Codea300cc3 is committed and
+pushed. Focused266/266 passes after
+calibrating the actual native focus transition and repairing test input routing.
+The protecting RED is111 PASS/2 FAIL across113 checks; its111 GREENs remain.
+Nine new checks protect wrong-window refusal and the exact captured object/native
+form across workbook closure. Native actions still enter the real handlers and
+Core readers; no runtime form, authority rule or package changes. The fixture
+explicitly shows Excel for mouse input and restores visibility. Native focus may
+activate only the unchanged workbook or exact captured object. The final stale
+form is hosted independently of its captured business workbook so actual input
+can reach its missing-workbook guard. Full Receiving854/854 now retains every
+prior845 check and GREEN, with nine added checks and no duplicates. A fresh form
+capture was inspected;65 package/16 source pins match with Excel closed. No Excel
+fault is observed in these calibration/focused/full windows. Runtime maintenance
+counts and all28 module limits remain; all three report schemas pass. Separate
+native failures, D8-A approval and comprehensive Slice4be acceptance remain open.
+See [native-target evidence](../../invSys_fork/tests/integration/plan022_slice4be_receiving_native_target_results.md).
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |

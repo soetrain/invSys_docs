@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.99 (Shipping pre-write identity GREEN; broader acceptance open)
+**Version:** 1.100 (Receiving native-target and full854 GREEN; broader acceptance open)
 
 **Inventory date:** 2026-08-31
 
@@ -793,6 +793,18 @@ No Excel fault is observed in either Receiving window. Full845 preservation and
 keyboard-target calibration remain open. Final65 package/16 source pins match
 with Excel closed. See
 [pre-write identity evidence](../../../invSys_fork/tests/integration/plan022_slice4be_shipping_prewrite_refusal_results.md).
+
+Receiving native-input follow-up (committed/pushed codea300cc3): focused266/266
+now passes with real keyboard
+and mouse handlers, catalog8 reads, policy/stale-context cases and the surviving
+closed-workbook form. Nine calibration checks protect wrong-window refusal and
+the exact closed workbook/form identities. Runtime forms and package files are
+unchanged. Full Receiving854/854 retains every prior845 check and GREEN, with no
+duplicates. The fresh form capture was inspected;65 package/16 source pins match
+with Excel closed. No Excel fault is observed in these calibration/full windows.
+Separate native failures, D8-A, Release1 and comprehensive Action Path acceptance
+remain open. See
+[native-target evidence](../../../invSys_fork/tests/integration/plan022_slice4be_receiving_native_target_results.md).
 
 ### Curated Action Path storage: NAS-only contract locked; implementation pending
 
