@@ -4662,6 +4662,33 @@ Save actions, capture control and personal selector remain RED. Policy/profile
 persistence, preference isolation, new page activity coverage and all broader
 acceptance gates remain open. See the updated Settings evidence above.
 
+**4be.2 tracking policy checkpoint, 2026-09-13:** Code `be0e8a0` is committed
+and pushed. The isolated
+`deploy/validation-tracking-policy-save` candidate implements staged Admin
+collection/visibility/sequence flags, capture and Admin visibility flags, and
+warehouse default view. Its Save/Reset/Reload actions use the captured context;
+headless Core validates the whole policy and expected version, preserves unknown
+columns, appends metadata/control rows and saves once. This implements existing
+D18/D5 without changing the normative contract. The no-write scaffold's real
+Save action gives meaningful RED: 47 checks, 44 PASS / 3 FAIL, including failure
+to publish a version. The expanded candidate gives 56 checks, 54 PASS / 2 FAIL,
+with all 25 focused policy checks and 18 D5 checks passing. The two remaining
+broad failures are profile/preference actions and personal choices. Shared
+activity remains 70/70; both candidates build/explicitly compile all five
+packages and pass Operations cold start. The saved version-2 capture is inspected.
+Full Receiving passes 854/854 with every prior check identity/GREEN retained;
+packaged smoke passes 86/86, and source-harness import/test 1 passes 1/1.
+Static dynamic-call/duplicate metrics are unchanged and all 28 prior module
+limits hold. All 75 prior package pins and 16 preserved runtime source pins match;
+10 policy candidate package hashes are pinned. Excel is closed. Eleven bounded
+windows show no observed Excel Application 1000 fault; historical faults remain.
+New Settings action coverage and policy-save observations, further policy edge
+cases, detail profiles, personal preferences, Operations Settings without Admin,
+recording, Viewer/comparison and broader release/user gates remain open. See
+`tests/integration/plan022_slice4be_tracking_settings_results.md` in the code repo
+for exact test runs, limitations and continuation. Do not treat this checkpoint
+as completed 4be.2 or use it to weaken the acceptance table below.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |
