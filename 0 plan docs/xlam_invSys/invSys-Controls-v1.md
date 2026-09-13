@@ -641,6 +641,23 @@ pass, and the46 missing-activity failures remain. See
 [access-interruption evidence](../../../invSys_fork/tests/integration/plan022_slice4be_shipping_access_results.md).
 No control, visible wording, runtime contract or broad acceptance status changed.
 
+Shipping submission discovery now follows the preserved558-check matrix through
+the real Add handler in another generated fixture. Four unsaved acknowledgment/
+fallback faults observe actual owner results and exact IDs, distinguishing queue
+acceptance from Domain application. The applied-log-only reference expectation
+needs calibration against pending submissions before activity implementation.
+No new control, outcome contract or runtime behavior is introduced by these tests;
+D8-A approval and full Shipping activity acceptance remain pending.
+
+[Submission evidence](../../../invSys_fork/tests/integration/plan022_slice4be_shipping_submission_results.md)
+now records initial605-check discovery and a separately scoped136/136 focused
+result, including66 owner/persistence/path checks. Pending IDs survive lost or
+exceptional acknowledgment; owner failure can follow actual server acceptance.
+Two revised full runs stop early with native Excel faults, so the focused result
+does not prove full-matrix GREEN. Activity reference expectations must include
+pending owner submissions before observation implementation. All packages/source
+pins remain unchanged; no control or outcome definition is newly registered.
+
 ### Curated Action Path storage: NAS-only contract locked; implementation pending
 
 Action Paths will be stored only under the selected warehouse NAS runtime root:

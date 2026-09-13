@@ -4281,6 +4281,63 @@ Code checkpoint **5322f9f** is committed and pushed. It contains the test-only
 extension and sanitized evidence; runtime remains22e14b6. D8-A is still a proposal,
 not an effective architecture change or an authorized Core implementation.
 
+**Shipping submission discovery test entry, 2026-09-12:** Continue 4be.1 under
+D18's owner-fact and exact-reference rules while D8-A remains pending. The
+unchanged packaged Add handler now gets a separate generated fixture after all
+558 preceding checks. Unsaved observers retain the actual commit result and
+reserve ID. Four controlled public submission faults cover unavailable server,
+lost acknowledgment with successful local fallback, exception after actual server
+acceptance, and lost acknowledgment with unavailable fallback. Successful writes
+and all authorization owners remain real; fault hooks never fabricate an event ID
+or a successful write. Observe both public calls, exact ID propagation and whether
+the Domain log has applied that specific ID. Normal Remove clears successful
+local staging between cases; the uncertain case runs last in its isolated fixture.
+
+The new helper must calibrate before source-outcome assertions become acceptance
+evidence. It does not register Shipping controls or implement activity. Existing
+activity tests currently derive reference expectations from applied inventory logs;
+discovery must determine whether this omits pending submissions before those tests
+can protect comprehensive observation. A compiler/instrumentation failure remains
+harness failure, not meaningful D13 RED. Preserve all558 prior checks/505 GREENs,
+the46 missing-activity assertions and the seven separately pending D8-A findings.
+
+Initial submission discovery completes605 checks,552 PASS/53 FAIL, preserving all
+558 prior identities/505 GREENs and passing47 new source/owner checks. Exact IDs
+survive negative and exceptional acknowledgment; even owner failure may retain a
+server-accepted ID absent from the Domain log. This proves that applied-log-only
+activity expectations miss pending submissions. The first helper also omits
+reestablishing fixture paths after unsaved Core edits, creating a default template
+and fixture operator outside its intended temporary tree. The template is isolated
+under ignored evidence; the external fixture is left untouched after automatic
+approval review rejects combined cleanup. Corrected explicit template/operator
+roots and an unsaved temporary local-staging root now protect isolation, with
+persisted-ID read-back and source-byte checks added.
+
+Two full runs of that correction stop67/1 at the existing Shipping setup before
+the new helper, both with native ntdll.dll/c0000028. Retain both failures and the
+empty recovery-instance cleanup evidence. A separate `-ShippingSubmissionOnly`
+diagnostic route now permits focused calibration without claiming full-matrix
+GREEN or a native repair. See [submission evidence](../../invSys_fork/tests/integration/plan022_slice4be_shipping_submission_results.md).
+The default full route and all prior assertions remain; D8-A is still pending.
+
+The focused diagnostic completes **136/136**, including66 submission checks and
+all47 initial submission GREENs. Persisted server/local identities, exact owner
+references, absent Domain application, bounded fixture paths and source/template
+byte preservation pass. All50 package/eight source pins match; runtime stays
+22e14b6. Static schemas and28 preceding module limits pass with unchanged runtime
+metrics. No native fault is observed in that focused window, but the revised624-
+check full route and earlier native failures remain unproven. Do not combine the
+605-check initial run and136-check focused run into a full GREEN. Separately
+verified single-file moves safely isolate the initial generated operator and its
+fixture-only staging file after the rejected combined cleanup; unrelated files
+and surrounding folders remain untouched. Correct the normal activity test's
+reference expectations from actual owner submissions next, then refine the
+Shipping catalog/outcome contract under D18 before implementing observation.
+Code checkpoint **01cb839** is committed/pushed with the submission tests,
+sanitized evidence and regenerated maintenance reports. Runtime remains22e14b6;
+the current full route's native failures, missing activity and D8-A decision stay
+open. The focused pass is evidence for source semantics and fixture isolation only.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |
