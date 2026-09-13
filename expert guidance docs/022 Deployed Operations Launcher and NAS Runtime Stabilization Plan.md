@@ -4126,6 +4126,56 @@ Code checkpoint **0aa0084** is committed and pushed. Preserve the pinned candida
 and all existing GREEN evidence while narrowing the native failure; do not label
 this checkpoint a completed Slice4be or substitute it for user acceptance.
 
+**Unchanged-source native/gate comparison, 2026-09-12:** Fresh isolated
+`validation-shipping-timer-rebuild` builds/compiles all five packages and passes
+cold start; all170 exported component hashes match the earlier timer candidate.
+Ordinary live-role48/48 and full reusable Production/restart2/2 pass. Shipping
+retains322 PASS /46 missing-activity FAIL, all368 check identities and every prior
+GREEN. This same set passes smoke86/86, ordered full-chain30/30, Viewer and Shipping
+layout1/1. Combined launchers fail1 PASS /1 harness exception at Production batch
+scale after successful sign-in, with ntdll.dll/c0000028. A separate combase.dll/
+c0000005 occurs during the passing full chain. Native stability and combined
+launcher acceptance remain open; do not combine package sets or traced passes to
+claim otherwise. Expanded unsaved Complete Run tracing passes48/48; an identical
+service-source-only reload still fails39/1. Neither establishes a runtime cause.
+
+Test maintenance rejects a failed fixture sign-in before workflow callbacks and
+updates the stale source assertion to follow Shipping's existing typed context/
+bound-form factory. The ordinary full Production2/2 retains its complete scope;
+the source checker passes24/24. Runtime remains0aa0084 with no architectural change.
+The fresh capture retains the legible context notice and prior key/header crowding.
+See [native validation evidence](../../invSys_fork/tests/integration/plan022_slice4be_native_validation_results.md)
+for exact variant/gate reports and limitations. All4be.1-4be.6 work and Release1
+acceptance requirements remain intact.
+
+**Shipping workbook-close test entry, 2026-09-12:** Continue4be.1 under D18's
+captured-workbook lifetime and non-click rules. The supplemental
+`Slice4beShippingWorkbookClose.ps1` closes the real captured disposable workbook
+with normal Excel events enabled while an unrelated workbook is active, then
+invokes the registered late timer. Assert released form/callback bindings, no
+reopened workbook or owner/submission entry, no fabricated activity, and preserved
+saved staging/exact keys/unknown values, authority bytes and unrelated workbook.
+Unsaved facades inspect binding state only; they do not call the close handler,
+suppress events or change runtime logic. A surviving binding or redirected action
+would be behavioral RED; already conforming lifetime behavior needs no runtime
+repair. This test does not claim a forcibly retained stale form or capability-loss
+case. Existing368 checks and all322 GREENs remain required.
+
+The calibrated normal-event run passes **333 checks /46 missing-activity failures**,
+379 total, including11/11 workbook-close checks and every prior check/GREEN with
+no duplicates or other failures. The initial close fixture stopped319/48 because
+the shared harness starts with events disabled; normal Shipping startup/event
+initialization corrects that setup. A subsequent native67/1 failure before Shipping
+and an Excel-open refusal are retained separately. No runtime close repair was
+needed. All test processes are terminal, Excel is closed and45 package/eight
+current source pins match. Static runtime metrics and28 module limits are unchanged.
+The linked native validation evidence records exact runs and scope. Continue
+capability-loss and pending/uncertain owner outcomes before Shipping's D18 catalog/
+activity implementation; full4be.1-4be.6 and native/human acceptance remain open.
+Code checkpoint **97c74eb** is committed and pushed. This checkpoint changes tests,
+maintenance metadata and evidence only; runtime remains0aa0084 and no Slice4be
+completion or native-stability repair is claimed.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |

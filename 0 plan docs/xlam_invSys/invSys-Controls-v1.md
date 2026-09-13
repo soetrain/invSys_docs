@@ -560,6 +560,30 @@ diagnostic stops between quiet-UI entry/typed completion and output restoration;
 the source cause is unresolved. All tests are terminal; Excel is closed and40
 package/eight source pins match. No accepted deployment/NAS or user files changed.
 
+The unchanged-source rebuilt timer set now passes ordinary live-role48/48, full
+reusable Production/restart2/2, Shipping322/46 with no lost GREEN, smoke86/86,
+ordered full-chain30/30, Viewer and Shipping layout1/1. All five build/compile/
+cold-start gates and170 exported component comparisons pass. Combined launchers
+still fail at Production batch scale after sign-in (1 PASS /1 native harness
+failure); an additional native fault occurs during the passing full chain.
+These results advance this isolated candidate's evidence without resolving native
+stability, combined launcher acceptance, existing header/key-editor crowding or
+human UAT. See [native validation evidence](../../../invSys_fork/tests/integration/plan022_slice4be_native_validation_results.md).
+No runtime control/caption, permission or architecture changes in this comparison.
+
+Supplemental4be.1 workbook-close coverage now tests the actual captured-workbook
+close event and registered late timer, with normal Excel events and an unrelated
+active workbook. It protects UI/callback release, no redirected submission or
+fabricated click, and saved staging/key/unknown-value preservation. This is test
+coverage under existing D18, with no new control, caption, permission or lifecycle
+contract. After correcting the shared fixture's disabled-event setup, all11 close
+checks pass:333 PASS /46 missing-activity FAIL overall, retaining all368 previous
+checks and322 GREENs without duplicates or other failures. Native67/1 and an
+Excel-open refusal before Shipping remain separate harness failures. The normal
+close needs no runtime repair. Excel is closed;45 package/eight current source
+pins match. This does not substitute for capability-loss, uncertain submission,
+a separately retained stale-form test or full4be.1-4be.6/human acceptance.
+
 ### Curated Action Path storage: NAS-only contract locked; implementation pending
 
 Action Paths will be stored only under the selected warehouse NAS runtime root:
