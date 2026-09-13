@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.97 (Shipping owner evidence; expanded acceptance and native gates open)
+**Version:** 1.98 (Shipping pre-write identity RED; correction in progress)
 
 **Inventory date:** 2026-08-31
 
@@ -769,6 +769,14 @@ appear in activity; Core can allocate before writing, so actual dual-route
 pre-write failure needs a protecting test before that owner-fact refinement.
 Partial/mixed results, policy variations, remaining coverage, visible comparison
 and human acceptance remain open. See [owner activity evidence](../../../invSys_fork/tests/integration/plan022_slice4be_shipping_owner_activity_results.md).
+
+The real Add pre-write-refusal test completes402 checks at401 PASS/1 FAIL:
+Core allocates the ID but both routes refuse before their calibrated writers,
+with authority/submission bytes unchanged. FAILED currently contains the unwanted
+reference. D18 now details the primitive writeAttemptedOut evidence used to
+exclude allocated-only identities while preserving legitimate Submitted/Unknown
+references, unchanged owner behavior and all existing control wording. This is
+the protecting RED for the correction; implementation GREEN remains pending.
 
 ### Curated Action Path storage: NAS-only contract locked; implementation pending
 

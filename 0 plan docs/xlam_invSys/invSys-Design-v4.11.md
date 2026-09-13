@@ -783,6 +783,23 @@ STAGED references remain empty; PENDING/CONFIRMED require only Submitted entries
 All existing exact four-field, matching warehouse, uniqueness, identity-text,
 size, policy and non-authority constraints remain unchanged.
 
+**Submission-entry evidence refinement:** Core's typed QueuePayloadEventServer
+and QueuePayloadEventCurrent boundaries expose an optional ByRef Boolean
+writeAttemptedOut. Each call initializes it False. Core sets it True only when
+the Inventory inbox-row write or serialized local-row append is attempted;
+identity allocation, context/permission checks, path resolution, read-only/schema
+rejection, and preparation before that write do not establish a submission.
+The existing Boolean acceptance result, allocated EventId, fallback identity reuse,
+authorization and business writes remain unchanged. Shipping keeps the independent
+server and fallback facts for the same identity, including exceptional returns.
+Accepted submission supports Submitted; a failed result after either attempted
+write supports Unknown. If neither route attempted a write and neither accepted,
+the allocated identity remains available to its business owner but is excluded
+from activity references. This implements the existing D18 exclusion of
+preallocated-but-unsubmitted identities; it introduces no new stored reference
+state, permission, actor, policy or business outcome. Protect it through the real
+handler with both pre-write refusals, known writes and uncertain acknowledgments.
+
 This is semantic inheritance within approved D18, not a change to Shipping's
 business mutations, Core authorization or Domain application. No D8-A approval
 is implied. Required tests include actual handlers, local and source-bearing

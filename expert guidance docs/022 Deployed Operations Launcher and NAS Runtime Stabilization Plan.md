@@ -4569,6 +4569,23 @@ facts, and keep partial/mixed outcomes, policy variations, remaining coverage,
 release/visible gates and the separate D14 TSV correction open. D8-A is still
 pending explicit approval. See [owner activity evidence](../../invSys_fork/tests/integration/plan022_slice4be_shipping_owner_activity_results.md).
 
+**Pre-write identity D13 entry, 2026-09-13:** The existing candidate's real Add
+now reproduces the D18 breach:402 checks complete401 PASS/1 FAIL. Both Core
+routes allocate/preserve the same ID and refuse before either actual writer;
+independently calibrated write counters remain zero and authority/submission
+files remain unchanged, but the activity result includes that unsubmitted ID.
+The only RED is Shipping.Submission.PrewriteRefusal.Activity.ExactAppliedSourceReferences.
+An earlier280/1 probe-anchor failure is retained as harness evidence, not RED.
+
+Follow the normative submission-entry refinement: add optional primitive
+writeAttemptedOut facts to the two Core queue routes and preserve both facts in
+Shipping, including exceptions. Keep the allocated ID and Boolean business
+contracts unchanged. Use coherent helper extraction to retain the Core/Shipping
+module-size limits. Protect accepted writes, lost/exceptional acknowledgments,
+known pre-write refusal, exact identity, bytes and unknown columns through the
+same packaged handler route, then rerun required package/release gates. This
+corrects existing D18 behavior and does not approve D8-A.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |
