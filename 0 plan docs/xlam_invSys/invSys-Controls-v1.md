@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.106 (Admin personal preference and Core restart GREEN)
+**Version:** 1.107 (Operations Settings and actual Admin Close checkpoint)
 
 **Inventory date:** 2026-08-31
 
@@ -10,6 +10,23 @@ Operations, Receiving, Production, or Shipping, including active controls,
 runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
+
+**2026-09-13, Slice 4be.2, Operations Settings continuation:** Add Viewer
+**Settings** and its Operations-owned **Event Tracking** surface with read-only
+warehouse policy and the existing personal preference contract. The D18 surface
+refinement requires captured-context reuse, no silent retargeting and preservation
+of Viewer state. The combined packaged suite is **187/187**, preserving all 145
+preceding checks and adding 36 Operations and six actual Admin launcher/Close
+checks. Four-package isolation proves named Admin absence. The populated Viewer
+regression passes all existing facts and Settings preservation on all three tabs.
+Default/native maximize/restore, header alignment and readable captures pass.
+The real Admin Close now unloads its default instance, correcting retained staging
+missed by private-instance tests; actual-launcher RED 3/6 becomes GREEN 6/6.
+Five packages compile, cold start and smoke 86/86 pass. Full-chain retry is 31/31
+with ordered live-role child 48/48; its earlier native failure remains recorded.
+All 115 prior / 25 candidate package pins and 16 protected source pins match.
+Comprehensive activity, Viewer consumption, both presentations and human acceptance
+remain open; the 187 checks do not complete Slice 4be.
 
 **2026-09-13, Slice 4be.2, personal preference continuation:** Protect the four
 fixed view choices, separate Save My Preference / Reset to Default / Reload,
@@ -1869,7 +1886,7 @@ Obsolete are actions inside this form, not separate ribbon launchers.
 | Detail synthetic preview | `txtDetailPreview`, `lblDetailPreview` | **Synthetic preview** is locked, multiline and scrollable, with fixed labelled examples. Preview/rendering do not observe or execute user actions and do not read live event data. |
 | Personal Action Path view | `cmbPreferredActionPathView`, `lblActionPathPreference`, `lblActionPathPreferenceScope`; `cAdminActionPathPreference` | **Preferred Action Path view**: Use warehouse default, How-To, Diagnostic, Compare both. Selection stages a personal choice scoped to Windows user, invSys sign-in and warehouse; it grants no tracking permission. |
 | Personal effective status | `lblActionPathEffectiveView`, `lblActionPathEvidence` | Shows the saved effective choice and policy version, or unavailable policy; capture off explicitly reports unavailable diagnostic evidence. Selecting a view does not create evidence. |
-| Personal preference actions | `btnSaveActionPathPreference`, `btnResetActionPathPreference`, `btnReloadActionPathPreference`, `lblActionPathPreferenceStatus`; `cAdminActionPathPreference.SavePreference`, `.ResetPreference`, `.ReloadPreference` | **Save My Preference**, **Reset to Default**, **Reload** have local personal scope only. Reset stages Use warehouse default; Close discards staging. Core local persistence, isolation, fallback, Config preservation and Excel restart pass. New-control activity, Operations UI access and human acceptance remain pending. |
+| Personal preference actions | `btnSaveActionPathPreference`, `btnResetActionPathPreference`, `btnReloadActionPathPreference`, `lblActionPathPreferenceStatus`; `cAdminActionPathPreference.SavePreference`, `.ResetPreference`, `.ReloadPreference` | **Save My Preference**, **Reset to Default**, **Reload** have local personal scope only. Reset stages Use warehouse default; Close discards staging. Core local persistence, isolation, fallback, Config preservation and Excel restart pass. Operations has its own verified personal surface (section 6.2). New-control activity and human acceptance remain pending. |
 | Detail profile actions | `btnSaveDetailProfile`, `btnResetDetailProfile`, `btnReloadDetailProfile`, `lblDetailProfileStatus`; `cAdminEventDetail.SaveProfile`, `.ResetProfile`, `.ReloadProfile` | **Save Detail Profile**, **Reset to Default**, **Reload** have profile-only scopes. Core validates captured Admin context, the whole request and expected version, appending one complete profile version. Reset stages defaults; Close discards unsaved profile edits. Profile selection/toggle/order/save/reset/reload activity registration and save version/outcome observations remain pending; persistence does not yet imply Viewer application. |
 | Heading/context | `lblTitle`, `lblConfigWorkbook`, `lblStatus` | Shows **Warehouse Settings**, the current config workbook, and action status. |
 | Config grid | `lblConfigKeyHeader`, `lblConfigValueHeader`, `lblConfigTypeHeader`, `lblConfigScopeHeader`, `lblConfigRequiredHeader`, `lstConfig` | Lists config key, value, type, scope, and required status. |
@@ -1878,7 +1895,7 @@ Obsolete are actions inside this form, not separate ribbon launchers.
 | Connection policy | `lblServerConnection`, `chkManualServerCredentials`, `lblServerConnectionScope`, `btnSaveConnectionPolicy` | Controls whether Connect Server always requests manual credentials for this Windows user. |
 | Carrier catalog | `lblSection`, `lblCarrier`, `txtCarrier`, `btnAdd`, `btnRemove`, `btnReset`, `lstCarriers` | Adds, removes, resets, and lists Shipping carriers. |
 | UOM catalog | `lblUomSection`, `lblUom`, `txtUom`, `btnUomAdd`, `btnUomRemove`, `btnUomReset`, `lstUoms` | Adds, removes, resets, and lists recipe UOM values. |
-| Exit | `btnClose` — **Close** | Closes the settings form. |
+| Exit | `btnClose` — **Close** | Unloads the default Settings instance and releases staged editors so the next actual Admin launcher reads saved state in the current context. Actual-launcher RED 3/6 becomes GREEN 6/6 for hidden-instance removal, personal/policy discard and Config preservation; the combined Settings suite is 187/187. |
 
 The default form size is 744 by 696 points. Close/status stay outside `mpSettings`
 and remain available on both pages. The height includes room for the native
@@ -2160,6 +2177,7 @@ calculated column geometry and remain readable/aligned during resize.
 | `tabsInventoryViewer` | Tabs — **Inventory**, **Events** | Switches between the current inventory-level projection and the read-only event/activity projection. |
 | `lblTitle` | Label — **Current inventory levels** | Identifies the read-only overview. |
 | `btnRefresh` | Button — **Refresh** | Reads the current published inventory snapshot or Events projection; it does not process or alter authority workbooks. |
+| `btnSettings` | Button — **Settings** | Opens or reuses Operations Event Tracking Settings in the Viewer's captured session/warehouse context. Preserves the selected Viewer tab, search, selection and loaded projection. |
 | `lblSearch`, `txtSearch` | Label and text box — **Search** | Filters the already loaded rows locally across all visible columns. |
 | `lblHeaders` | Header label | Inventory identifies Item Code, Item, UOM, Quantity, Location, and Condition. Events identifies Date, Event, Reference, Item, Qty, UOM, Location, Condition, User, and Details. |
 | `lstInventory` | Six- or ten-column list box | Inventory displays active managed levels aggregated by item code, item, UOM, location, and condition, including active zero-quantity items created before stock arrives or is produced; retired items remain omitted. Events currently displays Receipts, Returns, Dumps, Box Made/Unboxed, Shipped, **Remove** (the `SHIP_RELEASE` action that returns locked inventory to warehouse availability), **Inventory Adjustment** (including audited Admin item retirement), current Box Designs, and current Held Shipments. Slice 4x adds Production Input Consumed and Production Output Created after packaged GREEN. Both views are read-only. |
@@ -2169,6 +2187,33 @@ calculated column geometry and remain readable/aligned during resize.
 The modeless form is reused on repeated launch. It is resizable: Search,
 headers, list, and status expand or reposition through the shared Operations
 anchor manager while remaining readable.
+
+### 6.2 `frmEventTrackingSettings` — Operations personal settings
+
+Entry: Viewer > **Settings**, without an Admin package or ADMIN_MAINT capability.
+The Operations-owned modeless form captures its parent context. Repeated opens
+retain staging; another session cannot retarget the open instance. Close discards
+unsaved choices, and closing Viewer closes its Settings. The real Save handler,
+role/context guards and native layout pass in the 187-check packaged suite.
+
+| Control | Display / purpose |
+|---|---|
+| `mpOperationsSettings` | **Event Tracking** tab. |
+| `lblPreferenceScope` | Identifies the warehouse scope of the user's personal choice. |
+| `lblReadOnlyPolicy`, `lblPolicyColumn1` through `lblPolicyColumn6`, `lstReadOnlyTrackingPolicy` | Read-only policy version/default status and operation/control collection, Viewer visibility, sequence eligibility and availability. Headers use the list's column widths; the operation column is 140 points to avoid clipping. Version zero displays **Built-in defaults**. The internal control identity column is hidden. |
+| `lblRequiredCollection` | Required canonical/audit collection stays enabled; navigation requires capture and explicit recording. |
+| `lblPreferredView`, `cmbPreferredActionPathView` | **Preferred Action Path view**: Use warehouse default, How-To, Diagnostic, Compare both. Selection stages a personal choice. |
+| `lblEffectiveView`, `lblDiagnosticEvidence` | Effective view with policy version and evidence availability from the same validated Core policy read. |
+| `btnSaveMyPreference` | **Save My Preference**: personal local storage only, subject to captured-context validation; no warehouse write authority. |
+| `btnResetMyPreference` | **Reset to Default** stages Use warehouse default. |
+| `btnReloadMyPreference` | **Reload** restores the saved personal choice and current read-only policy. |
+| `lblPreferenceStatus` | Staging, read/save result, or fixed context/unavailability feedback. |
+| `btnClose` | **Close** discards staging and releases this Settings instance. |
+
+Default/minimum size is 744 × 640 points; the policy list grows with the form,
+personal controls remain below it, and Close remains at the lower right. Packaged
+geometry/capture and context/role evidence are tracked in the Settings results.
+Activity coverage of these discovered controls remains pending under D18.
 
 ## 7. Receiving forms
 

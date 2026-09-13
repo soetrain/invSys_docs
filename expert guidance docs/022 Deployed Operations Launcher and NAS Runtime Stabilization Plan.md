@@ -4705,6 +4705,42 @@ with Event Detail profiles/personal preferences; retain policy edge cases,
 new-control coverage, policy-save observations and broader acceptance as open.
 The Settings evidence record names exact RED/GREEN reports and limitations.
 
+**4be.2 Operations Settings continuation, 2026-09-13:** Protect the Viewer Settings
+entry and real form handlers with a four-package directory physically omitting
+Admin. D18 specifies an Operations-owned captured modeless instance, read-only
+policy projection and personal controls using the existing Core boundary. Reuse
+must retain staging; stale context must not retarget; closing Viewer closes its
+Settings. Preserve the 145-check Admin/preference baseline, Viewer state and
+authority bytes. Surface and action RED precede implementation; activity coverage
+for the discovered controls and broader release gates remain required.
+The current candidate passes **187/187** combined Settings checks, including
+36 Operations and six actual Admin Close checks with every preceding identity
+and GREEN retained. Operations runs with four isolated packages and named Admin
+absence. Populated Viewer preservation, default/native maximize/restore and
+readable aligned-header captures pass. Five packages compile, cold start passes
+and packaged smoke is 86/86. Full-chain retry passes 31/31 with ordered live-role
+child 48/48; the initial projection-rebuild native fault remains recorded. All
+115 prior / 25 new package pins and 16 protected source pins match. Exact evidence,
+the narrower populated Viewer run's scope and prior failed harness runs are in
+the maintained Settings results. Proceed with comprehensive Events, Viewer
+profile/preference consumption, both Action Path presentations and new-control
+activity coverage; human acceptance and the full Slice 4be outcome remain open.
+
+**4be.2 discovered Admin Close blocker:** The real modal `modAdmin.Open_Settings`
+launcher reuses a hidden default instance after Close, retaining personal/policy
+staging. The earlier private-instance close tests did not prove that operator path.
+D18's lifecycle clarification requires disposal and fresh saved-state capture.
+Focused actual-launcher RED is 3 PASS / 3 FAIL: both activations and Config bytes
+pass; hidden-instance retention and both unsaved-choice checks fail. Correct the
+real Close handler only after this RED, then preserve the full Settings baseline.
+The intermittent Excel process loss at the private-form reopen is separately
+recorded; this contract defect does not by itself establish its native cause.
+The correction changes the real Close handler from Hide to Unload. Five packages
+build/compile with cold-start validation, and focused actual-launcher GREEN is
+6/6, including no hidden default instance and both choices discarded. The
+combined Settings/Operations regression now passes 187/187; this does not establish
+the cause of preceding intermittent automation-process losses or complete user acceptance.
+
 **4be.2 personal preference continuation, 2026-09-13:** Add packaged surface and
 real Save/Reload/Reset/Close tests before local persistence. D18's storage
 refinement uses current-Windows-user settings with exact invSys-user/warehouse

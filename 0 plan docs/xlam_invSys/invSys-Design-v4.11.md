@@ -448,6 +448,34 @@ may still read an authored guide, whose provenance remains visible.
   collection with a visible error, never repairs Config or suppresses required
   audit. D5's fail-closed business-write requirements remain binding.
 
+**4be.2 Operations Settings surface refinement:** Viewer has a Settings button
+that opens an Operations-owned modeless Event Tracking settings form. It shows
+the current warehouse tracking policy and its control flags read-only, required
+canonical/audit collection, the four personal choices, effective view/evidence
+status, and personal Save/Reset/Reload. It exposes no warehouse policy or detail
+profile writer. Core's signed-in serialized policy projection shares the same
+validated policy reader as the Admin editor; it adds no write permission.
+The personal read boundary may additionally return serialized policy, policy
+version and saved catalog version from that same validated read, so policy flags
+and the effective personal view cannot come from separate refreshes.
+
+The Settings instance captures the Viewer session/warehouse context. Repeated
+opens in that context reuse the instance and retain staging. A different or
+expired context cannot silently retarget it; closing/reopening establishes the
+new context. Closing Settings discards its staging; closing Viewer closes its
+Settings instance. Opening/using Settings preserves Viewer tab, search, selection
+and projection data. These discovered controls implement D18's existing role
+surface and captured-context requirements; they do not add business authority.
+
+**4be.2 Admin Close lifecycle clarification:** The existing Close-discard rule
+applies to the default Settings instance opened by `modAdmin.Open_Settings`.
+Close releases that form and its staged editors; the next actual launcher call
+constructs the current saved state and captures the current context. Hiding the
+default instance and retaining unsaved choices is not Close-discard. Tests must
+exercise repeated real launcher calls and the real Close handler, not substitute
+disposal of a test-owned private instance. This enforces the existing D18 rule
+without changing Admin authorization, save ownership or modal presentation.
+
 **4be.2 personal preference storage refinement:** The local preference uses the
 existing current-Windows-user settings mechanism (`SaveSetting`/`GetSetting`,
 HKCU), under invSys / ActionPathPreferencesV1. Its value key encodes the exact
