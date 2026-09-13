@@ -4386,6 +4386,31 @@ PowerShell parsers, 52 local Markdown targets and diff/status review pass.
 Code checkpoint `3a6f345` contains the test correction and sanitized evidence;
 runtime remains `22e14b6`.
 
+**Shipping catalog 8 D13 entry, 2026-09-12:** Continue 4be.1 under the normative
+D18 Shipping activity/source-reference clarification. Register SHIPPING_ADD,
+SHIPPING_UPDATE, SHIPPING_REMOVE, SHIPPING_HOLD, SHIPPING_RETURN, SHIPPING_STAGE
+and SHIPPING_SEND under SHIPPING_WORKFLOW/SHIP_POST. Preserve catalog versions 1-7.
+The exact outcomes distinguish local STAGED, accepted PENDING, Send processing/
+refresh CONFIRMED with unknown Domain effect, and FAILED with mixed per-source
+Submitted/Unknown facts. This inherits the approved D18 contract; it does not
+change business behavior, approve D8-A, or claim comprehensive handler coverage.
+
+Extend the existing 650-check packaged Shipping route with exact catalog/outcome
+and reference-validation checks, retaining actual handler RED. Expect missing
+catalog 8 definitions and rejection of legitimate Shipping source references.
+Implement Core catalog/reference support only after that RED; record its GREEN
+separately from remaining handler failures. Expected source changes are
+modActivityCatalog, modActivityReferences and a focused Shipping outcome module.
+Follow with owner-fact plumbing and actual handler observation, covering partial
+Update/Remove/Stage, Send processing, tracking/policy failures and role regressions.
+
+Source review also finds a ROW compatibility slot in the reachable local Shipping
+persistence writer (PersistShipmentRowsLocal -> HoldRowField). D14 forbids that
+compatibility field. Preserve the finding for a focused save/reopen identity and
+unknown-column test; do not bless it through activity registration or assume the
+existing event-payload checks cover local persistence. No persistence change is
+made by this catalog work.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |

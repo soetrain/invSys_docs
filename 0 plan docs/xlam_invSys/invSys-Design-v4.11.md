@@ -713,6 +713,72 @@ owner-fact and workbook-preservation rules, not new ControlIds, outcomes, catalo
 versions, permissions or authority stores. Shipping activity/source-reference
 definitions and remaining control coverage require their own protecting evidence.
 
+**4be.1 Shipping activity/source-reference clarification:** Under the approved
+D18 comprehensive coverage, owner-fact and exact-reference rules, catalog 8 adds
+the following Command controls, all owned by SHIPPING_WORKFLOW with existing
+SHIP_POST eligibility, SourceRole Shipping, and Surface Operations > Shipping.
+The EventCode prefix is the ControlId followed by an underscore. Catalogs 1-7
+retain their original definitions; an older saved policy cannot implicitly enable
+a newly registered control. Registration does not claim handler implementation.
+
+| ControlId | Fixed caption | Actual form handler |
+|---|---|---|
+| SHIPPING_ADD | Add | mBtnAdd_Click |
+| SHIPPING_UPDATE | Update Row | mBtnUpdate_Click |
+| SHIPPING_REMOVE | Remove | mBtnRemove_Click |
+| SHIPPING_HOLD | Send Hold | mBtnHold_Click |
+| SHIPPING_RETURN | Return | mBtnReturn_Click |
+| SHIPPING_STAGE | To Shipments | mBtnStage_Click |
+| SHIPPING_SEND | Shipments Sent | mBtnSend_Click |
+
+Each eligible real handler observes REQUESTED/Info/Unknown before validation or
+authorization, after validating its captured session/warehouse/workbook. Direct
+service calls and automatic synchronization do not impersonate user controls.
+The preceding independent context and permission constraints remain effective.
+
+- REJECTED/Warning/Unchanged requires confirmed validation rejection before any
+  staging write or submission. DENIED/Blocked/Unchanged describes authorization
+  not established before any mutation; it does not diagnose why access was
+  unavailable. Both have empty references. A later interruption after earlier
+  work instead reports FAILED/Error/Unknown with all known source references.
+- STAGED/Info/Changed is supported for Add, Update Row, Remove, Send Hold, Return
+  and To Shipments when the owner confirms workbook-local staging changed without
+  any new source submission. Its message identifies local staging only; it does
+  not prove inventory application or persistence across restart. References are
+  empty. Hold and Return always have empty references, including their failures.
+- PENDING/Notice/Unknown is supported for Add, Update Row, Remove, To Shipments
+  and Shipments Sent when the owner confirms its requested local work and every
+  new source submission was accepted, but no complete inventory application is
+  established. It requires at least one exact Submitted Inventory reference.
+  Delta-only Update and already-reserved Stage can instead be STAGED.
+- CONFIRMED/Info/Unknown is supported only for Shipments Sent when its owning
+  command additionally confirms the requested processing/read-model refresh path
+  finished. It requires at least one Submitted reference and still does not prove
+  individual source application; only owning published evidence can establish that.
+- FAILED/Error/Unknown is supported for every command when its owner reports
+  failure or an uncertain/partial result. A true generic return with a known
+  release, reservation-ledger or other required-step failure cannot be promoted
+  to a clean STAGED/PENDING/CONFIRMED outcome. Keep fixed guidance to inspect the
+  Shipping workflow before retrying; never infer rollback or parse report text.
+
+Add, Update Row, Remove, To Shipments and Shipments Sent may reference Inventory
+submissions. Retain every exact identity actually supplied by the owning submission
+boundary for this ActivityId, including pending work and a possibly submitted ID
+after an uncertain acknowledgment. Source references are per identity: a partial
+action may have both Submitted and Unknown references in its FAILED result.
+Never collapse these to one state, borrow earlier actions' IDs processed during
+catch-up, include a preallocated-but-unsubmitted identity, or manufacture an ID.
+Unknown references are allowed only with FAILED. REQUESTED, DENIED, REJECTED and
+STAGED references remain empty; PENDING/CONFIRMED require only Submitted entries.
+All existing exact four-field, matching warehouse, uniqueness, identity-text,
+size, policy and non-authority constraints remain unchanged.
+
+This is semantic inheritance within approved D18, not a change to Shipping's
+business mutations, Core authorization or Domain application. No D8-A approval
+is implied. Required tests include actual handlers, local and source-bearing
+branches, partial/mixed failures, stale/denied actions, optional tracking failure,
+older policies, and preserved accepted role/release behavior.
+
 **4be.1 Receiving navigation/selection clarification:** Catalog 6 adds the
 thirteen reserved page/selection controls in the maintained catalog, owned by
 RECEIVING_NAVIGATION with existing RECEIVE_POST eligibility. Catalogs 1-5 retain

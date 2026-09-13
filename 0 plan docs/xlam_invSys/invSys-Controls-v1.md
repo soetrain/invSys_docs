@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.94 (Shipping mutation permission constraint)
+**Version:** 1.95 (Shipping activity definitions; implementation pending)
 
 **Inventory date:** 2026-08-31
 
@@ -674,6 +674,38 @@ so this evidence does not support root reset or establish a native repair. The46
 missing-activity checks and seven pending D8-A findings remain. Runtime22e14b6,
 all50 package/eight source pins and the existing control definitions are unchanged.
 See the [owner-reference evidence](../../../invSys_fork/tests/integration/plan022_slice4be_shipping_owner_reference_results.md).
+
+### Shipping activity catalog 8: definitions registered; runtime pending
+
+Architecture v4.11 D18 defines the following Command observations on
+Operations > Shipping, OwnerId SHIPPING_WORKFLOW and existing SHIP_POST eligibility.
+EventCode prefixes are the exact ControlId followed by an underscore. Catalogs 1-7
+and their saved policies retain their definitions; an older policy does not enable
+these new controls. This table is the target contract, not packaged acceptance.
+
+| ControlId | Caption | Handler | Successful owner outcomes |
+|---|---|---|---|
+| SHIPPING_ADD | Add | mBtnAdd_Click | STAGED or PENDING |
+| SHIPPING_UPDATE | Update Row | mBtnUpdate_Click | STAGED or PENDING |
+| SHIPPING_REMOVE | Remove | mBtnRemove_Click | STAGED or PENDING |
+| SHIPPING_HOLD | Send Hold | mBtnHold_Click | STAGED |
+| SHIPPING_RETURN | Return | mBtnReturn_Click | STAGED |
+| SHIPPING_STAGE | To Shipments | mBtnStage_Click | STAGED or PENDING |
+| SHIPPING_SEND | Shipments Sent | mBtnSend_Click | PENDING or CONFIRMED |
+
+REQUESTED/Info/Unknown begins each eligible real handler. REJECTED/Warning/Unchanged
+and DENIED/Blocked/Unchanged require no preceding mutation/submission. STAGED is
+Info/Changed for local staging only, with empty references and no restart-durability
+claim. PENDING is Notice/Unknown with accepted source references; Send CONFIRMED
+is Info/Unknown for its completed processing/refresh path, still requiring separate
+published evidence of source application. FAILED/Error/Unknown retains every known
+Submitted/Unknown source after partial or uncertain work. Hold/Return never have
+source references. No raw status/error text or entered values enter observations.
+The normative clarification governs exact eligibility and owner-fact constraints.
+
+The packaged test retains all 650 previous checks and adds supplemental catalog/
+reference checks. Definitions, owner plumbing, actual handler activity and full
+release/visible acceptance must be reported separately. D8-A remains pending.
 
 ### Curated Action Path storage: NAS-only contract locked; implementation pending
 
