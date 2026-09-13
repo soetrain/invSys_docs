@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.110 (Events publication/paging test entry)
+**Version:** 1.111 (Events publication source-read correction verified)
 
 **Inventory date:** 2026-08-31
 
@@ -21,6 +21,32 @@ detail candidate records **7 PASS / 9 FAIL** through actual Viewer handlers:
 volume loading, filtered detail and source preservation pass; paging, grouped
 summary and the published-only read boundary fail. See
 [group/paging RED evidence](../../../invSys_fork/tests/integration/plan022_slice4be_event_groups_results.md).
+The public Admin Generate Inventory Snapshot command is the next publication
+test entry: D18 specifies a separate Core-owned Events JSON artifact with
+verified publication time, whole-group bounds, source coverage and integrity.
+This adds no operator mutation control and grants Viewer no publication action.
+Publication implementation and its focused GREEN remain pending.
+The public Admin command succeeds but changes canonical Inventory bytes:
+combined RED is **8 PASS / 19 FAIL**, with a **1 PASS / 10 FAIL** publication-only
+diagnostic isolating Inventory while other source hashes stay unchanged. D18
+requires Core's scoped read-only source resolver; Admin will retain its existing
+permission gate and delegate source acquisition to that reader. No source repair
+or Auth provisioning change is authorized by the publication feature.
+The scoped-reader candidate now passes **4/4** source-read checks after the
+expanded source-scope baseline proved writable/open/changed source behavior.
+Combined evidence remains **11 PASS / 18 FAIL** because publication and paging
+are pending. Five packages compile; Detail **34/34**, Refresh **16/16**,
+Settings **187/187**, Viewer and smoke **86/86** pass. Native layout and static
+ratchets hold. The public Admin caption/permission gate is unchanged; its source
+acquisition now stays read-only. Create Warehouse source integration is **15/15**
+after correcting its import dependencies and the class export format; the
+candidate XLAMs are unchanged by that harness recovery. Full-chain retry is
+**31/31** with completed live-role **48/48**; the earlier native failure remains
+recorded without an inferred cause. Full Receiving retains every prior GREEN:
+**854/854**, no missing or duplicate checks. All 165 prior + five candidate package
+pins and 16 protected source pins match with Excel closed. See the
+[publication/source-read evidence](../../../invSys_fork/tests/integration/plan022_slice4be_publication_results.md)
+for completed correction gates and remaining scope. This is not full Slice 4be acceptance.
 
 **2026-09-13, Slice 4be.3 selected-event detail:** Operations owns a read-only
 Event Detail surface with exact source-event grouping, separate repeated-key

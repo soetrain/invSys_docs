@@ -409,6 +409,45 @@ may still read an authored guide, whose provenance remains visible.
   **Stale** content; incompatible schemas fail with guidance. Missing coverage
   reads **Unavailable**, never empty success. D19 prohibits destructive retention.
 
+**4be.3 persisted Events publication refinement:** Core publishes
+`<WarehouseRuntimeRoot>\<WarehouseId>.invSys.Snapshot.Events.json` separately
+from canonical workbooks and the existing inventory-level snapshot. The ordinary
+owning snapshot/publication path creates this projection; Viewer never does.
+The existing inventory snapshot contract and unknown columns remain intact.
+An Events artifact has SchemaVersion 1, PackageSetVersion, BuildIdentity,
+WarehouseId, generated PublicationId, verified PublishedAtUTC, PolicyVersion,
+Groups, CurrentState, Coverage and ContentSha256. Its ASCII-escaped UTF-8 JSON
+and trailing ContentSha256 use the same exact-byte hash convention as activity
+records. Validate the complete candidate before atomically replacing the prior
+projection; a failed publication leaves the prior complete artifact available.
+
+Each durable Groups entry carries owning Source, exact SourceId, SourceKind,
+RecordedAt with TimeProvenance, all permitted Lines and available Outcomes.
+CurrentState is separate and cannot supply invented historical identities or
+completed outcomes. Coverage identifies each expected Inventory, Designs,
+activity and Shipping current-state source, its availability/exclusions and
+available/included/omitted group and line counts, with included time bounds.
+Unavailable owner metadata stays unavailable. The 5,000 bound applies across
+durable groups after deterministic ordering; the boundary group retains every
+contributing line. No raw authority payload or unknown user field is serialized.
+
+Core's authenticated read validates warehouse/schema/integrity and current
+visibility policy. Missing or incompatible Events publication reports unavailable
+coverage; retained content can only be shown as Stale within the same captured
+context. A supported older inventory-only envelope retains its explicit legacy
+coverage limitations and never authorizes canonical Shipping reads as a fallback.
+This storage refinement implements D18's existing publication/read separation;
+it does not accept partial source coverage or change canonical write authority.
+
+**Snapshot source-read constraint:** The existing Admin Generate Inventory
+Snapshot command delegates inventory source resolution to Core's snapshot
+orchestrator. That read resolves the existing canonical file in the captured
+warehouse/runtime, without create, schema-ensure, repair or save. A supplied or
+already-open source is borrowed unchanged; Core closes without saving only a
+read-only workbook opened by that scoped read. This corrects a discovered
+mutating-resolver path under D3/D18, without changing authentication, capability
+provisioning, canonical writer APIs or the command's existing permission gate.
+
 **Settings -- dedicated Event Tracking tab:**
 
 - Admin Settings gains **General** (existing controls) and **Event Tracking**

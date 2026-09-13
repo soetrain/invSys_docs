@@ -4843,6 +4843,49 @@ See [group/paging RED evidence](../../invSys_fork/tests/integration/plan022_slic
 The publisher's independent 5,000-group selection rule still needs its own
 owning-boundary test. No runtime implementation or new GREEN is claimed.
 
+**4be.3 persisted publication test entry:** The next test extends the grouped
+Viewer run through the public Admin Generate Inventory Snapshot command.
+D18 now names the Core-owned Events JSON artifact, complete-group/source coverage
+structure and exact-byte integrity convention. An injected read-only source
+fixture supplies the existing snapshot publisher with the 5,001 groups; no
+canonical inventory row is fabricated. Require an actual persisted artifact,
+verified publication time, exactly 5,000 complete groups, boundary detail and
+source-byte preservation. Reader-only clipping cannot satisfy this gate.
+Artifact/schema selection implements the approved publication contract under
+semantic inheritance. The current package is expected to publish only the
+inventory snapshot and fail the separate Events-artifact checks.
+The clean combined run is **8 PASS / 19 FAIL**: the 16 grouped-Viewer checks
+retain 7/9, Admin publication succeeds, nine Events-artifact assertions fail,
+and canonical-byte preservation fails. A separate publication-only diagnostic
+is **1 PASS / 10 FAIL** and identifies Inventory as the sole changed source;
+Auth/Config/Outbox/operator/source-copy hashes remain unchanged. The existing
+Admin command resolves Inventory through a create/schema/save-capable resolver.
+D18's source-read constraint governs the next correction: scoped read-only
+resolution in Core, with Admin delegating rather than pre-opening via that
+writer resolver. The pending Auth provisioning decision is not changed.
+Expanded baseline source-scope RED is **1 PASS / 12 FAIL**, proving writable
+open, retained source handle and changed Inventory bytes. The scoped Core reader
+correction is **4/4 GREEN** for Admin success/read-only/release/byte preservation;
+the complete combined run is **11 PASS / 18 FAIL**, retaining grouped 7/9 and
+all nine missing-artifact failures. Five packages compile/cold start; compiled
+comparison shows only Core snapshot/Admin delegation and the new Core class.
+Detail **34/34**, Refresh failure **16/16**, Settings **187/187**, populated
+Viewer and smoke **86/86** pass; layout/capture and static ratchets hold.
+Full-chain recovery exposed missing imports in the generated Create Warehouse
+source harness and an LF-only class export that direct VBA import treated as
+code. The 16 explicit source-harness dependency lists and class export format
+are corrected; standalone Create Warehouse is **15/15**. The packaged candidate
+is unchanged. These were harness failures, not behavioral RED or a new contract.
+A later native Excel fault remains recorded with unresolved cause. The unchanged
+retry passes full chain **31/31**, including completed ordered live-role **48/48**.
+Full Receiving passes **854/854**, retaining every prior check identity and GREEN.
+All 165 prior + five candidate package pins and 16 protected source pins match;
+Excel is closed, static/schema checks hold, and all 19 changed scripts parse.
+See [publication/source-read evidence](../../invSys_fork/tests/integration/plan022_slice4be_publication_results.md)
+for gate scope, earlier failures and final Receiving/preservation evidence.
+This source-read correction does not create the Events artifact or implement
+paging, all-source coverage or Action Paths.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |
