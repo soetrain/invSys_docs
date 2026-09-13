@@ -491,6 +491,24 @@ are excluded. Recorded dates remain zone-unverified. An unavailable result has
 zero returned rows, not a claim that the source contains zero events. This is an
 owner read for publication, not a new Viewer read path or business write command.
 
+**4be.3 Shipping current-state publication detail:** CurrentState entries name
+Source `ShippingBOM` or `ShippingHolds`, SourceKind `Current state`, and Lines.
+They do not invent SourceId/EventID, historical outcomes or observation times.
+ShippingBOM lines preserve the twenty named fields of the owning Shipping BOM
+schema, including exact PackageSystemKey, ComponentSystemKey, version fields and
+each component's own quantity/UOM. ShippingHolds lines preserve Ref, Item, Qty,
+UOM, Location, Description, Area, Carrier, ShipmentLineId, ReserveEventId and
+exact System_Key from the existing local store. The obsolete positional slot
+is neither imported nor exposed. Unknown columns are excluded, never removed
+from their source. Existing recorded timestamps remain zone-unverified.
+Coverage scope is `Warehouse` for ShippingBOM and `Station profile` for
+ShippingHolds; local holds never imply other-station or historical coverage.
+Actual Box Designer/Box Maker and Shipping Add/Hold handlers must prepare the
+protecting publication fixture. Full contributing lines and source preservation
+are asserted through the public Admin publisher, not inferred from a helper's
+empty-success result. This clarifies D18's existing current-state and owner-read
+rules; it adds no write authority or new operator action.
+
 **Settings -- dedicated Event Tracking tab:**
 
 - Admin Settings gains **General** (existing controls) and **Event Tracking**

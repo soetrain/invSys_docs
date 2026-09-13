@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.113 (Designs publication source)
+**Version:** 1.114 (Shipping publication test entry)
 
 **Inventory date:** 2026-08-31
 
@@ -10,6 +10,20 @@ Operations, Receiving, Production, or Shipping, including active controls,
 runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
+
+**Shipping publication test entry:** D18 requires current-state ShippingBOM and
+station-profile ShippingHolds evidence, retaining every permitted line and exact
+key. Actual Box Designer/Box Maker, Add and Hold handlers prepare a generated
+fixture for the public Admin publication assertion. No control, caption or
+permission changes; complete publication and human acceptance remain pending.
+The test must distinguish absent publication from failed fixture preparation and
+preserve both source bytes and every prior publication check.
+Packaged diagnostic RED is **26 PASS / 21 FAIL**, no harness failure; all previous
+36 check identities/21 GREEN remain. Actual two-component Boxing, Add/Hold and
+durable owner-event fixture checks pass. The inspected held-line capture retains
+pending sync; it cannot prove a completed shipment or Action Path conclusion.
+All 175 package pins/16 protected source pins match and Excel is closed. See
+[Shipping publication RED](../../../invSys_fork/tests/integration/plan022_slice4be_shipping_publication_red.md).
 
 **Slice 4be.3 publication/paging, test entry:** D18's approved complete-group,
 published-only read and 100-record page rules govern the next focused packaged

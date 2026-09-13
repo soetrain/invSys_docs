@@ -4920,6 +4920,28 @@ prerequisite to actual all-source publication, not completion of the Admin
 publisher or authorization of a Viewer authority fallback. See
 [Designs source evidence](../../invSys_fork/tests/integration/plan022_slice4be_designs_publication_source_results.md).
 
+**4be.3 Shipping publication test extension:** D18 now names the permitted
+Shipping current-state line fields and explicit Warehouse/Station profile scope.
+Prepare two BOM components and a held shipment through actual packaged Box
+Designer, Box Maker, Add and Hold handlers in an Admin-generated seeded fixture.
+Extend the public Admin publication test to require every exact component/package
+key and held-line reference, truthful current-state classification and coverage,
+and unchanged canonical/local-source bytes. Preserve the controlled 5,001-group
+source before the owning fixture actions publish their inventory snapshots.
+Reconcile Activity counts with the actual records those handlers create. Expected
+RED remains the missing Events artifact; fixture or harness failure is not RED.
+No runtime implementation or comprehensive publication GREEN is claimed here.
+The expanded unchanged-package diagnostic is now **26 PASS / 21 FAIL**, with no
+harness failure. All 36 previous check identities and 21 GREEN are preserved;
+the four real-owner fixture checks and local-source preservation pass. Six new
+Shipping artifact assertions fail alongside the previous fifteen missing-artifact
+checks. Four earlier harness failures are retained separately. The held-line
+capture is inspected and still shows pending sync, not a completed shipment.
+All 175 package pins and 16 protected source pins match with Excel closed. See
+[Shipping publication RED](../../invSys_fork/tests/integration/plan022_slice4be_shipping_publication_red.md).
+The Core-owned publisher, declared Shipping owner read, combined Viewer gates
+and complete Release 1 acceptance remain required.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |
