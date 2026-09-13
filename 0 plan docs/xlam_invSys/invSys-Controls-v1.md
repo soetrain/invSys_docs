@@ -617,6 +617,30 @@ package/eight current source pins match, static/source checks pass and Excel is
 closed. These gates do not claim native stability, human layout acceptance or
 complete Shipping activity/Settings/Viewer/Action Path coverage.
 
+Supplemental access tests now exercise permission revocation at Add/To Shipments/
+Shipments Sent's existing UI yield and unavailable Auth/Config for all seven
+mutation handlers. They retain all435 checks/389 GREENs and protect the exact fixed
+access notice, no owner dispatch, no silent authority recreation, and file/staging
+preservation. This is evidence work under existing D18/D5; results are pending,
+with no new control, runtime behavior or architectural contract.
+
+The first missing-Auth probe rejects Shipping mutation but recreates the Auth
+file. The blanket no-recreation expectation is not yet an approved Auth contract:
+D5 governs Config reads, while the normative Phase 6 auto-bootstrap entry includes
+Auth. Architecture v4.11's **pending D8-A** proposal would separate ordinary Auth
+reads from explicit authorized provisioning. It is awaiting user approval and
+does not change controls, permissions, wording or runtime acceptance. The test
+helper preserves unexpected generated-fixture files and restores the originals;
+its earlier incomplete run remains evidence, not full matrix acceptance.
+
+The corrected unchanged-package matrix completes505 PASS/53 FAIL across558 checks,
+retaining all435 prior identities/389 GREENs. All123 additions run:116 pass; the
+seven missing-Auth creation findings await the explicit D8-A decision. Each such
+action rejects mutation, all actual-yield revocations and missing-Config cases
+pass, and the46 missing-activity failures remain. See
+[access-interruption evidence](../../../invSys_fork/tests/integration/plan022_slice4be_shipping_access_results.md).
+No control, visible wording, runtime contract or broad acceptance status changed.
+
 ### Curated Action Path storage: NAS-only contract locked; implementation pending
 
 Action Paths will be stored only under the selected warehouse NAS runtime root:

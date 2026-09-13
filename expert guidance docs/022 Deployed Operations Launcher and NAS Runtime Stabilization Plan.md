@@ -4232,6 +4232,55 @@ Code checkpoint **22e14b6** is committed and pushed after normative0cc61c9.
 It is the focused permission repair with the candidate evidence above, not a
 native-crash fix or full Shipping activity acceptance.
 
+**Shipping access-interruption test entry, 2026-09-12:** Continue4be.1 against
+unchanged22e14b6 packages under D18's permission/yield and D5 fail-closed rules.
+`Slice4beShippingAccessInterruptions.ps1` revokes the generated fixture's SHIP_POST
+at the actual Add/To Shipments/Shipments Sent pending-status yield, without replacing
+Core authorization. Separate cases temporarily move the fixture Auth or Config
+file aside before each of the seven mutation handlers. Require denied/unavailable
+Core permission with the same signed-in session, no mutation-owner entry, exact
+fixed access notice, no recreated authority file, and preserved staging/keys/
+unknown values/canonical bytes/unrelated workbook. Restore fixture files and verify
+their bytes. Calibrated owner probes protect dispatch; they do not establish
+completed business outcomes. All435 prior checks/389 GREENs remain required.
+This adds protecting tests under the existing approved contract; conforming cases
+may pass without a runtime edit. Any behavioral failure must be distinguished from
+instrumentation or fixture failure before proposing a repair.
+
+**Auth creation discovery / pending D8-A decision:** The first interruption run
+passes the three actual-yield revocations and rejects Shipping's first missing-Auth
+mutation, but recreates Auth during its ordinary permission read. Cleanup then
+stops rather than overwriting that unexpected file; subsequent sign-in masks the
+cleanup exception. Preserve that incomplete run. The helper now preserves each
+unexpected fixture file under a unique sibling name, restores the original, and
+does not retry sign-in after an incomplete helper. This permits the remaining
+unchanged-package cases to run without suppressing the creation observation.
+
+The test entry's blanket no-recreation expectation was too broad to cite D5 for
+Auth: D5 explicitly governs Config, while the normative Phase 6 auto-bootstrap
+entry includes Auth. Auth creation is an observed behavior and proposed D8-A RED,
+not an already-approved Auth read-contract breach. Architecture v4.11 now contains
+the concrete **pending D8-A Auth read/provisioning separation** proposal. It would
+restrict ordinary reads to existing exact-target Auth, with no creation/repair,
+and retain explicit authorized setup. Approval must precede any conflicting Core
+implementation. This discovered decision does not narrow remaining 4be coverage.
+
+The corrected unchanged-package run completes **505 PASS/53 FAIL across558
+checks**: all435 previous identities/389 GREENs remain, with no duplicates or
+unexpected failures. All123 additions execute:116 PASS and seven Auth no-creation
+findings awaiting the D8-A decision. Each missing-Auth handler stops mutation;
+all actual-yield revocations and missing-Config cases pass. All files are restored
+with matching protected bytes, and the existing actual workbook-close checks pass.
+The46 missing-activity failures remain. Fifty package/eight source pins match;
+Excel is closed and focused/static sessions are terminal. Regenerated static
+metrics and28 preceding module limits hold. See [access-interruption evidence](../../invSys_fork/tests/integration/plan022_slice4be_shipping_access_results.md)
+for exact runs, the retained cleanup failure and the distinction between current
+permission GREEN and proposed Auth-contract RED. No runtime or broad-gate change
+is claimed; approval of D8-A remains pending while submission/activity work remains.
+Code checkpoint **5322f9f** is committed and pushed. It contains the test-only
+extension and sanitized evidence; runtime remains22e14b6. D8-A is still a proposal,
+not an effective architecture change or an authorized Core implementation.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |

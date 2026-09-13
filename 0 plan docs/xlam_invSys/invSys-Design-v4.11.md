@@ -1270,6 +1270,35 @@ Action Path replacement proposal.
 - Capability cache uses TTL; if cache expires and cannot refresh, write operations fail closed.
 - If TTL expires mid-processor-run, finish current run with current cache and refresh before next run.
 
+**Proposed D8-A -- Auth read/provisioning separation (pending user approval):**
+This proposal is not an operative runtime contract. The Shipping access-interruption
+test found that an ordinary permission check recreates a missing Auth workbook
+through `modAuth.LoadAuth` -> `ResolveAuthWorkbook` ->
+`modRuntimeWorkbooks.OpenOrCreateAuthWorkbookRuntime`. Shipping rejects the new
+mutation, but the permission read also creates authority. D5's explicit read-only
+rule governs Config, not Auth; the Phase 6 checked acceptance entry for Config/Auth
+auto-bootstrap does not distinguish ordinary reads from explicit provisioning.
+Removing ordinary Auth bootstrap therefore requires this explicit decision rather
+than a Plan-only inference or treating the new test expectation as authority.
+
+If approved, ordinary Auth Load/Reload, sign-in reads and capability refreshes will
+open and validate only the existing Auth workbook belonging to the selected trusted
+warehouse. They will not create directories/workbooks, seed users or capabilities,
+repair schema, format, dirty or save Auth authority. A missing, unreadable or invalid
+Auth source will fail the attempted read/refresh closed; it will not fall back to
+another warehouse or an arbitrary open lookalike. Existing D8 cache/processor-run
+rules remain unchanged. Explicit Admin Generate Warehouse/Create Warehouse and
+authorized station provisioning retain their separate creation/setup paths.
+The Phase 6 auto-bootstrap entry will then be narrowed to those explicit setup
+paths; this proposal does not authorize recovery of lost credentials or inventory.
+
+D13 must first prove the ordinary packaged caller's creation/repair failure,
+then protect missing/invalid/unreadable Auth, exact target selection, unchanged
+healthy bytes and unknown columns, denied mutation, explicit provisioning and
+existing sign-in/capability/processor behavior. Shipping's stopped-owner probes
+alone cannot establish that broader Core acceptance. No implementation of D8-A
+is authorized until this pending proposal is approved and recorded as effective.
+
 ---
 ### D9 -- Operator Read Models and Refresh Contract (R1 Locked)
 **Decision:** Operator-facing inventory tables are read models refreshed from published or local warehouse snapshots. They are not authoritative write targets.
