@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.92 (Shipping mutation-context matrix and explicit launcher recovery contract)
+**Version:** 1.93 (Shipping automatic-sync captured-context constraint)
 
 **Inventory date:** 2026-08-31
 
@@ -530,6 +530,15 @@ unresolved. Broader context/activity coverage and human acceptance remain open;
 see [context evidence](../../../invSys_fork/tests/integration/plan022_slice4be_shipping_context_results.md).
 
 ### Curated Action Path storage: NAS-only contract locked; implementation pending
+
+Shipping's registered automatic-sync callback must independently validate the
+captured session/workbook before sync or overlay maintenance and stop rescheduling
+with the same context notice when stale. Healthy pending scheduling remains;
+internal dispatch is not a user-control event. This inherits D18, adding no control
+or permission. Unchanged-package interruption tests record319 PASS /49 FAIL:
+all18 real pending-yield checks pass, while signed-out timer owner rejection,
+rescheduling rejection and its notice fail. The other46 failures remain missing
+activity. Repair and packaged GREEN are pending; see the context evidence above.
 
 Action Paths will be stored only under the selected warehouse NAS runtime root:
 `<WarehouseRuntimeRoot>\Training\ActionPaths\<WarehouseId>`. This is a

@@ -4076,6 +4076,25 @@ context candidate, not Slice4be completion or native/human acceptance. Continue
 the remaining context/owner-outcome tests and activity contract implementation
 without dropping the preserved GREEN assertions.
 
+**Shipping interruption/timer D13 entry, 2026-09-12:** The unchanged pinned
+context candidate records **319 PASS / 49 FAIL**. All18 checks interrupting Add,
+To Shipments and Shipments Sent at their real pending-status UI yield pass.
+Healthy timer dispatch reaches its calibrated owner and reschedules pending work;
+after actual sign-out, the registered timer incorrectly reaches that owner,
+reschedules and omits the context notice (three new behavioral failures).
+The other46 failures remain missing Shipping activity. Stopped-owner probes prove
+dispatch boundaries, not completed synchronization or business effects.
+
+D18's Shipping clarification now explicitly requires the registered timer to check
+captured context before sync/overlay maintenance and stop rescheduling when stale,
+even before a click rejects that form. Healthy scheduling remains; internal timer
+dispatch creates no user-control activity. This inherits the approved context and
+observation rules without a new permission or catalog version. Repair is confined
+to `frmShipmentsTally`; removing its timing-start pass-through retains the existing
+typed timer and eight packaged timing checks while preserving the module limit.
+`Slice4beShippingInterruptions.ps1` protects the real callback and UI-yield paths.
+Focused GREEN and candidate gates remain pending.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |

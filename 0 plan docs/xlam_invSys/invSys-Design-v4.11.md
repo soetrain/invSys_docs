@@ -681,6 +681,12 @@ and held staging, exact keys and unknown columns. It does not silently rebind or
 revive the old instance. Repeated launch within the same valid context retains
 the accepted form/workbook reuse; ordinary Close behavior remains unchanged.
 
+The registered automatic-sync callback enforces the same captured-context check
+before synchronization or overlay maintenance, even if no user command has yet
+rejected the stale form. Rejection shows the same context notice and exits without
+scheduling another callback. Healthy pending synchronization retains its existing
+owner and scheduling behavior. This internal callback is not a user-control event.
+
 These are implementation constraints inherited from approved D18's context,
 owner-fact and workbook-preservation rules, not new ControlIds, outcomes, catalog
 versions, permissions or authority stores. Shipping activity/source-reference
