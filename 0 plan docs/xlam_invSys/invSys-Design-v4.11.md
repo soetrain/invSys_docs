@@ -389,6 +389,18 @@ may still read an authored guide, whose provenance remains visible.
   dates, with visible limits and matching/available counts. Saved sequence
   evidence can be read from its training record beyond this publication window;
   missing canonical history cannot be fetched by Viewer.
+- **4be.3 paging-control refinement:** Operations Events exposes **Previous**,
+  **Next** and a page/matching-record count (`btnEventsPrevious`,
+  `btnEventsNext`, `lblEventPage`). A record is one complete source/ID group;
+  selecting it preserves every contributing detail line. Paging and Search use
+  the loaded projection only, validate the captured context and never publish
+  or read authority. Search starts at the first matching page; navigation is
+  disabled at the corresponding boundary. Multiple contributing values are
+  identified as multiple in summary columns rather than silently presenting
+  one line's quantity or combining unlike units. ListBox export continues to
+  export the currently displayed headings and values. These controls implement
+  the existing 100-record paging contract; all-source publication/coverage and
+  the 5,000-complete-group publication bound remain independently required.
 - Display yyyy-mm-dd hh:mm:ss with verified zone/offset where known. Existing
   UTC-named fields containing local Now are not proof of UTC: label them
   **Recorded time (zone unavailable)** and explain approximate cross-source

@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.109 (Selected Event Detail checkpoint)
+**Version:** 1.110 (Events publication/paging test entry)
 
 **Inventory date:** 2026-08-31
 
@@ -10,6 +10,17 @@ Operations, Receiving, Production, or Shipping, including active controls,
 runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
+
+**Slice 4be.3 publication/paging, test entry:** D18's approved complete-group,
+published-only read and 100-record page rules govern the next focused packaged
+test. Previous/Next and page/matching counts are discovered controls, currently
+pending. Search/page changes use loaded evidence, and grouped summaries retain
+all contributing detail without combining unlike units. No implementation GREEN
+or complete-publication acceptance is claimed by this entry. The unchanged
+detail candidate records **7 PASS / 9 FAIL** through actual Viewer handlers:
+volume loading, filtered detail and source preservation pass; paging, grouped
+summary and the published-only read boundary fail. See
+[group/paging RED evidence](../../../invSys_fork/tests/integration/plan022_slice4be_event_groups_results.md).
 
 **2026-09-13, Slice 4be.3 selected-event detail:** Operations owns a read-only
 Event Detail surface with exact source-event grouping, separate repeated-key
@@ -2210,6 +2221,8 @@ calculated column geometry and remain readable/aligned during resize.
 | `lblTitle` | Label — **Current inventory levels** | Identifies the read-only overview. |
 | `btnRefresh` | Button — **Refresh** | Reads the current published inventory snapshot or Events projection; it does not process or alter authority workbooks. |
 | `btnSettings` | Button — **Settings** | Opens or reuses Operations Event Tracking Settings in the Viewer's captured session/warehouse context. Preserves the selected Viewer tab, search, selection and loaded projection. |
+| `btnEventsPrevious`, `btnEventsNext` | Buttons — **Previous**, **Next**; pending | Navigate 100 matching source-event groups per page using the loaded projection. Disabled at their respective boundaries; captured-context validation remains required. |
+| `lblEventPage` | Page / matching-record count; pending | Identifies the current page and matching group count. Coverage/publication limits remain separately visible; no line count is substituted for a complete-group count. |
 | `lblSearch`, `txtSearch` | Label and text box — **Search** | Filters the already loaded rows locally across all visible columns. |
 | `lblHeaders` | Header label | Inventory identifies Item Code, Item, UOM, Quantity, Location, and Condition. Events identifies Date, Event, Reference, Item, Qty, UOM, Location, Condition, User, and Details. |
 | `lstInventory` | Six- or ten-column list box | Inventory displays active managed levels aggregated by item code, item, UOM, location, and condition, including active zero-quantity items created before stock arrives or is produced; retired items remain omitted. Events currently displays Receipts, Returns, Dumps, Box Made/Unboxed, Shipped, **Remove** (the `SHIP_RELEASE` action that returns locked inventory to warehouse availability), **Inventory Adjustment** (including audited Admin item retirement), current Box Designs, and current Held Shipments. Slice 4x adds Production Input Consumed and Production Output Created after packaged GREEN. Both views are read-only. |

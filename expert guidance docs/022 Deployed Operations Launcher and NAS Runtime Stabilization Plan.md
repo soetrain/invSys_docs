@@ -4824,6 +4824,25 @@ for exact gate scope and earlier setup failures. Complete publication, source
 coverage, activity on new controls, recorded conclusions, both Action Path
 presentations and human acceptance remain required.
 
+**4be.3 publication and paging D13 entry:** Following code `e66ab6f` / docs
+`cd139fb`, protect the remaining D18 published-only read and 100-record page
+contracts. Use an Admin-generated disposable snapshot with 5,001 source groups,
+out-of-order storage, and repeated-key/unlike-unit lines in the page-boundary
+group. Actual Viewer Refresh, Search, selection and Previous/Next handlers must
+expose deterministic grouped pages, retain every detail line, and avoid Shipping
+authority reads. Architecture records the discovered paging controls before
+implementation. This test entry does not accept missing all-source publication,
+coverage metadata, the publisher's independent 5,000-group bound or Action Paths.
+Expected RED: the current unbounded line list, absent page controls/counts and
+Shipping canonical read on successful Refresh. Focused packaged RED on the
+unchanged detail candidate is **7 PASS / 9 FAIL**. The fixture loads, filtered
+detail retains every exact-key line, and source bytes remain unchanged; paging,
+group summaries and exclusion of the Shipping authority-read boundary fail.
+The inspected 5,003-line capture confirms unbounded reverse-storage display.
+See [group/paging RED evidence](../../invSys_fork/tests/integration/plan022_slice4be_event_groups_results.md).
+The publisher's independent 5,000-group selection rule still needs its own
+owning-boundary test. No runtime implementation or new GREEN is claimed.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |
