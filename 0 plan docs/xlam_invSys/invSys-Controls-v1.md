@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.108 (Events Refresh failure checkpoint)
+**Version:** 1.109 (Selected Event Detail checkpoint)
 
 **Inventory date:** 2026-08-31
 
@@ -10,6 +10,23 @@ Operations, Receiving, Production, or Shipping, including active controls,
 runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
+
+**2026-09-13, Slice 4be.3 selected-event detail:** Operations owns a read-only
+Event Detail surface with exact source-event grouping, separate repeated-key
+lines and cached profile rendering. The final packaged focused suite is
+**34/34 GREEN**, including context loss during line selection and resize;
+Refresh-failure regression is **16/16**. Five packages compile/cold start.
+Settings retains **187/187**, populated Viewer passes, packaged smoke is
+**86/86**, and full chain is **31/31** with ordered live-role child **48/48**.
+Native layout and inspected captures pass; static ratchets hold with no
+unexpected compiled-code changes. Automated evidence is not human acceptance.
+All 150 prior / 15 candidate package pins and 16 protected source pins match;
+Excel is closed and accepted deployment/NAS remain untouched.
+Missing legacy metadata remains Unavailable, and profile changes apply only on
+explicit Refresh. See the maintained
+[Event Detail evidence](../../../invSys_fork/tests/integration/plan022_slice4be_event_detail_results.md)
+for RED history and exact gate scope. Comprehensive publication, activity on the
+new controls, Action Paths and human acceptance remain open.
 
 **2026-09-13, Slice 4be.3, Events Refresh failure:** Existing D18 requires
 Unavailable coverage and retained Stale content within the captured context.
@@ -2229,6 +2246,34 @@ Default/minimum size is 744 × 640 points; the policy list grows with the form,
 personal controls remain below it, and Close remains at the lower right. Packaged
 geometry/capture and context/role evidence are tracked in the Settings results.
 Activity coverage of these discovered controls remains pending under D18.
+
+### 6.3 `frmEventDetail` — Selected event and contributing lines
+
+Entry: select a line in Viewer > **Events**. The Operations-owned modeless form
+reuses its captured instance and closes with Viewer. It groups the loaded lines
+by exact owning source/EventID within the captured warehouse. Filtering the main
+list does not discard contributing detail. Repeated System_Key values remain
+separate lines; quantities and unlike units are never combined. Legacy blank
+identities remain Unavailable and are not grouped together.
+
+| Control | Display / purpose |
+|---|---|
+| `lblDetailProfile` | Loaded profile version and built-in/default/read status. |
+| `lblDetailLines` | **Contributing lines - select an exact inventory identity to inspect its fields**. |
+| `lstEventLines` | Every contributing line's exact System_Key, retaining repeats. Selection inspects cached fields without another projection/profile read. |
+| `lblDetailFields` | **Permitted event and selected-line fields**. |
+| `lstEventFields` | Locked caption/value list following the saved profile's enabled fields and order. Required identity, source, time provenance, coverage, uncertainty and guidance remain visible. Raw Note and unknown user columns are excluded. |
+| `lblDetailStatus` | Read-only line count or fixed context-loss guidance; field freshness identifies retained Stale data after failed Refresh. |
+| `btnClose` | **Close** releases the detail instance without changing source workbooks. |
+
+Default/minimum size is 820 × 640 points. The line selector stretches horizontally;
+the field list grows with the form and Close stays at the lower right. Packaged
+default/larger/restore and native maximize/restore geometry pass. Context loss
+clears retained detail on selection or layout; repeated invalidation is safe.
+The current-state Box Design/Held Shipment supplements explicitly retain their
+current-state classification and unavailable historical identity/outcome fields.
+These discovered controls still require D18 activity-catalog instrumentation.
+Automated captures are not human acceptance or proof of complete publication.
 
 ## 7. Receiving forms
 

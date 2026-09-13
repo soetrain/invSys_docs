@@ -4802,6 +4802,28 @@ Shipping supplements still need migration to owning publication boundaries;
 complete event groups/detail, source coverage, paging, profiles, recording,
 guides/comparison and human UAT remain open.
 
+**2026-09-13, 4be.3 selected-event detail checkpoint:** D18's selected-event/
+read-envelope refinement was recorded before implementation. Initial actual
+Viewer selection RED is 2 PASS / 5 FAIL; current-state classification expansion
+is 29 PASS / 2 FAIL, and resize-after-sign-out expansion is 32 PASS / 2 FAIL.
+The corrected `validation-viewer-detail-context` candidate passes **34/34**,
+preserving repeated exact keys, multiple entities and unlike UOMs without
+aggregation. Core preserves permitted fields from the same projection read;
+Operations owns the reused detail surface and profile-version cache. Five
+packages compile/cold start; Refresh-failure regression is **16/16**.
+Settings retains **187/187**, populated Viewer passes, packaged smoke is
+**86/86**, and full chain is **31/31** with its ordered live-role child **48/48**.
+Native/default layout and inspected captures pass. Static ratchets hold and
+compiled source review finds no unexpected changes.
+All 150 prior / 15 candidate package pins and 16 protected source pins match;
+Excel is closed. Accepted deployment and NAS remain untouched.
+No missing historical identity, publication time or completed outcome is invented.
+Raw Note/unknown columns remain excluded and selection performs no source read.
+See [Event Detail evidence](../../invSys_fork/tests/integration/plan022_slice4be_event_detail_results.md)
+for exact gate scope and earlier setup failures. Complete publication, source
+coverage, activity on new controls, recorded conclusions, both Action Path
+presentations and human acceptance remain required.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |

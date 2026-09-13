@@ -938,6 +938,42 @@ warehouse write. These UI/schema choices implement and constrain the existing
 D18 display contract under semantic inheritance; they grant no access or
 collection capability and do not claim completed implementation or acceptance.
 
+**4be.3 selected-event detail refinement:** The Operations-owned Event Detail
+surface renders the selected source event and all of its contributing lines
+from the same loaded projection. Matching uses the captured warehouse, owning
+source and exact EventID; repeated System_Key values remain separate detail
+lines. A transient list selection position is not an event or inventory identity.
+The detail surface is read-only, reuses its owned instance, and closes with Viewer.
+Its actions validate the captured context before rendering retained content.
+
+The existing Core string read envelope may carry a `DETAIL1` marker after its
+four compatibility header fields, followed by verified load UTC. Its ten visible
+fields retain their declared order; permitted Inventory line fields appended
+to that same response are exact EventID, exact System_Key, source EventType,
+item code, station, recorded occurred time, recorded applied time and the
+owning source `Inventory`. UOM comes only from an explicit published UOM field
+or the published line's existing UOM token. No current inventory lookup supplies
+historical values. Raw Note and unknown columns are not ordinary detail fields.
+This is a read-envelope refinement, not a canonical or snapshot-table schema
+change. It does not create business events or infer completed outcomes.
+
+An older supported envelope or current-state supplement without these source
+fields has unavailable identities/detail metadata; do not group unrelated blank
+IDs or invent identities. Unsupported markers fail with guidance. Legacy
+publication time/coverage and unavailable owner outcome fields remain labelled
+Unavailable; source UTC-named timestamps remain zone unavailable. The complete
+publisher/coverage and source-outcome requirements above remain binding.
+
+Core exposes the same validated detail-profile reader to a captured signed-in
+Viewer without ADMIN_MAINT. Read access grants no profile write capability.
+Viewer captures that profile on successful explicit Refresh, retaining the prior
+profile and data on failed Refresh. Selection renders the cached version only.
+Profile failure uses the already specified labelled safe default; invalid context
+returns no retained content. The detail field list follows the profile's enabled
+fields/order and fixed catalog captions; its line selector preserves every exact
+key and never combines quantities. These details constrain existing D18 under
+semantic inheritance and do not accept incomplete coverage or Action Paths.
+
 **One Action Path, two useful presentations:**
 
 - **How-To** selects tracked events/actions in intended order, adds a name,
