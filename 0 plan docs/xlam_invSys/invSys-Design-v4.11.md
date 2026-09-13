@@ -866,6 +866,34 @@ surveillance, command replay or new selection-driven business write is added.
   and uses the same safe default without repairs. Raw payloads, arbitrary user
   columns, paths, secrets and security internals are never selectable fields.
 
+**4be.2 profile schema/editor refinement:** The Admin editor presents Tracking,
+Event Detail and Action Paths as section tabs within Settings > Event Tracking;
+General remains separate. Profile metadata uses `tblEventDetailProfiles` and
+field rows use `tblEventDetailFields`, with the header/row fields specified
+above. A version is one complete display-profile snapshot across its registered
+families. Both tables absent means labelled built-in defaults, version 0;
+persisted versions start at 1. A partial pair or invalid latest version is an
+error, with the safe display default and no repair or fallback to older data.
+SchemaVersion 1 registers Receiving, Shipping, Boxing, Production, Inventory,
+Designs, Admin, Session and Viewer as display families. Family membership is a
+display classification; existing source identities and workflow ownership stay
+binding. Each family has one row per registered field and a unique integer
+DisplayOrder permutation from 1 through its field count. The serialized command
+has SchemaVersion and Fields, with expected ProfileVersion supplied separately.
+
+`modEventDetailCatalog` maps the allowlist above to fixed display FieldIds,
+captions, required/default-enabled flags and synthetic preview examples. It
+keeps source identity, exact System_Key, action/outcome, source/warehouse, time
+provenance, coverage/freshness and safety explanation/context required. Severity,
+data-effect uncertainty, owning operation, explanation and advisory next step
+remain visible for every severity, preserving the mandatory severe-finding
+minimum. Required fields cannot be disabled. Optional field values still come
+only from permitted source evidence, with unavailable values labelled explicitly.
+Preview uses fixed synthetic examples, and section/field selection stages no
+warehouse write. These UI/schema choices implement and constrain the existing
+D18 display contract under semantic inheritance; they grant no access or
+collection capability and do not claim completed implementation or acceptance.
+
 **One Action Path, two useful presentations:**
 
 - **How-To** selects tracked events/actions in intended order, adds a name,

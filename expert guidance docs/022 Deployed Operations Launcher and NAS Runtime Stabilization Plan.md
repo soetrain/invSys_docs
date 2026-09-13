@@ -4705,6 +4705,30 @@ with Event Detail profiles/personal preferences; retain policy edge cases,
 new-control coverage, policy-save observations and broader acceptance as open.
 The Settings evidence record names exact RED/GREEN reports and limitations.
 
+**4be.2 Event Detail profile work, 2026-09-13:** Settings keeps General/Event
+Tracking and introduces the approved Tracking/Event Detail/Action Paths sections
+as nested tabs. D18's schema/editor refinement names the complete display profile,
+tables, registered families and required context. Admin owns field selection,
+enablement/order and synthetic preview; Core owns profile reads/version saves.
+The actual-form surface RED is 72 checks: 64 PASS / 8 FAIL. The staged editor and
+real no-write Save action give a clean 97-check RED: 94 PASS / 3 FAIL, including
+failure to publish a profile version. The first writer exposed a reload defect:
+Excel numeric DisplayOrder requires validated Long conversion before the strict
+integer JSON encoder. The corrected candidate completes 107 checks: 105 PASS /
+2 FAIL, with all 42 profile checks and every prior GREEN retained. Remaining
+failures concern the unfinished personal Settings workflow. All five packages
+compile, cold start passes, smoke is 86/86 and the version-2 editor capture was
+inspected. Static dynamic-call/duplicate counts and oversized-module limits hold.
+Full Receiving passes 854/854, retaining all prior checks and GREENs; all 90
+prior package pins and 16 protected source pins match. Read-only package-code
+review resolves 20 otherwise unexpected raw hashes as casing-only changes with
+identical string literals, alongside the three intended edits/eight additions.
+One native Excel build failure left a partial read-fix candidate; preserve it as
+failed setup evidence, never a release. Exact reports and the earlier transient
+General harness failure are in the Settings evidence record. This work implements
+and constrains existing D18 under semantic inheritance; it does not grant new
+collection/access rights or complete Viewer, preferences or comprehensive activity.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |
