@@ -507,12 +507,27 @@ form before owner entry under the existing D18 rule.
 D18 now explicitly constrains all seven Shipping mutation controls to reject an
 invalid captured session before owner entry, including after a UI yield, with
 **Session or warehouse changed. Reopen Shipping before continuing.** A lost
-workbook has its own unavailable-workbook notice. Rejection stops automatic sync.
+workbook shows **The captured Shipping operator workbook is no longer available.
+Reopen Shipping.** Rejection stops automatic sync.
 Explicit authorized relaunch replaces the stale form on its eligible captured
 workbook and preserves active/held staging and unknown columns; repeated valid
 launch still reuses the same form. Ordinary Close remains unchanged. This inherits
 approved D18; implementation and packaged GREEN remain pending. The dedicated
 matrix uses stopped-owner probes alongside the preserved real-owner sequence.
+
+The isolated candidate now passes all46 previously failing context/relaunch
+assertions:292 PASS / 46 FAIL overall, retaining all prior GREEN checks. The
+remaining46 failures concern missing activity; the suite remains failing overall.
+All seven mutation controls reject the tested signed-out, reauthenticated and
+changed-target contexts; explicit launch replaces the stale form while preserving
+workbook staging and subsequent valid reuse. Five-package build/compile/cold-start,
+smoke86/86, live-role48/48, full-chain30/30, Viewer, public launchers3/3, Shipping
+layout1/1 and full reusable Production/restart2/2 pass. The visible rerun retains
+292/46 and shows the session notice legibly. Main Shipping key-editor/button and
+adjacent-header crowding needs baseline comparison; no layout code changed here.
+An Excel c0000005/combase.dll fault during the passing full-chain window remains
+unresolved. Broader context/activity coverage and human acceptance remain open;
+see [context evidence](../../../invSys_fork/tests/integration/plan022_slice4be_shipping_context_results.md).
 
 ### Curated Action Path storage: NAS-only contract locked; implementation pending
 

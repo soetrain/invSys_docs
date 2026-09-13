@@ -4049,6 +4049,33 @@ of five for a two-unit Add (136 PASS / 50 FAIL including one harness failure);
 correcting that threshold yields the meaningful calibrated RED. Explicit launcher
 recovery coverage is being established separately before implementation.
 
+**Shipping context candidate, 2026-09-12:** The explicit-relaunch extension is
+246 PASS / 92 FAIL on the unchanged packages. After normative clarification
+**089ab0d**, the candidate passes all46 formerly failing guard/relaunch assertions:
+292 PASS / 46 FAIL overall, with only missing Shipping activity remaining and
+every prior GREEN retained. The full suite still exits1; this is focused context
+GREEN, not activity acceptance. [Context evidence](../../invSys_fork/tests/integration/plan022_slice4be_shipping_context_results.md)
+records exact tests, source changes and remaining gates. Both large Shipping
+modules shrink; the bounded context/lifetime module and timing class add73 net
+runtime lines. All28 size limits hold;8 literal/45 unresolved dynamic calls and195
+duplicate-body candidates are unchanged. Five-package build, all five compiles,
+Operations cold-start, packaged smoke86/86, live-role48/48, ordered full-chain30/30,
+Viewer, combined launchers3/3 and Shipping layout1/1 pass. Full-chain business
+success coexists with an Excel c0000005/combase.dll fault during its time window;
+native stability remains unresolved. Full reusable Production/restart passes2/2;
+the visible rerun retains292/46 with no other failure or lost GREEN. The inspected
+session notice is legible; crowding near the main Shipping key editor/Add button
+and adjacent headers requires baseline comparison before human layout acceptance.
+All tests are terminal and Excel is closed;35 package/eight source pins match.
+These results apply to the same isolated
+`deploy/validation-shipping-context-guard` candidate. Accepted deployment/NAS are
+untouched. Capability-loss, during-yield/closed-workbook/automatic-sync probes and comprehensive
+activity/Settings/Viewer/Action Path acceptance remain open.
+Code checkpoint **84a023a** is committed and pushed. This is the tested Shipping
+context candidate, not Slice4be completion or native/human acceptance. Continue
+the remaining context/owner-outcome tests and activity contract implementation
+without dropping the preserved GREEN assertions.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |
