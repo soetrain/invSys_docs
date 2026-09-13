@@ -4632,6 +4632,20 @@ counts and all28 module limits remain; all three report schemas pass. Separate
 native failures, D8-A approval and comprehensive Slice4be acceptance remain open.
 See [native-target evidence](../../invSys_fork/tests/integration/plan022_slice4be_receiving_native_target_results.md).
 
+**4be.2 Settings surface RED, 2026-09-13:** Code `893f5e0` is committed and pushed.
+Product-facing Settings work is now
+active alongside the remaining 4be.1 coverage. The separate packaged D5 route
+with `-CheckTrackingSettings` completes 26 checks: 21 PASS / 5 FAIL, retaining every
+18/18 prior D5 identity and GREEN. The actual initialized/shown form lacks the
+approved tabs, three tracking sections, separate actions, capture-off control
+and personal view selector. Config bytes are unchanged by opening. This is
+surface RED only; tracking save/profile/preference behavior and Ribbon-open
+authorization are not yet proven. An initial observer-installation error and
+native fault are retained separately, not counted as product RED. The corrected
+run has no observed Excel fault and its form capture was inspected. No runtime
+or architecture changes; 65 package / 16 source pins remain. See
+[Settings evidence and required next gates](../../invSys_fork/tests/integration/plan022_slice4be_tracking_settings_results.md).
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |

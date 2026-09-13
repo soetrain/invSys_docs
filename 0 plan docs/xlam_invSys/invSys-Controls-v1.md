@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.100 (Receiving native-target and full854 GREEN; broader acceptance open)
+**Version:** 1.101 (Event Tracking Settings surface RED; broader acceptance open)
 
 **Inventory date:** 2026-08-31
 
@@ -10,6 +10,15 @@ Operations, Receiving, Production, or Shipping, including active controls,
 runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
+
+**2026-09-13, Slice 4be.2:** The packaged Settings surface now has protecting
+RED: 26 checks, 21 PASS / 5 FAIL, preserving all 18 prior D5 identities and GREENs.
+The live form still lacks the approved General/Event Tracking tabs, tracking
+sections/actions, capture-off control and Action Path view selector. Opening
+does not change Config bytes. The capture was inspected; this is not human
+acceptance, tracking persistence GREEN or proof of the Ribbon-open gate. No
+runtime control has changed. See
+[Settings RED and remaining action tests](../../../invSys_fork/tests/integration/plan022_slice4be_tracking_settings_results.md).
 
 This is the readable Release 1 control catalog after review-checklist answers
 1-3 and 6-7. It describes the implemented source and explicitly labels packaged
