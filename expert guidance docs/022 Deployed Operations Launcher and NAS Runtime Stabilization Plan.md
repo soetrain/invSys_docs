@@ -4784,6 +4784,24 @@ General harness failure are in the Settings evidence record. This work implement
 and constrains existing D18 under semantic inheritance; it does not grant new
 collection/access rights or complete Viewer, preferences or comprehensive activity.
 
+**2026-09-13, 4be.3 Refresh failure checkpoint:** Implement existing D18
+Unavailable/Stale and captured-context rules through actual packaged Viewer
+launch, Events, Refresh and Search handlers. Initial RED is 6 PASS / 7 FAIL;
+empty-envelope expansion is 14 PASS / 2 FAIL. Final focused GREEN is **16/16**
+on `deploy/validation-viewer-refresh-final`. Five packages compile/cold start;
+the readable synthetic Stale capture is inspected. Settings retains **187/187**,
+populated Viewer passes, packaged smoke is **86/86** and static ratchets hold.
+Full chain is **31/31** with ordered live-role child **48/48**. All 140 prior /
+10 candidate package pins and 16 protected source pins match; Excel is closed.
+Exact scope, failures and final gates are in the maintained
+[Refresh evidence](../../invSys_fork/tests/integration/plan022_slice4be_viewer_refresh_results.md).
+Only two Operations components change; Core/Domain, canonical schemas and
+publication authority are unchanged. The existing D18 contract already requires
+this behavior; no architectural exception or new approval is needed. Successful
+Shipping supplements still need migration to owning publication boundaries;
+complete event groups/detail, source coverage, paging, profiles, recording,
+guides/comparison and human UAT remain open.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |

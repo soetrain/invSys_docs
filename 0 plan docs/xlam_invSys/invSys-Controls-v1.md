@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.107 (Operations Settings and actual Admin Close checkpoint)
+**Version:** 1.108 (Events Refresh failure checkpoint)
 
 **Inventory date:** 2026-08-31
 
@@ -10,6 +10,21 @@ Operations, Receiving, Production, or Shipping, including active controls,
 runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
+
+**2026-09-13, Slice 4be.3, Events Refresh failure:** Existing D18 requires
+Unavailable coverage and retained Stale content within the captured context.
+The focused packaged callback/form-handler test is **16/16 GREEN**, after
+6 PASS / 7 FAIL initial RED and 14 PASS / 2 FAIL empty-envelope RED. Failed
+Events reads preserve rows/search/selection without reading Shipping supplements;
+successful refresh clears Stale, and session/target changes invalidate content.
+Five packages compile/cold start. Settings retains **187/187**, populated Viewer
+regression passes, packaged smoke is **86/86**, and static ratchets hold.
+The final synthetic Stale capture is inspected. Full chain is **31/31** with its
+ordered live-role child **48/48**; all 140 prior / 10 candidate package pins and
+16 protected source pins match. Excel is closed. See the maintained
+[Refresh evidence](../../../invSys_fork/tests/integration/plan022_slice4be_viewer_refresh_results.md).
+This enforces D18 without changing the normative contract. Comprehensive Events,
+publication, Action Paths and human acceptance remain open.
 
 **2026-09-13, Slice 4be.2, Operations Settings continuation:** Add Viewer
 **Settings** and its Operations-owned **Event Tracking** surface with read-only
@@ -2181,7 +2196,7 @@ calculated column geometry and remain readable/aligned during resize.
 | `lblSearch`, `txtSearch` | Label and text box — **Search** | Filters the already loaded rows locally across all visible columns. |
 | `lblHeaders` | Header label | Inventory identifies Item Code, Item, UOM, Quantity, Location, and Condition. Events identifies Date, Event, Reference, Item, Qty, UOM, Location, Condition, User, and Details. |
 | `lstInventory` | Six- or ten-column list box | Inventory displays active managed levels aggregated by item code, item, UOM, location, and condition, including active zero-quantity items created before stock arrives or is produced; retired items remain omitted. Events currently displays Receipts, Returns, Dumps, Box Made/Unboxed, Shipped, **Remove** (the `SHIP_RELEASE` action that returns locked inventory to warehouse availability), **Inventory Adjustment** (including audited Admin item retirement), current Box Designs, and current Held Shipments. Slice 4x adds Production Input Consumed and Production Output Created after packaged GREEN. Both views are read-only. |
-| `lblStatus` | Status/freshness label | Shows row count, snapshot read time, or a no-snapshot/sign-in error. |
+| `lblStatus` | Status/freshness label | Shows row count/read time, **Stale** after failed Events Refresh with retained rows, or **Unavailable** when no Events content can be retained. Search preserves the Stale notice. Session/target changes clear loaded content and direct the user to reopen Viewer. |
 | `btnClose` | Button — **Close** | Closes the Viewer without affecting an operator workbook. |
 
 The modeless form is reused on repeated launch. It is resizable: Search,
