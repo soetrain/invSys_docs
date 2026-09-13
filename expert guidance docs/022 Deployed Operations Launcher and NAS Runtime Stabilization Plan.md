@@ -4903,6 +4903,22 @@ regressions. The diagnostic route still cannot claim acceptance GREEN. All 170
 package pins and 16 protected source pins match; Excel is closed. See
 [mixed-source publication RED](../../invSys_fork/tests/integration/plan022_slice4be_publication_coverage_red.md)
 for exact failures, the fixture metadata correction and outstanding gates.
+Code `68ecec1` adds Designs' `PUBLICATION_EVENTS` query through the existing
+Core/Domain dispatcher; candidate `deploy/validation-designs-publication-source`.
+D18 fixes its primitive envelope and read-only, captured-target, clean-borrowed-
+source, header and redaction rules. Owner-applied lifecycle events in an Admin-
+generated fixture prove **3 PASS / 12 FAIL RED -> 15/15 GREEN**. The combined
+publication-only diagnostic moves from 9 PASS / 27 FAIL to 21 PASS / 15 FAIL;
+the remaining failures concern the missing Events artifact. All five candidate
+packages compile with cold-start references checked. Detail 34/34, Refresh 16/16,
+Settings 187/187, populated Viewer, smoke 86/86 and chain 31/31 with ordered
+live-role 48/48 pass. The full Receiving retry retains every prior 854/854 GREEN
+identity after a recorded 606-pass native-focus setup interruption. Static
+dynamic-call/duplicate/oversized limits hold; 175 package pins and 16 protected
+source pins match, with Excel closed. This is a
+prerequisite to actual all-source publication, not completion of the Admin
+publisher or authorization of a Viewer authority fallback. See
+[Designs source evidence](../../invSys_fork/tests/integration/plan022_slice4be_designs_publication_source_results.md).
 
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|

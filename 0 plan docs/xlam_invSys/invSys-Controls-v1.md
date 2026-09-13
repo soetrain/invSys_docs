@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.112 (Mixed-source Events publication test entry)
+**Version:** 1.113 (Designs publication source)
 
 **Inventory date:** 2026-08-31
 
@@ -60,6 +60,15 @@ source-read checks remain GREEN. The combined Viewer/publication attempts failed
 in setup before reaching the new assertions. This diagnostic is not acceptance
 GREEN; unchanged-package preservation passes. See
 [mixed-source publication RED](../../../invSys_fork/tests/integration/plan022_slice4be_publication_coverage_red.md).
+Designs' D18 `PUBLICATION_EVENTS` owner read is packaged **15/15 GREEN** after
+3 PASS / 12 FAIL RED. It adds no visible control or permission; canonical reads
+belong to publication and remain unavailable to Viewer handlers. The Events
+artifact still fails fifteen publication checks. Compile/cold-start, Detail
+34/34, Refresh 16/16, Settings 187/187, populated Viewer, smoke 86/86 and chain
+31/31 with ordered live-role 48/48 pass. Receiving retries a recorded native-focus
+setup failure and retains all 854/854 GREEN identities. Static limits and final
+175-package/16-source preservation checks pass; physical/human acceptance remains
+open. See [Designs source evidence](../../../invSys_fork/tests/integration/plan022_slice4be_designs_publication_source_results.md).
 
 **2026-09-13, Slice 4be.3 selected-event detail:** Operations owns a read-only
 Event Detail surface with exact source-event grouping, separate repeated-key

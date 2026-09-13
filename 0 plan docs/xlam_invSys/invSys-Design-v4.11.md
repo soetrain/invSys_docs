@@ -470,6 +470,27 @@ stations or warehouse-wide Hold history. Comprehensive shared user activity and
 all-source publication remain required. This makes existing D18 provenance and
 coverage obligations testable; it does not accept missing sources as complete.
 
+**4be.3 Designs publication read:** The existing Designs query dispatcher adds
+`PUBLICATION_EVENTS` with expected WarehouseId and runtime-root strings. Core's
+publisher calls this owner query through the existing query bridge. It validates
+the current allowed target against both arguments, reads only the existing
+canonical Designs file, and never creates, ensures, repairs or saves a source.
+An open clean source is borrowed unchanged; an unsaved source is unavailable.
+Only a source opened by the query is closed, without saving. Missing/ambiguous
+required headers or mismatched warehouse rows make the source unavailable.
+
+The primitive result is a versioned escaped tab-separated string. Its first
+line contains `EVTSRC1`, `Designs`, Availability, WarehouseId, returned-line count,
+read mode (`ReadOnly`, `Borrowed` or `None`) and a fixed reason code. The next
+line names exported fields; subsequent lines contain their values. Backslash,
+tab, CR and LF are escaped losslessly. Export EventID, UndoOfEventId, AppliedSeq,
+EventType, OccurredAtUTC, AppliedAtUTC, WarehouseId, StationId, UserId,
+DefinitionType, DefinitionId, DefinitionVersion and Note only. All contributing
+rows and exact identities remain; PayloadJson, unknown columns and source paths
+are excluded. Recorded dates remain zone-unverified. An unavailable result has
+zero returned rows, not a claim that the source contains zero events. This is an
+owner read for publication, not a new Viewer read path or business write command.
+
 **Settings -- dedicated Event Tracking tab:**
 
 - Admin Settings gains **General** (existing controls) and **Event Tracking**
