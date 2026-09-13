@@ -4338,6 +4338,54 @@ sanitized evidence and regenerated maintenance reports. Runtime remains22e14b6;
 the current full route's native failures, missing activity and D8-A decision stay
 open. The focused pass is evidence for source semantics and fixture isolation only.
 
+**Shipping owner-reference test correction, 2026-09-12:** Continue 4be.1 by
+replacing the normal activity test's applied-log expectation with exact identities
+acknowledged by `QueueShippingPayloadEventServerFirst` during that actual handler.
+An unsaved observer records only real positive returns; reset it per user action,
+check unique valid IDs and submission-count agreement, and keep Domain-log reads
+as separate application evidence. The historical ExactAppliedSourceReferences
+check name remains for identity continuity, but its expectation now includes all
+owner-submitted IDs, including pending work, and excludes earlier actions merely
+processed during catch-up. The ordinary fixture expects one source for Add,
+Remove, AddAgain and Send, and none for its delta-only Update, Hold, Return and
+already-reserved Stage. This is a test correction to D18, not a new runtime contract.
+
+The first corrected full attempt again stops67/1 before these checks. Run's
+reported seven arguments include the macro name: source call order identifies
+the six-value `BootstrapWarehouseLocalAdmin` fixture call, not the zero-value
+Shipping launcher. The normal helper sets its bootstrap paths after that call;
+the passing focused helper sets them before generation. Read-only unsaved getter
+instrumentation now observes bootstrap-root matches before/after the Operations
+test edits, and explicit roots are verified before generation. Failure diagnostics
+log only the macro name and argument count, never values. This calibrates fixture
+setup and tests a bounded explanation; it does not claim a native runtime repair.
+All prior assertions, pending D8-A findings and unresolved native evidence remain.
+
+**Owner-reference checkpoint, 2026-09-12:** The corrected complete route finishes
+650 checks:597 PASS/53 FAIL, preserving all605 preceding check identities and all552
+preceding GREENs, with45 additional passing checks and no duplicates. All66 source
+submission checks now pass within the full route. The remaining46 missing-activity
+checks and seven pending D8-A findings retain their separate status. Send submits
+one source while applying four, including three earlier actions; Add and Remove
+retain acknowledged pending IDs. The new expectation therefore prevents both
+missing pending references and misattributing catch-up work to a later click.
+
+Bootstrap-root observations are True before and after Operations instrumentation
+and before generation. They do not support the root-reset hypothesis. No Excel
+Application1000 fault is observed in the completed-run window, but neither the
+passing setup nor explicit root setters establish a native repair. The preceding
+67/1 run records ntdll.dll/c0000028; it remains a harness/native failure, not product
+RED. Runtime22e14b6 and all50 package/eight source pins are unchanged; Excel is
+closed. The [sanitized owner-reference record](../../invSys_fork/tests/integration/plan022_slice4be_shipping_owner_reference_results.md)
+contains exact scope, counts and evidence. Next register/refine Shipping activity
+outcomes and references under D18, preserving these650 checks before implementation.
+This checkpoint does not close4be.1, approve D8-A or establish full-release acceptance.
+Static evidence is regenerated with all three schemas and 28 previous module limits
+passing; procedure/dynamic-call/duplicate counts are unchanged. Both edited
+PowerShell parsers, 52 local Markdown targets and diff/status review pass.
+Code checkpoint `3a6f345` contains the test correction and sanitized evidence;
+runtime remains `22e14b6`.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |

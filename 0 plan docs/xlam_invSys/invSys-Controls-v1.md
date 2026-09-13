@@ -658,6 +658,23 @@ does not prove full-matrix GREEN. Activity reference expectations must include
 pending owner submissions before observation implementation. All packages/source
 pins remain unchanged; no control or outcome definition is newly registered.
 
+The normal Shipping activity test now uses exact source IDs
+acknowledged by the actual handler's submission owner, including pending work.
+Domain-log catch-up remains separate and cannot attribute earlier submissions to
+the current control. Existing assertion identities remain; no control or runtime
+contract changes. An early native failure is localized by call arity/order to
+Admin fixture generation, before the Shipping launcher. The harness now measures
+its bootstrap settings and verifies explicit fixture roots before generation;
+the resulting complete route finishes650 checks:597 PASS/53 FAIL. All605 preceding
+checks and552 GREENs remain,45 new checks pass, and all66 submission checks pass
+within the full route. Send submits one source and applies four including three
+earlier actions; pending Add/Remove sources remain attributed to their own clicks.
+All bootstrap-root flags are True before/after instrumentation and before generation,
+so this evidence does not support root reset or establish a native repair. The46
+missing-activity checks and seven pending D8-A findings remain. Runtime22e14b6,
+all50 package/eight source pins and the existing control definitions are unchanged.
+See the [owner-reference evidence](../../../invSys_fork/tests/integration/plan022_slice4be_shipping_owner_reference_results.md).
+
 ### Curated Action Path storage: NAS-only contract locked; implementation pending
 
 Action Paths will be stored only under the selected warehouse NAS runtime root:
