@@ -4586,6 +4586,34 @@ known pre-write refusal, exact identity, bytes and unknown columns through the
 same packaged handler route, then rerun required package/release gates. This
 corrects existing D18 behavior and does not approve D8-A.
 
+**Pre-write identity candidate evidence, 2026-09-13:** Code807c7e1 is committed
+and pushed under normative590d41a. This remains a partial Slice4be checkpoint;
+the focused handler route passes402/402 with all401 previous GREENs and check
+identities preserved. The complete prepared-fixture Shipping route completes974
+checks at967/7; only pending D8-A recreation findings fail. Both890-check baselines
+and the953-check expanded RED retain every identity/GREEN, with no duplicate
+checks. No Excel fault is observed in these focused/full Shipping windows. Five
+builds/explicit compiles and smoke86/86 pass. All28 previous module limits and
+8/45/195 maintenance counts remain; five extracted helper bodies are unchanged.
+An independent read-only comparison explains the form compiled-hash difference
+as exactly four trailing blank lines, preserving both package files. Viewer,
+independent Production/restart2/2 and Shipping layout1/1 pass. Separate live-role
+39/1 and combined-launcher1/1 failures coincide with Excel native faults and remain
+open. Sixteen source-harness import lists now include the extracted JSON helper;
+all parse. The first full-chain attempt was a missing-dependency compile setup
+failure. After repair, Create Warehouse passes15/15, but full-chain stops at4 PASS
+and1 Harness.Exception with RPC0x800706BE before ordered live-role completion.
+That RPC window also contains an Excel fault. Receiving stops at591 PASS/30 FAIL
+across621 checks:29 outdated catalog3-7 assertions and one keyboard-input harness
+failure. Its preserved845/845 comparison leaves225 identities unexecuted. Both
+Receiving test allowlists now include approved8; focused navigation stops106/1
+at the same first keyboard action. Neither Receiving window shows an Excel fault.
+Full Receiving preservation remains open. Next calibration must prove the native
+keyboard target is within the intended form after another workbook activates;
+same-process ownership alone is not that proof. Final65 package/16 source pins
+match with Excel closed. See
+[pre-write identity evidence](../../invSys_fork/tests/integration/plan022_slice4be_shipping_prewrite_refusal_results.md).
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |

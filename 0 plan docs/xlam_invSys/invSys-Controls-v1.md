@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.98 (Shipping pre-write identity RED; correction in progress)
+**Version:** 1.99 (Shipping pre-write identity GREEN; broader acceptance open)
 
 **Inventory date:** 2026-08-31
 
@@ -777,6 +777,22 @@ reference. D18 now details the primitive writeAttemptedOut evidence used to
 exclude allocated-only identities while preserving legitimate Submitted/Unknown
 references, unchanged owner behavior and all existing control wording. This is
 the protecting RED for the correction; implementation GREEN remains pending.
+The corrected candidate (committed/pushed code807c7e1) passes402/402 focused checks and completes the full
+Shipping route at967 PASS/7 FAIL across974 checks; only pending D8-A findings fail.
+All preceding890/953-check identities and GREENs remain, with no duplicates or
+observed Excel fault in the focused/full Shipping windows. Five builds/explicit
+compiles, smoke86/86, Viewer, independent Production/restart2/2 and Shipping
+layout1/1 pass. Separate live-role39/1 and combined-launcher1/1 native failures
+remain open. After source-harness dependency repair, Create Warehouse passes15/15;
+full-chain stops at4 PASS/1 Harness.Exception with RPC0x800706BE before ordered
+live-role completion, with an Excel fault in that window. Receiving stops591/30
+across621 checks (29 outdated catalog assertions, one keyboard-input harness
+failure);225 prior identities remain unexecuted. Test allowlists now include8,
+but focused navigation still stops106/1 at the same first keyboard action.
+No Excel fault is observed in either Receiving window. Full845 preservation and
+keyboard-target calibration remain open. Final65 package/16 source pins match
+with Excel closed. See
+[pre-write identity evidence](../../../invSys_fork/tests/integration/plan022_slice4be_shipping_prewrite_refusal_results.md).
 
 ### Curated Action Path storage: NAS-only contract locked; implementation pending
 
