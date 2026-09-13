@@ -601,7 +601,21 @@ does not infer a specific credential/configuration cause or rollback. Core's
 permission/security ownership and service guards remain; the automatic timer's
 existing context checks, normal Close and launcher reuse/recovery do not change.
 This consistent D18 constraint adds no permission or catalog version. Runtime
-implementation and its focused GREEN remain pending.
+implementation now has focused GREEN after normative clarification0cc61c9:
+RED374/61 -> GREEN389/46 across the same435 checks. All15 new permission failures
+are fixed, including the real denied Send Hold movement; all prior GREENs remain.
+The46 remaining failures are missing Shipping activity. Five-package build/compile/
+cold-start and smoke86/86 pass; the captured permission notice is legible. Existing
+key-editor/header crowding and human acceptance remain open. Candidate remaining
+gates and exact scope are tracked in [capability evidence](../../../invSys_fork/tests/integration/plan022_slice4be_shipping_capability_results.md).
+
+Candidate full-chain30/30, Viewer, launchers3/3, full Production/restart2/2 and
+Shipping layout1/1 pass. Live-role initially fails14/1 at Receiving confirmation;
+a fresh ordinary run passes48/48. The original exception and a separate native
+combase.dll/c0000005 fault during the passing chain remain unresolved. All50
+package/eight current source pins match, static/source checks pass and Excel is
+closed. These gates do not claim native stability, human layout acceptance or
+complete Shipping activity/Settings/Viewer/Action Path coverage.
 
 ### Curated Action Path storage: NAS-only contract locked; implementation pending
 

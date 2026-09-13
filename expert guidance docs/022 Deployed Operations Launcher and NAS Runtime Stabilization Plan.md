@@ -4202,6 +4202,36 @@ The bounded Shipping context helper can own the combined check; the form's
 existing guard delegates to it without exceeding its current3019-line limit.
 Focused RED must precede that implementation.
 
+Unchanged-package RED is374 PASS /61 FAIL across435 checks, with all379 prior
+checks/333 GREENs retained. Core denies SHIP_POST while the session stays signed
+in; all seven handlers still enter mutation owners without a permission notice,
+and real Send Hold moves staging. These15 failures are distinct from the46 missing
+activity failures. After normative clarification0cc61c9 is committed/pushed, the
+bounded candidate passes389/46: all56 added capability checks and every prior
+GREEN. It changes only the Shipping form/helper, keeping the form3019 lines and
+adding17 helper lines. All five build/compile/cold-start checks pass, with exactly
+two changed exported component hashes. Dynamic/duplicate counts and all28 prior
+module limits hold. The permission notice capture is legible; existing key/header
+crowding remains. Smoke86/86 passes; candidate role/chain/Viewer/launcher/Production/
+layout gates remain in progress. See [capability evidence](../../invSys_fork/tests/integration/plan022_slice4be_shipping_capability_results.md).
+This is focused permission GREEN, not Shipping activity or Slice4be completion.
+
+The same candidate passes full-chain30/30, Viewer, combined launchers3/3, full
+reusable Production/restart2/2 and Shipping layout1/1. Initial live-role stops14/1
+at Receiving ConfirmWrites with DISP_E_EXCEPTION and no observed Windows native
+fault for that run. Its remaining empty Excel instance exits after Quit. A fresh
+ordinary live-role run then passes48/48, retaining the initial failure separately.
+An Excel combase.dll/c0000005 fault during the passing full-chain window remains
+unresolved. All50 package/eight current source pins match; Excel is closed and
+all handles are terminal. Static schemas,24 launcher source checks and28 preceding
+module limits pass. The linked evidence gives exact run/capture provenance.
+Continue permission loss during yields, unavailable access evidence and pending/
+uncertain source outcomes before completing the comprehensive Shipping activity
+contract; native stability, human comparison and full4be.1-4be.6 remain open.
+Code checkpoint **22e14b6** is committed and pushed after normative0cc61c9.
+It is the focused permission repair with the candidate evidence above, not a
+native-crash fix or full Shipping activity acceptance.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |
