@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.95 (Shipping activity definitions; implementation pending)
+**Version:** 1.95 (Shipping catalog implemented; handler activity pending)
 
 **Inventory date:** 2026-08-31
 
@@ -675,13 +675,14 @@ missing-activity checks and seven pending D8-A findings remain. Runtime22e14b6,
 all50 package/eight source pins and the existing control definitions are unchanged.
 See the [owner-reference evidence](../../../invSys_fork/tests/integration/plan022_slice4be_shipping_owner_reference_results.md).
 
-### Shipping activity catalog 8: definitions registered; runtime pending
+### Shipping activity catalog 8: Core definitions implemented; handlers pending
 
 Architecture v4.11 D18 defines the following Command observations on
 Operations > Shipping, OwnerId SHIPPING_WORKFLOW and existing SHIP_POST eligibility.
 EventCode prefixes are the exact ControlId followed by an underscore. Catalogs 1-7
 and their saved policies retain their definitions; an older policy does not enable
-these new controls. This table is the target contract, not packaged acceptance.
+these new controls. This table defines the handler target; registration alone is
+not packaged handler acceptance.
 
 | ControlId | Caption | Handler | Successful owner outcomes |
 |---|---|---|---|
@@ -706,6 +707,19 @@ The normative clarification governs exact eligibility and owner-fact constraints
 The packaged test retains all 650 previous checks and adds supplemental catalog/
 reference checks. Definitions, owner plumbing, actual handler activity and full
 release/visible acceptance must be reported separately. D8-A remains pending.
+
+Core registration/reference validation now passes 213/213 supplemental packaged
+checks, following 89 meaningful failures among 204 RED checks. Nine added checks
+prove a catalog-7 policy remains valid, excludes every new control and preserves
+Config bytes. All five builds/compiles, Operations cold start and 86/86 package smoke
+pass. The full Shipping route stops in Admin fixture generation before handlers;
+live-role validation stops 39/1 during Production completion. Native failures and
+full candidate acceptance stay open. Full-chain stops4/1; Viewer fails fixture
+sign-in, and combined launchers stop1/1 after Receiving. Separate full reusable
+Production/restart passes2/2 and Shipping layout1/1. Static schemas/previous limits,
+55 package pins and nine current source pins pass; Excel is closed. No new handler
+activity, comprehensive Events UI, human comparison or full-release acceptance is
+claimed. See the [catalog evidence](../../../invSys_fork/tests/integration/plan022_slice4be_shipping_catalog_results.md).
 
 ### Curated Action Path storage: NAS-only contract locked; implementation pending
 

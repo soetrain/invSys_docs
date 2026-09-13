@@ -4411,6 +4411,49 @@ unknown-column test; do not bless it through activity registration or assume the
 existing event-payload checks cover local persistence. No persistence change is
 made by this catalog work.
 
+**Shipping catalog 8 focused result, 2026-09-12:** Normative commit `37825b5`
+precedes the Core implementation. Packaged RED executes 204 supplemental checks,
+115 PASS/89 FAIL for absent definitions/source eligibility. The candidate at
+deploy/validation-shipping-catalog-eight passes all 213 catalog/reference/policy
+checks, retaining all 204 RED identities and adding nine passing catalog-7 policy
+regressions. Only modActivityCatalog/modActivityReferences and the new
+modShippingActivityCodes differ in exported compiled source. All five builds,
+explicit compiles and Operations cold start pass; package smoke passes 86/86.
+
+Both full invocations then stop in the six-value Admin fixture bootstrap before
+Shipping handlers execute (RED overall183/90; candidate overall281/1). Both record
+ntdll.dll/c0000028. This establishes catalog GREEN only, not preservation of the
+full650 handler route on the candidate. Independent live-role validation stops
+39/1 during the Production completion portion with the same native fault; its
+failure remains recorded while the independent full-chain and remaining gates run.
+The full Slice4be and release goal remain active, with native stability unresolved.
+See the [Shipping catalog evidence](../../invSys_fork/tests/integration/plan022_slice4be_shipping_catalog_results.md)
+for exact runs and scope. No Shipping handler activity is implemented by registration.
+
+**Catalog candidate gate closure, 2026-09-12:** The ordered full chain stops4/1
+with ntdll.dll/c0000028. Viewer returns FAIL after fixture sign-in fails; its
+verified information dialogs are captured/acknowledged without changing sign-in,
+and the report retains SignedIn=False. Combined launchers reach Receiving then
+stop1/1 with another native fault. Separate full reusable Production/restart passes
+2/2 and Shipping layout1/1, with no Application1000 Excel fault observed in those
+two windows. The queue ends failed overall; no full-release or native acceptance
+is inferred from the independent passes. The candidate's full Shipping and full
+Receiving activity regressions remain required before broad acceptance.
+
+Static regeneration passes three schemas and all28 previous module limits;
+178 components/5514 procedures/123883 lines retain8 literal/45 unresolved dynamic
+calls and195 duplicate bodies. Both edited PowerShell parsers,46 local Markdown
+targets and diff/status checks pass. All55 package pins, six unchanged source pins
+and three current Core pins match; Excel is closed and all handles are terminal.
+The new verify-catalog-eight-pins.ps1 supersedes only the two intentionally changed
+Core expectations in the older verifier. Preserve unrelated user handoff067 and
+critique023. Next establish a valid candidate handler-test route and add owner-fact
+plumbing/observations under the registered contract; do not repeat failed gates
+unchanged or claim source-reference registration creates user activity.
+Code checkpoint `469703f` contains the catalog/reference implementation, focused
+tests and sanitized evidence. Its isolated candidate is retained for diagnosis;
+accepted deployment is unchanged and Slice4be remains incomplete.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |
