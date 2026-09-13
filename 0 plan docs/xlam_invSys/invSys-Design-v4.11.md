@@ -448,6 +448,28 @@ read-only workbook opened by that scoped read. This corrects a discovered
 mutating-resolver path under D3/D18, without changing authentication, capability
 provisioning, canonical writer APIs or the command's existing permission gate.
 
+**4be.3 activity grouping and coverage wire detail:** A user-activity group uses
+Source `Activity`, SourceKind `User activity`, and the exact ActivityId as
+SourceId. Lines preserve every permitted original record, including each exact
+RecordId and its verified timestamp. Outcomes contains the available result
+records, excluding REQUESTED attempts; it never synthesizes an applied business
+outcome. RecordedAt is the earliest available contributing record timestamp,
+with its actual TimeProvenance; each later result retains its own timestamp.
+Business groups retain their exact owner EventID and contributing lines under
+the same earliest-record ordering rule. Quantity display values remain strings
+with each line's own Uom; grouping never adds unlike units or loses repeated keys.
+
+Coverage.Sources identifies Inventory, Designs, Activity, ShippingBOM and
+ShippingHolds separately. Each entry names Source, Availability, Scope and a
+sanitized explanation. AvailableGroups/IncludedGroups/OmittedGroups and
+AvailableLines/IncludedLines/OmittedLines reconcile within that source; unknown
+counts are unavailable, not zero. Current-state counts remain separate from the
+5,000 durable-group limit. Shipping hold visibility is limited to the originating
+station's existing local store; that source cannot imply discovery of other
+stations or warehouse-wide Hold history. Comprehensive shared user activity and
+all-source publication remain required. This makes existing D18 provenance and
+coverage obligations testable; it does not accept missing sources as complete.
+
 **Settings -- dedicated Event Tracking tab:**
 
 - Admin Settings gains **General** (existing controls) and **Event Tracking**

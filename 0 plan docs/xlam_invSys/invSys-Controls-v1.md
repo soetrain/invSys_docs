@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.111 (Events publication source-read correction verified)
+**Version:** 1.112 (Mixed-source Events publication test entry)
 
 **Inventory date:** 2026-08-31
 
@@ -47,6 +47,19 @@ recorded without an inferred cause. Full Receiving retains every prior GREEN:
 pins and 16 protected source pins match with Excel closed. See the
 [publication/source-read evidence](../../../invSys_fork/tests/integration/plan022_slice4be_publication_results.md)
 for completed correction gates and remaining scope. This is not full Slice 4be acceptance.
+
+**Publication coverage test extension:** D18's activity-group wire detail requires
+the real Admin Settings Save Value attempt/result to publish as one exact-ID
+group with all original records and truthful result metadata. Named source
+coverage and reconciled counts replace a count-only coverage assertion as proof.
+ShippingHolds is explicitly station-local current state, separate from ShippingBOM
+and shared user activity. No operator control or permission changes in this test
+entry; complete publication and fresh human acceptance remain pending.
+The isolated actual-handler test is **6 PASS / 15 FAIL**; all four existing
+source-read checks remain GREEN. The combined Viewer/publication attempts failed
+in setup before reaching the new assertions. This diagnostic is not acceptance
+GREEN; unchanged-package preservation passes. See
+[mixed-source publication RED](../../../invSys_fork/tests/integration/plan022_slice4be_publication_coverage_red.md).
 
 **2026-09-13, Slice 4be.3 selected-event detail:** Operations owns a read-only
 Event Detail surface with exact source-event grouping, separate repeated-key
