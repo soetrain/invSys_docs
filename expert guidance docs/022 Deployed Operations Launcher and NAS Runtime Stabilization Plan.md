@@ -4689,6 +4689,22 @@ recording, Viewer/comparison and broader release/user gates remain open. See
 for exact test runs, limitations and continuation. Do not treat this checkpoint
 as completed 4be.2 or use it to weaken the acceptance table below.
 
+**4be.2 cancelled-policy-save correction, 2026-09-13:** Code `f629604` is
+committed and pushed. A real Excel
+WorkbookBeforeSave cancellation leaves Config unchanged but the prior candidate
+incorrectly reports success and reloads away staged edits. Expanded packaged
+RED is 65 checks: 61 PASS / 4 FAIL. Core now verifies Workbook.Saved after its
+single save call and uses the existing unverified-save cleanup on cancellation;
+the form retains staging. The corrected candidate is 63 PASS / 2 FAIL, with all
+34 policy and 18 D5 checks passing. Added real per-control, Reload and Close
+action tests pass. Only modTrackingPolicyCommand changes across 180 compiled
+components; all five compile, cold start passes and smoke is 86/86. Earlier
+activity 70/70 and Receiving 854/854 retain their previous-candidate scope and
+were not rerun for this command-only correction. D18/D5 is unchanged. Proceed
+with Event Detail profiles/personal preferences; retain policy edge cases,
+new-control coverage, policy-save observations and broader acceptance as open.
+The Settings evidence record names exact RED/GREEN reports and limitations.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |

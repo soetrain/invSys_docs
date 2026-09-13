@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.103 (Tracking policy editor and save checkpoint; profiles/preferences incomplete)
+**Version:** 1.104 (Cancelled policy saves retain staged edits; profiles/preferences incomplete)
 
 **Inventory date:** 2026-08-31
 
@@ -11,7 +11,17 @@ runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
 
-**2026-09-13, Slice 4be.2, tracking policy checkpoint:** Admin's Event Tracking
+**2026-09-13, Slice 4be.2, cancelled-save correction:** A real Excel BeforeSave
+cancellation exposed a false saved message and loss of staged policy edits.
+Core now verifies Workbook.Saved after its single save call; cancellation reports
+an unverified save and retains staging. Expanded packaged RED is 61 PASS / 4 FAIL;
+the correction is 63 PASS / 2 FAIL, including 34/34 policy and 18/18 D5 checks.
+Per-control staging/persistence, Reload and actual Close-discard checks pass.
+Five packages compile and smoke is 86/86. Only the Core policy command changes
+in the 180-component comparison. No contract change or completed Settings/user
+acceptance is claimed; profiles/preferences and comprehensive activity remain open.
+
+**2026-09-13, Slice 4be.2, previous tracking policy checkpoint:** Admin's Event Tracking
 tab now stages collection, visibility, sequence eligibility, capture, optional
 Admin visibility and the warehouse Action Path default. Save Tracking Policy
 uses the D5 Core whole-request/expected-version command; Reset stages defaults
@@ -1827,7 +1837,7 @@ Obsolete are actions inside this form, not separate ribbon launchers.
 | Event Tracking sections | `lblTracking`, `lblEventDetail`, `lblActionPaths`; `lblDetailAvailability`, `lblActionPathAvailability` | **Tracking**, **Event Detail**, **Action Paths**. Tracking has the editor below. **Event detail profile editor unavailable.** and **Action Path preferences unavailable.** remain explicit; the page is not the finished Settings contract. |
 | Warehouse tracking flags | `chkCaptureControls`, `chkAdminEventsVisible`, `cmbWarehouseDefaultView`, `lblRequiredTracking` | **Capture recorded controls** defaults off; **Show optional Admin events** defaults on. **Warehouse default view** offers How-To, Diagnostic and Compare both. Required business/audit collection is labelled Required and cannot be disabled. These controls stage the policy; the warehouse default is not a personal preference. |
 | Per-control tracking | `lstTrackingControls`, `chkControlCollect`, `chkControlVisible`, `chkControlSequence` | Lists the currently registered family/control and Collect, Visible, Sequence and Availability fields. **Collect selected control**, **Visible in Viewer**, **Eligible for recorded sequence** stage those flags. Logical family IDs are currently displayed; broader catalog coverage and final operator wording/interaction acceptance remain pending. |
-| Tracking policy actions | `btnSaveTrackingPolicy`, `btnResetTrackingPolicy`, `btnReloadTrackingPolicy`, `lblTrackingPolicyStatus`; `cAdminTrackingPolicy.SavePolicy`, `.ResetPolicy`, `.ReloadPolicy` | **Save Tracking Policy**, **Reset to Default**, **Reload**. Separate policy status reports staged changes or saved version. Save enters headless Core with captured context and expected version, appending one complete validated version. Reset changes staging only. New-control activity IDs and save version/outcome observations remain pending under 4be.1. |
+| Tracking policy actions | `btnSaveTrackingPolicy`, `btnResetTrackingPolicy`, `btnReloadTrackingPolicy`, `lblTrackingPolicyStatus`; `cAdminTrackingPolicy.SavePolicy`, `.ResetPolicy`, `.ReloadPolicy` | **Save Tracking Policy**, **Reset to Default**, **Reload**. Separate policy status reports staged changes or saved version. Save enters headless Core with captured context and expected version, appending one complete validated version. A cancelled Excel save reports that persistence could not be verified and retains staged edits. Reset stages defaults; Reload discards staging; Close discards unsaved changes. New-control activity IDs and save version/outcome observations remain pending under 4be.1. |
 | Heading/context | `lblTitle`, `lblConfigWorkbook`, `lblStatus` | Shows **Warehouse Settings**, the current config workbook, and action status. |
 | Config grid | `lblConfigKeyHeader`, `lblConfigValueHeader`, `lblConfigTypeHeader`, `lblConfigScopeHeader`, `lblConfigRequiredHeader`, `lstConfig` | Lists config key, value, type, scope, and required status. |
 | Selected config | `lblSelectedKey`, `txtConfigKey`, `lblSelectedValue`, `txtConfigValue` | Shows the selected key and permits value editing. |
