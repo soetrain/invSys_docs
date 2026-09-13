@@ -4454,6 +4454,59 @@ Code checkpoint `469703f` contains the catalog/reference implementation, focused
 tests and sanitized evidence. Its isolated candidate is retained for diagnosis;
 accepted deployment is unchanged and Slice4be remains incomplete.
 
+**Validation recovery entry, 2026-09-12:** Continue 4be.1 without a runtime contract
+change. The Viewer harness previously continued into public actions after failed
+fixture sign-in, causing repeated information dialogs. Add fail-fast setup with
+only an allowlisted status and credential-match/entry booleans; a deliberately
+rejected fixture credential must stop before Viewer entry. The first diagnostic
+normal run passes the full Viewer gate, but does not explain the earlier sign-in
+failure. D8-A remains pending; no Auth implementation changes are authorized here.
+
+The early Operations-probe installation experiment stopped281/1 at bootstrap
+with ntdll.dll/c0000028 and was reverted. Explicit unsaved fixed-phase bootstrap
+tracing then completed the full863-check route:810 PASS/53 FAIL, preserving all650
+preceding check identities and GREENs plus213 passing catalog/policy checks. The
+trace does not identify a native cause or prove an uninstrumented repair.
+
+Both normal Viewer runs pass; deliberately rejected sign-in stops before public
+entry with AUTH_STATUS_4. A subsequent Excel Application1000 fault (c0000409,
+module unknown) remains recorded for the rejection window; clean native shutdown
+is not proven by the setup guard. No Excel fault was observed in the two normal
+Viewer windows or the full traced Shipping window. All55 package pins and nine
+source pins match; Excel is closed. Runtime/architecture remain unchanged, and
+D8-A is still pending. See [validation recovery evidence](../../invSys_fork/tests/integration/plan022_slice4be_validation_recovery_results.md).
+Next add typed Shipping owner facts and real handler observation, preserving all
+810 current GREENs and the full release/visible acceptance obligations.
+
+**Shipping exact-owner-evidence D13 entry, 2026-09-12:** Extend the actual-handler
+test before VBA changes with27 assertions across eight established normal actions
+and invalid quantity: exact registered ControlId/owner/surface, REQUESTED facts
+with empty references, and exact outcome/EventCode/severity/effect. Independent
+fixture expectations are Add/AddAgain/Remove PENDING, delta-only Update/Hold/Return/
+already-reserved Stage STAGED, completed Send processing/refresh CONFIRMED, and
+invalid quantity REJECTED. Source acknowledgment and owner-state checks remain
+independent. Expect absent activity RED on the unchanged catalog candidate; retain
+all863 preceding checks. This tightens existing D18 evidence, without changing
+architecture, granting D8-A approval or inferring per-source Domain application.
+
+**Exact-owner-evidence result, 2026-09-12:** The first strengthened invocation
+with bootstrap tracing stops281/1 with another ntdll.dll/c0000028 before the new
+assertions. A bounded `-ShippingBeforeSharedFormsForTest` diagnostic instead runs
+the full Shipping group before the shared Settings/Production form exercises,
+then retains all remaining checks, without bootstrap tracing or package changes.
+It completes890 checks:810 PASS/80 FAIL. All863 preceding identities and GREENs
+remain; the27 added exact-outcome assertions are meaningful missing-activity RED.
+The other failures remain46 missing activity and seven pending D8-A findings.
+No Application1000 Excel fault is observed in this run's window; no general native
+repair is claimed. All55 package/nine source pins, three static schemas,28 prior
+module limits and unchanged maintenance metrics pass; Excel is closed. See
+[exact Shipping outcome evidence](../../invSys_fork/tests/integration/plan022_slice4be_shipping_exact_outcomes_results.md).
+Next implement the typed owner facts and actual observations already required by
+D18, including partial/mixed failures, without another unchanged diagnostic retry.
+Code checkpoint `f2ba51f` contains the test changes and sanitized evidence; runtime
+remains `469703f`. Four PowerShell parsers,53 local Markdown targets and reviewed
+diff/status checks pass. Unrelated user handoff067 and critique023 remain untouched.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |

@@ -721,6 +721,26 @@ Production/restart passes2/2 and Shipping layout1/1. Static schemas/previous lim
 activity, comprehensive Events UI, human comparison or full-release acceptance is
 claimed. See the [catalog evidence](../../../invSys_fork/tests/integration/plan022_slice4be_shipping_catalog_results.md).
 
+Validation recovery on the unchanged catalog candidate completes the traced
+Shipping route at810 PASS/53 FAIL, preserving all650 preceding checks/ GREENs and
+213 catalog checks. The early-probe-order experiment failed281/1 and was reverted;
+fixed-phase tracing supplies functional evidence, not a native repair. Both normal
+Viewer runs pass; deliberate credential rejection stops before entry with sanitized
+AUTH_STATUS_4. Its subsequent c0000409 Excel fault remains recorded, so clean native
+shutdown is unproven. Earlier sign-in/native causes remain unresolved. All55 package
+pins and nine source pins match; Excel is closed. No runtime control, wording,
+permission, identity or architecture changes result from these test corrections.
+See [validation recovery evidence](../../../invSys_fork/tests/integration/plan022_slice4be_validation_recovery_results.md).
+
+The protecting test adds27 exact identity/REQUESTED/owner-outcome assertions
+through the same eight normal actions and invalid-quantity handler. After a
+retained bootstrap failure, the complete Shipping-first diagnostic finishes890
+checks:810 PASS/80 FAIL. All863 prior identities/GREENs remain; the27 additions are
+meaningful missing-activity RED. No Excel fault is observed in that run window;
+55 package/nine source pins and static checks pass. Existing D18 outcomes govern;
+runtime handler observation and full release acceptance remain pending. See
+[exact outcome evidence](../../../invSys_fork/tests/integration/plan022_slice4be_shipping_exact_outcomes_results.md).
+
 ### Curated Action Path storage: NAS-only contract locked; implementation pending
 
 Action Paths will be stored only under the selected warehouse NAS runtime root:
