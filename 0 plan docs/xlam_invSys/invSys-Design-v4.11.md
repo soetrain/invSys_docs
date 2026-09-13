@@ -672,6 +672,13 @@ activity to a new context. This check is independent of optional collection.
 Recheck after any intervening UI yield and before owner entry. Keep existing Core
 capability checks and their authority; observation does not confer a permission.
 
+A REQUESTED observation durably recorded in the valid captured context before a
+later interruption remains valid. It must not be deleted or reattributed when the
+session is lost, and no later outcome may be recorded under an invalid/new context.
+Tests must distinguish evidence already present before interruption from activity
+created after it; counting all records added during the entire handler as forbidden
+would contradict D18's required pre-validation/pre-authorization attempt.
+
 Use the fixed context notice **Session or warehouse changed. Reopen Shipping
 before continuing.** A lost workbook instead identifies the unavailable captured
 Shipping workbook. Mark the old form unusable for commands and cancel its automatic
@@ -700,6 +707,9 @@ cancels pending automatic synchronization through the form's existing rejection
 path. Show **Shipping permission could not be verified. Review Shipping access
 before continuing.** This wording does not diagnose a missing permission from
 an unavailable Auth/Config read or claim rollback of earlier completed work.
+The fixed context/access message remains intact. D18's separately required fixed
+**Tracking unavailable** notice may follow it when optional evidence also fails;
+the tracking notice never replaces or changes the primary access/context message.
 
 Core retains permission and required security-decision ownership; existing service
 and event-writer checks remain. Automatic synchronization retains its existing

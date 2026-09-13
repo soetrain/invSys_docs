@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.95 (Shipping catalog implemented; handler activity pending)
+**Version:** 1.96 (Shipping activity candidate; expanded acceptance gates pending)
 
 **Inventory date:** 2026-08-31
 
@@ -740,6 +740,14 @@ meaningful missing-activity RED. No Excel fault is observed in that run window;
 55 package/nine source pins and static checks pass. Existing D18 outcomes govern;
 runtime handler observation and full release acceptance remain pending. See
 [exact outcome evidence](../../../invSys_fork/tests/integration/plan022_slice4be_shipping_exact_outcomes_results.md).
+
+The first implemented Shipping activity candidate builds/compiles and executes890
+checks at873/17; all73 missing normal activity assertions pass. Ten previous checks
+need the explicit D18 reconciliation: retain the REQUESTED record proven to exist
+before later sign-out, and preserve the exact primary access message while allowing
+the separately required fixed tracking-unavailable notice. No post-loss record or
+new-context attribution is permitted. Expanded timing/notice/fallback/store-failure
+tests and remaining release gates are pending; seven D8-A findings remain unapproved.
 
 ### Curated Action Path storage: NAS-only contract locked; implementation pending
 

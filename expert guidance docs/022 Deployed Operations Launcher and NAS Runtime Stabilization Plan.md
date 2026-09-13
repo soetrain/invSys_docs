@@ -4507,6 +4507,37 @@ Code checkpoint `f2ba51f` contains the test changes and sanitized evidence; runt
 remains `469703f`. Four PowerShell parsers,53 local Markdown targets and reviewed
 diff/status checks pass. Unrelated user handoff067 and critique023 remain untouched.
 
+**Shipping handler implementation entry, 2026-09-12:** Under unchanged D18,
+add per-action typed Shipping owner facts and handler-only observation. Owners
+retain every exact accepted/uncertain source identity and report local completion,
+required-step failure and completed Send processing/refresh separately. No report
+text determines activity success, and a later row cannot erase an earlier failure.
+The public handlers observe before authorization/validation after captured-context
+validation; optional tracking failure preserves business behavior. Changes are
+limited to Shipping form/posting modules and focused fact/observation helpers in
+Operations. Cohesive text/selection helpers are extracted to retain existing form
+and main-module size limits. Protecting RED is the full890-check810/80 result;
+partial/fallback, policy/tracking, packaged and full release gates remain required.
+No D8-A or business/persistence contract change is implemented by this entry.
+
+**D18 assertion reconciliation, 2026-09-12:** The first owner-activity candidate
+builds/compiles and completes890 checks at873/17. All73 missing normal activity
+assertions turn GREEN. Ten old assertions conflict with already-approved D18:
+three NoCrossContextActivity checks count the legitimate pre-interruption REQUESTED
+record as forbidden; seven FixedAccessNotice checks prohibit the independently
+required tracking-unavailable notice when Config cannot be read. D18 now explicitly
+clarifies these existing rules, without allowing post-loss attribution or changing
+the fixed primary access notice. This is semantic inheritance, not approval of a
+new authorization, audit or persistence contract. D8-A remains pending.
+
+Preserve the ten assertion identities and their intended invariants. Capture actual
+record contents immediately before the test's real sign-out to prove later reads
+contain only the same pre-loss attempt. Require the exact primary access line and
+only the fixed Config tracking notice as an optional second line. Add separate RED
+assertions for the required pre-loss attempt and tracking notice, plus actual
+fallback/uncertain-submission and unavailable-store handler coverage. Retain the
+first873/17 result; do not retrospectively label it full GREEN or erase its evidence.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |
