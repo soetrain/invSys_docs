@@ -5032,6 +5032,25 @@ visibility Save handlers do not republish, but the positive visibility restore
 case fails. Context invalidation and file preservation pass. Optional foreground
 captures remain setup failures, not acceptance. See
 [published read RED](../../invSys_fork/tests/integration/plan022_slice4be_published_read_results.md).
+The reader implementation uses D18's `EVENTS1` primitive wire refinement: current
+policy and publication metadata accompany every allowed contributing line, with
+named detail fields following the eighteen compatibility slots. Core owns the
+read and visibility decision; Operations parses the projection without Shipping
+authority fallback. Existing legacy serialized envelopes retain limited coverage.
+This is an isolated candidate until focused, package, regression and visible gates
+pass; paging and complete Events/Action Path acceptance remain independently open.
+The initial reader candidate now passes **23/23** focused checks with all RED
+identities retained, all-five-package compile/cold-start, Refresh16/16 and Detail
+34/34. Detail fixture calibration publishes the same synthetic lines through Core
+and preserves their source bytes and existing assertions. Full group/paging,
+Shipping presentation, maintenance, role/chain and visible gates remain open;
+the candidate is not a completed runtime slice.
+The volume/group suite advances from7/9 to8/8 with all16 identities and every
+prior GREEN retained. Published-only read is now GREEN; paging, page counts and
+unlike-unit summaries remain RED. Static evidence is207 components/5709 procedures/
+127173 lines,9 literal/45 unresolved calls,189 duplicate groups and28 size ratchets.
+Four added maintenance candidates, including obsolete reader helpers, require
+review; no new size, duplicate or dynamic-call exception is approved.
 See [package cleanup evidence](../../invSys_fork/tests/integration/plan022_slice4be_package_cleanup_results.md).
 See [Events publication evidence](../../invSys_fork/tests/integration/plan022_slice4be_events_publication_results.md).
 

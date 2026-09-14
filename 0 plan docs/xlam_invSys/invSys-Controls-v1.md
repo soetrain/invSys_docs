@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.116 (published Events reader RED)
+**Version:** 1.117 (published Events reader candidate)
 
 **Inventory date:** 2026-08-31
 
@@ -56,6 +56,21 @@ published activity/detail, rejection/recovery and the Shipping read boundary fai
 The passing hide-only check cannot establish policy enforcement because the
 positive restore case fails. Optional foreground captures remain unavailable.
 See [published read RED](../../../invSys_fork/tests/integration/plan022_slice4be_published_read_results.md).
+The candidate Core/Operations reader follows the normative `EVENTS1` wire
+refinement, preserving named details and separate Published/Loaded timestamps.
+It applies current visibility at Core read time and removes the Viewer Shipping
+authority fallback. This is implementation in progress, not acceptance GREEN;
+the page/filter controls and complete Event Viewer/Action Path behavior remain open.
+The isolated reader candidate now passes **23/23**, retaining every RED identity,
+and five-package compile/cold-start checks. Refresh **16/16** and Detail **34/34**
+remain GREEN after the same synthetic projection lines are published in the new
+format. Broader all-source/paging, Shipping presentation, maintenance, role/chain
+and visible acceptance remain pending; runtime implementation is not yet accepted.
+The volume/group suite is now8PASS/8FAIL: every prior identity and all seven prior
+GREEN checks remain, and published-only read now passes. Paging, counts/navigation
+and unlike-unit summaries remain RED. Static evidence keeps dynamic-call,
+duplicate-group and oversized-module ratchets unchanged; obsolete helper cleanup
+still requires review before the runtime checkpoint is complete.
 
 **Shipping publication test entry:** D18 requires current-state ShippingBOM and
 station-profile ShippingHolds evidence, retaining every permitted line and exact

@@ -439,6 +439,20 @@ coverage limitations and never authorizes canonical Shipping reads as a fallback
 This storage refinement implements D18's existing publication/read separation;
 it does not accept partial source coverage or change canonical write authority.
 
+**4be.3 Viewer projection wire refinement:** The existing Core Events read entry
+returns a primitive escaped tab-separated `EVENTS1` envelope. The header contains
+status, warehouse, verified publication UTC, detail-line count, wire version,
+verified load UTC, publication identity, current visibility-policy version,
+coverage explanation, ordered detail-field IDs, package version and build identity.
+Each line retains the eighteen legacy display/identity slots followed by named
+detail values in the declared field order. Empty values remain unavailable;
+current state never receives an invented durable event identity. Source metadata
+and all contributing lines remain distinct from the currently visible summary.
+Supported legacy Inventory-only envelopes retain their explicit coverage limits;
+parsing them never invokes canonical Shipping readers. This wire refines the
+approved primitive cross-package read boundary without adding a new authority or
+loosening current-policy checks, complete-group publication or paging rules.
+
 **Snapshot source-read constraint:** The existing Admin Generate Inventory
 Snapshot command delegates inventory source resolution to Core's snapshot
 orchestrator. That read resolves the existing canonical file in the captured
