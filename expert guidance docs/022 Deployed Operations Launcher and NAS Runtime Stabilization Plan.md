@@ -5352,6 +5352,47 @@ including exact multi-event references and deferred published owner outcomes.
 Conclusion evaluation, How-To/Diagnostic/Compare, versioned guides, comprehensive
 coverage and visible NAS/operator acceptance remain required.
 
+**2026-09-14 Operations sequence/evaluation RED:** Code `b2c995f` adds
+`-CheckRecordingOperations`, retaining the108-check reader foundation. The actual
+Receiving Ribbon callback reuses its captured form/workbook while an unrelated
+workbook is active. Actual Add/Confirm and Admin Save Value produce nine actions,
+18 observations and20 immutable journal entries across two submissions. With
+automatic application withheld, the first two source references remain among the
+second submission's four; the library displays all six observations of references.
+The later owning Admin processor applies four distinct events. Published groups
+move from zero to four and preserve every exact System_Key. No generated identity
+or canonical outcome is invented by the recorder.
+
+The corrected final run reports **135PASS/2FAIL**, with normal Excel closure.
+Only the pending/applied library's missing Evaluate action fails; every108
+foundation identity and all130 prior passing identities remain GREEN. Journal
+bytes, unknown staging columns and unrelated workbook bytes/content are preserved.
+Saved=True is not a substitute for those data checks: historical Receiving GREEN
+already records a changed Saved flag, and the new stage diagnostics preserve the
+file/content throughout. The original journal pin check permits separate derived
+evaluation records, as D18 requires; it never authorizes rewriting observations.
+
+Calibration failures remain explicit in the maintained evidence: an Add fixture
+needs distinct references/actual Refresh readiness; a capture-enabled run fails
+the existing foreground guard19PASS/1harness failure; an earlier corrected run
+fails at publication120PASS/1harness failure with RPC unavailable. Its remaining
+empty Excel instance closes normally and preserves its three loaded add-in files.
+The later135/2 run does not explain the native failure or establish visible UAT.
+Three changed scripts parse. Runtime remains `99a69aa` in
+`deploy/validation-recording-isolation`; no runtime, package or architecture
+change is made and no new full-build/static/chain/human gate is claimed.
+Final closed-Excel verification preserves260 package pins,15 protected sources
+and the existing reviewed Shipping visibility-only change;83 local document
+links resolve. The ignored aggregate is `recording-operations-final-preservation.json`.
+
+Next refine the expectation/evaluation controls and serialized records in the
+normative D18 specification, this plan and controls, then extend the actual-handler
+test with positive, awaiting, failed/cancelled/incomplete, restricted/stale/corrupt
+and immutable-derived-result cases before implementation. The existing presence
+RED must not be satisfied with a button that performs no evaluation. Full role
+coverage, conclusions, How-To/Diagnostic/Compare, versioned guides and visible
+NAS/operator acceptance remain required under the unchanged goal.
+
 **4be.4 recording test entry:**
 The next test-first entry is the D18 saved-run read surface: actual Viewer
 Action Paths, library selection/Search/Refresh, complete journal validation,

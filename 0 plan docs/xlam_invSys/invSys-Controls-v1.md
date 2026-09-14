@@ -1,8 +1,8 @@
 # invSys Form Controls v1
 
-**Version:** 1.132 (Creator-exit interrupted-reader gate GREEN: 123/123)
+**Version:** 1.133 (Shared Operations sequence proven; Evaluate RED)
 
-**Current source checkpoint:** `2e6b09a` (creator-exit recovery proof); runtime
+**Current source checkpoint:** `b2c995f` (Operations sequence/evaluation test); runtime
 `99a69aa`, compiled candidate `deploy/validation-recording-isolation`.
 Earlier uncommitted-runtime notes below describe preceding candidates.
 Full Slice4be and Release1 acceptance remain open.
@@ -16,7 +16,35 @@ runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
 
-**Latest recovery proof (2026-09-14):** The neutral coordinator exits the creator
+**Latest Operations sequence proof (2026-09-14):** The actual Receiving Ribbon
+callback, Add/Confirm handlers and Admin Save Value record nine actions across
+two submissions. The20-entry journal preserves18 observations; two source
+references in the first submission remain among four in the second, and all six
+references display. Deferred processing applies four distinct events; publication
+retains their exact System_Key values. The corrected focused run ends135PASS/2FAIL,
+with normal Excel closure. Only Evaluate availability fails in the pending and
+applied library views. Every108 foundation identity and all130 prior passing
+identities remain GREEN. Original journal bytes, unknown staging columns and
+unrelated workbook bytes/content are preserved.
+Final verification preserves all260 package pins,15 protected source files and
+the existing reviewed Shipping visibility-only change. Excel is closed; three
+changed scripts parse and83 local document links resolve.
+
+Saved-state changes remain diagnostic, consistent with historical Receiving
+GREEN; no code forces an unrelated workbook clean. An earlier publication/RPC
+failure ends120PASS/1harness failure. Its remaining empty Excel instance closes
+normally with its three loaded add-in files unchanged. A capture-enabled run
+fails an existing foreground guard before the new scenario. Native reliability
+and visible acceptance remain open; the subsequent successful fixture run does
+not explain those failures. Runtime/packages/architecture are unchanged.
+
+Next refine expectation/evaluation UI and serialized records under approved D18,
+then protect actual positive, awaiting, failed/cancelled/incomplete and restricted/
+stale/corrupt evidence outcomes before implementation. A visible Evaluate button
+alone cannot satisfy GREEN. Comprehensive role coverage, How-To/Diagnostic/Compare,
+versioned guides and full Release1 acceptance remain required.
+
+**Earlier recovery proof (2026-09-14):** The neutral coordinator exits the creator
 fully before a fresh reader opens the same saved fixture, without repeating
 bootstrap or editing VBA before pristine Viewer launch. This passes123/123 with
 normal final Excel closure, retaining all112 prior passing identities. The real
