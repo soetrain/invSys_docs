@@ -1,8 +1,8 @@
 # invSys Form Controls v1
 
-**Version:** 1.131 (Pristine startup GREEN; interrupted-reader failure isolated further)
+**Version:** 1.132 (Creator-exit interrupted-reader gate GREEN: 123/123)
 
-**Current source checkpoint:** `11285f7` (fresh-controller diagnostics); runtime
+**Current source checkpoint:** `2e6b09a` (creator-exit recovery proof); runtime
 `99a69aa`, compiled candidate `deploy/validation-recording-isolation`.
 Earlier uncommitted-runtime notes below describe preceding candidates.
 Full Slice4be and Release1 acceptance remain open.
@@ -16,7 +16,26 @@ runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
 
-**Latest controller comparison:** Shared14 fixture helper bodies are unchanged;
+**Latest recovery proof (2026-09-14):** The neutral coordinator exits the creator
+fully before a fresh reader opens the same saved fixture, without repeating
+bootstrap or editing VBA before pristine Viewer launch. This passes123/123 with
+normal final Excel closure, retaining all112 prior passing identities. The real
+unclosed journal is Interrupted, never resumed or concluded; its original attempt
+and outcome remain visible. Reads preserve fixture files, ordinary work stays
+outside the old sequence, and a new explicit recording has a distinct identity.
+All260 package pins,15 protected sources and the existing reviewed Shipping
+visibility-only change pass preservation. Seven changed harness scripts parse.
+
+Private transfer checks pass5/5 after an explicit UTF-8 correction; worker
+protocol/redaction checks pass6/6. A path-argument setup failure occurs before
+Excel/checks and is corrected before the123/123 run. Neither setup defect is
+D13 product RED. No runtime, package or architectural contract changes occur,
+and no new build/static/full-chain/human acceptance is claimed. Earlier native
+failures remain unexplained. Next exercise real Operations multi-submission and
+multi-event sequences with exact source references and later published outcomes;
+conclusions, guides/comparison and full visible acceptance remain required.
+
+**Earlier controller comparison:** Shared14 fixture helper bodies are unchanged;
 all13 prior restart identities remain and a distinct-controller check is added.
 The reader receives fixture data only through a private stdin pipe; protocol/
 redaction checks pass6/6. Its full run records112PASS/2harness flags for one compiler
@@ -30,8 +49,7 @@ A standalone new-process test, with no interruption within that testcase and no
 VBA edits, uses Admin Generate Warehouse and passes6/6: first Viewer launch, reuse,
 fixture preservation and package preservation. Excel closes normally. This setup
 also performs bootstrap in fresh Excel, so it does not isolate the compiler cause.
-Next fully exit the creator before a fresh reader opens the same saved fixture,
-without repeated bootstrap, under a neutral coordinator. Full D18 sequences,
+That comparison led to the neutral-coordinator proof above. Full D18 sequences,
 conclusions, guides/comparison and visible acceptance remain required.
 
 **Current restart gate:** `-CheckRecordingRestart` creates a real unclosed recording
@@ -39,11 +57,12 @@ through Viewer Start and Admin Save Value, then deliberately interrupts only its
 verified disposable Excel process. A fresh process must show Interrupted through
 the Action Paths library, with no resumed recorder or rewritten evidence; ordinary
 work stays outside that run and a new explicit recording gets a distinct identity.
-The14 restart checks include pristine Viewer/controller calibration and retain the108-check
-reader foundation. Runtime/package/contract changes and full restart GREEN are
-not claimed.
+The neutral coordinator retains the108-check reader foundation and passes all15
+restart checks, including pristine Viewer/controller calibration and verified
+creator exit. The older direct-controller entry remains a comparison case.
+Runtime/package/contract changes are not made.
 
-**2026-09-14 execution update:** The previous residual is a Document Recovery
+**Earlier 2026-09-14 execution update:** The previous residual is a Document Recovery
 prompt. Selecting/verifying **Yes, I want to view these files later**, then OK,
 allows normal Excel exit without forced termination or deleting recovery files.
 The first restart gate records111PASS/1harness failure. Its108 earlier checks and
@@ -81,8 +100,8 @@ Document Recovery prompt was resolved with its recovery-retention option and
 normal exit. Following the two restart attempts described above, Excel is closed;
 260 package pins,15 protected sources and the reviewed Shipping visibility-only
 change pass preservation. Native reliability and visible human acceptance remain
-open. The next D13 entry fully exits the creator controller before continuing real
-Operations/multi-event sequences, conclusions and How-To/Diagnostic/Compare.
+open. The creator-exit gate above now passes; continue real Operations/multi-event
+sequences, conclusions and How-To/Diagnostic/Compare.
 
 **Current reader validation:** The rebuilt candidate compiles five packages and
 passes117/117 focused checks plus59/59 Viewer filters. Library bounds/non-overlap

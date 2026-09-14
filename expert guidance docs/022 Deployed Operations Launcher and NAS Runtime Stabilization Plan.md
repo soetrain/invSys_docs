@@ -5322,6 +5322,36 @@ and the existing reviewed Shipping visibility-only change. Six changed PowerShel
 files parse and83 local document links resolve. Runtime/static/package source is
 unchanged; no new full-chain or human-acceptance result is claimed here.
 
+**2026-09-14 creator-exit recovery proof:** Code checkpoint `2e6b09a` adds a neutral
+coordinator that never opens Excel. The creator runs the108-check foundation,
+starts a real Viewer recording and records an actual Admin Save Value, interrupts
+only its verified disposable Excel, transfers the same saved fixture privately,
+and exits. The fresh reader verifies creator exit and launches pristine Viewer
+before driver installation, without repeated bootstrap. The complete run passes
+**123/123**, exit0, with normal final Excel closure and all112 prior passing check
+identities retained. It shows the original unclosed journal as Interrupted, never
+resumes or concludes it, retains the original attempt/outcome, preserves read-only
+fixture bytes, keeps ordinary work outside it and gives a new explicit recording
+an independent identity. All15 restart checks pass on the unchanged runtime.
+
+The current-user-only private transfer passes5/5 after correcting implicit console
+decoding with explicit UTF-8 streams; worker protocol/redaction passes6/6. An initial
+coordinator path-argument failure precedes Excel/checks and is corrected. These are
+harness setup results, not D13 product RED. Cleanup restores settings/removes only
+the disposable fixture after both controllers and Excel exit; a live process
+explicitly defers cleanup. No fixture payload enters command arguments or reports.
+
+Final verification preserves260 package pins,15 protected sources and the existing
+reviewed Shipping visibility-only change; seven changed scripts parse. Runtime
+remains `99a69aa` / `deploy/validation-recording-isolation`. No new architecture,
+runtime, package, static-baseline, full-chain or human-acceptance change is claimed.
+This closes the focused interrupted-reader gate in this lifecycle; it does not
+explain every prior native/compiler failure. Under existing D18/D13, next prove
+one recording spanning real Operations/Admin actions and multiple submissions,
+including exact multi-event references and deferred published owner outcomes.
+Conclusion evaluation, How-To/Diagnostic/Compare, versioned guides, comprehensive
+coverage and visible NAS/operator acceptance remain required.
+
 **4be.4 recording test entry:**
 The next test-first entry is the D18 saved-run read surface: actual Viewer
 Action Paths, library selection/Search/Refresh, complete journal validation,
