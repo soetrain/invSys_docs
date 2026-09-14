@@ -12,46 +12,37 @@ runtime-created controls, status surfaces, and generated column labels.
 ## 1. Purpose and authority
 
 **Current Events publication checkpoint (2026-09-13):** Core's ordinary snapshot
-path now publishes the separate bounded Events artifact under D18. The public
-Admin Generate Inventory Snapshot API returns its independent Events notice;
-this does not establish a new Ribbon control or complete visible Admin acceptance.
-Calibrated pre-implementation RED is **27 PASS / 39 FAIL**; the isolated candidate
-passes **66/66** focused publication checks, including every permitted Shipping
-field, atomic replacement/recovery and missing/dirty-source coverage. Five XLAMs
-compile. Event Detail **34/34**, Refresh **16/16** and Settings **187/187** remain
-GREEN, as do populated Viewer and smoke86. Full-chain acceptance is pending after
-native failures in both the original and saved-compilation candidates; the passing
-48-check compile-invalidation diagnostic is not acceptance. Receiving now passes
-854/854 with every previous check identity/GREEN retained and no duplicates.
-The pre-publication baseline passes the same full chain31/31 and live48/48 in the
-current comparison; it does not establish candidate acceptance or a crash cause.
-An isolated local-result-string candidate passes chain31/31 and live48/48. The
-source now uses the same per-call result handling under unchanged D18 semantics.
-The fresh reviewed build compiles all five packages and reports chain31/31,
-live48/48, publication66, Detail34 and Refresh16. Its Settings regression stops54/1
-on reopen after Close. The optional unsaved constructor trace reproduces failure
-during layout construction; diagnostic results do not replace the uninstrumented
-Settings187 gate. Native fault processes created after the passing live runs
-also leave clean-shutdown attribution open. No general crash repair is claimed.
-The finer layout diagnostic subsequently passes187/187; the uninstrumented
-Settings retry also passes187/187, retaining every check identity/GREEN without
-duplicates. The remaining reviewed-package regressions are still being verified.
-Populated Viewer, smoke86, native Shipping layout1/1 and reusable Production/
-restart2/2 now pass. Reviewed Receiving stops690/1 at a rejected native navigation
-readback;854 acceptance is still pending. Isolated final-chain phase tracing
-passes13/13 but does not reproduce or explain the earlier native fault.
-The unchanged focused Receiving navigation diagnostic passes266/266; a fresh
-complete854 regression is running, without a runtime or native-input patch.
-The actual Box Maker handler now proves immediate publication of its
-durable owner event before the explicit Admin command, preserving all prior65
-check identities and GREEN results. Preservation matches
-175 historical/15 candidate package pins,15 exact sources and one reviewed
-visibility-only Shipping source change. Viewer paging/reads, remaining control coverage and Action Paths
-remain open. The existing held-line capture cannot prove a completed shipment.
-The Shipping fixture's unknown-column edit is now calibrated in VBA and must
-survive a read-only reopen; earlier unreadable fixture output did not justify
-a runtime Shipping repair. See
-[Events publication evidence](../../../invSys_fork/tests/integration/plan022_slice4be_events_publication_results.md).
+path publishes the separate bounded Events artifact under D18. The public Admin
+Generate Inventory Snapshot API returns its independent Events notice; this does
+not establish a new Ribbon control or complete visible Admin acceptance.
+Calibrated pre-implementation RED is **27 PASS / 39 FAIL**. The reviewed isolated
+candidate compiles all five XLAMs and passes publication **66/66**, Detail **34/34**,
+Refresh **16/16**, Settings **187/187**, populated Viewer, smoke **86/86**, native
+Shipping layout **1/1**, reusable Production/restart **2/2**, and Receiving
+**854/854**. Receiving and Settings retain every previous check identity/GREEN
+without duplicates. Earlier native failures remain recorded in the linked evidence.
+
+The latest full-chain retry finishes **31/31**, with live **48/48**, but Windows
+records a native Excel fault just after the report. The verified empty recovery
+child closes without saving and preserves all three loaded add-in files. Clean
+native shutdown and publisher acceptance therefore remain unproven. A tooling-only
+package cleanup correction has focused **5/8 RED -> 13/13 GREEN**, real-Excel
+**13/13** with zero package-close exceptions, and unchanged child-exit decisions
+**4/4**. It does not explain or repair the native fault. Both released-deleted-handle
+and unchanged-handle diagnostics pass **48/48**; no projection-fixture patch follows.
+
+The actual Box Maker handler proves immediate publication of its durable owner
+event before explicit Admin publication; all prior65 check identities/GREEN remain.
+Preservation matches175 historical/15 candidate package pins,15 exact sources and
+one reviewed visibility-only Shipping source change. The Shipping fixture's
+unknown-column edit saves and reopens in VBA; earlier unreadable fixture output
+never justified a runtime Shipping repair. The inspected held-line capture shows
+pending sync, not a completed shipment or Action Path conclusion.
+
+Viewer publication reads/paging, remaining Operations/Admin control coverage,
+recordings, How-To/Diagnostic/Compare both, NAS and human acceptance remain open.
+See [Events publication evidence](../../../invSys_fork/tests/integration/plan022_slice4be_events_publication_results.md)
+and [package cleanup evidence](../../../invSys_fork/tests/integration/plan022_slice4be_package_cleanup_results.md).
 
 **Shipping publication test entry:** D18 requires current-state ShippingBOM and
 station-profile ShippingHolds evidence, retaining every permitted line and exact

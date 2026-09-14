@@ -5008,6 +5008,23 @@ native fault or establish its cause. These diagnostics do not replace acceptance
 The unchanged focused Receiving navigation diagnostic then passes266/266, including
 the previously interrupted mouse transition. A fresh full854 regression is running;
 the focused result is not a substitute for its complete acceptance evidence.
+The final-phase cleanup trace also exposes Core being closed before dependent
+packages. A bounded D13 harness test executes the actual finally blocks:5/8 RED
+becomes13/13 GREEN after reversing owned-workbook cleanup order, with no implicit
+save. Ordered-child exit/report decisions remain4/4. No XLAM or architectural
+contract changes; real-Excel after-tracing and full-chain verification are pending.
+Real-Excel after-tracing now passes13/13 with zero package-close exceptions and
+Excel closed. The full Receiving retry passes854/854 with all preceding identities/
+GREEN retained. A fresh full chain nevertheless fails earlier at projection rebuild
+(top4/1, live32/1), before either corrected cleanup phase; no crash repair is claimed.
+The subsequent retry finishes31/31 and live48/48, but Windows records a native
+Excel fault just after the report. Its verified empty recovery child closes without
+saving; all three loaded add-in files remain unchanged. Clean native shutdown and
+publisher acceptance remain open. Both released-deleted-handle and unchanged-handle
+live diagnostics pass48/48 with the same check set, so the maintained projection
+fixture remains unchanged. Independent published-only Viewer tests can advance
+under existing D18 while this acceptance limitation stays explicit.
+See [package cleanup evidence](../../invSys_fork/tests/integration/plan022_slice4be_package_cleanup_results.md).
 See [Events publication evidence](../../invSys_fork/tests/integration/plan022_slice4be_events_publication_results.md).
 
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
