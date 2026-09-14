@@ -1,13 +1,53 @@
 # invSys Form Controls v1
 
-**Version:** 1.145 (Library title and diagnostic-pane evidence; full acceptance pending)
+**Version:** 1.147 (Capture-only lifecycle notice verified; full acceptance pending)
 
-**Current runtime source checkpoint:** `44f0334`, isolated candidate
+**Current runtime source checkpoint:** `5e2c45a`, isolated candidate
+`deploy/validation-recording-notice`. Six expected notice RED cases become GREEN
+in the complete 374/374 packaged gate. Five-package build/compile, static limits,
+19 reviewed captures and the 32/32 Release1 chain pass (48/48 live roles; 15/15
+Create Warehouse). Excel is closed and no Event1000 was recorded for the full
+gate or chain window. Earlier native failures and full user acceptance remain open.
+Accepted deployment and unrelated user files are preserved.
+
+**Capture-only notice test entry:** D18's existing lifecycle/result separation now
+names **Stopped. Capture frozen.** as the library notice before and after evaluation.
+The actual packaged selection and Evaluate handlers must retain that truthful notice
+for Pending, Partial and Applied results. The former **conclusion not evaluated**
+suffix supplies the RED; the correction changes only displayed wording, not records,
+evaluation authority, selection binding or permissions. The prior 368 passing checks
+and relevant packaged, compile, layout, static, live-role and chain gates are retained.
+
+The frozen baseline completes 260 PASS / six expected notice failures. Core's
+one-line wording correction builds and compiles all five packages; only
+`modRecordingReader` differs among 225 compiled components. The complete candidate
+gate passes 374/374, retaining all 368 prior and 260 RED-pass identities. All nineteen
+captures pass and are reviewed, with six byte-identical restored/source views checked
+against their inspected defaults. The notice is truthful before and after all three
+evaluation stages. Static metrics and component line counts do not change; 325 package
+hashes/protected sources and all 28 module limits hold. Excel closes with no recorded
+Event1000 for that test process. The Release1 chain passes 32/32, live roles 48/48 and
+Create Warehouse 15/15. Local settings and tracked reports are restored, all jobs
+terminate and Excel closes. No Excel Event1000 is recorded in the verified chain
+window. Earlier native failures remain unresolved; this is not a general repair.
+The capture-only notice correction is complete for this isolated checkpoint;
+full user acceptance remains separate.
+
+**Remaining recording acceptance:** Current recording evidence covers actual
+Receiving and Admin actions. Explicit Production, Boxing and Shipping participation
+in the same recording remains to be proven through their packaged handlers; their
+ordinary business-chain regressions do not establish that D18 recording scope.
+Preserve separate captured workbooks, actor/warehouse, order and exact source IDs.
+This is an evidence gap, not a confirmed runtime defect. Guide/comparison/import/export
+and human acceptance remain open.
+
+**Previous title source checkpoint:** `44f0334`, isolated candidate
 `deploy/validation-library-title`. The title correction passes 368/368 packaged
 checks, five-package build/compile, static limits, 19 inspected captures, and the
 32/32 Release1 chain (48/48 live roles; 15/15 Create Warehouse). A native crash is
-recorded during the chain. The lifecycle notice and full Slice4be/Release1 human
-acceptance remain open. Accepted deployment and unrelated user files are preserved.
+recorded during the chain. The lifecycle notice was unresolved at that checkpoint;
+the current checkpoint above corrects it. Full Slice4be/Release1 human acceptance
+remains open. Accepted deployment and unrelated user files are preserved.
 
 **Previous runtime source checkpoint:** `7c1bb5e` (diagnostic selection continuity,
 complete terminal-reference validation and verified-UTC display), compiled candidate
@@ -37,11 +77,11 @@ may use the observed title without treating an incorrect title as accepted. Exis
 layout, selected-run/result and preservation checks remain binding. This clarifies
 the existing library surface and changes no workflow, permission or authority.
 
-**Open diagnostic wording defect:** The Applied capture exposes **Conclusion
+**Historical diagnostic wording defect:** The Applied capture exposed **Conclusion
 observed** beside the retained lifecycle notice **conclusion not evaluated**.
-Protect a correction through the actual evaluation/library handlers under D18's
-separate lifecycle/result rules. The title correction does not resolve this notice;
-visible and human acceptance remain pending.
+The actual evaluation/library handlers protect its correction under D18's separate
+lifecycle/result rules. The title correction did not resolve this notice; the
+capture-only checkpoint above does. Full visible/human acceptance remains pending.
 
 **Library-title candidate:** The actual packaged RED reports three `UserForm1`
 titles. Setting the approved caption during form initialization is the only runtime
@@ -57,7 +97,8 @@ The retry completes **368/368 PASS** on `deploy/validation-library-title`, retai
 all 324 baseline, 254 RED-pass and 363 first-attempt passing identities. All fifteen
 diagnostic-pane and four editor captures pass and are inspected; all title, layout,
 selection, source and preservation checks remain GREEN. The lifecycle notice above
-is still a separate open defect. Excel closes normally, with no recorded Event1000
+was still open at that checkpoint and is resolved by the capture-only notice above.
+Excel closes normally, with no recorded Event1000
 for that process; this does not establish a native repair. All 320 package hashes,
 protected sources and 28 module limits hold; three scripts parse and 83 links resolve.
 The same candidate's full Release1 chain passes 32/32, live roles 48/48 and Create
@@ -65,8 +106,8 @@ Warehouse 15/15. The three tracked reports and local settings are restored; all
 jobs terminate and Excel closes. A native Excel `c0000409` failure, module unknown,
 occurs during the chain despite passing assertions and remains a reliability finding.
 This does not accept the remaining guide/comparison/import/export work, deployed
-NAS use or human UAT. Next protect the truthful stopped-capture notice through the
-actual library/evaluation handlers before implementation.
+NAS use or human UAT. The subsequent capture-only notice checkpoint above supplies
+the required actual-handler RED/GREEN.
 
 **Diagnostic-pane visible-evidence entry:** The unchanged `7c1bb5e` runtime has a
 324/324 packaged baseline. The next evidence-only extension captures actual saved

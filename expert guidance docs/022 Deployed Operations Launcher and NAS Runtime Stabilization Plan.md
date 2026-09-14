@@ -5605,7 +5605,7 @@ use that observed title while the separate approved-title assertion remains
 binding. Keep every existing visual, selection and preservation check. No runtime
 correction is authorized by a failed capture lookup alone.
 
-The Applied capture also exposes an unresolved lifecycle notice: **Conclusion
+The title checkpoint's Applied capture exposed a lifecycle notice defect: **Conclusion
 observed** appears with **conclusion not evaluated**. Add its own actual-handler
 RED before correcting the notice under D18's separate lifecycle/result rules.
 Do not include that wording in a title-only completion claim.
@@ -5624,7 +5624,7 @@ gate, native repair, deployment or human acceptance is claimed from this attempt
 The retry completes **368/368 PASS** on the same candidate, retaining all 324
 baseline, 254 RED-pass and 363 first-attempt passing identities. All fifteen pane
 and four editor captures pass and are inspected. The title's RED/GREEN is complete;
-the separate lifecycle-notice defect remains open. Excel exits normally, with no
+the separate lifecycle-notice defect remained open at that checkpoint. Excel exits normally, with no
 Event1000 recorded for that process; this does not establish a general native repair.
 All 320 package pins/protected sources remain intact, with three scripts parsing,
 83 links resolving and all 28 module limits holding. The same candidate's Release1
@@ -5633,8 +5633,46 @@ and local settings are restored, all jobs terminate and Excel closes. Event1000
 records `c0000409`, module unknown, during the chain; passing assertions do not
 establish clean native execution or a repair. Guide authoring,
 How-To/Diagnostic/Compare selection, export/import, deployment and human acceptance
-remain required and are not inferred from this gate. Next protect the truthful
-stopped-capture notice through actual handlers before changing runtime wording.
+remain required and are not inferred from this gate. The subsequent capture-only
+notice checkpoint supplies its own actual-handler RED/GREEN.
+
+**Capture-only lifecycle notice test entry:** Under D18's existing separation,
+the library notice is **Stopped. Capture frozen.** both before and after evaluation.
+The separate saved-result surface owns evaluation status. Extend the real packaged
+selection/Evaluate checks for Pending, Partial and Applied before changing Core's
+notice. Expect the current **conclusion not evaluated** suffix to fail; immutable
+journals/results, policy, selection and every preceding 368 GREEN remain protected.
+This semantic-inheritance clarification changes no recording/result schema or
+authority and needs no new architecture decision. Controls v1.146 is synchronized.
+
+The focused frozen-package RED completes 260 PASS / six expected notice failures.
+The one-line Core correction then builds/compiles all five packages; only
+`modRecordingReader` differs among 225 compiled components. Full GREEN completes
+374/374, retaining all prior 368 and RED 260 passing identities. All nineteen captures
+pass and are reviewed, including byte-identity verification for six restored/source
+views. Static metrics and every component line count remain unchanged; all 325 package
+pins/protected sources and 28 module limits hold. Excel closes with no Event1000 for
+that test process; this is not a general native repair. The Release1 chain completes
+32/32, live roles 48/48 and Create Warehouse 15/15. Local settings and all three
+tracked reports are restored; all jobs terminate and Excel closes. No Excel Event1000
+is recorded in the verified chain window. Earlier native failures remain unresolved.
+The capture-only notice correction is complete for this isolated checkpoint, with
+controls v1.147 recording the same evidence; full Slice4be/Release1 acceptance is open.
+
+Runtime/tooling checkpoint: code `5e2c45a`, isolated candidate
+`deploy/validation-recording-notice`. Continue with actual packaged recording
+proof across the remaining roles; preserve the full D18 guide/comparison/import/export
+and visible user-acceptance requirements.
+
+**Remaining 4be.4 recording proof:** The current actual recording fixture exercises
+Receiving and Admin; Shipping mentions in its reader/capture helpers only check that
+reads do not access Shipping authority. It does not prove Production, Boxing and
+Shipping participation in the shared recorded sequence. Extend the actual packaged
+handler evidence for those roles under the existing D18 contract, retaining actor,
+warehouse, separate captured workbooks, ordered occurrences and all source IDs.
+The full-role business chain cannot substitute for this recording proof. This is
+an evidence gap, not a demonstrated runtime defect or a new architecture decision.
+Guide authoring, both presentations, comparison and import/export remain required.
 
 Runtime/tooling checkpoint: code `44f0334`, isolated candidate
 `deploy/validation-library-title`; controls v1.145. This checkpoint is limited to

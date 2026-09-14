@@ -1288,6 +1288,10 @@ previous links, stable run/actor/warehouse/policy identity, ordered action
 occurrences and exact closing observations. An unclosed journal is Interrupted;
 a broken journal is Incomplete evidence. Neither is reconstructed or repaired.
 Stopped remains capture lifecycle, not a diagnostic conclusion.
+Its notice is **Stopped. Capture frozen.** before and after evaluation. It must
+not claim whether evaluation has occurred; the separate saved-result surface
+reports evaluation status and provenance. This clarifies the existing lifecycle
+separation without changing any recording or result record.
 
 Core returns only primitive/serialized permitted training projections. Every
 library action checks the captured context and current policy; restricted
