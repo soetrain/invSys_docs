@@ -1,12 +1,18 @@
 # invSys Form Controls v1
 
-**Version:** 1.142 (Evaluation selection continuity packaged GREEN; full acceptance pending)
+**Version:** 1.143 (Diagnostic-pane visible-evidence test entry; full acceptance pending)
 
-**Current source checkpoint:** `7c1bb5e` (diagnostic selection continuity,
+**Current runtime source checkpoint:** `7c1bb5e` (diagnostic selection continuity,
 complete terminal-reference validation and verified-UTC display), compiled candidate
 `deploy/validation-evaluation-selection`. Code is committed and pushed.
 Earlier checkpoint notes below retain their historical scope.
 Full Slice4be and Release1 acceptance remain open.
+
+**Evidence tooling checkpoint:** `cb9e080` adds the diagnostic-pane capture gate
+and records its unsuccessful full/diagnostic attempts. Seven Pending layout and
+preservation checks pass; visible-pane acceptance and full regression retention
+remain unverified. Four scripts parse, 83 links resolve, and 315 package pins and
+the protected sources remain unchanged. Excel is closed; no new runtime release.
 
 **Inventory date:** 2026-08-31
 
@@ -16,6 +22,29 @@ Operations, Receiving, Production, or Shipping, including active controls,
 runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
+
+**Diagnostic-pane visible-evidence entry:** The unchanged `7c1bb5e` runtime has a
+324/324 packaged baseline. The next evidence-only extension captures actual saved
+Pending, Partial and Applied results at minimum/default/larger/restored sizes and
+the scrolled terminal-source view. It checks selected run/result/text, training and
+activity bytes, publication bytes and publisher/Shipping-owner call counts across
+those view operations.
+These implement D18's existing visible/layout and non-mutation gates; no runtime or
+architectural contract changes, new release, or human acceptance is claimed.
+
+The first attempt stops at 109 PASS / one native/bootstrap harness failure before
+the added visual checks. Two test-owned recovery dialogs are resolved using the
+visually verified retain-for-later choice; Excel exits and 315 package pins remain
+unchanged. Native reliability remains unproven. The unchanged full route is retried.
+
+The retry also stops at 109 PASS / one bootstrap harness failure. A committed-harness
+comparison stops later at 185 PASS / one processor Excel/RPC failure. Scoped
+diagnosis proves seven Pending layout/preservation checks but fails all five native
+window captures and then the processor (51 PASS / 6 FAIL). The capture fixture now
+sets Excel visibility before form creation; the next attempt stops in Admin Seed
+before exercising that correction. No diagnostic-pane capture or current full-gate
+acceptance is recorded. The viewport uses the existing disposable control probe;
+runtime and the approved visible contract remain unchanged.
 
 **Selection-continuity test entry:** The existing library Evaluate/selection/Refresh
 handlers must keep result ID, text and staged expectation bound to the exact selected

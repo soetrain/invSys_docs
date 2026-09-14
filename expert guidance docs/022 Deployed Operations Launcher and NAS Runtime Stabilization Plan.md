@@ -5586,6 +5586,39 @@ and the form rejects stale return values and clears results on a new journal ver
 Same-version Refresh and immutable committed results remain protected. Build/compile,
 full 293-check retention and Release1 gates remain required before completion.
 
+**Diagnostic-pane visible-evidence entry:** Continue 4be.4 against the unchanged
+`7c1bb5e` candidate and retain its 324/324 packaged baseline. Add
+`-CheckEvaluationVisualEvidence` to the complete actual-handler route: capture saved
+Pending, Partial and Applied results at minimum/default/larger/restored sizes and
+with terminal sources scrolled into view. Verify selection/result/text and original
+training/activity/publication bytes, with no publisher or Shipping-owner read calls.
+This is evidence for D18's existing layout/visible/non-mutation requirements. No new
+runtime contract or manufactured behavioral RED is needed for this test-only work;
+an observed product defect must receive its own focused RED before correction.
+
+The initial visual run stops at 109 PASS / one Admin-bootstrap harness exception,
+before the new checks. A native Excel failure and WER-linked recovery instance are
+recorded; the WER module-version-mismatch label does not establish root cause.
+Both blocking recovery dialogs are resolved with retain-for-later selected and
+visually verified. Excel exits without forced termination or recovery-file removal.
+All 315 package pins/protected sources remain intact before the unchanged retry.
+
+The retry repeats 109 PASS / one bootstrap harness failure. A Git-blob-verified
+copy of the committed harness passes bootstrap but stops at 185 PASS / one
+processor Excel/RPC failure; the new probe is not required for a native failure.
+Scoped diagnosis with the viewport consolidated into the existing control probe
+reaches 51 PASS / 6 FAIL: seven Pending layout/preservation checks pass, five native
+window captures fail, and the processor loses Excel/RPC. The fixture is corrected
+to set Excel visibility before creating Viewer/library. Its next run fails during
+Admin Seed before reaching that correction (1 PASS / one harness failure).
+No pane capture, native repair, current full-gate success or slice completion is
+claimed. Preserve these failures and isolate fixture/processor native instability
+before repeating the complete visual gate. The recording results document retains
+exact commands, limitations and safe recovery evidence. Runtime remains unchanged.
+Evidence-tooling checkpoint `cb9e080` retains this incomplete status. Final checks
+preserve 315 package pins/protected sources, parse four scripts, resolve 83 links
+and retain the existing maintenance limits. Excel is closed and all jobs terminal.
+
 **Selection-continuity checkpoint (code `7c1bb5e`, pushed):** `validation-evaluation-selection` builds
 and explicitly compiles five packages plus Operations cold start. Only the five
 intended compiled components change. Its full packaged route passes **324/324**,
