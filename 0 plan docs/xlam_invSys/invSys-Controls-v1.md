@@ -1,14 +1,21 @@
 # invSys Form Controls v1
 
-**Version:** 1.143 (Diagnostic-pane visible-evidence test entry; full acceptance pending)
+**Version:** 1.145 (Library title and diagnostic-pane evidence; full acceptance pending)
 
-**Current runtime source checkpoint:** `7c1bb5e` (diagnostic selection continuity,
+**Current runtime source checkpoint:** `44f0334`, isolated candidate
+`deploy/validation-library-title`. The title correction passes 368/368 packaged
+checks, five-package build/compile, static limits, 19 inspected captures, and the
+32/32 Release1 chain (48/48 live roles; 15/15 Create Warehouse). A native crash is
+recorded during the chain. The lifecycle notice and full Slice4be/Release1 human
+acceptance remain open. Accepted deployment and unrelated user files are preserved.
+
+**Previous runtime source checkpoint:** `7c1bb5e` (diagnostic selection continuity,
 complete terminal-reference validation and verified-UTC display), compiled candidate
 `deploy/validation-evaluation-selection`. Code is committed and pushed.
 Earlier checkpoint notes below retain their historical scope.
 Full Slice4be and Release1 acceptance remain open.
 
-**Evidence tooling checkpoint:** `cb9e080` adds the diagnostic-pane capture gate
+**Previous evidence tooling checkpoint:** `cb9e080` adds the diagnostic-pane capture gate
 and records its unsuccessful full/diagnostic attempts. Seven Pending layout and
 preservation checks pass; visible-pane acceptance and full regression retention
 remain unverified. Four scripts parse, 83 links resolve, and 315 package pins and
@@ -22,6 +29,44 @@ Operations, Receiving, Production, or Shipping, including active controls,
 runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
+
+**Library-title test entry:** D18 makes the existing **Action Paths** window title
+explicit for runtime-constructed packages. The actual library launcher must expose
+that Caption. A focused assertion precedes any runtime correction; capture discovery
+may use the observed title without treating an incorrect title as accepted. Existing
+layout, selected-run/result and preservation checks remain binding. This clarifies
+the existing library surface and changes no workflow, permission or authority.
+
+**Open diagnostic wording defect:** The Applied capture exposes **Conclusion
+observed** beside the retained lifecycle notice **conclusion not evaluated**.
+Protect a correction through the actual evaluation/library handlers under D18's
+separate lifecycle/result rules. The title correction does not resolve this notice;
+visible and human acceptance remain pending.
+
+**Library-title candidate:** The actual packaged RED reports three `UserForm1`
+titles. Setting the approved caption during form initialization is the only runtime
+change. Five-package build/compile pass, with only that form differing among 225
+compiled components. The full visual route finishes 363 PASS / 5 foreground-capture
+FAIL, retaining all 324 prior passing checks and passing all three title assertions.
+Two captures that passed in RED fail here; visible evidence is not complete.
+Excel closes. A maximum-three-attempt capture activation calibration is under test
+on the same frozen candidate, retaining exact owner/foreground checks and one final
+result per view. No accepted deployment or human acceptance changes.
+
+The retry completes **368/368 PASS** on `deploy/validation-library-title`, retaining
+all 324 baseline, 254 RED-pass and 363 first-attempt passing identities. All fifteen
+diagnostic-pane and four editor captures pass and are inspected; all title, layout,
+selection, source and preservation checks remain GREEN. The lifecycle notice above
+is still a separate open defect. Excel closes normally, with no recorded Event1000
+for that process; this does not establish a native repair. All 320 package hashes,
+protected sources and 28 module limits hold; three scripts parse and 83 links resolve.
+The same candidate's full Release1 chain passes 32/32, live roles 48/48 and Create
+Warehouse 15/15. The three tracked reports and local settings are restored; all
+jobs terminate and Excel closes. A native Excel `c0000409` failure, module unknown,
+occurs during the chain despite passing assertions and remains a reliability finding.
+This does not accept the remaining guide/comparison/import/export work, deployed
+NAS use or human UAT. Next protect the truthful stopped-capture notice through the
+actual library/evaluation handlers before implementation.
 
 **Diagnostic-pane visible-evidence entry:** The unchanged `7c1bb5e` runtime has a
 324/324 packaged baseline. The next evidence-only extension captures actual saved

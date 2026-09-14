@@ -5596,6 +5596,50 @@ This is evidence for D18's existing layout/visible/non-mutation requirements. No
 runtime contract or manufactured behavioral RED is needed for this test-only work;
 an observed product defect must receive its own focused RED before correction.
 
+**Library-title test entry:** D18's saved-run surface now explicitly names the
+window title **Action Paths**, matching the existing public library name and
+declared form caption. This is a semantic-inheritance clarification, not a new
+workflow or authority contract. After the actual packaged library launcher,
+assert the runtime Caption before any title correction. Capture discovery may
+use that observed title while the separate approved-title assertion remains
+binding. Keep every existing visual, selection and preservation check. No runtime
+correction is authorized by a failed capture lookup alone.
+
+The Applied capture also exposes an unresolved lifecycle notice: **Conclusion
+observed** appears with **conclusion not evaluated**. Add its own actual-handler
+RED before correcting the notice under D18's separate lifecycle/result rules.
+Do not include that wording in a title-only completion claim.
+
+The title's actual packaged RED completes 254 PASS / 6 FAIL: three generated
+`UserForm1` titles and three foreground captures. The one-line Operations
+initialization correction follows that RED. Its isolated `validation-library-title`
+five-package build and explicit compile pass; only the compiled library form differs
+among 225 compared components. The complete visual route finishes 363 PASS / 5 FAIL,
+retaining all 324 baseline identities and passing all three title assertions.
+The five failures are foreground captures, including two that passed during RED.
+Excel closes. A test-only bounded activation retry retains strict owner/foreground
+checks and is now under full-route validation on the unchanged candidate. No visible
+gate, native repair, deployment or human acceptance is claimed from this attempt.
+
+The retry completes **368/368 PASS** on the same candidate, retaining all 324
+baseline, 254 RED-pass and 363 first-attempt passing identities. All fifteen pane
+and four editor captures pass and are inspected. The title's RED/GREEN is complete;
+the separate lifecycle-notice defect remains open. Excel exits normally, with no
+Event1000 recorded for that process; this does not establish a general native repair.
+All 320 package pins/protected sources remain intact, with three scripts parsing,
+83 links resolving and all 28 module limits holding. The same candidate's Release1
+chain completes 32/32, live roles 48/48 and Create Warehouse 15/15. Tracked reports
+and local settings are restored, all jobs terminate and Excel closes. Event1000
+records `c0000409`, module unknown, during the chain; passing assertions do not
+establish clean native execution or a repair. Guide authoring,
+How-To/Diagnostic/Compare selection, export/import, deployment and human acceptance
+remain required and are not inferred from this gate. Next protect the truthful
+stopped-capture notice through actual handlers before changing runtime wording.
+
+Runtime/tooling checkpoint: code `44f0334`, isolated candidate
+`deploy/validation-library-title`; controls v1.145. This checkpoint is limited to
+the title correction and its verified evidence, preserving the full D18 objective.
+
 The initial visual run stops at 109 PASS / one Admin-bootstrap harness exception,
 before the new checks. A native Excel failure and WER-linked recovery instance are
 recorded; the WER module-version-mismatch label does not establish root cause.

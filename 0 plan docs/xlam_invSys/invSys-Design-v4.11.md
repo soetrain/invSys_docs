@@ -1279,7 +1279,8 @@ it does not relax the full coverage, limits, evaluation or acceptance contract.
 
 **4be.4 saved-run read surface refinement:** The Events-only `btnActionPaths`
 opens one reusable Operations-owned `frmActionPaths`, bound to the launching
-Viewer context. Its `txtPathSearch`, `lstActionPaths`, `btnPathRefresh`,
+Viewer context. Its window title is **Action Paths**, including packages that
+construct the form at runtime. Its `txtPathSearch`, `lstActionPaths`, `btnPathRefresh`,
 `txtPathEvidence` and `lblPathStatus` provide Search, selection, explicit Refresh,
 read-only evidence and availability feedback. Selection validates the entire
 selected journal, including contiguous versions, distinct record identities,
