@@ -5185,7 +5185,30 @@ candidates. This commit is not a deployment or complete Slice4be/Release1 accept
 | 4be.5 How-To and comparison | Select events or a captured sequence, edit/save/search a guide, choose How-To/Diagnostic/Compare both and exercise export/import. Expect missing guide/evidence pairing, method preference and distinction between authored steps and observed results. | Both presentations of one record; stable selection on switch; capability-gated immutable guide versions; validated export/import with origin-only evidence; older-release warning and current policy respected. |
 | 4be.6 Release and visible comparison | Run protecting regressions after focused GREEN; do not create artificial RED for already accepted behavior. | Full five-package build/compile/initialization, layout/static/live-role/full-chain/restart proof and visible user comparison before Slice 4be acceptance. |
 
-**4be.4 recording test entry:** `Test-Slice4beConfigCommands.ps1
+**4be.4 recording test entry:**
+The recorded-run foundation now has35/29 RED ->64/64 packaged GREEN on the
+first compiled candidate. The expanded256-action baseline is36/32 RED across68
+identities. Core journal/session services and Operations Start/Stop/Cancel/status
+controls implement this foundation, with explicit incomplete outcomes at known
+context/policy boundaries and failed persistence. The cleaned candidate compiles
+five packages and passes77/77 extended limits/storage/layout checks, retaining
+all prior50/64/68 identities. Full chain31/31, live48/48, Create Warehouse15/15,
+filters59/59 and Settings187/187 pass. After two publication harness/native
+failures, serial unchanged-baseline and recording-candidate runs each pass82/82
+with normal Excel closure; no publication code change was made. A native
+Excel fault during the passing chain and unavailable foreground/input desktop
+keep clean native and visible acceptance open.
+No full recording, journal-reader, comparison or Release1 acceptance is claimed.
+
+The normative D18 journal refinement specifies Start/Observation/Close entries,
+generated path/version names, distinct record/run identities, hash links,
+atomic 1MiB-bounded writes and original activity bodies. Missing Close is
+Interrupted; reads never resume a recorder. Add real-handler checks for durable
+Start, incremental observations, immutable Close, policy/context interruption
+and denied storage before implementing Core recording. These are refinements
+of the approved non-authoritative recording contract, not new task authority.
+
+`Test-Slice4beConfigCommands.ps1
 -CheckActionRecording` retains the 30 published-Viewer checks, then probes the
 actual Start/Stop/Cancel controls and existing Admin Save Value handler. Missing
 product controls are explicit observations; the callable instrumentation must
@@ -5202,11 +5225,12 @@ attempt/result pairs retain blank sequence IDs and zero ordinals. Four new
 passing checks prove ordinary activity and byte preservation, not working
 recording transitions. Five candidate hashes remain unchanged and Excel closes;
 the run's Application Error 1000 window contains no Excel fault. Prior native
-faults remain unresolved. No recording implementation or GREEN is claimed.
+faults remain unresolved. That baseline claimed no recording implementation or GREEN.
 See `tests/integration/plan022_slice4be_action_recording_results.md` in the code
-repository. Before implementing persistence, add focused durable-record and
-interruption/limit cases to this lifecycle RED, then implement the headless
-recorder and actual Viewer handlers without weakening the remaining D18 gates.
+repository. The subsequent durable-record and interruption/limit tests precede
+the foundation implementation described above. Next, protect the full-journal
+current-policy reader, missing/corrupt links, missing-Close restart behavior and
+real cross-form Operations sequences before implementing those remaining paths.
 
 Use a focused packaged harness such as the proposed
 `tools/validate_slice4be_event_viewer.ps1`, with fixtures entering through Admin

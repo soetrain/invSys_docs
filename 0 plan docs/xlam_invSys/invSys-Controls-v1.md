@@ -1,8 +1,8 @@
 # invSys Form Controls v1
 
-**Version:** 1.122 (Recording lifecycle behavioral RED)
+**Version:** 1.124 (Recorded-run foundation in validation)
 
-**Current source checkpoint:** `1d6a2ad`. Earlier uncommitted-runtime notes below
+**Current source checkpoint:** `17d788c`. Earlier uncommitted-runtime notes below
 describe preceding candidates. Full Slice4be and Release1 acceptance remain open.
 
 **Inventory date:** 2026-08-31
@@ -14,7 +14,32 @@ runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
 
-**4be.4 recording lifecycle RED:** Viewer Start Recording, Stop Recording,
+**Recorded-run foundation:** The isolated compiled candidate passes64/64
+recording lifecycle/durability checks after35/29 RED, retaining the original
+50 check identities. A separate68-check baseline establishes36/32 RED for the
+256-action boundary. The current cleaned candidate compiles all five packages;
+its extended limits/storage/layout run passes77/77 with all prior50/64/68
+identities retained. Full chain31/31, live48/48, Create Warehouse15/15,
+filters59/59 and Settings187/187 pass. After two publication harness/native
+failures, the preserved baseline and unchanged recording candidate each pass82/82
+with normal Excel closure; the earlier reliability failures remain unresolved.
+A native fault during the passing chain and unavailable foreground/input
+desktop leave clean native and visible acceptance open.
+Core owns primitive recording commands and immutable Start/Observation/Close
+journals; Operations owns the buttons and counter. Stop is capture lifecycle,
+never a diagnostic conclusion. Current-policy full-journal reads, actual Excel
+interruption/restart, Operations recording, conclusions, guides/comparison and
+visible/human acceptance remain open.
+
+**Durable recording test entry:** The D18 recording surface is backed by an
+append-only Start/Observation/Close journal, distinct run/record identities and
+hash-linked immutable versions. Start may show active only after durable save;
+storage failure is explicit and preserves ordinary work. Missing Close means
+Interrupted and never resumes recording. Tests extend the preserved lifecycle
+RED with persisted original observations and policy/context interruption.
+Implementation and the full recording acceptance gates remain open.
+
+**Historical 4be.4 recording lifecycle RED:** Viewer Start Recording, Stop Recording,
 Cancel Recording and `lblRecordingStatus` implement the already approved D18
 surface. The status/counter distinguishes capture disabled, active, stopped,
 cancelled and incomplete; stopping alone never means Conclusion observed.
@@ -2454,6 +2479,10 @@ calculated column geometry and remain readable/aligned during resize.
 | `lblEventsFamily`, `cboEventsFamily` | **Event family** — All families; candidate | Filters complete loaded groups by a contributing line's family. Choices come only from the policy-permitted projection. |
 | `lblEventsSource`, `cboEventsSource` | **Source** — All sources; candidate | Displays Inventory, Designs, User activity, Box designs and Held shipments when supplied by the loaded projection. |
 | `lblEventsOutcome`, `cboEventsOutcome` | **Recorded outcome** — All outcomes; candidate | Matches a recorded outcome while retaining all attempt/result lines. Unavailable means no supplied outcome; this selector never asserts a sequence conclusion. |
+| `btnStartRecording` | **Start Recording**; candidate | Any captured signed-in Viewer user may start when capture policy enables it. Active status requires a durable Start entry. It does not grant task or guide-maintenance permission. |
+| `btnStopRecording` | **Stop Recording**; candidate | Enabled during the current recording. Appends immutable closing evidence; unfinished attempts remain incomplete. Stopped never means Conclusion observed. |
+| `btnCancelRecording` | **Cancel Recording**; candidate | Closes the current run as cancelled without undoing work or erasing observations. |
+| `lblRecordingStatus` | Recording status / counter; candidate | Shows capture off, active count out of256, stopped, cancelled, incomplete/save failure or Partial: action limit reached. The Events-only row sits below selectors and above event headers; Inventory list space is preserved. |
 | `lblSearch`, `txtSearch` | Label and text box — **Search** | Filters the already loaded rows locally across all visible columns. |
 | `lblHeaders` | Header label | Inventory identifies Item Code, Item, UOM, Quantity, Location, and Condition. Events identifies Date, Event, Reference, Item, Qty, UOM, Location, Condition, User, and Details. |
 | `lstInventory` | Six- or ten-column list box | Inventory displays active managed levels aggregated by item code, item, UOM, location, and condition, including active zero-quantity items created before stock arrives or is produced; retired items remain omitted. Events currently displays Receipts, Returns, Dumps, Box Made/Unboxed, Shipped, **Remove** (the `SHIP_RELEASE` action that returns locked inventory to warehouse availability), **Inventory Adjustment** (including audited Admin item retirement), current Box Designs, and current Held Shipments. Slice 4x adds Production Input Consumed and Production Output Created after packaged GREEN. Both views are read-only. |

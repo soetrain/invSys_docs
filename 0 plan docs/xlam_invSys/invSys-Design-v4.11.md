@@ -1246,6 +1246,37 @@ requirements above remain binding.
 
 **Library, permissions and integrity:**
 
+**4be.4 recorded-run journal refinement:** A locally recorded run is an
+append-only series at the approved ActionPaths warehouse root. Filenames are
+generated `ActionPathId.Version.json` values; versions start at 1 and increment
+without overwrite. The Start, Observation and Close entries share an immutable
+ActionPathId and a distinct immutable SequenceId. Each entry has its own
+RecordId, previous RecordId/hash (empty only at Start), and SHA-256 over its
+exact ASCII-escaped UTF-8 JSON body, with final ContentSha256 as in Activity.
+Every entry is at most 1 MiB and is atomically published from a same-directory
+temporary file. Readers validate schema, warehouse, identity and the hash chain.
+
+SchemaVersion 1 uses RecordKind `Recording`, RecordType Start/Observation/Close,
+Version, Lifecycle Recording/Stopped/Cancelled/Incomplete, ReasonCode,
+ActionCount, CreatedByUserId, CreatedAtUTC, WarehouseId, OriginWarehouseId,
+PolicyVersion, CatalogVersion, PackageSetVersion and BuildIdentity. Name is
+`Recorded sequence`; Tags and Instructions begin empty, Method is Diagnostic,
+and Observations contain only validated original activity bodies (not input
+values or newly inferred outcomes). Start has no observations; each Observation
+entry adds one accepted attempt/result. Close retains all those observations,
+in original journal order, for training. A size failure rejects the save with
+an explicit incomplete notice; it never clips observations or rewrites entries.
+Guide authoring and derived evaluations remain separate immutable records.
+
+Start reports active only after its entry is durable. An absent Close means
+Interrupted on a later read, regardless of the last Observation entry. Reading
+never reconstructs a live recorder. Stop/Cancel/known interruption append Close;
+if storage failure prevents Close, the prior journal remains interrupted.
+Stopped is capture lifecycle only, not Conclusion observed. The journal reader
+must retain current policy restrictions and identify missing/corrupt entries as
+incomplete evidence. This is a storage refinement under D18 semantic inheritance;
+it does not relax the full coverage, limits, evaluation or acceptance contract.
+
 - Store versioned records only at
   `<WarehouseRuntimeRoot>\Training\ActionPaths\<WarehouseId>`.
   Record immutable ActionPathId, warehouse/origin, name, version, lifecycle,
