@@ -5494,7 +5494,58 @@ remain open. No new editor layout or human acceptance is claimed, and prior nati
 failures remain unresolved. Controls v1.136 and the maintained recording results
 record the same scope; Architecture v4.11 D18 is unchanged.
 
-**New-writer test entry (code `8728e08`):**
+**Captured editor/writer implementation checkpoint (code `1db6057`, pushed):**
+The captured editor/writer implementation has been validated against the
+175/62 RED checkpoint within the scope recorded below. Operations owns the modeless editor and Core owns a
+separate headless draft bound to the originating context/SequenceId. Primitive
+`modActionRecording` editor calls return EXPECTATION1 projections; fixed draft
+edits never dispatch the registered workflow. Add generates a distinct StepId,
+reorder preserves it, and Use validates/stages the explicit terminal definition.
+Stop freezes it into schema-2 Close and discards the draft; Start/Observation
+retain None. Sixteen source-import harnesses include the new draft service.
+Controls v1.138 records the editor and minimum layout. The final isolated candidate
+`deploy/validation-captured-expectation-retry` builds/compiles all five packages,
+including Operations cold start. The full packaged gate reports 189 PASS / 58 FAIL,
+retaining all 175 previous passing identities with no duplicates or terminal
+harness exception. Writer/captured staging, compatibility, caption, three layouts,
+exact reorder, stale binding and sign-out pass. Two additional actual-editor checks
+first prove the incorrect False retry default and its persisted effect, then pass
+after initializing the add-step choice True as D18 already requires. Explicit False
+still persists after reorder and Stop. No architectural change or repeat approval
+is required for this correction.
+
+The remaining failures are 54 pending evaluator checks and four visible-capture
+failures. Read-only diagnosis finds no foreground window and input-desktop access
+denied; visible operator evidence remains pending. Static regeneration retains all
+28 existing large-module limits, 192 duplicate groups and 9/45 literal/unresolved
+calls. The caption candidate passes full chain 31/31, live roles 48/48 and Create
+Warehouse 15/15. The final retry candidate passes action-limit/storage checks
+77/77. The first controller-exit run reports 120 passing checks then three harness
+failures before proving a new explicit run. It also exposes a test-isolation
+defect: the coordinator exits while a child Excel remains and loses its local-
+settings restoration copy. The fixture is deselected without guessing the user's
+prior warehouse. The coordinator now retains restoration state while waiting;
+sanitized worker diagnostics exclude exception text and arguments. Lifecycle/
+redaction and private-pipe tests each pass 6/6. The diagnostic restart rerun passes
+123/123, closes both controllers/Excel and restores its starting deselected state.
+The full-chain validator's temporary selection is also observed and removed only
+for its exact completed fixture. It now shares the private in-memory settings
+snapshot/restore helper, waits for Excel closure, and verifies values/types.
+Lifecycle/settings/redaction checks pass 10/10 and private-pipe checks 6/6.
+The final candidate passes the strengthened full chain 32/32, retaining every
+prior 31 check and adding LocalSettingsRestored; live roles 48/48 and Create
+Warehouse 15/15 pass. Tracked reports are restored exactly, Excel closes, and the
+known deselected starting state is restored. All 285 package pins/protected
+sources are preserved, 26 scripts parse and 83 links resolve. This tooling repair
+is not an architectural change, native-reliability fix or recovery of the original
+local selection lost by the first failed coordinator. Evaluation, visible evidence
+and full Slice 4be/Release 1 acceptance remain open.
+The recording results document records the Document Recovery cleanup obstruction
+and verified retain-for-later closure. It does not explain earlier native failures.
+This implements existing D18; evaluation, guides, both presentations, comprehensive
+coverage and full release acceptance remain open.
+
+**New-writer test entry (code `8728e08`, preceding implementation):**
 The new-writer gate checks actual original journal entries separately from reader
 format variants: schema 2 throughout, None on Start/Observation, and default None
 on ordinary Stop. Existing lifecycle/identity facts cover both supported formats;

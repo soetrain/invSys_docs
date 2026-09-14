@@ -1,10 +1,11 @@
 # invSys Form Controls v1
 
-**Version:** 1.137 (New-writer test entry)
+**Version:** 1.138 (Captured expectations; evaluation and visible acceptance pending)
 
-**Current source checkpoint:** `8728e08` (new-writer tests/source imports); runtime
-`ad3f92f`, compiled candidate `deploy/validation-expectation-schema`.
-Earlier uncommitted-runtime notes below describe preceding candidates.
+**Current source checkpoint:** `1db6057` (captured expectation editor/schema-2 writer
+and test-settings restoration), compiled candidate
+`deploy/validation-captured-expectation-retry`. Code is committed and pushed.
+Earlier checkpoint notes below retain their historical scope.
 Full Slice4be and Release1 acceptance remain open.
 
 **Inventory date:** 2026-08-31
@@ -15,6 +16,47 @@ Operations, Receiving, Production, or Shipping, including active controls,
 runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
+
+**Captured expectation implementation checkpoint:** Viewer Events now provides
+Expected conclusion for an active recording. Operations owns the reusable
+`frmActionPathExpectation`; its minimum size is 760 by 550 points. Add creates a
+distinct StepId; Remove and Move up/down edit the draft while the conclusion
+picker retains the exact selected StepId. The retry checkbox defaults to allowed
+and applies to the step being added; explicit False persists through reorder and
+Stop. Supporting labels explain intent and draft status. Cancel discards
+the draft; Use for this recording stages it in Core under the captured context
+and SequenceId. Stop remains immediate, freezes the staged definition and clears
+the editor. The editor's controls are excluded from ordinary activity capture as
+specified by D18. No workflow or guide permission is granted.
+
+Core retains a separate headless draft, validates it before staging, and writes
+schema-2 journals with None on Start/Observation and the explicit definition on
+Close. The primitive `modActionRecording` editor bridge uses an EXPECTATION1
+projection (draft/sequence/terminal identity plus ordered step rows); it accepts
+fixed edit commands only. This implements the existing D18 contract. The packaged
+gate reports 189 PASS / 58 FAIL, retaining all 175 prior passing checks. Captured
+staging, schema-2 writing, compatibility, caption, all three layouts, exact reorder,
+retry defaults, stale binding and sign-out clearing pass. Two actual-editor retry
+checks first failed on the unchanged caption candidate, then passed after the
+default was corrected to D18's True. The 58 remaining failures are 54 pending
+evaluation checks and four foreground-capture failures. Windows exposes no
+foreground window and denies input-desktop access; no visible operator acceptance
+is claimed. Library evaluation, guides and both presentations remain required.
+All five packages build/compile, including Operations cold start. Final-candidate
+action-limit/storage checks pass 77/77. The first controller-exit run reaches
+120 passing checks then three harness failures during a new explicit run. A
+diagnostic rerun passes 123/123 and closes both controllers and Excel. The final
+chain passes 32/32, live roles 48/48 and Create Warehouse 15/15. Its new local-settings
+restoration check retains all 31 prior checks and proves restoration after Excel
+exits. The first restart attempt's failed cleanup loses
+the in-memory local-selection backup. The test fixture is deselected, and the
+intended warehouse must be selected again. Tooling now retains restoration state
+while processes remain; lifecycle/settings/redaction checks pass 10/10 and private-
+pipe checks 6/6. The full-chain validator uses the same in-memory restoration helper.
+The rerun restores its starting deselected state; the original pre-test selection
+is not recovered. All 285 package pins and protected sources are preserved;
+26 scripts parse and 83 links resolve. No native-failure fix or visible/operator
+acceptance is claimed by the successful reruns.
 
 **New-writer test entry:** The actual recorded journal must use schema 2, carry
 None on Start/Observation, and retain None on ordinary Stop without editor input.
@@ -115,7 +157,7 @@ handler RED before runtime changes. A visible Evaluate button alone cannot satis
 GREEN. Comprehensive role coverage, How-To/Diagnostic/Compare, versioned guides and
 full Release 1 acceptance remain required.
 
-| Planned Operations surface/control | D18 behavior; acceptance pending |
+| Operations surface/control | D18 behavior; captured editor implemented, library evaluation and acceptance pending |
 |---|---|
 | Viewer Events `btnRecordingExpectation` | **Expected conclusion** opens the editor for this active recording. **Use for this recording** stages Core-owned intent; Stop immediately freezes the run, including default None. |
 | Library `btnExpectedConclusion`, `lblExpectationSummary` | **Expected conclusion** opens analysis for the selected run; label distinguishes **Captured expectation**, **This evaluation**, and exact-version **Guide expectation**. Editing analysis never changes a recording or guide. |
