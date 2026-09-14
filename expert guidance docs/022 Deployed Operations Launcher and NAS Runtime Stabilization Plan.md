@@ -5664,6 +5664,33 @@ Runtime/tooling checkpoint: code `5e2c45a`, isolated candidate
 proof across the remaining roles; preserve the full D18 guide/comparison/import/export
 and visible user-acceptance requirements.
 
+**Boxing context/permission RED:** Tooling `b6de0e5` is committed and pushed;
+runtime remains `5e2c45a` without rebuild/deployment. The expanded run finishes **1123 PASS / 57
+expected FAIL**, preserving all prior 1074 checks and 1041 passes, including
+Shipping recording40/40. The new matrix contributes 82 passes, 16 context failures
+and eight missing denial-observation failures. Signed-out forms reach the service
+but its existing permission check prevents mutation. Same-user new sessions and
+another authorized warehouse allow the stale form to enter the mutation owner;
+the probe stops before writes. Revoked permission correctly stops mutation but
+has no REQUESTED/DENIED observations. D18 already prohibits the observed stale
+dispatch; no new architecture decision is needed. Both authority files, staging/
+unknown values, captured workbook and unrelated workbook are preserved; Auth
+restoration/relaunch/reuse pass. Five instrumented compiles, 325 package pins and
+protected sources plus all static limits hold. Excel closes with no Event1000
+in the verified window, no duplicate or harness failure. This is test evidence,
+not runtime completion or a native-crash repair. Next protect failed staging/
+refresh, uncertain submissions and optional tracking/policy before owner wiring.
+
+**Boxing context/permission D13 entry:** The committed initial RED checkpoint is code
+`2593385` / docs `deea147`. Extend it through actual Make/Unbox handlers with
+calibrated service/mutation entry probes for signed-out, same-user reauthenticated,
+other-target and same-session revoked-SHIP_POST cases. The alternate warehouse
+grants SHIP_POST to distinguish binding failure from permission refusal. The probe
+stops only at mutation entry; authorization and form handlers stay real. Preserve
+all preceding 1074 checks/1041 GREENs, authority bytes, staging/unknown values and
+captured workbook. Missing context guards and denial observations are expected RED;
+failed setup/compilation is not RED. No runtime or architectural contract changes.
+
 **Boxing Make/Unbox D13 entry:** Continue Slice 4be.1 under D18's Boxing refinement.
 Catalog 9 names BOXING_MAKE and BOXING_UNBOX with existing SHIP_POST eligibility;
 runtime remains catalog 8 until meaningful packaged RED is established. The test

@@ -1,6 +1,36 @@
 # invSys Form Controls v1
 
-**Version:** 1.149 (Boxing Make/Unbox activity test entry; full acceptance pending)
+**Version:** 1.150 (Boxing captured-context and permission RED; acceptance pending)
+
+Boxing context/permission tooling is committed and pushed as `b6de0e5`.
+Runtime remains `5e2c45a` on the unchanged isolated candidate.
+
+The expanded Boxing run completes **1123 PASS / 57 expected FAIL**. Every prior
+1074 check and 1041 GREEN remains, including Shipping recording40/40. The new
+matrix has 82 passes, 16 context failures and eight missing denial-observation
+assertions. Same-user reauthentication and another authorized target still let
+the old form enter the mutation owner; the probe stops there before writes.
+Signed-out calls reach the service but are refused by its permission check.
+Revoked SHIP_POST blocks mutation, but its REQUESTED/DENIED observations are absent.
+Both authority files, captured binding, staging/custom values and unrelated
+workbook are preserved; Auth restoration and launcher reuse pass. Five instrumented
+compiles, 325 package pins/protected sources and all static limits hold. Excel
+closes with no Event1000 in the verified window. Runtime, deployment and full
+acceptance remain unchanged; failed staging/refresh and tracking/submission cases
+still need protecting evidence before outcome wiring.
+
+**Boxing context/permission test entry:** The existing D18 Boxing refinement now
+has additional actual Make/Unbox handler probes for sign-out, same-user new session,
+an alternate authorized warehouse and revoked SHIP_POST within the same session.
+Healthy calls calibrate both service and mutation entry; the mutation probe then
+stops test work before writes. Stale forms must reject before service dispatch,
+while denied permission must stop mutation and produce REQUESTED/DENIED observations.
+Both warehouse authority files, captured workbook, staging/custom values and the
+unrelated workbook are protected. This adds evidence under the existing contract;
+runtime catalog 9 and broader acceptance remain pending.
+
+The preceding Boxing RED checkpoint is code `2593385` / docs `deea147`, pushed.
+Its 1041 GREENs and all 1074 checks must remain in the expanded run.
 
 **Boxing observation contract, implementation pending:** D18 catalog 9 names the
 existing **Make Boxes** and **Unbox** handlers as BOXING_MAKE and BOXING_UNBOX,
