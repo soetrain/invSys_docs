@@ -5494,7 +5494,25 @@ remain open. No new editor layout or human acceptance is claimed, and prior nati
 failures remain unresolved. Controls v1.136 and the maintained recording results
 record the same scope; Architecture v4.11 D18 is unchanged.
 
-**4be.4 recording test entry:**
+**New-writer test entry (code `8728e08`):**
+The new-writer gate checks actual original journal entries separately from reader
+format variants: schema 2 throughout, None on Start/Observation, and default None
+on ordinary Stop. Existing lifecycle/identity facts cover both supported formats;
+new writing specifically requires schema 2. This protects the existing D18 writer
+contract before its implementation. Review also adds `modExpectationModel` to all
+16 source-import lists that import `modRecordingModel`; those declarative harness
+repairs parse and add exactly one existing dependency each. They do not alter the
+packaged candidate or establish new product behavior. Controls v1.137 records the
+same test entry; editor/captured staging and full release scope remain open.
+
+The unchanged candidate completes at 175 PASS / 62 FAIL, retaining all 175 prior
+passing identities without a harness exception. The three added writer checks
+are the only added RED; all 265 package pins and protected sources remain intact,
+and Excel closes normally. No additional runtime/build/full-chain acceptance is
+claimed. Next implement the captured editor, exact-sequence staging and schema-2
+writer using these RED cases and the existing editor-binding tests.
+
+**4be.4 recording test entry (historical):**
 The next test-first entry is the D18 saved-run read surface: actual Viewer
 Action Paths, library selection/Search/Refresh, complete journal validation,
 missing Close, corrupt/missing links and current policy. The frozen recording

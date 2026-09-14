@@ -1,9 +1,9 @@
 # invSys Form Controls v1
 
-**Version:** 1.136 (Expectation reader compatibility checkpoint)
+**Version:** 1.137 (New-writer test entry)
 
-**Current source checkpoint:** `ad3f92f` (expectation reader compatibility);
-compiled candidate `deploy/validation-expectation-schema`.
+**Current source checkpoint:** `8728e08` (new-writer tests/source imports); runtime
+`ad3f92f`, compiled candidate `deploy/validation-expectation-schema`.
 Earlier uncommitted-runtime notes below describe preceding candidates.
 Full Slice4be and Release1 acceptance remain open.
 
@@ -15,6 +15,21 @@ Operations, Receiving, Production, or Shipping, including active controls,
 runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
+
+**New-writer test entry:** The actual recorded journal must use schema 2, carry
+None on Start/Observation, and retain None on ordinary Stop without editor input.
+These are distinct from reading schema-2 compatibility variants. Existing
+lifecycle/identity checks cover both supported envelopes; the new-write check
+strictly requires schema 2. No visible control or runtime behavior changes in
+this test entry. Sixteen source-import harnesses also receive the existing Core
+validator dependency, with parser/path/diff verification. The shared editor and
+captured staging remain the next implementation boundary under D18.
+
+The candidate completes at **175 PASS / 62 FAIL**, retaining all 175 previous
+passing identities without a harness exception. Exactly the three new writer
+checks add RED; editor/evaluator RED remains. Excel closes normally, all 265
+package pins and protected sources are preserved, and runtime remains `ad3f92f`.
+This supplies test-first evidence, not new writer or visible acceptance.
 
 **Compatibility/editor-binding entry:** Actual library selection now protects
 schema-1 and schema-2 expectation records and rejects mixed journals or malformed
