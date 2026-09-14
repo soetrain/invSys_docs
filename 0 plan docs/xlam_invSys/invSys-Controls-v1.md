@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.117 (published Events reader candidate)
+**Version:** 1.119 (Events paging layout and ordering candidate)
 
 **Inventory date:** 2026-08-31
 
@@ -10,6 +10,32 @@ Operations, Receiving, Production, or Shipping, including active controls,
 runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
+
+**Grouped Events paging candidate:** Under D18's approved paging refinement,
+Operations adds Previous, Next and a page/matching/available-group count below
+the Events list. The list reserves space for this navigation strip; its controls
+anchor at the bottom on resize. Search starts on page1, boundaries disable the
+corresponding button, and one selected summary retains every source/ID detail
+line. Multiple contributing values are labelled Multiple rather than choosing a
+quantity or summing unlike units. These controls are implemented in an isolated
+candidate; packaged GREEN, layout and visible acceptance are being verified.
+An expanded actual Day/All handler test records24PASS/1FAIL: verified UTC activity
+is incorrectly compared with local Now. The correction compares verified UTC
+groups with UTC, retaining the labelled local approximation for unverified history.
+The UTC candidate passes group/page16/16, reader25/25, Refresh16/16 and Detail34/34.
+Expanded real-form geometry establishes25/4 RED for a status label clipped by
+1.4 points at every tested size. Moving it up four points preserves its height
+and passes minimum/default/larger/restored geometry. These resize checks do not
+constitute foreground or human acceptance. Mixed-source equal-time ordering then
+records29/1 RED, retaining all25 prior GREEN and the four layout checks. The pager
+now resolves the named SourceKind field and follows D18's SourceKind/SourceId/Source
+tie order. The corrected isolated candidate compiles all five packages and passes
+reader30/30, group/page16/16, stale Refresh16/16 and Detail34/34, retaining every
+prior regression identity. Static call/duplicate/size ratchets hold and protected
+package/source pins match with Excel closed. Shipping presentation, remaining
+filters, broader role/chain and full/visible acceptance stay open; runtime is still
+an uncommitted candidate pending those implementation gates.
+See [paging evidence](../../../invSys_fork/tests/integration/plan022_slice4be_event_groups_results.md).
 
 **Current Events publication checkpoint (2026-09-13):** Core's ordinary snapshot
 path publishes the separate bounded Events artifact under D18. The public Admin

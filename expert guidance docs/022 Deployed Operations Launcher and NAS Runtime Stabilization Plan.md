@@ -5051,6 +5051,28 @@ unlike-unit summaries remain RED. Static evidence is207 components/5709 procedur
 127173 lines,9 literal/45 unresolved calls,189 duplicate groups and28 size ratchets.
 Four added maintenance candidates, including obsolete reader helpers, require
 review; no new size, duplicate or dynamic-call exception is approved.
+The next isolated Operations candidate implements the existing D18 group/page
+contract in `cEventPageProjection` and the Viewer form: cached loaded groups,
+100 matching summaries, Previous/Next and count controls, with full source-line
+selection and explicit Multiple values. The existing8/8 RED protects it. The
+same package compiles and an expanded Day/All test establishes24PASS/1FAIL for
+verified UTC events compared against local Now. UTC-aware comparison follows
+that focused RED; no architecture or timestamp-provenance weakening is adopted.
+The UTC candidate compiles all five packages and passes group/page16/16, reader
+25/25, Refresh16/16 and Detail34/34. Expanded real-form geometry records25/4 RED:
+the status label exceeds the client height by1.4 points at each tested size.
+Moving it up four points preserves its height and passes all four resize checks;
+foreground and human evidence remain separate. Mixed-source equal-time ordering
+then establishes29/1 RED with all25 prior GREEN retained. The corrected pager reads
+the named SourceKind field and follows D18/the publisher's SourceKind/SourceId/
+Source tie order. No architectural rule changes. The new isolated candidate
+compiles all five packages and passes cold start, reader30/30, group/page16/16,
+stale Refresh16/16 and Detail34/34. Exact prior regression identities remain;
+static call/duplicate/size ratchets hold and protected package/source pins match
+with Excel closed. Shipping presentation, remaining filters, full role/chain and
+visible acceptance stay open; runtime remains an uncommitted candidate. Excluded
+declaration-placement and bootstrap setup
+failures are retained in the linked paging evidence; neither is behavioral RED.
 See [package cleanup evidence](../../invSys_fork/tests/integration/plan022_slice4be_package_cleanup_results.md).
 See [Events publication evidence](../../invSys_fork/tests/integration/plan022_slice4be_events_publication_results.md).
 
