@@ -954,6 +954,44 @@ owner-fact and workbook-preservation rules, not new ControlIds, outcomes, catalo
 versions, permissions or authority stores. Shipping activity/source-reference
 definitions and remaining control coverage require their own protecting evidence.
 
+**4be.1 Boxing Make/Unbox activity refinement:** D18 comprehensive control coverage
+registers two existing Box Maker commands in catalog 9 (implementation pending):
+`BOXING_MAKE` / **Make Boxes** / `mBtnBoxMakerMake_Click`, and
+`BOXING_UNBOX` / **Unbox** / `mBtnBoxMakerUnmake_Click`. Both have OwnerId
+BOXING_WORKFLOW, SourceRole Boxing, Surface **Operations > Shipping > Box Maker**,
+Class Command, existing SHIP_POST eligibility and EventCode prefix ControlId plus
+underscore. Catalogs 1-8 retain their definitions; an older saved policy does not
+implicitly enable these new entries. Other Boxing controls remain separately
+accounted for and require their own implementation and evidence.
+
+The real handler validates its captured workbook/session/warehouse before any
+observation or owner dispatch. A valid context observes REQUESTED/Info/Unknown
+before authorization/validation; permission must then be established before the
+mutation owner, independently of optional tracking. A stale form is not revived
+by signing in again as the same user. Direct services, programmatic rendering and
+automatic synchronization do not impersonate either control.
+
+DENIED/Blocked/Unchanged means authorization was not established before mutation.
+REJECTED/Warning/Unchanged requires explicit owner/form validation rejection
+before submission or mutation. Both have empty references. PENDING/Notice/Unknown
+requires accepted submission and unconfirmed completion of the processing/refresh
+path. CONFIRMED/Info/Unknown additionally requires the owner's explicit successful
+processing/refresh return, never report-text parsing or a generic success flag.
+Neither establishes individual inventory application. FAILED/Error/Unknown
+retains all accepted or possibly submitted references after an uncertain, partial
+or failed action; it never implies rollback. STAGED is not a Make/Unbox outcome.
+
+SourceEventRefs preserve every owning Inventory event ID for this action, including
+each event's multiple contributing package/component lines in published evidence.
+PENDING/CONFIRMED require only Submitted references; Unknown is allowed only with
+FAILED. The existing four-field, warehouse, uniqueness, write-entry, size and
+preallocated-but-unsubmitted exclusion rules apply. No earlier action's event is
+borrowed merely because it is processed during catch-up. Completion is evaluated
+from owning published evidence, not from cleared staging or the activity outcome.
+This refinement implements existing D18 ownership and observation rules; it adds
+no business capability, canonical schema or authority path. Box Designer saves
+and ADMIN_MAINT maintenance permissions are separate.
+
 **4be.1 Shipping activity/source-reference clarification:** Under the approved
 D18 comprehensive coverage, owner-fact and exact-reference rules, catalog 8 adds
 the following Command controls, all owned by SHIPPING_WORKFLOW with existing

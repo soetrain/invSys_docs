@@ -1,6 +1,26 @@
 # invSys Form Controls v1
 
-**Version:** 1.148 (Shipping recording evidence added; full acceptance pending)
+**Version:** 1.149 (Boxing Make/Unbox activity test entry; full acceptance pending)
+
+**Boxing observation contract, implementation pending:** D18 catalog 9 names the
+existing **Make Boxes** and **Unbox** handlers as BOXING_MAKE and BOXING_UNBOX,
+owned by BOXING_WORKFLOW with SourceRole Boxing and the existing SHIP_POST gate.
+No new visible command is introduced. The protecting packaged test observes real
+Make/Unbox and invalid-quantity actions, independent submitted IDs and explicit
+owner refresh returns, then requires their ordered recording evidence. Missing
+activity is expected RED on the frozen catalog-8 candidate. Other Boxing controls,
+context/permission/failure cases and the combined role recording remain required.
+This refines existing D18; runtime and human acceptance remain unchanged.
+
+The packaged RED completes **1041 PASS / 33 expected FAIL**: 32 independent
+Boxing business/preservation checks pass and 26 missing-observation checks fail;
+the other seven failures are the existing D8-A findings. All prior 1016 checks
+and 1009 GREENs, including the 40 Shipping recording checks, remain. Five
+instrumented compiles pass, Excel closes, no Event1000 is recorded in the verified
+window, and 325 package pins/protected sources plus all static limits hold.
+Context/permission and failed staging/refresh outcomes need protecting evidence
+before runtime wiring; the current owner Boolean may coexist with a staging warning.
+See the code repository's `plan022_slice4be_boxing_activity_results.md`.
 
 **Shipping recording tooling checkpoint:** `7c0307e`, committed and pushed.
 Runtime remains `5e2c45a`; no XLAM rebuild or deployment.

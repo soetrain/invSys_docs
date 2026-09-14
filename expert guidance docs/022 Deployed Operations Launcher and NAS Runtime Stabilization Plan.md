@@ -5664,6 +5664,33 @@ Runtime/tooling checkpoint: code `5e2c45a`, isolated candidate
 proof across the remaining roles; preserve the full D18 guide/comparison/import/export
 and visible user-acceptance requirements.
 
+**Boxing Make/Unbox D13 entry:** Continue Slice 4be.1 under D18's Boxing refinement.
+Catalog 9 names BOXING_MAKE and BOXING_UNBOX with existing SHIP_POST eligibility;
+runtime remains catalog 8 until meaningful packaged RED is established. The test
+will use the actual form handlers for Make, Unbox and zero-quantity rejection,
+independently observe submitted IDs/owning refresh returns, and check recorded
+order, captured binding, exact keys and source-line preservation. Missing activity
+and recording observations are expected RED; setup/compile failure is not RED.
+Preserve the preceding 40 Shipping recording checks and comparable expanded
+Shipping GREENs. Context/permission/failure matrices remain required before runtime
+completion. This compatible control registration follows semantic inheritance;
+the pending D8-A decision and all broader Release 1 gates remain separate.
+
+The frozen-package run completes **1041 PASS / 33 expected FAIL**, preserving
+every prior 1016 check and 1009 pass, including Shipping recording40/40. Boxing
+has 32 independent owner/source/preservation passes and 26 missing-observation
+failures; seven existing D8-A failures remain separate. No duplicate or harness
+exception occurs. Five instrumented projects compile; Excel closes with no
+Event1000 in the verified window. All 325 package pins/protected sources, runtime
+static metrics/component sizes and 28 module limits remain unchanged; three
+scripts parse and 84 links resolve. This is meaningful RED, not implementation
+completion. Next protect captured-context/permission loss and failed staging/
+refresh: the current refresh routine can return True with a staging warning, so
+the normal-return probe cannot justify clean outcomes for that branch. Both
+Shipping form/owner modules are at their size limits; retain those limits through
+reviewed, protected extraction when implementing. The code repository's
+`tests/integration/plan022_slice4be_boxing_activity_results.md` records exact scope.
+
 **Shipping-only 4be.4 recording proof:** Tooling checkpoint `7c0307e` is committed
 and pushed. The unchanged runtime source `5e2c45a` candidate
 `deploy/validation-recording-notice` passes 40 focused assertions around the actual
