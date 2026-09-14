@@ -5024,6 +5024,14 @@ publisher acceptance remain open. Both released-deleted-handle and unchanged-han
 live diagnostics pass48/48 with the same check set, so the maintained projection
 fixture remains unchanged. Independent published-only Viewer tests can advance
 under existing D18 while this acceptance limitation stays explicit.
+The new actual Settings -> Admin publication -> Viewer test completes **9 PASS /
+14 FAIL**,23 unique checks and no harness failure. Activity/detail and publication
+time are absent; Viewer still enters the Shipping supplement reader and does not
+reject damaged, incompatible, wrong-warehouse or missing Events artifacts. Current
+visibility Save handlers do not republish, but the positive visibility restore
+case fails. Context invalidation and file preservation pass. Optional foreground
+captures remain setup failures, not acceptance. See
+[published read RED](../../invSys_fork/tests/integration/plan022_slice4be_published_read_results.md).
 See [package cleanup evidence](../../invSys_fork/tests/integration/plan022_slice4be_package_cleanup_results.md).
 See [Events publication evidence](../../invSys_fork/tests/integration/plan022_slice4be_events_publication_results.md).
 
@@ -5031,7 +5039,7 @@ See [Events publication evidence](../../invSys_fork/tests/integration/plan022_sl
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |
 | 4be.2 Settings policy and profiles | Through actual Settings open/save/reset handlers, expect missing Event Tracking tab, policy/profile persistence, denials and personal view preference. Reject cross-target/stale-version saves and unknown controls/fields. | Admin General/Event Tracking tabs; D5 Core policy/profile commands; required-versus-optional tracking; safe defaults, atomic compatibility settings and unknown-column preservation. Operations personal Settings works without Admin installed; invSys-user/warehouse preference isolation and restart. |
-| 4be.3 Comprehensive Events | Through Viewer launch/Refresh/filter/selection, expect missing family/source/outcome coverage, identities/detail lines and bounded paging. | 5,000 complete published groups, 100-row pages, all contributing lines, labels/zone/freshness/coverage, policy-aware display and read-only authority. |
+| 4be.3 Comprehensive Events | Through Viewer launch/Refresh/filter/selection, expect missing family/source/outcome coverage, identities/detail lines and bounded paging. The published-read test uses actual Settings activity and Admin publication, then exercises integrity/schema/warehouse rejection, current visibility changes, stale recovery and context invalidation through Viewer handlers. | 5,000 complete published groups, 100-row pages, all contributing lines, labels/zone/freshness/coverage, policy-aware display and read-only authority. |
 | 4be.4 Recorded sequence and conclusions | Start Recording, use actual Receiving/Production/Shipping/Boxing/Admin handlers, Stop/Cancel and evaluate. Expect absent ordered controls, cross-form correlation and terminal results; accepted-but-unapplied, missing or interrupted evidence must not pass. | One explicit actor/warehouse sequence across permitted forms/submissions, immutable attempts/results, 256-action and 1 MiB limits, confirmed-versus-pending/failed/cancelled/incomplete conclusions; policy changes, tracking failure, retries and source authority protected. |
 | 4be.5 How-To and comparison | Select events or a captured sequence, edit/save/search a guide, choose How-To/Diagnostic/Compare both and exercise export/import. Expect missing guide/evidence pairing, method preference and distinction between authored steps and observed results. | Both presentations of one record; stable selection on switch; capability-gated immutable guide versions; validated export/import with origin-only evidence; older-release warning and current policy respected. |
 | 4be.6 Release and visible comparison | Run protecting regressions after focused GREEN; do not create artificial RED for already accepted behavior. | Full five-package build/compile/initialization, layout/static/live-role/full-chain/restart proof and visible user comparison before Slice 4be acceptance. |

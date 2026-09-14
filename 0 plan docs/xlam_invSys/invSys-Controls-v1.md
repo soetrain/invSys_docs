@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.115 (Events publication candidate)
+**Version:** 1.116 (published Events reader RED)
 
 **Inventory date:** 2026-08-31
 
@@ -43,6 +43,19 @@ Viewer publication reads/paging, remaining Operations/Admin control coverage,
 recordings, How-To/Diagnostic/Compare both, NAS and human acceptance remain open.
 See [Events publication evidence](../../../invSys_fork/tests/integration/plan022_slice4be_events_publication_results.md)
 and [package cleanup evidence](../../../invSys_fork/tests/integration/plan022_slice4be_package_cleanup_results.md).
+
+**Published Viewer read test entry:** The existing D18 contract is now protected
+by a separate real Settings -> Admin publication -> Viewer Open/Refresh/Search/
+selection test. It checks current Admin visibility against already published
+activity, invalid publication rejection, stale recovery and captured-context
+invalidation. Missing runtime behavior must produce behavioral RED before the
+Core/Operations reader changes. This adds no control or new architectural rule.
+The complete packaged run is **9 PASS / 14 FAIL**,23 unique checks and no harness
+failure. Publication fixture, source bytes and captured-context guards pass;
+published activity/detail, rejection/recovery and the Shipping read boundary fail.
+The passing hide-only check cannot establish policy enforcement because the
+positive restore case fails. Optional foreground captures remain unavailable.
+See [published read RED](../../../invSys_fork/tests/integration/plan022_slice4be_published_read_results.md).
 
 **Shipping publication test entry:** D18 requires current-state ShippingBOM and
 station-profile ShippingHolds evidence, retaining every permitted line and exact
