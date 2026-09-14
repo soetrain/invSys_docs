@@ -1,10 +1,10 @@
 # invSys Form Controls v1
 
-**Version:** 1.138 (Captured expectations; evaluation and visible acceptance pending)
+**Version:** 1.139 (Selected-run expectations; evaluation and visible acceptance pending)
 
-**Current source checkpoint:** `1db6057` (captured expectation editor/schema-2 writer
-and test-settings restoration), compiled candidate
-`deploy/validation-captured-expectation-retry`. Code is committed and pushed.
+**Current source checkpoint:** `ea2e2ae` (shared recording/analysis expectation
+editor and exact selected-run binding), compiled candidate
+`deploy/validation-analysis-expectation`. Code is committed and pushed.
 Earlier checkpoint notes below retain their historical scope.
 Full Slice4be and Release1 acceptance remain open.
 
@@ -16,6 +16,39 @@ Operations, Receiving, Production, or Shipping, including active controls,
 runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
+
+**Selected-run expectation implementation checkpoint:** The library's existing
+`btnExpectedConclusion` contract now uses the same Operations editor as active
+recording. `modExpectationEditor` owns one instance across both entry points.
+Core's `modPathExpectation` retains analysis intent against the selected validated
+journal's exact RecordId/version/hash and captured context. Cancel discards only
+the draft; Use for this evaluation stages intent without writing a guide, changing
+the journal, or creating workflow activity. `lblExpectationSummary` distinguishes
+Captured expectation, This evaluation, and no selected conclusion. Changing the
+run or context clears staged intent and any open analysis draft. The existing
+library minimum remains 720 by 520 points. These implement D18's approved rules;
+the evaluator/result surface and guide authoring remain pending.
+
+The unchanged captured candidate completes the expanded packaged RED at 189 PASS /
+60 FAIL, retaining all 189 preceding passing identities with no terminal harness
+exception. Two new failures protect a nonempty draft across a run switch and
+absence of inherited steps in the new selection. Implementation began only after
+those actual-handler RED observations. The candidate then completes at 210 PASS /
+39 FAIL, retaining all 189 prior passing identities and gaining 21 GREEN checks.
+Opening, None defaults, Cancel, ordered editing, analysis staging/provenance,
+captured provenance and both run-switch checks pass. Existing recording/editor
+regressions and library minimum/default/larger/restored layouts pass. The sign-out
+result assertion now requires a populated conclusion before sign-out; an absent
+result control cannot count as cleared evidence. It remains RED. The 39 failures
+are 35 pending evaluator checks and four foreground captures. No diagnostic-result
+or visible/operator acceptance is claimed. Five packages build/compile, including
+Operations cold start. Static evidence preserves all 28 module limits, 192 duplicate
+groups and 9/45 literal/unresolved dynamic calls. The full chain passes 32/32,
+live roles 48/48 and Create Warehouse 15/15. Local settings and tracked reports are
+restored, and Excel closes normally. Final verification preserves 290 package
+pins and protected sources; 17 scripts parse and 83 local links resolve. The
+approved architecture is unchanged; evaluator, guide/presentation, visible/NAS
+and full Release 1 acceptance remain open.
 
 **Captured expectation implementation checkpoint:** Viewer Events now provides
 Expected conclusion for an active recording. Operations owns the reusable

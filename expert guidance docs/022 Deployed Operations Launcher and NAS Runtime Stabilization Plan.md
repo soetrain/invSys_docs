@@ -5494,6 +5494,38 @@ remain open. No new editor layout or human acceptance is claimed, and prior nati
 failures remain unresolved. Controls v1.136 and the maintained recording results
 record the same scope; Architecture v4.11 D18 is unchanged.
 
+**Selected-run expectation checkpoint (code `ea2e2ae`, pushed):** Following `1db6057`, the
+shared editor extends to D18's selected-run analysis contract. Headless Core keeps
+the selected journal's exact RecordId/version/hash binding and separate staged
+intent; Operations owns one editor across recording and analysis. Changing run or
+context clears the draft. Captured expectation and This evaluation remain distinct,
+and no analysis edit writes the original journal, publishes a guide, or emits
+workflow activity. The library retains its 720 by 520 minimum. This is an
+implementation of the existing D18 refinement, not an architecture change.
+
+The expanded actual-handler RED completes at 189 PASS / 60 FAIL, retaining every
+prior 189 passing identity without a terminal harness exception. Its two new
+failures require nonempty draft invalidation on run switch and prevent inherited
+steps in a new selection. The shared editor/Core binding implementation follows
+that RED. The isolated candidate `deploy/validation-analysis-expectation` builds and
+explicitly compiles all five packages, including Operations cold start. Comparison
+finds exactly seven changed components and the two new owner modules. Its packaged
+run completes at 210 PASS / 39 FAIL, retaining all 189 prior passing identities and
+gaining 21 GREEN checks. Analysis opening/default/cancel/edit/stage/provenance and
+run-switch behavior pass, as do prior recording/editor and library-layout checks.
+The sign-out result test is tightened to require a populated conclusion before
+sign-out, preventing an absent control from passing as cleared evidence. It remains
+RED with the evaluator. The remaining failures are 35 evaluator checks and four
+foreground captures. Static growth is 195 VBA lines, with all 28 existing module
+limits, 192 duplicates and 9/45 literal/unresolved calls preserved. Excel closes
+normally. The same candidate passes full chain 32/32, live roles 48/48 and Create
+Warehouse 15/15, including verified local-settings restoration. Tracked reports
+are restored exactly. Final checks preserve 290 package pins and protected sources,
+parse 17 changed scripts and resolve 83 local links. No result/visible acceptance
+or native-reliability repair is claimed.
+The complete evaluator, immutable derived records, guide lifecycle, both
+presentations and Release 1 acceptance remain required.
+
 **Captured editor/writer implementation checkpoint (code `1db6057`, pushed):**
 The captured editor/writer implementation has been validated against the
 175/62 RED checkpoint within the scope recorded below. Operations owns the modeless editor and Core owns a
