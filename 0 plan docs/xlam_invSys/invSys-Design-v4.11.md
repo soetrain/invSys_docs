@@ -1299,6 +1299,20 @@ controls implement the approved library and integrity rules. Guide authoring,
 expectations, evaluation, both presentations and import/export remain required
 extensions of that library, not alternative records or a reduced R1 scope.
 
+**Release-provenance read constraint:** BuildIdentity is opaque and
+PackageSetVersion identifies package compatibility; inequality alone does not
+establish chronological age. A lower supported catalog version can identify an
+Older release. Otherwise differing package/build identity is labelled
+**Different release/build; relative age unavailable**, retaining the original
+observations. This applies D18's truthful provenance/unavailable-evidence rule;
+it does not infer that a GUID or package count orders releases.
+The journal BuildIdentity belongs to Core's recorder; an observation's
+BuildIdentity belongs to its producing Admin or Operations package. Preserve
+both owning identities. An attempt and its result must agree on their owning
+package/build/catalog; observations share the journal's catalog and package-set
+compatibility version, but their build IDs need not equal Core's. This follows
+the existing original-observation/owner-provenance rule, not a new build scheme.
+
 - Store versioned records only at
   `<WarehouseRuntimeRoot>\Training\ActionPaths\<WarehouseId>`.
   Record immutable ActionPathId, warehouse/origin, name, version, lifecycle,

@@ -1,8 +1,8 @@
 # invSys Form Controls v1
 
-**Version:** 1.125 (Saved-run reader initial focused GREEN)
+**Version:** 1.126 (Reader provenance and geometry checkpoint)
 
-**Current source checkpoint:** `650828c`. Earlier uncommitted-runtime notes below
+**Current source checkpoint:** `00a7ab6`. Earlier uncommitted-runtime notes below
 describe preceding candidates. Full Slice4be and Release1 acceptance remain open.
 
 **Inventory date:** 2026-08-31
@@ -14,6 +14,19 @@ runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
 
+**Current reader validation:** The rebuilt candidate compiles five packages and
+passes117/117 focused checks plus59/59 Viewer filters. Library bounds/non-overlap
+and actual Close/reopen pass alongside preserved recording/reader identities.
+The copied builder is removed; static audit confirms only the three scoped
+RDR-UI-THUNKS-01 duplicate exceptions and unchanged dynamic-call/module limits.
+Publication's first attempt fails in fixture setup with RPC unavailable; guarded
+recovery preserves three loaded add-in files. The unchanged candidate then passes
+publication82/82, detail34/34, full chain31/31, live48/48 and Create Warehouse15/15.
+The chain records another combase/c0000005 Excel fault despite passing assertions;
+candidate hashes are unchanged and Excel is closed. Native-clean, recording
+restart, comparison and visible/human acceptance
+remain open.
+
 **Saved-run reader test entry:** D18 names Events `btnActionPaths` and the
 reusable captured `frmActionPaths` library: `txtPathSearch`, `lstActionPaths`,
 `btnPathRefresh`, read-only `txtPathEvidence`, and `lblPathStatus`. Selection
@@ -22,10 +35,26 @@ Incomplete evidence. Current policy applies on every library action. Open,
 Search, selection and Refresh never publish, repair, resume capture or mutate
 training/authority. Packaged71/18 RED becomes89/89 focused GREEN with all prior
 68 checks retained; five packages compile and ten package pins are preserved.
-Static duplicates189->193 remain unresolved, and reader geometry, expanded
-integrity/context cases, restart, broader regressions and visible acceptance
-are still open. Guide authoring, evaluation and How-To/Diagnostic/Compare both
+At that initial checkpoint, duplicates189->193 and reader geometry/integrity
+follow-ups remained open; current validation above supersedes those findings.
+Restart and visible acceptance remain open. Guide authoring, evaluation and How-To/Diagnostic/Compare both
 remain required.
+
+**Reader provenance refinement:** Observation package-set/catalog must match
+its journal; owning Admin/Operations build IDs remain distinct from Core's
+journal build. Attempt/result pairs retain their own matching build identity.
+Lower supported catalogs show Older release; differing opaque
+package/build identities alone show Different release/build with relative age
+unavailable. The reader retains original observations and never infers age from
+a GUID. The first expanded run proves two common-provenance failures; its
+proposed Core/role build equality is invalid and removed. Two warning
+expectations were corrected before implementation. The corrected frozen run is
+99/5 with all89 prior reader checks retained; four failures are valid RED and
+the invalid Core/role build-equality expectation is excluded. The corrected
+candidate passes117/117, including library bounds/non-overlap at720x520,820x640,
+1000x760 and restored default. Maintenance exception
+RDR-UI-THUNKS-01 is limited to three single-statement event-body duplicate groups;
+the copied builder is removed and the static audit passes within that scope.
 
 **Recorded-run foundation:** The isolated compiled candidate passes64/64
 recording lifecycle/durability checks after35/29 RED, retaining the original

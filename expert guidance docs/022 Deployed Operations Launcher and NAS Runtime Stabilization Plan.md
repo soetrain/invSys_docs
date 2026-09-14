@@ -5200,6 +5200,48 @@ the copied builder and short event bodies require cleanup/review before the
 maintenance gate passes. Reader layout, expanded integrity/context cases,
 actual Excel restart, broader regressions and visible acceptance remain open.
 
+Reader follow-up tests enforce matching journal/observation package-set and
+catalog provenance, owning attempt/result build identity, release warnings, warehouse/schema rejection and
+library geometry/context recovery. Builder duplication is removed through a
+declarative control table. Explicit maintenance exception RDR-UI-THUNKS-01
+retains only the three single-statement MSForms duplicate groups named in the
+recording evidence report (Hide, guarded Layout, and RefreshPaths delegates).
+Expected duplicate ceiling192 preserves the189 baseline plus those three
+required event bodies; no other growth exception is granted. D18 architecture,
+D13 tests and all remaining reader/release acceptance gates remain unchanged.
+
+The expanded frozen-reader run records99/5 across104 checks: two common
+package-set/catalog failures are valid RED; the proposed Core/role build
+equality is excluded by the correction below. Two proposed older-build/package
+warnings use an unsupported chronological assumption. BuildIdentity is a GUID
+and PackageSetVersion is a compatibility label. Per the normative clarification,
+those two cases must instead require a difference warning with age unavailable;
+the existing lower-catalog Older release rule remains. Rerun corrected warning
+expectations before implementing that presentation; preserve all89 prior GREEN
+identities and original-evidence retention checks.
+
+The first combined candidate exposes a correction to the proposed build test:
+Activity.MakeBody obtains BuildIdentity from its producing Admin/Operations
+package, whereas the journal records Core. Equating those IDs breaks accepted
+recording and contradicts D18 owner provenance. Remove that comparison, retain
+the common package-set/catalog checks, and test mismatched owning attempt/result
+builds instead. This restores the normative contract; it is not permission to
+rewrite original activity or change package build identities. The failing
+candidate cannot supply reader or Release1 GREEN evidence.
+
+The rebuilt owner-provenance candidate compiles all five packages and passes
+117/117 focused checks and59/59 filters, preserving prior77/89 identities and
+all104 expanded IDs with the documented expectation corrections. Static audit
+confirms192 duplicate groups with exactly the three explicit exceptions, no
+dynamic-call growth and all28 individual oversized-module limits. Publication
+stops before assertions with the recurring RPC setup failure; its verified
+empty recovery child closes with three add-in hashes unchanged. The unchanged
+candidate then passes publication82/82 and detail34/34. Full-chain validation
+passes31/31, with live48/48 and Create Warehouse15/15, preserved candidate hashes,
+restored generated reports and Excel closed. The chain records another
+combase/c0000005 Excel fault despite passing assertions. Native-clean, actual
+recording restart and user acceptance remain unproven.
+
 The recorded-run foundation now has35/29 RED ->64/64 packaged GREEN on the
 first compiled candidate. The expanded256-action baseline is36/32 RED across68
 identities. Core journal/session services and Operations Start/Stop/Cancel/status
