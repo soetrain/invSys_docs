@@ -5463,6 +5463,37 @@ editor sequence/context binding before implementing Core expectation validation
 and the shared Operations editor. Remaining evaluator integrity/storage, guides,
 comparison and full Release 1 acceptance remain mandatory.
 
+**Compatibility/editor-binding entry:** The D18 gate now adds actual library
+selection of schema-1, schema-2 None and schema-2 expected-step records, plus mixed
+journals, premature expectations, duplicate/unknown fields, invalid types/codes,
+missing terminals and 257 steps. Variants preserve the real owning observations;
+original disposable journal bytes are restored after every case. Real editor
+actions test stable hidden StepIds on reorder, a stale editor across Stop/Start,
+and nonempty draft clearing on sign-out. No new architectural behavior is proposed.
+The first implementation boundary is strict headless Core expectation validation
+and compatible recording reads, then the Operations-owned shared editor and
+captured staging. The remaining evaluator/guide/release scope is unchanged.
+
+**Expectation reader compatibility checkpoint (code `ad3f92f`):** The frozen candidate reports
+173 PASS / 61 FAIL; the strict Core reader candidate
+`deploy/validation-expectation-schema` reports 175 PASS / 59 FAIL, retaining all
+173 passing identities and passing all 15 compatibility checks without a harness
+exception. Two Core modules change and one validator is added. All five packages
+build/compile, including Operations cold start; isolated full chain 31/31, live
+roles 48/48 and Create Warehouse 15/15 pass. Tracked generated reports are restored
+exactly and Excel is closed. All 265 package pins and protected sources remain
+preserved. Static metrics retain all 28 large-module ratchets, 192 duplicate groups
+and 45/9 unresolved/literal calls. One maintenance candidate is removed by existing
+test reachability evidence; no code is deleted.
+
+Core reads schema 1 and schema 2; writing schema 2 still requires the already-RED
+shared editor and context/SequenceId-bound staging. Those are the next implementation
+steps, not an optional alternative to the approved writer. The 59 remaining RED
+checks, evaluator/storage, both presentations, guides and full Release 1 gates
+remain open. No new editor layout or human acceptance is claimed, and prior native
+failures remain unresolved. Controls v1.136 and the maintained recording results
+record the same scope; Architecture v4.11 D18 is unchanged.
+
 **4be.4 recording test entry:**
 The next test-first entry is the D18 saved-run read surface: actual Viewer
 Action Paths, library selection/Search/Refresh, complete journal validation,

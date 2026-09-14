@@ -1,9 +1,9 @@
 # invSys Form Controls v1
 
-**Version:** 1.135 (Captured expectation/matching/evidence RED; implementation pending)
+**Version:** 1.136 (Expectation reader compatibility checkpoint)
 
-**Current source checkpoint:** `1746f88` (captured expectation/evidence tests); runtime
-`99a69aa`, compiled candidate `deploy/validation-recording-isolation`.
+**Current source checkpoint:** `ad3f92f` (expectation reader compatibility);
+compiled candidate `deploy/validation-expectation-schema`.
 Earlier uncommitted-runtime notes below describe preceding candidates.
 Full Slice4be and Release1 acceptance remain open.
 
@@ -15,6 +15,27 @@ Operations, Receiving, Production, or Shipping, including active controls,
 runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
+
+**Compatibility/editor-binding entry:** Actual library selection now protects
+schema-1 and schema-2 expectation records and rejects mixed journals or malformed
+expectations. `lstExpectedSteps` retains each exact StepId as its hidden bound
+value; reordering must preserve that identity and the selected terminal. A draft
+left open across Stop/Start cannot apply to a different SequenceId. Sign-out must
+clear or unload even a nonempty hidden draft. These tests implement the existing
+D18 refinement. The frozen candidate records 173 PASS / 61 FAIL. Strict Core
+validation/read support now passes all 15 compatibility checks in the new candidate:
+175 PASS / 59 FAIL overall, all 173 prior passing identities retained, no harness
+exception. The shared Operations editor, captured staging/schema-2 writer and
+evaluator remain pending; the new editor-binding tests are still RED.
+
+All five packages build/compile, including Operations cold start. Full chain
+31/31, live roles 48/48 and Create Warehouse 15/15 pass in isolated fixtures.
+Excel is closed; 265 package pins and protected sources are preserved. Static
+evidence retains all 28 large-module ratchets, 192 duplicate groups and 45/9
+unresolved/literal calls. This checkpoint adds no visible control; existing
+Viewer/library layout checks pass. It does not supply new operator acceptance or
+resolve earlier native failures. Detailed evidence is maintained in the recording
+results document referenced below.
 
 **Expectation/evidence semantics RED:** The actual editor/Evaluate suite
 now adds captured expectation on Stop, rejected-then-successful retry matching,
