@@ -1,9 +1,9 @@
 # invSys Form Controls v1
 
-**Version:** 1.128 (Late-result isolation GREEN; native closure unresolved)
+**Version:** 1.129 (Cold recording restart test prepared; execution pending)
 
-**Current source checkpoint:** `99a69aa`; compiled candidate
-`deploy/validation-recording-isolation`.
+**Current source checkpoint:** `9115b77` (restart test prepared); runtime
+`99a69aa`, compiled candidate `deploy/validation-recording-isolation`.
 Earlier uncommitted-runtime notes below describe preceding candidates.
 Full Slice4be and Release1 acceptance remain open.
 
@@ -15,6 +15,15 @@ Operations, Receiving, Production, or Shipping, including active controls,
 runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
+
+**Next D13 gate prepared:** `-CheckRecordingRestart` creates a real unclosed
+recording through Viewer Start and Admin Save Value, then deliberately interrupts
+only its verified disposable Excel process. A fresh process must show Interrupted
+through the Action Paths library, with no resumed recorder or rewritten evidence;
+ordinary work stays outside that run and a new explicit recording gets a distinct
+identity. The12 added checks retain the reader baseline. Test syntax passes;
+execution awaits closure of the prior chain's visible Excel dialog. No new RED,
+GREEN, runtime behavior, control or architecture change is claimed.
 
 **Current D13 evidence:** Actual Viewer Start/Stop and Admin Save Value establish
 two recordings. The frozen candidate first reports127PASS/3FAIL; the calibrated

@@ -5250,6 +5250,20 @@ Next prove an actual unclosed recording across a fresh Excel process, then real
 Operations/multi-event and deferred-result sequences, conclusions, guides and both
 presentations. Full Slice4be and Release1 acceptance remain open.
 
+**4be.4 actual cold-interruption test prepared:** `-CheckRecordingRestart` retains
+the packaged reader baseline and adds12 checks. Start plus a real Admin Save Value
+must persist an unclosed three-entry journal. The test verifies the exact initial
+Excel HWND/process, candidate project paths and disposable saved workbooks before
+terminating that held process; it never deletes a Close record or uses a runtime
+reset to simulate interruption. Fresh Excel must display Interrupted through the
+actual library controls, preserve fixture bytes and package hashes, leave ordinary
+actions unsequenced, and give a new explicit run a distinct identity. Existing
+limits/storage/isolation gates run separately and remain required. Three changed
+PowerShell parsers and whitespace checks pass. Runtime execution and fresh-driver
+compile remain unverified while the prior chain's visible Excel dialog remains.
+No RED/GREEN or contract change is claimed; a setup/ownership/compile failure must
+not be counted as behavioral RED.
+
 **4be.4 recording test entry:**
 The next test-first entry is the D18 saved-run read surface: actual Viewer
 Action Paths, library selection/Search/Refresh, complete journal validation,
