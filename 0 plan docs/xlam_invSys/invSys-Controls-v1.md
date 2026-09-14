@@ -1,9 +1,9 @@
 # invSys Form Controls v1
 
-**Version:** 1.129 (Cold recording restart test prepared; execution pending)
+**Version:** 1.130 (Actual cold interruption proven; restarted reader under validation)
 
-**Current source checkpoint:** `9115b77` (restart test prepared); runtime
-`99a69aa`, compiled candidate `deploy/validation-recording-isolation`.
+**Current source checkpoint:** `ddc2dbc` (restart calibration); runtime `99a69aa`,
+compiled candidate `deploy/validation-recording-isolation`.
 Earlier uncommitted-runtime notes below describe preceding candidates.
 Full Slice4be and Release1 acceptance remain open.
 
@@ -16,14 +16,35 @@ runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
 
-**Next D13 gate prepared:** `-CheckRecordingRestart` creates a real unclosed
-recording through Viewer Start and Admin Save Value, then deliberately interrupts
-only its verified disposable Excel process. A fresh process must show Interrupted
-through the Action Paths library, with no resumed recorder or rewritten evidence;
-ordinary work stays outside that run and a new explicit recording gets a distinct
-identity. The12 added checks retain the reader baseline. Test syntax passes;
-execution awaits closure of the prior chain's visible Excel dialog. No new RED,
-GREEN, runtime behavior, control or architecture change is claimed.
+**Current restart gate:** `-CheckRecordingRestart` creates a real unclosed recording
+through Viewer Start and Admin Save Value, then deliberately interrupts only its
+verified disposable Excel process. A fresh process must show Interrupted through
+the Action Paths library, with no resumed recorder or rewritten evidence; ordinary
+work stays outside that run and a new explicit recording gets a distinct identity.
+The13 restart checks include pristine Viewer calibration and retain the108-check
+reader foundation. Runtime/package/contract changes and full restart GREEN are
+not claimed.
+
+**2026-09-14 execution update:** The previous residual is a Document Recovery
+prompt. Selecting/verifying **Yes, I want to view these files later**, then OK,
+allows normal Excel exit without forced termination or deleting recovery files.
+The first restart gate records111PASS/1harness failure. Its108 earlier checks and
+three actual interruption/fresh-process checks pass; opening Viewer after test
+driver installation produces a VBA compiler file-access error. The exact failed
+test is reset out of verified break mode, then the harness exits and Excel closes.
+This is not product RED or completed restart acceptance. The next run adds a
+pristine packaged Viewer launch before installing fresh-process drivers, retaining
+all12 original restart checks. That calibrated run also ends111PASS/1harness
+failure: the pristine Viewer hits the same compiler error before any fresh-process
+probe is installed. Probe editing is therefore not a necessary trigger. The
+verified scope is Viewer launch after intentional interruption under the same
+PowerShell controller; general operator cold-start failure is not established.
+The compiler error is acknowledged; unusable COM debugger access then requires
+termination of only the exact failed test process. Both tests are terminal and
+Excel is closed. All260 package pins,15 protected source files and the existing
+reviewed Shipping visibility-only change are verified. Next isolate the fresh
+reader in a separate PowerShell controller using in-memory fixture input. No
+runtime/package/contract change is made; native and visible acceptance stay open.
 
 **Current D13 evidence:** Actual Viewer Start/Stop and Admin Save Value establish
 two recordings. The frozen candidate first reports127PASS/3FAIL; the calibrated
@@ -37,14 +58,12 @@ and all28 oversized source-file limits are preserved. Controls/captions and the
 approved D18 contract are unchanged.
 
 The same candidate passes full chain31/31, live-role48/48 and Create Warehouse15/15.
-The first combined run's109/1 RPC failure remains unresolved. The passing chain
-leaves an Excel instance with a visible native dialog. Initial inspection found
-zero workbooks; normal Quit preserved all three loaded add-in files, but closure
-is not verified. No forced termination occurs and no further Excel job starts.
-A read-only snapshot verifies260 package pins and15 protected sources, plus the
-existing reviewed Shipping visibility-only change, explicitly with ExcelClosed=False.
-Native reliability and visible human acceptance remain open. The next D13 entry
-is actual interrupted recording across a fresh Excel process, followed by real
+The first combined run's109/1 RPC failure remains unresolved. The passing chain's
+Document Recovery prompt was resolved with its recovery-retention option and
+normal exit. Following the two restart attempts described above, Excel is closed;
+260 package pins,15 protected sources and the reviewed Shipping visibility-only
+change pass preservation. Native reliability and visible human acceptance remain
+open. The next D13 entry separates the restart controller before continuing real
 Operations/multi-event sequences, conclusions and How-To/Diagnostic/Compare.
 
 **Current reader validation:** The rebuilt candidate compiles five packages and

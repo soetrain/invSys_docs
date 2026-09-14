@@ -5264,6 +5264,36 @@ compile remain unverified while the prior chain's visible Excel dialog remains.
 No RED/GREEN or contract change is claimed; a setup/ownership/compile failure must
 not be counted as behavioral RED.
 
+**2026-09-14 execution update:** MSAA identifies the preceding chain residual's
+Document Recovery prompt. The exact process is reverified; selecting and verifying
+**Yes, I want to view these files later**, then OK, permits normal exit without
+force or recovery-file deletion. The first cold-restart gate completes111PASS/
+1harness failure: all108 earlier checks and real durable interruption/distinct
+Excel process checks pass. Fresh-process instrumented Viewer opening produces
+the compiler error **Error accessing file. Network connection may have been lost.**
+The code pane selects cOperationsAnchorManager line75; cause and actual network
+loss are not established. Acknowledging the error and resetting only that failed
+test from verified break mode lets the harness exit and Excel close normally.
+The five candidate hashes remain unchanged. This is not product RED or full
+restart GREEN. The next controlled run adds pristine Viewer launch before fresh
+driver installation, retaining all12 original restart checks; no runtime behavior
+or D18 contract is changed. Earlier RPC/native reliability remains unresolved.
+
+The calibrated rerun also records111PASS/1harness failure. Its pristine Viewer
+launch, through the existing packaged action wrapper, encounters the same compiler
+error before any fresh-process driver code is installed. Editing those drivers
+is not a necessary trigger. Keep the scope precise: same PowerShell controller,
+intentional prior Excel interruption, then a fresh Excel process. Ordinary cold
+operator startup has not been proven defective by this comparison. After error
+acknowledgement, COM debugger access is unusable; the exact failed test process
+is terminated to release the waiting harness. Its subsequent RPC-unavailable
+report is a cleanup consequence, not another independent crash. Both runs are
+terminal, Excel is closed, and260 package pins plus15 protected sources and the
+reviewed Shipping visibility-only change pass preservation. No source/package
+runtime change is made. Next separate the reader's PowerShell controller, pass
+fixture input only in memory, and calibrate pristine launch there before adding
+drivers. Cold-restart and full native/visible acceptance remain open.
+
 **4be.4 recording test entry:**
 The next test-first entry is the D18 saved-run read surface: actual Viewer
 Action Paths, library selection/Search/Refresh, complete journal validation,
