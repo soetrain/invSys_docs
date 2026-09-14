@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.121 (Publication and Viewer source checkpoint)
+**Version:** 1.122 (Recording lifecycle behavioral RED)
 
 **Current source checkpoint:** `1d6a2ad`. Earlier uncommitted-runtime notes below
 describe preceding candidates. Full Slice4be and Release1 acceptance remain open.
@@ -13,6 +13,26 @@ Operations, Receiving, Production, or Shipping, including active controls,
 runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
+
+**4be.4 recording lifecycle RED:** Viewer Start Recording, Stop Recording,
+Cancel Recording and `lblRecordingStatus` implement the already approved D18
+surface. The status/counter distinguishes capture disabled, active, stopped,
+cancelled and incomplete; stopping alone never means Conclusion observed.
+The new packaged `-CheckActionRecording` test retains all 30 published-reader
+checks and uses the actual Viewer controls plus Admin Save Value to protect
+sequence ordinals, distinct repeated actions, immutable attempts/results and
+Stop/Cancel behavior. Missing controls are observed product behavior, not a
+missing macro seam. Implementation, GREEN, remaining role coverage, record
+storage/limits/interruption, conclusions and visible acceptance remain open.
+The unchanged compiled maintenance candidate records **34 PASS / 16 FAIL**,
+50 unique checks with all prior 30 published-reader identities retained GREEN
+and no harness exception. Missing controls/status and blank sequence identities/
+zero ordinals on valid Admin attempt/result pairs are behavioral RED. The four
+new passing checks prove ordinary activity and byte preservation only, not
+successful stopping or cancellation. Excel closes normally, five candidate
+hashes remain unchanged, and no Excel Application Error 1000 appears in this
+run's observation window; earlier native faults remain unresolved.
+See [recording lifecycle evidence](../../../invSys_fork/tests/integration/plan022_slice4be_action_recording_results.md).
 
 **Publication/Viewer implementation checkpoint:** D18's View, Event family, Source
 and Recorded outcome selectors filter complete loaded groups, retain every detail

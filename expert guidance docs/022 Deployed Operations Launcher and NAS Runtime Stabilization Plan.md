@@ -5185,6 +5185,29 @@ candidates. This commit is not a deployment or complete Slice4be/Release1 accept
 | 4be.5 How-To and comparison | Select events or a captured sequence, edit/save/search a guide, choose How-To/Diagnostic/Compare both and exercise export/import. Expect missing guide/evidence pairing, method preference and distinction between authored steps and observed results. | Both presentations of one record; stable selection on switch; capability-gated immutable guide versions; validated export/import with origin-only evidence; older-release warning and current policy respected. |
 | 4be.6 Release and visible comparison | Run protecting regressions after focused GREEN; do not create artificial RED for already accepted behavior. | Full five-package build/compile/initialization, layout/static/live-role/full-chain/restart proof and visible user comparison before Slice 4be acceptance. |
 
+**4be.4 recording test entry:** `Test-Slice4beConfigCommands.ps1
+-CheckActionRecording` retains the 30 published-Viewer checks, then probes the
+actual Start/Stop/Cancel controls and existing Admin Save Value handler. Missing
+product controls are explicit observations; the callable instrumentation must
+work and the ordinary attempt/result fixture must be valid before recording RED
+can be claimed. Protect disabled capture, sequential occurrence identity,
+incremental immutable activity, stopping without a conclusion and cancellation.
+The normative recording status is `lblRecordingStatus`. This first lifecycle
+test does not establish all-role coverage, saved-record integrity, limits,
+restart/interruption or diagnostic evaluation; those remain required 4be.4 gates.
+The unchanged compiled maintenance candidate records **34 PASS / 16 FAIL**,
+50 unique checks, no harness exception, with all 30 prior published-reader
+identities retained GREEN. Recording controls/status are absent; valid Admin
+attempt/result pairs retain blank sequence IDs and zero ordinals. Four new
+passing checks prove ordinary activity and byte preservation, not working
+recording transitions. Five candidate hashes remain unchanged and Excel closes;
+the run's Application Error 1000 window contains no Excel fault. Prior native
+faults remain unresolved. No recording implementation or GREEN is claimed.
+See `tests/integration/plan022_slice4be_action_recording_results.md` in the code
+repository. Before implementing persistence, add focused durable-record and
+interruption/limit cases to this lifecycle RED, then implement the headless
+recorder and actual Viewer handlers without weakening the remaining D18 gates.
+
 Use a focused packaged harness such as the proposed
 `tools/validate_slice4be_event_viewer.ps1`, with fixtures entering through Admin
 Generate Warehouse/Create Warehouse and optional Seed. A missing fixture,

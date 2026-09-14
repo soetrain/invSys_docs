@@ -1232,6 +1232,18 @@ semantic inheritance and do not accept incomplete coverage or Action Paths.
   observed run, not a compliance audit or guarantee of future success.
   Imported examples remain **Origin evidence** and never count as local runs.
 
+**4be.4 recording surface refinement:** The Operations-owned Viewer exposes the
+approved Start Recording, Stop Recording and Cancel Recording controls with a
+`lblRecordingStatus` status/counter. The status distinguishes capture disabled,
+active recording, stopped, cancelled and incomplete evidence. A stopped label
+describes capture lifecycle only; it never asserts a diagnostic conclusion.
+Opening or repainting the surface creates no observed action. The controls use
+the captured Viewer context and primitive/serialized headless Core boundaries;
+ordinary role/Admin forms retain their own bindings and owning handlers. This
+names the UI implementation of the existing D18 lifecycle under semantic
+inheritance; all persistence, limits, interruption, policy and evaluation
+requirements above remain binding.
+
 **Library, permissions and integrity:**
 
 - Store versioned records only at
