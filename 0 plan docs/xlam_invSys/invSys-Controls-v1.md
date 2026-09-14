@@ -1,8 +1,8 @@
 # invSys Form Controls v1
 
-**Version:** 1.133 (Shared Operations sequence proven; Evaluate RED)
+**Version:** 1.134 (Expectation editor/partial-application RED; implementation pending)
 
-**Current source checkpoint:** `b2c995f` (Operations sequence/evaluation test); runtime
+**Current source checkpoint:** `564a90e` (expectation/partial-application tests); runtime
 `99a69aa`, compiled candidate `deploy/validation-recording-isolation`.
 Earlier uncommitted-runtime notes below describe preceding candidates.
 Full Slice4be and Release1 acceptance remain open.
@@ -15,6 +15,22 @@ Operations, Receiving, Production, or Shipping, including active controls,
 runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
+
+**Latest expectation/evaluation RED (2026-09-14):** The actual library/editor
+probe and Admin BatchSize/processor handlers reach pending, three-applied and
+four-applied evidence for one recorded Operations/Admin sequence. The unchanged
+candidate reports 153 PASS / 33 FAIL with no harness exception and normal Excel
+closure. Every 135 prior passing identity and all 108 foundation checks remain
+GREEN. Failures concern missing expectation/evaluation controls and saved results;
+the controls below remain pending, not accepted. All 260 package pins, 15 protected
+sources and the reviewed Shipping visibility-only change are preserved.
+
+The first attempt reports 138/23, including an RPC harness failure at the second
+processor call. Its verified empty child Excel closes normally with three add-in
+files unchanged. The comparison does not explain that native failure. Captured
+expectation/schema compatibility, retry/order/missing and command-only semantics,
+stale/restricted/corrupt evidence, result integrity/permissions and visible
+comparison still require tests and implementation. Runtime remains `99a69aa`.
 
 **Latest Operations sequence proof (2026-09-14):** The actual Receiving Ribbon
 callback, Add/Confirm handlers and Admin Save Value record nine actions across
@@ -38,11 +54,32 @@ fails an existing foreground guard before the new scenario. Native reliability
 and visible acceptance remain open; the subsequent successful fixture run does
 not explain those failures. Runtime/packages/architecture are unchanged.
 
-Next refine expectation/evaluation UI and serialized records under approved D18,
-then protect actual positive, awaiting, failed/cancelled/incomplete and restricted/
-stale/corrupt evidence outcomes before implementation. A visible Evaluate button
-alone cannot satisfy GREEN. Comprehensive role coverage, How-To/Diagnostic/Compare,
-versioned guides and full Release1 acceptance remain required.
+**Expectation/evaluation refinement (2026-09-14; not implemented):** Architecture
+v4.11 D18 now names the shared expectation editor, optional captured expectation,
+separate evaluation draft and immutable derived result. Plan 022 sequences actual
+handler RED before runtime changes. A visible Evaluate button alone cannot satisfy
+GREEN. Comprehensive role coverage, How-To/Diagnostic/Compare, versioned guides and
+full Release 1 acceptance remain required.
+
+| Planned Operations surface/control | D18 behavior; acceptance pending |
+|---|---|
+| Viewer Events `btnRecordingExpectation` | **Expected conclusion** opens the editor for this active recording. **Use for this recording** stages Core-owned intent; Stop immediately freezes the run, including default None. |
+| Library `btnExpectedConclusion`, `lblExpectationSummary` | **Expected conclusion** opens analysis for the selected run; label distinguishes **Captured expectation**, **This evaluation**, and exact-version **Guide expectation**. Editing analysis never changes a recording or guide. |
+| `frmActionPathExpectation` | Modeless **Expected steps and conclusion**, captured to the originating Viewer/session/warehouse and recording or selected run. No workflow execution or permission grant. |
+| `lstExpectedSteps`, `cboExpectedControl`, `cboExpectedOutcome`, `chkExpectedRetry` | Fixed registered captions with hidden exact IDs; ordered stable StepIds, required outcomes and retry matching, bounded to 256 steps. No entered business values or executable text. |
+| `btnAddExpectedStep`, `btnRemoveExpectedStep`, `btnExpectedStepUp`, `btnExpectedStepDown` | Edit/reorder the draft while preserving StepIds; repeated controls get distinct steps. |
+| `cboTerminalStep`, `cboTerminalKind` | Select a required step and command completion or application of every exact source event emitted by its matched occurrence. Default None cannot assert success. |
+| `btnUseExpectation`, `btnCancelExpectation` | Use validates/stages in the originating scope. Cancel discards only the editor draft. A signed-in user may stage analysis for a permitted run without guide-maintenance capability. |
+| Library `btnEvaluatePath`, `txtPathEvaluation`, `lblEvaluationStatus` | **Evaluate** invokes headless Core using the selected journal and explicitly loaded permitted Events evidence. Locked result shows one of the five D18 statuses and evidence provenance; each saved result is immutable. |
+| Training editor/evaluation controls above | Deliberate activity-capture exclusion to avoid self-referential workflow evidence. Saved training records supply provenance. These are not unregistered business controls silently omitted from comprehensive coverage. |
+
+Run/context changes clear staged analysis and prior result selection. All controls
+must fit supported minimum/resized layouts, preserve visible original observations,
+and fail truthfully for unavailable/restricted/stale/corrupt required evidence.
+Schema-2 recording Close captures the explicit expectation; schema-1 journals stay
+readable and unchanged. Separate schema-1 Evaluation records append under the
+fixed Evaluations child directory. None of these pending controls or formats is
+claimed as packaged GREEN or visible operator acceptance.
 
 **Earlier recovery proof (2026-09-14):** The neutral coordinator exits the creator
 fully before a fresh reader opens the same saved fixture, without repeating

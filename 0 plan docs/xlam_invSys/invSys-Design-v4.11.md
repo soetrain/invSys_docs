@@ -1299,6 +1299,137 @@ controls implement the approved library and integrity rules. Guide authoring,
 expectations, evaluation, both presentations and import/export remain required
 extensions of that library, not alternative records or a reduced R1 scope.
 
+**4be.4 expectation and evaluation refinement (2026-09-14):** This implements
+the approved ordered-step and terminal-result rules above. It adds no workflow
+execution, recovery, permission grant, source-identity inference or substitute
+for How-To/Diagnostic/Compare. Guide expectations and run/evaluation expectations
+use the same definition; their provenance and authoring permissions stay distinct.
+
+An expectation definition has SchemaVersion 1, Steps, TerminalStepId and
+TerminalKind. Each step has a nonempty, unique, stable StepId, a registered
+ControlId, a registered RequiredOutcome and Boolean RetryAllowed. Steps are
+ordered and bounded to 256. Reordering preserves StepId; repeating a ControlId
+creates another StepId. A selected terminal references one of those steps and
+uses CommandCompleted or SourceEventsApplied. TerminalKind None requires an empty step list
+and empty TerminalStepId. It is the default, never an implicit expectation built
+from whatever happened to succeed. Reject unknown/duplicate fields, invalid
+types, unsupported controls/outcomes, missing terminal steps and oversize input;
+there are no user expressions, predicates or executable names.
+
+Operations provides one modeless `frmActionPathExpectation`, caption **Expected
+steps and conclusion**. Its `lstExpectedSteps`, `cboExpectedControl`,
+`cboExpectedOutcome`, `chkExpectedRetry`, `btnAddExpectedStep`,
+`btnRemoveExpectedStep`, `btnExpectedStepUp`, `btnExpectedStepDown`,
+`cboTerminalStep`, `cboTerminalKind`, `btnUseExpectation` and `btnCancelExpectation`
+edit only that definition. Pickers show fixed registered role/control/outcome
+captions; hidden IDs retain the exact definitions. No entered business values,
+credentials, backend procedure names or arbitrary text enter the expectation.
+The editor captures its originating Viewer/session/warehouse and recording or
+selected run; Cancel discards its draft and never invokes a workflow.
+
+Viewer's Events-only `btnRecordingExpectation`, **Expected conclusion**, opens
+that editor for the active recording. **Use for this recording** stages a
+validated definition in Core under that exact active context/SequenceId; it does
+not append an observation, change policy or authorize an action. Stop retains its
+immediate freeze behavior, including when no expectation was chosen. New recording
+journals use SchemaVersion 2, which adds ExpectedConclusion to the existing
+recording envelope. Start/Observation entries contain the None definition; Close
+contains the last explicitly staged definition. No schema-1 entry is rewritten.
+Readers support both complete schema-1 and schema-2 journals, reject mixed schemas
+within one journal, and treat schema 1 as having no captured expectation. All
+existing hash-chain, origin, actor, catalog, policy, size and completeness rules
+remain binding. An expectation is authored intent, not proof that a step ran.
+
+The selected-run library adds `btnExpectedConclusion`, **Expected conclusion**,
+`lblExpectationSummary`, `btnEvaluatePath`, **Evaluate**, and a read-only
+`txtPathEvaluation`/`lblEvaluationStatus` result surface. Observations remain
+visible and unmodified. A captured expectation is identified as **Captured
+expectation**. Editing for analysis stages **This evaluation**; it never changes
+the captured definition or an authored guide. A guide supplies its exact immutable
+ActionPathId/version/hash, identified as **Guide expectation**. Guide selection,
+authoring and both presentations remain required in 4be.5. A signed-in user may
+stage an evaluation expectation for any permitted selected run; this creates no
+guide and grants no ACTION_PATH_MAINT or underlying workflow capability. Changing
+run/context clears staged expectations and previous result selection. Editor and
+library controls must fit the supported minimum/resized layouts. These training
+authoring/evaluation controls are explicitly catalogued as excluded from user-
+activity capture to avoid self-referential workflow evidence; their saved training
+records provide their own provenance.
+
+Evaluation consumes the selected validated journal and the last successfully,
+explicitly loaded Events projection. Core retains that already validated model,
+bound to captured context, PublicationId and verified LoadedAtUTC; callers supply
+only that descriptor, never a purported authoritative payload. The existing
+EVENTS1 identity/load-time fields supply the descriptor without changing their
+meaning. A failed explicit Refresh marks retained evidence stale for evaluation;
+a successful Refresh replaces it. Sign-out/context loss clears it. An unavailable
+descriptor, legacy envelope without compatible evidence, stale load, integrity or
+schema failure gives Incomplete evidence. Evaluate never reads a newer publication
+behind the user's loaded view, publishes, processes an inbox, or opens canonical
+inventory/design workbooks. Publication after a load changes no prior evaluation;
+explicit Refresh and another Evaluate are required to observe the newer result.
+Current visibility and required capture-policy evidence are checked through their
+existing owning policy read boundary, without policy repair or mutation.
+
+Match required steps from left to right against original action ordinals. Use the
+earliest eligible occurrence after the preceding match. Different controls are
+extra actions, retained visibly. With RetryAllowed=False, the first occurrence of
+that ControlId must have the required outcome; a later success cannot erase it.
+With RetryAllowed=True, later occurrences may match the required outcome while
+earlier failed/mismatching occurrences remain visible. Repeated required steps
+need distinct ActivityIds. A confirmed mismatch or missing required action in
+complete, eligible capture is Failed; an absent action whose required capture or
+visibility cannot be established is Incomplete evidence. Do not infer historical
+collection eligibility from a changed current policy. A malformed/unreadable run
+is incomplete; a valid cancelled run is Cancelled; interrupted or incomplete
+capture cannot satisfy a conclusion. Missing/corrupt/restricted required evidence
+takes precedence over a success claim. Matching an expected failure does not by
+itself establish a completed terminal command.
+
+CommandCompleted additionally requires the registered owner's positive command-
+completion semantics for the matched outcome. Severity, nonempty result text,
+DataEffect, handler return or mere submission is not a completion classifier.
+Its successful display remains **Command completed; Domain application not
+asserted**. SourceEventsApplied checks every exact source reference of the matched
+terminal action, including repeated references across other actions. The set must
+be nonempty and its owning source must supply supported applied evidence for
+every ID. Preserve original Submitted/Unknown observations after later application;
+do not rewrite them as applied. A complete, available loaded owner projection
+with no relevant exclusions/omissions may show Awaiting published result for
+submitted IDs whose application is not yet published, including partial application.
+If missing IDs could instead reflect unavailable, restricted or clipped required
+coverage, the result is Incomplete evidence. Present complete groups can establish
+their own applied evidence despite omission of unrelated groups. Current-state
+supplements, another warehouse/sequence, SKU matches, timestamps alone and imported
+origin observations never substitute for owning application. Source-specific failure
+requires an explicit supported owner result; absence alone is not failure.
+
+Each Evaluate appends a new immutable SchemaVersion-1 RecordKind Evaluation under
+the fixed `<ActionPaths warehouse root>\Evaluations` child directory. Core generates
+EvaluationId and writes `<EvaluationId>.1.json` atomically with Version 1, the
+existing ASCII-escaped UTF-8/final ContentSha256 convention and 1 MiB maximum. There
+is no caller-supplied path, overwrite, silent truncation or durable local fallback.
+The original journal remains at its existing root. Recording discovery does not
+reinterpret evaluation files as journal versions. Failure to save is explicit;
+an unsaved calculation must not be presented as a saved diagnostic result.
+
+The result binds ActionPathId, exact closing/selected journal version, RecordId
+and hash, SequenceId, recorded actor, evaluating actor/UTC, warehouse/origin,
+catalog/package/build, capture and evaluation policy versions, expectation source
+and complete definition/hash, and any exact guide ID/version/hash. It retains the
+five-state result, fixed reason codes, StepId-to-ActivityId/ordinal matches,
+missing/failed/unavailable steps, extra ActivityIds and every terminal source
+reference with its supported owner status. Publication provenance includes its
+identity/hash/schema/build, publication/load times and relevant coverage. Applied
+group evidence retains source/ID, complete-line count/hash and exact contributing
+System_Key values without inventing line identities or aggregating unlike units.
+Do not serialize raw authority payloads, unknown columns, credentials, paths or
+arbitrary exceptions. Re-evaluation uses a new EvaluationId, optionally naming the
+previous selected result, and never rewrites its conclusion or evidence. A result
+is derived evidence of that observation/version, not a guarantee about current or
+future physical state. A read of saved results still applies current visibility;
+it cannot disclose observations that a current read would restrict.
+
 **Release-provenance read constraint:** BuildIdentity is opaque and
 PackageSetVersion identifies package compatibility; inequality alone does not
 establish chronological age. A lower supported catalog version can identify an

@@ -5385,13 +5385,56 @@ Final closed-Excel verification preserves260 package pins,15 protected sources
 and the existing reviewed Shipping visibility-only change;83 local document
 links resolve. The ignored aggregate is `recording-operations-final-preservation.json`.
 
-Next refine the expectation/evaluation controls and serialized records in the
-normative D18 specification, this plan and controls, then extend the actual-handler
-test with positive, awaiting, failed/cancelled/incomplete, restricted/stale/corrupt
-and immutable-derived-result cases before implementation. The existing presence
-RED must not be satisfied with a button that performs no evaluation. Full role
-coverage, conclusions, How-To/Diagnostic/Compare, versioned guides and visible
-NAS/operator acceptance remain required under the unchanged goal.
+**2026-09-14 expectation/evaluation implementation refinement:** The normative
+D18 subsection **4be.4 expectation and evaluation refinement** now specifies the
+shared ordered expectation editor, optional captured expectation and separate
+evaluation draft. This is semantic inheritance of the approved D18 rules, not
+a new architecture approval or evidence of implemented behavior.
+
+Operations owns `frmActionPathExpectation`, the Viewer Expected conclusion entry,
+and library Expected conclusion/Evaluate/result surfaces. Core validates and stages
+the exact definition, freezes it only on recording Close, evaluates the selected
+run against the explicitly loaded Events evidence, and appends immutable results.
+New journals use schema 2; complete schema-1 journals remain readable without
+rewriting. Evaluation files use the fixed Evaluations child directory and never
+replace journals. Training editor/evaluation controls are catalogued exclusions
+from activity capture; saved training records carry their own provenance.
+
+The test-first sequence extends the actual Operations/Admin fixture through the
+real editor and Evaluate handlers. Protect None/default and cancelled draft,
+stable ordered StepIds and distinct repeated occurrences, retry behavior, command
+completion versus all terminal source events applied, partial application, explicit
+Refresh, stale/restricted/corrupt evidence, current context/policy, and immutable
+result provenance/read permissions. Expected initial RED is absent expectation
+controls and evaluation results on the unchanged compiled candidate; harness or
+compile failure does not count. Preserve every prior GREEN identity and package.
+Only after focused behavioral RED may the matching Core/Operations runtime change.
+
+The existing presence RED must not be satisfied with a button that performs no
+evaluation. Schema compatibility, layout, five-package compile, maintenance,
+live-role/full-chain regressions and visible evidence remain required. Full role
+coverage, How-To/Diagnostic/Compare, versioned guide authoring/import/export and
+NAS/operator acceptance remain within the unchanged goal.
+
+**Expectation editor/partial-application RED (2026-09-14; code `564a90e`):** The new
+`-CheckRecordingEvaluation` gate uses the actual library/editor controls and a
+fixed four-step expectation spanning Admin Save and two Receiving submissions.
+Admin's real BatchSize save limits application to three events, then the next
+processor call brings the total to four. Pending, partial and applied publications
+are separate verified fixtures. The unchanged candidate ends **153 PASS / 33 FAIL**,
+with no harness exception and normal Excel closure, retaining all 135 previous
+passing identities and all 108 foundation checks. Expected failures are missing
+expectation/evaluation controls and saved results. Preservation checks do not
+substitute for the failing save/append assertions.
+
+An earlier run ends 138/23, including one RPC harness failure at the second
+processor call; its three-event partial fixture passes. The verified empty child
+Excel instance closes normally with its three add-in files unchanged. The later
+complete fixture does not resolve that native failure. Final verification retains
+260 package pins, 15 protected sources and the reviewed Shipping visibility-only
+change. Runtime/packages remain unchanged. Extend the remaining expectation,
+matching, policy, stale evidence and result-integrity tests listed above before
+implementing those behaviors; full Slice 4be/Release 1 acceptance remains open.
 
 **4be.4 recording test entry:**
 The next test-first entry is the D18 saved-run read surface: actual Viewer
