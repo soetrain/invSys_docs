@@ -36,6 +36,12 @@ also leave clean-shutdown attribution open. No general crash repair is claimed.
 The finer layout diagnostic subsequently passes187/187; the uninstrumented
 Settings retry also passes187/187, retaining every check identity/GREEN without
 duplicates. The remaining reviewed-package regressions are still being verified.
+Populated Viewer, smoke86, native Shipping layout1/1 and reusable Production/
+restart2/2 now pass. Reviewed Receiving stops690/1 at a rejected native navigation
+readback;854 acceptance is still pending. Isolated final-chain phase tracing
+passes13/13 but does not reproduce or explain the earlier native fault.
+The unchanged focused Receiving navigation diagnostic passes266/266; a fresh
+complete854 regression is running, without a runtime or native-input patch.
 The actual Box Maker handler now proves immediate publication of its
 durable owner event before the explicit Admin command, preserving all prior65
 check identities and GREEN results. Preservation matches

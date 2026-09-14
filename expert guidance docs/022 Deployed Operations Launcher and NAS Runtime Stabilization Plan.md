@@ -4999,6 +4999,15 @@ Operations/Admin coverage, Action Paths and physical/human acceptance remain ope
 Native fault processes created after the passing live runs also require phase
 attribution; passing chain rows alone do not prove clean native shutdown. Do not
 infer an Office installation defect or accept instrumentation as the final gate.
+The reviewed candidate now also passes populated Viewer, smoke86, native Shipping
+layout1/1 and reusable Production/restart2/2. Receiving stops690/1 at a rejected
+native navigation readback; the required854-check gate remains pending. Excel
+closes after the failed run. Isolated final-chain phase tracing passes13/13 and
+observes swallowed first-package Close exceptions, but does not reproduce the
+native fault or establish its cause. These diagnostics do not replace acceptance.
+The unchanged focused Receiving navigation diagnostic then passes266/266, including
+the previously interrupted mouse transition. A fresh full854 regression is running;
+the focused result is not a substitute for its complete acceptance evidence.
 See [Events publication evidence](../../invSys_fork/tests/integration/plan022_slice4be_events_publication_results.md).
 
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
