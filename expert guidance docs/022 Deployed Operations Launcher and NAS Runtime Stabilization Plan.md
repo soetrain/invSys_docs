@@ -5294,6 +5294,34 @@ runtime change is made. Next separate the reader's PowerShell controller, pass
 fixture input only in memory, and calibrate pristine launch there before adding
 drivers. Cold-restart and full native/visible acceptance remain open.
 
+**2026-09-14 separate-controller comparison:** Extracted14 existing recording
+fixture helper bodies unchanged and retained all13 restart check identities.
+A fresh-reader worker receives fixture data through private stdin, never command
+arguments/files/logs, and emits only fixed stages and boolean check records.
+Protocol/redaction checks pass6/6 without creating Excel or authority. The full
+run records112PASS/2harness flags for one compiler failure: all108 earlier checks,
+the interruption/process checks and a new distinct-controller check pass, but
+pristine Viewer launch still fails before fresh-driver installation. The original
+creator controller remains alive. After error acknowledgement fails to release
+the invocation, only the exact failed worker Excel process is terminated; both
+controllers then exit and Excel is closed. No runtime package or contract changes.
+
+A standalone pristine-startup control uses Admin Generate Warehouse/auth fixtures
+and the existing Viewer action wrapper, without VBA edits or an interruption in
+that testcase. It passes6/6, including first launch, form reuse and fixture/package
+preservation, and Excel closes normally. This rules out universal pristine-launch
+failure in that setup; it does not establish cause because the control also runs
+bootstrap in the fresh Excel process. Next use a neutral coordinator: the creator
+fully exits before the reader opens the same saved fixture, with no repeated
+bootstrap or driver edits before pristine launch. Keep the private fixture transfer,
+registry restoration and cleanup ownership explicit. This is continued D13
+calibration under existing D18, not a replacement for interrupted-reader, full-role
+sequence, conclusion, guide/comparison or native/visible acceptance.
+Final closed-Excel preservation verifies260 package pins,15 protected source files
+and the existing reviewed Shipping visibility-only change. Six changed PowerShell
+files parse and83 local document links resolve. Runtime/static/package source is
+unchanged; no new full-chain or human-acceptance result is claimed here.
+
 **4be.4 recording test entry:**
 The next test-first entry is the D18 saved-run read surface: actual Viewer
 Action Paths, library selection/Search/Refresh, complete journal validation,

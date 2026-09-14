@@ -1,9 +1,9 @@
 # invSys Form Controls v1
 
-**Version:** 1.130 (Actual cold interruption proven; restarted reader under validation)
+**Version:** 1.131 (Pristine startup GREEN; interrupted-reader failure isolated further)
 
-**Current source checkpoint:** `ddc2dbc` (restart calibration); runtime `99a69aa`,
-compiled candidate `deploy/validation-recording-isolation`.
+**Current source checkpoint:** `11285f7` (fresh-controller diagnostics); runtime
+`99a69aa`, compiled candidate `deploy/validation-recording-isolation`.
 Earlier uncommitted-runtime notes below describe preceding candidates.
 Full Slice4be and Release1 acceptance remain open.
 
@@ -16,12 +16,30 @@ runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
 
+**Latest controller comparison:** Shared14 fixture helper bodies are unchanged;
+all13 prior restart identities remain and a distinct-controller check is added.
+The reader receives fixture data only through a private stdin pipe; protocol/
+redaction checks pass6/6. Its full run records112PASS/2harness flags for one compiler
+failure during pristine Viewer launch, before driver installation. A fresh reader
+controller alone does not resolve it while the creator controller remains alive.
+The verified failed Excel process is terminated after its compiler dialog, and
+both controllers exit with Excel closed. Runtime/package/contract changes are not
+made; this is not behavioral RED or completed interrupted-reader acceptance.
+
+A standalone new-process test, with no interruption within that testcase and no
+VBA edits, uses Admin Generate Warehouse and passes6/6: first Viewer launch, reuse,
+fixture preservation and package preservation. Excel closes normally. This setup
+also performs bootstrap in fresh Excel, so it does not isolate the compiler cause.
+Next fully exit the creator before a fresh reader opens the same saved fixture,
+without repeated bootstrap, under a neutral coordinator. Full D18 sequences,
+conclusions, guides/comparison and visible acceptance remain required.
+
 **Current restart gate:** `-CheckRecordingRestart` creates a real unclosed recording
 through Viewer Start and Admin Save Value, then deliberately interrupts only its
 verified disposable Excel process. A fresh process must show Interrupted through
 the Action Paths library, with no resumed recorder or rewritten evidence; ordinary
 work stays outside that run and a new explicit recording gets a distinct identity.
-The13 restart checks include pristine Viewer calibration and retain the108-check
+The14 restart checks include pristine Viewer/controller calibration and retain the108-check
 reader foundation. Runtime/package/contract changes and full restart GREEN are
 not claimed.
 
@@ -43,7 +61,7 @@ The compiler error is acknowledged; unusable COM debugger access then requires
 termination of only the exact failed test process. Both tests are terminal and
 Excel is closed. All260 package pins,15 protected source files and the existing
 reviewed Shipping visibility-only change are verified. Next isolate the fresh
-reader in a separate PowerShell controller using in-memory fixture input. No
+reader after the creator fully exits, using private fixture transfer. No
 runtime/package/contract change is made; native and visible acceptance stay open.
 
 **Current D13 evidence:** Actual Viewer Start/Stop and Admin Save Value establish
@@ -63,7 +81,7 @@ Document Recovery prompt was resolved with its recovery-retention option and
 normal exit. Following the two restart attempts described above, Excel is closed;
 260 package pins,15 protected sources and the reviewed Shipping visibility-only
 change pass preservation. Native reliability and visible human acceptance remain
-open. The next D13 entry separates the restart controller before continuing real
+open. The next D13 entry fully exits the creator controller before continuing real
 Operations/multi-event sequences, conclusions and How-To/Diagnostic/Compare.
 
 **Current reader validation:** The rebuilt candidate compiles five packages and
