@@ -1,10 +1,10 @@
 # invSys Form Controls v1
 
-**Version:** 1.139 (Selected-run expectations; evaluation and visible acceptance pending)
+**Version:** 1.140 (Diagnostic evaluator in validation; full and visible acceptance pending)
 
-**Current source checkpoint:** `ea2e2ae` (shared recording/analysis expectation
-editor and exact selected-run binding), compiled candidate
-`deploy/validation-analysis-expectation`. Code is committed and pushed.
+**Current source checkpoint:** `01e32ff` (immutable diagnostic evaluation and
+saved-result validation), compiled candidate
+`deploy/validation-diagnostic-evaluation-reasons`. Code is committed and pushed.
 Earlier checkpoint notes below retain their historical scope.
 Full Slice4be and Release1 acceptance remain open.
 
@@ -16,6 +16,51 @@ Operations, Receiving, Production, or Shipping, including active controls,
 runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
+
+**Diagnostic result test entry:** The already approved library Evaluate/result
+surface must create a separate immutable diagnostic record and show only a saved,
+currently permitted result. D18 now names its required wire provenance fields.
+Packaged tests will protect journal/expectation/publication hashes, actors/policies,
+ordered matches and every exact terminal source with applied line/key evidence.
+Core owns the retained explicit publication, historical policy read, evaluator and
+result store; Operations owns the button and locked result display. No conclusion
+may be inferred from submission, current-state supplements, hidden evidence or a
+missing result control. The existing 210 GREEN checks remain the baseline.
+
+The in-validation library places locked observation and diagnostic panes beside
+each other, with Evaluate next to Expected conclusion. Separate expectation,
+evaluation and library status labels retain their meanings. The 720 by 520 minimum
+is unchanged; the actual layout gate must verify the new controls. Failed saved
+reads clear the diagnostic text and explain incomplete evidence; Refresh never
+appends a result. The corrected isolated candidate
+`deploy/validation-diagnostic-evaluation-reasons` builds/compiles all five packages,
+including Operations cold start. Its RED-only diagnostic route completes at
+185 PASS / 4 FAIL, preserving all 172 preceding passing checks. Exact saved provenance,
+terminal sources, current/historical policy distinction, retries, invalid saved
+records and sign-out pass in that scope. Missing/outcome-mismatch steps are explained;
+stale results retain every terminal reference as unavailable. The four foreground
+capture failures leave visible operator acceptance pending. The subsequent complete
+packaged route finishes at **293 PASS / 4 FAIL**, retaining all **210** prior passing
+identities and gaining **83**, with no duplicate checks or terminal harness exception.
+All library/editor layout and unrelated-workbook/unknown-column preservation checks
+pass. The same four foreground captures remain failures; Excel closes normally.
+The separate storage/limits gate passes 77/77, preserving every previous passing
+identity. The 256-action partial status/counter and continued ordinary action 257
+pass; exact 1 MiB storage/read, unchanged identical append and explicit oversize
+rejection pass without partial publication. Excel closes normally. The earlier expanded
+frozen RED reaches Pending/Partial at 151 PASS / 30 FAIL and then loses Excel/RPC;
+its one terminal harness failure is not product RED or a native-failure diagnosis.
+
+The corrected candidate passes full chain 32/32, live roles 48/48 and Create Warehouse
+15/15, with settings and tracked reports restored. An Excel access violation in
+combase.dll during the chain remains unresolved despite those passing assertions.
+The verified empty recovery instance exits normally after choosing to retain recovery
+files; three loaded add-in hashes are preserved. Static evidence retains 28 module
+limits, 192 duplicate groups and 9/45 dynamic calls. Verification preserves 310 package
+pins and protected sources, parses 24 scripts and resolves 83 links. Neither diagnostic
+isolation nor automated layout checks establish full or human acceptance. Guide
+authoring, How-To/Diagnostic/Compare, selection fidelity, native and Release 1 gates
+remain open; the accepted deployment is unchanged.
 
 **Selected-run expectation implementation checkpoint:** The library's existing
 `btnExpectedConclusion` contract now uses the same Operations editor as active

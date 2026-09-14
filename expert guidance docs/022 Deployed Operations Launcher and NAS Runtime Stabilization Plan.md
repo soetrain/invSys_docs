@@ -5494,6 +5494,70 @@ remain open. No new editor layout or human acceptance is claimed, and prior nati
 failures remain unresolved. Controls v1.136 and the maintained recording results
 record the same scope; Architecture v4.11 D18 is unchanged.
 
+**Diagnostic result implementation entry:** D18's Evaluation wire refinement names
+the already required journal, expectation, actor/policy, publication, matching and
+source-group provenance fields without changing their meaning. Extend the actual
+Evaluate-handler tests to require those bindings, final content hash, all four
+terminal source references and exact applied line/key evidence before implementing
+result writes. Core must retain the explicitly loaded publication and read the
+capture policy's saved version; current visibility remains independently enforced.
+Operations owns Evaluate and the read-only result. Missing product results are
+expected RED, while fixture, compile and COM failures remain harness failures.
+Preserve all 210 prior GREEN checks and the current package pins. Guide authoring,
+both presentations, comprehensive coverage and full Release 1 acceptance remain
+required; this is not a substitute for those outcomes.
+
+The frozen expanded run reaches 151 PASS / 30 FAIL before the next processor call
+loses Excel/RPC. Pending/Partial result-evidence RED is observed; Applied is not
+reached. The terminal Harness.Exception is not product RED. The verified empty
+residual closes normally, with file hashes preserved. The first evaluator candidate
+builds/compiles all five packages and passes Operations cold-start dependency
+validation; behavioral and regression acceptance are in progress. Additional
+actual-library Refresh checks recompute hashes around deliberately malformed
+disposable results to distinguish integrity from schema/journal-reference validity.
+No native-failure fix or complete diagnostic acceptance is claimed.
+
+**Corrected diagnostic candidate (2026-09-14, code `01e32ff` pushed; in validation):**
+`deploy/validation-diagnostic-evaluation-reasons` completes the RED-only isolated
+evaluation route at 185 PASS / 4 FAIL, retaining all 172 preceding passing identities.
+The seven newly protected product defects are corrected; six timestamp assertions
+are corrected to the existing millisecond UTC wire. The four failures are foreground
+captures. Five packages build/compile with Operations cold start; compiled comparison
+finds eight new Core modules and eight changed components, with no deletions. Static
+evidence preserves all 28 existing module limits, 192 duplicates and 9/45 dynamic-call
+counts. Verification preserves 310 package pins and protected sources; 24 scripts
+parse and 83 local links resolve. These implement D18's approved evaluator contract.
+
+The candidate passes full chain 32/32, live roles 48/48 and Create Warehouse 15/15,
+with successful controller exit and exact settings/tracked-report restoration.
+An Excel access violation in combase.dll during the chain still requires diagnosis;
+passing chain assertions do not establish native reliability. Its verified empty
+recovery instance closes normally after retaining recovery files for later viewing.
+Three loaded add-in hashes remain unchanged. The subsequent complete packaged route
+finishes at **293 PASS / 4 FAIL**, retaining all **210** previous passing identities
+and gaining **83**, with no duplicates or terminal harness exceptions. All original
+Viewer/recording/reader/editor/evaluator actions remain in that route. Library and
+editor layouts, exact identities/unknown columns and unrelated workbook/file checks
+pass; the four foreground captures remain failed. Excel closes normally. This run
+does not resolve earlier native failures. The separate limits/storage gate passes
+77/77, retaining every prior identity: 256 actions/512 observations, truthful partial
+closure, continued ordinary action 257, exact 1 MiB save/read, identical append and
+explicit oversize rejection with no partial publication. Its controller exits and
+Excel closes normally. Final verification again preserves all 310 package pins and
+protected sources, 28 module limits, 24 parsed scripts and 83 local links.
+Result-selection fidelity, guide lifecycle, both presentations and remaining
+comprehensive/visible/NAS/human Release 1 gates remain required. Slice 4be stays open.
+
+**Next evaluator test-first work:** Exercise the actual library selection handler
+during Evaluate, and Refresh after the same journal advances to a new version.
+Require the displayed/saved result to retain its exact selected run/version binding;
+the existing between-run draft checks do not cover reentrant evaluation. Also protect
+complete terminal-reference retention on saved reads and D18's display timestamp
+format through the actual result pane. Current `modEvaluationPresentation.Render`
+prints wire timestamps directly; add the display RED before changing that renderer.
+These tests constrain the approved D18 binding/provenance/display rules. They do
+not authorize a new contract or substitute for guides, both presentations or UAT.
+
 **Selected-run expectation checkpoint (code `ea2e2ae`, pushed):** Following `1db6057`, the
 shared editor extends to D18's selected-run analysis contract. Headless Core keeps
 the selected journal's exact RecordId/version/hash binding and separate staged

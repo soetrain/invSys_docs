@@ -1430,6 +1430,46 @@ is derived evidence of that observation/version, not a guarantee about current o
 future physical state. A read of saved results still applies current visibility;
 it cannot disclose observations that a current read would restrict.
 
+**Evaluation wire field names (D18 implementation refinement):** The schema-1
+Evaluation object uses `SchemaVersion`, `RecordKind`, `EvaluationId`, `Version`,
+`ActionPathId`, `SequenceId`, `JournalVersion`, `JournalRecordId`, `JournalSha256`,
+`RecordedByUserId`, `EvaluatedByUserId`, `EvaluatedAtUTC`, `WarehouseId`,
+`OriginWarehouseId`, `CatalogVersion`, `PackageSetVersion`, `BuildIdentity`,
+`CapturePolicyVersion`, `EvaluationPolicyVersion`, `ExpectationSource`,
+`ExpectedConclusion`, `ExpectationSha256`, `Guide`, `PreviousEvaluationId`,
+`ResultState`, `ReasonCodes`, `Matches`, `MissingSteps`, `FailedSteps`,
+`UnavailableSteps`, `ExtraActivityIds`, `TerminalSources`, and `Publication`,
+followed by the final `ContentSha256`. These name the already required evidence;
+they add no new authority or success criterion. ExpectationSource is
+`No expectation`, `Captured expectation`, `This evaluation`, or `Guide expectation`.
+Guide is empty when absent; otherwise it contains exact `ActionPathId`, `Version`
+and `ContentSha256`. PreviousEvaluationId is empty when absent. ResultState is
+`Concluded`, `Awaiting`, `Failed`, `Cancelled`, or `Incomplete`; the existing
+five-state operator wording remains binding.
+
+Matches contain `StepId`, `ActivityId`, `Ordinal`, `ControlId`, and `OutcomeCode`;
+missing/failed/unavailable collections contain StepIds, and extras contain original
+ActivityIds. Each TerminalSources entry preserves `WarehouseId`, `SourceKind`,
+`EventId`, `SubmissionState`, `OwnerStatus`, `LineCount`, `LinesSha256`, and
+`SystemKeys`. Supported owner status is `Applied`, `Awaiting`, or `Unavailable`;
+unsupported owner-failure evidence remains unavailable, never inferred. Applied
+evidence hashes the ASCII-escaped object `{"Lines": [...]}` containing every
+original contributing line in its published order. SystemKeys preserves that same
+line order, including repeated exact keys. Unavailable/pending sources use zero
+lines, an empty hash and no keys; they never borrow another group's evidence.
+
+Publication contains `Availability`, `WarehouseId`, `PublicationId`,
+`ContentSha256`, `SchemaVersion`, `PackageSetVersion`, `BuildIdentity`,
+`PublishedAtUTC`, `LoadedAtUTC`, `PolicyVersion`, and `Coverage`. Availability is
+`Loaded`, `Stale`, or `Unavailable`. Unknown provenance uses empty strings/zero
+versions and empty Coverage; it cannot satisfy a conclusion. Retained stale
+provenance remains labelled Stale. Coverage is the validated loaded source-coverage
+object, never a replacement authority payload. All objects reject unknown or
+duplicate fields, invalid types and unsupported values under the existing 1 MiB
+bound. Current policy still governs every read. Historical sequence eligibility
+uses the saved capture policy: eligible navigation may be recorded during explicit
+capture even with ordinary Collect off, exactly as the existing recorder allows.
+
 **Release-provenance read constraint:** BuildIdentity is opaque and
 PackageSetVersion identifies package compatibility; inequality alone does not
 establish chronological age. A lower supported catalog version can identify an
