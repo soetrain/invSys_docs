@@ -1,9 +1,10 @@
 # invSys Form Controls v1
 
-**Version:** 1.126 (Reader provenance and geometry checkpoint)
+**Version:** 1.127 (Late-result sequence isolation RED)
 
-**Current source checkpoint:** `00a7ab6`. Earlier uncommitted-runtime notes below
-describe preceding candidates. Full Slice4be and Release1 acceptance remain open.
+**Current source checkpoint:** `7bee42b`; runtime remains `00a7ab6` during the
+isolation RED. Earlier uncommitted-runtime notes below describe preceding
+candidates. Full Slice4be and Release1 acceptance remain open.
 
 **Inventory date:** 2026-08-31
 
@@ -13,6 +14,17 @@ Operations, Receiving, Production, or Shipping, including active controls,
 runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
+
+**Current D13 entry:** Extend recording tests through the existing Viewer
+Start/Stop and Admin Save Value controls. A replay of an old recorded outcome
+must not interrupt a newer recording after a policy change. Same-policy replay
+remains idempotent; old-policy rejection preserves both journals and the active
+run's status/Stop action. The frozen candidate completes127PASS/3FAIL while
+retaining all117 prior GREEN identities. Same-policy replay passes; old-policy
+rejection incorrectly closes the newer journal, changing its status and disabling
+normal Stop. Activity/config bytes and five package hashes remain unchanged;
+Excel closes. This tests D18 sequence ownership without adding controls or
+changing their contract. Runtime correction and isolation GREEN remain pending.
 
 **Current reader validation:** The rebuilt candidate compiles five packages and
 passes117/117 focused checks plus59/59 Viewer filters. Library bounds/non-overlap

@@ -5185,6 +5185,23 @@ candidates. This commit is not a deployment or complete Slice4be/Release1 accept
 | 4be.5 How-To and comparison | Select events or a captured sequence, edit/save/search a guide, choose How-To/Diagnostic/Compare both and exercise export/import. Expect missing guide/evidence pairing, method preference and distinction between authored steps and observed results. | Both presentations of one record; stable selection on switch; capability-gated immutable guide versions; validated export/import with origin-only evidence; older-release warning and current policy respected. |
 | 4be.6 Release and visible comparison | Run protecting regressions after focused GREEN; do not create artificial RED for already accepted behavior. | Full five-package build/compile/initialization, layout/static/live-role/full-chain/restart proof and visible user comparison before Slice 4be acceptance. |
 
+**4be.4 late-result isolation test entry:** Following source00a7ab6, extend the
+packaged recording gate with `-CheckRecordingIsolation`. Real Viewer Start/Stop
+and Admin Save Value prepare two distinct runs. Replay only the prior owner's
+observed result before/after actual policy changes; expect the global
+FinishAction interruption to close the newer run incorrectly. D18 requires
+same-policy idempotence, old-policy rejection without cross-run interruption,
+unchanged journals/activity/config and normal current-run Stop. Preserve all117
+prior checks. This enforces existing sequence ownership; no new architecture
+or business action is introduced. The frozen candidate now records127PASS/3FAIL
+across130 unique checks, retaining all117 prior GREEN identities with no harness
+failure. Same-policy replay passes; changed-policy replay rejects the old result
+but closes the newer journal, disabling active status and normal Stop. Activity
+and config bytes remain unchanged, all five package hashes are preserved and
+Excel closes. Next scope FinishAction interruption to its owning sequence,
+preserving policy rejection and current-run failure handling, then prove GREEN
+and applicable release gates. No runtime correction or isolation GREEN is claimed.
+
 **4be.4 recording test entry:**
 The next test-first entry is the D18 saved-run read surface: actual Viewer
 Action Paths, library selection/Search/Refresh, complete journal validation,
