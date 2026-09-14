@@ -1,8 +1,8 @@
 # invSys Form Controls v1
 
-**Version:** 1.124 (Recorded-run foundation in validation)
+**Version:** 1.125 (Saved-run reader initial focused GREEN)
 
-**Current source checkpoint:** `17d788c`. Earlier uncommitted-runtime notes below
+**Current source checkpoint:** `650828c`. Earlier uncommitted-runtime notes below
 describe preceding candidates. Full Slice4be and Release1 acceptance remain open.
 
 **Inventory date:** 2026-08-31
@@ -13,6 +13,19 @@ Operations, Receiving, Production, or Shipping, including active controls,
 runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
+
+**Saved-run reader test entry:** D18 names Events `btnActionPaths` and the
+reusable captured `frmActionPaths` library: `txtPathSearch`, `lstActionPaths`,
+`btnPathRefresh`, read-only `txtPathEvidence`, and `lblPathStatus`. Selection
+validates complete journals; missing Close is Interrupted and corruption is
+Incomplete evidence. Current policy applies on every library action. Open,
+Search, selection and Refresh never publish, repair, resume capture or mutate
+training/authority. Packaged71/18 RED becomes89/89 focused GREEN with all prior
+68 checks retained; five packages compile and ten package pins are preserved.
+Static duplicates189->193 remain unresolved, and reader geometry, expanded
+integrity/context cases, restart, broader regressions and visible acceptance
+are still open. Guide authoring, evaluation and How-To/Diagnostic/Compare both
+remain required.
 
 **Recorded-run foundation:** The isolated compiled candidate passes64/64
 recording lifecycle/durability checks after35/29 RED, retaining the original

@@ -1277,6 +1277,28 @@ must retain current policy restrictions and identify missing/corrupt entries as
 incomplete evidence. This is a storage refinement under D18 semantic inheritance;
 it does not relax the full coverage, limits, evaluation or acceptance contract.
 
+**4be.4 saved-run read surface refinement:** The Events-only `btnActionPaths`
+opens one reusable Operations-owned `frmActionPaths`, bound to the launching
+Viewer context. Its `txtPathSearch`, `lstActionPaths`, `btnPathRefresh`,
+`txtPathEvidence` and `lblPathStatus` provide Search, selection, explicit Refresh,
+read-only evidence and availability feedback. Selection validates the entire
+selected journal, including contiguous versions, distinct record identities,
+previous links, stable run/actor/warehouse/policy identity, ordered action
+occurrences and exact closing observations. An unclosed journal is Interrupted;
+a broken journal is Incomplete evidence. Neither is reconstructed or repaired.
+Stopped remains capture lifecycle, not a diagnostic conclusion.
+
+Core returns only primitive/serialized permitted training projections. Every
+library action checks the captured context and current policy; restricted
+observations are omitted with explicit incomplete-evidence feedback. Previously
+loaded content cannot bypass a later restriction. Open, Search, selection and
+Refresh do not publish Events, open canonical inventory/designs workbooks, write
+training files or resume recording. Reopening reuses the library for the same
+Viewer; Viewer closure or binding loss clears/closes it. These discovered read
+controls implement the approved library and integrity rules. Guide authoring,
+expectations, evaluation, both presentations and import/export remain required
+extensions of that library, not alternative records or a reduced R1 scope.
+
 - Store versioned records only at
   `<WarehouseRuntimeRoot>\Training\ActionPaths\<WarehouseId>`.
   Record immutable ActionPathId, warehouse/origin, name, version, lifecycle,

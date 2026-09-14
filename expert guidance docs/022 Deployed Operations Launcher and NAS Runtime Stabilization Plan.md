@@ -5186,6 +5186,20 @@ candidates. This commit is not a deployment or complete Slice4be/Release1 accept
 | 4be.6 Release and visible comparison | Run protecting regressions after focused GREEN; do not create artificial RED for already accepted behavior. | Full five-package build/compile/initialization, layout/static/live-role/full-chain/restart proof and visible user comparison before Slice 4be acceptance. |
 
 **4be.4 recording test entry:**
+The next test-first entry is the D18 saved-run read surface: actual Viewer
+Action Paths, library selection/Search/Refresh, complete journal validation,
+missing Close, corrupt/missing links and current policy. The frozen recording
+foundation supplies real Start/Save Value/Stop journals. Absent product controls
+are expected RED; missing callable instrumentation remains a harness failure.
+Core owns the read projection; Operations owns one captured library instance.
+The frozen foundation records71/18 RED across89 identities, with all68 prior
+checks retained GREEN and no harness exception. The first reader candidate
+compiles all five packages and passes89/89, with ten foundation/reader package
+pins preserved and Excel closed. Static duplicates189->193 remain unresolved;
+the copied builder and short event bodies require cleanup/review before the
+maintenance gate passes. Reader layout, expanded integrity/context cases,
+actual Excel restart, broader regressions and visible acceptance remain open.
+
 The recorded-run foundation now has35/29 RED ->64/64 packaged GREEN on the
 first compiled candidate. The expanded256-action baseline is36/32 RED across68
 identities. Core journal/session services and Operations Start/Stop/Cancel/status
