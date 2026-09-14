@@ -5095,6 +5095,87 @@ Excel is closed, package/source preservation checks pass, and prior generated
 reports were restored. Runtime remains uncommitted pending broader acceptance
 and maintenance. See [Shipping Viewer evidence](../../invSys_fork/tests/integration/plan022_slice4be_shipping_viewer_results.md).
 
+**Next D13 filter gate:** Implement D18's explicit View/family/source/recorded-outcome
+selectors through actual ComboBox change handlers. Protect AND-combined matching
+across complete loaded groups, internal reservation labels, unavailable metadata,
+page-one reset, full detail, context invalidation and responsive Events-only layout.
+Include a staged date change: selector changes retain the last refreshed range;
+only successful explicit Refresh applies the new range.
+The fixture uses a declared synthetic wire only after the real publication/reader
+checks pass. No filter may read or publish, infer a sequence conclusion, or reveal
+policy-hidden metadata in its choices. Establish behavioral RED before adding
+the controls to the Operations candidate.
+The complete packaged baseline is33PASS/22FAIL with all30 reader GREEN retained.
+The initial implementation compiles five packages and passes55/55; duplicate-body
+groups increase189->190 from four identical event wrappers. Replace those with
+one typed Operations binding that disconnects on form close and reverify against
+the same behavior tests. This is maintenance within the approved filter contract,
+not an exception to the duplicate ratchet. Selector activity coverage remains
+explicitly pending in4be.1; population/rendering is never a user action.
+
+The revised binding candidate compiles all five packages, passes Operations cold
+start and the complete55/55 filter/reader checks. Maintenance returns to189 duplicate
+groups, with9 literal/45 unresolved calls and28 size ratchets unchanged. Foreground
+capture stops after53 behavior/layout checks because the Viewer is not foreground;
+visible acceptance remains open. Shipping regression stops after30 reader checks
+with a COM failure during the actual Box fixture action. Its remaining empty Excel
+process is verified as a child of the failed test and eventually closes after normal
+Quit; no forced termination bypasses the retained-content guard. The unchanged retry
+passes Shipping56/56; paging16/16, Refresh16/16 and Detail34/34 also pass, retaining
+every prior check identity. Visible capture remains unavailable: current read-only
+observation finds no foreground window or readable input desktop. See
+[filter evidence](../../invSys_fork/tests/integration/plan022_slice4be_event_filters_results.md).
+
+**Inventory layout preservation entry:** Source review finds that the Events-only
+paging gap also reduces the Inventory list by40 points while its controls are
+hidden. D18's refinement preserves the accepted Inventory list area. Add a real
+tab/geometry check to `Slice4beViewerFilters.ps1` expecting the prior12-point gap
+above the bottom Close control. Establish RED before correcting Operations
+`frmInventoryViewer.ConfigureEventFilterGeometry`; all prior55 filter checks and
+the supported resize sizes remain required.
+The expanded run records55PASS/4FAIL, confined to the four new Inventory-size
+assertions. Correct the Inventory list's bottom anchor to the existing Close
+spacing; preserve Events paging geometry. The isolated correction requires fresh
+build/compile, expanded59-check GREEN and regenerated maintenance evidence.
+The corrected package compiles all five XLAMs and passes59/59, retaining all55
+earlier checks. Individual maintenance comparison then finds a missed violation:
+`modWarehouseSync` has1759 lines versus committed1753. The stable count of28
+oversized modules was insufficient evidence; earlier size-ratchet claims are
+superseded and no exception is approved. Review the private, unreferenced
+`AppendLocationSummariesSync` before any removal, then require compile and public
+snapshot/publication regressions. Keep the running full-chain source unchanged.
+
+The Inventory-layout chain finishes31/31, live48/48 and source integration15/15,
+preserving package bytes and prior reports, but records an Excel unknown/c0000409
+fault. After termination, explicit body/reachability review removes the unused
+location-summary routine and six obsolete Viewer helpers plus their unused table
+constant. Core WarehouseSync shrinks to1727 against1753; ViewerData becomes184.
+The old Slice4w static assertions are reconciled to current typed handlers and D18
+publication reads, retaining all12 identities:8/4 stale assertions become12/12,
+and12/12 remains after removal. This is not behavioral RED. The new maintenance
+candidate compiles all five packages and cold-starts Operations; its publication,
+expanded filter, chain and individual maintenance checks are in progress.
+Publication now passes82/82, retaining all66 earlier publication identities plus16
+grouped Viewer checks. Compiled comparison covers202 components and isolates the
+cleanup to the two reviewed Core modules. Fresh maintenance checks every one of28
+oversized modules against its committed limit: none grows; all six new modules and
+59 new procedures fit1000/200-line limits. Counts are209 components/5727 procedures,
+1136 scanner/1138 reviewed candidates,189 duplicates and45 unresolved/9 literal calls.
+The size violation is corrected without an exception. Final filters pass59/59;
+the final chain exits0 at31/31, with live48/48 and source integration15/15.
+Package hashes and original reports are preserved, but Windows records another
+combase/c0000005 Excel fault. Source preservation passes and Excel is closed.
+This publication/Viewer source checkpoint changes no accepted deployment or NAS
+workbook. It does not complete Slice4be or native/visible acceptance.
+Catalog version8 still registers31 controls, including only
+one Production and one Admin control; comprehensive coverage/recording/comparison
+remain required beyond this publication and Viewer checkpoint.
+
+**Source checkpoint:** Code `1d6a2ad` commits the publication/Viewer implementation,
+restored Inventory space, reviewed cleanup, protecting tests and source-harness
+dependencies. Earlier notes that runtime remained uncommitted describe preceding
+candidates. This commit is not a deployment or complete Slice4be/Release1 acceptance.
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |

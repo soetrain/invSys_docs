@@ -1,6 +1,9 @@
 # invSys Form Controls v1
 
-**Version:** 1.120 (Shipping state presentation test entry)
+**Version:** 1.121 (Publication and Viewer source checkpoint)
+
+**Current source checkpoint:** `1d6a2ad`. Earlier uncommitted-runtime notes below
+describe preceding candidates. Full Slice4be and Release1 acceptance remain open.
 
 **Inventory date:** 2026-08-31
 
@@ -10,6 +13,40 @@ Operations, Receiving, Production, or Shipping, including active controls,
 runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
+
+**Publication/Viewer implementation checkpoint:** D18's View, Event family, Source
+and Recorded outcome selectors filter complete loaded groups, retain every detail
+line, combine with Search and the last refreshed date range, and reset to page one.
+Operator actions remains the default; All published events labels reservations
+Inventory Reserved. Controls are session-only and Events-only. Inventory retains
+its accepted list space at minimum/default/larger/restored sizes.
+
+Focused filter RED33/22 becomes55/55. Four added Inventory geometry assertions
+record55/4 RED, then59/59 GREEN. The final isolated maintenance candidate compiles
+all five packages and passes publication82/82 (all prior66 plus16 group checks),
+filters/layout59/59, full chain31/31, live48/48 and Create Warehouse15/15.
+Shipping56/56, paging16/16, Refresh16/16 and Detail34/34 pass on the preceding
+binding candidate with exact prior identities retained; source comparisons isolate
+subsequent changes to the Inventory geometry line and reviewed Core cleanup.
+
+A per-module re-audit corrected an earlier misleading size-ratchet claim:
+WarehouseSync had grown1753->1759 despite an unchanged count of28 large modules.
+Seven reviewed unused private routines and one constant are removed; WarehouseSync
+is now1727 lines. Every individual large-module limit passes, as do1000/200-line
+limits for new modules/procedures. Static counts are209 components/5727 procedures,
+1136 scanner/1138 reviewed candidates,189 duplicates and45 unresolved/9 literal calls.
+No growth exception is used.
+
+The final full-chain run records a combase/c0000005 Excel fault despite passing
+checks. Foreground capture also remains unavailable: current observation finds no
+foreground window or readable input desktop. Clean native and visible acceptance
+remain open. Package/source preservation passes and Excel is closed; accepted
+deployment and NAS workbooks are unchanged. The source checkpoint remains part of
+incomplete Slice4be. Catalog version8 registers31 controls, including one Production
+and one Admin control. Comprehensive activity coverage, recordings, How-To/Diagnostic/
+Compare both and user acceptance remain required. Optional tracking of the four
+new selectors is pending4be.1; population/rendering is never user input.
+See [filter and maintenance evidence](../../../invSys_fork/tests/integration/plan022_slice4be_event_filters_results.md).
 
 **Shipping state presentation test entry:** Architecture v4.11 D18 explicitly
 maps published BOM package/alternative summaries to all contributing component
@@ -2393,6 +2430,10 @@ calculated column geometry and remain readable/aligned during resize.
 | `btnSettings` | Button — **Settings** | Opens or reuses Operations Event Tracking Settings in the Viewer's captured session/warehouse context. Preserves the selected Viewer tab, search, selection and loaded projection. |
 | `btnEventsPrevious`, `btnEventsNext` | Buttons — **Previous**, **Next**; pending | Navigate 100 matching source-event groups per page using the loaded projection. Disabled at their respective boundaries; captured-context validation remains required. |
 | `lblEventPage` | Page / matching-record count; pending | Identifies the current page and matching group count. Coverage/publication limits remain separately visible; no line count is substituted for a complete-group count. |
+| `lblEventsView`, `cboEventsView` | **View** — Operator actions / All published events; candidate | Defaults to Operator actions. All published events includes internal SHIP_RESERVE as Inventory Reserved, never an invented Hold. |
+| `lblEventsFamily`, `cboEventsFamily` | **Event family** — All families; candidate | Filters complete loaded groups by a contributing line's family. Choices come only from the policy-permitted projection. |
+| `lblEventsSource`, `cboEventsSource` | **Source** — All sources; candidate | Displays Inventory, Designs, User activity, Box designs and Held shipments when supplied by the loaded projection. |
+| `lblEventsOutcome`, `cboEventsOutcome` | **Recorded outcome** — All outcomes; candidate | Matches a recorded outcome while retaining all attempt/result lines. Unavailable means no supplied outcome; this selector never asserts a sequence conclusion. |
 | `lblSearch`, `txtSearch` | Label and text box — **Search** | Filters the already loaded rows locally across all visible columns. |
 | `lblHeaders` | Header label | Inventory identifies Item Code, Item, UOM, Quantity, Location, and Condition. Events identifies Date, Event, Reference, Item, Qty, UOM, Location, Condition, User, and Details. |
 | `lstInventory` | Six- or ten-column list box | Inventory displays active managed levels aggregated by item code, item, UOM, location, and condition, including active zero-quantity items created before stock arrives or is produced; retired items remain omitted. Events currently displays Receipts, Returns, Dumps, Box Made/Unboxed, Shipped, **Remove** (the `SHIP_RELEASE` action that returns locked inventory to warehouse availability), **Inventory Adjustment** (including audited Admin item retirement), current Box Designs, and current Held Shipments. Slice 4x adds Production Input Consumed and Production Output Created after packaged GREEN. Both views are read-only. |
@@ -2402,6 +2443,12 @@ calculated column geometry and remain readable/aligned during resize.
 The modeless form is reused on repeated launch. It is resizable: Search,
 headers, list, and status expand or reposition through the shared Operations
 anchor manager while remaining readable.
+The four Events selectors are session-only, combine with Search and the last
+successfully refreshed date range, and reset paging to the first match. They do
+not read authority or publish. Their optional activity registration remains
+pending under4be.1; automatic population/rendering is excluded from user input.
+Hidden Events navigation must preserve Inventory's accepted list area. Candidate
+behavior/geometry checks are not visible operator acceptance.
 
 ### 6.2 `frmEventTrackingSettings` — Operations personal settings
 

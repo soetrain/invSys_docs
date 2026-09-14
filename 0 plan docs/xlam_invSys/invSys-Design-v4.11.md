@@ -401,6 +401,28 @@ may still read an authored guide, whose provenance remains visible.
   export the currently displayed headings and values. These controls implement
   the existing 100-record paging contract; all-source publication/coverage and
   the 5,000-complete-group publication bound remain independently required.
+- **4be.3 filter-control refinement:** Events exposes View, Event family, Source
+   and Recorded outcome selectors (`cboEventsView`, `cboEventsFamily`,
+   `cboEventsSource`, `cboEventsOutcome`). View defaults to Operator actions;
+   All published events includes internal reservations using their existing
+   Inventory Reserved label. The other selectors default to All families,
+   All sources and All outcomes. Choices derive only from the loaded,
+   policy-permitted projection; source captions use Inventory, Designs,
+   User activity, Box designs and Held shipments. Missing metadata is Unavailable.
+   Each selected criterion must match a contributing line in the complete group;
+   Unavailable matches groups with no supplied value for that criterion. Combining
+   criteria uses AND, without trimming the group's detail lines. A recorded
+   outcome match is an observation filter, never a sequence conclusion.
+   Selector changes apply to loaded content immediately and start on page one;
+   they validate captured context, preserve Search/date constraints and Stale
+   status. A staged date value waits for Refresh; selectors use the last
+   successfully refreshed date range. They never read or publish. Explicit
+   Refresh retains an available
+   selection; a disappeared choice resets to its All choice. These session-only
+   selectors are visible on Events and fit the supported minimum/resized form.
+   The existing remembered date control and its Refresh action stay unchanged.
+   Hidden Events navigation must not consume the Inventory tab's accepted list
+   area; Inventory retains its list-to-bottom-control spacing when resized.
 - Display yyyy-mm-dd hh:mm:ss with verified zone/offset where known. Existing
   UTC-named fields containing local Now are not proof of UTC: label them
   **Recorded time (zone unavailable)** and explain approximate cross-source
