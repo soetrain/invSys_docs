@@ -5558,6 +5558,61 @@ prints wire timestamps directly; add the display RED before changing that render
 These tests constrain the approved D18 binding/provenance/display rules. They do
 not authorize a new contract or substitute for guides, both presentations or UAT.
 
+**Selection-continuity test entry:** D18 now makes the existing selection constraint
+explicit at the append and UI-return boundaries. A changed context, selected journal
+binding or staged expectation invalidates a pending evaluation; a result already
+committed remains immutable but cannot populate a different selection. Same-version
+Refresh retains the selected result, while a newer journal version clears it. Add
+one-shot test callbacks at those two boundaries in disposable package projects,
+dispatching the real list selection handler. Assert no stale append before commit,
+no stale result attachment after commit, correct version refresh, full saved terminal
+references and verified-UTC display before implementation. Preserve all 293 existing
+passing checks and the 77/77 boundary gate. This is semantic inheritance of approved
+D18, with no new capability or workflow execution contract.
+
+The initial expanded full run terminates at 68 PASS / one Excel/RPC harness failure
+before the new cases. The recording harness now installs probes once before fixture
+and form activity, preserving all operator actions and check identities; counters
+measure Viewer calls relative to completed fixture setup. The next run passes its
+no-loaded-forms check, proves Pending evaluation/load timestamp display RED, and
+then loses Excel/RPC during Partial (154 PASS / 3 FAIL, including one harness failure).
+This does not establish native reliability. The frozen diagnostic route subsequently
+completes at 197 PASS / 19 FAIL with no terminal harness exception and Excel closed.
+Its fifteen behavioral failures establish RED for six timestamp displays, omitted
+terminal references and eight stale append/attachment cases. Four foreground captures
+still fail. The Core/Operations correction follows that observed RED: local selection
+and intent revisions protect append, selected journal binding protects saved reads,
+and the form rejects stale return values and clears results on a new journal version.
+Same-version Refresh and immutable committed results remain protected. Build/compile,
+full 293-check retention and Release1 gates remain required before completion.
+
+**Selection-continuity checkpoint (code `7c1bb5e`, pushed):** `validation-evaluation-selection` builds
+and explicitly compiles five packages plus Operations cold start. Only the five
+intended compiled components change. Its full packaged route passes **324/324**,
+retaining all **293** preceding passing identities and adding **31**. All eighteen
+binding checks, complete terminal-reference validation, verified-UTC display and
+original library/editor layout and preservation gates pass. Core's declared primitive
+`modPathEvaluation.SelectedBinding(context, pathId)` exposes only an opaque session
+selection token; evidence objects stay in Core and no token is persisted as identity.
+
+The four editor foreground captures pass and are visually inspected. Diagnostic-pane
+capture and human acceptance remain separate. The initial build fails at Operations
+workbook creation, then succeeds unchanged after Excel closes. The first full run
+ends at 19 PASS / one native/RPC harness failure; Event1000 identifies an Excel access
+violation with unknown module. The successful run temporarily stops responding,
+then resumes on the same live handle without intervention and closes normally.
+Neither observation proves a native repair. Static evidence preserves 192 duplicate
+groups, 9/45 dynamic calls and 28 module limits. Release1 chain and limits/storage
+verification were then run: the chain passes 32/32, live roles 48/48 and Create
+Warehouse 15/15 with settings/tracked reports restored. Event1000 still records a
+native Excel failure (`c0000409`, module unknown) during the chain; no manual recovery
+intervention is needed, but native reliability is not established. The separate
+storage/limits gate passes 78/78 and retains every previous 77 passing identity.
+The action/size bounds, continued ordinary work and no-partial-file checks pass.
+All jobs are terminal and Excel closes without intervention. Final verification
+preserves 315 package pins and protected sources; eight scripts parse and 83 local
+links resolve. Full Slice4be and Release1 acceptance stay open.
+
 **Selected-run expectation checkpoint (code `ea2e2ae`, pushed):** Following `1db6057`, the
 shared editor extends to D18's selected-run analysis contract. Headless Core keeps
 the selected journal's exact RecordId/version/hash binding and separate staged

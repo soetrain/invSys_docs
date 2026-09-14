@@ -1,10 +1,10 @@
 # invSys Form Controls v1
 
-**Version:** 1.140 (Diagnostic evaluator in validation; full and visible acceptance pending)
+**Version:** 1.142 (Evaluation selection continuity packaged GREEN; full acceptance pending)
 
-**Current source checkpoint:** `01e32ff` (immutable diagnostic evaluation and
-saved-result validation), compiled candidate
-`deploy/validation-diagnostic-evaluation-reasons`. Code is committed and pushed.
+**Current source checkpoint:** `7c1bb5e` (diagnostic selection continuity,
+complete terminal-reference validation and verified-UTC display), compiled candidate
+`deploy/validation-evaluation-selection`. Code is committed and pushed.
 Earlier checkpoint notes below retain their historical scope.
 Full Slice4be and Release1 acceptance remain open.
 
@@ -16,6 +16,35 @@ Operations, Receiving, Production, or Shipping, including active controls,
 runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
+
+**Selection-continuity test entry:** The existing library Evaluate/selection/Refresh
+handlers must keep result ID, text and staged expectation bound to the exact selected
+journal version. A selection change before append invalidates the pending evaluation;
+after append, the saved file remains but its result cannot populate another selection.
+Same-version Refresh retains the saved result; a newer selected version clears it.
+The result pane renders verified evaluation/load times as `yyyy-mm-dd hh:mm:ss UTC`,
+preserving the original wire evidence. Packaged tests for these approved D18 constraints
+precede runtime changes; the current 293 PASS / 4 capture-failure checkpoint remains
+the baseline and does not yet prove these new cases. The frozen diagnostic run now
+completes at 197 PASS / 19 FAIL: fifteen behavioral RED cases and four foreground
+captures, with no terminal harness exception. Core/Operations selection guards,
+complete terminal-reference validation and verified-UTC display follow that RED;
+the isolated `deploy/validation-evaluation-selection` candidate now builds/compiles
+all five packages and completes the full route at **324/324 PASS**, preserving all
+293 prior passing identities. All eighteen binding checks and all fifteen behavioral
+RED cases pass. Four editor foreground captures also pass and were visually inspected
+at minimum/default/larger and ordered-step states. They do not prove human acceptance
+or diagnostic-pane appearance. The first full attempt still records an Excel access
+violation with unknown module; the successful run has a temporary nonresponsive
+interval and recovers without intervention. Native reliability remains unresolved.
+Static duplicate/dynamic-call counts and all 28 module limits hold. The candidate's
+Release1 chain passes 32/32, live roles 48/48 and Create Warehouse 15/15; settings and
+tracked reports are restored. A native Excel failure (`c0000409`, module unknown)
+is recorded during that chain despite the passing assertions. Storage/limits passes
+78/78, retaining all 77 preceding passing checks, including 256 actions, the visible
+partial reason, continued action 257, exact 1 MiB integrity and explicit oversize
+rejection. All test jobs are terminal and Excel is closed. Final verification preserves
+315 package pins and protected sources; accepted deployment is unchanged.
 
 **Diagnostic result test entry:** The already approved library Evaluate/result
 surface must create a separate immutable diagnostic record and show only a saved,

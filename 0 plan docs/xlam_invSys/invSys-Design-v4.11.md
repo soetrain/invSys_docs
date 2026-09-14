@@ -1356,6 +1356,21 @@ authoring/evaluation controls are explicitly catalogued as excluded from user-
 activity capture to avoid self-referential workflow evidence; their saved training
 records provide their own provenance.
 
+**Evaluation selection continuity:** Before an evaluation is appended, its captured
+context, ActionPathId, journal RecordId/version/hash and staged expectation must
+still match the library selection that authorized it. A selection or version change
+invalidates that pending calculation; do not retarget it or append it under stale
+intent. If selection changes after the immutable result was committed, preserve that
+file but do not attach its result ID or text to the new selection. Refresh of the
+same exact journal binding retains the selected saved result; discovering a newer
+version clears that result selection and staged analysis intent. These constraints
+implement the existing captured-selection and immutable-evidence rules, without
+preventing ordinary activation of another workbook from retaining a valid captured
+Viewer context. Saved reads must retain every source reference of a matched terminal
+action even when the result is Incomplete. Evaluation and publication-load display
+times use the verified UTC value rendered as `yyyy-mm-dd hh:mm:ss UTC`; the original
+millisecond UTC wire values and hashes remain unchanged.
+
 Evaluation consumes the selected validated journal and the last successfully,
 explicitly loaded Events projection. Core retains that already validated model,
 bound to captured context, PublicationId and verified LoadedAtUTC; callers supply
