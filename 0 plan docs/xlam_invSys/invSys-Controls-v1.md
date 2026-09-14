@@ -1,8 +1,8 @@
 # invSys Form Controls v1
 
-**Version:** 1.134 (Expectation editor/partial-application RED; implementation pending)
+**Version:** 1.135 (Captured expectation/matching/evidence RED; implementation pending)
 
-**Current source checkpoint:** `564a90e` (expectation/partial-application tests); runtime
+**Current source checkpoint:** `1746f88` (captured expectation/evidence tests); runtime
 `99a69aa`, compiled candidate `deploy/validation-recording-isolation`.
 Earlier uncommitted-runtime notes below describe preceding candidates.
 Full Slice4be and Release1 acceptance remain open.
@@ -15,6 +15,24 @@ Operations, Receiving, Production, or Shipping, including active controls,
 runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
+
+**Expectation/evidence semantics RED:** The actual editor/Evaluate suite
+now adds captured expectation on Stop, rejected-then-successful retry matching,
+ordered/distinct required actions, command-only wording, cancellation and ordinary
+Viewer evaluation. It checks that new publication requires explicit Refresh and
+failed Refresh retains stale evidence until a successful Refresh. Current policy
+restrictions and historical capture eligibility remain distinct. These are D18
+test additions; all named expectation/evaluation controls remain unimplemented
+until packaged GREEN proves otherwise. No new architectural behavior is proposed.
+
+Corrected packaged result: **160 PASS / 56 FAIL**, no harness exception and normal
+Excel closure; all 153 prior passing identities retained. The first 160/55 run had
+a weak sign-out assertion that could pass from a disabled button. The corrected
+check inspects retained text even when hidden and prohibits a derived-result write;
+it remains RED with the absent editor/evaluator. The real rejected Save preserves
+configuration bytes, and both rejected/successful observations stay visible.
+All 260 package pins and protected sources remain unchanged. These runs do not
+resolve earlier native failures or supply implementation/visible acceptance.
 
 **Latest expectation/evaluation RED (2026-09-14):** The actual library/editor
 probe and Admin BatchSize/processor handlers reach pending, three-applied and

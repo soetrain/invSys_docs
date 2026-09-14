@@ -5436,6 +5436,33 @@ change. Runtime/packages remain unchanged. Extend the remaining expectation,
 matching, policy, stale evidence and result-integrity tests listed above before
 implementing those behaviors; full Slice 4be/Release 1 acceptance remains open.
 
+**Expectation/evidence semantics RED (code `1746f88`):** `-CheckEvaluationContracts`
+extends the preserved 153/33 gate with real form-driven captured expectation and
+rejected-then-successful Admin actions. It protects retry matching, distinct repeated
+steps, ordered missing steps, command-only wording, cancellation, ordinary Viewer
+evaluation, current restrictions and historical eligible capture. Evaluate before
+Refresh must keep the older loaded publication; failed Refresh must make that
+evidence stale until another successful explicit Refresh. These are tests of the
+existing D18 refinement, with no architecture or runtime change. Missing controls
+and conclusions are expected RED; fixture/VBA/COM failures remain separate.
+
+The first run reports 160 PASS / 55 FAIL with normal closure. A sign-out assertion
+is then tightened to inspect result text even when hidden, require a previously
+staged expectation, and verify no derived-result write. A separate check proves
+the actual rejected Save preserves configuration bytes. The corrected run is
+**160 PASS / 56 FAIL**, with no harness exception and normal Excel closure, retaining
+all 153 previous passing identities. The intentionally tightened sign-out assertion
+is the only formerly passing new check that changes to RED. No runtime regression
+or implementation GREEN is inferred from absent controls.
+
+All 260 package pins, 15 protected sources and the reviewed Shipping visibility-only
+change remain preserved; four changed scripts parse. Runtime/package/static/chain
+baselines remain unchanged, and earlier native failures remain unresolved. Next
+protect schema-1/schema-2/mixed-schema compatibility, stable StepId edits and stale
+editor sequence/context binding before implementing Core expectation validation
+and the shared Operations editor. Remaining evaluator integrity/storage, guides,
+comparison and full Release 1 acceptance remain mandatory.
+
 **4be.4 recording test entry:**
 The next test-first entry is the D18 saved-run read surface: actual Viewer
 Action Paths, library selection/Search/Refresh, complete journal validation,
