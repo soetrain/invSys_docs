@@ -5664,7 +5664,34 @@ Runtime/tooling checkpoint: code `5e2c45a`, isolated candidate
 proof across the remaining roles; preserve the full D18 guide/comparison/import/export
 and visible user-acceptance requirements.
 
-**Remaining 4be.4 recording proof:** The current actual recording fixture exercises
+**Shipping-only 4be.4 recording proof:** Tooling checkpoint `7c0307e` is committed
+and pushed. The unchanged runtime source `5e2c45a` candidate
+`deploy/validation-recording-notice` passes 40 focused assertions around the actual
+Viewer Start/Stop controls and eight Shipping form actions. Evidence preserves
+ordered occurrences, actor/warehouse, distinct repeated Add ActivityIds, every
+submitted source ID and sixteen exact observation bodies in the integrity-linked
+journal. An initial test compared the outer activity-file hash with the observation
+body; the corrected body comparison passes without a runtime change. The complete
+Shipping route retains its separate scope and pending D8-A findings. Two earlier
+setup failures remain recorded; moving probe installation before fixtures and
+compiling all five instrumented projects does not establish a native-crash repair.
+Controls v1.148 and the code repository's
+`tests/integration/plan022_slice4be_shipping_recording_results.md` record the scope.
+No normative contract is changed by this D18 evidence addition.
+
+The completed route records **1009 PASS / seven existing D8-A FAIL**, with every
+one of the preceding 1016 check identities and 1008 passes retained. All 963
+comparable earlier Shipping passes remain; four prepared-order fixture checks
+belong to the alternate ordering. There is no harness exception or duplicate
+identity. Five instrumented compiles, unchanged static metrics/28 module limits,
+325 package pins/protected sources, three script parses and 84 links are verified.
+Excel closes normally and neither completed calibrated run records Event1000.
+This does not resolve earlier native failures, approve D8-A, deploy packages or
+claim a new full-chain/human acceptance pass. Continue with actual Boxing
+Make/Unbox observation and context/source-reference RED under D18, then the full
+cross-role recording proof below.
+
+**Remaining 4be.4 recording proof:** The current combined recording fixture exercises
 Receiving and Admin; Shipping mentions in its reader/capture helpers only check that
 reads do not access Shipping authority. It does not prove Production, Boxing and
 Shipping participation in the shared recorded sequence. Extend the actual packaged

@@ -1,6 +1,29 @@
 # invSys Form Controls v1
 
-**Version:** 1.147 (Capture-only lifecycle notice verified; full acceptance pending)
+**Version:** 1.148 (Shipping recording evidence added; full acceptance pending)
+
+**Shipping recording tooling checkpoint:** `7c0307e`, committed and pushed.
+Runtime remains `5e2c45a`; no XLAM rebuild or deployment.
+
+**Shipping recording scope:** D18's existing Start/Stop Recording controls now have
+an additional actual-handler test around eight Shipping actions. All 40 focused
+recording assertions pass on the unchanged `validation-recording-notice` candidate:
+one ordered sequence, distinct repeated Add occurrences, all four submitted event
+IDs, sixteen exact observation bodies and the immutable eighteen-version journal.
+The initial envelope comparison included the activity file's outer storage hash;
+the corrected assertion compares every observation-body field, with journal
+integrity verified separately. This is test calibration, not a runtime repair or
+architecture change. The combined cross-role sequence and full acceptance remain
+required. See the code repository's
+[Shipping recording evidence](../../../invSys_fork/tests/integration/plan022_slice4be_shipping_recording_results.md).
+
+The complete route finishes **1009 PASS / seven existing D8-A FAIL**, retaining
+all 1016 preceding checks and 1008 preceding passes. All comparable earlier
+Shipping GREENs remain; four prepared-order fixture checks retain their separate
+scope. Five instrumented compiles pass, Excel closes, 325 package pins/protected
+sources and all 28 module limits hold, and the verified completed-run windows have
+no Excel Event1000. Earlier setup/native failures remain unresolved. No deployment,
+full-chain rerun or human acceptance is claimed by this test-only checkpoint.
 
 **Current runtime source checkpoint:** `5e2c45a`, isolated candidate
 `deploy/validation-recording-notice`. Six expected notice RED cases become GREEN
@@ -34,8 +57,9 @@ The capture-only notice correction is complete for this isolated checkpoint;
 full user acceptance remains separate.
 
 **Remaining recording acceptance:** Current recording evidence covers actual
-Receiving and Admin actions. Explicit Production, Boxing and Shipping participation
-in the same recording remains to be proven through their packaged handlers; their
+Receiving and Admin actions together, plus Shipping in a separate recording.
+Explicit Production, Boxing and Shipping participation in the same cross-role
+recording remains to be proven through their packaged handlers; their
 ordinary business-chain regressions do not establish that D18 recording scope.
 Preserve separate captured workbooks, actor/warehouse, order and exact source IDs.
 This is an evidence gap, not a confirmed runtime defect. Guide/comparison/import/export
