@@ -5202,6 +5202,54 @@ Excel closes. Next scope FinishAction interruption to its owning sequence,
 preserving policy rejection and current-run failure handling, then prove GREEN
 and applicable release gates. No runtime correction or isolation GREEN is claimed.
 
+The follow-up matrix also protects FinishAction's append-failure and exception
+paths. A conflicting disposable outcome file and a calibrated exception after
+action/context resolution exercise those actual branches, using only previously
+observed owning outcomes. Restore fixture bytes/exception selection afterward. Repeat the two
+failures for the active sequence as positive controls: an owning failure must
+still append Incomplete Close. Preserve every original journal entry and activity/
+config byte. The first extension stops75/1 on an invalid repeated-value fixture
+(the owner correctly reports UNCHANGED); this is a harness failure, not RED.
+Use distinct actual Settings values in the corrected run before implementation.
+The corrected-value run is94/11: six valid policy/append failures, five invalid
+exception-fixture expectations. A CVErr coercion did not establish the intended
+error branch; replace it with explicit test-only Err.Raise in the unsaved project
+and require the production handler's sanitized response. Do not claim all11 as RED.
+An exact-case instrumentation attempt stops68/1 before the matrix; a read-only
+package probe calibrates VBE's identifier casing. The final calibrated matrix
+records96/9 across105 checks: stale policy, append and exception paths each fail
+the same three isolation checks; both owning-failure controls pass. No harness
+failure remains in that run. Implemented internal InterruptAction checks exact
+Context/SequenceId at FinishAction's three failure sites. Five new candidate
+packages compile; static candidate IDs, duplicates/dynamic calls and all28
+individual oversized-file limits are preserved. The154-check focused gate and
+full chain remain required. The first combined candidate run reaches109/1: all37
+isolation checks pass, then reader entry loses RPC. The exact owned empty child
+exits after normal Quit; the forced-stop guard refuses termination while its
+window remains. A later process check confirms closure and five candidate hashes
+remain unchanged. Retry uses unchanged packages/tests; no154-check or full-chain
+GREEN is claimed yet. This is an implementation of existing D18, not a new contract.
+The unchanged retry subsequently passes154/154, exit0, retaining all117/130/105
+prior check identities. Compiled hashes differ only for the two intended Core
+modules across211 components. The same candidate completes full chain31/31,
+live-role48/48 and Create Warehouse15/15, exit0. Its five package hashes and three
+restored tracked reports remain unchanged; no Excel Application Error1000 was
+observed in the chain window. The prior RPC/recovery failure remains unresolved.
+
+The passing chain leaves one residual Excel instance. Initial read-only inspection
+found zero workbooks and three add-in projects. Normal Quit preserved all three
+add-in file hashes, but the process persists with a visible native dialog whose
+text is unavailable through automation. No forced termination occurs. Registration
+restoration is a suspected cause, not proven provenance; null shutdown COM values
+do not prove an empty process. Excel closure and native/visible acceptance remain
+open. Do not start another Excel job or build while it remains. A read-only
+snapshot verifies260 package pins,15 protected source files and the existing
+reviewed Shipping visibility-only difference, explicitly recording ExcelClosed=False.
+This checkpoint implements existing D18 ownership without changing architecture.
+Next prove an actual unclosed recording across a fresh Excel process, then real
+Operations/multi-event and deferred-result sequences, conclusions, guides and both
+presentations. Full Slice4be and Release1 acceptance remain open.
+
 **4be.4 recording test entry:**
 The next test-first entry is the D18 saved-run read surface: actual Viewer
 Action Paths, library selection/Search/Refresh, complete journal validation,

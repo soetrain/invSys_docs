@@ -1,10 +1,11 @@
 # invSys Form Controls v1
 
-**Version:** 1.127 (Late-result sequence isolation RED)
+**Version:** 1.128 (Late-result isolation GREEN; native closure unresolved)
 
-**Current source checkpoint:** `7bee42b`; runtime remains `00a7ab6` during the
-isolation RED. Earlier uncommitted-runtime notes below describe preceding
-candidates. Full Slice4be and Release1 acceptance remain open.
+**Current source checkpoint:** `99a69aa`; compiled candidate
+`deploy/validation-recording-isolation`.
+Earlier uncommitted-runtime notes below describe preceding candidates.
+Full Slice4be and Release1 acceptance remain open.
 
 **Inventory date:** 2026-08-31
 
@@ -15,16 +16,27 @@ runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
 
-**Current D13 entry:** Extend recording tests through the existing Viewer
-Start/Stop and Admin Save Value controls. A replay of an old recorded outcome
-must not interrupt a newer recording after a policy change. Same-policy replay
-remains idempotent; old-policy rejection preserves both journals and the active
-run's status/Stop action. The frozen candidate completes127PASS/3FAIL while
-retaining all117 prior GREEN identities. Same-policy replay passes; old-policy
-rejection incorrectly closes the newer journal, changing its status and disabling
-normal Stop. Activity/config bytes and five package hashes remain unchanged;
-Excel closes. This tests D18 sequence ownership without adding controls or
-changing their contract. Runtime correction and isolation GREEN remain pending.
+**Current D13 evidence:** Actual Viewer Start/Stop and Admin Save Value establish
+two recordings. The frozen candidate first reports127PASS/3FAIL; the calibrated
+expanded matrix reports96PASS/9FAIL, proving stale policy, append and exception
+failures incorrectly interrupt the newer run. Owning-run failure controls pass.
+Internal Core interruption now checks exact Context/SequenceId. The unchanged
+candidate retry passes154/154, retaining every prior117/130/105 check identity.
+All five packages compile; only the two intended Core modules differ across211
+compiled components. Static candidate identities, duplicate/dynamic-call metrics
+and all28 oversized source-file limits are preserved. Controls/captions and the
+approved D18 contract are unchanged.
+
+The same candidate passes full chain31/31, live-role48/48 and Create Warehouse15/15.
+The first combined run's109/1 RPC failure remains unresolved. The passing chain
+leaves an Excel instance with a visible native dialog. Initial inspection found
+zero workbooks; normal Quit preserved all three loaded add-in files, but closure
+is not verified. No forced termination occurs and no further Excel job starts.
+A read-only snapshot verifies260 package pins and15 protected sources, plus the
+existing reviewed Shipping visibility-only change, explicitly with ExcelClosed=False.
+Native reliability and visible human acceptance remain open. The next D13 entry
+is actual interrupted recording across a fresh Excel process, followed by real
+Operations/multi-event sequences, conclusions and How-To/Diagnostic/Compare.
 
 **Current reader validation:** The rebuilt candidate compiles five packages and
 passes117/117 focused checks plus59/59 Viewer filters. Library bounds/non-overlap
