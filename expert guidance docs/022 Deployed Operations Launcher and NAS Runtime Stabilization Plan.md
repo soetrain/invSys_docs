@@ -5076,6 +5076,25 @@ failures are retained in the linked paging evidence; neither is behavioral RED.
 See [package cleanup evidence](../../invSys_fork/tests/integration/plan022_slice4be_package_cleanup_results.md).
 See [Events publication evidence](../../invSys_fork/tests/integration/plan022_slice4be_events_publication_results.md).
 
+**Shipping current-state presentation:** D18's explicit state-presentation mapping
+preserves one package/alternative summary with every component detail, using the
+existing named BomId/BomVersion fields as a presentation association and keeping
+SourceId unavailable. The protecting `-CheckViewerShippingState` run retains all30
+reader checks and prepares state through real Box Designer, Box Maker, Add/Hold
+and Admin publication handlers. Complete RED is50PASS/6FAIL: package summaries,
+component detail grouping/search and the held-line label fail; owner publication,
+identity/provenance and read-only preservation pass. Correct Core's published
+display mapping and the Operations pager/detail selection against these failures.
+No current-state association may become a fabricated historical event identity.
+The corrected isolated candidate compiles all five packages and passes56/56,
+retaining the complete RED check set, plus paging16/16, Refresh16/16 and Detail34/34.
+Static call/duplicate/size ratchets hold. Full-chain31/31, live48/48 and source
+integration15/15 pass, but Windows records another native Excel combase/c0000005
+fault during the run. Its cause and clean native execution remain unproven.
+Excel is closed, package/source preservation checks pass, and prior generated
+reports were restored. Runtime remains uncommitted pending broader acceptance
+and maintenance. See [Shipping Viewer evidence](../../invSys_fork/tests/integration/plan022_slice4be_shipping_viewer_results.md).
+
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |
 |---|---|---|
 | 4be.1 Coverage and activity foundation | Map every reachable Operations/Admin control to its actual callback/handler and completion source. Run eligible Operations and Admin actions; expect missing stable activity IDs, source/outcome correlation and publication coverage. Test programmatic invocation does not impersonate user input. | Shared non-authoritative NAS Activity store, exact source references and actual outcomes; complete catalog with explicit exclusions; Admin station history labelled unavailable; required audits and business schemas unchanged. |

@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.119 (Events paging layout and ordering candidate)
+**Version:** 1.120 (Shipping state presentation test entry)
 
 **Inventory date:** 2026-08-31
 
@@ -10,6 +10,23 @@ Operations, Receiving, Production, or Shipping, including active controls,
 runtime-created controls, status surfaces, and generated column labels.
 
 ## 1. Purpose and authority
+
+**Shipping state presentation test entry:** Architecture v4.11 D18 explicitly
+maps published BOM package/alternative summaries to all contributing component
+details through existing BomId/BomVersion fields, retaining unavailable event IDs.
+Actual Box Designer, Box Maker, Add/Hold, Admin publication and Viewer handlers
+record50PASS/6FAIL with all30 reader checks retained. Package summary values,
+complete component selection/search and the held-state label need correction.
+State provenance, exact held key and source-byte/read boundaries pass. No new
+control, display field, canonical schema or write authority is introduced; the
+accepted BOX_DESIGNED/SHIP_HELD summaries and full detail remain the target.
+The isolated correction passes56/56 and five-package compile, with the same RED
+identities, plus paging16/16, Refresh16/16 and Detail34/34. Static call/duplicate/
+size ratchets hold. Full-chain31/31, live48/48 and source integration15/15 pass,
+but Windows records another Excel combase/c0000005 fault during the run. Clean
+native execution and visible acceptance remain unproven. Excel is closed and
+package/source preservation checks pass; runtime remains uncommitted. See
+[Shipping Viewer evidence](../../../invSys_fork/tests/integration/plan022_slice4be_shipping_viewer_results.md).
 
 **Grouped Events paging candidate:** Under D18's approved paging refinement,
 Operations adds Previous, Next and a page/matching/available-group count below

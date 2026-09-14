@@ -523,6 +523,26 @@ are asserted through the public Admin publisher, not inferred from a helper's
 empty-success result. This clarifies D18's existing current-state and owner-read
 rules; it adds no write authority or new operator action.
 
+**4be.3 Shipping state presentation refinement:** Preserve the accepted
+`BOX_DESIGNED` package/alternative summary and `SHIP_HELD` held-line summary while
+reading only the published Events artifact. A ShippingBOM summary uses the owning
+package item, package UOM/location and alternative label, with no invented package
+quantity. Its contributing lines remain associated by exact PackageSystemKey and
+BomVersion within the captured warehouse and source. The existing named detail
+fields BomId and BomVersion carry that package reference and owning version;
+System_Key, item and quantity/UOM in each detail line remain the component's own
+values. This is a current-state presentation association, never an EventID,
+ActivityId, canonical identity replacement or fabricated historical group.
+SourceId stays unavailable. Selecting the summary or searching one component
+retains every contributing component line; unrelated blank IDs remain separate.
+The eighteen compatibility display slots may therefore contain package summary
+values while their named detail fields contain the selected component values.
+ShippingHolds retains its owning reference, item, quantity/UOM, location and exact
+inventory key, remains station-profile current state and supplies no completed
+shipment outcome. This mapping implements the existing accepted-summary,
+complete-detail and unavailable-identity rules without changing a canonical schema,
+the display-field allowlist, publication limits or Viewer read authority.
+
 **4be.3 publication implementation boundaries:** Core calls the fixed Operations
 entry `modShippingPublicationSource.ReadForPublication` with source name,
 expected WarehouseId and runtime root, using only primitive strings. This is a
