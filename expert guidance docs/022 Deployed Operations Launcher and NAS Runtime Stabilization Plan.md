@@ -4950,9 +4950,10 @@ explicit Admin snapshot action. Bootstrap without a matching allowed target
 defers Events without retargeting. The existing 26/21 packaged RED protects the
 first implementation; atomic failure and unavailable-source assertions must also
 be exercised before publication acceptance. No GREEN is claimed by this entry.
-The snapshot orchestrator has a scoped four-line size exception (1,753 to 1,757)
+The snapshot orchestrator has a scoped six-line size exception (1,753 to 1,759)
 for the optional Events result, per-call publisher instance, source capture and
-publication delegation. The implementation stays in the new bounded Core class;
+publication delegation, including a local result string before copying the notice
+to the caller's optional output. The implementation stays in the new bounded Core class;
 this exception does not approve other oversized-module growth. Shipping reuses
 its existing field-escape routine through a direct same-project call, preserving
 the duplicate-body baseline rather than adding another codec implementation.
@@ -4968,17 +4969,36 @@ smoke86 are GREEN. Two unchanged atomic full-chain attempts fail natively at
 projection rebuild (live32/1); an unsaved compile-invalidation diagnostic passes
 live48/48 but is not acceptance. A separate saved-compilation candidate preserves
 all199 component hashes yet fails natively during Production (live27/1); saving
-compilation state does not resolve the gate. Full-chain/Receiving acceptance remains
-pending. The added actual Box Maker assertion proves immediate publication of its
+compilation state does not resolve the gate. Full-chain acceptance remains pending.
+Receiving passes854/854 with every prior identity/GREEN retained and no duplicates.
+The pre-publication baseline passes the same full chain31/31 with live48/48;
+candidate-specific failure remains unresolved. A separate local-output-string
+experiment changes only the snapshot owner and passes full chain31/31 with live48/48.
+The source now uses this internal result handling. The fresh reviewed candidate
+compiles all five packages and passes chain31/31, live48/48, publication66,
+Detail34 and Refresh16. Settings stops54/1 on reopen after Close. The optional
+unsaved constructor trace reproduces that failure during layout construction;
+its result is diagnostic, not behavioral RED or acceptance GREEN.
+Finer unsaved layout tracing completes187/187. The subsequent uninstrumented
+Settings regression also passes187/187 with every check identity/GREEN retained
+and no duplicates, closing that gate without identifying a native-crash cause.
+The experiment alone does not establish a general native-crash cause or repair.
+This preserves D18's separate per-call results and introduces no shared last-result
+slot, new operator behavior or architectural contract. The fresh build must retain
+focused66 and every required regression before the publisher implementation is committed.
+The added actual Box Maker assertion proves immediate publication of its
 durable owner event before explicit Admin publication; all prior65 checks remain
 GREEN with no missing or duplicate IDs. Preservation matches
 175 historical and15 candidate package pins,15 exact protected sources and one
 reviewed visibility-only Shipping source change. Three packaged additions/six intended edits and34 capitalization-
 only changes with identical literals are reviewed; no unexpected difference.
-Static counts are206 components/5700 procedures/127033 lines,9 literal/45 unresolved
-calls,189 duplicate groups and28 size ratchets with only the stated four-line
+Current reviewed static counts are206 components/5700 procedures/127035 lines,9 literal/45 unresolved
+calls,189 duplicate groups and28 size ratchets with only the stated six-line
 exception. This advances publication; combined Viewer projection/paging, complete
 Operations/Admin coverage, Action Paths and physical/human acceptance remain open.
+Native fault processes created after the passing live runs also require phase
+attribution; passing chain rows alone do not prove clean native shutdown. Do not
+infer an Office installation defect or accept instrumentation as the final gate.
 See [Events publication evidence](../../invSys_fork/tests/integration/plan022_slice4be_events_publication_results.md).
 
 | Subslice | Public packaged test and meaningful RED | GREEN outcome |

@@ -21,8 +21,22 @@ field, atomic replacement/recovery and missing/dirty-source coverage. Five XLAMs
 compile. Event Detail **34/34**, Refresh **16/16** and Settings **187/187** remain
 GREEN, as do populated Viewer and smoke86. Full-chain acceptance is pending after
 native failures in both the original and saved-compilation candidates; the passing
-48-check compile-invalidation diagnostic is not acceptance. Receiving remains
-pending. The actual Box Maker handler now proves immediate publication of its
+48-check compile-invalidation diagnostic is not acceptance. Receiving now passes
+854/854 with every previous check identity/GREEN retained and no duplicates.
+The pre-publication baseline passes the same full chain31/31 and live48/48 in the
+current comparison; it does not establish candidate acceptance or a crash cause.
+An isolated local-result-string candidate passes chain31/31 and live48/48. The
+source now uses the same per-call result handling under unchanged D18 semantics.
+The fresh reviewed build compiles all five packages and reports chain31/31,
+live48/48, publication66, Detail34 and Refresh16. Its Settings regression stops54/1
+on reopen after Close. The optional unsaved constructor trace reproduces failure
+during layout construction; diagnostic results do not replace the uninstrumented
+Settings187 gate. Native fault processes created after the passing live runs
+also leave clean-shutdown attribution open. No general crash repair is claimed.
+The finer layout diagnostic subsequently passes187/187; the uninstrumented
+Settings retry also passes187/187, retaining every check identity/GREEN without
+duplicates. The remaining reviewed-package regressions are still being verified.
+The actual Box Maker handler now proves immediate publication of its
 durable owner event before the explicit Admin command, preserving all prior65
 check identities and GREEN results. Preservation matches
 175 historical/15 candidate package pins,15 exact sources and one reviewed
