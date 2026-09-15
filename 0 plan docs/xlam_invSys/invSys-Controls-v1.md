@@ -1,6 +1,25 @@
 # invSys Form Controls v1
 
-**Version:** 1.167 (guide-expectation D13 entry; reader regression continues)
+**Version:** 1.168 (reader evaluation GREEN; full chain fails; guide-expectation RED verified)
+
+**Latest broader gates:** Reader-candidate evaluation passes 376/376 with every
+preceding identity retained, Excel closed and zero Application events 1000/1001/
+1002. All 15 diagnostic captures are directly reviewed. The full-chain attempt
+fails 5 PASS / one harness FAIL; live roles stop at Run Receiving ConfirmWrites
+with 14 PASS / one harness FAIL (`0x80020009`), while Create Warehouse is 15/15.
+The zero-event native window does not identify a cause. Normal empty-instance
+Quit and an inspected retain-recovery-files choice allow cleanup; local settings
+and tracked reports are restored. No forced termination or accepted deployment
+change occurs. Candidate/frozen packages and unrelated documents are preserved.
+Guide-expectation RED completes independently: **136 PASS / 30 expected FAIL**,
+166 total, retaining all 132 prior identities with no harness exception. Missing
+entry, guide scope, staged summary and immutable definitions are the expected
+failures; four new preservation checks pass. Excel closes, 25 frozen package
+hashes and both unrelated documents are preserved, and its measured window has
+zero Application events 1000/1001/1002. Implementation and GREEN remain next.
+The detailed reader evidence below records exact paths and visible limitations.
+Verified RED/evidence checkpoint: code **a5babcb**, pushed; runtime remains
+**fdcfac9**. No guide-expectation runtime change or GREEN is claimed.
 
 **Next 4be.5 guide-expectation controls:** D18's guide-expectation authoring
 refinement adds proposed `btnGuideExpectedConclusion` (**Expected conclusion**)
@@ -55,6 +74,11 @@ observations: 1,707 PASS / seven unchanged D8-A FAIL. Immediate cleanup was
 pending; the evaluation preflight then verifies no Excel. Its extended window
 has zero Application events 1000/1001/1002 and candidate/user hashes remain
 unchanged. Evaluation/full-chain and direct Boxing-image review remain pending.
+Subsequent direct review covers all 22 Boxing-run PNG captures, including
+accepted/rejected Make/Unbox, separate tracking feedback and published evidence.
+The stale-session screenshot is only partially painted, so complete visible
+stale-session feedback remains unproven; the Coverage-width issue also remains.
+Evaluation and full-chain gates remain pending.
 Six completed detail/Viewer images are now directly reviewed. They expose an
 open readability issue: the long Coverage field is clipped at Event Detail's
 default/restored width, though readable maximized. This does not change the

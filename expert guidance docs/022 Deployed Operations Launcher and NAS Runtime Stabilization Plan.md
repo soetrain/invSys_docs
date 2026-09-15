@@ -5881,11 +5881,32 @@ FAIL**. Immediate cleanup is pending in its exit snapshot; the next evaluation
 preflight verifies no Excel, and that extended window has zero Application
 events 1000/1001/1002. Candidate and unrelated-document hashes are unchanged.
 Evaluation/full-chain results and direct Boxing-capture review remain open.
+All 22 Boxing-run PNG captures have subsequently been directly reviewed. They
+show actual accepted/rejected Make/Unbox, tracking-disabled/unavailable feedback,
+recorded observations, published details, Settings and permission denial. The
+stale-session capture is only partially painted; do not treat it as complete
+visible operator feedback. Evaluation/full-chain outcomes remain pending.
 Six detail/Viewer captures have now been directly reviewed. The long Coverage
 value is clipped at Event Detail's default/restored width and readable maximized.
 Track default-width long-field readability as remaining visible acceptance work;
 protect it with an actual form-action test before any presentation correction.
 This discovery does not replace the active guide-expectation D13 entry below.
+
+The completed evaluation gate is **376/376**, retaining all preceding identities.
+All 15 diagnostic captures are directly reviewed; partial application awaits the
+remaining source and only all-applied evidence yields Conclusion observed. Excel
+closes and the measured window has zero Application events 1000/1001/1002.
+Subsequent **full chain fails: 5 PASS / one harness FAIL**, with live roles
+**14 PASS / one harness FAIL** at **Run Receiving ConfirmWrites**, `0x80020009`.
+Create Warehouse is **15/15**. This is not acceptance or guide-expectation RED.
+The chain window also has zero Application events 1000/1001/1002; the cause remains
+unproven. Its remaining Excel process is verified empty before normal Quit; the
+inspected recovery dialog retains files for later viewing. No forced termination
+occurs. Local settings and the three tracked reports restore exactly, and all
+25 frozen package hashes plus both unrelated documents remain unchanged. Exact
+reports/windows and separate visible limitations are in the maintained reader
+evidence. Continue independent guide-expectation RED on the unchanged candidate;
+the full-chain failure still requires investigation before release acceptance.
 
 **Next 4be.5 D13 entry -- guide expectation authoring:** Follow D18's new
 guide-expectation refinement. The existing shared expectation editor gains an
@@ -5905,6 +5926,22 @@ Prepared test/evidence checkpoint: code **7c11619**, pushed to main; runtime
 remains **fdcfac9**. Four PowerShell parsers, 89 local links, 25 frozen package
 hashes and both unrelated-document hashes pass. Guide-expectation RED is queued
 until the existing serial regression runner releases Excel.
+
+**Guide-expectation RED verified:** The unchanged reader candidate completes
+**136 PASS / 30 expected FAIL**, 166 total, retaining every preceding 132
+reader/Save/draft/Viewer identity. Existing captured-expectation and immutable Save
+fixtures succeed; there is no harness exception or duplicate identity. Missing
+actual guide entry/scope, summary, stage/cancel/invalidation and persisted intent
+are the behavioral failures. Four new preservation cases pass. Excel closes;
+all 25 frozen package hashes and both unrelated documents are unchanged, and
+the UTC 2026-09-15 08:52:30.7577605--09:00:26.0713116 window has zero Application
+events 1000/1001/1002. Exact report:
+`reports/runtime/slice4be-viewer-published-read/1515cc3719c745afa21fa5452e43c594/red.json`
+in the code repository. Implement the approved guide-draft scope and immutable
+expectation saving next; full-chain failure and all broader release work remain.
+Verified RED/evidence checkpoint: code **a5babcb**, pushed to main. Runtime
+remains **fdcfac9**; four PowerShell parsers, 89 local links, 25 package hashes
+and both unrelated documents are verified. Excel and both gate runners are closed.
 
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
