@@ -1,6 +1,33 @@
 # invSys Form Controls v1
 
-**Version:** 1.150 (Boxing captured-context and permission RED; acceptance pending)
+**Version:** 1.151 (Boxing submission and processing outcome RED; acceptance pending)
+
+Boxing outcome tooling checkpoint: `029af12`, committed and pushed.
+Runtime remains `5e2c45a`; the isolated candidate has not been rebuilt or deployed.
+
+The final corrected route completes **1321 PASS / 165 expected FAIL**, preserving
+all prior 1180 checks/1123 GREENs and Shipping recording40/40. Eighteen Make/Unbox
+cases add 198 independent passes and 108 missing-observation failures. All 18
+redacted owner-fact records are retained. Generic owner success survives failed
+processing, staging and refresh; failed refresh can also retain legacy sync True.
+The observation must therefore receive explicit required-step failure facts under
+the existing D18 rule. Five instrumented compiles, all static sizes/limits and 325
+package pins/protected sources hold. Excel closes with no Event1000 in the verified
+window; unrelated user files are preserved. Earlier compile/setup and test-calibration
+limitations are recorded in the code evidence. Runtime remains unchanged. Next protect
+tracking-store/disabled/old-policy behavior before catalog-9 outcome implementation;
+full Slice4be and Release1 acceptance remain open.
+
+**Boxing outcome test entry:** Extend the approved D18 Make/Unbox refinement
+through the actual handlers for deferred/failed processing, failed staging,
+failed refresh, server refusal, lost/exceptional acknowledgment, uncertain
+acceptance and refusal after allocation but before writes. Direct submission
+write counts are captured before catch-up processing; independent owner returns
+and exact Inventory log lines protect outcome/source classification. A failed
+required step remains FAILED even when a generic owner return or report fallback
+says success. An allocated ID without write entry is not a submitted source.
+All preceding 1180 checks and 1123 GREENs remain required. This is test development
+under the current contract, with no new runtime or acceptance claim.
 
 Boxing context/permission tooling is committed and pushed as `b6de0e5`.
 Runtime remains `5e2c45a` on the unchanged isolated candidate.

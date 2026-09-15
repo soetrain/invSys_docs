@@ -5664,6 +5664,37 @@ Runtime/tooling checkpoint: code `5e2c45a`, isolated candidate
 proof across the remaining roles; preserve the full D18 guide/comparison/import/export
 and visible user-acceptance requirements.
 
+**Boxing submission/processing RED:** Tooling `029af12` is committed and pushed;
+runtime remains `5e2c45a` without rebuild/deployment. The final corrected run completes **1321
+PASS / 165 expected FAIL**, retaining all prior 1180 checks/1123 GREENs and Shipping
+recording40/40. Nine cases through both actual handlers add 198 independent passes
+and 108 missing-observation failures. All 18 redacted owner-fact records are retained.
+Generic success persists after failed processing, staging and refresh; legacy sync
+can remain True after a failed refresh. Pass explicit required-step facts from the
+owner instead of interpreting a generic success flag or report in the observation.
+This follows the existing D18 Boxing refinement and changes no architecture.
+Five instrumented compiles, four script parses, 84 links, fresh static metrics and
+all 28 limits pass; 325 package pins/protected sources and unrelated files remain.
+Excel closes with no Event1000 in the verified final window. The initial compile
+failure and subsequent source-array/metadata-retention calibrations are documented
+in `plan022_slice4be_boxing_activity_results.md`; none is runtime repair or UAT.
+Next finish actual-handler tracking-store/disabled/old-policy tests, then wire the
+catalog-9 observations, explicit step facts and proven context guard within existing
+module limits. The broader control/recording/guide/comparison and Release1 gates,
+including the separate D8-A decision, remain open.
+
+**Boxing submission/processing D13 entry:** Extend the actual Make/Unbox route
+under the existing D18 Boxing refinement with deferred/failed processing,
+failed staging/refresh, server refusal, lost/exceptional acknowledgment,
+uncertain acceptance and allocated-before-write refusal. Reuse the independent
+Core write-entry probes, installing them before all five instrumented compiles.
+Snapshot direct submission counters before catch-up enters the inbox writer;
+observe actual owner returns and exact applied component/package lines separately.
+Missing outcome/reference observations are expected RED. Fixture/compile errors
+are not RED. Preserve the full prior 1180 checks/1123 GREENs and existing package,
+source, static and user-file safeguards. Tracking/policy coverage and all broader
+acceptance remain open; no new architectural behavior is proposed.
+
 **Boxing context/permission RED:** Tooling `b6de0e5` is committed and pushed;
 runtime remains `5e2c45a` without rebuild/deployment. The expanded run finishes **1123 PASS / 57
 expected FAIL**, preserving all prior 1074 checks and 1041 passes, including
