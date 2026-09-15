@@ -1,6 +1,26 @@
 # invSys Form Controls v1
 
-**Version:** 1.153 (Boxing observation implementation verified; broader acceptance pending)
+**Version:** 1.154 (Boxing published detail verified; activity-picker refinement pending)
+
+**Published Viewer checkpoint:** The unchanged Boxing candidate completes
+1689 PASS / seven known D8-A FAIL. All 112 new publication/detail checks and
+680 Boxing checks pass, retaining every preceding identity/GREEN and all 18
+owner-return records. Real Admin publication and actual Viewer/Detail handlers
+preserve both owning Inventory events, all package/component lines and four
+complete activity pairs with exact references. Six new captures are inspected.
+Five instrumented compiles, fresh unchanged static evidence, 28 growth limits,
+325 historical package pins and the five candidate hashes pass. Excel closes
+with no Event1000 in that run's audited window. Earlier full-chain/live-role
+results retain their original scope; no runtime or deployment change is claimed.
+Test/evidence checkpoint: code **17e6677**; runtime remains **8ccb5b9**.
+
+The activity line picker still shows **Unavailable** for both observations,
+because neither has an inventory key. Its inventory-only prompt needs a D18
+display refinement and protecting RED before correction; selected detail fields
+already distinguish the observations correctly. No fabricated System_Key is
+permitted. See the [published Viewer evidence](../../../invSys_fork/tests/integration/plan022_slice4be_boxing_published_read_results.md).
+Broader coverage, guide/comparison and human acceptance remain open; D8-A remains
+unapproved and earlier native faults remain unresolved.
 
 **Final candidate checkpoint:** The isolated Boxing candidate completes 1577 PASS /
 7 known D8-A FAIL across 1584 checks. All 568 Boxing checks pass, retaining all 1553

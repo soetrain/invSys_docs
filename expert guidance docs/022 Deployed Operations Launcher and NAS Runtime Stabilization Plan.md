@@ -5664,6 +5664,31 @@ Runtime/tooling checkpoint: code `5e2c45a`, isolated candidate
 proof across the remaining roles; preserve the full D18 guide/comparison/import/export
 and visible user-acceptance requirements.
 
+**Boxing published Viewer supplementary proof:** On the unchanged
+`deploy/validation-boxing-activity-visible` candidate, actual Make/Unbox evidence
+passes through the ordinary Admin publisher and actual Viewer/Detail handlers.
+Test/evidence checkpoint: code **17e6677**; runtime remains **8ccb5b9**.
+The expanded route completes 1689 PASS / seven known D8-A FAIL; all 112 added
+publication checks and 680 Boxing checks pass. All preceding 1584 identities,
+1577 GREENs and 18 owner-return records are retained. Six new captures are
+inspected. Five instrumented compiles, unchanged fresh static metrics/component
+sizes, all 28 growth limits, 325 historical package pins and the five candidate
+hashes pass. Excel closes with no Event1000 in the audited run window. No runtime
+contract, implementation or deployment changes; earlier full-chain/live-role
+results retain their original scope and are not rerun by this supplementary test.
+
+The captures expose an activity-picker usability gap: both observation lines
+show **Unavailable** because they have no System_Key, under an inventory-only
+prompt. Their selected detail fields and exact references are correct. Next
+clarify fixed activity caption/outcome labels under D18 semantic inheritance in
+the normative display rule and controls, then establish real-handler RED before
+changing Operations. Never invent an inventory key or discard repeated lines.
+The code evidence `plan022_slice4be_boxing_published_read_results.md` records
+the exact report, capture limitations and unchanged broader requirements.
+Boxing-specific policy/detail changes, remaining coverage, combined recordings,
+guide lifecycle and How-To/Diagnostic/Compare, physical and human Release 1
+acceptance remain open. D8-A is still unapproved; no new native repair is claimed.
+
 **Boxing final candidate visible GREEN:** The isolated candidate completes
 1577 PASS / 7 known D8-A FAIL across 1584 checks; all 568 Boxing checks pass.
 Every preceding check and all 1553 GREENs remain, with all 18 independent owner
