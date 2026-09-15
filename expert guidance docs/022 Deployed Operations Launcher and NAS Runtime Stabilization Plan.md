@@ -5664,6 +5664,36 @@ Runtime/tooling checkpoint: code `5e2c45a`, isolated candidate
 proof across the remaining roles; preserve the full D18 guide/comparison/import/export
 and visible user-acceptance requirements.
 
+**Boxing optional-tracking RED, 2026-09-14:** Tooling `d6bdcdf` is committed and
+pushed. The unchanged runtime `5e2c45a`
+completes **1388 PASS / 172 expected FAIL**. All prior 1486 checks/1321 GREENs
+and Shipping recording40/40 remain. Six actual Make/Unbox cases add 67 passes
+and seven expected failures: four missing tracking-unavailable notices and three
+unsupported catalog-9 policy assertions. One submission and exact package/component
+Inventory application pass in every case. Config/policy bytes, prior activity,
+captured binding, staging/custom values and unrelated workbook survive. Catalog-8
+policy is valid and excludes Boxing; catalog-9 disabled policy must validate before
+its absence of collection can count as accepted disabled behavior. All 18 earlier
+owner-fact records remain retained. Five instrumented compiles, unchanged fresh
+static/component metrics, 28 growth limits, 325 package pins/protected sources,
+two script parses and 84 links pass. Excel closes normally with no Event1000 in
+the verified window. No runtime, deployment, full-chain or human UAT change is
+claimed. Next wire catalog-9 observations and pre-owner context rejection with
+explicit owner submission/required-step facts, preserving all prior GREENs and
+module limits; the code Boxing evidence records the exact report and verifier
+array-count correction. D8-A remains separate and unapproved.
+
+**Boxing optional-tracking D13 entry:** Continue 4be.1 through actual Make/Unbox
+handlers with a physically unavailable activity store, saved catalog-8 policy,
+and explicit catalog-9 disabled collection. Independent exact Inventory lines
+and one submission protect the business action. Require fixed unavailable notices
+for failed storage/older-policy exclusion, no implicit collection or policy repair,
+and preserved Config bytes, prior activity, staging/custom values and binding.
+Catalog-9 policy validity is expected RED on catalog-8 runtime; successful actions
+under that rejected policy do not prove valid disabled-policy behavior. This adds
+tests under approved D18, with no runtime or architectural change. Preserve all
+1486 preceding checks and 1321 GREENs before implementing the observation wiring.
+
 **Boxing submission/processing RED:** Tooling `029af12` is committed and pushed;
 runtime remains `5e2c45a` without rebuild/deployment. The final corrected run completes **1321
 PASS / 165 expected FAIL**, retaining all prior 1180 checks/1123 GREENs and Shipping

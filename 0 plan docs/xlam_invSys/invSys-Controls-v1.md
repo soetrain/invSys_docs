@@ -1,6 +1,34 @@
 # invSys Form Controls v1
 
-**Version:** 1.151 (Boxing submission and processing outcome RED; acceptance pending)
+**Version:** 1.152 (Boxing optional-tracking RED; acceptance pending)
+
+Optional-tracking tooling checkpoint: `d6bdcdf`, committed and pushed.
+
+The expanded Boxing route completes **1388 PASS / 172 expected FAIL**, retaining
+all preceding 1486 checks/1321 GREENs and Shipping recording40/40. Six actual
+Make/Unbox tracking cases add 67 passes and seven expected failures: four absent
+unavailable notices and three rejected catalog-9 policy-validity assertions.
+Every action submits once and applies exact package/component Inventory lines;
+binding, staging/custom values, Config, prior activity and unrelated workbook are
+preserved. Catalog-8 policy is valid and excludes Boxing. Catalog-9 policy is
+unsupported, so disabled-collection acceptance remains pending until validity and
+behavior pass together. All 18 outcome-fact records remain retained.
+
+Five instrumented compiles, fresh unchanged static metrics/component sizes, all
+28 limits, 325 package pins/protected sources, two script parses and 84 links pass.
+Excel closes normally with no Event1000 in the verified window; unrelated user
+files remain intact. Runtime stays `5e2c45a` without rebuild/deployment or a new
+full-chain/human acceptance claim. Next wire catalog-9 observations, the pre-owner
+context guard and explicit required-step facts, then complete the remaining gates.
+
+**Boxing optional-tracking test entry:** Exercise actual Make/Unbox with an
+unavailable activity store, an older catalog-8 policy and catalog-9 disabled
+collection. Require preserved exact business application, one submission, binding,
+unknown values, policy bytes and prior activity. Failed storage/older-policy
+exclusion must show Tracking unavailable; disabled collection must be validated
+as an explicit supported policy before its behavior can be accepted. Catalog 9
+remains unimplemented, so rejected policy validity is expected RED. All previous
+1486 checks/1321 GREENs remain required; runtime and acceptance remain unchanged.
 
 Boxing outcome tooling checkpoint: `029af12`, committed and pushed.
 Runtime remains `5e2c45a`; the isolated candidate has not been rebuilt or deployed.
