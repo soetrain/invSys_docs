@@ -5700,6 +5700,39 @@ these protected handlers; this RED checkpoint does not accept any guide runtime.
 Guide test checkpoint: code **7972cd0**, with controls v1.161. The frozen runtime
 remains code 9bfac38 in `deploy/validation-event-detail-labels`.
 
+Guide implementation is now in progress in an isolated candidate. Four new Core /
+Operations components and the changed Action Paths form compile in all five
+packages; the first behavioral run retains 42 PASS but fails 25 guide checks
+because permitted entry remains disabled. This is not guide acceptance. The code
+guide evidence records the two preceding compile defects and ongoing guard trace.
+The explicit maintenance exception permits only the three reviewed duplicate
+groups `041b258526c03dfd`, `b0153d52048d1613` and `e9b4f06801108607`: distinct
+command-literal handlers and small typed editor ownership/cleanup procedures.
+Feature growth is four components / 40 procedures / 491 lines; all 28 existing
+module limits and 9/45 dynamic-call counts hold. The exception preserves typed
+calls under D18 semantic inheritance and does not change normative behavior.
+Required packaged lifecycle/expectation regressions remain pending.
+The trace confirms policy serialization error 5 from Excel's Double catalog-version
+projection. The new guide boundary normalizes the already-validated integer;
+the shared serializer contract is unchanged. The corrected isolated candidate
+compiles in all five packages and passes 72/72 focused checks: all 67 protecting
+identities plus five actual editor captures, each directly reviewed. The final
+static baseline is 236 components / 5,921 procedures / 130,591 lines, with the
+reviewed three duplicate exceptions, 9/45 dynamic calls and all 28 existing module
+limits retained. Ten current/frozen package hashes and both unrelated documents
+are preserved. Eleven audited build/compile/test windows contain no Application
+events 1000/1001/1002; build cleanup intervals precede no-Excel compile preflights.
+Combined recording, detail, Viewer/Shipping state, Boxing/Shipping, evaluation and
+full chain/live-role regressions are running serially. This is focused draft
+evidence, not acceptance of persistence, presentation/comparison, transfer,
+deployed/NAS behavior or human Release 1 UAT.
+The combined recording/guide gate now passes 105/105 and Event Detail passes
+34/34; both terminate at exit 0 with Excel closed. Exact reports are retained in
+the code guide evidence. Remaining serial gates are pending at this checkpoint.
+Focused GREEN implementation checkpoint: code **b10b301**, pushed to main;
+controls v1.162. This is a reviewable implementation checkpoint with the remaining
+gates and full guide contract still open, not a completed-slice declaration.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,

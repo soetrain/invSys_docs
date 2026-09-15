@@ -1,34 +1,48 @@
 # invSys Form Controls v1
 
-**Version:** 1.161 (expanded guide draft RED verified; implementation pending)
+**Version:** 1.162 (guide draft focused GREEN; regressions pending)
+
+**Current implementation status:** The corrected isolated guide candidate compiles
+in all five packages and passes 72/72 focused checks: all 67 protecting identities
+plus five actual editor captures. Reordered/minimum/default/larger/restored views
+were directly reviewed. Source evidence, draft reuse, step identity/order, Cancel,
+context invalidation and ordinary-reader denial pass through packaged controls.
+The initial policy-hash rejection and its correction remain recorded in the guide
+evidence. Combined recording/guide passes 105/105 and Event Detail passes 34/34,
+both with terminal exit 0 and Excel closed. Further regressions are running; human, deployed/NAS and full guide
+acceptance remain open. Accepted packages are unchanged.
 
 **4be.5 guide draft entry:** Under the approved D18 refinement, the Action Paths
 library adds `btnCreateGuide` (**Create guide**) for a permitted selected recording
 and ACTION_PATH_MAINT. It opens/reuses `frmActionPathGuide` (**Action Path guide**)
-bound to that exact source run/version and captured Viewer context. Proposed editor
+bound to that exact source run/version and captured Viewer context. Editor
 controls are `txtGuideName`, `txtGuideTags`, `txtGuideInstructions`, `lstGuideSteps`,
 `txtGuideStepInstruction`, `btnGuideStepUp`, `btnGuideStepDown`, `btnRemoveGuideStep`,
 locked `txtGuideEvidence`, `lblGuideSource`, `lblGuideStatus` and `btnCancelGuide`.
 Authored instructions remain distinct from observed controls/outcomes. Draft edits
-and Cancel write no training, source or authority files. This is a D13 test entry;
+and Cancel write no training, source or authority files. Historical D13 test entry:
 The first meaningful focused RED is 41 PASS / 14 expected missing-entry/editor FAIL.
 The expanded test establishes 41 PASS / 26 expected FAIL, retaining all 55 preceding
 identities and 38 baseline Viewer GREENs. It covers authored labels/tags, stable step IDs, actual Move up/
 Move down/Remove actions, source-order preservation, layout and clearing of stale
-evidence. Proposed editor default/minimum sizes are 900 by 650 / 760 by 600 points;
+evidence. Editor default/minimum sizes are 900 by 650 / 760 by 600 points;
 its selected step value is the stable StepId. The locked evidence pane retains
 permitted original observations independently of guide step order or omissions.
 Two earlier attempts stopped at fixture capability-call/grant errors, not product
 RED; the guide fixture now explicitly grants ACTION_PATH_MAINT. Production permissions
-are unchanged. Implementation and visible acceptance are pending. Save/version/publication,
+are unchanged. Draft implementation now has focused GREEN and automated visible
+evidence as recorded above; remaining acceptance is pending. Save/version/publication,
 search, How-To/Diagnostic/Compare, export/import and full Release 1 remain required.
-All five instrumented compiles pass before forms; runtime source and frozen packages
-are unchanged. Excel closes and four audited test windows contain no Application
-events 1000/1001/1002. See the
+At the RED checkpoint, all five instrumented compiles passed before forms;
+runtime source and frozen packages were unchanged, Excel closed and four audited
+test windows contained no Application events 1000/1001/1002. Current implementation
+evidence is recorded above. See the
 [guide draft evidence](../../../invSys_fork/tests/integration/plan022_slice4be_guide_draft_results.md).
 
-Guide test checkpoint: code **7972cd0**. Runtime baseline remains **9bfac38**;
-the Operations guide editor and Core draft implementation are next.
+Guide RED checkpoint: code **7972cd0**. Accepted runtime baseline remains **9bfac38**;
+the isolated Operations guide editor/Core draft candidate is under regression.
+Focused GREEN implementation checkpoint: code **b10b301**, pushed to main.
+This checkpoint does not complete Slice 4be.5 or Release 1 acceptance.
 
 **Activity-line label test entry (historical):** D18 specifies a source-neutral contributing
 line prompt and published caption/outcome labels for User activity. Inventory key
