@@ -1,6 +1,28 @@
 # invSys Form Controls v1
 
-**Version:** 1.165 (published-guide reader RED verified; implementation pending)
+**Version:** 1.166 (published-guide reader focused GREEN; broader gates open)
+
+**Reader candidate:** The isolated published-guide reader builds and compiles in
+all five packages; Operations cold start passes. Its controls retain exact
+version/hash selection, locked authored/observed panes and captured ownership.
+Core validates predecessor links and current policy through a shared private
+recording/guide read guard. Static evidence is 241 components / 5,951 procedures /
+131,237 lines, with duplicate groups reduced to 193, dynamic calls unchanged at
+9/45 and all 28 existing module limits retained. The protecting gate passes
+132/132, preserving every RED identity. Excel closes, 25 current/frozen package
+hashes and both unrelated documents are unchanged, and build/compile/test windows
+have no Application events 1000/1001/1002. Focused behavioral acceptance does not
+complete the visible, broader regression, deployment or full Release 1 gates.
+The dedicated Save/reader capture run passes 135/135, including all 132 protecting
+identities and three directly reviewed images. Publication wording, exact version
+labels, authored instructions and original observations fit visibly. Excel closes,
+25 package hashes and both unrelated documents are preserved, and its run has
+no Application events 1000/1001/1002. Static evidence is refreshed with unchanged
+metrics. Serial recording/detail/Viewer/Boxing/evaluation/full-chain regressions
+are running. Automated captures are not human or full Release 1 acceptance;
+preceding RED is retained below.
+Focused reader implementation checkpoint: code **fdcfac9**, pushed to main.
+The isolated candidate remains under serial regression; no deployment changed.
 
 **Next 4be.5 reader controls:** Architecture D18's published-guide reader
 refinement names `btnPublishedGuides` (**Published guides**) in Action Paths and

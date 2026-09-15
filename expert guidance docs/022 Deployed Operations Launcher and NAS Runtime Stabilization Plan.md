@@ -5843,6 +5843,29 @@ this test-first checkpoint; it is not reader GREEN or full Slice 4be acceptance.
 Test/evaluation checkpoint: code **627a961**, pushed to main; runtime remains
 **c3bb22b**. No accepted deployment or user workbook was changed.
 
+Reader implementation now exists in isolated `deploy/validation-guide-library`.
+Five-package build/explicit compile and Operations cold start pass. Two existing
+components change (`modActionPathRead`, `frmActionPaths`); three are added
+(`modGuideLibraryRead`, private `modTrainingReadContext`, `frmActionPathLibrary`).
+The private helper preserves the existing recording guard while sharing it with
+guide reads. Static growth is three components / 22 procedures / 345 lines;
+duplicate groups decrease 194 to 193, dynamic calls stay 9/45 and all 28 existing
+module limits hold. The focused reader gate passes 132/132, retaining every RED
+identity. Terminal exit is 0 and Excel closes; all 25 current/frozen package hashes
+and both unrelated documents remain unchanged. Build/compile/test windows contain
+no Application events 1000/1001/1002. The code reader evidence records the exact
+report and cleanup scope. The dedicated actual Save/reader capture run passes
+135/135, retaining all 132 preceding identities and three directly reviewed
+captures. Publication wording/version labels and authored versus observed panes
+fit visibly. Excel closes, 25 package hashes and both unrelated documents are
+preserved, and the capture window has no Application events 1000/1001/1002.
+Refreshed static evidence retains the same metrics and all existing limits.
+Serial recording, detail, Viewer/Shipping state, Boxing/Shipping, evaluation and
+full-chain regressions are running; verify each result before acceptance. No accepted
+package or guide schema changes, and no full Slice 4be acceptance is claimed.
+Focused reader implementation checkpoint: code **fdcfac9**, pushed to main;
+the isolated candidate remains under serial regression with all remaining gates open.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,
