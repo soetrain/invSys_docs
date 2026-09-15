@@ -1464,6 +1464,48 @@ save/publication contract under semantic inheritance. It does not accept the
 remaining guide discovery/editing, expectation authoring, presentation switching,
 comparison, transfer, current-policy or full Release 1 acceptance gates.
 
+**4be.5 published-guide reader refinement:** The recorded-run library adds
+`btnPublishedGuides`, **Published guides**, opening one reusable Operations-owned
+`frmActionPathLibrary`, caption **Published guides**, under its captured Viewer
+context. This read surface is available to signed-in readers without
+ACTION_PATH_MAINT. Closing the originating library/Viewer closes the reader;
+context loss clears retained guide content rather than retargeting it.
+
+`txtGuideSearch`, `lstPublishedGuides`, `btnRefreshGuides`, `txtPublishedInstructions`,
+`txtPublishedObservations`, `lblPublishedGuideSource`, `lblPublishedGuideStatus`
+and `btnCloseGuides` provide search, exact-version selection, explicit Refresh,
+locked authored/observed text, provenance, availability and Close. Search matches
+guide name, tags or exact ID, case-insensitively. Each immutable version is a
+separate selectable entry; its hidden value binds ID, version and hash, never a
+list position or an implicit latest version. Refresh retains that exact selection
+only while it remains available and valid. Versions are ordered by guide ID and
+numeric version, independently of filesystem enumeration order.
+
+Core validates the selected guide and its complete predecessor chain, including
+exact prior RecordId/hash and distinct revision identities. Invalid, missing or
+cross-warehouse records show unavailable with a reason; reads never repair,
+rewrite, create folders or silently choose an older/newer version. Changed bytes
+under an already selected version invalidate that selection. Current visibility
+is checked on every reader action; hidden step instructions and observations are
+withheld with **Hidden by policy** and incomplete-evidence feedback. Author name,
+tags and general instructions remain authored metadata, never observed proof.
+
+The reader labels **Authored instruction** and **Observed control** separately,
+retains authored step order and original observation order independently, and
+identifies exact guide ID/version/hash and source run provenance. It does not
+assert **Business outcome** without owning-source evidence; an embedded attempt
+or acknowledgement alone remains application not asserted. Original captions
+and existing release-provenance labels remain binding. Both text panes are
+read-only. Default/minimum/larger/restored geometry follows the guide editor's
+900 by 650 default and 760 by 600 minimum, without overlap or clipping.
+
+These discovered read controls implement D18's approved searchable versioned
+library under semantic inheritance. They neither change the guide schema nor
+replace required guide editing, direct event/action curation, explicit observed-
+run selection, How-To/Diagnostic/Compare, expectations, import/export, preferences
+or full acceptance. Reading a saved guide's source observations is not evaluation
+of another run. No reader action records activity, publishes Events or evaluates.
+
 **4be.4 expectation and evaluation refinement (2026-09-14):** This implements
 the approved ordered-step and terminal-result rules above. It adds no workflow
 execution, recovery, permission grant, source-identity inference or substitute

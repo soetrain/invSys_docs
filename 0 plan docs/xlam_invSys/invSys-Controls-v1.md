@@ -1,6 +1,30 @@
 # invSys Form Controls v1
 
-**Version:** 1.164 (Save guide focused GREEN; broader acceptance remains open)
+**Version:** 1.165 (published-guide reader RED verified; implementation pending)
+
+**Next 4be.5 reader controls:** Architecture D18's published-guide reader
+refinement names `btnPublishedGuides` (**Published guides**) in Action Paths and
+the reusable Operations-owned `frmActionPathLibrary` (**Published guides**).
+Its controls are `txtGuideSearch`, `lstPublishedGuides`, `btnRefreshGuides`,
+locked `txtPublishedInstructions`/`txtPublishedObservations`,
+`lblPublishedGuideSource`, `lblPublishedGuideStatus` and `btnCloseGuides`.
+Search uses name/tags/ID; selection binds an exact immutable version and hash.
+Signed-in ordinary readers require no ACTION_PATH_MAINT. Each action revalidates
+context/current policy; hidden steps/evidence stay hidden. Authored instructions
+and observed controls retain separate order and provenance. The default is
+900 by 650 points, minimum 760 by 600. These controls are not implemented or
+accepted yet: actual packaged missing-behavior RED precedes runtime changes.
+The unchanged Save candidate completes **102 PASS / 30 expected reader FAIL**,
+132 total, preserving all 97 prior GREENs without a harness exception. Entry,
+search, exact-version display, policy/integrity and ordinary-reader access are
+missing. Five new source/read-only preservation checks pass. Excel closes,
+20 package hashes and both unrelated documents are preserved, and the run has
+zero Application events 1000/1001/1002. See the
+[published-guide RED evidence](../../../invSys_fork/tests/integration/plan022_slice4be_guide_library_results.md).
+Test/evaluation checkpoint: code **627a961**, pushed to main; runtime remains
+**c3bb22b**. Reader implementation follows this verified RED.
+Full guide editing, both presentations/comparison, transfer and R1 acceptance
+remain open. The preceding Save gate remains recorded below.
 
 **Current Save guide result:** The corrected isolated candidate passes all 97
 protecting checks, five-package build/explicit compile and Operations cold start.
@@ -13,7 +37,13 @@ unrelated documents remain unchanged, and ten audited windows have no Applicatio
 events 1000/1001/1002. Current screenshots and broader regression/full-chain/
 deployed/NAS/human acceptance remain open. No accepted deployment was changed.
 Focused implementation checkpoint: code **c3bb22b**, pushed to main. The full
-evaluation regression is now running against the same isolated candidate.
+evaluation regression now passes 376/376 against the same isolated candidate,
+retaining every prior check. All 15 pending/partially applied/applied diagnostic
+captures were directly reviewed across the supported layouts/source viewport.
+Only all applied terminal references display Conclusion observed; Stopped remains
+capture lifecycle. Terminal exit is 0 with Excel closed, candidate/user-document
+hashes preserved and zero Application events 1000/1001/1002 in the run window.
+Save editor captures and the remaining release gates are still open.
 
 **Save implementation history:** The initial isolated candidate adds Save guide and
 permanent publication wording to the existing editor. Core stages a separate

@@ -5806,8 +5806,42 @@ evaluation regression, all other required regressions and full guide/Release 1
 acceptance remain open. This is a focused implementation checkpoint, not a
 completed Slice 4be declaration or deployment authorization.
 Focused implementation checkpoint: code **c3bb22b**, pushed to main. The full
-evaluation/visible-library regression is now running against the unchanged
-isolated candidate, protecting the shared folder helper and preceding behavior.
+evaluation/visible-library regression passes 376/376 against the unchanged
+isolated candidate, retaining all prior identities and protecting the shared
+folder helper. All 15 diagnostic captures were directly reviewed across pending,
+partially applied and applied states and supported layouts/source viewport. The
+controller exits 0, Excel closes, five candidate hashes and both unrelated user
+documents are preserved, and the run window has no Application events
+1000/1001/1002. The code Save evidence records the exact report and scope. Save
+editor captures and all remaining release gates stay open.
+
+**Next 4be.5 D13 entry -- published-guide discovery/read:** Apply D18's
+published-guide reader refinement before runtime edits. Operations adds
+`btnPublishedGuides` to Action Paths and the captured reusable
+`frmActionPathLibrary`; headless Core owns exact-version/hash/predecessor and
+current-policy validation. The packaged test must create both guide versions
+through the existing Save handler, then exercise real entry, search, selection,
+Refresh and Close controls. Protect ordinary-reader access, original captions,
+authored versus observed ordering, immutable source bytes, current-policy and
+target invalidation, corrupted/missing predecessor rejection and all four layouts.
+Missing reader behavior is RED; a broken Save fixture or absent test seam is not.
+Retain all 97 Save/draft/Viewer checks. No runtime reader implementation or GREEN
+is claimed by this entry. Both presentations/comparison, direct event curation,
+editing/expectations, transfer, provisioning and all remaining Release 1 gates
+remain required; D8-A remains unapproved.
+
+The published-guide test now establishes **102 PASS / 30 expected missing-reader
+FAIL**, 132 total, preserving all 97 prior Save/draft/Viewer GREEN identities.
+The unchanged candidate compiles with its probes and completes without a harness
+exception. Reader source/read-only preservation checks pass. Terminal exit is 1
+as expected, Excel closes, 20 package hashes and both unrelated user documents
+remain unchanged, and the run has no Application events 1000/1001/1002. The code
+published-guide evidence records the exact report. Implement the declared reader
+through typed Operations handlers and headless Core reads next, retaining this
+RED set. Runtime, static baseline and accepted deployments remain unchanged at
+this test-first checkpoint; it is not reader GREEN or full Slice 4be acceptance.
+Test/evaluation checkpoint: code **627a961**, pushed to main; runtime remains
+**c3bb22b**. No accepted deployment or user workbook was changed.
 
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
