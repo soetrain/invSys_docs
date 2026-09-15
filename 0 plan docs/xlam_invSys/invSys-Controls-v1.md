@@ -1,6 +1,33 @@
 # invSys Form Controls v1
 
-**Version:** 1.163 (Save guide test entry; draft chain remains open)
+**Version:** 1.164 (Save guide focused GREEN; broader acceptance remains open)
+
+**Current Save guide result:** The corrected isolated candidate passes all 97
+protecting checks, five-package build/explicit compile and Operations cold start.
+First/next immutable versions, original observations, source/package provenance,
+stable steps, oversize/conflict rejection, Cancel and current policy/permission/
+target guards pass through the actual editor. All four editor layouts fit Save
+and publication wording. Static evidence retains 194 duplicate groups, 9/45
+dynamic calls and all 28 module limits. Excel closes, 20 package hashes and both
+unrelated documents remain unchanged, and ten audited windows have no Application
+events 1000/1001/1002. Current screenshots and broader regression/full-chain/
+deployed/NAS/human acceptance remain open. No accepted deployment was changed.
+Focused implementation checkpoint: code **c3bb22b**, pushed to main. The full
+evaluation regression is now running against the same isolated candidate.
+
+**Save implementation history:** The initial isolated candidate adds Save guide and
+permanent publication wording to the existing editor. Core stages a separate
+guide record and appends immutable versions with exact prior links. Unclosed
+sources display Interrupted. All five packages compile and Operations cold start
+passes; its initial focused GREEN attempt is pending at that checkpoint. Fresh static evidence
+retains 194 duplicate groups, 9/45 dynamic calls and all 28 existing module limits.
+This is candidate status, not accepted guide persistence or full Release 1 UAT.
+The behavioral attempt reaches 80 PASS / 17 publication-dependent FAIL. A
+disposable trace identifies rejection of the existing REQUESTED RecordId =
+ActivityId relationship. The normative clarification preserves that source
+relationship while keeping guide/Step identities distinct; the corrected GREEN
+is recorded above. Two capture attempts fail the foreground guard independently,
+so current Save guide visible evidence is not yet accepted.
 
 **Next test entry -- Save guide:** D18's immutable guide-save refinement adds
 proposed `btnSaveGuide` (**Save guide**) to `frmActionPathGuide`, with wording that

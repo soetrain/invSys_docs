@@ -1436,7 +1436,12 @@ Its fields are `SchemaVersion`, `RecordKind`, `ActionPathId`, `Version`, `Record
 `CatalogVersion`, `PackageSetVersion`, `BuildIdentity`, `PolicyVersion`, `Steps`,
 `Observations`, `SourceRun`, `ExpectedConclusion`, then final `ContentSha256`.
 The existing ASCII-escaped UTF-8 and final-hash convention applies. Unknown fields,
-duplicate identities, unsupported values and invalid types are rejected.
+duplicate record or Step identities, unsupported values and invalid types are
+rejected. Preserve the existing activity writer's REQUESTED relationship: that
+attempt's RecordId is also its ActivityId. This shared source value is not a
+duplicate observation or permission to reuse a guide/Step identity; guide and
+Step identities remain distinct from source identities. Identity validation must
+respect these existing namespaces rather than relabeling original observations.
 Each authored step contains `StepId`, `Method` (**How-To**), `ControlId`, original
 `Caption`, `Instruction`, and exact `SourceActivityId`. Observations retain the
 existing allowlisted activity-record schema, in original order, independently

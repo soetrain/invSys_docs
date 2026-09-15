@@ -5771,6 +5771,44 @@ The code Save guide evidence records exact reports. This establishes the D13 RED
 entry for implementation, not acceptance of persistence or the full guide contract.
 Test checkpoint: code **e96863d**, pushed to main; runtime remains **b10b301**.
 
+The isolated Save candidate now builds and explicitly compiles all five packages,
+including Operations cold start. It adds two Core guide modules and changes only
+the five declared draft/source, journal/evaluation-store and form components.
+The fixed child-root check is shared to preserve the same Guides/Evaluations
+target and reparse rules without duplicated storage-root code. Existing evaluation
+GREEN is a required regression. Fresh static evidence adds two components/eight
+procedures/299 lines; 194 duplicate groups, 9/45 dynamic calls and all 28 existing
+module limits hold. The focused GREEN attempt is running; acceptance remains open.
+
+The first behavioral Save run is 80 PASS / 17 dependent publication FAIL, with
+all 67 preceding checks retained. RED-only instrumentation pinpoints the guide
+validator's cross-namespace duplicate check. Existing `modActivity.BeginAction`
+uses the generated ActivityId as its REQUESTED RecordId; those original values
+must remain unchanged. The normative save refinement now explicitly preserves
+that relationship while rejecting duplicate records/steps and source collisions
+with new guide/Step identities. This clarifies the inherited activity schema;
+it does not introduce a new identity scheme or weaken record uniqueness. Correct
+the guide validator under the existing original-observation RED, then remove
+diagnostic instrumentation before GREEN. Foreground capture attempts also fail
+independently and remain unproven; do not claim visible acceptance from compilation.
+
+The corrected `deploy/validation-guide-save-identity` candidate now passes **97/97
+focused GREEN**, retaining every protecting RED identity. First/next versions,
+original observations, source/package provenance, stable authored steps, rejection
+paths and binding guards pass through the real controls. Four layouts, all five
+explicit compiles and Operations cold start pass. Static growth is two components,
+eight procedures and 301 lines; duplicate groups remain 194, dynamic calls 9/45,
+and all 28 module limits hold. Twenty current/frozen package hashes and both
+unrelated documents are preserved. The terminal run closes Excel, and ten audited
+build/compile/test windows contain no Application events 1000/1001/1002. Exact
+evidence is in the code Save guide record. Current captures, the shared-root
+evaluation regression, all other required regressions and full guide/Release 1
+acceptance remain open. This is a focused implementation checkpoint, not a
+completed Slice 4be declaration or deployment authorization.
+Focused implementation checkpoint: code **c3bb22b**, pushed to main. The full
+evaluation/visible-library regression is now running against the unchanged
+isolated candidate, protecting the shared folder helper and preceding behavior.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,
