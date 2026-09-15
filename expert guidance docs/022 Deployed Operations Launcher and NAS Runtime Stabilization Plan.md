@@ -5664,6 +5664,51 @@ Runtime/tooling checkpoint: code `5e2c45a`, isolated candidate
 proof across the remaining roles; preserve the full D18 guide/comparison/import/export
 and visible user-acceptance requirements.
 
+**Activity-line label D13 entry:** Under D18's contributing-line label refinement,
+the Operations picker will display each User activity line's published caption
+and observed outcome, with a source-neutral prompt. Exact inventory key labels,
+repeated lines, key accessors and cached read-only selection remain unchanged.
+The focused actual Admin Settings Save -> ordinary publication -> Viewer list
+selection test must fail for the current two Unavailable labels and inventory-only
+prompt before editing Operations. Extend the existing Boxing published-read
+checks for the same labels and all exact inventory keys. This is an inherited
+presentation clarification, not a new identity, authority or execution contract.
+Preserve every current GREEN, packaged compile/layout/static, live-role/full-chain
+and visible evidence requirements; full guide/comparison acceptance stays open.
+
+The focused unchanged-package RED completes 36 PASS / two expected label/prompt
+failures. The Operations-only correction then builds all five isolated packages,
+passes explicit compile/cold start and gives 38/38 focused GREEN with an inspected
+Admin capture. All 225 compiled identities remain; only the detail controller and
+form change. Static evidence retains 191 duplicate groups, 9/45 dynamic calls and
+1158/1160 maintenance candidates; the display helper adds one method and 17 lines.
+Detail passes 34/34, published Viewer/filter/Shipping state 94/94 and evaluation
+376/376. Boxing/Shipping retains all preceding GREENs with 1707 PASS / seven known
+D8-A FAIL; all 698 Boxing checks and 18 unchanged owner-return records pass.
+Nineteen diagnostic/editor captures are inspected or byte-verified; activity and
+business labels preserve original evidence. Ten current/frozen package hashes,
+325 historical pins, protected sources, both unrelated user documents, all static
+candidate identities and 28 growth limits pass.
+
+The first full chain stops with an RPC harness exception (0x800706BE) during
+projection rebuild after 32 live-role passes; Create Warehouse is 15/15. It is
+not a passing chain. A verified empty residual Excel instance is closed normally;
+the inspected recovery prompt retains files for later viewing. Settings/reports
+are restored and the original controller terminates with Excel closed. The nine
+audited gate windows contain no Excel Event1000, which does not explain or negate
+the RPC failure. A fresh unchanged-candidate chain after confirmed cleanup passes
+32/32, with live roles 48/48 and Create Warehouse 15/15. It also requires normal
+closure of a verified empty Excel residual and retention of recovery files.
+Settings/reports are restored and Excel closes; its audited window contains no
+Application events 1000/1001/1002. Final preservation passes. This is an assisted
+functional chain, not proof of unattended recovery or a native repair. The code
+label evidence retains exact reports and scope. Continue 4be.5 authored guides and
+actual How-To/Diagnostic/Compare handlers with this unchanged packaged baseline;
+the entire Slice 4be and Release 1 remain unaccepted.
+
+Activity-label checkpoint: code **9bfac38**, isolated candidate
+`deploy/validation-event-detail-labels`; controls v1.158 records the same scope.
+
 **Boxing published Viewer supplementary proof:** On the unchanged
 `deploy/validation-boxing-activity-visible` candidate, actual Make/Unbox evidence
 passes through the ordinary Admin publisher and actual Viewer/Detail handlers.

@@ -1172,6 +1172,19 @@ lines. A transient list selection position is not an event or inventory identity
 The detail surface is read-only, reuses its owned instance, and closes with Viewer.
 Its actions validate the captured context before rendering retained content.
 
+**Contributing-line labels:** `lblDetailLines` reads **Contributing lines - select
+a line to inspect its fields**. A User activity line in `lstEventLines` displays
+its original published fixed control caption and recorded outcome, separated by
+` - `; an unavailable caption or outcome remains **Unavailable**. These labels
+distinguish an attempt from its result without inventing an inventory key or
+asserting Domain application. Other lines retain their exact System_Key labels,
+including repeats and existing unavailable-identity handling. The identity/key
+accessor, source grouping, selected line, published order and profile-permitted
+fields remain unchanged. Labels are cached presentation only; they do not read
+authority, reload policy, log actions or dispatch a workflow. This implements
+D18's approved activity/business distinction under semantic inheritance and
+requires actual published-activity selection RED/GREEN before implementation.
+
 The existing Core string read envelope may carry a `DETAIL1` marker after its
 four compatibility header fields, followed by verified load UTC. Its ten visible
 fields retain their declared order; permitted Inventory line fields appended

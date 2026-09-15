@@ -1,8 +1,44 @@
 # invSys Form Controls v1
 
-**Version:** 1.154 (Boxing published detail verified; activity-picker refinement pending)
+**Version:** 1.158 (activity-line correction verified; assisted full-chain evidence)
 
-**Published Viewer checkpoint:** The unchanged Boxing candidate completes
+**Activity-line label test entry (historical):** D18 specifies a source-neutral contributing
+line prompt and published caption/outcome labels for User activity. Inventory key
+labels/accessors, repetitions, grouping, cached selection and read-only evidence
+remain intact. The real Admin Save/publication/Viewer-selection route protects the
+change; the existing inventory-only prompt and two Unavailable labels are expected
+RED before Operations changes. Boxing publication checks retain every prior GREEN
+and add label/key assertions. Implementation and gates were pending at that entry;
+the following checkpoint records the verified result.
+
+Focused RED is 36 PASS / two expected failures. The isolated Operations correction
+passes 38/38 GREEN, five-package build/explicit compile/cold start and both focused
+runs' instrumented compiles. The inspected Admin capture distinguishes Save Value -
+REQUESTED from Save Value - COMPLETED. Only the detail controller/form change among
+225 compiled identities. Static duplicates/dynamic calls/candidates are unchanged;
+the cached label helper adds one method and 17 lines. Detail is 34/34, published
+Viewer/filter/Shipping state 94/94, evaluation 376/376 and Boxing/Shipping 1707 PASS /
+seven known D8-A FAIL, with all 698 Boxing checks passing. Preceding GREENs, package
+and protected source hashes, two unrelated user documents and 28 module limits
+hold. Nineteen diagnostic/editor captures are inspected or byte-verified.
+
+The first chain fails with an RPC harness exception during projection rebuild
+after 32 live-role passes; Create Warehouse passes 15/15. A verified empty Excel
+residual is closed normally, retaining recovery files; settings and tracked reports
+are restored. No Excel Event1000 appears in the nine audited gate windows, but the
+RPC failure remains unexplained. The fresh unchanged-candidate chain passes 32/32,
+with live roles 48/48 and Create Warehouse 15/15. It also needs normal closure of a
+verified empty residual and retention of recovery files. Settings/reports are
+restored, Excel closes and its verified window has no Application events
+1000/1001/1002. Final preservation passes. This assisted functional chain does not
+prove unattended recovery or a native repair. The isolated label correction is
+verified; guides/How-To/Compare and broader Release 1 acceptance remain open. See the
+[label evidence](../../../invSys_fork/tests/integration/plan022_slice4be_event_detail_labels_results.md).
+
+Code checkpoint: **9bfac38**; isolated candidate
+`deploy/validation-event-detail-labels`. Accepted deployment remains unchanged.
+
+**Published Viewer checkpoint (preceding candidate):** The unchanged Boxing candidate completes
 1689 PASS / seven known D8-A FAIL. All 112 new publication/detail checks and
 680 Boxing checks pass, retaining every preceding identity/GREEN and all 18
 owner-return records. Real Admin publication and actual Viewer/Detail handlers
@@ -14,7 +50,7 @@ with no Event1000 in that run's audited window. Earlier full-chain/live-role
 results retain their original scope; no runtime or deployment change is claimed.
 Test/evidence checkpoint: code **17e6677**; runtime remains **8ccb5b9**.
 
-The activity line picker still shows **Unavailable** for both observations,
+That candidate's activity line picker shows **Unavailable** for both observations,
 because neither has an inventory key. Its inventory-only prompt needs a D18
 display refinement and protecting RED before correction; selected detail fields
 already distinguish the observations correctly. No fabricated System_Key is
@@ -3252,8 +3288,8 @@ identities remain Unavailable and are not grouped together.
 | Control | Display / purpose |
 |---|---|
 | `lblDetailProfile` | Loaded profile version and built-in/default/read status. |
-| `lblDetailLines` | **Contributing lines - select an exact inventory identity to inspect its fields**. |
-| `lstEventLines` | Every contributing line's exact System_Key, retaining repeats. Selection inspects cached fields without another projection/profile read. |
+| `lblDetailLines` | **Contributing lines - select a line to inspect its fields**. Isolated RED/GREEN, regression/layout and assisted full-chain evidence verified; human/deployed acceptance remains open. |
+| `lstEventLines` | User activity uses original published fixed caption + ` - ` + recorded outcome, with Unavailable for missing values. Other lines keep exact System_Key labels, retaining repeats. Key accessors and cached selection remain unchanged, without another projection/profile read. Isolated regression and visible evidence verified; human/deployed acceptance remains open. |
 | `lblDetailFields` | **Permitted event and selected-line fields**. |
 | `lstEventFields` | Locked caption/value list following the saved profile's enabled fields and order. Required identity, source, time provenance, coverage, uncertainty and guidance remain visible. Raw Note and unknown user columns are excluded. |
 | `lblDetailStatus` | Read-only line count or fixed context-loss guidance; field freshness identifies retained Stale data after failed Refresh. |
