@@ -5866,6 +5866,46 @@ package or guide schema changes, and no full Slice 4be acceptance is claimed.
 Focused reader implementation checkpoint: code **fdcfac9**, pushed to main;
 the isolated candidate remains under serial regression with all remaining gates open.
 
+Completed reader regression gates on 2026-09-15: combined recording/guide/Save/
+reader **170/170**, retaining all 105 preceding combined identities; Event Detail
+**34/34**; Viewer/filter/Shipping state **94/94**, retaining their preceding
+identities. All three exit 0 with Excel closed, unchanged candidate/user-document
+hashes and zero Application events 1000/1001/1002 in their measured windows.
+The maintained published-guide evidence records exact reports and UTC windows.
+Boxing/Shipping, evaluation and the full chain still require separate terminal
+verification. No D8-A approval, deployment or full acceptance is implied.
+
+Subsequent Boxing/Shipping terminal verification retains all 1,714 preceding
+identities and 18 owner-return observations: **1,707 PASS / seven unchanged D8-A
+FAIL**. Immediate cleanup is pending in its exit snapshot; the next evaluation
+preflight verifies no Excel, and that extended window has zero Application
+events 1000/1001/1002. Candidate and unrelated-document hashes are unchanged.
+Evaluation/full-chain results and direct Boxing-capture review remain open.
+Six detail/Viewer captures have now been directly reviewed. The long Coverage
+value is clipped at Event Detail's default/restored width and readable maximized.
+Track default-width long-field readability as remaining visible acceptance work;
+protect it with an actual form-action test before any presentation correction.
+This discovery does not replace the active guide-expectation D13 entry below.
+
+**Next 4be.5 D13 entry -- guide expectation authoring:** Follow D18's new
+guide-expectation refinement. The existing shared expectation editor gains an
+explicit guide-draft scope, entered through `btnGuideExpectedConclusion` with
+`lblGuideExpectationSummary`. Use for this guide stages intent; only Save guide
+publishes the definition with its immutable version. Initial None, current
+source/context/policy/ACTION_PATH_MAINT checks, Cancel, exact prior links and
+original observations remain binding. Preserve the editor's existing dimensions.
+Establish packaged RED for actual entry, scope wording, initial None, registered
+ordered/repeated steps and retry choices, cancellation, staging without writes,
+first/next saved definitions and invalidation before runtime changes. Preserve
+all 132 reader/draft/Save/Viewer checks. Current reader regressions continue on
+the frozen candidate independently. No expectation implementation or RED result
+is claimed by this entry. Guide-bound evaluation, both presentations/Compare,
+closed-guide editing, direct event curation, transfer and full acceptance remain.
+Prepared test/evidence checkpoint: code **7c11619**, pushed to main; runtime
+remains **fdcfac9**. Four PowerShell parsers, 89 local links, 25 frozen package
+hashes and both unrelated-document hashes pass. Guide-expectation RED is queued
+until the existing serial regression runner releases Excel.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,

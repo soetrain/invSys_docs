@@ -1,6 +1,22 @@
 # invSys Form Controls v1
 
-**Version:** 1.166 (published-guide reader focused GREEN; broader gates open)
+**Version:** 1.167 (guide-expectation D13 entry; reader regression continues)
+
+**Next 4be.5 guide-expectation controls:** D18's guide-expectation authoring
+refinement adds proposed `btnGuideExpectedConclusion` (**Expected conclusion**)
+and `lblGuideExpectationSummary` to `frmActionPathGuide`. They share its top
+provenance area while preserving the existing default/minimum sizes. The shared
+`frmActionPathExpectation` uses **Use for this guide** and guide-specific help.
+None is the initial definition; captured success does not supply an expectation.
+Use stages only in the captured, permission-checked guide draft; Save guide
+publishes it with that immutable version. Cancel and scope/context/policy/capability
+loss cannot leak intent between drafts or change saved observations. These new
+controls are not implemented yet; actual packaged RED must precede runtime edits.
+Reader GREEN and all remaining comparison/release gates retain their scope below.
+Prepared test checkpoint: code **7c11619**, pushed; runtime remains **fdcfac9**.
+Four changed PowerShell scripts parse, 89 local links resolve, and all 25 frozen
+package hashes plus both unrelated documents are preserved. This does not claim
+execution of the new guide-expectation RED or visible capture cases.
 
 **Reader candidate:** The isolated published-guide reader builds and compiles in
 all five packages; Operations cold start passes. Its controls retain exact
@@ -23,6 +39,27 @@ are running. Automated captures are not human or full Release 1 acceptance;
 preceding RED is retained below.
 Focused reader implementation checkpoint: code **fdcfac9**, pushed to main.
 The isolated candidate remains under serial regression; no deployment changed.
+
+**Completed reader regressions:** Combined recording/guide/Save/reader is
+170/170 (all 105 preceding combined checks retained), Event Detail 34/34 and
+Viewer/filter/Shipping state 94/94 (all preceding identities retained). Each
+exits 0 with Excel closed and zero Application events 1000/1001/1002. Candidate
+hashes and unrelated documents are preserved. Exact report references and time
+windows are in the maintained published-guide evidence linked below. These
+completed gates do not establish the pending Boxing/Shipping, evaluation or
+full-chain result; the separate directly reviewed three-image gate retains its
+scope. D8-A remains unapproved.
+
+Boxing/Shipping subsequently retains all 1,714 preceding checks and 18 owner
+observations: 1,707 PASS / seven unchanged D8-A FAIL. Immediate cleanup was
+pending; the evaluation preflight then verifies no Excel. Its extended window
+has zero Application events 1000/1001/1002 and candidate/user hashes remain
+unchanged. Evaluation/full-chain and direct Boxing-image review remain pending.
+Six completed detail/Viewer images are now directly reviewed. They expose an
+open readability issue: the long Coverage field is clipped at Event Detail's
+default/restored width, though readable maximized. This does not change the
+contract or justify full visible acceptance; a focused protecting case and
+compatible presentation refinement are required before a runtime correction.
 
 **Next 4be.5 reader controls:** Architecture D18's published-guide reader
 refinement names `btnPublishedGuides` (**Published guides**) in Action Paths and

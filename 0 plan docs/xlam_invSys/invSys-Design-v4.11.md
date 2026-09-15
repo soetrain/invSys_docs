@@ -1506,6 +1506,46 @@ run selection, How-To/Diagnostic/Compare, expectations, import/export, preferenc
 or full acceptance. Reading a saved guide's source observations is not evaluation
 of another run. No reader action records activity, publishes Events or evaluates.
 
+**4be.5 guide-expectation authoring refinement:** `frmActionPathGuide` adds
+`btnGuideExpectedConclusion`, **Expected conclusion**, and
+`lblGuideExpectationSummary`. The summary distinguishes **Guide expectation:
+None** from the number of explicitly authored expected steps. The existing
+900 by 650 default and 760 by 600 minimum remain binding. Source provenance
+shares the top area with these controls and stays readable without overlap.
+
+The command reuses Operations' `frmActionPathExpectation` in an explicit
+guide-draft scope. Its action is **Use for this guide**, and its help identifies
+guide intent. The recording, selected-run evaluation and guide scopes must not
+be inferred from each other or share staged definitions accidentally. The
+originating guide draft ID, source/selection binding, captured session/warehouse,
+current policy and ACTION_PATH_MAINT remain valid for every expectation action.
+Opening again for the same valid guide draft reuses the editor; cancelling or
+invalidating that guide closes/clears its expectation editor. A changed scope
+cannot retain another recording, evaluation or guide's pending steps.
+
+A new guide begins with the existing None definition even if the recorded run
+succeeded or contains a captured expectation. The shared registered control/
+outcome pickers, 256-step bound, RetryAllowed default True, stable expected StepIds
+and terminal-kind rules apply unchanged. Expected-step identities belong to the
+expectation definition; they do not replace authored instruction StepIds or
+original ActivityIds, and list positions are not identities.
+
+**Use for this guide** validates and stages the definition in the originating
+guide draft. Cancel in the expectation editor discards only its pending edits;
+it retains the previously staged guide definition. Neither action publishes,
+evaluates, logs activity, changes a recording/evaluation expectation or executes
+a workflow. Save guide atomically includes the last explicitly staged definition
+in that immutable guide version using the existing ExpectedConclusion schema.
+Later saves retain exact prior-version links and preserve earlier definitions,
+authored instructions and original observations. Cancelling the guide discards
+unsaved expectation changes while preserving all published versions. A fresh
+guide draft never inherits another draft's definition.
+
+This implements the already approved guide-expectation rule under D18 semantic
+inheritance. It changes no schema or comparison semantics. Closed-guide editing,
+explicit observed-run selection, guide-bound evaluation, both presentations and
+Compare, direct event curation, transfer and full acceptance remain required.
+
 **4be.4 expectation and evaluation refinement (2026-09-14):** This implements
 the approved ordered-step and terminal-result rules above. It adds no workflow
 execution, recovery, permission grant, source-identity inference or substitute
