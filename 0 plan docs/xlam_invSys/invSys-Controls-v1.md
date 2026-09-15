@@ -1,6 +1,30 @@
 # invSys Form Controls v1
 
-**Version:** 1.169 (guide-expectation implementation GREEN; visible gate pending)
+**Version:** 1.170 (combined guide-expectation regression GREEN; capture diagnosis continues)
+
+**Latest combined gate:** The guide-expectation candidate passes **204/204**,
+retaining every preceding 170 combined identity and all 166 focused protecting
+identities. Exit 0; Excel closes normally after the immediate controller check.
+The extended measured window has zero Application events 1000/1001/1002. All 30
+package hashes and both unrelated documents remain unchanged. A blank-form
+capture comparison succeeds with hidden and visible Excel, so hidden Excel alone
+does not reproduce the packaged foreground failure. Its restored-hidden image
+has a title bar but no rendered form body despite capture success and expected
+dimensions. All three images are reviewed; this is not product visible evidence.
+A separate packaged setup diagnostic keeps Excel visible from startup with
+unchanged capture guards. It stops **9 PASS / one harness FAIL** at Viewer entry,
+before guide behavior. The inspected Visual Basic dialog reports Automation
+error 440; Debug locates `modInventoryViewer.OpenInventoryViewer` at
+`mInventoryViewer.SetWarehouse warehouseId`. This is a stopped-call location,
+not a proven cause. Reviewed VBE Reset ends the diagnostic; its caller then
+returns `0x800A9C68`, and normal cleanup closes Excel. The measured window has
+zero Application events 1000/1001/1002. All 30 package hashes and both unrelated
+documents remain unchanged. Six scripts parse and 91 local links resolve.
+No control/runtime contract or accepted deployment changes. See the maintained guide-expectation and capture
+diagnostic evidence for exact reports. Remaining broader and release gates stay open.
+Combined regression/diagnostic checkpoint: code **5b0505e**, pushed to main;
+runtime remains **827a427**. Excel and both diagnostic/regression controllers are
+closed. The next test-first work is isolation of the visible Viewer startup call.
 
 **Latest guide-expectation gate:** The isolated candidate implements
 `btnGuideExpectedConclusion` (**Expected conclusion**) and
@@ -23,7 +47,7 @@ the measured capture window. Static duplicate groups decrease 193 to 192,
 dynamic counts remain 9/45 and all 28 existing module limits pass. All 30 package
 hashes and both unrelated documents are preserved; four scripts parse and 89
 local links resolve. Build/compile/behavior native windows also have zero
-Application events 1000/1001/1002 through verified cleanup. Combined and broader
+Application events 1000/1001/1002 through verified cleanup. Broader
 candidate regressions, visible evidence, the prior full-chain failure and the
 remaining comparison/release gates stay open.
 See the maintained guide-expectation evidence for exact reports and commands.

@@ -5977,6 +5977,42 @@ gate is the combined recording/guide/expectation regression on this candidate.
 Focused implementation checkpoint: code **827a427**, pushed to main. No accepted
 deployment, installed package or NAS runtime changed; the slice remains open.
 
+**Combined guide-expectation regression GREEN:** The same frozen candidate
+passes **204/204**, retaining all 170 preceding combined identities and all 166
+focused protecting identities with no duplicates. Report:
+`reports/runtime/slice4be-viewer-published-read/a43f12170584430086b493cd222958a5/green.json`.
+Exit 0; immediate Excel closure is false, with normal closure verified at UTC
+2026-09-15 09:45:20.7984561. The extended 09:32:51.6975893--09:45:20.7984561
+window has zero Application events 1000/1001/1002. All 30 package hashes, both
+unrelated documents and the existing compile/static scope remain verified.
+The blank-form capture comparison succeeds with both hidden and visible Excel;
+hidden Excel alone therefore does not reproduce the packaged foreground failure.
+All three images are reviewed, exposing an incomplete restored-hidden rendering
+despite capture success and full dimensions. The next packaged diagnostic keeps
+Excel visible from startup under an explicit test-only flag, preserving all
+capture guards. It stops **9 PASS / one harness FAIL** at Viewer startup, before
+guide behavior: an inspected Visual Basic dialog reports Automation error 440.
+Debug identifies `modInventoryViewer.OpenInventoryViewer` at the ordinary
+`mInventoryViewer.SetWarehouse warehouseId` call, not an underlying cause.
+Reviewed VBE Reset ends the disposable execution; the caller then returns
+`0x800A9C68`, and normal cleanup closes Excel without forced termination.
+Its UTC 2026-09-15 09:47:14.7141703--09:57:27.9017095 window has zero Application
+events 1000/1001/1002. Report:
+`reports/runtime/slice4be-viewer-published-read/5cada388ce034b26b4ca0a771ef9990e/green.json`.
+The stopped Viewer call must be investigated before another capture attempt or
+runtime correction. No foreground fix or visible acceptance is established.
+The full-chain harness also adds reporting-only stage labels to distinguish
+Receiving form invocation, outcome/status reads, capability revalidation and
+projection inspection. Workflow calls/assertions are unchanged; a later chain
+run must supply any new location or result. The maintained capture-diagnosis
+record contains exact commands, observations and the remaining limitations.
+Six relevant PowerShell scripts parse, 91 local links resolve, and all 30 frozen
+package hashes plus both unrelated documents remain unchanged. Runtime remains
+**827a427**; these diagnostic additions change no architectural contract.
+Combined regression/diagnostic checkpoint: code **5b0505e**, pushed to main.
+Excel and both controllers are closed; isolate the observed visible Viewer
+startup call next, preserving the focused/combined GREEN and all release scope.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,
