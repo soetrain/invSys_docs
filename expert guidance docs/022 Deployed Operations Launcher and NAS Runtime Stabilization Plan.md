@@ -5733,6 +5733,44 @@ Focused GREEN implementation checkpoint: code **b10b301**, pushed to main;
 controls v1.162. This is a reviewable implementation checkpoint with the remaining
 gates and full guide contract still open, not a completed-slice declaration.
 
+Subsequent unchanged-draft gates pass Viewer/filter/Shipping state 94/94,
+evaluation 376/376, and Boxing/Shipping 1,707 PASS / seven known unapproved D8-A
+FAIL, preserving all 1,714 Boxing/Shipping identities and 18 owner-return facts.
+The full chain terminates at 5 PASS / one RPC harness FAIL; live roles are
+32 PASS / one harness FAIL at canonical projection rebuild, Create Warehouse
+15/15. All three tracked reports are restored. A verified empty residual Excel
+session closes normally with visible recovery-file retention; terminal Excel
+closure is verified. The complete chain window contains no Application events
+1000/1001/1002, but HRESULT 0x800706BE remains unresolved. This candidate has no
+passing full-chain gate. Exact reports and scope are in the code guide evidence.
+
+**Next 4be.5 D13 step -- immutable Save guide:** The normative guide-save
+refinement names `btnSaveGuide`, publication wording and the fixed `Guides`
+storage child/schema. This is a discovered implementation detail under D18
+semantic inheritance, not a new architecture exception. Before runtime changes,
+exercise the actual packaged Save handler for first publication, a second immutable
+version, retained StepIds/original observations, blank-name/oversize rejection,
+source/context/policy/capability guards and unchanged recording/activity/authority
+bytes. Missing Save control/version behavior must be meaningful RED against the
+frozen guide-draft candidate. Protect the existing draft, recording, Viewer and
+role GREENs. Headless Core owns validation and atomic guide publication; Operations
+owns the captured editor. Initial fields and prior-version links must match the
+normative schema rather than treating a guide as a recording journal. Save does
+not evaluate or create business Events. Persistence remains unimplemented at
+this test-entry definition; discovery/editing, guide expectations, all presentation
+and comparison modes, transfer and real-user provisioning remain required.
+
+The corrected Save guide test completes 97 checks: 71 PASS / 26 expected
+missing-save and unclosed-source-label FAIL. All 67 prior Viewer/draft checks
+pass, with no harness exception. Earlier attempts stop at a foreground-capture
+guard and a stale fixture Viewer after re-sign-in; the fixture now reopens Viewer
+under the new session and verifies restored capability/Auth bytes. Runtime remains
+unchanged. Ten current/frozen package pins and both unrelated documents hold;
+Excel closes, and all three test windows have no Application events 1000/1001/1002.
+The code Save guide evidence records exact reports. This establishes the D13 RED
+entry for implementation, not acceptance of persistence or the full guide contract.
+Test checkpoint: code **e96863d**, pushed to main; runtime remains **b10b301**.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,

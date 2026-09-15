@@ -1,6 +1,21 @@
 # invSys Form Controls v1
 
-**Version:** 1.162 (guide draft focused GREEN; regressions pending)
+**Version:** 1.163 (Save guide test entry; draft chain remains open)
+
+**Next test entry -- Save guide:** D18's immutable guide-save refinement adds
+proposed `btnSaveGuide` (**Save guide**) to `frmActionPathGuide`, with wording that
+Save publishes a version for permitted Viewers in this warehouse. Current editor
+sizes remain unchanged. Core will validate the captured source, current policy
+and ACTION_PATH_MAINT before appending a new immutable guide version. Cancel will
+discard unsaved edits while preserving saved versions. The actual packaged Save
+handler, first/next versions, rejection paths and source preservation require RED
+before implementation. The corrected focused test completes 97 checks: 71 PASS /
+26 expected missing-save and unclosed-source-label FAIL, retaining all 67 preceding
+Viewer/draft GREENs without a harness exception. Source preservation and fixture
+restoration pass; Excel closes and frozen packages remain unchanged. This control
+and persistence are not yet implemented or accepted. See the
+[Save guide RED evidence](../../../invSys_fork/tests/integration/plan022_slice4be_guide_save_results.md).
+Test checkpoint: code **e96863d**, pushed to main; runtime remains **b10b301**.
 
 **Current implementation status:** The corrected isolated guide candidate compiles
 in all five packages and passes 72/72 focused checks: all 67 protecting identities
@@ -9,8 +24,15 @@ were directly reviewed. Source evidence, draft reuse, step identity/order, Cance
 context invalidation and ordinary-reader denial pass through packaged controls.
 The initial policy-hash rejection and its correction remain recorded in the guide
 evidence. Combined recording/guide passes 105/105 and Event Detail passes 34/34,
-both with terminal exit 0 and Excel closed. Further regressions are running; human, deployed/NAS and full guide
-acceptance remain open. Accepted packages are unchanged.
+both with terminal exit 0 and Excel closed. Subsequent Viewer/filter/Shipping state
+passes 94/94, evaluation 376/376, and Boxing/Shipping 1,707 PASS / seven known
+unapproved D8-A FAIL. The chain terminates at 5 PASS / one RPC harness FAIL;
+live roles reach 32 PASS / one harness FAIL, Create Warehouse 15/15. Tracked
+reports are restored and Excel closes after verified empty-session Quit and
+visible recovery-file retention. No native repair or full-chain acceptance is
+claimed. Human, deployed/NAS and full guide acceptance remain open. Accepted
+packages are unchanged. Save guide's earlier foreground-capture and stale fixture
+Viewer failures remain documented separately from the corrected behavioral RED.
 
 **4be.5 guide draft entry:** Under the approved D18 refinement, the Action Paths
 library adds `btnCreateGuide` (**Create guide**) for a permitted selected recording

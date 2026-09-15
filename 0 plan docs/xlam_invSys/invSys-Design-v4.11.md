@@ -1394,6 +1394,71 @@ they do not relax immutable save/version/publication, search, both presentations
 comparison, export/import, current-policy or incomplete-evidence requirements.
 The initial draft-entry D13 gate does not accept those remaining behaviors.
 
+**4be.5 immutable guide-save refinement:** `frmActionPathGuide` adds
+`btnSaveGuide`, **Save guide**. Visible wording explains that Save publishes a
+version for permitted Viewers in this warehouse. It does not publish business
+Events or evaluate a run. The existing editor sizes remain binding; Save and
+Cancel fit together without overlapping the status or other controls. Cancel
+discards unsaved changes and never removes an already saved version.
+
+Core revalidates the captured source selection, session/target, current policy
+and ACTION_PATH_MAINT at every save. A trimmed nonempty guide name and at least
+one authored step are required. Instructions retain their authored text; comma-
+separated tags become an ordered collection of trimmed nonempty strings.
+The first successful save generates a new guide ActionPathId, distinct from its
+source recording/sequence and authored step identities, and writes version 1.
+Saving again from that editor appends the next immutable version of that guide,
+with a new RecordId and exact previous RecordId/hash. Stable surviving StepIds
+and original observations are preserved. No save overwrites a version or silently
+rebases a stale editor onto another writer's version. A validation/storage failure
+while the binding remains valid preserves unsaved edits and reports a reason.
+Source/context/permission/policy binding loss still invalidates the draft and
+clears retained evidence under the preceding rule. Success identifies the saved
+guide ID/version.
+
+This first Save gate starts from the captured recording draft above. D18's
+separate selection of tracked events/actions remains required; it is not replaced
+by a requirement to record every guide source first.
+
+Guide records use the fixed `Guides` child of the approved ActionPaths warehouse
+root: `Training\ActionPaths\<WarehouseId>\Guides\<ActionPathId>.<Version>.json`.
+Readers never create the folder. Generated identifiers, allowed target checks,
+reparse-point rejection, same-directory atomic publication, exact warehouse/
+schema/hash validation and the existing 1 MiB whole-record bound apply. No content
+is silently truncated. Guide versions are positive integers; the recording
+journal's 514-entry limit does not apply to guide revisions. Version exhaustion
+or a concurrent filename/version conflict fails explicitly without overwrite.
+
+The initial guide schema is 1, RecordKind **Guide**, Lifecycle **Published**.
+Its fields are `SchemaVersion`, `RecordKind`, `ActionPathId`, `Version`, `RecordId`,
+`PreviousRecordId`, `PreviousSha256`, `WarehouseId`, `OriginWarehouseId`,
+`CreatedByUserId`, `CreatedAtUTC`, `Lifecycle`, `Name`, `Tags`, `Instructions`,
+`CatalogVersion`, `PackageSetVersion`, `BuildIdentity`, `PolicyVersion`, `Steps`,
+`Observations`, `SourceRun`, `ExpectedConclusion`, then final `ContentSha256`.
+The existing ASCII-escaped UTF-8 and final-hash convention applies. Unknown fields,
+duplicate identities, unsupported values and invalid types are rejected.
+Each authored step contains `StepId`, `Method` (**How-To**), `ControlId`, original
+`Caption`, `Instruction`, and exact `SourceActivityId`. Observations retain the
+existing allowlisted activity-record schema, in original order, independently
+of authored step ordering or omissions; currently restricted observations are
+excluded with an explicit restricted count, never fabricated or relabelled.
+
+`SourceRun` preserves `ActionPathId`, `SequenceId`, `JournalVersion`, `RecordId`,
+`ContentSha256`, `RecordedByUserId`, `EntryCreatedAtUTC`, `Lifecycle`, `ReasonCode`,
+`ActionCount`, `CapturePolicyVersion`, `CatalogVersion`, `PackageSetVersion`,
+`BuildIdentity`, and `RestrictedObservationCount`. These refer to the validated
+selected source entry; they are not the new guide's identity or proof that its
+authored instructions ran. `SourceRun` is empty when no recording applies; this
+recorded-draft route requires the complete exact source object. An absent recording
+must never be fabricated from selected events. `ExpectedConclusion` uses the existing D18 definition;
+it is None until explicitly authored for the guide. Captured success is never
+automatically promoted to an authored expectation or diagnostic conclusion.
+
+This names the storage and control details of D18's already approved immutable
+save/publication contract under semantic inheritance. It does not accept the
+remaining guide discovery/editing, expectation authoring, presentation switching,
+comparison, transfer, current-policy or full Release 1 acceptance gates.
+
 **4be.4 expectation and evaluation refinement (2026-09-14):** This implements
 the approved ordered-step and terminal-result rules above. It adds no workflow
 execution, recovery, permission grant, source-identity inference or substitute
