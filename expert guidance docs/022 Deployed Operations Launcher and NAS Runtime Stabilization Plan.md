@@ -5943,6 +5943,40 @@ Verified RED/evidence checkpoint: code **a5babcb**, pushed to main. Runtime
 remains **fdcfac9**; four PowerShell parsers, 89 local links, 25 package hashes
 and both unrelated documents are verified. Excel and both gate runners are closed.
 
+**Guide-expectation implementation GREEN:** The isolated
+`deploy/validation-guide-expectation` candidate passes **166/166**, preserving
+every protecting RED identity and all preceding 132 reader/Save/draft/Viewer
+checks. Core holds independent guide intent; the shared Operations editor names
+its explicit scope. Use stages only, Save publishes immutable definitions, and
+Cancel, recording lifecycle, scope switching, policy/capability/target loss and
+source/identity preservation pass. All five packages build/compile; Operations
+cold start passes. Compiled comparison retains 234 components with exactly seven
+changed and none added/removed. The behavior controller exits 0 with immediate
+Excel closure false; normal closure is verified separately at UTC 2026-09-15
+09:24:45.4286630. Report:
+`reports/runtime/slice4be-viewer-published-read/ff91f4fc88104eeda788a6cbe13c2811/green.json`.
+An earlier combined capture gate fails after 81 passing checks at the first
+Save-guide image's foreground guard, producing no PNG. This is a harness failure,
+not product RED. A test-only diagnostic preserves the guard and records window
+identities/classes without captions or workbook values. The separate diagnostic
+capture gate also ends **81 PASS / one harness FAIL** with no PNG. All three
+attempts report activation success but retain VS Code's foreground root instead
+of the intended Excel form. This identifies the competing window, not a proven
+cause or correction. Excel closes and its measured window has zero Application
+events 1000/1001/1002. Report:
+`reports/runtime/slice4be-viewer-published-read/fa883641b2e6485faaa55661ab440d53/green.json`.
+Refreshed static evidence is 241 components / 5,958 procedures / 131,327 lines;
+duplicate groups decrease 193 to 192, dynamic calls remain 9/45 and all 28
+existing module limits pass. All 30 candidate/frozen package hashes and both
+unrelated documents are preserved; four scripts parse and 89 local links resolve.
+Build/compile/behavior native windows have zero Application events 1000/1001/1002,
+including observed cleanup. Full visual acceptance, broader candidate regressions
+and full-chain success remain open. The maintained guide-expectation evidence
+records commands, exact reports and cleanup observations. The next independent
+gate is the combined recording/guide/expectation regression on this candidate.
+Focused implementation checkpoint: code **827a427**, pushed to main. No accepted
+deployment, installed package or NAS runtime changed; the slice remains open.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,

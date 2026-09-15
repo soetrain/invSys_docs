@@ -1,8 +1,36 @@
 # invSys Form Controls v1
 
-**Version:** 1.168 (reader evaluation GREEN; full chain fails; guide-expectation RED verified)
+**Version:** 1.169 (guide-expectation implementation GREEN; visible gate pending)
 
-**Latest broader gates:** Reader-candidate evaluation passes 376/376 with every
+**Latest guide-expectation gate:** The isolated candidate implements
+`btnGuideExpectedConclusion` (**Expected conclusion**) and
+`lblGuideExpectationSummary` in `frmActionPathGuide`, preserving its default and
+minimum dimensions. The shared editor explicitly says **Use for this guide**.
+None, repeated expected steps, retry choices, four editor layouts, stage-only
+summary, immutable first/next saves, scope isolation, Cancel and current
+policy/capability/target guards pass: **166/166**, retaining every protecting
+identity. Five packages build/compile; Operations cold start passes. Exactly
+seven of 234 compiled components change. Normal Excel closure is verified after
+the successful controller's immediate check still saw the process.
+An earlier first-Save screenshot fails its foreground check after 81 passing
+behaviors; no PNG or visual acceptance results. The diagnostic now records only
+window/process/class identities and activation result on failure, retaining the
+same ownership/foreground guards. The separate diagnostic run also stops at
+81 PASS / one harness FAIL, with no PNG: all three attempts leave VS Code in
+front of the intended Excel form despite reported activation success. The cause
+is unresolved. Excel closes and no Application events 1000/1001/1002 occur in
+the measured capture window. Static duplicate groups decrease 193 to 192,
+dynamic counts remain 9/45 and all 28 existing module limits pass. All 30 package
+hashes and both unrelated documents are preserved; four scripts parse and 89
+local links resolve. Build/compile/behavior native windows also have zero
+Application events 1000/1001/1002 through verified cleanup. Combined and broader
+candidate regressions, visible evidence, the prior full-chain failure and the
+remaining comparison/release gates stay open.
+See the maintained guide-expectation evidence for exact reports and commands.
+Focused implementation checkpoint: code **827a427**, pushed to main. This is
+not complete Slice 4be or Release 1 acceptance; accepted deployment is unchanged.
+
+**Preceding reader broader gates and guide-expectation RED:** Reader-candidate evaluation passes 376/376 with every
 preceding identity retained, Excel closed and zero Application events 1000/1001/
 1002. All 15 diagnostic captures are directly reviewed. The full-chain attempt
 fails 5 PASS / one harness FAIL; live roles stop at Run Receiving ConfirmWrites
@@ -16,13 +44,13 @@ Guide-expectation RED completes independently: **136 PASS / 30 expected FAIL**,
 entry, guide scope, staged summary and immutable definitions are the expected
 failures; four new preservation checks pass. Excel closes, 25 frozen package
 hashes and both unrelated documents are preserved, and its measured window has
-zero Application events 1000/1001/1002. Implementation and GREEN remain next.
+zero Application events 1000/1001/1002. This RED precedes the implementation GREEN above.
 The detailed reader evidence below records exact paths and visible limitations.
-Verified RED/evidence checkpoint: code **a5babcb**, pushed; runtime remains
-**fdcfac9**. No guide-expectation runtime change or GREEN is claimed.
+At the verified RED/evidence checkpoint **a5babcb**, runtime was **fdcfac9**;
+the later implementation GREEN is recorded above.
 
-**Next 4be.5 guide-expectation controls:** D18's guide-expectation authoring
-refinement adds proposed `btnGuideExpectedConclusion` (**Expected conclusion**)
+**4be.5 guide-expectation control contract:** D18's guide-expectation authoring
+refinement adds `btnGuideExpectedConclusion` (**Expected conclusion**)
 and `lblGuideExpectationSummary` to `frmActionPathGuide`. They share its top
 provenance area while preserving the existing default/minimum sizes. The shared
 `frmActionPathExpectation` uses **Use for this guide** and guide-specific help.
@@ -30,7 +58,7 @@ None is the initial definition; captured success does not supply an expectation.
 Use stages only in the captured, permission-checked guide draft; Save guide
 publishes it with that immutable version. Cancel and scope/context/policy/capability
 loss cannot leak intent between drafts or change saved observations. These new
-controls are not implemented yet; actual packaged RED must precede runtime edits.
+controls now pass the focused GREEN above, following actual packaged RED.
 Reader GREEN and all remaining comparison/release gates retain their scope below.
 Prepared test checkpoint: code **7c11619**, pushed; runtime remains **fdcfac9**.
 Four changed PowerShell scripts parse, 89 local links resolve, and all 25 frozen
