@@ -1356,6 +1356,44 @@ controls implement the approved library and integrity rules. Guide authoring,
 expectations, evaluation, both presentations and import/export remain required
 extensions of that library, not alternative records or a reduced R1 scope.
 
+**4be.5 guide draft entry refinement:** The recorded-run library exposes
+`btnCreateGuide`, **Create guide**, for the selected permitted run. It is enabled
+only with ACTION_PATH_MAINT and a validated selection. The command opens one
+Operations-owned modeless `frmActionPathGuide`, caption **Action Path guide**,
+bound to the launching Viewer, captured session/warehouse and exact selected
+ActionPathId, SequenceId, journal version, RecordId and hash. Repeated entry for
+that same binding reuses the draft. A changed run/version or invalid context
+invalidates the prior draft; it must not be saved or retargeted to another run.
+
+`txtGuideName`, `txtGuideTags` and `txtGuideInstructions` stage authored guide
+content. `lstGuideSteps` contains one draft step for each distinct observed action,
+in original action order, retaining the original fixed control caption. Each step
+has a separate stable StepId and exact source ActivityId; source ordinals are not
+new identities. `txtGuideStepInstruction` stages the selected authored instruction;
+`btnGuideStepUp`, `btnGuideStepDown` and `btnRemoveGuideStep` alter only draft steps.
+`txtGuideEvidence` is locked and distinguishes **Observed control** and original
+outcomes from **Authored instruction**. It presents the source sequence's permitted
+observations in recorded order, independently of authored step order or omissions.
+All original attempt/result observations
+remain in the source recording even when an author reorders or omits guide steps.
+`lblGuideSource` identifies the exact source run/version and its lifecycle;
+`lblGuideStatus` explains staging or unavailable evidence without claiming completion.
+`btnCancelGuide`, **Cancel**, discards the draft and closes the editor.
+The guide editor defaults to 900 by 650 points, with a 760 by 600 minimum;
+controls remain inside the form without overlap through larger and restored sizes.
+The step list's selected value is its stable StepId; displayed ordering never
+becomes the identity. Context invalidation clears retained source evidence.
+
+Core validates the captured source, current visibility, maintenance capability
+and draft binding through primitive/serialized boundaries; Operations owns the
+form. Draft entry, editing, reordering and Cancel do not publish a guide, append
+an evaluation, record user activity, change preference/policy or rewrite source
+files. Authored text cannot become observed evidence. These discovered controls
+implement the already approved How-To authoring contract under semantic inheritance;
+they do not relax immutable save/version/publication, search, both presentations,
+comparison, export/import, current-policy or incomplete-evidence requirements.
+The initial draft-entry D13 gate does not accept those remaining behaviors.
+
 **4be.4 expectation and evaluation refinement (2026-09-14):** This implements
 the approved ordered-step and terminal-result rules above. It adds no workflow
 execution, recovery, permission grant, source-identity inference or substitute

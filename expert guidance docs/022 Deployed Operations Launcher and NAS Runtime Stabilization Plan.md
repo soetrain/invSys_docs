@@ -5664,6 +5664,42 @@ Runtime/tooling checkpoint: code `5e2c45a`, isolated candidate
 proof across the remaining roles; preserve the full D18 guide/comparison/import/export
 and visible user-acceptance requirements.
 
+**4be.5 guide draft entry D13 step:** Continue the approved authored-guide and
+How-To/Diagnostic/Compare work after code 9bfac38. The normative guide draft entry
+refinement names Create guide and the Operations guide editor, with Core validation
+and exact source binding. A real Admin Save sequence, frozen through the actual
+recording controls and selected in Action Paths, protects creation, reused editor,
+authored-versus-observed wording, immutable source evidence, cancellation and
+maintenance/context guards. Missing entry/editor behavior must be RED before any
+runtime implementation. Test facades may invoke actual controls and inspect views;
+they must not create the draft or simulate an owning result. Preserve the existing
+packaged GREEN baseline and all 4be.5 save/version/search/presentation/comparison/
+export/import and final acceptance requirements. This first gate covers draft entry,
+not completed guide authoring or Release 1 acceptance.
+
+The first focused route establishes 41 PASS / 14 expected missing-entry/editor
+FAIL, after two fixture errors were corrected (required user argument and explicit
+ACTION_PATH_MAINT grant in the disposable fixture). Both earlier runs preserve
+76 existing Viewer/recording checks; their harness failures are not product RED.
+The expanded focused route additionally protects actual authored step editing,
+Move up/Move down/Remove with stable StepIds, unchanged original observations,
+900 by 650 default / 760 by 600 minimum layout, and stale-evidence clearing.
+`-GuideDraftOnly` retains packaged Viewer/source-fixture prerequisites while avoiding
+the broader recording suite during focused iteration. `-CheckGuideDraft` retains
+that suite for the combined regression gate. Runtime implementation remains pending.
+
+Expanded draft RED is now verified: 41 PASS / 26 expected guide failures, retaining
+all 55 preceding focused identities and 38 baseline Viewer GREENs. All five
+instrumented compiles pass before forms. Runtime source, the five frozen package
+hashes and both unrelated user documents remain unchanged. Excel closes; all four
+attempts' audited windows have no Application events 1000/1001/1002. The code
+`plan022_slice4be_guide_draft_results.md` records exact reports and fixture failures.
+Next implement the captured Core draft boundary and Operations editor through
+these protected handlers; this RED checkpoint does not accept any guide runtime.
+
+Guide test checkpoint: code **7972cd0**, with controls v1.161. The frozen runtime
+remains code 9bfac38 in `deploy/validation-event-detail-labels`.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,
