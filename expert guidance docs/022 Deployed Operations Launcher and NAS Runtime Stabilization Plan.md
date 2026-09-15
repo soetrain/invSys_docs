@@ -6013,6 +6013,33 @@ Combined regression/diagnostic checkpoint: code **5b0505e**, pushed to main.
 Excel and both controllers are closed; isolate the observed visible Viewer
 startup call next, preserving the focused/combined GREEN and all release scope.
 
+**Viewer startup measured comparison:** The harness assigns Excel.Visible=True,
+but the default-startup focused trace reads Boolean False and opens/reuses the
+visible modeless Viewer (15/15). Early-visible setup reads Boolean True and fails
+at SetWarehouse's caption assignment (14 PASS / two startup FAIL). A saved,
+reopened ordinary workbook preserves its active identity, Saved state and closed
+file hash, but also fails there (16 PASS / two startup FAIL). The earlier 166/166
+and 204/204 did not measure application visibility at callback entry; retain their
+default-startup scope without a retrospective hidden/visible application claim.
+All three compile five disposable instrumented packages, use actual public entry
+and real Admin Settings/publication fixtures, and preserve captured context,
+warehouse bytes, publication/Shipping authority and normal cleanup. The fixed
+trace identifies the caption boundary, not its underlying cause. Extended
+Initialize/Activate/Layout tracing and the reduced Viewer-only probe set each
+report 16 PASS / two startup FAIL: initialization returns, with no Layout or
+Activate entry before the caption failure. Recording/guide probes are not needed
+to reproduce it. All nine startup attempts close Excel and have zero Application
+events 1000/1001/1002 in their measured windows. Eight scripts parse, 91 links
+resolve, and all 30 package hashes plus both unrelated documents are preserved.
+Compile, insertion, visibility assumption and locked-file hashing setup failures
+remain non-product failures. Exact reports and limitations are in the maintained
+capture-diagnostic evidence. Next compare a blank form caption setter in this same
+prepared session; standalone calibration did not establish that case. No runtime,
+normative contract or accepted deployment change is made.
+Startup diagnostic checkpoint: code **cda7ecb**, pushed to main; runtime remains
+**827a427**. Four invalid diagnostic option combinations are rejected before
+Excel setup. Excel and both new diagnostic controllers are closed.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,

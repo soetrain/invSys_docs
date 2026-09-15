@@ -1,6 +1,28 @@
 # invSys Form Controls v1
 
-**Version:** 1.170 (combined guide-expectation regression GREEN; capture diagnosis continues)
+**Version:** 1.171 (Viewer startup visibility measured; saved-workbook failure isolated)
+
+**Viewer startup diagnostic scope:** Assignment of Excel.Visible=True does not
+prove its resulting state. The default-startup focused trace reads Boolean False
+and opens/reuses the visible modeless Viewer (15/15). Early-visible setup reads
+Boolean True and fails at SetWarehouse's caption assignment (14 PASS / two
+startup FAIL). The saved/reopened ordinary workbook case also fails there
+(16 PASS / two startup FAIL), preserving its active identity, Saved state and
+closed-file hash. All three compile five instrumented packages and preserve
+context, warehouse bytes, publication/Shipping authority and normal cleanup.
+The earlier 166/166 and 204/204 did not measure application visibility at entry;
+their default-startup scope is retained. Extended event tracing and the reduced
+Viewer-only probe set each report 16 PASS / two startup FAIL: initialization
+returns, and no Layout or Activate handler runs before the caption failure.
+Fixed labels and numeric errors are diagnostic only; the cause remains unresolved.
+All nine startup attempts close Excel and have zero Application events 1000/1001/
+1002 in their measured windows. Eight scripts parse, 91 links resolve, and all
+30 package hashes plus both unrelated documents are preserved. Next compare a
+blank caption setter within this same prepared session. No control, runtime or
+normative contract change or failure correction is claimed.
+Startup diagnostic checkpoint: code **cda7ecb**, pushed to main; runtime remains
+**827a427**. Four invalid diagnostic option combinations are rejected before
+Excel setup. Excel and both new diagnostic controllers are closed.
 
 **Latest combined gate:** The guide-expectation candidate passes **204/204**,
 retaining every preceding 170 combined identity and all 166 focused protecting
