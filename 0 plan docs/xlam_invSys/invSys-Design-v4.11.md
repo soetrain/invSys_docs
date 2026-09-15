@@ -955,7 +955,8 @@ versions, permissions or authority stores. Shipping activity/source-reference
 definitions and remaining control coverage require their own protecting evidence.
 
 **4be.1 Boxing Make/Unbox activity refinement:** D18 comprehensive control coverage
-registers two existing Box Maker commands in catalog 9 (implementation pending):
+registers two existing Box Maker commands in catalog 9 (isolated implementation
+verified; broader acceptance remains open):
 `BOXING_MAKE` / **Make Boxes** / `mBtnBoxMakerMake_Click`, and
 `BOXING_UNBOX` / **Unbox** / `mBtnBoxMakerUnmake_Click`. Both have OwnerId
 BOXING_WORKFLOW, SourceRole Boxing, Surface **Operations > Shipping > Box Maker**,

@@ -1,6 +1,57 @@
 # invSys Form Controls v1
 
-**Version:** 1.152 (Boxing optional-tracking RED; acceptance pending)
+**Version:** 1.153 (Boxing observation implementation verified; broader acceptance pending)
+
+**Final candidate checkpoint:** The isolated Boxing candidate completes 1577 PASS /
+7 known D8-A FAIL across 1584 checks. All 568 Boxing checks pass, retaining all 1553
+preceding GREENs and 18 owner-return records. Sixteen actual-form/saved-path captures
+are inspected, including three bounded library layouts and correct tracking notices.
+This is automated visible evidence, not human acceptance. Five-package compile and
+Operations cold start pass; exactly seven compiled components change, all package
+pins and 28 module limits hold, and dynamic calls remain 9/45. Fresh static evidence
+has one fewer duplicate group. Final build/compile/test windows have no Event1000;
+the earlier native build failure remains unresolved. The functional Release 1 chain
+passes 32/32, live roles 48/48 and Create Warehouse 15/15, with settings/report
+restoration. Its separate native audit records one combase.dll access violation
+during the restart/cleanup interval; the exact failing call is unproven. These
+first-run functional passes did not establish a clean native chain gate. Settings passes
+191/191, retaining all 187 prior GREENs; four added checks exercise both Boxing
+editors and saved flags. Ten Settings captures are inspected and that native-event
+window is clean. Full Receiving passes 854/854, preserving the recorded 845 baseline
+plus nine accepted native-focus/closed-workbook checks, with no Excel Event1000 in
+that window. Action Path evaluation passes 374/374 with every prior GREEN retained,
+nineteen inspected or byte-verified captures and no Excel Event1000 in that window.
+The separate worksheet suites retain 215/215 guard and 210/210 scenario GREENs;
+their native-event windows are clean. The fresh unchanged-candidate chain passes
+32/32, with live roles 48/48 and Create Warehouse 15/15, and no Excel Event1000 in
+its audited window. Excel closes and settings/reports are restored. Final package,
+compiled-source, module-limit, parser, link and unrelated-change preservation pass.
+This completes the isolated Make/Unbox observation checkpoint, with no accepted
+deployment change. The earlier native faults remain unresolved, D8-A is unapproved,
+and complete guide/comparison, remaining control coverage and human Release 1
+acceptance remain open. The code Boxing results retain exact evidence and scope.
+
+Code checkpoint: **8ccb5b9**, committed and pushed; isolated candidate
+`deploy/validation-boxing-activity-visible`.
+
+**Earlier checkpoints (historical):**
+
+**Implementation entry:** Under the approved D18 catalog-9 refinement, Make Boxes
+and Unbox now enter the existing captured-context/permission guard and pass owner
+submission/required-step facts to optional observations. The observation uses
+explicit processing/refresh returns before legacy report fallback. Extracted
+list-copy/report helpers preserve module limits. The committed 1560-check RED route
+protects this change; isolated build/compile, GREEN, layout/visible evidence, static
+maintenance, live-role and full-chain verification are still pending.
+
+The first compiled candidate passes **544/544 Boxing checks**, retaining all prior
+1560 identities/1388 GREENs in a 1553 PASS / 7 known D8-A FAIL route. Catalog/reference
+regression is 101/101. Its context guards, ordered recording, explicit outcomes and
+tracking notices now pass. A later candidate preserves exception text before fact
+calls and is running the full route with actual-form and saved-path captures, three
+library layouts and read-only evidence preservation. These visual/final-candidate
+gates and the remaining full Release 1 checks are pending. The initial native build
+failure remains recorded; a successful retry does not establish its repair.
 
 Optional-tracking tooling checkpoint: `d6bdcdf`, committed and pushed.
 

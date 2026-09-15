@@ -5664,6 +5664,67 @@ Runtime/tooling checkpoint: code `5e2c45a`, isolated candidate
 proof across the remaining roles; preserve the full D18 guide/comparison/import/export
 and visible user-acceptance requirements.
 
+**Boxing final candidate visible GREEN:** The isolated candidate completes
+1577 PASS / 7 known D8-A FAIL across 1584 checks; all 568 Boxing checks pass.
+Every preceding check and all 1553 GREENs remain, with all 18 independent owner
+records unchanged. Sixteen captures are inspected, including actual Make/Unbox,
+tracking notices and three saved-path layouts. Five-package compile/cold start,
+225 compiled identities with exactly seven reviewed changes, package preservation,
+fresh static evidence and all 28 module limits pass. Dynamic calls remain 9/45;
+duplicate groups decrease by one. Final build/compile/test windows have no Excel
+Event1000, without proving repair of the earlier native failure. The functional
+Release 1 chain passes 32/32, live roles 48/48 and Create Warehouse 15/15, with local
+settings and tracked reports restored. Its separate audit records one combase.dll
+access violation consistent with the restart/cleanup interval; an exact failing
+call is unproven. Those first-run functional passes alone did not establish a clean
+native chain gate. Settings passes 191/191, retaining all 187 prior GREENs; four added checks
+exercise both Boxing editors and saved flags. Ten Settings captures are inspected
+and that native-event window is clean. Full Receiving passes 854/854, preserving
+the recorded 845 baseline plus nine accepted native-focus/closed-workbook checks;
+its native-event window is clean. Action Path evaluation passes 374/374 with every
+prior GREEN retained, nineteen inspected or byte-verified captures and no Excel
+Event1000 in that window. Separate worksheet suites retain 215/215 guard and 210/210
+scenario GREENs, with clean native-event windows. The fresh unchanged-candidate
+chain passes 32/32, with live roles 48/48 and Create Warehouse 15/15, and no Excel
+Event1000 in its audited window. All jobs end, Excel closes, and settings/reports
+are restored. Final package/source, module-limit, parser, link and unrelated-change
+preservation pass. The isolated Make/Unbox observation checkpoint is complete;
+the code evidence retains exact reports and the guard's transient cleanup snapshot.
+Earlier native causes remain unresolved; this successful repeat is not a repair.
+D8-A remains unapproved. Comprehensive remaining control coverage, combined recordings,
+guide lifecycle, both presentations/comparison, physical and human Release 1 acceptance
+remain open. Accepted deployment and operational workbooks are unchanged.
+The code Boxing evidence records exact report paths and preserved wider scope.
+
+Boxing implementation checkpoint: code **8ccb5b9**, committed and pushed;
+isolated candidate `deploy/validation-boxing-activity-visible`. Controls v1.153
+and the maintained code evidence record the same verified scope.
+
+**Boxing observation implementation entry:** The 1560-check RED route now
+protects the approved catalog-9 Make/Unbox contract. Implementation reuses the
+Shipping form's captured-context and permission guard, receives exact write-entry
+references and required-step failure facts from Boxing owners, and records only
+actual handlers. Legacy report presentation remains separate from observations.
+Equivalent list-copy/report helpers are extracted to preserve existing oversized
+module limits. Core/Operations change; accepted deployment remains untouched.
+Existing tests retain their checks while recognizing catalog 9 and the extracted
+helper location. Focused GREEN, compiled isolated packages, layout/visible evidence,
+static maintenance, live roles and full Release 1 chain remain required.
+
+The first compiled implementation candidate passes **544/544 Boxing checks** in a
+**1553 PASS / 7 known D8-A FAIL** route, preserving all 1560 preceding identities
+and 1388 prior GREENs. Supplementary catalog/reference regression passes 101/101;
+all 31 catalog-8 definitions remain. Exactly seven compiled components change;
+the form/owner module shrink to 2909/22375, all 28 limits hold, and dynamic calls
+remain 9/45. The initial build has a native VBE7 access violation before Operations
+source import; it exits and Excel closes before a fresh-directory retry. Retry
+build/compile/test complete with no Event1000 in their windows, without establishing
+a native repair. The next candidate captures original exception messages before
+fact calls and is running the full Boxing route with owned-window captures and
+saved-path layout/read-preservation checks. That candidate's GREEN, inspected
+evidence and remaining Release 1 gates are pending; the code evidence records the
+exact first GREEN and retained native-failure limitations.
+
 **Boxing optional-tracking RED, 2026-09-14:** Tooling `d6bdcdf` is committed and
 pushed. The unchanged runtime `5e2c45a`
 completes **1388 PASS / 172 expected FAIL**. All prior 1486 checks/1321 GREENs
