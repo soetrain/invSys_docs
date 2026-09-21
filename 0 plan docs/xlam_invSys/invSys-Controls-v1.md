@@ -1,6 +1,19 @@
 # invSys Form Controls v1
 
-**Version:** 1.175 (Event Detail overflow behavioral GREEN; visible and chain gates open)
+**Version:** 1.176 (guide-to-run binding D13 entry; overflow visible and chain gates open)
+
+**Next guide-to-run controls (not implemented or accepted):** D18 names
+`lblGuideObservedRun` and `btnUseGuideForRun`, **Use for selected run**, in the
+Operations Published guides reader. The label names the explicitly selected
+recording/journal version captured when the operator opens that reader. Its action
+stages the exact selected guide version's expectation; it never chooses the guide's
+source run or evaluates automatically. Ordinary permitted readers need no maintenance
+capability. Changed run/version/context or unavailable guide evidence prevents use;
+reopen from the intended recording to bind it. Browsing/refresh and closing the
+reader do not replace or discard explicitly staged intent. The existing separate
+Evaluate action remains responsible for immutable diagnostics. Minimum/default
+760x600/900x650, current visibility and excluded training-control capture rules apply.
+Actual packaged missing-behavior RED must precede runtime implementation.
 
 **Current Event Detail candidate:** The isolated overflow candidate changes only
 Operations `frmEventDetail`, sizing locked field columns for their original text.

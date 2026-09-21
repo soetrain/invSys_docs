@@ -6132,6 +6132,18 @@ The corrected-stage run fails during canonical projection rebuild. Recovery file
 were retained, verified empty Excel processes closed normally, and all three tracked
 reports restored. Complete visible and full-chain acceptance remain required.
 
+**Next 4be.5 D13 entry -- guide-to-run expectation binding:** Follow D18's explicit
+binding refinement. First protect the actual Published guides -> **Use for selected
+run** -> separate **Evaluate** handlers. Existing Admin recording and guide-authoring
+handlers must create two immutable guide versions and a different observed run.
+Expected RED is the absent apply control/guide binding, never a fixture or compile
+failure. Preserve all prior guide/expectation checks; prove exact version/hash and
+expected StepIds, selected-run ActivityIds, ordinary-reader access, no inferred
+source-run success, stale selection rejection, context/policy/integrity invalidation,
+explicit analysis scope and non-mutation before Evaluate. Both presentation methods
+and Compare remain required after this bounded binding step. Event Detail's open
+visible/full-chain gates remain separate and are not waived by this next test entry.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,

@@ -1557,6 +1557,44 @@ inheritance. It changes no schema or comparison semantics. Closed-guide editing,
 explicit observed-run selection, guide-bound evaluation, both presentations and
 Compare, direct event curation, transfer and full acceptance remain required.
 
+**4be.5 explicit guide-to-run expectation binding:** An operator first selects a
+permitted saved recording in Action Paths, then opens Published guides and selects
+an exact immutable guide version. `lblGuideObservedRun` identifies the recording
+ID and journal version captured by that explicit opening action;
+`btnUseGuideForRun`, **Use for selected run**, stages that guide's explicit
+ExpectedConclusion for that recording. The existing recording list is the observed-
+run selector. The guide's source recording and embedded observations never select
+or substitute for the observed run. No selected run means the action is disabled.
+
+The command validates the displayed captured context, journal binding, exact guide
+ID/version/hash and current visibility before staging. A changed recording or
+journal version invalidates the pending reader action; reopen Published guides
+from the intended recording to bind it explicitly. Reusing that explicit entry
+updates the displayed binding; passive activation does not silently retarget it.
+Browsing or refreshing guide versions does not replace previously staged intent.
+Only **Use for selected run** applies another guide. The existing 900 by 650 default
+and 760 by 600 minimum retain readable run provenance, status and action controls.
+
+Applying a guide requires ordinary permitted read access, not ACTION_PATH_MAINT.
+It closes any pending selected-run expectation edit, clears the displayed previous
+evaluation selection, and stages **Guide expectation** with its exact version/hash.
+It does not append an evaluation, publish, record activity, execute a task, change
+the guide or alter captured observations. **Evaluate** remains a separate explicit
+action. A None guide expectation remains None and cannot imply success. Explicit
+analysis edits become **This evaluation** and clear the staged guide reference;
+changing run/context clears both. Closing the guide browser alone does not discard
+the explicitly staged definition.
+
+Core keeps the validated definition and exact guide reference with the existing
+selected-run continuity token. It revalidates guide integrity/current permitted
+expectation before evaluation commit and saved-result display. Saved guide-bound
+results retain the existing schema's Guide reference and match only original
+ActivityIds from the explicitly selected journal. Missing, changed, corrupt or
+restricted guide evidence cannot be silently replaced by captured intent, a newer
+guide or the guide's successful source run. These discovered controls implement
+the approved exact-guide/observed-run separation under semantic inheritance; they
+do not redefine evaluation semantics or complete How-To/Diagnostic/Compare.
+
 **4be.4 expectation and evaluation refinement (2026-09-14):** This implements
 the approved ordered-step and terminal-result rules above. It adds no workflow
 execution, recovery, permission grant, source-identity inference or substitute
