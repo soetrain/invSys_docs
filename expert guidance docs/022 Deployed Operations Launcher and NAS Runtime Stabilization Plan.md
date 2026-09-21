@@ -6170,8 +6170,15 @@ six existing compiled components change and one private Core helper is added.
 Its static duplicate/dynamic-call counts and all 28 preceding module limits pass.
 Packaged GREEN is **204/204**, preserving every RED identity, all 166 preceding
 checks and all 37 new guide-binding checks. Excel closes normally after the immediate
-terminal observation, with no intervention or matching Application event. Visible
-operator evidence and broader candidate regressions remain pending.
+terminal observation, with no intervention or matching Application event. The
+visible packaged gate now passes **214/214**, preserving all focused 204 and prior
+visible 177 identities. All 15 images were directly reviewed, including exact
+guide/run provenance at minimum/default/larger/restored sizes and the separate
+evaluation result. Normal Excel closure and zero matching Application events are
+verified. Two earlier capture failures remain explicit; guarded native caption
+input and temporary restoration of the owned form's topmost state support the
+strict foreground check without changing runtime or global focus policy. Broader
+candidate regressions, both presentations/Compare and human acceptance remain open.
 
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
