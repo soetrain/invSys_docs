@@ -6118,7 +6118,19 @@ four expected FAIL, preserving all 34 prior detail checks. Default/larger/restor
 text capacity fails; native-maximized capacity passes. No harness failure,
 duplicate, policy/data reload or native Application event occurs; Excel closes
 normally. See [detail overflow evidence](../../invSys_fork/tests/integration/plan022_slice4be_detail_overflow_results.md).
-Implementation and acceptance remain open.
+The isolated correction adds one private helper/18 source lines and changes only
+`frmEventDetail` among 234 compiled components. Build and all five package compiles
+pass. Focused behavioral GREEN is 41/41, preserving the preceding 34 identities;
+Viewer regression is 94/94. Duplicate-body groups and dynamic-call counts remain
+192 and 9/45, with all 28 preceding oversized-module limits satisfied. Two later
+41/41 capture runs show the scrollbar but do not prove movement; visible scrolling
+and multiline rendering remain open. Candidate full-chain runs remain 5/1, with
+live-role results 36/1 and 32/1 and Create Warehouse 15/15. Joining reordered harness
+sections with explicit newlines restores the Boxing stage assignment without
+changing any of the 59 macro calls; it corrects reporting, not the RPC failure.
+The corrected-stage run fails during canonical projection rebuild. Recovery files
+were retained, verified empty Excel processes closed normally, and all three tracked
+reports restored. Complete visible and full-chain acceptance remain required.
 
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption

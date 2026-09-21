@@ -1,8 +1,24 @@
 # invSys Form Controls v1
 
-**Version:** 1.174 (expectation-candidate regressions and Event Detail overflow D13 entry)
+**Version:** 1.175 (Event Detail overflow behavioral GREEN; visible and chain gates open)
 
-**Current expectation-candidate evidence:** The visible guide gate passes
+**Current Event Detail candidate:** The isolated overflow candidate changes only
+Operations `frmEventDetail`, sizing locked field columns for their original text.
+Focused RED is 37 PASS / four expected FAIL; behavioral GREEN is **41/41**, retaining
+all 34 preceding identities. Build and all-five-package compile pass; static
+duplicates/dynamic calls and all 28 preceding module limits do not regress.
+Viewer regression passes **94/94**; its three captures were reviewed. Activity
+labels and filters are readable; Shipping feedback is fully painted, while the
+adjacent System Key/Alternative headings remain a limitation. Complete visible
+scrolling is not yet established: two later 41/41 capture runs show a scrollbar
+without demonstrated movement. The current candidate's full-chain runs remain
+failed (5/1 each; live roles 36/1 and 32/1; Create Warehouse 15/15 each). A stage
+separator correction fixes the first report's misleading Production label; it
+does not fix the RPC failure. Recovery files were retained and tracked reports
+restored after normal closure of verified empty test Excel processes. Accepted
+deployment is unchanged. See [overflow evidence](../../../invSys_fork/tests/integration/plan022_slice4be_detail_overflow_results.md).
+
+**Preceding expectation-candidate evidence:** The visible guide gate passes
 **177/177**, preserving all 166 focused identities and adding nine directly
 reviewed guide/reader/expectation captures plus startup/package-state assertions.
 All nine captures satisfy the native foreground guard without invoking the
