@@ -1,8 +1,8 @@
 # invSys Form Controls v1
 
-**Version:** 1.177 (candidate regressions and guide-to-run binding D13 gate)
+**Version:** 1.178 (guide-binding candidate and assisted overflow full-chain pass)
 
-**Next guide-to-run controls (not implemented or accepted):** D18 names
+**Guide-to-run controls (isolated candidate; acceptance pending):** D18 names
 `lblGuideObservedRun` and `btnUseGuideForRun`, **Use for selected run**, in the
 Operations Published guides reader. The label names the explicitly selected
 recording/journal version captured when the operator opens that reader. Its action
@@ -16,6 +16,9 @@ Evaluate action remains responsible for immutable diagnostics. Minimum/default
 Actual packaged missing-behavior RED is **171 PASS / 33 expected FAIL**, preserving
 all preceding 166 identities. Every failure belongs to the new guide binding;
 GREEN and visible acceptance remain pending.
+The isolated candidate builds and all five packages compile. Its six changed
+existing components and one new private Core helper preserve the static duplicate,
+dynamic-call and preceding module-size limits.
 
 **Current Event Detail candidate:** The isolated overflow candidate changes only
 Operations `frmEventDetail`, sizing locked field columns for their original text.
@@ -32,12 +35,18 @@ the next gate started 171 ms later, without intervention. Complete visible
 scrolling is not yet established: three later 41/41 capture runs show a scrollbar
 without demonstrated movement. Evaluation regression passes **376/376**, retaining
 all preceding identities, with normal closure, zero matching Application events
-and all 19 captures directly reviewed. The current candidate's full-chain runs remain
+and all 19 captures directly reviewed. The candidate's first two full-chain runs
 failed (5/1 each; live roles 36/1 and 32/1; Create Warehouse 15/15 each). A stage
 separator correction fixes the first report's misleading Production label; it
 does not fix the RPC failure. Recovery files were retained and tracked reports
 restored after normal closure of verified empty test Excel processes. Accepted
 deployment is unchanged. See [overflow evidence](../../../invSys_fork/tests/integration/plan022_slice4be_detail_overflow_results.md).
+The subsequent run passes **32/32 chain, 48/48 live roles and 15/15 Create Warehouse**,
+preserving prior identities, with zero matching Application events. Final cleanup
+needed normal Quit of verified empty test Excel and reviewed recovery-file retention;
+this is an assisted functional pass. Excel is closed and tracked reports restored.
+Immediate post-input detail images still do not prove scrolling; that visible gate
+remains open independently of the new guide-binding candidate.
 
 **Preceding expectation-candidate evidence:** The visible guide gate passes
 **177/177**, preserving all 166 focused identities and adding nine directly

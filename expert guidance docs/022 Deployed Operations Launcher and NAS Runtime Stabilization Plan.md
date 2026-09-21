@@ -6137,7 +6137,16 @@ sections with explicit newlines restores the Boxing stage assignment without
 changing any of the 59 macro calls; it corrects reporting, not the RPC failure.
 The corrected-stage run fails during canonical projection rebuild. Recovery files
 were retained, verified empty Excel processes closed normally, and all three tracked
-reports restored. Complete visible and full-chain acceptance remain required.
+reports restored. At that checkpoint, visible and full-chain acceptance remained open.
+
+The subsequent macro-diagnostic run retains all **32 chain / 48 live-role / 15
+Create Warehouse** identities and passes, with zero matching Application events.
+It is an assisted functional pass: normal Quit of a verified empty test Excel and
+directly reviewed retention of recovery files were needed for final cleanup.
+The earlier empty process had already closed before Quit; no action was applied to
+it. All three tracked reports are restored. The immediate post-input detail capture
+still shows no horizontal movement; visible scrolling remains open. The chain used
+frozen overflow XLAMs, while its static scan included the guide-binding source draft.
 
 **Next 4be.5 D13 entry -- guide-to-run expectation binding:** Follow D18's explicit
 binding refinement. First protect the actual Published guides -> **Use for selected
@@ -6156,6 +6165,10 @@ checks. All preceding 166 identities pass; every failure belongs to guide bindin
 Excel closes normally after the immediate terminal observation, and the extended
 window has zero matching Application events. Implementation GREEN remains pending. See
 [guide-binding test entry](../../invSys_fork/tests/integration/plan022_slice4be_guide_evaluation_results.md).
+The isolated guide-binding candidate now builds and all five packages compile;
+six existing compiled components change and one private Core helper is added.
+Its static duplicate/dynamic-call counts and all 28 preceding module limits pass.
+Packaged GREEN and visible operator acceptance remain pending.
 
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
