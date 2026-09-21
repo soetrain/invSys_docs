@@ -6185,7 +6185,18 @@ matching Application events. All 25 captures were reviewed. Individual-file
 inspection corrects an earlier batch-review filename association: Boxing
 zero-quantity rejection and accepted-Unbox feedback are correct. Unpainted Shipping
 regions remain a visible-evidence limitation; diagnose painting/capture timing
-before proposing a runtime fix. Evaluation and candidate-chain gates remain open.
+before proposing a runtime fix. Evaluation now passes **376/376**, preserving all
+prior identities; all 19 images were individually reviewed, with immediate normal
+closure and zero matching Application events. The candidate chain fails **5/1**,
+live roles **32/1**, at processor automation during projection rebuild with RPC
+`0x800706BE`; Create Warehouse passes **15/15**. A verified empty test Excel
+instance needed normal Quit and reviewed recovery retention. Tracked reports are
+restored; the zero-event audit does not identify the native cause. Keep the chain
+gate open. Independent paired-view RED can run after verified cleanup.
+The separate visible-host Event Detail test passes 41/41 with seven reviewed
+images, normal closure and zero matching Application events, but still no visible
+horizontal movement. Compare the disposable list's locked/unlocked interaction
+before proposing any runtime lock-contract change.
 
 **Next 4be.5 D13 entry -- paired How-To/Diagnostic views:** D18 now names an
 additional Operations **View guide and run** surface for the explicitly staged

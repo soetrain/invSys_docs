@@ -44,8 +44,14 @@ both close normally with zero matching Application events. All three Viewer and
 correct Boxing zero-quantity rejection and accepted-Unbox feedback, correcting an
 earlier batch-review filename association. Some Shipping regions remain unpainted
 and need focused capture/painting comparison; those images do not satisfy that
-visible gate. Evaluation/chain and human acceptance
-remain pending; these results do not accept How-To/Diagnostic/Compare.
+visible gate. Evaluation now passes **376/376**, retaining every prior identity;
+all 19 images were individually reviewed, with normal closure and zero matching
+Application events. The candidate chain fails **5/1**, live roles **32/1**, at the
+processor automation boundary during projection rebuild (RPC `0x800706BE`);
+Create Warehouse passes **15/15**. Its cleanup needed normal Quit of verified
+empty test Excel and reviewed recovery retention. Tracked reports are restored;
+zero matching Application events do not establish the native cause. Full-chain
+and human acceptance remain open; these results do not accept the paired views.
 The isolated candidate builds and all five packages compile. Its six changed
 existing components and one new private Core helper preserve the static duplicate,
 dynamic-call and preceding module-size limits.
@@ -77,6 +83,11 @@ needed normal Quit of verified empty test Excel and reviewed recovery-file reten
 this is an assisted functional pass. Excel is closed and tracked reports restored.
 Immediate post-input detail images still do not prove scrolling; that visible gate
 remains open independently of the new guide-binding candidate.
+The guide-binding candidate's visible-host detail test also passes 41/41 with
+normal closure and zero matching Application events. All seven images were
+reviewed; typed application visibility and verified input geometry still produce
+no visible scroll movement. A disposable locked/unlocked comparison is pending,
+without changing the runtime lock contract.
 
 **Preceding expectation-candidate evidence:** The visible guide gate passes
 **177/177**, preserving all 166 focused identities and adding nine directly
