@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.176 (guide-to-run binding D13 entry; overflow visible and chain gates open)
+**Version:** 1.177 (candidate regressions and guide-to-run binding D13 gate)
 
 **Next guide-to-run controls (not implemented or accepted):** D18 names
 `lblGuideObservedRun` and `btnUseGuideForRun`, **Use for selected run**, in the
@@ -22,9 +22,15 @@ all 34 preceding identities. Build and all-five-package compile pass; static
 duplicates/dynamic calls and all 28 preceding module limits do not regress.
 Viewer regression passes **94/94**; its three captures were reviewed. Activity
 labels and filters are readable; Shipping feedback is fully painted, while the
-adjacent System Key/Alternative headings remain a limitation. Complete visible
-scrolling is not yet established: two later 41/41 capture runs show a scrollbar
-without demonstrated movement. The current candidate's full-chain runs remain
+adjacent System Key/Alternative headings remain a limitation. Candidate
+Boxing/Shipping retains all 1,714 checks at **1,707 PASS / seven unchanged D8-A FAIL**,
+with zero matching Application events and all 22 captures directly reviewed.
+Immediate terminal Excel closure was False; the strict closure guard passed before
+the next gate started 171 ms later, without intervention. Complete visible
+scrolling is not yet established: three later 41/41 capture runs show a scrollbar
+without demonstrated movement. Evaluation regression passes **376/376**, retaining
+all preceding identities, with normal closure, zero matching Application events
+and all 19 captures directly reviewed. The current candidate's full-chain runs remain
 failed (5/1 each; live roles 36/1 and 32/1; Create Warehouse 15/15 each). A stage
 separator correction fixes the first report's misleading Production label; it
 does not fix the RPC failure. Recovery files were retained and tracked reports

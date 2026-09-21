@@ -6122,8 +6122,15 @@ The isolated correction adds one private helper/18 source lines and changes only
 `frmEventDetail` among 234 compiled components. Build and all five package compiles
 pass. Focused behavioral GREEN is 41/41, preserving the preceding 34 identities;
 Viewer regression is 94/94. Duplicate-body groups and dynamic-call counts remain
-192 and 9/45, with all 28 preceding oversized-module limits satisfied. Two later
-41/41 capture runs show the scrollbar but do not prove movement; visible scrolling
+192 and 9/45, with all 28 preceding oversized-module limits satisfied. Candidate
+Boxing/Shipping retains all 1,714 identities at 1,707 PASS / seven unchanged D8-A
+FAIL; all 22 captures are reviewed and the native Application event count is zero.
+The immediate terminal Excel closure was False; the strict closure guard passed
+before the next gate started 171 ms later, without intervention. Two later
+41/41 capture runs show the scrollbar but do not prove movement; a third bounded-press
+41/41 run has the same visual limitation. Evaluation regression retains all 376
+identities at 376/376, with normal closure, zero matching Application events and
+all 19 captures directly reviewed. Visible scrolling
 and multiline rendering remain open. Candidate full-chain runs remain 5/1, with
 live-role results 36/1 and 32/1 and Create Warehouse 15/15. Joining reordered harness
 sections with explicit newlines restores the Boxing stage assignment without
@@ -6143,6 +6150,9 @@ source-run success, stale selection rejection, context/policy/integrity invalida
 explicit analysis scope and non-mutation before Evaluate. Both presentation methods
 and Compare remain required after this bounded binding step. Event Detail's open
 visible/full-chain gates remain separate and are not waived by this next test entry.
+The opt-in `-CheckGuideEvaluation` gate is connected with 37 protecting checks;
+it has passed syntax validation but no RED/GREEN is claimed yet. See
+[guide-binding test entry](../../invSys_fork/tests/integration/plan022_slice4be_guide_evaluation_results.md).
 
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
