@@ -1,6 +1,23 @@
 # invSys Form Controls v1
 
-**Version:** 1.179 (guide-binding visible packaged evidence)
+**Version:** 1.180 (paired How-To/Diagnostic view test entry)
+
+**Next 4be.5 controls; implementation pending:** Action Paths `btnViewActionPath`,
+**View guide and run**, opens reusable Operations `frmActionPathView` for the
+explicitly staged exact guide and selected recording. `cboActionPathView` selects
+How-To, Diagnostic or Compare both; locked `txtActionPathHowTo` and
+`txtActionPathDiagnostic` distinguish authored instructions from actual selected-run
+observations/results. `lblActionPathPair`, `lblActionPathViewStatus`,
+`btnRefreshActionPathView` and `btnCloseActionPathView` show provenance/status and
+provide read-only Refresh/Close. Fresh open uses the saved effective preference;
+local switching never saves it or evaluates. Settings and the existing library's
+Evaluate keep their explicit scopes. Changed pair/context invalidates this view;
+reopen explicitly. Default/minimum 960x680/840x600 and larger/maximized/restored
+layouts must remain readable. D18's paired-presentation refinement governs current
+policy/integrity, capture-off availability, None expectations and exact saved-result
+association. Existing library observations stay available. These training controls
+are excluded from activity capture. Missing-control RED is next; no implementation
+or visible acceptance is claimed.
 
 **Guide-to-run controls (isolated candidate; acceptance pending):** D18 names
 `lblGuideObservedRun` and `btnUseGuideForRun`, **Use for selected run**, in the

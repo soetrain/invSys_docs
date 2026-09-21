@@ -1595,6 +1595,56 @@ guide or the guide's successful source run. These discovered controls implement
 the approved exact-guide/observed-run separation under semantic inheritance; they
 do not redefine evaluation semantics or complete How-To/Diagnostic/Compare.
 
+**4be.5 paired How-To/Diagnostic presentation refinement:** The Action Paths
+recording library adds `btnViewActionPath`, **View guide and run**. After an
+operator explicitly uses a published guide for the selected recording, this
+opens one reusable Operations-owned `frmActionPathView`, caption **Action Path
+view**. It captures that exact guide ID/version/hash, recording journal binding
+and originating library context. No guide is inferred from a successful source
+recording or chosen by filename/order. Without a staged guide/run pair the entry
+is disabled. A guide with None expectation may still supply authored instructions;
+it never supplies an inferred diagnostic conclusion.
+
+`cboActionPathView` offers **How-To**, **Diagnostic**, and **Compare both**.
+`txtActionPathHowTo` shows locked authored instructions; `txtActionPathDiagnostic`
+shows the separately selected run's original observations and, when explicitly
+available for that same pair, its validated saved diagnostic result. How-To shows
+the authored pane, Diagnostic the observed/result pane, and Compare both places
+them beside each other. Provenance labels distinguish the exact guide from the
+observed recording and the guide's source. Authored order and expected comparison
+steps are distinct: do not align them by list position or imply that an authored
+instruction ran. Matched, missing, extra, failed and unavailable comparison states
+retain the existing evaluator's meaning and original observed action identities.
+
+The new view leaves the existing recording library and its observation/result
+controls available. It has `lblActionPathPair`, `lblActionPathViewStatus`,
+`btnRefreshActionPathView` and `btnCloseActionPathView`. Opening, switching, resizing,
+refreshing and closing never evaluate, append records, publish, save preference,
+replay a control or change selected intent. Evaluate remains the existing separate
+explicit library action. A displayed saved result must identify the exact paired
+guide and journal; an unrelated or absent result is not silently selected. Refresh
+may display the library's explicitly selected result only after that validation.
+
+At a fresh opening, use the effective personal/warehouse view from the existing
+Core preference reader. Switching is local to this view instance; persistence
+still requires **Save My Preference** in Settings. Refresh retains the chosen
+method and pair while revalidating current policy and evidence. Reopening after
+Close reads the saved effective preference again. Unavailable policy never invents
+an effective choice or permission. Capture-off diagnostics show the existing
+unavailable-evidence notice; historical observations retain their original identity
+and current visibility, and disabling future collection never deletes them.
+
+Changed context, recording/journal binding or explicitly staged guide invalidates
+the pending view rather than retargeting it. Explicitly reopening establishes the
+new pair. Current visibility and exact integrity apply on every view action and
+activation; invalid content clears with a reason. Closing the originating library
+or Viewer closes the view. Default 960 by 680 and minimum 840 by 600 points retain
+readable pair/status/method controls and scrollable text at both sizes, larger,
+maximized and restored. These advisory controls are excluded from activity capture
+under the existing training-control rule. This names a compatible implementation
+of the approved two presentations; it changes no evaluator, storage, authority or
+preference-write contract and does not waive remaining curation/transfer/UAT gates.
+
 **4be.4 expectation and evaluation refinement (2026-09-14):** This implements
 the approved ordered-step and terminal-result rules above. It adds no workflow
 execution, recovery, permission grant, source-identity inference or substitute

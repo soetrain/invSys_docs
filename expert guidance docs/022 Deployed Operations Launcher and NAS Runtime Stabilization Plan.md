@@ -6180,6 +6180,22 @@ input and temporary restoration of the owned form's topmost state support the
 strict foreground check without changing runtime or global focus policy. Broader
 candidate regressions, both presentations/Compare and human acceptance remain open.
 
+**Next 4be.5 D13 entry -- paired How-To/Diagnostic views:** D18 now names an
+additional Operations **View guide and run** surface for the explicitly staged
+exact guide and selected recording. Preserve the existing library's visible
+observations and separate Evaluate. The new view uses the saved effective method
+on fresh opening; local switching/Refresh retains the pair without saving a
+preference or evaluating. Settings remains the preference writer. Headless Core
+validates current policy, exact guide/journal and any displayed saved result.
+Protect the actual entry/method/Refresh/Close handlers with a focused test on the
+frozen guide-binding candidate before implementation. Expected RED is absent
+controls/presentation behavior, not fixture/compile/focus failure. Retain all 204
+guide-binding identities and test all three views, saved preference, no implicit
+evaluation or source-run substitution, stale-pair rejection, current visibility,
+readable layout and non-mutation. No paired-view runtime or acceptance is claimed
+by this test entry; the guide-binding regression/chain gates remain separate. See
+[paired-presentation test entry](../../invSys_fork/tests/integration/plan022_slice4be_guide_presentation_results.md).
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,
