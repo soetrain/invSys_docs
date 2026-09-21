@@ -6151,7 +6151,10 @@ explicit analysis scope and non-mutation before Evaluate. Both presentation meth
 and Compare remain required after this bounded binding step. Event Detail's open
 visible/full-chain gates remain separate and are not waived by this next test entry.
 The opt-in `-CheckGuideEvaluation` gate is connected with 37 protecting checks;
-it has passed syntax validation but no RED/GREEN is claimed yet. See
+its frozen-candidate RED is **171 PASS / 33 expected FAIL** across 204 unique
+checks. All preceding 166 identities pass; every failure belongs to guide binding.
+Excel closes normally after the immediate terminal observation, and the extended
+window has zero matching Application events. Implementation GREEN remains pending. See
 [guide-binding test entry](../../invSys_fork/tests/integration/plan022_slice4be_guide_evaluation_results.md).
 
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,

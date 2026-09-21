@@ -13,7 +13,9 @@ reopen from the intended recording to bind it. Browsing/refresh and closing the
 reader do not replace or discard explicitly staged intent. The existing separate
 Evaluate action remains responsible for immutable diagnostics. Minimum/default
 760x600/900x650, current visibility and excluded training-control capture rules apply.
-Actual packaged missing-behavior RED must precede runtime implementation.
+Actual packaged missing-behavior RED is **171 PASS / 33 expected FAIL**, preserving
+all preceding 166 identities. Every failure belongs to the new guide binding;
+GREEN and visible acceptance remain pending.
 
 **Current Event Detail candidate:** The isolated overflow candidate changes only
 Operations `frmEventDetail`, sizing locked field columns for their original text.
