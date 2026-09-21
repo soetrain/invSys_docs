@@ -6065,7 +6065,38 @@ that restoration limitation rather than guessing the prior selection. The
 maintained capture evidence records exact reports and commands. No normative
 contract changes; remaining feature, regression, physical and human gates stay open.
 Saved-probe/capture checkpoint: code **66f909d**, pushed to main; runtime remains
-**827a427**. The full-chain gate is running on the frozen guide-expectation candidate.
+**827a427**. The later result follows.
+
+**Expectation candidate visible/chain evidence (2026-09-21):** The visible guide
+gate passes 177/177, retaining all 166 focused identities and nine reviewed guide,
+reader and expectation captures. Every capture satisfies the native foreground
+guard with zero accessibility fallback attempts. An experimental fallback was
+discarded after its label-only blank calibration target could not receive focus;
+it is not credited as the cause of the passing captures. No runtime, normative
+contract, global focus policy or accepted deployment changed.
+
+The first chain stops 5 PASS / one harness FAIL, with live roles 32 PASS / one RPC
+failure at projection rebuild and Create Warehouse 15/15. After verified empty-
+instance normal cleanup and reviewed recovery-file retention, a clean comparison
+passes 32/32, retaining all preceding identities, with live roles 48/48 and Create
+Warehouse 15/15. The successful chain also requires assisted empty-instance normal
+cleanup with recovery files retained. Both controllers restore all three tracked
+reports and close Excel; their measured windows contain no Application events
+1000/1001/1002. This is a functional chain pass, not proof of native repair or
+unattended recovery. Static generation retains 241 components, 5,958 procedures,
+1,184 scanner candidates and no new warning paths (27 before/after).
+
+All 30 frozen packages and both unrelated documents remain unchanged. Event Detail
+passes 34/34 with three reviewed captures in the experimental-helper comparison;
+its default/restored Coverage clipping remains open. The retained native helper
+passes Viewer/filter/Shipping state 94/94 with every prior identity. Its activity
+and filter images are readable; the Shipping image is partially painted and does
+not establish complete operator feedback. Boxing/Shipping and evaluation are
+running serially. Exact reports and limitations are in the maintained guide-expectation and
+capture evidence. Full Slice 4be, guide-bound evaluation, both presentations and
+Compare, editing/curation/transfer, physical deployment and human UAT remain open.
+Visible/chain evidence checkpoint: code **ba7cfd0**, pushed to main; runtime
+remains **827a427** and the retained test helper is **66f909d**.
 
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption

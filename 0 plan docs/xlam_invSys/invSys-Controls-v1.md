@@ -1,8 +1,34 @@
 # invSys Form Controls v1
 
-**Version:** 1.172 (saved probes clear Viewer startup; visible capture remains open)
+**Version:** 1.173 (visible guide gate and assisted full chain pass; broader gates open)
 
-**Latest Viewer startup comparison:** Writable temporary XLAM copies whose probes
+**Current expectation-candidate evidence:** The visible guide gate passes
+**177/177**, preserving all 166 focused identities and adding nine directly
+reviewed guide/reader/expectation captures plus startup/package-state assertions.
+All nine captures satisfy the native foreground guard without invoking the
+experimental accessibility fallback. The fallback was subsequently discarded
+after its label-only calibration target could not receive focus; no accessibility
+dependency or focus-policy workaround remains. The earlier 204/204 combined gate
+retains its scope. Runtime remains **827a427** and accepted deployment is unchanged.
+
+The full-chain retry passes **32/32**, retaining every prior chain identity,
+with live roles **48/48** and Create Warehouse **15/15**. This is an assisted
+functional pass: a verified empty Excel residual was closed normally and recovery
+files were explicitly retained. The preceding RPC failure remains recorded;
+neither result establishes its cause or unattended recovery reliability. Both
+windows and the guide gate have zero Application events 1000/1001/1002. All 30
+frozen package hashes and both unrelated documents remain unchanged. Event Detail
+passes 34/34 with three reviewed captures in the experimental-helper run; its
+default/restored Coverage clipping remains open. The retained native helper passes
+Viewer/filter/Shipping state 94/94, preserving all prior identities; activity and
+filter images are readable, but the Shipping image is partially painted and does
+not establish complete visible feedback. Boxing/Shipping and evaluation are running
+serially. Full Slice 4be,
+comparison features, physical deployment and human Release 1 acceptance remain open.
+Visible/chain evidence checkpoint: code **ba7cfd0**, pushed to main; runtime
+remains **827a427** and the retained test helper is **66f909d**.
+
+**Preceding Viewer startup comparison:** Writable temporary XLAM copies whose probes
 remain unsaved reproduce error 440 (18 PASS / two startup FAIL). Compiling and
 saving the probes in those isolated copies passes 20/20, including the actual
 public opening/reuse callback, visible Excel, captured context, loaded package
@@ -27,7 +53,7 @@ rejected before Excel starts. Nine scripts parse and all 30 frozen packages plus
 both unrelated documents are preserved. Full-chain regression is next; full
 Slice 4be/Release 1 acceptance remains open.
 Saved-probe/capture diagnostic checkpoint: code **66f909d**, pushed to main;
-runtime remains **827a427**. The full-chain gate is running on that frozen candidate.
+runtime remains **827a427**. The later full-chain result is recorded above.
 
 **Viewer startup diagnostic scope:** Assignment of Excel.Visible=True does not
 prove its resulting state. The default-startup focused trace reads Boolean False
@@ -75,7 +101,7 @@ Combined regression/diagnostic checkpoint: code **5b0505e**, pushed to main;
 runtime remains **827a427**. Excel and both diagnostic/regression controllers are
 closed. The subsequent startup and saved-probe comparisons above extend this evidence.
 
-**Latest guide-expectation gate:** The isolated candidate implements
+**Guide-expectation implementation gate:** The isolated candidate implements
 `btnGuideExpectedConclusion` (**Expected conclusion**) and
 `lblGuideExpectationSummary` in `frmActionPathGuide`, preserving its default and
 minimum dimensions. The shared editor explicitly says **Use for this guide**.
@@ -96,9 +122,9 @@ the measured capture window. Static duplicate groups decrease 193 to 192,
 dynamic counts remain 9/45 and all 28 existing module limits pass. All 30 package
 hashes and both unrelated documents are preserved; four scripts parse and 89
 local links resolve. Build/compile/behavior native windows also have zero
-Application events 1000/1001/1002 through verified cleanup. Broader
-candidate regressions, visible evidence, the prior full-chain failure and the
-remaining comparison/release gates stay open.
+Application events 1000/1001/1002 through verified cleanup. At that checkpoint,
+broader candidate regressions, visible evidence and full-chain acceptance remained
+open; the newer results above extend that scope. Comparison/release gates stay open.
 See the maintained guide-expectation evidence for exact reports and commands.
 Focused implementation checkpoint: code **827a427**, pushed to main. This is
 not complete Slice 4be or Release 1 acceptance; accepted deployment is unchanged.
@@ -133,10 +159,10 @@ publishes it with that immutable version. Cancel and scope/context/policy/capabi
 loss cannot leak intent between drafts or change saved observations. These new
 controls now pass the focused GREEN above, following actual packaged RED.
 Reader GREEN and all remaining comparison/release gates retain their scope below.
-Prepared test checkpoint: code **7c11619**, pushed; runtime remains **fdcfac9**.
+At the prepared-test checkpoint, code was **7c11619**, pushed; runtime was **fdcfac9**.
 Four changed PowerShell scripts parse, 89 local links resolve, and all 25 frozen
-package hashes plus both unrelated documents are preserved. This does not claim
-execution of the new guide-expectation RED or visible capture cases.
+package hashes plus both unrelated documents were preserved. That checkpoint did
+not claim RED execution or visible capture; the later results above provide them.
 
 **Reader candidate:** The isolated published-guide reader builds and compiles in
 all five packages; Operations cold start passes. Its controls retain exact
