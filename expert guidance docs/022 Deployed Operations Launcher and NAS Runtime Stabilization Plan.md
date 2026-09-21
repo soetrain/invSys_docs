@@ -6163,12 +6163,15 @@ The opt-in `-CheckGuideEvaluation` gate is connected with 37 protecting checks;
 its frozen-candidate RED is **171 PASS / 33 expected FAIL** across 204 unique
 checks. All preceding 166 identities pass; every failure belongs to guide binding.
 Excel closes normally after the immediate terminal observation, and the extended
-window has zero matching Application events. Implementation GREEN remains pending. See
+window has zero matching Application events. See
 [guide-binding test entry](../../invSys_fork/tests/integration/plan022_slice4be_guide_evaluation_results.md).
 The isolated guide-binding candidate now builds and all five packages compile;
 six existing compiled components change and one private Core helper is added.
 Its static duplicate/dynamic-call counts and all 28 preceding module limits pass.
-Packaged GREEN and visible operator acceptance remain pending.
+Packaged GREEN is **204/204**, preserving every RED identity, all 166 preceding
+checks and all 37 new guide-binding checks. Excel closes normally after the immediate
+terminal observation, with no intervention or matching Application event. Visible
+operator evidence and broader candidate regressions remain pending.
 
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption

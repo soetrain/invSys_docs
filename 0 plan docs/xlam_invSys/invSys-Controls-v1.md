@@ -15,7 +15,8 @@ Evaluate action remains responsible for immutable diagnostics. Minimum/default
 760x600/900x650, current visibility and excluded training-control capture rules apply.
 Actual packaged missing-behavior RED is **171 PASS / 33 expected FAIL**, preserving
 all preceding 166 identities. Every failure belongs to the new guide binding;
-GREEN and visible acceptance remain pending.
+focused GREEN is **204/204**, including all 37 guide-binding checks. Visible
+acceptance and broader candidate regressions remain pending.
 The isolated candidate builds and all five packages compile. Its six changed
 existing components and one new private Core helper preserve the static duplicate,
 dynamic-call and preceding module-size limits.
