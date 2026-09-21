@@ -37,8 +37,14 @@ packaged gate passes **214/214**, retaining all focused 204 and preceding visibl
 177 identities. All 15 captures were directly reviewed: guide/run provenance,
 minimum/default/larger/restored layouts, staged intent and the separately evaluated
 result are readable. Excel closes normally, with zero matching Application events.
-Earlier capture failures remain recorded. Broader candidate regressions and human
-acceptance remain pending; these images do not accept How-To/Diagnostic/Compare.
+Earlier capture failures remain recorded. Candidate Viewer regression passes
+**94/94** and Boxing/Shipping retains **1,707 PASS / seven unchanged D8-A FAIL**;
+both close normally with zero matching Application events. All three Viewer and
+22 Boxing/Shipping images were reviewed. Some Shipping regions are unpainted;
+Make zero-quantity/Unbox accepted captures show mismatched feedback despite passing
+handler checks. Current feedback needs focused capture/painting comparison; those
+images do not satisfy that visible gate. Evaluation/chain and human acceptance
+remain pending; these results do not accept How-To/Diagnostic/Compare.
 The isolated candidate builds and all five packages compile. Its six changed
 existing components and one new private Core helper preserve the static duplicate,
 dynamic-call and preceding module-size limits.
