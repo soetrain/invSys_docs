@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.173 (visible guide gate and assisted full chain pass; broader gates open)
+**Version:** 1.174 (expectation-candidate regressions and Event Detail overflow D13 entry)
 
 **Current expectation-candidate evidence:** The visible guide gate passes
 **177/177**, preserving all 166 focused identities and adding nine directly
@@ -22,8 +22,16 @@ passes 34/34 with three reviewed captures in the experimental-helper run; its
 default/restored Coverage clipping remains open. The retained native helper passes
 Viewer/filter/Shipping state 94/94, preserving all prior identities; activity and
 filter images are readable, but the Shipping image is partially painted and does
-not establish complete visible feedback. Boxing/Shipping and evaluation are running
-serially. Full Slice 4be,
+not establish complete visible feedback. Boxing/Shipping preserves all 1,714
+identities at **1,707 PASS / seven known D8-A FAIL**, with normal Excel closure
+and zero matching Application events. All 22 images were reviewed; stale-session
+feedback is fully painted in this run. Detail clipping and adjacent Shipping
+System Key/Alternative headings remain readability limitations. Evaluation passes
+**376/376**, preserving every prior identity, with normal closure and zero native
+Application events. All 19 captures were reviewed: 15 diagnostic and four editor
+views. The detail overflow RED then reaches **37 PASS / four expected FAIL**,
+preserving all prior 34 identities; runtime remains unchanged before correction.
+Full Slice 4be,
 comparison features, physical deployment and human Release 1 acceptance remain open.
 Visible/chain evidence checkpoint: code **ba7cfd0**, pushed to main; runtime
 remains **827a427** and the retained test helper is **66f909d**.
@@ -3622,7 +3630,7 @@ identities remain Unavailable and are not grouped together.
 | `lblDetailLines` | **Contributing lines - select a line to inspect its fields**. Isolated RED/GREEN, regression/layout and assisted full-chain evidence verified; human/deployed acceptance remains open. |
 | `lstEventLines` | User activity uses original published fixed caption + ` - ` + recorded outcome, with Unavailable for missing values. Other lines keep exact System_Key labels, retaining repeats. Key accessors and cached selection remain unchanged, without another projection/profile read. Isolated regression and visible evidence verified; human/deployed acceptance remains open. |
 | `lblDetailFields` | **Permitted event and selected-line fields**. |
-| `lstEventFields` | Locked caption/value list following the saved profile's enabled fields and order. Required identity, source, time provenance, coverage, uncertainty and guidance remain visible. Raw Note and unknown user columns are excluded. |
+| `lstEventFields` | Locked caption/value list following the saved profile's enabled fields and order. Required identity, source, time provenance, coverage, uncertainty and guidance remain visible. Complete permitted single-line text must be reachable using native horizontal scrolling when wider than the viewport, at minimum/larger/maximized/restored sizes; the observed fixed-width Coverage clipping correction is entering D13 and is not yet accepted. Multiline rendering needs separate evidence. Scrolling remains excluded window mechanics. Raw Note and unknown user columns are excluded. |
 | `lblDetailStatus` | Read-only line count or fixed context-loss guidance; field freshness identifies retained Stale data after failed Refresh. |
 | `btnClose` | **Close** releases the detail instance without changing source workbooks. |
 

@@ -6091,12 +6091,34 @@ passes 34/34 with three reviewed captures in the experimental-helper comparison;
 its default/restored Coverage clipping remains open. The retained native helper
 passes Viewer/filter/Shipping state 94/94 with every prior identity. Its activity
 and filter images are readable; the Shipping image is partially painted and does
-not establish complete operator feedback. Boxing/Shipping and evaluation are
-running serially. Exact reports and limitations are in the maintained guide-expectation and
+not establish complete operator feedback. Boxing/Shipping preserves all 1,714
+identities at 1,707 PASS / seven unchanged D8-A FAIL, with normal Excel closure
+and zero matching Application events. All 22 images were reviewed; this run's
+stale-session feedback is fully painted. Coverage clipping and adjacent Shipping
+System Key/Alternative headings remain readability limitations. Evaluation passes
+376/376 with every prior identity retained, normal Excel closure and zero matching
+Application events. All 19 captures were reviewed: 15 diagnostic and four editor
+views. Exact reports and limitations are in the maintained guide-expectation and
 capture evidence. Full Slice 4be, guide-bound evaluation, both presentations and
 Compare, editing/curation/transfer, physical deployment and human UAT remain open.
 Visible/chain evidence checkpoint: code **ba7cfd0**, pushed to main; runtime
 remains **827a427** and the retained test helper is **66f909d**.
+
+**Event Detail overflow D13 entry (2026-09-21):** D18 now explicitly constrains
+the existing locked field list to make complete permitted single-line text reachable through
+its native horizontal scrolling at minimum/larger/maximized/restored sizes.
+This restores required detail readability without a new user selection or
+tracking contract. Extend the existing packaged Viewer-selection test first:
+the fixed-width Coverage value must fail the full-text geometry assertion before
+changing `frmEventDetail`. Preserve every prior detail check, cached profile and
+source values, read-only behavior and unknown-column/source-byte checks. Require
+focused RED/GREEN, isolated package/compile/layout/static gates and directly
+reviewed scrolling evidence. The unchanged candidate establishes RED at 37 PASS /
+four expected FAIL, preserving all 34 prior detail checks. Default/larger/restored
+text capacity fails; native-maximized capacity passes. No harness failure,
+duplicate, policy/data reload or native Application event occurs; Excel closes
+normally. See [detail overflow evidence](../../invSys_fork/tests/integration/plan022_slice4be_detail_overflow_results.md).
+Implementation and acceptance remain open.
 
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption

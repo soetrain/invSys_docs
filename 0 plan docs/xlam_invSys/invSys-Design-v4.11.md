@@ -1172,6 +1172,17 @@ lines. A transient list selection position is not an event or inventory identity
 The detail surface is read-only, reuses its owned instance, and closes with Viewer.
 Its actions validate the captured context before rendering retained content.
 
+**Horizontal field-value reachability:** The locked caption/value list must make
+each permitted single-line field's complete text reachable at the supported minimum,
+larger, maximized and restored sizes. Size the columns for their rendered text;
+use the list's horizontal scrolling when they exceed the visible width. Retain
+the fixed captions, profile order, original values and contributing-line selection.
+Scrolling is already excluded window mechanics under D18; it creates no activity,
+authority read or workflow action. This constrains existing read-only detail
+rendering under semantic inheritance and introduces no new selection contract.
+This addresses horizontal overflow; it does not make horizontal scrolling alone
+sufficient evidence for complete multiline-field rendering.
+
 **Contributing-line labels:** `lblDetailLines` reads **Contributing lines - select
 a line to inspect its fields**. A User activity line in `lstEventLines` displays
 its original published fixed control caption and recorded outcome, separated by
