@@ -6033,12 +6033,39 @@ events 1000/1001/1002 in their measured windows. Eight scripts parse, 91 links
 resolve, and all 30 package hashes plus both unrelated documents are preserved.
 Compile, insertion, visibility assumption and locked-file hashing setup failures
 remain non-product failures. Exact reports and limitations are in the maintained
-capture-diagnostic evidence. Next compare a blank form caption setter in this same
-prepared session; standalone calibration did not establish that case. No runtime,
+capture-diagnostic evidence. The saved-probe comparisons below supersede the
+then-planned blank form caption comparison in the same session. No runtime,
 normative contract or accepted deployment change is made.
 Startup diagnostic checkpoint: code **cda7ecb**, pushed to main; runtime remains
 **827a427**. Four invalid diagnostic option combinations are rejected before
 Excel setup. Excel and both new diagnostic controllers are closed.
+
+**Saved probe package comparison (2026-09-21):** Blank-form calibration isolates
+the failed caption access to configuration workbook closure; showing the form
+first or omitting workbook hiding does not prevent it. Calibration can change
+whether the later Viewer opens, so it remains explicitly opt-in and is not a
+startup acceptance substitute. With no calibration, writable temporary copies
+left unsaved reproduce error 440 (18 PASS / two startup FAIL). Compiling/saving
+the same probe set in temporary copies passes 20/20 through actual public Viewer
+entry/reuse, with visible Excel, captured context, package bindings, warehouse
+bytes/counters and saved-workbook preservation. Interpret the earlier failure
+with its unsaved instrumentation state; no runtime caption/configuration patch is
+justified by these results. SavedCopies is available for the compiled guide-
+expectation gate. After metadata-reader harness corrections, 83 checks pass before
+the first foreground capture fails. Retaining a saved/reopened ordinary workbook
+gives 84 PASS / two FAIL: foreground still fails despite visible Excel and an
+enabled/non-minimized form, and its in-memory Saved-state check fails. The exact
+workbook path and closed-file hash remain unchanged; that state change's cause is
+unproven. Neither attempt produces a PNG, and both controllers close Excel.
+Full-chain regression is next; capture/workbook-state diagnosis remains open.
+Frozen inputs and accepted deployment remain unchanged. An interrupted shown-form attempt has no final
+result or proven normal cleanup; four temporary fixture references remained in
+local settings and its original in-memory snapshot was unavailable. Preserve
+that restoration limitation rather than guessing the prior selection. The
+maintained capture evidence records exact reports and commands. No normative
+contract changes; remaining feature, regression, physical and human gates stay open.
+Saved-probe/capture checkpoint: code **66f909d**, pushed to main; runtime remains
+**827a427**. The full-chain gate is running on the frozen guide-expectation candidate.
 
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption

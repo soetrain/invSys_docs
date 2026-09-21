@@ -1,6 +1,33 @@
 # invSys Form Controls v1
 
-**Version:** 1.171 (Viewer startup visibility measured; saved-workbook failure isolated)
+**Version:** 1.172 (saved probes clear Viewer startup; visible capture remains open)
+
+**Latest Viewer startup comparison:** Writable temporary XLAM copies whose probes
+remain unsaved reproduce error 440 (18 PASS / two startup FAIL). Compiling and
+saving the probes in those isolated copies passes 20/20, including the actual
+public opening/reuse callback, visible Excel, captured context, loaded package
+paths, warehouse preservation and the saved/reopened workbook. Neither comparison
+performs a calibration warm-up. Runtime remains 827a427; this is a harness-state
+finding, not a new control contract or product fix. SavedCopies is now available
+for the compiled guide-expectation gate. After metadata-reader harness corrections,
+83 checks pass before the first foreground capture fails. Keeping a saved/reopened
+ordinary workbook open gives 84 PASS / two FAIL: foreground remains elsewhere
+despite visible Excel and an enabled/non-minimized form, and the workbook's
+in-memory Saved-state check fails. Its exact path and closed-file hash are preserved;
+the cause of the Saved-state change is unproven. Neither attempt produces a PNG;
+both controllers close Excel. These findings do not complete visible acceptance.
+Calibration remains opt-in, and frozen inputs are never saved or replaced.
+The interrupted shown-form attempt has no final result or proven normal cleanup;
+four temporary fixture references remained in local settings and the original
+in-memory snapshot was unavailable. Later normal cleanup does not establish
+restoration of that earlier selection. Exact reports and scope are in the
+maintained capture-diagnostic evidence. Eighteen completed startup observations
+have verified counts/native-event windows; eight invalid option combinations are
+rejected before Excel starts. Nine scripts parse and all 30 frozen packages plus
+both unrelated documents are preserved. Full-chain regression is next; full
+Slice 4be/Release 1 acceptance remains open.
+Saved-probe/capture diagnostic checkpoint: code **66f909d**, pushed to main;
+runtime remains **827a427**. The full-chain gate is running on that frozen candidate.
 
 **Viewer startup diagnostic scope:** Assignment of Excel.Visible=True does not
 prove its resulting state. The default-startup focused trace reads Boolean False
@@ -17,8 +44,8 @@ returns, and no Layout or Activate handler runs before the caption failure.
 Fixed labels and numeric errors are diagnostic only; the cause remains unresolved.
 All nine startup attempts close Excel and have zero Application events 1000/1001/
 1002 in their measured windows. Eight scripts parse, 91 links resolve, and all
-30 package hashes plus both unrelated documents are preserved. Next compare a
-blank caption setter within this same prepared session. No control, runtime or
+30 package hashes plus both unrelated documents are preserved. The saved-probe
+comparison above supersedes the then-planned blank-caption diagnosis. No control, runtime or
 normative contract change or failure correction is claimed.
 Startup diagnostic checkpoint: code **cda7ecb**, pushed to main; runtime remains
 **827a427**. Four invalid diagnostic option combinations are rejected before
@@ -46,7 +73,7 @@ No control/runtime contract or accepted deployment changes. See the maintained g
 diagnostic evidence for exact reports. Remaining broader and release gates stay open.
 Combined regression/diagnostic checkpoint: code **5b0505e**, pushed to main;
 runtime remains **827a427**. Excel and both diagnostic/regression controllers are
-closed. The next test-first work is isolation of the visible Viewer startup call.
+closed. The subsequent startup and saved-probe comparisons above extend this evidence.
 
 **Latest guide-expectation gate:** The isolated candidate implements
 `btnGuideExpectedConclusion` (**Expected conclusion**) and
