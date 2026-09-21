@@ -6181,9 +6181,10 @@ strict foreground check without changing runtime or global focus policy. Broader
 candidate regressions, both presentations/Compare and human acceptance remain open.
 The candidate Viewer gate now passes 94/94; Boxing/Shipping preserves all 1,714
 identities at 1,707 PASS/seven unchanged D8-A FAIL. Both close normally with zero
-matching Application events. All 25 captures were reviewed; unpainted Shipping
-regions and mismatched Make-zero/Unbox-accepted feedback remain visible-evidence
-limitations despite passing handler checks. Diagnose painting/capture timing
+matching Application events. All 25 captures were reviewed. Individual-file
+inspection corrects an earlier batch-review filename association: Boxing
+zero-quantity rejection and accepted-Unbox feedback are correct. Unpainted Shipping
+regions remain a visible-evidence limitation; diagnose painting/capture timing
 before proposing a runtime fix. Evaluation and candidate-chain gates remain open.
 
 **Next 4be.5 D13 entry -- paired How-To/Diagnostic views:** D18 now names an
