@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.188 (paired visible scenarios verified; final fixture correction pending)
+**Version:** 1.189 (paired visible gate 305/305; broader acceptance pending)
 
 **4be.5 controls; isolated candidate, acceptance pending:** Action Paths `btnViewActionPath`,
 **View guide and run**, opens reusable Operations `frmActionPathView` for the
@@ -80,6 +80,17 @@ incorrectly expects Stopped after an excluded command, while the recorder's
 existing interruption path closes Incomplete. Correct that fixture and retain
 sanitized count/flag evidence; no runtime contract changes. The expanded gate,
 final unavailable-policy cases and fresh-process paired preference remain pending.
+
+The corrected full visible retry now passes **305/305**, retaining all 294 preceding
+passes and all 243 focused identities. Its 11 new checks prove the actual Incomplete
+capture gap, both unavailable expected steps, clearing under dirty/unreadable Config,
+preservation of unsaved edits and stored bytes, and restoration of the same historical
+evaluation. Excel closes normally; zero matching Application events and unchanged
+packages/test sources are verified. Review combines the 39 earlier reviewed captures
+with three new availability captures on the same frozen candidate; all reviewed hashes
+are checked, without claiming every retry image was directly reviewed. Static metrics
+and all 28 prior module-size limits hold. Fresh-process paired preference, human UAT,
+remaining D18 scope and the pending Event Detail/D8-A decisions remain open.
 
 **Guide-to-run controls (isolated candidate; acceptance pending):** D18 names
 `lblGuideObservedRun` and `btnUseGuideForRun`, **Use for selected run**, in the

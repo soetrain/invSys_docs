@@ -6300,6 +6300,20 @@ the failed run, correct the fixture without runtime changes, validate saved flag
 and retain sanitized counts/Booleans on any further preparation failure. The retry,
 unavailable-policy cases, paired preference restart and human acceptance remain open.
 
+The corrected full visible retry now passes 305/305, preserving all 294 preceding
+passes and all 243 focused identities. All 11 new availability checks pass, including
+the actual Incomplete / TRACKING_UNAVAILABLE closure, both unavailable expected steps,
+dirty-Config content clearing, unsaved/stored-byte preservation and restoration of
+the exact historical result. Excel closes normally without intervention; zero matching
+Application events and unchanged packages/test sources are verified. Visible evidence
+combines 39 earlier individually reviewed images with three new availability images
+from this same frozen candidate; all reviewed hashes are checked, not all retry images
+claimed reviewed. Regenerated maintenance metrics and all 28 prior size limits hold.
+The prior failures remain evidence; the COM rejection's root cause is not established.
+Next protect fresh-process paired preference through the actual Settings and view
+handlers. Closed-guide editing, direct curation, transfer, remaining D18 and human
+acceptance are still required; neither pending architecture proposal is approved.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,
