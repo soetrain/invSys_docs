@@ -6434,6 +6434,19 @@ candidate; do not claim the COM cause was resolved. Automatic review blocked man
 removal of the old generated temporary fixture, which remains in place. New gates
 use fresh isolated fixtures; no recovery data or operational workbooks are changed.
 
+The complete visible retry now passes **351/351** on the unchanged corrected
+candidate: every prior 305 identity plus all 46 published-guide edit assertions.
+Root `7eafdbb4722f47eabf0e5eacba52b07f` runs **2026-09-22 05:03:12.0300621--
+05:35:35.0440291 UTC**. All 52 captures are individually reviewed/hash-verified.
+Excel closes normally, matching Application events are zero, and running sources
+and packages are unchanged. No first-call failure or readonly retry occurs; this
+does not diagnose the previous COM cause. Regenerated static evidence preserves
+246 components, 6,000 procedures, 132,040 lines, dynamic calls 9/45, 192 duplicate
+groups and all 28 prior module-size limits. Role/restart/live/full-chain and human
+acceptance remain separate gates. Neither pending architecture proposal is approved
+by this evidence-only checkpoint; D13 does not require inventing a new product RED
+for an acceptance-record update.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,

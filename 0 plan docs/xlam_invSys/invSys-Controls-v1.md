@@ -1,6 +1,18 @@
 # invSys Form Controls v1
 
-**Version:** 1.196 (focused edit GREEN; broader harness retry pending)
+**Version:** 1.197 (published-guide visible gate GREEN 351/351)
+
+**Complete visible guide regression verified:** The unchanged corrected candidate
+passes **351/351**, retaining all 305 prior checks and 46 published-guide edit
+assertions. All 52 captures were individually reviewed and hash-verified, including
+minimum/default/larger/restore layouts, native maximize/restore, scrolled diagnostic
+results, unavailable evidence, reopened editing and preserved version conflict.
+Excel closes normally; the Application event audit is clear; running sources and
+packages are unchanged. The optional readonly retry was not needed. Maintenance
+metrics remain unchanged and all 28 module-size limits pass. Role regressions,
+fresh-process preference on this candidate, live roles, full chain and human
+acceptance remain separate gates. The earlier interrupted attempt remains evidence
+of an unproven COM cause, not a diagnosed runtime defect or architecture approval.
 
 **Published-guide editing and notices have isolated GREEN:** The initial **17 PASS /
 34 expected FAIL** becomes **51/51**. Visible review then finds a blank draft notice;
@@ -22,14 +34,14 @@ and rejected readonly Count call are preserved. Fixture cleanup then prevents th
 typed result and controller exit record from being written; those records are not
 reconstructed as runtime results. The exact empty owned Excel instance closes by
 assisted normal Quit. Focused 58/58 remains valid; report-retention tooling repair
-and a complete broader retry are required. No runtime fix or full acceptance is
+and the complete broader retry recorded above address the interrupted gate. No runtime fix or full acceptance is
 claimed from this interruption.
 
 Supporting tooling now passes 8/8 offline result-retention and 38/38 readonly
 probe/privacy checks. The optional retry is bounded to the exact Action Path view
 Count getter and two observed COM rejections; other callbacks keep single execution.
 First-failure evidence remains. Runtime packages are unchanged and the full broader
-retry is still required. Automatic review blocked removal of the leftover generated
+retry now passes as recorded above. Automatic review blocked removal of the leftover generated
 temporary fixture; it is retained while fresh isolated fixtures are used.
 
 **Paired preference restart verified on the isolated candidate:** The focused
