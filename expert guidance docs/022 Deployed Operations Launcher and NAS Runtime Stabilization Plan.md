@@ -6474,8 +6474,22 @@ pending four-source evidence, partial three-applied/one-awaiting, all-applied
 conclusion and explicit expectation editing at supported sizes. Normal Excel
 closure, unchanged sources/packages and zero matching Application events are verified.
 The existing pane-activation helper retries once for Pending/Minimum before a
-successful capture; this is not a product failure. Live/full-chain and human
-acceptance remain separate gates.
+successful capture; this is not a product failure.
+
+The same corrected guide-edit candidate subsequently passes full chain **32/32**,
+live roles **48/48**, and Create Warehouse **15/15**, preserving all preceding
+chain/live identities. Evidence prefix `reports/runtime/published-guide-edit-chain`
+runs **2026-09-22 06:22:24.5090280--06:30:44.5998916 UTC**. Terminal exit is zero;
+all three tracked reports are restored byte-for-byte, all 233 running-source pins
+and 55 frozen-package pins are unchanged, and matching Application events are zero.
+Cleanup requires assisted normal Quit after verified native process identity and
+a fresh typed zero workbook count. The recovery dialog is directly reviewed;
+**Yes, I want to view these files later** is selected and reviewed before confirming.
+Excel exits and local test settings restore. No forced termination or recovery
+deletion occurs; do not report unattended cleanup. The linked published-guide edit
+record contains the verifier and exact evidence. Remaining D18 work and human
+acceptance remain open. This acceptance-only update creates no runtime contract,
+requires no invented D13 RED and approves neither pending architecture proposal.
 
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption

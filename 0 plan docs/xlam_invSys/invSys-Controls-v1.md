@@ -1,20 +1,33 @@
 # invSys Form Controls v1
 
-**Version:** 1.200 (guide edit visible/restart and relevant role/evaluation gates verified)
+**Version:** 1.201 (guide edit supporting gates include full chain and live roles)
+
+The corrected guide-edit candidate now passes full Release 1 chain **32/32**, live
+roles **48/48**, and Create Warehouse **15/15**, preserving every prior chain/live
+identity. All three tracked reports are restored; 233 source pins and 55 frozen
+package pins remain unchanged, with zero matching Application events. Cleanup was
+assisted: normal Quit followed a verified empty Excel instance, and its directly
+reviewed recovery dialog retained files for later viewing before confirmation.
+No force or recovery deletion occurred. Exact evidence is in
+`tests/integration/plan022_slice4be_published_guide_edit_results.md` in the code
+repository. Remaining D18 implementation and human acceptance stay open; this
+checkpoint neither deploys the candidate nor approves the pending Event Detail
+or D8-A proposals.
 
 Diagnostic regression also retains **376/376** with all 19 captures directly reviewed
 and hashed. Four awaiting sources, partial application and all-applied conclusion
 remain visibly distinct; expectation editing, integrity rejection and exact selection
 binding pass. Excel closes normally, sources/packages remain unchanged and matching
-Application events are zero. Live roles, full chain and human acceptance remain open.
+Application events are zero. The later live-role/full-chain gate is recorded above;
+human acceptance remains open.
 
 The corrected candidate retains Viewer **94/94** and Boxing/Shipping **1,707 prior
 GREEN checks**, with exactly the seven already recorded pending D8-A Auth-recreation
 failures. All 3 Viewer and 22 Boxing/Shipping captures are directly reviewed and
 hashed. Both gates close Excel normally without intervention, preserve test/package
 bytes and have zero matching Application events. Boxing's slower normal shutdown
-is retained in the evidence. Live roles, full chain and human
-acceptance remain open; known Event Detail scrolling is not accepted by these captures.
+is retained in the evidence. Human acceptance remains open; known Event Detail
+scrolling is not accepted by these captures.
 
 **Complete visible guide regression verified:** The unchanged corrected candidate
 passes **351/351**, retaining all 305 prior checks and 46 published-guide edit
