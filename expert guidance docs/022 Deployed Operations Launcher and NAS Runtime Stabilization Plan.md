@@ -6314,6 +6314,30 @@ Next protect fresh-process paired preference through the actual Settings and vie
 handlers. Closed-guide editing, direct curation, transfer, remaining D18 and human
 acceptance are still required; neither pending architecture proposal is approved.
 
+The first paired preference restart attempt preserves all 294 prior passes and
+adds three passing pre-restart checks: Operations Save My Preference, Compare both
+on open and an unsaved How-To switch. It ends at 297 PASS / one harness failure
+because hashing the writable probe XLAMs encounters Excel's sharing lock before
+restart. Normal cleanup, zero matching Application events and unchanged running
+sources are verified; the one new How-To capture was directly reviewed. This is
+not product RED or a fresh-session result. Move probe hashing after normal exit
+and run the focused actual-handler restart fixture on the same frozen candidate;
+retain the earlier regression evidence. No runtime change is needed for this
+harness failure.
+
+The focused retry now passes 27/27, including five instrumented package compiles,
+four actual-handler fixture checks and all 15 restart checks. Normal owned-instance
+closure is verified before a different native Excel process loads Operations with
+Core/Domain and no Admin. Settings and the explicitly paired view restore the saved
+Compare both preference rather than the unsaved How-To switch. Fresh entry infers
+no pair or evaluation; Config/training/probe bytes remain unchanged. Final closure
+is normal with zero matching Application events and unchanged running sources.
+All three new captures were individually reviewed and hash-verified. The 305/305
+visible gate and earlier preserved 294 identities remain separate regression
+evidence; this small focused gate does not replace them. No runtime change was
+needed. Continue the specified published-guide edit RED below; human acceptance,
+direct curation, transfer and other D18/Release 1 scope remain open.
+
 **Next 4be.5 D13 entry -- reopen a published guide for editing:** Follow the
 normative published-guide editing refinement. Operations Published guides adds
 `btnEditPublishedGuide`, **Edit guide**, with ACTION_PATH_MAINT checked in Core.

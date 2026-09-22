@@ -1,6 +1,29 @@
 # invSys Form Controls v1
 
-**Version:** 1.190 (published-guide Edit entry specified; implementation pending)
+**Version:** 1.192 (paired preference restart 27/27; Edit implementation pending)
+
+**Paired preference restart verified on the isolated candidate:** The focused
+actual-handler gate passes **27/27**, including all 15 restart checks. Normal
+owned-instance closure precedes a different Excel process loading Operations and
+Core/Domain without Admin. Settings and the explicitly paired view restore Compare
+both rather than the unsaved How-To choice; fresh entry creates no automatic pair
+or conclusion. Config/training/probe bytes and running sources remain unchanged.
+Final Excel closure is normal, with zero matching Application events. All three
+new captures were directly reviewed and hash-verified. This supplements the full
+visible 305/305 and retained earlier regressions; no runtime change or new contract
+was needed. Human acceptance, Edit implementation, direct curation, transfer and
+broader Slice 4be completion remain open.
+
+**Earlier paired preference restart attempt:** Its first attempt retains all 294
+preceding passes, adds three passing actual-handler preference checks and then
+fails in the harness while hashing probe XLAMs still held writable by Excel:
+297 PASS / one harness failure. Excel closes normally; zero matching Application
+events and unchanged running sources are verified. The new unsaved How-To capture
+was directly reviewed. No fresh-session result or runtime RED is claimed. The
+focused retry creates its guide and separate run through accepted handlers, moves
+hashing after normal closure and reopens Operations without Admin. This supplements
+the unchanged full regression evidence; it does not replace it or approve either
+pending architecture proposal.
 
 **4be.5 discovered control; specified, not implemented:** Published guides
 `btnEditPublishedGuide`, **Edit guide**, opens the existing Action Path guide editor
