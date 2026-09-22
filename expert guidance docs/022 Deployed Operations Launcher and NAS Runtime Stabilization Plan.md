@@ -6457,6 +6457,16 @@ probe bytes are preserved. All three captures are directly reviewed and hashed;
 final closure, unchanged sources/packages and zero matching Application events
 are verified. Role/live/full-chain and human acceptance remain pending.
 
+Corrected-candidate role regression now retains Viewer **94/94** at
+`f55f414706fc4880b6ed974073c45470` and Boxing/Shipping **1,707 prior GREEN checks**
+at `9c6cbd7005fe4502ae8fffccd1defe11`, with only the same seven missing-Auth recreation
+failures under pending D8-A. All 3/22 captures are individually reviewed/hash-verified.
+Both gates close Excel normally without intervention, preserve sources/packages,
+and have zero matching Application events. Boxing assertions finish before a slow
+normal process exit; the next gate waits for verified closure. No new runtime fix,
+Auth decision or Event Detail scrolling acceptance is inferred. Diagnostic evaluation,
+live roles, full chain and human acceptance remain required.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,
