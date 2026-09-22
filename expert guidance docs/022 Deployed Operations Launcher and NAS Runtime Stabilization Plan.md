@@ -6804,8 +6804,14 @@ chain/live identities, 239 test/tool source pins and five package hashes are
 preserved; tracked reports are restored and no matching Application errors occur.
 Cleanup is assisted: exactly verified empty Excel receives normal Quit, then its
 recovery prompt is explicitly set to retain files, reviewed and confirmed. No
-forced termination occurs; do not claim unattended cleanup. Continue supporting
-guide/Viewer/Shipping regressions. See the maintained
+forced termination occurs; do not claim unattended cleanup. The same candidate
+then retains curation/native layouts **77/77**, saved-preference restart **27/27**
+and published Viewer/filters/Shipping state **94/94**. Every prior check identity
+and runtime/test/package hash is preserved; all 24 captures are directly reviewed
+and hashed. All three close Excel normally without assistance and have no matching
+Application errors. Restart uses the bounded exit grace period. Exact report
+identities and times are in the maintained result record. Full-guide, Operations
+comparison and Boxing/Shipping regressions remain open. See the maintained
 Admin UOM activity result record; comprehensive Slice 4be acceptance remains open.
 
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,

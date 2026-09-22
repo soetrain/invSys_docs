@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.212 (Admin UOM visible General evidence; broader acceptance pending)
+**Version:** 1.213 (Admin UOM curation/restart/Viewer regressions; broader acceptance pending)
 
 The real Receiving task now passes **421/421** packaged comparison/evaluator
 checks, retaining all 376 prior checks and adding 45. How-To, Diagnostic and
@@ -89,7 +89,12 @@ The frozen Admin UOM candidate now also passes full-chain **32/32**, live-role
 source/package hashes with restored tracked reports and no Application errors.
 Cleanup requires normal Quit of an exactly verified empty test instance and
 confirmation to retain recovery files; unattended cleanup is not claimed.
-Supporting guide/Viewer/Shipping regressions and human acceptance remain open.
+The same Admin UOM candidate retains curation/native layouts **77/77**, saved-view
+restart **27/27**, and published Viewer/filter/Shipping-state **94/94**. Every
+prior check identity and source/package hash is preserved; all 24 captures are
+directly reviewed and hashed. Excel closes normally without assistance in all
+three gates, with no matching Application errors. Full-guide, Operations
+comparison, Boxing/Shipping and human acceptance remain open.
 
 Before the native-layout extension, the source-integrity candidate passes **71/71** focused checks after four
 behavioral RED failures. Private Core rejects malformed original RecordId and
