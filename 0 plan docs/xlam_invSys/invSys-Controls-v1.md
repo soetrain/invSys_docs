@@ -1,6 +1,15 @@
 # invSys Form Controls v1
 
-**Version:** 1.202 (direct tracked-action curation contract; implementation pending)
+**Version:** 1.203 (direct tracked-action curation packaged RED verified)
+
+Direct curation now has focused packaged **12 PASS / 41 expected FAIL**, 53 unique
+typed checks, before runtime edits. Actual unrecorded Admin activity and publication,
+all five instrumented compiles and preservation checks pass; only missing picker/
+draft/save/guard behavior fails. The expanded run preserves all 49 preceding
+identities/outcomes. Normal Excel closure, unchanged 175 source pins and 55 frozen
+package pins, and zero matching Application events are verified. Exact evidence:
+code `tests/integration/plan022_slice4be_guide_action_curation_results.md`.
+Implementation, GREEN and full acceptance remain pending.
 
 **Direct curation entry specified; not yet accepted:** D18 now names
 `frmActionPaths.btnChooseGuideActions` (**Choose tracked actions**) and the

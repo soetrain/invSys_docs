@@ -6513,6 +6513,19 @@ build/compile, visible evidence, static ratchets, relevant regressions, live rol
 and full chain remain required. No deployment or full Slice 4be acceptance is
 claimed by the refinement; Event Detail/D8-A approval remains pending separately.
 
+Direct curation's focused packaged RED is now verified **12 PASS / 41 expected
+FAIL**, 53 unique typed checks, at `afe5b11ae907444681cc750897d9322a`, during
+**2026-09-22 06:43:54.8095241--06:46:07.0742576 UTC**. The preceding 49-check RED
+retains every identity/outcome; four added parent/Viewer/sign-out/permission-loss
+checks also fail for the missing runtime behavior. Actual unrecorded Admin
+activity/publication, five instrumented compiles, startup and preservation checks
+pass. Normal unassisted Excel closure, unchanged 175 test-source and 55 package
+pins, and zero matching Application events are verified. Protecting helper and
+exact command/evidence are in code
+`tests/integration/plan022_slice4be_guide_action_curation_results.md`. Implement
+only the specified Core/Operations path next; the same assertion set must pass
+GREEN on a new isolated candidate, followed by all required supporting gates.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,
