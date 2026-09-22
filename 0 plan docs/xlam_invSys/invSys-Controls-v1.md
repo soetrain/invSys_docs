@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.211 (Admin UOM focused implementation; broader acceptance pending)
+**Version:** 1.212 (Admin UOM visible General evidence; broader acceptance pending)
 
 The real Receiving task now passes **421/421** packaged comparison/evaluator
 checks, retaining all 376 prior checks and adding 45. How-To, Diagnostic and
@@ -78,6 +78,12 @@ nine are usable. The initial General-tab image has unpainted controls, so fresh
 UOM layout evidence remains required. Excel closes normally, sources stay unchanged
 and no matching Application errors occur. This is an implementation checkpoint,
 not completion of Slice 4be or Release 1.
+Fresh General-tab coverage now passes **228/228**, retaining all 225 activity
+checks. All eleven current captures are reviewed and usable, including loaded
+Config/UOM lists and visible Add/Remove/Reset controls. The viewing checks change
+no configuration or activity. Five instrumented compiles, normal closure,
+unchanged runtime/package hashes and zero matching Application errors pass.
+This replaces the missing General evidence without accepting the earlier image.
 
 Before the native-layout extension, the source-integrity candidate passes **71/71** focused checks after four
 behavioral RED failures. Private Core rejects malformed original RecordId and

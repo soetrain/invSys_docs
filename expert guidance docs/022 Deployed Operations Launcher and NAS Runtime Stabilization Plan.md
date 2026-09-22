@@ -6791,8 +6791,14 @@ root `8d870c592b19445586203540cb919848`, 2026-09-22
 restart, Operations-only Settings and native maximize/restore pass. Of ten reviewed
 captures, nine are usable; the initial General-tab image has unpainted controls
 and does not establish UOM layout acceptance. Normal closure, unchanged sources
-and zero matching Application errors pass. Obtain fresh General-tab evidence,
-then continue broader regression/live-role/full-chain gates. See the maintained
+and zero matching Application errors pass. Fresh General-tab evidence now passes
+**228/228**, retaining all 225 activity checks, root
+`c4f00c15aa664dd4817251a6edf9f382`, 2026-09-22
+12:12:38.0882399--12:15:22.0399439 UTC. All eleven captures are directly reviewed
+and accepted; loaded lists/visible contained controls and no writes from viewing
+are verified. Five instrumented compiles, normal closure, unchanged runtime/
+package hashes and zero matching Application errors pass. Runtime/static metrics
+are unchanged. Continue broader regression/live-role/full-chain gates. See the maintained
 Admin UOM activity result record; comprehensive Slice 4be acceptance remains open.
 
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
