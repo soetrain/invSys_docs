@@ -6193,10 +6193,22 @@ live roles **32/1**, at processor automation during projection rebuild with RPC
 instance needed normal Quit and reviewed recovery retention. Tracked reports are
 restored; the zero-event audit does not identify the native cause. Keep the chain
 gate open. Independent paired-view RED can run after verified cleanup.
+The strict owned-foreground Viewer capture rerun passes 94/94 with normal closure
+and zero matching Application events. All three images were individually reviewed;
+Shipping Hold/Not Shipped feedback is fully painted without a runtime change.
+Adjacent headings and the broader denied/stale Shipping capture gates remain open.
 The separate visible-host Event Detail test passes 41/41 with seven reviewed
 images, normal closure and zero matching Application events, but still no visible
 horizontal movement. Compare the disposable list's locked/unlocked interaction
 before proposing any runtime lock-contract change.
+The same-input disposable comparison now isolates the lock property: the locked
+list stays at the left edge; the temporarily unlocked list reaches the right edge.
+Field values are unchanged and the original lock is restored; the run retains
+41/41 checks and closes normally. Architecture D18 now records an explicit
+**pending-approval** proposal to permit an unlocked but non-editable ListBox for
+navigation. Do not implement that property change until approved. After approval,
+add a native-scroll behavioral RED and prove read-only values/source preservation
+in GREEN; the current geometry checks alone do not protect interaction.
 
 **Next 4be.5 D13 entry -- paired How-To/Diagnostic views:** D18 now names an
 additional Operations **View guide and run** surface for the explicitly staged
@@ -6211,7 +6223,15 @@ controls/presentation behavior, not fixture/compile/focus failure. Retain all 20
 guide-binding identities and test all three views, saved preference, no implicit
 evaluation or source-run substitution, stale-pair rejection, current visibility,
 readable layout and non-mutation. No paired-view runtime or acceptance is claimed
-by this test entry; the guide-binding regression/chain gates remain separate. See
+by this test entry; the guide-binding regression/chain gates remain separate. The
+packaged RED now verifies **207 PASS / 36 expected FAIL**, with all 204 prior
+identities retained, normal Excel closure, unchanged candidate hashes and zero
+matching Application events. All failures are new presentation checks. The Core
+read boundary and reusable Operations view are now source drafts awaiting an
+isolated GREEN. The candidate builds and all five packages compile; its compiled
+scope is one changed library form plus the new Core reader and Operations view.
+Static duplicates/dynamic calls and all 28 prior module-size limits hold. These
+gates do not establish visible or full presentation acceptance. See
 [paired-presentation test entry](../../invSys_fork/tests/integration/plan022_slice4be_guide_presentation_results.md).
 
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,

@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.180 (paired How-To/Diagnostic view test entry)
+**Version:** 1.181 (paired How-To/Diagnostic behavioral RED)
 
 **Next 4be.5 controls; implementation pending:** Action Paths `btnViewActionPath`,
 **View guide and run**, opens reusable Operations `frmActionPathView` for the
@@ -16,8 +16,14 @@ reopen explicitly. Default/minimum 960x680/840x600 and larger/maximized/restored
 layouts must remain readable. D18's paired-presentation refinement governs current
 policy/integrity, capture-off availability, None expectations and exact saved-result
 association. Existing library observations stay available. These training controls
-are excluded from activity capture. Missing-control RED is next; no implementation
-or visible acceptance is claimed.
+are excluded from activity capture. Packaged missing-control RED is **207 PASS /
+36 expected FAIL**, preserving all 204 prior identities, with normal closure and
+zero matching Application events. Core/view/library implementation is a source
+draft that now builds and compiles in all five isolated packages; packaged GREEN
+and visible acceptance remain pending. Static duplicates/dynamic calls and all
+28 preceding module-size limits hold. The library's compact
+section label reads **Observed controls / Saved result** beside the new entry;
+the original evidence and saved-result panes retain their separate meanings.
 
 **Guide-to-run controls (isolated candidate; acceptance pending):** D18 names
 `lblGuideObservedRun` and `btnUseGuideForRun`, **Use for selected run**, in the
@@ -52,6 +58,11 @@ Create Warehouse passes **15/15**. Its cleanup needed normal Quit of verified
 empty test Excel and reviewed recovery retention. Tracked reports are restored;
 zero matching Application events do not establish the native cause. Full-chain
 and human acceptance remain open; these results do not accept the paired views.
+The strict owned-foreground Viewer capture rerun also passes 94/94, closes normally
+and records zero matching Application events. Its three individually reviewed
+images include fully painted Shipping Hold/Not Shipped feedback. The adjacent
+headings remain a layout limitation; permission-denied/stale-session captures
+still need the broader Shipping regression.
 The isolated candidate builds and all five packages compile. Its six changed
 existing components and one new private Core helper preserve the static duplicate,
 dynamic-call and preceding module-size limits.
@@ -88,6 +99,13 @@ normal closure and zero matching Application events. All seven images were
 reviewed; typed application visibility and verified input geometry still produce
 no visible scroll movement. A disposable locked/unlocked comparison is pending,
 without changing the runtime lock contract.
+That comparison now demonstrates horizontal movement only while temporarily
+unlocked, with unchanged field values and verified restoration of `Locked=True`.
+The 41 checks pass and Excel closes normally. D18's explicit pending proposal
+would allow `lstEventFields.Locked=False` for selection/scrolling while retaining
+non-editable field values. It is **not approved or implemented**; the current
+runtime lock requirement still governs. Native-scroll RED/GREEN and source-byte
+preservation are required if the proposal is approved.
 
 **Preceding expectation-candidate evidence:** The visible guide gate passes
 **177/177**, preserving all 166 focused identities and adding nine directly

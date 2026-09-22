@@ -1183,6 +1183,21 @@ rendering under semantic inheritance and introduces no new selection contract.
 This addresses horizontal overflow; it does not make horizontal scrolling alone
 sufficient evidence for complete multiline-field rendering.
 
+**Proposed Event Detail scrolling decision -- approval pending:** A disposable
+packaged-form comparison found that `lstEventFields.Locked=True` prevents native
+horizontal scrollbar interaction; identical input with `Locked=False` reaches
+the right edge without changing field values. The proposed amendment replaces
+"locked caption/value list" above with "read-only caption/value list" and permits
+`lstEventFields.Locked=False` solely for selection and scrolling. Its cells remain
+non-editable ListBox projections: no text editor, persisted selection, authority
+read/write, activity event or workflow action is introduced. Original captions,
+values, ordering, context checks and full-text reachability remain required.
+Packaged D13 must prove native scrolling and unchanged values/source bytes.
+This is an explicit proposed change to the lock requirement, not a Plan 022
+override. **Until the user approves, the current locked-list requirement remains
+in force and runtime unlocking is prohibited.** Multiline rendering remains a
+separate open acceptance requirement.
+
 **Contributing-line labels:** `lblDetailLines` reads **Contributing lines - select
 a line to inspect its fields**. A User activity line in `lstEventLines` displays
 its original published fixed control caption and recorded outcome, separated by
