@@ -6615,6 +6615,17 @@ with 250 ms gaps and eight-read maximum. No action replay or runtime change is
 introduced. Restart the complete guide gate against the integrity candidate;
 readiness remains an experiment, not an established explanation for COM failures.
 
+The integrity candidate's full guide gate completes **351/351**, retaining all
+prior identities and 46 published-edit checks. All 52 current captures are directly
+reviewed and hashed, including How-To/Diagnostic/Compare, incomplete/failed evidence
+and native maximize/restore. Normal unassisted closure, source/package preservation
+and zero matching Application errors are verified. One readiness wait observes
+five Busy and two unavailable samples before Ready on sample eight; all 1,332
+macro dispatches complete without a call failure or replay. This records observed
+waiting, not a proven cause of earlier interruptions. Fresh-process preference,
+Viewer, Boxing/Shipping, evaluation and full Release 1 gates continue serially;
+Slice 4be and human acceptance are not complete.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,

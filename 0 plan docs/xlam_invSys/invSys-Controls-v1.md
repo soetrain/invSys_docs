@@ -1,6 +1,14 @@
 # invSys Form Controls v1
 
-**Version:** 1.206 (direct-curation source-integrity GREEN)
+**Version:** 1.207 (direct-curation full guide regression GREEN)
+
+The integrity candidate now retains the complete **351/351** guide regression,
+including all 46 published-edit checks. All 52 current captures are directly
+reviewed and hashed. How-To/Diagnostic/Compare, saved preferences, invalidation,
+incomplete/failed conclusions and immutable editing remain protected. Excel
+closes normally; running sources/packages remain unchanged and no matching
+Application errors occur. Remaining supporting release gates are running;
+comprehensive coverage, transfer and human acceptance remain open.
 
 The source-integrity candidate now passes **71/71** focused checks after four
 behavioral RED failures. Private Core rejects malformed original RecordId and
