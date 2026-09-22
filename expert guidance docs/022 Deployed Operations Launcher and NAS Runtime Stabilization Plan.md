@@ -6410,6 +6410,30 @@ Relevant role regressions, fresh-process preference, live roles, full chain and
 human acceptance remain pending. This is a recoverable focused checkpoint, not
 completion of Slice 4be or approval of either separate architecture proposal.
 
+The first broader attempt records 286 console-observed preceding passes and one
+COM harness interruption at the retry scenario's readonly form Count, before any
+edit assertions. First-failure capture shows an unpainted owned view; cause remains
+unproven. A subsequent temporary-fixture cleanup error prevents typed result and
+controller-exit serialization. Preserve the console-derived evidence separately.
+The exact owned process has a verified typed zero workbook count and closes by
+assisted normal Quit; no force/recovery deletion occurs. Unchanged sources/candidate
+and zero matching Application events are verified. Repair report retention with
+offline coverage before retry; this changes developer tooling, not the runtime
+contract. Any opt-in retry must be bounded to the exact readonly probe, preserve
+first-failure evidence and retain single execution of action handlers. Focused
+58/58 and its ten reviewed captures remain valid, but the broader gate stays open.
+
+Offline tooling proof now passes 8/8 result-retention checks and 38/38 diagnostics/
+retry/privacy checks, retaining the original ten no-action-replay identities. Typed
+results are saved before generated-fixture cleanup and updated with explicit cleanup
+failure. The opt-in retry covers only the exact readonly Action Path view Count
+probe for the two observed COM rejections, with four total attempts and bounded
+250/500/750 ms delays. Preserve the first failure and recovery trace; no action or
+service call is replayed. Retry the complete gate against the unchanged frozen
+candidate; do not claim the COM cause was resolved. Automatic review blocked manual
+removal of the old generated temporary fixture, which remains in place. New gates
+use fresh isolated fixtures; no recovery data or operational workbooks are changed.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,

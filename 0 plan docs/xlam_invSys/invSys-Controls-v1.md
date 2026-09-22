@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.195 (published-guide edit and notices GREEN 58/58)
+**Version:** 1.196 (focused edit GREEN; broader harness retry pending)
 
 **Published-guide editing and notices have isolated GREEN:** The initial **17 PASS /
 34 expected FAIL** becomes **51/51**. Visible review then finds a blank draft notice;
@@ -15,6 +15,22 @@ The reviewed formatter consolidation restores duplicate groups to 192, dynamic c
 stay 9/45, and all 28 prior module-size limits hold. Broader acceptance remains
 pending; neither separate architecture proposal is approved. Earlier COM interruption
 remains harness evidence.
+
+The first broader edit regression is interrupted at **286 console-observed passes /
+one harness failure** before reaching the edit assertions. An unpainted owned view
+and rejected readonly Count call are preserved. Fixture cleanup then prevents the
+typed result and controller exit record from being written; those records are not
+reconstructed as runtime results. The exact empty owned Excel instance closes by
+assisted normal Quit. Focused 58/58 remains valid; report-retention tooling repair
+and a complete broader retry are required. No runtime fix or full acceptance is
+claimed from this interruption.
+
+Supporting tooling now passes 8/8 offline result-retention and 38/38 readonly
+probe/privacy checks. The optional retry is bounded to the exact Action Path view
+Count getter and two observed COM rejections; other callbacks keep single execution.
+First-failure evidence remains. Runtime packages are unchanged and the full broader
+retry is still required. Automatic review blocked removal of the leftover generated
+temporary fixture; it is retained while fresh isolated fixtures are used.
 
 **Paired preference restart verified on the isolated candidate:** The focused
 actual-handler gate passes **27/27**, including all 15 restart checks. Normal
