@@ -10,6 +10,12 @@ closes normally; running sources/packages remain unchanged and no matching
 Application errors occur. Remaining supporting release gates are running;
 comprehensive coverage, transfer and human acceptance remain open.
 
+Native maximize/restore is verified for the paired view. Add equivalent native
+window checks for Action Paths, Choose tracked actions and Action Path guide,
+whose direct-curation captures currently cover minimum/default/larger/restored
+dimensions. This is a pending test-coverage extension on the unchanged candidate,
+not a discovered product failure or a new control contract.
+
 The source-integrity candidate now passes **71/71** focused checks after four
 behavioral RED failures. Private Core rejects malformed original RecordId and
 attempt/result catalog/package/build disagreement while retaining valid neighbors.

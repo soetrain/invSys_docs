@@ -6626,6 +6626,25 @@ waiting, not a proven cause of earlier interruptions. Fresh-process preference,
 Viewer, Boxing/Shipping, evaluation and full Release 1 gates continue serially;
 Slice 4be and human acceptance are not complete.
 
+**Native curation layout coverage follow-up:** D18 requires maximize/restore
+evidence. The complete guide gate covers native window changes for the paired
+view; direct curation currently covers explicit minimum/default/larger/restored
+dimensions for Action Paths, Choose tracked actions and Action Path guide. After
+the serial supporting gates finish, extend their actual-handler focused route
+with native maximize/restore on each exact owned window and the existing Fit
+Current probe. Retain all 71 checks and add six assertions/captures. Expected
+result is GREEN on the unchanged candidate; do not manufacture RED for existing
+required behavior. A missing owned handle is a harness failure. Record any actual
+layout RED before a runtime correction. Only test/evidence files are planned;
+this changes no architecture or control contract.
+
+The integrity candidate's supporting preference restart is now **27/27** and
+Viewer regression **94/94**, with all prior identities retained, six directly
+reviewed captures, normal unassisted Excel closure, preserved source/package pins
+and no matching Application errors. The restart proves a different process and
+Operations-only preference restoration. Exact roots/times are in the curation
+integration record. Boxing/Shipping, evaluation and the full chain remain active.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,
