@@ -84,6 +84,12 @@ Config/UOM lists and visible Add/Remove/Reset controls. The viewing checks chang
 no configuration or activity. Five instrumented compiles, normal closure,
 unchanged runtime/package hashes and zero matching Application errors pass.
 This replaces the missing General evidence without accepting the earlier image.
+The frozen Admin UOM candidate now also passes full-chain **32/32**, live-role
+**48/48** and Create Warehouse **15/15**, retaining prior check identities and
+source/package hashes with restored tracked reports and no Application errors.
+Cleanup requires normal Quit of an exactly verified empty test instance and
+confirmation to retain recovery files; unattended cleanup is not claimed.
+Supporting guide/Viewer/Shipping regressions and human acceptance remain open.
 
 Before the native-layout extension, the source-integrity candidate passes **71/71** focused checks after four
 behavioral RED failures. Private Core rejects malformed original RecordId and

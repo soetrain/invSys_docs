@@ -6798,7 +6798,14 @@ and zero matching Application errors pass. Fresh General-tab evidence now passes
 and accepted; loaded lists/visible contained controls and no writes from viewing
 are verified. Five instrumented compiles, normal closure, unchanged runtime/
 package hashes and zero matching Application errors pass. Runtime/static metrics
-are unchanged. Continue broader regression/live-role/full-chain gates. See the maintained
+are unchanged. Full chain then passes **32/32**, live-role **48/48**, Create
+Warehouse **15/15**, 2026-09-22 12:17:16.2931347--12:25:54.9148365 UTC. All prior
+chain/live identities, 239 test/tool source pins and five package hashes are
+preserved; tracked reports are restored and no matching Application errors occur.
+Cleanup is assisted: exactly verified empty Excel receives normal Quit, then its
+recovery prompt is explicitly set to retain files, reviewed and confirmed. No
+forced termination occurs; do not claim unattended cleanup. Continue supporting
+guide/Viewer/Shipping regressions. See the maintained
 Admin UOM activity result record; comprehensive Slice 4be acceptance remains open.
 
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
