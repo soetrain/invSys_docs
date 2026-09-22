@@ -19,6 +19,13 @@ deployment, transfer and comprehensive remaining D18 scope remain open. Exact
 evidence: code `tests/integration/plan022_slice4be_guide_action_curation_results.md`.
 The following RED history predates this GREEN and is retained for traceability.
 
+Supporting guide regression has a retained read-only COM interruption after
+137 passing checks, not a completed acceptance result. A separately opt-in,
+bounded harness retry for the exact rejected observational getters passes
+78/78 offline checks after 70 PASS / 8 expected FAIL. It cannot replay operator
+actions and changes no runtime/package/control. The full guide gate is restarted
+with fresh disposable fixtures; its result remains pending.
+
 The first isolated curation build compiles, but rejects valid published actions.
 Published activity lines include their existing ContentSha256 envelope field;
 guide observations require their original 26-field body. D18 now explicitly

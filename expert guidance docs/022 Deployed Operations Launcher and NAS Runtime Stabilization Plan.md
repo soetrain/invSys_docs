@@ -6554,6 +6554,17 @@ code `tests/integration/plan022_slice4be_guide_action_curation_results.md`.
 This implements the approved D18 refinement; it does not approve pending D8-A or
 Event Detail changes, transfer scope, deployment or human acceptance.
 
+The first broader guide regression reaches 137 passing checks before Excel
+rejects a read-only guide-form count with `0x800AC472`. Normal unassisted shutdown,
+unchanged runtime/packages and zero matching Application events are verified;
+the attempt is retained as a harness interruption, not accepted regression.
+The separate opt-in `RetryGuideObservationForTest` handles only that exact count
+and the previously rejected picker Values getter, with the existing bounded
+four-attempt policy and first-failure retention. Offline test-first evidence is
+70 PASS / 8 expected FAIL -> 78/78 GREEN, retaining all prior 38 identities and
+single execution of actions. The full packaged gate is restarted on the same
+frozen candidate; no runtime or architectural contract changes.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,
