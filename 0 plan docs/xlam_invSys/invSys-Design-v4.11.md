@@ -954,7 +954,7 @@ owner-fact and workbook-preservation rules, not new ControlIds, outcomes, catalo
 versions, permissions or authority stores. Shipping activity/source-reference
 definitions and remaining control coverage require their own protecting evidence.
 
-**4be.1 Admin UOM command observation refinement (focused implementation verified; broader acceptance pending):**
+**4be.1 Admin UOM command observation refinement (observation regressions verified; diagnostic-completion acceptance pending):**
 Under D18's comprehensive Admin coverage, actual-entry and owner-fact rules,
 catalog 10 adds the three existing General > Recipe UOM Catalog commands below.
 All use OwnerId CORE_CONFIGURATION, SourceRole Admin, Class Command, existing
@@ -2006,7 +2006,25 @@ CommandCompleted additionally requires the registered owner's positive command-
 completion semantics for the matched outcome. Severity, nonempty result text,
 DataEffect, handler return or mere submission is not a completion classifier.
 Its successful display remains **Command completed; Domain application not
-asserted**. SourceEventsApplied checks every exact source reference of the matched
+asserted**.
+
+**Discovered UOM/Boxing terminal-map refinement (specified; verification pending):**
+The existing ADMIN_UOM_ADD, ADMIN_UOM_REMOVE and ADMIN_UOM_RESET owner outcomes
+COMPLETED and UNCHANGED are positive command-completion facts for those exact
+controls. BOXING_MAKE and BOXING_UNBOX use CONFIRMED only, meaning their owning
+processing/refresh command finished; PENDING does not establish that completion.
+These mappings must be explicit in the evaluator, alongside existing registered
+controls. REQUESTED, DENIED, REJECTED, FAILED and Reset CANCELLED never become
+positive completions. The original observations, catalog identity and complete
+stopped-run requirements remain binding. Do not classify by severity, data effect,
+Boolean return or a source's mere presence. CommandCompleted never asserts that
+all Domain sources applied; SourceEventsApplied continues to require the full
+exact-reference evidence below. A source review found these five controls absent
+from the current explicit evaluator map; D13 must establish actual-handler and
+actual-editor/Evaluate RED before any correction. This discovered map entry
+inherits the owner-completion rule above and changes no owning workflow outcome.
+
+SourceEventsApplied checks every exact source reference of the matched
 terminal action, including repeated references across other actions. The set must
 be nonempty and its owning source must supply supported applied evidence for
 every ID. Preserve original Submitted/Unknown observations after later application;

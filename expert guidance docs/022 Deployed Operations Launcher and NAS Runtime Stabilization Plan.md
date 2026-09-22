@@ -6723,7 +6723,7 @@ curation result record and `operations-guide-presentation-extended-ready-*`.
 This closes the selected Operations comparison coverage gap, not comprehensive
 tracking, transfer, unapproved decisions or human acceptance.
 
-**Admin UOM coverage entry (focused implementation verified; broader gates pending):** Architecture v4.11 D18's
+**Admin UOM coverage entry (observation regressions verified; diagnostic-completion acceptance pending):** Architecture v4.11 D18's
 Admin UOM refinement registers Add, Remove and Reset as discovered catalog-10
 commands. Admin retains the real form handlers and existing reset confirmation;
 Core retains configuration authority. The protecting RED exercises those
@@ -6805,16 +6805,34 @@ preserved; tracked reports are restored and no matching Application errors occur
 Cleanup is assisted: exactly verified empty Excel receives normal Quit, then its
 recovery prompt is explicitly set to retain files, reviewed and confirmed. No
 forced termination occurs; do not claim unattended cleanup. The same candidate
-then retains curation/native layouts **77/77**, saved-preference restart **27/27**
-and published Viewer/filters/Shipping state **94/94**. Every prior check identity
-and runtime/test/package hash is preserved; all 24 captures are directly reviewed
-and hashed. All three close Excel normally without assistance and have no matching
-Application errors. Restart uses the bounded exit grace period. Exact report
-identities and times are in the maintained result record. Full-guide, Operations
-comparison and Boxing/Shipping regressions remain open. See the maintained
+then retains curation/native layouts **77/77**, saved-preference restart **27/27**,
+published Viewer/filters/Shipping state **94/94**, complete guide/published-edit/
+paired-view regression **351/351**, and actual Operations comparison **421/421**.
+Boxing/Shipping then retains **1,707 PASS and exactly seven known D8-A failures**.
+Every prior GREEN identity and runtime/test/package hash is preserved; all 129
+captures are directly reviewed and hashed. All six close Excel normally without
+assistance and have no matching Application errors. Restart, full guide and
+Boxing use the bounded exit grace period. Exact report identities and times are
+in the maintained result record. D8-A remains unapproved; no failure is relabelled
+GREEN. The newly found diagnostic terminal-map gap below requires its own RED.
+See the maintained
 Admin UOM activity result record; comprehensive Slice 4be acceptance remains open.
 
 **Settings editor coverage D13 entry (specified; implementation pending):**
+Before implementing this next coverage group, protect and correct the newly
+discovered UOM/Boxing command-terminal map omission under D18's explicit owner-
+completion rule. Current source omits ADMIN_UOM_ADD/REMOVE/RESET and
+BOXING_MAKE/UNBOX from modEvaluationMatches.CommandCompleted. This is a source
+finding, not yet behavioral RED. Exercise real recorded commands, select their
+expected outcomes through the packaged editor and press the real Evaluate
+control; require the positive owner outcomes specified in Architecture v4.11
+and reject request/rejection/cancellation/pending outcomes as completions. Preserve
+the original journal/activity and distinguish command completion from every-source
+Domain application. Expected runtime correction is confined to the explicit
+Core evaluator map, after focused RED; packaged build/compile, visible evidence,
+static limits and all current regressions remain required. The 26-control Settings
+refinement below remains specified but is not yet implemented.
+
 Architecture v4.11 D18's Settings editor observation refinement governs the next
 26-control group: Tracking (10), Event Detail (8), and Admin/Operations personal
 preferences (4 each). Catalog 11 retains versions 1-10 exactly. The maintained

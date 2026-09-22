@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.214 (Settings editor observation refinement specified; implementation and broader acceptance pending)
+**Version:** 1.215 (Settings observation and UOM/Boxing diagnostic refinements specified; verification pending)
 
 The real Receiving task now passes **421/421** packaged comparison/evaluator
 checks, retaining all 376 prior checks and adding 45. How-To, Diagnostic and
@@ -90,11 +90,15 @@ source/package hashes with restored tracked reports and no Application errors.
 Cleanup requires normal Quit of an exactly verified empty test instance and
 confirmation to retain recovery files; unattended cleanup is not claimed.
 The same Admin UOM candidate retains curation/native layouts **77/77**, saved-view
-restart **27/27**, and published Viewer/filter/Shipping-state **94/94**. Every
-prior check identity and source/package hash is preserved; all 24 captures are
-directly reviewed and hashed. Excel closes normally without assistance in all
-three gates, with no matching Application errors. Full-guide, Operations
-comparison, Boxing/Shipping and human acceptance remain open.
+restart **27/27**, published Viewer/filter/Shipping-state **94/94**, and complete
+guide/published-edit/paired-view regression **351/351**, and actual Operations
+comparison **421/421**, and Boxing/Shipping **1,707 PASS plus exactly seven known
+D8-A failures**. Every prior GREEN identity and source/package hash is preserved;
+all 129 captures are directly reviewed and hashed. Excel closes normally without
+assistance in all six gates, with no matching Application errors. D8-A remains
+unapproved and its failures are not GREEN. The newly discovered UOM/Boxing
+diagnostic terminal mapping, comprehensive coverage, transfer and human acceptance
+remain open; their pending refinements below are not implementation evidence.
 
 Before the native-layout extension, the source-integrity candidate passes **71/71** focused checks after four
 behavioral RED failures. Private Core rejects malformed original RecordId and
@@ -2099,7 +2103,7 @@ See [first activity RED](../../../invSys_fork/tests/integration/plan022_slice4be
 |---|---|---|---|
 | ADMIN_SETTINGS_SAVE_VALUE | Admin Settings Save Value; `frmAdminSettings.mBtnSaveConfig_Click`; captured warehouse/station and ADMIN_MAINT | CORE_CONFIGURATION; CONFIG_SAVE_REQUESTED has Unknown effect; CONFIG_SAVE_COMPLETED has Changed only when a changed value was confirmed saved | First 4be.1 packaged test reuses the actual successful D5 form action; proves shared evidence without moving write ownership into the recorder. |
 | PRODUCTION_UOM_RETRIEVE | Production Retrieve UOM Catalog; `frmProduction.mBtnUomCatalogRetrieve_Click`; validated PROD_POST route, ADMIN_MAINT compatibility | CORE_CONFIGURATION; UOM_RETRIEVE_REQUESTED has Unknown effect; UOM_RETRIEVE_COMPLETED has Changed for a confirmed version increment; UOM_RETRIEVE_DENIED has Unchanged/Blocked after pre-write denial | First 4be.1 test exercises successful and denied real form actions, preserves staging on denial and requires no user-control observation from a direct service call. |
-| ADMIN_UOM_ADD | Settings > General > Recipe UOM Catalog > `btnUomAdd` / **Add**; `frmAdminSettings.mBtnUomAdd_Click`; captured context and existing ADMIN_MAINT | CORE_CONFIGURATION; catalog 10, Command; confirmed saved change differs from already-present UNCHANGED; empty source references and no entered value | D18 packaged RED 58/68 then GREEN 126/126; expanded catalog/policy/publication gate 225/225. Broader release gates pending. |
+| ADMIN_UOM_ADD | Settings > General > Recipe UOM Catalog > `btnUomAdd` / **Add**; `frmAdminSettings.mBtnUomAdd_Click`; captured context and existing ADMIN_MAINT | CORE_CONFIGURATION; catalog 10, Command; confirmed saved change differs from already-present UNCHANGED; empty source references and no entered value | D18 packaged RED 58/68 then GREEN 126/126; expanded catalog/policy/publication gate 225/225. Baseline release regressions retained; diagnostic-completion acceptance pending. |
 | ADMIN_UOM_REMOVE | Same section > `btnUomRemove` / **Remove**; `frmAdminSettings.mBtnUomRemove_Click`; existing no-selection validation and ADMIN_MAINT | CORE_CONFIGURATION; catalog 10, Command; owner confirms Changed/Unchanged, validation and denial remain distinct | Focused actual-handler GREEN 126/126, expanded gate 225/225; no selected UOM in activity. Broader acceptance pending. |
 | ADMIN_UOM_RESET | Same section > `btnUomReset` / **Reset**; `frmAdminSettings.mBtnUomReset_Click`; existing ADMIN_MAINT and native Yes/No question | CORE_CONFIGURATION; catalog 10, Command; REQUESTED before confirmation, CANCELLED only for No, context rechecked before owner dispatch | Actual Yes/No paths pass in focused 126/126, with three reviewed native captures. Cancelled editor choice has separate 96/2 RED then 98/98 GREEN with six fresh captures; broader acceptance pending. |
 
@@ -2120,6 +2124,16 @@ optional store failure still permits an otherwise authorized command.
 See [foundation candidate evidence](../../../invSys_fork/tests/integration/plan022_slice4be_activity_foundation_results.md).
 
 **Settings editor observation controls, 2026-09-22 -- specified; implementation pending:**
+Before this coverage group, the existing UOM and Boxing controls require a
+focused diagnostic-completion gate. D18's terminal-map refinement names UOM
+COMPLETED/UNCHANGED and Boxing CONFIRMED as their explicit positive command
+outcomes. Source review finds their evaluator mappings absent; runtime failure
+has not yet been established. Actual recorded actions, the real expectation
+editor and Evaluate must provide RED/GREEN. Request, denial, rejection, failure,
+Reset cancellation and pending submission must not conclude. Command completion
+retains its visible warning that Domain application is not asserted; the separate
+all-source application rule remains. No new control or owning outcome is added.
+
 Architecture v4.11 D18's Settings editor observation refinement governs these
 26 catalog-11 additions. Every row is pending actual packaged-handler RED/GREEN;
 none is accepted merely by registration. Admin Tracking and Event Detail saves
