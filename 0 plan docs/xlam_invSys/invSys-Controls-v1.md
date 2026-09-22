@@ -26,11 +26,14 @@ bounded harness retry for the exact rejected observational getters passes
 actions and changes no runtime/package/control. The full guide gate is restarted
 with fresh disposable fixtures; its result remains pending.
 
-Direct-curation source-integrity follow-up is pending packaged RED: malformed
-observation identity and mismatched attempt/result catalog/package/build metadata
-must be unavailable under existing D18. The test will use the actual picker with
-valid outer/inner hashes and an unaffected valid action. Source review identifies
-the coverage gap; behavioral evidence must precede any Core correction.
+Direct-curation source-integrity follow-up now has packaged **67 PASS / four
+expected FAIL** over 71 checks. The actual picker accepts malformed result identity
+and mismatched attempt/result catalog/package/build metadata despite valid inner/
+outer hashes. All prior 63 checks and four valid-neighbor preservation checks pass.
+Private Core validation must enforce existing D18 before a new candidate is tested.
+The second broader guide attempt reaches 286 passing checks before an unrelated
+COM dispatch interruption; no operator action is replayed. Normal closure and
+unchanged source/package pins are verified; full regression remains incomplete.
 
 The first isolated curation build compiles, but rejects valid published actions.
 Published activity lines include their existing ContentSha256 envelope field;

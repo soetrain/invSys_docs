@@ -6578,6 +6578,18 @@ bytes must remain intact. Confirm behavior before changing private Core validati
 This is protection of the current contract, not a new source schema or approval
 to rewrite evidence. No runtime defect is claimed solely from the code review.
 
+Packaged source-integrity RED now confirms **67 PASS / four expected FAIL** over
+71 unique typed checks, retaining all prior 63 identities. Separately rehashed
+fixtures prove malformed result RecordId and mismatched catalog/package/build
+remain selectable; each valid neighboring action and original source bytes are
+preserved. A preceding 59-check fixture interruption is not behavioral RED.
+The second broader guide attempt is separately interrupted at 286 passing checks
+by a COM rejection while opening the recording library; no action is replayed.
+Both completed attempts close Excel normally, with unchanged running sources/
+packages and no matching Application errors. See the curation integration record
+for exact roots/times. Tighten private Core validation under existing D18, then
+build a new isolated candidate and require all 71 GREEN plus supporting gates.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,
