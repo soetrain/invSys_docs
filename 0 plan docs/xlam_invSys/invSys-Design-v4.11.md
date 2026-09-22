@@ -2008,7 +2008,7 @@ DataEffect, handler return or mere submission is not a completion classifier.
 Its successful display remains **Command completed; Domain application not
 asserted**.
 
-**Discovered UOM/Boxing terminal-map refinement (specified; verification pending):**
+**Discovered UOM/Boxing terminal-map refinement (implemented; isolated candidate verified):**
 The existing ADMIN_UOM_ADD, ADMIN_UOM_REMOVE and ADMIN_UOM_RESET owner outcomes
 COMPLETED and UNCHANGED are positive command-completion facts for those exact
 controls. BOXING_MAKE and BOXING_UNBOX use CONFIRMED only, meaning their owning
@@ -2019,10 +2019,13 @@ positive completions. The original observations, catalog identity and complete
 stopped-run requirements remain binding. Do not classify by severity, data effect,
 Boolean return or a source's mere presence. CommandCompleted never asserts that
 all Domain sources applied; SourceEventsApplied continues to require the full
-exact-reference evidence below. A source review found these five controls absent
-from the current explicit evaluator map; D13 must establish actual-handler and
-actual-editor/Evaluate RED before any correction. This discovered map entry
-inherits the owner-completion rule above and changes no owning workflow outcome.
+exact-reference evidence below. Actual recorded owner actions and the packaged
+expectation editor/Evaluate establish eight focused RED failures before the
+explicit Core map correction; the isolated candidate then passes 460/460 checks.
+This discovered map entry inherits the owner-completion rule above and changes
+no owning workflow outcome. Applicable regressions, current release-chain retry
+and visible evidence are verified separately in the maintained Plan 022
+owner-command-completion result record; comprehensive release acceptance remains open.
 
 SourceEventsApplied checks every exact source reference of the matched
 terminal action, including repeated references across other actions. The set must

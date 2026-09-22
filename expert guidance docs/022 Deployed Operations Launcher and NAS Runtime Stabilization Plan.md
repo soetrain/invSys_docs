@@ -6723,7 +6723,7 @@ curation result record and `operations-guide-presentation-extended-ready-*`.
 This closes the selected Operations comparison coverage gap, not comprehensive
 tracking, transfer, unapproved decisions or human acceptance.
 
-**Admin UOM coverage entry (observation regressions verified; diagnostic-completion acceptance pending):** Architecture v4.11 D18's
+**Admin UOM coverage entry (observation and diagnostic gates verified; broader acceptance pending):** Architecture v4.11 D18's
 Admin UOM refinement registers Add, Remove and Reset as discovered catalog-10
 commands. Admin retains the real form handlers and existing reset confirmation;
 Core retains configuration authority. The protecting RED exercises those
@@ -6814,31 +6814,49 @@ captures are directly reviewed and hashed. All six close Excel normally without
 assistance and have no matching Application errors. Restart, full guide and
 Boxing use the bounded exit grace period. Exact report identities and times are
 in the maintained result record. D8-A remains unapproved; no failure is relabelled
-GREEN. The newly found diagnostic terminal-map gap below requires its own RED.
+GREEN. The discovered diagnostic terminal-map gap has its separate RED/GREEN below.
 See the maintained
 Admin UOM activity result record; comprehensive Slice 4be acceptance remains open.
 
+**UOM/Boxing completion-map D13 gate (isolated candidate verified):**
+Real recorded commands and the packaged expectation editor/Evaluate establish
+452 PASS / eight expected RED failures before correcting the five exact IDs in
+modEvaluationMatches.CommandCompleted. The isolated candidate then passes
+460/460, including all 92 focused checks. UOM COMPLETED/UNCHANGED and Boxing
+CONFIRMED conclude with the required Domain-application caveat; cancellation
+and rejection remain negative. Original records remain byte-for-byte unchanged.
+All five XLAMs build/compile and Operations cold start passes. Only the Core
+mapping differs among 242 compiled components; static evidence adds four lines
+and retains all 28 existing module limits and dynamic-call/duplicate metrics.
+The 23 RED captures are accepted. GREEN has 22 accepted captures and one rejected
+unpainted General Settings image. Fresh UOM regression now supplies the missing
+painted Settings proof: 228/228 prior checks and eleven accepted captures. The
+full Boxing/Shipping regression retains 1,707 prior passes and the same seven
+unapproved D8-A failures, with 22 accepted captures. Both focused runs and these
+regressions close Excel normally without assistance and have no matching
+Application errors; Boxing closure is delayed, not immediate. The fresh full-chain
+retry passes 32/32, live roles 48/48 and Create Warehouse 15/15, with assisted
+normal cleanup of a verified empty instance and recovery files retained. Its
+earlier Receiving ConfirmWrites call failure remains separately recorded and its
+cause unproven. How-To/Diagnostic/Compare retains all 421 prior checks and 31
+accepted captures, with immediate unassisted normal closure, unchanged
+source/test/package pins and no matching Application errors. These gates verify
+the explicit map correction; they do not approve D8-A or complete Slice 4be.
+See `tests/integration/plan022_slice4be_owner_command_completion_results.md`
+in the code repository for exact identities and test-host investigation.
+
 **Settings editor coverage D13 entry (specified; implementation pending):**
-Before implementing this next coverage group, protect and correct the newly
-discovered UOM/Boxing command-terminal map omission under D18's explicit owner-
-completion rule. Current source omits ADMIN_UOM_ADD/REMOVE/RESET and
-BOXING_MAKE/UNBOX from modEvaluationMatches.CommandCompleted. This is a source
-finding, not yet behavioral RED. Exercise real recorded commands, select their
-expected outcomes through the packaged editor and press the real Evaluate
-control; require the positive owner outcomes specified in Architecture v4.11
-and reject request/rejection/cancellation/pending outcomes as completions. Preserve
-the original journal/activity and distinguish command completion from every-source
-Domain application. Expected runtime correction is confined to the explicit
-Core evaluator map, after focused RED; packaged build/compile, visible evidence,
-static limits and all current regressions remain required. The 26-control Settings
-refinement below remains specified but is not yet implemented.
+The 26-control Settings refinement below remains specified but unimplemented.
+The preceding map correction's regression/visible gates are verified. Its frozen
+candidate is the next observation test's predecessor; its five added evaluator
+mappings introduce no Settings observations.
 
 Architecture v4.11 D18's Settings editor observation refinement governs the next
 26-control group: Tracking (10), Event Detail (8), and Admin/Operations personal
 preferences (4 each). Catalog 11 retains versions 1-10 exactly. The maintained
 controls rows identify the real callbacks; general Settings, lifecycle/page
 navigation and other roles remain separately pending. Protect every actual
-callback with behavioral RED on the frozen Admin UOM predecessor before editing
+callback with behavioral RED on the frozen owner-completion predecessor before editing
 runtime. Missing eligible observations and held-editor context redirection are
 the expected behavioral failures; fixture, compile and capture failures are not RED.
 

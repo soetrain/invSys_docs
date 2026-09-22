@@ -1,6 +1,25 @@
 # invSys Form Controls v1
 
-**Version:** 1.215 (Settings observation and UOM/Boxing diagnostic refinements specified; verification pending)
+**Version:** 1.216 (UOM/Boxing diagnostic mapping and applicable isolated gates verified)
+
+The five UOM/Boxing diagnostic completion mappings now pass **460/460** packaged
+checks after **eight expected RED failures**. The recorded owner facts, actual
+expectation editor and Evaluate protect the correction. All twelve visible
+evaluation results are reviewed; the positive cases retain **Command completed;
+Domain application not asserted**, and cancellation/rejection remain negative.
+All five packages build/compile, Operations cold start passes, and static limits
+remain satisfied (+4 Core lines only). GREEN has 22 accepted captures and one
+rejected unpainted General Settings image. Fresh UOM regression supplies painted
+Settings proof, retains 228/228 checks and has eleven accepted captures.
+Boxing/Shipping retains 1,707 passes and the same seven unapproved D8-A failures,
+with 22 accepted captures; it closes normally after a delay, without assistance.
+The fresh full-chain retry passes 32/32, live roles 48/48 and Create Warehouse
+15/15; cleanup requires normal Quit of a verified empty instance and retaining
+recovery files. The preceding failed chain remains a separate failure with
+unproven cause. How-To/Diagnostic/Compare retains 421/421 prior checks and 31
+reviewed captures, with immediate unassisted normal closure, unchanged pins and
+no matching Application errors. This is not complete Slice 4be or human acceptance. See the
+[owner completion result record](../../../invSys_fork/tests/integration/plan022_slice4be_owner_command_completion_results.md).
 
 The real Receiving task now passes **421/421** packaged comparison/evaluator
 checks, retaining all 376 prior checks and adding 45. How-To, Diagnostic and
@@ -96,9 +115,9 @@ comparison **421/421**, and Boxing/Shipping **1,707 PASS plus exactly seven know
 D8-A failures**. Every prior GREEN identity and source/package hash is preserved;
 all 129 captures are directly reviewed and hashed. Excel closes normally without
 assistance in all six gates, with no matching Application errors. D8-A remains
-unapproved and its failures are not GREEN. The newly discovered UOM/Boxing
-diagnostic terminal mapping, comprehensive coverage, transfer and human acceptance
-remain open; their pending refinements below are not implementation evidence.
+unapproved and its failures are not GREEN. The UOM/Boxing terminal mapping now has
+the focused evidence above; comprehensive coverage, transfer and human acceptance
+remain open. The pending Settings refinement is not implementation evidence.
 
 Before the native-layout extension, the source-integrity candidate passes **71/71** focused checks after four
 behavioral RED failures. Private Core rejects malformed original RecordId and
@@ -2103,7 +2122,7 @@ See [first activity RED](../../../invSys_fork/tests/integration/plan022_slice4be
 |---|---|---|---|
 | ADMIN_SETTINGS_SAVE_VALUE | Admin Settings Save Value; `frmAdminSettings.mBtnSaveConfig_Click`; captured warehouse/station and ADMIN_MAINT | CORE_CONFIGURATION; CONFIG_SAVE_REQUESTED has Unknown effect; CONFIG_SAVE_COMPLETED has Changed only when a changed value was confirmed saved | First 4be.1 packaged test reuses the actual successful D5 form action; proves shared evidence without moving write ownership into the recorder. |
 | PRODUCTION_UOM_RETRIEVE | Production Retrieve UOM Catalog; `frmProduction.mBtnUomCatalogRetrieve_Click`; validated PROD_POST route, ADMIN_MAINT compatibility | CORE_CONFIGURATION; UOM_RETRIEVE_REQUESTED has Unknown effect; UOM_RETRIEVE_COMPLETED has Changed for a confirmed version increment; UOM_RETRIEVE_DENIED has Unchanged/Blocked after pre-write denial | First 4be.1 test exercises successful and denied real form actions, preserves staging on denial and requires no user-control observation from a direct service call. |
-| ADMIN_UOM_ADD | Settings > General > Recipe UOM Catalog > `btnUomAdd` / **Add**; `frmAdminSettings.mBtnUomAdd_Click`; captured context and existing ADMIN_MAINT | CORE_CONFIGURATION; catalog 10, Command; confirmed saved change differs from already-present UNCHANGED; empty source references and no entered value | D18 packaged RED 58/68 then GREEN 126/126; expanded catalog/policy/publication gate 225/225. Baseline release regressions retained; diagnostic-completion acceptance pending. |
+| ADMIN_UOM_ADD | Settings > General > Recipe UOM Catalog > `btnUomAdd` / **Add**; `frmAdminSettings.mBtnUomAdd_Click`; captured context and existing ADMIN_MAINT | CORE_CONFIGURATION; catalog 10, Command; confirmed saved change differs from already-present UNCHANGED; empty source references and no entered value | D18 packaged RED 58/68 then GREEN 126/126; expanded catalog/policy/publication gate 225/225. Baseline release regressions and the separate diagnostic mappings below are verified; broader acceptance remains open. |
 | ADMIN_UOM_REMOVE | Same section > `btnUomRemove` / **Remove**; `frmAdminSettings.mBtnUomRemove_Click`; existing no-selection validation and ADMIN_MAINT | CORE_CONFIGURATION; catalog 10, Command; owner confirms Changed/Unchanged, validation and denial remain distinct | Focused actual-handler GREEN 126/126, expanded gate 225/225; no selected UOM in activity. Broader acceptance pending. |
 | ADMIN_UOM_RESET | Same section > `btnUomReset` / **Reset**; `frmAdminSettings.mBtnUomReset_Click`; existing ADMIN_MAINT and native Yes/No question | CORE_CONFIGURATION; catalog 10, Command; REQUESTED before confirmation, CANCELLED only for No, context rechecked before owner dispatch | Actual Yes/No paths pass in focused 126/126, with three reviewed native captures. Cancelled editor choice has separate 96/2 RED then 98/98 GREEN with six fresh captures; broader acceptance pending. |
 
@@ -2123,16 +2142,17 @@ before retrieving the catalog.** This enforces D18's captured-session rule;
 optional store failure still permits an otherwise authorized command.
 See [foundation candidate evidence](../../../invSys_fork/tests/integration/plan022_slice4be_activity_foundation_results.md).
 
+**UOM/Boxing diagnostic completion, 2026-09-22 -- isolated candidate verified:**
+D18's explicit UOM COMPLETED/UNCHANGED and Boxing CONFIRMED mappings pass
+460/460 after eight actual-recording/editor/Evaluate RED failures. Request,
+denial, rejection, failure, Reset cancellation and pending submission do not
+become positive completions. Command completion retains its visible warning
+that Domain application is not asserted; the separate all-source application
+rule remains. No control or owning outcome is added. The applicable regressions,
+release-chain retry and fresh General Settings proof are verified above;
+comprehensive control coverage and human acceptance remain open.
+
 **Settings editor observation controls, 2026-09-22 -- specified; implementation pending:**
-Before this coverage group, the existing UOM and Boxing controls require a
-focused diagnostic-completion gate. D18's terminal-map refinement names UOM
-COMPLETED/UNCHANGED and Boxing CONFIRMED as their explicit positive command
-outcomes. Source review finds their evaluator mappings absent; runtime failure
-has not yet been established. Actual recorded actions, the real expectation
-editor and Evaluate must provide RED/GREEN. Request, denial, rejection, failure,
-Reset cancellation and pending submission must not conclude. Command completion
-retains its visible warning that Domain application is not asserted; the separate
-all-source application rule remains. No new control or owning outcome is added.
 
 Architecture v4.11 D18's Settings editor observation refinement governs these
 26 catalog-11 additions. Every row is pending actual packaged-handler RED/GREEN;
