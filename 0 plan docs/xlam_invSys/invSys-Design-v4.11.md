@@ -1610,6 +1610,53 @@ guide or the guide's successful source run. These discovered controls implement
 the approved exact-guide/observed-run separation under semantic inheritance; they
 do not redefine evaluation semantics or complete How-To/Diagnostic/Compare.
 
+**4be.5 published-guide editing refinement:** The Published guides reader adds
+`btnEditPublishedGuide`, **Edit guide**, for the exact selected guide ID/version/hash.
+This implements the already approved capability-gated guide editing and immutable
+revision contract. It does not require a selected diagnostic recording and never
+substitutes that recording, its expectation or its observations for guide content.
+Ordinary readers keep their existing read and Use for selected run access; only
+ACTION_PATH_MAINT permits opening or saving an authored edit. Core rechecks the
+captured session/warehouse, capability, current policy and exact predecessor chain
+at entry and each draft action/save. Operations continues to own the modeless UI.
+
+The existing **Action Path guide** editor restores the selected version's name,
+ordered tags, general instructions, authored step order/text and stable StepIds,
+and explicit ExpectedConclusion with its existing expected-step identities.
+Original observation bodies/order, source action identities and SourceRun provenance
+remain unchanged. Authored steps and expected steps remain different collections;
+reordering or removing authored instructions never rewrites either observations or
+an expectation automatically. The source label identifies the exact guide version
+being edited and its original provenance. Opening does not generate a new guide
+identity, reinterpret source success as a conclusion, evaluate, or publish.
+
+The draft binds to that exact selection in the launching Published guides reader.
+Repeated entry for that binding reuses staged edits. Selecting a different guide,
+losing the selection's exact integrity, closing its reader/Viewer, or losing the
+captured context invalidates/closes that draft and any child expectation editor.
+It never retargets pending edits. Current visibility is enforced before exposing
+editable content: if any retained authored control, observation or expected step
+is restricted, editing is unavailable with a reason. Do not silently remove hidden
+content to produce a different revision. A changed policy/capability invalidates
+the draft and clears retained content under the existing draft rules.
+
+**Save guide** appends the next immutable version of the same ActionPathId, with
+a fresh RecordId and exact predecessor RecordId/hash, preserving surviving authored
+and expected StepIds and source provenance. Subsequent saves from this editor append
+from its own last successful version. It does not change the reader's selected
+version or a separately selected observed run. Opening an older valid version is
+allowed; attempting to save where the next version already exists reports a
+version conflict and preserves unsaved edits. No overwrite, branch, silent latest
+selection or rebase is introduced. Existing size/validation/storage failures also
+preserve drafts while their binding remains valid. Cancel discards unsaved edits
+and cannot remove a published version.
+
+Existing editor and reader default/minimum sizes, current-policy reads, no activity
+recursion, advisory-only behavior and D13 packaged handler gates remain required.
+This discovered entry refines D18 under semantic inheritance; it does not authorize
+direct-event source fabrication, transfer/import changes, or the pending D8-A and
+Event Detail proposals. Direct curation, transfer and broader acceptance remain.
+
 **4be.5 paired How-To/Diagnostic presentation refinement:** The Action Paths
 recording library adds `btnViewActionPath`, **View guide and run**. After an
 operator explicitly uses a published guide for the selected recording, this

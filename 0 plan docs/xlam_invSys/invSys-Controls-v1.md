@@ -1,6 +1,21 @@
 # invSys Form Controls v1
 
-**Version:** 1.189 (paired visible gate 305/305; broader acceptance pending)
+**Version:** 1.190 (published-guide Edit entry specified; implementation pending)
+
+**4be.5 discovered control; specified, not implemented:** Published guides
+`btnEditPublishedGuide`, **Edit guide**, opens the existing Action Path guide editor
+for the exact selected ID/version/hash with ACTION_PATH_MAINT. No observed-run
+selection is required or substituted. Reopen restores authored fields, stable
+authored/expected StepIds and original source evidence; Save appends an immutable
+revision of the same guide. Repeated entry retains staging; Cancel discards it.
+An occupied next version reports conflict while preserving edits. Current
+permission/policy/integrity and captured selection/context are checked in Core;
+restricted content is never silently dropped to save. Closing/changing the owning
+reader invalidates its draft and child expectation editor. Existing read/Use access,
+advisory boundaries and default/minimum layouts remain. The normative D18
+published-guide editing refinement and Plan 022 govern the pending packaged
+missing-entry RED, implementation, layout and regression evidence. This records
+no runtime or human acceptance and does not approve either pending proposal.
 
 **4be.5 controls; isolated candidate, acceptance pending:** Action Paths `btnViewActionPath`,
 **View guide and run**, opens reusable Operations `frmActionPathView` for the

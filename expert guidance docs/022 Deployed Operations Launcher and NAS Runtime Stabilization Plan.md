@@ -6314,6 +6314,29 @@ Next protect fresh-process paired preference through the actual Settings and vie
 handlers. Closed-guide editing, direct curation, transfer, remaining D18 and human
 acceptance are still required; neither pending architecture proposal is approved.
 
+**Next 4be.5 D13 entry -- reopen a published guide for editing:** Follow the
+normative published-guide editing refinement. Operations Published guides adds
+`btnEditPublishedGuide`, **Edit guide**, with ACTION_PATH_MAINT checked in Core.
+The exact selected ID/version/hash supplies authored fields, stable authored and
+expected StepIds, observations and SourceRun; a selected diagnostic run supplies
+none of those values. Before implementation, extend the packaged actual-handler
+test to establish missing-entry/reopen RED. Preserve existing reader, draft,
+save/version/conflict, expectation, guide-to-run and presentation GREEN identities.
+
+Protect Close/reopen restoration, repeated-entry reuse, same-guide immutable append,
+stable identities/source bytes, Cancel, older-version conflict with retained edits,
+permission/current-policy/integrity loss, changed selection/context, parent/child
+closure and four-size visible layouts. Denied readers retain their existing read
+and Use access. No hidden-content deletion, automatic expectation rewrite, selected
+run substitution, evaluation, business-Events publication or preference write is allowed. The
+runtime files expected to change are Core guide draft/source/model boundaries and
+Operations guide editor/reader ownership/forms; new focused helpers must stay
+bounded. Build/compile all five packages, then relevant regressions, maintenance,
+live-role, full-chain and operator evidence remain completion gates. This paragraph
+records a compatible discovered control under D18 semantic inheritance, not
+implementation or acceptance. The paired restart gate is currently independent;
+do not alter its running test sources or frozen packages.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,
