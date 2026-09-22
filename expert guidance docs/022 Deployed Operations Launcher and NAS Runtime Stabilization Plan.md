@@ -6262,6 +6262,16 @@ state passes 94/94 with immediate closure, zero matching Application events and
 all three captures reviewed. Boxing/Shipping, evaluation and full chain remain
 separate requirements; the pending Event Detail scrolling proposal is unchanged.
 
+The frozen paired candidate's Boxing/Shipping regression now retains all 1,707
+preceding GREEN identities with exactly seven pending D8-A findings. Excel closes
+normally after slow shutdown; zero matching Application events and unchanged
+package hashes are verified. All 22 captures were individually reviewed, including
+painted permission-denied/stale-session Shipping notices after the capture-only
+owned-form helper correction. The offline failure-diagnostic privacy/no-replay
+checks pass 10/10. Neither gate approves D8-A, the scrolling proposal, the failed
+paired visible run or full Release 1 acceptance. Evaluation and full chain follow
+serially before the next paired visible diagnostic.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,

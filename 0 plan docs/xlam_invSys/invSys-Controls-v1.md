@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.184 (paired retry retained; Viewer regression verified)
+**Version:** 1.185 (paired candidate Viewer and Boxing regressions verified)
 
 **4be.5 controls; isolated candidate, acceptance pending:** Action Paths `btnViewActionPath`,
 **View guide and run**, opens reusable Operations `frmActionPathView` for the
@@ -45,6 +45,14 @@ filter/Shipping state passes 94/94 with immediate closure, zero matching
 Application events and three reviewed captures. The known Shipping heading
 adjacency and pending Event Detail scrolling issue remain open, along with the
 remaining presentation and release gates.
+
+Boxing/Shipping retains all 1,707 previous GREENs with exactly seven pending D8-A
+findings. Normal closure after slow shutdown, zero matching Application events and
+unchanged package hashes are verified. All 22 captures were individually reviewed;
+the owned-form capture helper now exposes the expected denied/stale-session
+Shipping notices. This changes capture tooling only. Business success and tracking
+unavailability remain visibly separate. No pending architecture decision, layout
+limitation, paired visible gate or full-release requirement is waived.
 
 **Guide-to-run controls (isolated candidate; acceptance pending):** D18 names
 `lblGuideObservedRun` and `btnUseGuideForRun`, **Use for selected run**, in the
