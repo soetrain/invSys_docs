@@ -954,7 +954,7 @@ owner-fact and workbook-preservation rules, not new ControlIds, outcomes, catalo
 versions, permissions or authority stores. Shipping activity/source-reference
 definitions and remaining control coverage require their own protecting evidence.
 
-**4be.1 Admin UOM command observation refinement (implementation pending):**
+**4be.1 Admin UOM command observation refinement (focused implementation verified; broader acceptance pending):**
 Under D18's comprehensive Admin coverage, actual-entry and owner-fact rules,
 catalog 10 adds the three existing General > Recipe UOM Catalog commands below.
 All use OwnerId CORE_CONFIGURATION, SourceRole Admin, Class Command, existing

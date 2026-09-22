@@ -6723,11 +6723,11 @@ curation result record and `operations-guide-presentation-extended-ready-*`.
 This closes the selected Operations comparison coverage gap, not comprehensive
 tracking, transfer, unapproved decisions or human acceptance.
 
-**Next Admin UOM coverage entry (not implemented):** Architecture v4.11 D18's
+**Admin UOM coverage entry (focused implementation verified; broader gates pending):** Architecture v4.11 D18's
 Admin UOM refinement registers Add, Remove and Reset as discovered catalog-10
 commands. Admin retains the real form handlers and existing reset confirmation;
-Core retains configuration authority. Before implementation, exercise those
-packaged handlers on the unchanged candidate for missing-observation RED. Cover
+Core retains configuration authority. The protecting RED exercises those
+packaged handlers on the unchanged candidate for missing observations. Cover
 saved change versus already-present/no-change, validation, denial, actual Reset
 Yes/No, captured-context invalidation, policy off, unavailable tracking store,
 direct service calls producing no activity, old-catalog policy preservation,
@@ -6736,10 +6736,64 @@ existing writer's outcome through UOM services; do not infer Changed from True
 or parse human status text. Expected files are frmAdminSettings,
 modAdminSettingsAction, modUomSettings, modActivityCatalog and focused packaged
 tests. Add a small private catalog helper only if warranted by size limits.
-No runtime edit or candidate rebuild occurs during the current comparison gate.
+The preceding comparison gate uses unchanged runtime/packages.
 After meaningful RED, require focused GREEN, all five packaged build/compile
 checks, layouts, static limits, relevant current GREENs, live roles, full chain
 and visible evidence before declaring the runtime slice complete.
+
+The Admin UOM focused gate now establishes **58 PASS / 68 expected FAIL**, root
+`b252af03029142419489a8e573ea1618`, 2026-09-22 11:11:16.9200212--11:13:14.2024076
+UTC. All 43 baseline/setup checks pass, including five instrumented compiles.
+Eleven successful owning-effect checks have no required activity pairs (66
+observation failures); held forms also fail replacement-session and changed-target
+guards. Direct service non-observation and original activity/fixture restoration
+pass. Sources/packages stay unchanged, Excel closes normally and no matching
+Application errors occur. Three native confirmations are inspected; one blank
+Yes capture is rejected. The subsequent isolated candidate
+`deploy/validation-admin-uom-activity` passes **126/126**, retaining all RED
+identities, root `ecfbcfdc4f75493c8f246c9a0b42c661`, 2026-09-22
+11:21:03.5475342--11:23:08.7978035 UTC. All five packages build/compile and
+Operations cold start passes; exactly the four planned runtime components change.
+Three fresh native confirmation captures are directly reviewed and hashed.
+Normal unassisted closure, unchanged source/package pins and zero matching
+Application errors are verified. Static metrics are 249/6,036/132,551, dynamic
+calls 9/45, duplicate groups 192; all 28 prior module limits pass.
+The editor outcome candidates omit CANCELLED: protect its actual Reset-selection
+and stopped-run retention with separate behavioral RED before correcting Core's
+choice list. That actual-editor RED is now **96 PASS / 2 expected FAIL**, root
+`db5ea93ceae54003b236910881006bd5`, 2026-09-22
+11:39:40.8223517--11:43:16.4257653 UTC. Native Reset cancellation and configuration
+preservation pass; selecting and retaining the authored Cancelled step fail.
+All existing checks and five instrumented compiles pass. Six captures are
+reviewed; source/package pins, normal closure and zero Application errors pass.
+The one-line candidate-list correction follows this RED and passes **98/98**,
+root `1e8d3b9d787c498698fa6f4a8b7438a7`, 2026-09-22
+11:47:26.0639409--11:51:10.6642631 UTC. All five packages build/compile and
+Operations cold start passes; only modExpectationDraft differs from the preceding
+126-GREEN candidate. Six fresh captures are reviewed; Excel closes normally.
+Static metrics and all 28 prior size limits remain unchanged; all three report
+schemas pass. The following activity invocation fails before execution due to
+scalar native-argument splatting; preserve it as harness failure, use explicit
+arguments, and do not infer product RED or relax checks.
+The expanded gate now passes **225/225**, preserving all 126 original identities,
+root `e2df987c476a4d8792a1b4d6299df0cb`, 2026-09-22
+11:59:40.9999819--12:02:24.3204599 UTC. It preserves prior catalog definitions,
+publishes all twelve actual action pairs and their original identities/outcomes,
+and protects actual commands under unavailable storage, older valid policy and
+disabled collection. Policy rows/unknown columns and original activity bytes
+remain unchanged. Nine fresh confirmations are reviewed; normal closure, source/
+package pins and zero Application errors pass. Two earlier 166-pass runs stop
+at a publication fixture count error: Reset setup uses an extra real Add, which
+the corrected test includes rather than discards. No runtime correction is needed.
+Settings then passes **191/191**, preserving all preceding check identities,
+root `8d870c592b19445586203540cb919848`, 2026-09-22
+12:03:05.6717073--12:06:19.5050481 UTC. Whole-policy/detail/preference behavior,
+restart, Operations-only Settings and native maximize/restore pass. Of ten reviewed
+captures, nine are usable; the initial General-tab image has unpainted controls
+and does not establish UOM layout acceptance. Normal closure, unchanged sources
+and zero matching Application errors pass. Obtain fresh General-tab evidence,
+then continue broader regression/live-role/full-chain gates. See the maintained
+Admin UOM activity result record; comprehensive Slice 4be acceptance remains open.
 
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
