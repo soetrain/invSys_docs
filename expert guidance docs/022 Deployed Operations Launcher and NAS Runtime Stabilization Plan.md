@@ -6538,6 +6538,22 @@ body value. Retain the first failed candidate/evidence; run the corrected protec
 test against it before fixing the source adapter. This is schema clarification,
 not a new source/guide format or approval of an architectural exception.
 
+The corrected direct-curation candidate now passes **55/55** protecting focused
+checks and **63/63** expanded integration checks, including the actual published
+reader/Edit/Save round trip. Stable step IDs, unchanged original bodies, empty
+SourceRun and exact immutable predecessor linkage survive that round trip.
+All five isolated packages build/compile; twelve library/picker/editor captures
+are directly reviewed at four sizes. Normal unassisted closure, unchanged source/
+package pins and zero matching Application events are verified. A preceding
+read-only COM rejection remains separately recorded as a harness interruption,
+not behavioral RED or acceptance. Maintenance retains dynamic calls 9/45,
+duplicate groups 192 and all 28 previous size limits. Existing broader guide,
+fresh-process, Viewer, Boxing/Shipping, evaluation, live-role and full-chain gates
+are next on this same frozen candidate. Exact commands/results and limits are in
+code `tests/integration/plan022_slice4be_guide_action_curation_results.md`.
+This implements the approved D18 refinement; it does not approve pending D8-A or
+Event Detail changes, transfer scope, deployment or human acceptance.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,

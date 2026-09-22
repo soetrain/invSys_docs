@@ -1,6 +1,23 @@
 # invSys Form Controls v1
 
-**Version:** 1.204 (direct-curation source envelope/body distinction clarified)
+**Version:** 1.205 (direct-curation focused and published round-trip GREEN)
+
+Direct tracked-action curation now passes **55/55** focused checks and **63/63**
+expanded integration checks on the corrected isolated candidate. All five
+packages build and compile. The source adapter verifies the published envelope
+digest and retains its original body without changing either schema. The actual
+published-reader/Edit/Save round trip preserves stable step IDs, empty SourceRun,
+original observations and immutable predecessor linkage. All twelve library,
+picker and editor captures are directly reviewed at minimum/default/larger/
+restored sizes. Action Paths uses **Saved recordings** beside **Choose tracked
+actions**, **Published guides** and **Create guide**; the existing empty-recording
+unavailable notice does not prevent direct action selection. Normal unassisted
+Excel closure, unchanged source/package pins and zero matching Application events
+are verified. Static dynamic calls remain 9/45, duplicate groups 192 and all 28
+prior size limits pass. Supporting regressions are in progress; human acceptance,
+deployment, transfer and comprehensive remaining D18 scope remain open. Exact
+evidence: code `tests/integration/plan022_slice4be_guide_action_curation_results.md`.
+The following RED history predates this GREEN and is retained for traceability.
 
 The first isolated curation build compiles, but rejects valid published actions.
 Published activity lines include their existing ContentSha256 envelope field;
@@ -19,7 +36,7 @@ package pins, and zero matching Application events are verified. Exact evidence:
 code `tests/integration/plan022_slice4be_guide_action_curation_results.md`.
 Implementation, GREEN and full acceptance remain pending.
 
-**Direct curation entry specified; not yet accepted:** D18 now names
+**Direct curation entry implemented; human acceptance pending:** D18 names
 `frmActionPaths.btnChooseGuideActions` (**Choose tracked actions**) and the
 Operations-owned `frmGuideActionPicker`, independently of any selected recording.
 The picker uses `lblGuideActionSource`, `txtGuideActionSearch`, `lstGuideActions`,
