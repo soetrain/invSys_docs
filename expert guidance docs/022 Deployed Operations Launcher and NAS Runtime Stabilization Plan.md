@@ -6289,6 +6289,17 @@ Quit, then the observed recovery prompt's retention option is selected, reviewed
 and confirmed. No forced termination or recovery deletion occurs. This is not an
 unattended shutdown claim or acceptance of the remaining paired visible/human gates.
 
+The expanded visible diagnostic records 294 PASS / one harness failure, retaining
+all 243 focused identities. Normal closure, zero matching Application events,
+unchanged packages/test sources and all 39 individually reviewed capture hashes
+are verified. Missing, extra, rejected, None, capture-off and current visibility
+cases pass, including minimum-size bottom-viewport identities. The final historical
+gap fixture incorrectly demands Stopped after an excluded command; the existing
+recorder interruption path produces Incomplete / TRACKING_UNAVAILABLE. Preserve
+the failed run, correct the fixture without runtime changes, validate saved flags,
+and retain sanitized counts/Booleans on any further preparation failure. The retry,
+unavailable-policy cases, paired preference restart and human acceptance remain open.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,

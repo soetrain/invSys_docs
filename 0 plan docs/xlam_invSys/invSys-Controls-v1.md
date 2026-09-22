@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.187 (paired candidate chain verified with assisted cleanup)
+**Version:** 1.188 (paired visible scenarios verified; final fixture correction pending)
 
 **4be.5 controls; isolated candidate, acceptance pending:** Action Paths `btnViewActionPath`,
 **View guide and run**, opens reusable Operations `frmActionPathView` for the
@@ -69,6 +69,17 @@ events and unchanged frozen packages are verified. Cleanup required verified
 empty-instance normal Quit and reviewed recovery retention, without forced
 termination or deletion. Record this as assisted cleanup; paired visible acceptance,
 human UAT and full Slice 4be completion remain open.
+
+The next expanded visible run retains all 243 focused identities with 294 PASS /
+one harness failure, normal closure, zero matching Application events and unchanged
+packages/test sources. All 39 captures were reviewed and hash-verified, including
+minimum-size complete match/extra identities, missing/rejected/None cases,
+capture-off historical results and same-session visibility clearing. Historical
+unavailable-evidence preparation fails before its presentation checks: the test
+incorrectly expects Stopped after an excluded command, while the recorder's
+existing interruption path closes Incomplete. Correct that fixture and retain
+sanitized count/flag evidence; no runtime contract changes. The expanded gate,
+final unavailable-policy cases and fresh-process paired preference remain pending.
 
 **Guide-to-run controls (isolated candidate; acceptance pending):** D18 names
 `lblGuideObservedRun` and `btnUseGuideForRun`, **Use for selected run**, in the
