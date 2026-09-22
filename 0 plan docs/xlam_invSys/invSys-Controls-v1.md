@@ -1,14 +1,50 @@
 # invSys Form Controls v1
 
-**Version:** 1.217 (Settings diagnostic terminal facts specified; implementation pending)
+**Version:** 1.221 (Settings: 780-check behavioral GREEN, 202-check Settings and 460-check owner regressions; broader gates pending)
 
-The 26 pending Settings controls now have an explicit normative diagnostic
-terminal-fact table. A completed staging/read/selection action retains its exact
+The 26 Settings controls have an expanded 450/450 actual-handler GREEN after
+141 original failures and five denied-Reload synthetic-selection failures.
+The diagnostic candidate passes 780/780 after 27 expected failures; shutdown and
+broader acceptance gates remain pending. The normative diagnostic
+terminal-fact table remains binding. A completed staging/read/selection action retains its exact
 STAGED/REFRESHED/SELECTED observation and never asserts saved settings. The three
 save controls use their verified persistence outcomes; Tracking Policy Save
 remains interrupted and supplies no positive terminal fact. Actual-handler and
-editor/Evaluate RED/GREEN remain required. This clarification inherits D18's
+editor/Evaluate RED/GREEN remain required for completion. This clarification inherits D18's
 existing owner rule and grants no new permission or persistence authority.
+
+The terminal-map gate records 753 PASS / 27 expected FAIL through the actual
+expectation editor and Evaluate, retaining all 450 prior checks. Its 19 negative
+evaluations pass and 54 captures are reviewed. The Core map's fresh compiled
+candidate passes 780/780 with 54 reviewed captures and preserved completion pins.
+Its pre-Quit typed workbook count is zero, but the completed host requires
+identified cleanup and the wrapper reports closure unavailable. Normal shutdown
+is not accepted from this run. The residual Excel entry disappears by the final
+19:43:10 UTC audit without reboot or guard bypass; zero matching Office failure
+events are recorded. The RED test stalled after Quit and
+required identified test-process cleanup; normal shutdown is not accepted from
+that run. The same frozen candidate then passes **202/202** compiled Settings
+regression checks, retaining all 191 earlier checks with ten accepted captures,
+immediate unassisted final closure and zero Application failure events. Native
+maximize/restore, four-package Operations-only access, unknown columns and
+captured contexts remain protected. Earlier capture/RPC attempts remain preserved;
+their cause is unproven. The first full-chain attempt passes Create Warehouse
+15/15 but stops at Receiving Confirm Writes with an unresolved `0x80020009`
+harness failure. That attempt supplies no release acceptance. Broader regressions
+and release acceptance remain pending. The same candidate's focused owner
+regression passes 460/460 with 23 accepted images and immediate unassisted
+closure. Seven earlier Boxing capture failures are resolved through the existing
+ownership-checked capture helper; the failed attempt remains preserved.
+The full-chain retry passes 32/32, live-role 48/48 and Create Warehouse 15/15,
+but its strict audit fails on Excel shutdown error events. The behavioral result
+does not establish clean full-chain or release acceptance; root cause is unresolved.
+The separate UOM regression passes 228/228 with all eleven images accepted,
+preserved earlier checks and immediate unassisted closure without Application
+failure events. Broader acceptance remains pending.
+The broader Boxing/Shipping attempt is incomplete after a capture-harness failure
+and one rejected DPI-misframed image. The focused capture-geometry correction
+passes 4/4 after its observed failure; this is not packaged operator acceptance.
+Visible reruns await restored Windows input-desktop access (currently error 5).
 
 The five UOM/Boxing diagnostic completion mappings now pass **460/460** packaged
 checks after **eight expected RED failures**. The recorded owner facts, actual
@@ -2160,11 +2196,18 @@ rule remains. No control or owning outcome is added. The applicable regressions,
 release-chain retry and fresh General Settings proof are verified above;
 comprehensive control coverage and human acceptance remain open.
 
-**Settings editor observation controls, 2026-09-22 -- specified; implementation pending:**
+**Settings editor observation controls, 2026-09-22 -- isolated observation checkpoint; completion pending:**
 
 Architecture v4.11 D18's Settings editor observation refinement governs these
-26 catalog-11 additions. Every row is pending actual packaged-handler RED/GREEN;
-none is accepted merely by registration. Admin Tracking and Event Detail saves
+26 catalog-11 additions. The expanded actual-handler candidate passes 450/450,
+retaining all first-GREEN checks after 141 expected failures and resolving five
+additional denied-Reload synthetic-selection failures. Eight visible captures,
+five compiles, cold start and static limits pass. Diagnostic terminal mappings
+then pass 780/780 after 27 expected failures, with 54 reviewed captures. The
+completed test has a shutdown limitation; normal shutdown, broader regressions
+and release acceptance remain pending. No row is accepted merely by registration. See the
+[Settings observation evidence](../../../invSys_fork/tests/integration/plan022_slice4be_settings_editor_activity_results.md).
+Admin Tracking and Event Detail saves
 retain CORE_CONFIGURATION/ADMIN_MAINT authority; their other actions use
 ADMIN_SETTINGS_UI and cannot write saved settings. Both personal-preference
 surfaces use CORE_PERSONAL_PREFERENCE and the existing captured signed-in context,

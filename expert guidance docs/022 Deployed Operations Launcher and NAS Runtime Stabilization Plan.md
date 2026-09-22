@@ -6845,8 +6845,83 @@ the explicit map correction; they do not approve D8-A or complete Slice 4be.
 See `tests/integration/plan022_slice4be_owner_command_completion_results.md`
 in the code repository for exact identities and test-host investigation.
 
-**Settings editor coverage D13 entry (specified; implementation pending):**
-The 26-control Settings refinement below remains specified but unimplemented.
+**Settings editor coverage D13 entry (isolated observation checkpoint; completion pending):**
+The 26-control observation candidate passes 450/450, retaining the initial 320
+checks and resolving all 141 original failures. Additional boundary tests expose
+a denied Reload's synthetic selection during recording: 166 PASS / five behavioral
+FAIL precede the fix. The expanded GREEN resolves all five by suppressing the
+internal clear's control event while retaining the deliberate failed Reload.
+All five compiles, Operations cold start, eight reviewed captures, three static
+schemas and 28 module limits pass. Runtime/test/package pins are preserved and
+Excel closes normally without assistance; no matching Application errors occur.
+Diagnostic terminal mappings and broader completion gates remain pending.
+The actual expectation-editor/Evaluate gate now supplies 753 PASS / 27 expected
+terminal-classification FAIL, preserving all 450 observation checks. Its 46
+evaluations preserve original bytes; all 54 captures are reviewed. Nineteen
+negative evaluations pass, including interrupted policy writes, request-only
+facts, missing later Save and empty Domain references. The completed test stalls
+after Quit and requires identified test-process/host cleanup; no normal-shutdown
+acceptance is claimed. The explicit Core map is implemented in a fresh candidate
+with five compiles and cold start passing. Its behavioral GREEN is 780/780,
+retaining all 450 prior checks and resolving all 27 terminal failures, with 54
+reviewed captures and preserved runtime/test/package pins at completion. The
+instrumented pre-Quit observation verifies zero workbooks; Quit and FinalRelease
+return, but the completed test still requires identified host cleanup and the
+wrapper reports closure unavailable. A residual Excel process entry remains
+after Windows reports no running task. A native unsignaled process handle still
+prevents the next isolated gate. The entry disappears by the 19:43:10 UTC audit,
+with zero matching Office Application failure events; no reboot or guard bypass
+is used. Do not claim normal unassisted shutdown. Broader regressions and release
+gates remain pending.
+The same frozen candidate's legacy Settings regression passes 202/202, retaining
+all 191 prior checks plus nine instrumented-project compiles and two pre-form
+setup checks. Ten captures are accepted; 299 runtime/188 test/five package pins
+are preserved. Final closure is immediate and unassisted, with no Application
+failure events, 20:02:40--20:06:22 UTC. Three preceding capture/RPC attempts remain
+documented separately; this pass does not establish their root cause or waive the
+large diagnostic run's shutdown limitation. Remaining role/comparison and full
+Release 1 gates are still required. The first full-chain attempt on this candidate
+passes Create Warehouse 15/15 but stops at Receiving's packaged Confirm Writes
+callback with `0x80020009` (live 14 PASS / 1 harness FAIL; chain 5 PASS / 1 harness
+FAIL). Source/package pins and three restored reports are verified; an empty
+Excel instance requires assisted normal Quit with recovered files retained.
+No matching Application failure event is present. Root cause remains unproven;
+this attempt supplies no release acceptance.
+The focused owner regression on the same frozen candidate passes 460/460 with
+all preceding checks and 23 accepted images, five instrumented compiles, bounded
+resource samples, immediate unassisted closure and zero Application failure
+events (20:29:00--20:39:20 UTC). Its preceding 453 PASS / 7 capture FAIL attempt
+is preserved. The harness now uses its existing ownership-checked activation
+helper for Boxing and General Settings captures; package behavior is unchanged.
+The full-chain retry passes 32/32 chain, 48/48 live-role and 15/15 Create Warehouse
+checks with prior identities, all pins and three report restorations verified.
+Clean shutdown remains unaccepted: Excel reports a `combase.dll` access violation
+and `OFFICE_MODULE_VERSION_MISMATCH` during the end of the run. The final empty
+recovery instance requires normal Quit and explicit retention of recovered files.
+The strict event audit fails; the separate behavioral audit records no full
+release acceptance. Root cause is unresolved; do not silently waive the failure.
+The separate Admin UOM regression passes 228/228 with all preceding GREENs,
+eleven accepted images, immediate unassisted closure, unchanged pins and zero
+Application failure events (20:47:48--20:50:32 UTC). Remaining broader gates
+and resolution of the clean-chain shutdown limitation are still required.
+A temporary lifecycle-traced chain again passes 32/48/15 but records the shutdown
+failure in the reconciliation instance, after an additional externally guarded
+Quit. This correlation is not causal proof. Preserve both failed shutdown audits;
+any further diagnostic must observe that instance passively after its original
+Quit. The last recovery-retention image is unpainted, so its receipt records
+requested retention rather than visually verified retention. Source/package pins
+and all three report restorations pass; clean full-chain acceptance remains open.
+The broader Boxing/Shipping attempt stops at 1,681 PASS / 8 FAIL: seven known D8
+failures plus a capture-harness exception, leaving 26 baseline checks unreached.
+One of twenty images is rejected for a DPI-misframed region. A new independent
+native capture-geometry test exposes 320x160 output where physical bounds require
+480x240 (3 PASS / 1 FAIL); scoped thread DPI handling then passes 4/4. Packages
+are unchanged. Windows input-desktop access is separately denied with error 5;
+visible reruns await restored access. This does not establish broader acceptance.
+An older-policy test-envelope mistake is corrected
+without changing the existing fail-closed policy reader. Exact evidence and
+preserved failed attempts are recorded in
+`tests/integration/plan022_slice4be_settings_editor_activity_results.md`.
 The preceding map correction's regression/visible gates are verified. Its frozen
 candidate is the next observation test's predecessor; its five added evaluator
 mappings introduce no Settings observations.
@@ -6882,8 +6957,8 @@ storage, exact publication, expectation choices, unknown columns and original
 record bytes. Do not infer effects by parsing reports or Boolean success.
 
 Expected runtime files are cAdminTrackingPolicy, cAdminEventDetail,
-cAdminActionPathPreference, frmEventTrackingSettings, a bounded Admin action
-helper, the Core catalog/observation validator and explicit owner outcome
+cAdminActionPathPreference, frmEventTrackingSettings, bounded typed action
+dispatchers in those existing classes/forms, the Core catalog/observation validator and explicit owner outcome
 boundaries in Tracking Policy, Detail Profile and personal preference services.
 Use primitive or serialized cross-package contracts and existing packaging;
 Core stays headless. Add focused packaged probe/test helpers without changing
@@ -6893,6 +6968,18 @@ static maintenance limits, prior GREEN regressions, live-role/full-chain gates
 and synchronized result records before committing the completed runtime step.
 The normative refinement inherits approved D18; it does not approve D8-A,
 Event Detail unlocking, carrier authority changes or training-transfer design.
+
+**Reviewed bounded maintenance exception for these 26 adapters:** Their one-line
+actual callbacks pass different immutable ControlIds to a typed dispatcher. The
+scanner removes string literals and therefore reports one additional duplicate
+group (193 versus 192). Retain the required event bindings; this exception covers
+only that group and does not relax existing oversized-module limits or permit
+duplicated authority logic. The four duplicated context helpers are removed.
+The added vocabulary and dispatch behavior account for one module, nine
+procedures and 326 lines; the explicit terminal map adds 12 more lines. Final
+totals are 250 components, 6,045 procedures and 132,893 lines (+338), with
+Application.Run counts unchanged at 9 literal/45 unresolved. All three evidence
+schemas and 28 oversized-module limits pass; packaged regressions remain required.
 
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption

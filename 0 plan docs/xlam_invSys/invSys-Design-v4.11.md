@@ -998,7 +998,19 @@ business rule. UOM selection, text entry exclusions and other Admin controls
 remain separately accounted for; these three commands are not comprehensive
 Admin acceptance.
 
-**4be.1 Settings editor observation refinement (specified; implementation pending):**
+**4be.1 Settings editor observation refinement (isolated observation checkpoint; completion pending):**
+The diagnostic candidate passes 780/780 after 27 expected failures, retaining
+all 450 observation checks. That run has an unresolved shutdown limitation.
+Separate Settings (202/202), owner (460/460) and UOM (228/228) regressions retain
+their prior GREENs, accepted images and immediate unassisted final closure.
+The full-chain retry passes 32/32, live-role 48/48 and Create Warehouse 15/15,
+but its strict audit fails on Excel shutdown error events. The broader
+Boxing/Shipping run is incomplete after a capture-harness failure. Its DPI
+geometry correction passes 4/4 as harness evidence only; visible packaged
+reruns await input-desktop access. Comprehensive coverage and clean release
+acceptance remain pending. Plan 022 and its referenced test record preserve the
+exact results, failed attempts and limitations; the following contract remains
+normative and unchanged by this checkpoint.
 The next discovered coverage group comprises the ten deliberate Tracking editor
 actions, eight Event Detail editor actions, and four personal-preference actions
 on each of the Admin and Operations surfaces. Catalog 11 preserves every catalog
