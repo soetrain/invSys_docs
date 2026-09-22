@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.182 (paired How-To/Diagnostic focused GREEN)
+**Version:** 1.183 (paired visible attempt retained; acceptance pending)
 
 **4be.5 controls; isolated candidate, acceptance pending:** Action Paths `btnViewActionPath`,
 **View guide and run**, opens reusable Operations `frmActionPathView` for the
@@ -26,6 +26,14 @@ broader acceptance remain pending. Static duplicates/dynamic calls and all
 28 preceding module-size limits hold. The library's compact
 section label reads **Observed controls / Saved result** beside the new entry;
 the original evidence and saved-result panes retain their separate meanings.
+
+The first expanded visible attempt retains all 243 focused identities with
+272 PASS / one harness failure after missing-step captures. Excel rejects a generic
+control call; cleanup receives `0x800AC472`. The exact control/action is unproven.
+Excel closes normally, with zero matching Application events and unchanged
+candidate hashes. All 30 captures are retained, without claiming that every image
+was reviewed. Safe stage diagnostics are added for the retry. This attempt is
+neither product RED nor a completed visible gate.
 
 **Guide-to-run controls (isolated candidate; acceptance pending):** D18 names
 `lblGuideObservedRun` and `btnUseGuideForRun`, **Use for selected run**, in the

@@ -6241,6 +6241,14 @@ Static duplicates/dynamic calls and all 28 prior module-size limits hold. These
 gates do not establish visible or full presentation acceptance. See
 [paired-presentation test entry](../../invSys_fork/tests/integration/plan022_slice4be_guide_presentation_results.md).
 
+The first expanded paired visible run retains all 243 focused identities with
+272 PASS / one harness failure after the missing-step scenario. A generic control
+call is rejected by Excel; cleanup receives `0x800AC472`. Excel closes normally,
+with zero matching Application events and unchanged candidate hashes. The exact
+control/action was not recorded. Preserve the failed run; add safe harness-stage
+diagnostics for the retry without replaying a potentially mutating action. This
+does not establish product RED or visible acceptance.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,
