@@ -6590,6 +6590,24 @@ packages and no matching Application errors. See the curation integration record
 for exact roots/times. Tighten private Core validation under existing D18, then
 build a new isolated candidate and require all 71 GREEN plus supporting gates.
 
+The isolated integrity candidate now passes **71/71**, all five packaged builds,
+compile and cold start. Only private Core source validation changes among 242
+compiled components. Twelve current layout captures are directly reviewed and
+hashed; normal unassisted closure, source/package preservation and no matching
+Application errors are verified. Maintenance retains 249 components, 6,035
+procedures, dynamic calls 9/45, duplicate groups 192 and all 28 size limits;
+source lines increase by two to 132,492. Full supporting regressions remain open.
+
+**Harness readiness D13 experiment:** The repeated COM interruptions do not prove
+a product defect or authorize replaying commands. Protect an opt-in, bounded
+read-only Application.Ready observation before the first macro dispatch. Only a
+typed True permits dispatch; False/unavailable can be sampled up to eight times,
+and unsupported types or exhaustion stop before any action. A dispatch failure
+still executes the action once. Test the actual shared Run boundary offline for
+ordering, bounds, flag-off behavior and exclusion of field values from traces
+before adding the guard. Readiness does not guarantee later dispatch or establish
+the interruption cause. No architecture, product control or XLAM change is involved.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,

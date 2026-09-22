@@ -1,6 +1,14 @@
 # invSys Form Controls v1
 
-**Version:** 1.205 (direct-curation focused and published round-trip GREEN)
+**Version:** 1.206 (direct-curation source-integrity GREEN)
+
+The source-integrity candidate now passes **71/71** focused checks after four
+behavioral RED failures. Private Core rejects malformed original RecordId and
+attempt/result catalog/package/build disagreement while retaining valid neighbors.
+All five packages build/compile; twelve current layout captures are reviewed.
+Normal closure, unchanged source/package pins and zero matching Application
+errors are verified. Existing size/dynamic-call/duplicate limits pass. No control
+or schema changes. Supporting regressions and human acceptance remain open.
 
 Direct tracked-action curation now passes **55/55** focused checks and **63/63**
 expanded integration checks on the corrected isolated candidate. All five
