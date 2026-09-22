@@ -6280,6 +6280,15 @@ shows Conclusion observed, and the ordered expectation editor and its three size
 remain readable. The full chain is next, followed serially by the paired visible
 diagnostic. Neither pending gate is accepted by this regression result.
 
+The paired candidate's full chain subsequently passes 32/32, ordered live roles
+48/48 and Create Warehouse 15/15, retaining all preceding chain/live identities.
+All three tracked generated reports are restored byte-for-byte; zero matching
+Application events and unchanged frozen packages are verified. Cleanup is assisted:
+native-owner inspection proves an integer workbook count of zero before normal
+Quit, then the observed recovery prompt's retention option is selected, reviewed
+and confirmed. No forced termination or recovery deletion occurs. This is not an
+unattended shutdown claim or acceptance of the remaining paired visible/human gates.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,

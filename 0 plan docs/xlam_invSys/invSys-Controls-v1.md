@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.186 (paired candidate evaluation regression verified)
+**Version:** 1.187 (paired candidate chain verified with assisted cleanup)
 
 **4be.5 controls; isolated candidate, acceptance pending:** Action Paths `btnViewActionPath`,
 **View guide and run**, opens reusable Operations `frmActionPathView` for the
@@ -61,6 +61,14 @@ partial publication remain Awaiting; only full application shows Conclusion
 observed. The expectation editor fits minimum/default/large layouts and displays
 ordered outcomes, retry choices and explicit conclusion selection correctly.
 This does not close the paired visible gate or full Release 1 chain.
+
+The paired candidate subsequently passes full chain 32/32, ordered live roles
+48/48 and Create Warehouse 15/15, retaining preceding identities and restoring
+all three tracked generated reports byte-for-byte. Zero matching Application
+events and unchanged frozen packages are verified. Cleanup required verified
+empty-instance normal Quit and reviewed recovery retention, without forced
+termination or deletion. Record this as assisted cleanup; paired visible acceptance,
+human UAT and full Slice 4be completion remain open.
 
 **Guide-to-run controls (isolated candidate; acceptance pending):** D18 names
 `lblGuideObservedRun` and `btnUseGuideForRun`, **Use for selected run**, in the
