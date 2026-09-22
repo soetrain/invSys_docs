@@ -6209,6 +6209,11 @@ Field values are unchanged and the original lock is restored; the run retains
 navigation. Do not implement that property change until approved. After approval,
 add a native-scroll behavioral RED and prove read-only values/source preservation
 in GREEN; the current geometry checks alone do not protect interaction.
+The native-input RED is now **42 PASS / one expected movement FAIL**, with all 41
+prior checks passing, unchanged displayed values, normal closure and zero matching
+Application events. Its image detector was first validated against the reviewed
+stationary/moving comparison. The proposal still awaits approval; do not infer
+approval from the completed RED or the separate paired-view GREEN.
 
 **Next 4be.5 D13 entry -- paired How-To/Diagnostic views:** D18 now names an
 additional Operations **View guide and run** surface for the explicitly staged

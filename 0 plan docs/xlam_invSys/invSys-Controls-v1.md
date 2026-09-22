@@ -108,6 +108,10 @@ would allow `lstEventFields.Locked=False` for selection/scrolling while retainin
 non-editable field values. It is **not approved or implemented**; the current
 runtime lock requirement still governs. Native-scroll RED/GREEN and source-byte
 preservation are required if the proposal is approved.
+The protecting native-input RED now passes 42 checks and fails only actual
+horizontal movement, retaining every previous 41-check identity. Field values
+remain unchanged, Excel closes normally and the native event audit is empty.
+The locked runtime remains unchanged while approval is pending.
 
 **Preceding expectation-candidate evidence:** The visible guide gate passes
 **177/177**, preserving all 166 focused identities and adding nine directly
