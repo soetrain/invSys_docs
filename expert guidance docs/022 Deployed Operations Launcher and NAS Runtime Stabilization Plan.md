@@ -6663,6 +6663,26 @@ matching Application errors are verified. One bounded capture activation retry
 replays no workflow action. The full Release 1 chain runs only after this verified
 gate; it is not yet claimed complete.
 
+Full-chain verification now retains **32/32**, live-role **48/48** and Create
+Warehouse **15/15**, with package/source pins unchanged, three tracked reports
+restored byte-for-byte and zero matching Application errors. Cleanup requires
+assistance: after fresh exact-instance checks prove zero workbooks, normal Quit
+is requested and the inspected recovery prompt is confirmed with **retain files**
+selected. No forced termination, workbook write or recovery-file deletion occurs.
+This is not unattended cleanup; the recovery instance's cause is unproven.
+All gates are verified before extending the curation test for native layouts.
+Comprehensive coverage, transfer and human acceptance remain open.
+
+The native-layout coverage extension now passes **77/77**, preserving all prior
+**71** focused checks and adding six maximize/restore checks for the library,
+action picker and guide editor. All **18** current captures are directly reviewed
+and hashed, with native maximized images inspected at original resolution.
+The same frozen candidate and runtime sources remain unchanged; Excel closes
+normally without assistance after the bounded closure wait, and no matching
+Application errors occur. This is test-only coverage of existing D18 behavior;
+no artificial RED or new runtime contract is introduced. Existing build, compile,
+static and complete supporting results apply to those identical package hashes.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,

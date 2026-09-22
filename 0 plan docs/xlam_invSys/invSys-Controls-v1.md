@@ -1,35 +1,46 @@
 # invSys Form Controls v1
 
-**Version:** 1.208 (direct-curation supporting regressions verified)
+**Version:** 1.209 (direct-curation native layouts and release-chain evidence)
+
+Direct-curation coverage now passes **77/77**, retaining all prior 71 checks and
+adding native maximize/restore for Action Paths, Choose tracked actions and
+Action Path guide. All **18** captures are directly reviewed and hashed. The
+unchanged frozen candidate closes normally without assistance, preserves source
+and package pins, and has no matching Application errors. This is test coverage
+of existing behavior; no control or runtime contract changes.
 
 The same integrity candidate retains preference restart **27/27**, Viewer
 **94/94**, Boxing/Shipping **1,707 PASS plus seven pending D8-A failures**, and
 evaluation **376/376**. Their **47** current captures are directly reviewed and
 hashed. All gates close Excel normally without assistance, preserve source and
 package pins, and have no matching Application errors. D8-A remains unapproved;
-no known failure is reclassified as GREEN. Full-chain validation is now running.
+no known failure is reclassified as GREEN. Full-chain **32/32**, live-role
+**48/48** and Create Warehouse **15/15** are also verified with unchanged
+source/package pins and restored tracked reports. That chain requires assisted
+normal cleanup of a verified empty Excel instance and retention of recovery
+files; unattended cleanup is not claimed.
 
 The integrity candidate now retains the complete **351/351** guide regression,
 including all 46 published-edit checks. All 52 current captures are directly
 reviewed and hashed. How-To/Diagnostic/Compare, saved preferences, invalidation,
 incomplete/failed conclusions and immutable editing remain protected. Excel
 closes normally; running sources/packages remain unchanged and no matching
-Application errors occur. Remaining supporting release gates are running;
+Application errors occur. Supporting release gates are recorded above;
 comprehensive coverage, transfer and human acceptance remain open.
 
-Native maximize/restore is verified for the paired view. Add equivalent native
-window checks for Action Paths, Choose tracked actions and Action Path guide,
-whose direct-curation captures currently cover minimum/default/larger/restored
-dimensions. This is a pending test-coverage extension on the unchanged candidate,
-not a discovered product failure or a new control contract.
+Native maximize/restore is verified for the paired view and all three direct
+curation surfaces, alongside their minimum/default/larger/restored dimensions.
+Comprehensive control coverage, training transfer, visible paired Operations-task
+evidence and human acceptance remain open.
 
-The source-integrity candidate now passes **71/71** focused checks after four
+Before the native-layout extension, the source-integrity candidate passes **71/71** focused checks after four
 behavioral RED failures. Private Core rejects malformed original RecordId and
 attempt/result catalog/package/build disagreement while retaining valid neighbors.
 All five packages build/compile; twelve current layout captures are reviewed.
 Normal closure, unchanged source/package pins and zero matching Application
 errors are verified. Existing size/dynamic-call/duplicate limits pass. No control
-or schema changes. Supporting regressions and human acceptance remain open.
+or schema changes. Supporting regressions are recorded above; full Slice 4be and
+human acceptance remain open.
 
 Direct tracked-action curation now passes **55/55** focused checks and **63/63**
 expanded integration checks on the corrected isolated candidate. All five
