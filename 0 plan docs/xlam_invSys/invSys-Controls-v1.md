@@ -1,6 +1,14 @@
 # invSys Form Controls v1
 
-**Version:** 1.216 (UOM/Boxing diagnostic mapping and applicable isolated gates verified)
+**Version:** 1.217 (Settings diagnostic terminal facts specified; implementation pending)
+
+The 26 pending Settings controls now have an explicit normative diagnostic
+terminal-fact table. A completed staging/read/selection action retains its exact
+STAGED/REFRESHED/SELECTED observation and never asserts saved settings. The three
+save controls use their verified persistence outcomes; Tracking Policy Save
+remains interrupted and supplies no positive terminal fact. Actual-handler and
+editor/Evaluate RED/GREEN remain required. This clarification inherits D18's
+existing owner rule and grants no new permission or persistence authority.
 
 The five UOM/Boxing diagnostic completion mappings now pass **460/460** packaged
 checks after **eight expected RED failures**. The recorded owner facts, actual
@@ -2195,7 +2203,11 @@ All records use fixed captions and empty source references, never selected value
 Each handler guards its captured context before work. REQUESTED precedes owning
 validation/permission checks when collection is eligible. Older saved policies
 do not enable these controls implicitly. Save outcomes come from explicit owner
-branches; no report parsing, completion from staging, or clean-rollback inference.
+branches; no report parsing, COMPLETED save outcome from staging, or clean-rollback inference.
+The normative Settings terminal-fact table separately defines completion of each
+explicit staging/read/selection action; it never substitutes that action for
+Save, alters the original outcome or asserts Domain application. All 26 controls
+remain pending packaged evidence.
 Successful Tracking Policy save preserves its existing version-change recording
 interruption. Disabled/unavailable tracking cannot block or retry the owning
 command. Initialization, direct services, programmatic selections, preview and

@@ -6860,6 +6860,16 @@ callback with behavioral RED on the frozen owner-completion predecessor before e
 runtime. Missing eligible observations and held-editor context redirection are
 the expected behavioral failures; fixture, compile and capture failures are not RED.
 
+Use D18's explicit Settings terminal-fact table for the same actual recorded
+actions and packaged expectation editor/Evaluate. The three persisted-save
+controls, four reads, three selections and fifteen staged actions have only their
+listed positive owner outcomes; Tracking Policy Save has none. Do not confuse a
+CommandCompleted diagnostic conclusion for an explicit staged action with a
+COMPLETED save observation. Staging remains unsaved, cannot satisfy a required
+Save step and cannot prove Domain application. The controls catalog's former
+shorthand "no completion from staging" is clarified to the normative outcome-code
+rule; no architecture exception or generic success classifier is introduced.
+
 Verify owner effects independently of logging: complete append-only profile
 save, unchanged configuration for staging/reads, isolated local preference save,
 and successful policy save interrupting recording without a fabricated ordinary

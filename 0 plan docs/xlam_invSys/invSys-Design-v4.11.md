@@ -1045,6 +1045,35 @@ wording. Do not report COMPLETED merely because rendering or staging succeeded.
 Preserve the owning status and any optional-tracking notice independently;
 logging failure cannot block, repeat or silently alter an authorized action.
 
+**Explicit diagnostic terminal facts for these Settings controls:** Under D18's
+registered-owner CommandCompleted rule, the following exact mappings describe
+completion of the named action. They do not rename its recorded outcome or turn
+an unsaved edit into persisted settings. This is the same distinction used by
+existing explicit Receiving/Shipping STAGED terminal mappings.
+
+| Exact Settings controls | Positive CommandCompleted outcome |
+| --- | --- |
+| ADMIN_DETAIL_SAVE | COMPLETED |
+| ADMIN_PATH_PREFERENCE_SAVE, VIEWER_PATH_PREFERENCE_SAVE | COMPLETED or UNCHANGED |
+| ADMIN_TRACKING_RELOAD, ADMIN_DETAIL_RELOAD, ADMIN_PATH_PREFERENCE_RELOAD, VIEWER_PATH_PREFERENCE_RELOAD | REFRESHED |
+| ADMIN_TRACKING_SELECT_CONTROL, ADMIN_DETAIL_SELECT_FAMILY, ADMIN_DETAIL_SELECT_FIELD | SELECTED |
+| ADMIN_TRACKING_CAPTURE, ADMIN_TRACKING_ADMIN_VISIBLE, ADMIN_TRACKING_DEFAULT_VIEW, ADMIN_TRACKING_COLLECT, ADMIN_TRACKING_VISIBLE, ADMIN_TRACKING_SEQUENCE, ADMIN_TRACKING_RESET | STAGED |
+| ADMIN_DETAIL_SHOW_FIELD, ADMIN_DETAIL_MOVE_UP, ADMIN_DETAIL_MOVE_DOWN, ADMIN_DETAIL_RESET | STAGED |
+| ADMIN_PATH_PREFERENCE_SELECT, ADMIN_PATH_PREFERENCE_RESET, VIEWER_PATH_PREFERENCE_SELECT, VIEWER_PATH_PREFERENCE_RESET | STAGED |
+| ADMIN_TRACKING_SAVE | None; policy-change interruption remains binding |
+
+REQUESTED, DENIED, REJECTED and FAILED never supply a positive terminal fact.
+The explicit control, owner and registered outcome must match; no generic
+STAGED/SELECTED/REFRESHED classifier is permitted. A positive staging/selection/
+read conclusion proves only that action in a complete eligible stopped run;
+its fixed observation still identifies unsaved staging or a read, with saved
+settings Unchanged. It never substitutes for a required Save step. Keep the
+visible **Command completed; Domain application not asserted** caveat and all
+capture, context, visibility and immutable-evidence requirements. These controls
+have empty source references and cannot establish SourceEventsApplied. This
+clarifies discovered controls under the approved semantic-inheritance rule;
+it changes no existing control, persistence boundary or permission.
+
 **Policy-save interruption is retained:** The existing successful Tracking
 Policy save creates a new version and interrupts the active recording with
 POLICY_CHANGED. An eligible pre-save REQUESTED record remains under its original
