@@ -1,16 +1,20 @@
 # invSys Form Controls v1
 
-**Version:** 1.193 (published-guide edit RED 17 PASS / 34 expected FAIL)
+**Version:** 1.195 (published-guide edit and notices GREEN 58/58)
 
-**Published-guide editing remains unimplemented:** Its focused packaged gate now
-establishes **17 PASS / 34 expected FAIL**, with all 39 edit assertions reached and
-no harness failure. Twelve compile/fixture checks and five preservation/read checks
-pass. Excel closes normally; zero matching Application events and unchanged running
-sources/candidate are verified. This is the required pre-implementation RED for
-the specified Edit guide entry and exact-version draft/revision behavior. An earlier
-broad attempt was interrupted by COM before reaching edit assertions; it is retained
-as harness evidence, not product RED. Runtime GREEN, visible and broader acceptance
-remain pending; neither separate architecture proposal is approved.
+**Published-guide editing and notices have isolated GREEN:** The initial **17 PASS /
+34 expected FAIL** becomes **51/51**. Visible review then finds a blank draft notice;
+the follow-up establishes **55 PASS / three expected notice FAIL** before correction.
+The corrected candidate now passes **58/58**, including all 46 edit assertions.
+Five packages compile; normal closure, zero matching Application events and unchanged
+running sources/candidate are verified. Ten captures were directly reviewed across
+four reader/editor sizes, reopen and conflict. The normal draft notice is retained;
+the reader status sits beneath provenance and appends Core's explicit edit reason
+while preserving the read notice. Minimum/default sizes and controls stay the same.
+The reviewed formatter consolidation restores duplicate groups to 192, dynamic calls
+stay 9/45, and all 28 prior module-size limits hold. Broader acceptance remains
+pending; neither separate architecture proposal is approved. Earlier COM interruption
+remains harness evidence.
 
 **Paired preference restart verified on the isolated candidate:** The focused
 actual-handler gate passes **27/27**, including all 15 restart checks. Normal
@@ -35,7 +39,7 @@ hashing after normal closure and reopens Operations without Admin. This suppleme
 the unchanged full regression evidence; it does not replace it or approve either
 pending architecture proposal.
 
-**4be.5 discovered control; specified, not implemented:** Published guides
+**4be.5 discovered control; isolated implementation, acceptance pending:** Published guides
 `btnEditPublishedGuide`, **Edit guide**, opens the existing Action Path guide editor
 for the exact selected ID/version/hash with ACTION_PATH_MAINT. No observed-run
 selection is required or substituted. Reopen restores authored fields, stable
@@ -46,8 +50,8 @@ permission/policy/integrity and captured selection/context are checked in Core;
 restricted content is never silently dropped to save. Closing/changing the owning
 reader invalidates its draft and child expectation editor. Existing read/Use access,
 advisory boundaries and default/minimum layouts remain. The normative D18
-published-guide editing refinement and Plan 022 govern the pending packaged
-missing-entry RED, implementation, layout and regression evidence. This records
+published-guide editing refinement and Plan 022 govern the recorded entry RED,
+focused GREEN, reviewed layouts and pending broader regression evidence. This records
 no runtime or human acceptance and does not approve either pending proposal.
 
 **4be.5 controls; isolated candidate, acceptance pending:** Action Paths `btnViewActionPath`,

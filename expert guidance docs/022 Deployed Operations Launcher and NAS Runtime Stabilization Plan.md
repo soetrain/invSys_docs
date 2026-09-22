@@ -6375,6 +6375,41 @@ records both attempts and exact commands/reports. Implement the specified entry,
 captured published draft and immutable revision only after this recorded RED;
 focused GREEN and all applicable completion gates remain required.
 
+The first isolated implementation now passes **51/51** with all original focused
+RED identities retained. Five packaged projects compile; normal Excel closure,
+zero matching Application events and unchanged running sources/candidate are
+verified. Six editor captures were directly reviewed across four sizes, reopen and
+conflict. The normal draft notice is blank after restored fields load. Extend the
+same packaged test before fixes to protect that notice, explicit disabled-edit
+reasons for restricted/denied entry, and four reader sizes. This enforces the
+existing D18 contract, not a new architecture. The 51 prior passes remain required.
+Static evidence also identifies one new duplicated tag formatter (193 groups
+versus 192); its two bodies/callers are reviewed for shared consolidation. Preserve
+all other candidates. Final focused/visible GREEN, maintenance ratchets, broader
+regressions, live roles and full chain remain open; first candidate is frozen at
+`deploy/validation-published-guide-edit`. Exact evidence is in the linked edit record.
+
+The notice extension now verifies **55 PASS / three expected FAIL**, including
+all original 51 GREENs and four reader layouts, with normal closure and no matching
+Application errors. Correct only the draft notice lost during field restoration
+and missing Core edit reasons. Position the existing reader status below provenance
+to retain its normal read notice and append the reason without shrinking minimum
+supported form sizes. Consolidate the reviewed tag formatter and then build a new
+isolated candidate; preserve the first candidate and this behavioral RED.
+
+The corrected isolated candidate, `deploy/validation-published-guide-edit-notices`,
+now passes **58/58**, retaining all notice-RED identities, with all five packages
+built/compiled and ten individually reviewed reader/editor/reopen/conflict captures.
+Normal closure, zero matching Application events and unchanged candidate/test
+sources are verified. The reviewed Core formatter consolidation restores duplicate
+groups to 192; dynamic calls remain 9/45 and all 28 prior module-size limits hold.
+Compiled comparison identifies only the seven intended existing components and two
+new helpers; 55 frozen package hashes are preserved. The broader visible gate must
+retain the preceding 305 identities plus 46 edit assertions on this candidate.
+Relevant role regressions, fresh-process preference, live roles, full chain and
+human acceptance remain pending. This is a recoverable focused checkpoint, not
+completion of Slice 4be or approval of either separate architecture proposal.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,
