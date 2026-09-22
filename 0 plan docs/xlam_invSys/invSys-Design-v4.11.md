@@ -954,6 +954,50 @@ owner-fact and workbook-preservation rules, not new ControlIds, outcomes, catalo
 versions, permissions or authority stores. Shipping activity/source-reference
 definitions and remaining control coverage require their own protecting evidence.
 
+**4be.1 Admin UOM command observation refinement (implementation pending):**
+Under D18's comprehensive Admin coverage, actual-entry and owner-fact rules,
+catalog 10 adds the three existing General > Recipe UOM Catalog commands below.
+All use OwnerId CORE_CONFIGURATION, SourceRole Admin, Class Command, existing
+ADMIN_MAINT eligibility, Surface **Admin > Settings > Recipe UOM Catalog**, and
+EventCode prefix ControlId followed by an underscore. Catalogs 1-9 retain their
+original definitions; an older saved policy does not implicitly enable these
+new controls. Registration does not claim packaged implementation or acceptance.
+
+| ControlId | Fixed caption | Existing frmAdminSettings handler |
+|---|---|---|
+| ADMIN_UOM_ADD | Add | mBtnUomAdd_Click |
+| ADMIN_UOM_REMOVE | Remove | mBtnUomRemove_Click |
+| ADMIN_UOM_RESET | Reset | mBtnUomReset_Click |
+
+Each actual handler validates its captured session/warehouse/station before
+observation or command dispatch. Valid entry observes REQUESTED/Info/Unknown
+before validation, authorization or Reset confirmation. Existing Remove
+no-selection validation and existing capability requirements remain. Reset keeps
+its existing Yes/No question, revalidates captured context after confirmation,
+and never invokes the owner when cancelled or stale. Programmatic list loading,
+rendering, UOM service calls and catalog reads create no control observations.
+
+COMPLETED/Info/Changed requires Core's confirmed saved change.
+UNCHANGED/Info/Unchanged requires the owning UOM/configuration boundary to confirm
+no change, including an already-present Add; Boolean success alone cannot select
+COMPLETED. REJECTED/Warning/Unchanged means confirmed pre-write validation failure;
+DENIED/Blocked/Unchanged means authorization was not established before mutation.
+Only Reset supports CANCELLED/Notice/Unchanged for the actual No response.
+FAILED/Error/Unknown preserves uncertainty after an exception or unverified save;
+it never claims rollback. These actions have empty SourceEventRefs: configuration
+changes are not Inventory event submissions. Fixed explanations contain no UOM
+value, selector content, credential, path or backend procedure name.
+
+Admin retains UI/confirmation and observation ownership. Core modUomSettings
+propagates explicit sanitized facts from the existing modConfigCommands writer;
+Core/Domain remain headless and the existing public service argument order stays
+compatible. Optional tracking failure preserves the authorized command and its
+normal result, adds Tracking unavailable, and never retries the command. This
+is semantic inheritance of D5/D18, not a new capability, authority store or UOM
+business rule. UOM selection, text entry exclusions and other Admin controls
+remain separately accounted for; these three commands are not comprehensive
+Admin acceptance.
+
 **4be.1 Boxing Make/Unbox activity refinement:** D18 comprehensive control coverage
 registers two existing Box Maker commands in catalog 9 (isolated implementation
 verified; broader acceptance remains open):

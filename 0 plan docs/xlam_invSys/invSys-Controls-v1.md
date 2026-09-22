@@ -1,6 +1,18 @@
 # invSys Form Controls v1
 
-**Version:** 1.209 (direct-curation native layouts and release-chain evidence)
+**Version:** 1.210 (Operations guide comparison evidence; pending Admin UOM coverage)
+
+The real Receiving task now passes **421/421** packaged comparison/evaluator
+checks, retaining all 376 prior checks and adding 45. How-To, Diagnostic and
+Compare both show the same explicitly paired guide/run across pending, partial
+and fully applied publication; only full application concludes. All 31 captures
+are directly reviewed and hashed. Excel closes normally without assistance;
+source/package pins and static limits remain unchanged, with no matching
+Application errors. The same frozen candidate retains the release evidence below.
+The earlier 242-pass readiness interruption remains separately recorded as an
+incomplete run, not product RED. Test-only readiness coverage is 44/44 plus
+78/78 privacy/replay checks; the successful live run needs only first-read Ready.
+This is automated visible evidence, not human acceptance.
 
 Direct-curation coverage now passes **77/77**, retaining all prior 71 checks and
 adding native maximize/restore for Action Paths, Choose tracked actions and
@@ -30,8 +42,12 @@ comprehensive coverage, transfer and human acceptance remain open.
 
 Native maximize/restore is verified for the paired view and all three direct
 curation surfaces, alongside their minimum/default/larger/restored dimensions.
-Comprehensive control coverage, training transfer, visible paired Operations-task
-evidence and human acceptance remain open.
+Comprehensive control coverage, training transfer and human acceptance remain open.
+
+The verified Operations comparison uses the existing controls and an explicit
+maintenance grant in its generated author fixture; ordinary Viewer permissions
+remain unchanged. The next runtime coverage step is the existing Admin UOM
+Add/Remove/Reset commands, specified under D18 and marked pending in the catalog.
 
 Before the native-layout extension, the source-integrity candidate passes **71/71** focused checks after four
 behavioral RED failures. Private Core rejects malformed original RecordId and
@@ -2036,6 +2052,9 @@ See [first activity RED](../../../invSys_fork/tests/integration/plan022_slice4be
 |---|---|---|---|
 | ADMIN_SETTINGS_SAVE_VALUE | Admin Settings Save Value; `frmAdminSettings.mBtnSaveConfig_Click`; captured warehouse/station and ADMIN_MAINT | CORE_CONFIGURATION; CONFIG_SAVE_REQUESTED has Unknown effect; CONFIG_SAVE_COMPLETED has Changed only when a changed value was confirmed saved | First 4be.1 packaged test reuses the actual successful D5 form action; proves shared evidence without moving write ownership into the recorder. |
 | PRODUCTION_UOM_RETRIEVE | Production Retrieve UOM Catalog; `frmProduction.mBtnUomCatalogRetrieve_Click`; validated PROD_POST route, ADMIN_MAINT compatibility | CORE_CONFIGURATION; UOM_RETRIEVE_REQUESTED has Unknown effect; UOM_RETRIEVE_COMPLETED has Changed for a confirmed version increment; UOM_RETRIEVE_DENIED has Unchanged/Blocked after pre-write denial | First 4be.1 test exercises successful and denied real form actions, preserves staging on denial and requires no user-control observation from a direct service call. |
+| ADMIN_UOM_ADD | Settings > General > Recipe UOM Catalog > `btnUomAdd` / **Add**; `frmAdminSettings.mBtnUomAdd_Click`; captured context and existing ADMIN_MAINT | CORE_CONFIGURATION; catalog 10, Command; confirmed saved change differs from already-present UNCHANGED; empty source references and no entered value | D18 discovered-control refinement; registration/instrumentation and packaged RED/GREEN pending. |
+| ADMIN_UOM_REMOVE | Same section > `btnUomRemove` / **Remove**; `frmAdminSettings.mBtnUomRemove_Click`; existing no-selection validation and ADMIN_MAINT | CORE_CONFIGURATION; catalog 10, Command; owner confirms Changed/Unchanged, validation and denial remain distinct | Implementation and packaged acceptance pending; no selected UOM in activity. |
+| ADMIN_UOM_RESET | Same section > `btnUomReset` / **Reset**; `frmAdminSettings.mBtnUomReset_Click`; existing ADMIN_MAINT and native Yes/No question | CORE_CONFIGURATION; catalog 10, Command; REQUESTED before confirmation, CANCELLED only for No, context rechecked before owner dispatch | Implementation and actual confirmation-path RED/GREEN pending; registration does not accept behavior. |
 
 These are the initial test cases, not a claim of comprehensive coverage. The
 full reachable Operations/Admin catalog and remaining result branches are still

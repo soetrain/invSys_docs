@@ -6683,6 +6683,64 @@ Application errors occur. This is test-only coverage of existing D18 behavior;
 no artificial RED or new runtime contract is introduced. Existing build, compile,
 static and complete supporting results apply to those identical package hashes.
 
+**Verified test-only Operations comparison gate:** D18 already requires visible
+How-To/Diagnostic comparison for both an Operations task and an Admin task,
+including incomplete evidence. The opt-in route extends the real Receiving
+evaluator fixture with an explicit generated-author maintenance grant, packaged
+guide creation/save before owner application, authored four-step intent, and
+explicit guide/run selection. Separate Evaluate shows Awaiting at zero/three
+applied events and Concluded only at four, preserving exact source references
+and keys. Each stage captures How-To, Diagnostic, Compare both and the result
+viewport, while display preserves journal/activity/config/publication bytes.
+The guide source is the explicitly selected run in this fixture; the separate
+351-check gate protects distinct source/observed recordings. The original
+analysis fixture is restored between stages and all 376 baseline checks remain.
+This changes tests/evidence using existing handlers/probes; there is no runtime,
+permission, schema or architecture contract change and no product RED is invented.
+
+The first comparison run stops at 242 PASS plus one harness failure: the optional
+eight-sample Excel readiness guard exhausts before dispatch during Partial.
+Normal closure and unchanged running sources are verified; this is not product
+RED or completion. The test harness may explicitly select 40 readiness samples
+at the existing 250 ms interval; default eight, typed readiness, bounded failure
+and single command dispatch remain unchanged. Offline actual-Run tests must
+first demonstrate late-readiness and bounded-wait RED, then GREEN. This affects
+only test scheduling, not the D18 runtime or operator contract.
+
+The fresh packaged run is **421/421**, retaining all 376 evaluator identities and
+adding exactly 45 Operations comparison checks. Root
+`957e171a8fa6454cb7994f6e857166d7`, 2026-09-22 10:34:24.4223736--11:06:16.3335952
+UTC. All 31 captures are directly reviewed/hashed. Pending and partial evidence
+remain Awaiting; all four exact applied source events permit Concluded. The
+authored pane remains unchanged; viewing/refresh never evaluates or writes
+training/business data. Normal unassisted closure, unchanged source/package
+pins, all static limits and zero matching Application errors are verified.
+Offline readiness RED 37/7 becomes 44/44 GREEN, with 78/78 existing diagnostics.
+All 1,377 live readiness samples are first-read Ready, so the live run establishes
+no cause or recovery timing for the earlier exhaustion. Existing full-chain/live
+evidence applies to these unchanged frozen packages. See the maintained guide
+curation result record and `operations-guide-presentation-extended-ready-*`.
+This closes the selected Operations comparison coverage gap, not comprehensive
+tracking, transfer, unapproved decisions or human acceptance.
+
+**Next Admin UOM coverage entry (not implemented):** Architecture v4.11 D18's
+Admin UOM refinement registers Add, Remove and Reset as discovered catalog-10
+commands. Admin retains the real form handlers and existing reset confirmation;
+Core retains configuration authority. Before implementation, exercise those
+packaged handlers on the unchanged candidate for missing-observation RED. Cover
+saved change versus already-present/no-change, validation, denial, actual Reset
+Yes/No, captured-context invalidation, policy off, unavailable tracking store,
+direct service calls producing no activity, old-catalog policy preservation,
+fixed published captions/outcomes and immutable original records. Propagate the
+existing writer's outcome through UOM services; do not infer Changed from True
+or parse human status text. Expected files are frmAdminSettings,
+modAdminSettingsAction, modUomSettings, modActivityCatalog and focused packaged
+tests. Add a small private catalog helper only if warranted by size limits.
+No runtime edit or candidate rebuild occurs during the current comparison gate.
+After meaningful RED, require focused GREEN, all five packaged build/compile
+checks, layouts, static limits, relevant current GREENs, live roles, full chain
+and visible evidence before declaring the runtime slice complete.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,
