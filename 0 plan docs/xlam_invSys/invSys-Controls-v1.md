@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.213 (Admin UOM curation/restart/Viewer regressions; broader acceptance pending)
+**Version:** 1.214 (Settings editor observation refinement specified; implementation and broader acceptance pending)
 
 The real Receiving task now passes **421/421** packaged comparison/evaluator
 checks, retaining all 376 prior checks and adding 45. How-To, Diagnostic and
@@ -2118,6 +2118,57 @@ saving.** Production says **Session or warehouse changed. Reopen Production
 before retrieving the catalog.** This enforces D18's captured-session rule;
 optional store failure still permits an otherwise authorized command.
 See [foundation candidate evidence](../../../invSys_fork/tests/integration/plan022_slice4be_activity_foundation_results.md).
+
+**Settings editor observation controls, 2026-09-22 -- specified; implementation pending:**
+Architecture v4.11 D18's Settings editor observation refinement governs these
+26 catalog-11 additions. Every row is pending actual packaged-handler RED/GREEN;
+none is accepted merely by registration. Admin Tracking and Event Detail saves
+retain CORE_CONFIGURATION/ADMIN_MAINT authority; their other actions use
+ADMIN_SETTINGS_UI and cannot write saved settings. Both personal-preference
+surfaces use CORE_PERSONAL_PREFERENCE and the existing captured signed-in context,
+without adding a service capability. Admin's form access gate remains separate.
+All records use fixed captions and empty source references, never selected values.
+
+| Stable ControlId | Fixed caption / surface | Actual callback | Class / owner fact |
+| --- | --- | --- | --- |
+| ADMIN_TRACKING_SELECT_CONTROL | Family / control; Admin > Settings > Event Tracking > Tracking | cAdminTrackingPolicy.mRows_Click | Navigation; SELECTED, saved settings unchanged |
+| ADMIN_TRACKING_CAPTURE | Capture recorded controls; same Tracking section | cAdminTrackingPolicy.mCapture_Click | Navigation; STAGED, unsaved policy only |
+| ADMIN_TRACKING_ADMIN_VISIBLE | Show optional Admin events; same section | cAdminTrackingPolicy.mAdminVisible_Click | Navigation; STAGED |
+| ADMIN_TRACKING_DEFAULT_VIEW | Warehouse default view; same section | cAdminTrackingPolicy.mView_Change | Navigation; STAGED |
+| ADMIN_TRACKING_COLLECT | Collect selected control; same section | cAdminTrackingPolicy.mCollect_Click | Navigation; STAGED |
+| ADMIN_TRACKING_VISIBLE | Visible in Viewer; same section | cAdminTrackingPolicy.mVisible_Click | Navigation; STAGED |
+| ADMIN_TRACKING_SEQUENCE | Eligible for recorded sequence; same section | cAdminTrackingPolicy.mSequence_Click | Navigation; STAGED |
+| ADMIN_TRACKING_SAVE | Save Tracking Policy; same section | cAdminTrackingPolicy.mSave_Click | Command; Core save result remains separate from POLICY_CHANGED interruption; no fabricated COMPLETED activity |
+| ADMIN_TRACKING_RESET | Reset to Default; same section | cAdminTrackingPolicy.mReset_Click | Command; STAGED, no save |
+| ADMIN_TRACKING_RELOAD | Reload; same section | cAdminTrackingPolicy.mReload_Click | Command; REFRESHED, read only |
+| ADMIN_DETAIL_SELECT_FAMILY | Event family; Admin > Settings > Event Tracking > Event Detail | cAdminEventDetail.mFamily_Change | Navigation; SELECTED |
+| ADMIN_DETAIL_SELECT_FIELD | Field; same Event Detail section | cAdminEventDetail.mRows_Change | Navigation; SELECTED |
+| ADMIN_DETAIL_SHOW_FIELD | Show selected field; same section | cAdminEventDetail.mEnabled_Click | Navigation; STAGED |
+| ADMIN_DETAIL_MOVE_UP | Move Up; same section | cAdminEventDetail.mUp_Click | Command; STAGED |
+| ADMIN_DETAIL_MOVE_DOWN | Move Down; same section | cAdminEventDetail.mDown_Click | Command; STAGED |
+| ADMIN_DETAIL_SAVE | Save Detail Profile; same section | cAdminEventDetail.mSave_Click | Command; COMPLETED only from confirmed Core profile save |
+| ADMIN_DETAIL_RESET | Reset to Default; same section | cAdminEventDetail.mReset_Click | Command; STAGED, no save |
+| ADMIN_DETAIL_RELOAD | Reload; same section | cAdminEventDetail.mReload_Click | Command; REFRESHED, read only |
+| ADMIN_PATH_PREFERENCE_SELECT | Preferred Action Path view; Admin > Settings > Event Tracking > Action Paths | cAdminActionPathPreference.mChoice_Change | Navigation; STAGED |
+| ADMIN_PATH_PREFERENCE_SAVE | Save My Preference; same Action Paths section | cAdminActionPathPreference.mSave_Click | Command; verified local personal save only |
+| ADMIN_PATH_PREFERENCE_RESET | Reset to Default; same section | cAdminActionPathPreference.mReset_Click | Command; STAGED, internal choice change unobserved |
+| ADMIN_PATH_PREFERENCE_RELOAD | Reload; same section | cAdminActionPathPreference.mReload_Click | Command; REFRESHED, read only |
+| VIEWER_PATH_PREFERENCE_SELECT | Preferred Action Path view; Operations > Viewer > Settings > Event Tracking | frmEventTrackingSettings.mChoice_Change | Navigation; STAGED |
+| VIEWER_PATH_PREFERENCE_SAVE | Save My Preference; same Operations section | frmEventTrackingSettings.mSave_Click | Command; same context-only Core personal boundary |
+| VIEWER_PATH_PREFERENCE_RESET | Reset to Default; same section | frmEventTrackingSettings.mReset_Click | Command; STAGED, internal choice change unobserved |
+| VIEWER_PATH_PREFERENCE_RELOAD | Reload; same section | frmEventTrackingSettings.mReload_Click | Command; REFRESHED, read only |
+
+Each handler guards its captured context before work. REQUESTED precedes owning
+validation/permission checks when collection is eligible. Older saved policies
+do not enable these controls implicitly. Save outcomes come from explicit owner
+branches; no report parsing, completion from staging, or clean-rollback inference.
+Successful Tracking Policy save preserves its existing version-change recording
+interruption. Disabled/unavailable tracking cannot block or retry the owning
+command. Initialization, direct services, programmatic selections, preview and
+post-save rendering/Reload remain unobserved. The focused test must exercise each
+actual callback once and independently verify the owner's effects, policy/context
+invalidation, preference isolation, prior catalog definitions and unchanged source
+records. General Settings/lifecycle/navigation and other role coverage stay pending.
 
 **Receiving discovered control, 2026-09-07 -- focused candidate GREEN:**
 

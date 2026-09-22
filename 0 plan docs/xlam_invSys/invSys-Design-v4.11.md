@@ -998,6 +998,88 @@ business rule. UOM selection, text entry exclusions and other Admin controls
 remain separately accounted for; these three commands are not comprehensive
 Admin acceptance.
 
+**4be.1 Settings editor observation refinement (specified; implementation pending):**
+The next discovered coverage group comprises the ten deliberate Tracking editor
+actions, eight Event Detail editor actions, and four personal-preference actions
+on each of the Admin and Operations surfaces. Catalog 11 preserves every catalog
+1-10 definition and adds exactly these 26 controls. General Settings commands,
+launcher/Close/page navigation and other role controls remain separately pending;
+this group does not establish comprehensive coverage.
+
+The maintained controls catalog names each stable ControlId and actual handler.
+Tracking control selection, its six flag/default-view choices, Detail family/
+field/show-field selection, and each personal-view choice are Navigation.
+Save, Reset, Reload and Detail Move Up/Move Down are Command. Existing D18
+collection, visibility and explicit-recording defaults apply; an older saved
+whole policy cannot implicitly enable a newly registered control. Selected
+values, field IDs, staged requests and personal choices never enter activity.
+Each record uses fixed captions, its exact originating Admin or Operations
+surface and empty SourceEventRefs. Rendering a source's status is not a source
+business event and must not manufacture an EventID or System_Key.
+
+Every deliberate handler validates its captured session/warehouse before any
+staging, read or save, then begins its eligible REQUESTED observation before
+validation and the owning permission check. A context mismatch stops the action
+and requires reopening; it never retargets a held editor. Existing Admin form
+access and ADMIN_MAINT policy/profile save guards remain. Local staging and
+deliberate reads confer no warehouse write permission. Core direct services,
+initialization, programmatic selections, synthetic preview, post-save Reload
+and Reset's internal choice changes remain unobserved. The actual private
+control callback must execute once per tested user action; assigning a control
+value and also invoking its callback must not fabricate two user actions.
+
+Core's policy/profile writers and personal-preference owner expose explicit
+primitive outcomes from their existing validation, authorization and persistence
+branches. Callers never classify a Boolean or parse report text as Changed,
+denial or rollback. Verified appended profile versions and changed personal
+choices use COMPLETED/Changed; an already-matching verified personal choice uses
+UNCHANGED/Unchanged without asserting a new change. Confirmed pre-write
+validation and denial use REJECTED/Unchanged and
+DENIED/Unchanged. An uncertain save uses FAILED/Unknown. Deliberate successful
+Reload uses REFRESHED/Unchanged, display selection uses SELECTED/Unchanged, and
+confirmed staged changes or Reset/Move use STAGED/Unchanged with fixed wording
+that identifies unsaved staging. These latter effects describe saved settings;
+they do not imply that the form's staging was unchanged. A failed read/staging
+action that cannot write saved settings retains Unchanged with explicit failure
+wording. Do not report COMPLETED merely because rendering or staging succeeded.
+Preserve the owning status and any optional-tracking notice independently;
+logging failure cannot block, repeat or silently alter an authorized action.
+
+**Policy-save interruption is retained:** The existing successful Tracking
+Policy save creates a new version and interrupts the active recording with
+POLICY_CHANGED. An eligible pre-save REQUESTED record remains under its original
+policy. No ordinary completion may be appended by bypassing current-version
+eligibility, reusing another activity's identity or inventing a post-save click.
+The form reports the actual saved policy and the interrupted/unavailable tracking
+result separately. An incomplete attempt cannot establish a diagnostic conclusion.
+The policy-save control therefore offers only its observable request/pre-write
+rejection/denial/failure outcomes, not an unreachable normal COMPLETED terminal.
+If the old policy did not collect the attempt, enabling collection cannot create
+it retroactively. This preserves D18's policy-change and incomplete-evidence
+rules; it does not authorize cross-version activity completion.
+
+**Personal-preference authority is retained:** Both originating surfaces use the
+already approved signed-in captured-context boundary, with no new ADMIN_MAINT or
+role capability at the personal save service. The catalog explicitly identifies
+these eight controls as CORE_PERSONAL_PREFERENCE with that existing authority
+mode. Shared completion validation may recognize only those registered controls
+under that mode after current-context validation; it must retain the existing
+capability checks for every capability-bearing control and fail closed for any
+unknown mode/control. Admin's form gate remains separate. This is an explicit
+representation of the existing personal boundary, not a permission exception for
+configuration commands or a renamed outcome that evades their guards.
+
+The other registered owners are CORE_CONFIGURATION for policy/profile saves and
+ADMIN_SETTINGS_UI for their local editor actions. Exact permissions, whole
+version writes, expected-version checks, unknown-column preservation, personal
+Windows/invSys-user/warehouse isolation, and read-only Operations policy display
+remain unchanged. D13 requires actual-handler RED/GREEN, programmatic/direct-call
+non-observation, policy-change interruption and old-policy coverage, independent
+owner-effect evidence, publication/expectation compatibility, packaged builds,
+compile/layout/static gates and current Release 1 regressions. This refinement
+names discovered controls under approved D18 semantic inheritance; it changes
+no authority store, business permission or recording-interruption rule.
+
 **4be.1 Boxing Make/Unbox activity refinement:** D18 comprehensive control coverage
 registers two existing Box Maker commands in catalog 9 (isolated implementation
 verified; broader acceptance remains open):

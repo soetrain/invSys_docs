@@ -6814,6 +6814,40 @@ identities and times are in the maintained result record. Full-guide, Operations
 comparison and Boxing/Shipping regressions remain open. See the maintained
 Admin UOM activity result record; comprehensive Slice 4be acceptance remains open.
 
+**Settings editor coverage D13 entry (specified; implementation pending):**
+Architecture v4.11 D18's Settings editor observation refinement governs the next
+26-control group: Tracking (10), Event Detail (8), and Admin/Operations personal
+preferences (4 each). Catalog 11 retains versions 1-10 exactly. The maintained
+controls rows identify the real callbacks; general Settings, lifecycle/page
+navigation and other roles remain separately pending. Protect every actual
+callback with behavioral RED on the frozen Admin UOM predecessor before editing
+runtime. Missing eligible observations and held-editor context redirection are
+the expected behavioral failures; fixture, compile and capture failures are not RED.
+
+Verify owner effects independently of logging: complete append-only profile
+save, unchanged configuration for staging/reads, isolated local preference save,
+and successful policy save interrupting recording without a fabricated ordinary
+completion. Preserve existing context-only personal authority and every other
+control's capability guard. Test actual staging/selection callbacks once, with
+programmatic input setup guarded; initialization, automatic Reload/Reset changes
+and direct services produce no user observations. Include denial/rejection,
+uncertain persistence, old/disabled/unavailable policy, unavailable activity
+storage, exact publication, expectation choices, unknown columns and original
+record bytes. Do not infer effects by parsing reports or Boolean success.
+
+Expected runtime files are cAdminTrackingPolicy, cAdminEventDetail,
+cAdminActionPathPreference, frmEventTrackingSettings, a bounded Admin action
+helper, the Core catalog/observation validator and explicit owner outcome
+boundaries in Tracking Policy, Detail Profile and personal preference services.
+Use primitive or serialized cross-package contracts and existing packaging;
+Core stays headless. Add focused packaged probe/test helpers without changing
+the frozen candidate while its supporting gates run. After RED and implementation,
+require focused GREEN, all five builds/compiles, visible/layout evidence,
+static maintenance limits, prior GREEN regressions, live-role/full-chain gates
+and synchronized result records before committing the completed runtime step.
+The normative refinement inherits approved D18; it does not approve D8-A,
+Event Detail unlocking, carrier authority changes or training-transfer design.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,
