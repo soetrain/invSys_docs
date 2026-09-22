@@ -1,6 +1,13 @@
 # invSys Form Controls v1
 
-**Version:** 1.207 (direct-curation full guide regression GREEN)
+**Version:** 1.208 (direct-curation supporting regressions verified)
+
+The same integrity candidate retains preference restart **27/27**, Viewer
+**94/94**, Boxing/Shipping **1,707 PASS plus seven pending D8-A failures**, and
+evaluation **376/376**. Their **47** current captures are directly reviewed and
+hashed. All gates close Excel normally without assistance, preserve source and
+package pins, and have no matching Application errors. D8-A remains unapproved;
+no known failure is reclassified as GREEN. Full-chain validation is now running.
 
 The integrity candidate now retains the complete **351/351** guide regression,
 including all 46 published-edit checks. All 52 current captures are directly

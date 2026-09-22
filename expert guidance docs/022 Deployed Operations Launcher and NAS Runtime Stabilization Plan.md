@@ -6645,6 +6645,24 @@ and no matching Application errors. The restart proves a different process and
 Operations-only preference restoration. Exact roots/times are in the curation
 integration record. Boxing/Shipping, evaluation and the full chain remain active.
 
+Boxing/Shipping now retains all **1,707** preceding GREEN identities and exactly
+the **seven pending D8-A** failures, with **22** current captures directly reviewed
+and hashed. Source/package pins are unchanged; Excel closes normally without
+assistance and no matching Application errors occur. The outer serial queue's
+exit-code assumption stops after this verified gate; evaluation resumes as a
+separate isolated gate, without rerunning Boxing/Shipping or altering its evidence.
+Full-chain validation still follows only after normal closure. D8-A remains
+unapproved; exact results and the orchestration limitation are in the curation
+integration record.
+
+The separate evaluation gate now retains **376/376** prior identities and all
+**19** directly reviewed captures. Pending/partially applied Receiving submissions
+stay inconclusive; complete owner publication supports conclusion with exact keys
+and source references. Normal unassisted closure, source/package pins and zero
+matching Application errors are verified. One bounded capture activation retry
+replays no workflow action. The full Release 1 chain runs only after this verified
+gate; it is not yet claimed complete.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,
