@@ -6608,6 +6608,13 @@ ordering, bounds, flag-off behavior and exclusion of field values from traces
 before adding the guard. Readiness does not guarantee later dispatch or establish
 the interruption cause. No architecture, product control or XLAM change is involved.
 
+The actual shared boundary now passes **32/32** offline after **15 PASS / 17
+expected FAIL**; all preceding **78/78** diagnostics retain their identities and
+pass. The opt-in guard records only fixed macro name, read attempt and status,
+with 250 ms gaps and eight-read maximum. No action replay or runtime change is
+introduced. Restart the complete guide gate against the integrity candidate;
+readiness remains an experiment, not an established explanation for COM failures.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,
