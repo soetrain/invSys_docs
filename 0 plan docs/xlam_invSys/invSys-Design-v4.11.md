@@ -1490,6 +1490,67 @@ save/publication contract under semantic inheritance. It does not accept the
 remaining guide discovery/editing, expectation authoring, presentation switching,
 comparison, transfer, current-policy or full Release 1 acceptance gates.
 
+**4be.5 direct tracked-action curation refinement:** Action Paths adds
+`btnChooseGuideActions`, **Choose tracked actions**, independent of a selected
+recording. With ACTION_PATH_MAINT and a current loaded Events publication it opens
+one reusable Operations-owned `frmGuideActionPicker`, **Choose tracked actions**.
+This is a source picker for authored How-To steps, not a recorder. Its
+`lblGuideActionSource` identifies the exact publication ID/hash and loaded time;
+`txtGuideActionSearch` filters the permitted loaded actions by caption/control ID;
+`lstGuideActions` selects one or more exact ActivityIds. Each row shows the original
+fixed caption, original occurrence time and available outcome labels. Search
+preserves selected identities, including selections outside the current filter;
+`lblGuideActionStatus` gives the selected count and explains unavailable/restricted
+sources. `btnCreateSelectedGuide`, **Create guide**, opens the existing guide editor
+from that reviewed selection; `btnCancelGuideActions`, **Cancel**, closes the picker
+and any draft it owns without deleting published versions. The picker defaults to
+900 by 650 points with a 760 by 600 minimum, with readable nonoverlapping controls
+through larger and restored sizes. The existing library sizes remain unchanged.
+
+Core resolves selected ActivityIds only from its acknowledged loaded publication,
+validates each original activity body against the current warehouse/activity
+schema and requires exactly one REQUESTED body per selected action. It retains
+all published attempt/result bodies for those actions, their original identity,
+ordinal, actor, time and source references. Missing or malformed selected evidence
+fails explicitly; it is never read back from operational owner workbooks or
+silently supplemented from another publication. Current-state supplements and
+business-event rows cannot impersonate an observed control. They remain available
+as separate Viewer evidence and through exact source references; inventing a
+control caption from a business-event type is prohibited.
+
+The initial authored order follows selected groups in loaded publication order;
+the existing editor can reorder/remove steps and author instructions. Observation
+bodies retain their publication group/line order independently of authored order.
+Different groups do not constitute a single original execution sequence: both
+picker and editor explicitly label them selected published actions, with **No
+recorded sequence; authored order is not execution evidence**. New stable StepIds
+refer to the exact original ActivityIds. Guide schema 1 is unchanged: `SourceRun`
+is empty on this route, even when an individual selected activity originally had
+a SequenceId. Its original body is preserved. No recording identity, lifecycle,
+expectation or conclusion is inferred. ExpectedConclusion remains None until
+explicitly authored, and use/evaluation still requires a separately selected run.
+
+Entry and every selection/draft/save action check captured context, current policy,
+ACTION_PATH_MAINT and the exact loaded publication binding. Previously hidden
+actions cannot be selected by identity injection. Restriction of any selected
+action invalidates the selection/draft with a reason, without silently deleting
+steps. A changed or stale loaded publication, changed selection, parent closure,
+sign-out or target change invalidates owned editor/expectation staging. Repeated
+entry with the same source and selected identities reuses the staged draft.
+Selecting a recording does not retarget this direct-source draft. Opening a
+different authoring source closes the prior editor under the existing single-editor
+rule. Current permission/policy changes cannot be bypassed by cached source bodies.
+
+Open, search, selection, editing and Cancel do not write source/training/config,
+publish Events, append evaluation, start recording or create observed activity.
+Only explicit Save publishes the existing immutable guide version with all its
+normal identity, size, conflict and validation rules. Selected original bodies
+remain unchanged even if their authored steps are omitted. This names the
+approved direct event/action curation route under D18 semantic inheritance; it
+does not change guide schema, identity/authority, execution or outcome rules and
+does not approve the pending Event Detail or D8-A proposals. Transfer and full
+human acceptance remain required.
+
 **4be.5 published-guide reader refinement:** The recorded-run library adds
 `btnPublishedGuides`, **Published guides**, opening one reusable Operations-owned
 `frmActionPathLibrary`, caption **Published guides**, under its captured Viewer

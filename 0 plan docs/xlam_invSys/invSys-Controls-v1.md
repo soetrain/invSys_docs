@@ -1,6 +1,24 @@
 # invSys Form Controls v1
 
-**Version:** 1.201 (guide edit supporting gates include full chain and live roles)
+**Version:** 1.202 (direct tracked-action curation contract; implementation pending)
+
+**Direct curation entry specified; not yet accepted:** D18 now names
+`frmActionPaths.btnChooseGuideActions` (**Choose tracked actions**) and the
+Operations-owned `frmGuideActionPicker`, independently of any selected recording.
+The picker uses `lblGuideActionSource`, `txtGuideActionSearch`, `lstGuideActions`,
+`lblGuideActionStatus`, `btnCreateSelectedGuide` (**Create guide**) and
+`btnCancelGuideActions` (**Cancel**). It defaults to 900 by 650 points, minimum
+760 by 600, with the existing Action Paths and guide-editor sizes preserved.
+Selection across search uses exact ActivityIds from the acknowledged loaded Events
+publication and current ACTION_PATH_MAINT/visibility policy. Original observations
+stay separate from authored order; no recorded run or conclusion is fabricated.
+The guide uses unchanged schema 1 with empty SourceRun and an initially None
+expectation. Changed selected source/context/policy/permission or picker closure
+invalidates owned staging; repeated identical entry reuses it. Source reads and
+non-save actions are non-mutating; explicit Save retains existing immutable
+version behavior. Packaged behavioral RED precedes implementation; all acceptance
+gates remain required. This is the D18 direct-curation refinement, not approval of
+the pending Event Detail or D8-A proposals.
 
 The corrected guide-edit candidate now passes full Release 1 chain **32/32**, live
 roles **48/48**, and Create Warehouse **15/15**, preserving every prior chain/live

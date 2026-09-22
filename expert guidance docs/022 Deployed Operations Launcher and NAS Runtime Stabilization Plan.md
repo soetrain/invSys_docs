@@ -6491,6 +6491,28 @@ record contains the verifier and exact evidence. Remaining D18 work and human
 acceptance remain open. This acceptance-only update creates no runtime contract,
 requires no invented D13 RED and approves neither pending architecture proposal.
 
+**Direct tracked-action curation D13 entry:** The normative D18 refinement now
+names Action Paths **Choose tracked actions**, its Operations-owned source picker,
+exact loaded-publication binding and reuse of the existing guide editor. Core
+validates selected original activity bodies and current maintenance/visibility
+policy; guide schema 1 retains an empty SourceRun rather than fabricating a run.
+This refines the already approved non-recording authoring route. It grants no
+execution, source-write or automatic conclusion behavior.
+
+Before runtime edits, add/run focused packaged tests using actual Admin Save
+activity outside a recording, ordinary Events publication/loading and the new
+picker's real handlers. Expected behavioral RED is missing entry/selection/draft/
+save behavior. Protect multi-selection across search, exact original observations,
+stable authored StepIds, empty SourceRun, None expectation, immutable save/revision,
+current-policy/capability/context/source guards, parent/child lifecycle, reuse,
+four layouts and source/config/training non-mutation for non-save actions. A broken
+fixture, compile or harness is not RED. Runtime scope is Core draft/source/model
+handling plus Operations library/picker/editor; preserve the current frozen
+guide-edit candidate and all accepted GREEN identities. Focused GREEN, packaged
+build/compile, visible evidence, static ratchets, relevant regressions, live roles
+and full chain remain required. No deployment or full Slice 4be acceptance is
+claimed by the refinement; Event Detail/D8-A approval remains pending separately.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,
