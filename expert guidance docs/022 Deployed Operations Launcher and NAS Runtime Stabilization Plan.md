@@ -6361,6 +6361,20 @@ records a compatible discovered control under D18 semantic inheritance, not
 implementation or acceptance. The paired restart gate is currently independent;
 do not alter its running test sources or frozen packages.
 
+The first broad edit attempt stops at 235 PASS / one COM harness interruption,
+before any new edit assertion. The first rejection is the read-only publication
+counter (`0x80010001`), followed by cleanup `0x800AC472`; cause remains unproven.
+Excel exits later without intervention, separately from the controller's initial
+ExcelClosed=False. The focused actual-handler fixture then establishes **17 PASS /
+34 expected FAIL**, all 51 unique typed assertions reached, without harness failure.
+All 39 edit assertions run; twelve compile/fixture and five preservation/read checks
+pass. Normal closure, zero matching Application events and unchanged sources/frozen
+candidate are verified. Eight shared test helpers retain their exact original
+function bodies. [Published-guide edit evidence](../../invSys_fork/tests/integration/plan022_slice4be_published_guide_edit_results.md)
+records both attempts and exact commands/reports. Implement the specified entry,
+captured published draft and immutable revision only after this recorded RED;
+focused GREEN and all applicable completion gates remain required.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,

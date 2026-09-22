@@ -1,6 +1,16 @@
 # invSys Form Controls v1
 
-**Version:** 1.192 (paired preference restart 27/27; Edit implementation pending)
+**Version:** 1.193 (published-guide edit RED 17 PASS / 34 expected FAIL)
+
+**Published-guide editing remains unimplemented:** Its focused packaged gate now
+establishes **17 PASS / 34 expected FAIL**, with all 39 edit assertions reached and
+no harness failure. Twelve compile/fixture checks and five preservation/read checks
+pass. Excel closes normally; zero matching Application events and unchanged running
+sources/candidate are verified. This is the required pre-implementation RED for
+the specified Edit guide entry and exact-version draft/revision behavior. An earlier
+broad attempt was interrupted by COM before reaching edit assertions; it is retained
+as harness evidence, not product RED. Runtime GREEN, visible and broader acceptance
+remain pending; neither separate architecture proposal is approved.
 
 **Paired preference restart verified on the isolated candidate:** The focused
 actual-handler gate passes **27/27**, including all 15 restart checks. Normal
