@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.183 (paired visible attempt retained; acceptance pending)
+**Version:** 1.184 (paired retry retained; Viewer regression verified)
 
 **4be.5 controls; isolated candidate, acceptance pending:** Action Paths `btnViewActionPath`,
 **View guide and run**, opens reusable Operations `frmActionPathView` for the
@@ -34,6 +34,17 @@ Excel closes normally, with zero matching Application events and unchanged
 candidate hashes. All 30 captures are retained, without claiming that every image
 was reviewed. Safe stage diagnostics are added for the retry. This attempt is
 neither product RED nor a completed visible gate.
+
+The retry records 255 PASS / one harness failure after the saved Diagnostic choice:
+all 204 guide-binding and 233/243 focused identities are reached, with ten focused
+checks not reached. All 25 captures were individually reviewed. Normal closure,
+zero matching Application events and unchanged packages are verified. Shared
+failure-boundary diagnostics and tests for historical unavailable steps/current
+unreadable policy are pending; no runtime behavior changes. Independent Viewer/
+filter/Shipping state passes 94/94 with immediate closure, zero matching
+Application events and three reviewed captures. The known Shipping heading
+adjacency and pending Event Detail scrolling issue remain open, along with the
+remaining presentation and release gates.
 
 **Guide-to-run controls (isolated candidate; acceptance pending):** D18 names
 `lblGuideObservedRun` and `btnUseGuideForRun`, **Use for selected run**, in the

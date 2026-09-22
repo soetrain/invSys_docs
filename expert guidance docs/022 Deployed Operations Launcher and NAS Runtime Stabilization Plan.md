@@ -6249,6 +6249,19 @@ control/action was not recorded. Preserve the failed run; add safe harness-stage
 diagnostics for the retry without replaying a potentially mutating action. This
 does not establish product RED or visible acceptance.
 
+The retry stops earlier: 255 PASS / one harness failure, after the saved Diagnostic
+preference check. It reaches all 204 guide-binding and 233/243 focused identities;
+ten focused checks are not reached. All 25 captures were individually reviewed.
+Excel closes normally, with zero matching Application events and unchanged
+packages. Record the exact control/action and HRESULT chain at the shared harness
+boundary next; capture only an already-foreground owned permitted form, without
+focus changes or replay. The historical unavailable-step and dirty-Config cases
+extend tests of existing D18 behavior through existing form handlers. No new
+runtime contract or acceptance is implied. Independently, Viewer/filter/Shipping
+state passes 94/94 with immediate closure, zero matching Application events and
+all three captures reviewed. Boxing/Shipping, evaluation and full chain remain
+separate requirements; the pending Event Detail scrolling proposal is unchanged.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,
