@@ -1,6 +1,14 @@
 # invSys Form Controls v1
 
-**Version:** 1.203 (direct tracked-action curation packaged RED verified)
+**Version:** 1.204 (direct-curation source envelope/body distinction clarified)
+
+The first isolated curation build compiles, but rejects valid published actions.
+Published activity lines include their existing ContentSha256 envelope field;
+guide observations require their original 26-field body. D18 now explicitly
+requires checking that digest before copying the unchanged body from a detached
+source. No schema is changed or hash check relaxed. Correct the focused test's
+body comparison and rerun it against the retained candidate before fixing the
+source adapter. Picker layout captures alone do not establish working curation.
 
 Direct curation now has focused packaged **12 PASS / 41 expected FAIL**, 53 unique
 typed checks, before runtime edits. Actual unrecorded Admin activity and publication,

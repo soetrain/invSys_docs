@@ -6526,6 +6526,18 @@ exact command/evidence are in code
 only the specified Core/Operations path next; the same assertion set must pass
 GREEN on a new isolated candidate, followed by all required supporting gates.
 
+The first isolated curation candidate builds and compiles all five packages, but
+source selection rejects valid published actions: activity publication lines are
+27-field hashed envelopes, while the existing guide observation schema is the
+26-field body. Preserve both contracts. D18 explicitly clarifies verification of
+the existing envelope digest before copying its original body into the guide;
+never mutate the loaded publication or add the hash field to guide observations.
+The focused test's body comparison must likewise distinguish the original body
+from its wrapper, checking the original activity-file digest and every retained
+body value. Retain the first failed candidate/evidence; run the corrected protecting
+test against it before fixing the source adapter. This is schema clarification,
+not a new source/guide format or approval of an architectural exception.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,

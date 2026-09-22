@@ -1509,7 +1509,13 @@ through larger and restored sizes. The existing library sizes remain unchanged.
 
 Core resolves selected ActivityIds only from its acknowledged loaded publication,
 validates each original activity body against the current warehouse/activity
-schema and requires exactly one REQUESTED body per selected action. It retains
+schema and requires exactly one REQUESTED body per selected action. Published
+activity lines carry the existing storage envelope's final ContentSha256: validate
+that digest against its unchanged body before selection. Guide Observations retain
+the existing 26-field body, not the envelope's digest field; removing the verified
+wrapper from a detached copy changes neither source bytes nor observation values.
+An invalid/missing digest or unexpected body field makes the action unavailable.
+It retains
 all published attempt/result bodies for those actions, their original identity,
 ordinal, actor, time and source references. Missing or malformed selected evidence
 fails explicitly; it is never read back from operational owner workbooks or
