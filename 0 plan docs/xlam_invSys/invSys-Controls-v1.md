@@ -1,13 +1,19 @@
 # invSys Form Controls v1
 
-**Version:** 1.199 (guide edit visible/restart and Viewer/Boxing regressions verified)
+**Version:** 1.200 (guide edit visible/restart and relevant role/evaluation gates verified)
+
+Diagnostic regression also retains **376/376** with all 19 captures directly reviewed
+and hashed. Four awaiting sources, partial application and all-applied conclusion
+remain visibly distinct; expectation editing, integrity rejection and exact selection
+binding pass. Excel closes normally, sources/packages remain unchanged and matching
+Application events are zero. Live roles, full chain and human acceptance remain open.
 
 The corrected candidate retains Viewer **94/94** and Boxing/Shipping **1,707 prior
 GREEN checks**, with exactly the seven already recorded pending D8-A Auth-recreation
 failures. All 3 Viewer and 22 Boxing/Shipping captures are directly reviewed and
 hashed. Both gates close Excel normally without intervention, preserve test/package
 bytes and have zero matching Application events. Boxing's slower normal shutdown
-is retained in the evidence. Diagnostic evaluation, live roles, full chain and human
+is retained in the evidence. Live roles, full chain and human
 acceptance remain open; known Event Detail scrolling is not accepted by these captures.
 
 **Complete visible guide regression verified:** The unchanged corrected candidate

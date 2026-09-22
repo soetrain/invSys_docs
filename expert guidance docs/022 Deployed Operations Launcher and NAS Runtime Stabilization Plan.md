@@ -6467,6 +6467,16 @@ normal process exit; the next gate waits for verified closure. No new runtime fi
 Auth decision or Event Detail scrolling acceptance is inferred. Diagnostic evaluation,
 live roles, full chain and human acceptance remain required.
 
+Diagnostic regression on the corrected candidate now passes **376/376**, retaining
+every prior identity, at `decf781980bd431596c6208f0ee6a630` during **2026-09-22
+06:01:10.1828270--06:21:20.8405962 UTC**. All 19 captures are individually reviewed:
+pending four-source evidence, partial three-applied/one-awaiting, all-applied
+conclusion and explicit expectation editing at supported sizes. Normal Excel
+closure, unchanged sources/packages and zero matching Application events are verified.
+The existing pane-activation helper retries once for Pending/Minimum before a
+successful capture; this is not a product failure. Live/full-chain and human
+acceptance remain separate gates.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,
