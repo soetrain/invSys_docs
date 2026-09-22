@@ -1,8 +1,8 @@
 # invSys Form Controls v1
 
-**Version:** 1.181 (paired How-To/Diagnostic behavioral RED)
+**Version:** 1.182 (paired How-To/Diagnostic focused GREEN)
 
-**Next 4be.5 controls; implementation pending:** Action Paths `btnViewActionPath`,
+**4be.5 controls; isolated candidate, acceptance pending:** Action Paths `btnViewActionPath`,
 **View guide and run**, opens reusable Operations `frmActionPathView` for the
 explicitly staged exact guide and selected recording. `cboActionPathView` selects
 How-To, Diagnostic or Compare both; locked `txtActionPathHowTo` and
@@ -18,9 +18,11 @@ policy/integrity, capture-off availability, None expectations and exact saved-re
 association. Existing library observations stay available. These training controls
 are excluded from activity capture. Packaged missing-control RED is **207 PASS /
 36 expected FAIL**, preserving all 204 prior identities, with normal closure and
-zero matching Application events. Core/view/library implementation is a source
-draft that now builds and compiles in all five isolated packages; packaged GREEN
-and visible acceptance remain pending. Static duplicates/dynamic calls and all
+zero matching Application events. Core/view/library implementation builds and
+compiles in all five isolated packages; focused GREEN is **243/243**, including
+all 39 presentation and 204 preceding checks. Slow shutdown completes normally
+without intervention and with zero matching Application events. Visible and
+broader acceptance remain pending. Static duplicates/dynamic calls and all
 28 preceding module-size limits hold. The library's compact
 section label reads **Observed controls / Saved result** beside the new entry;
 the original evidence and saved-result panes retain their separate meanings.

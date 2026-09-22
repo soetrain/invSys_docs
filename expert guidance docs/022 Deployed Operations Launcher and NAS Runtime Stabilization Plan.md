@@ -6227,8 +6227,10 @@ by this test entry; the guide-binding regression/chain gates remain separate. Th
 packaged RED now verifies **207 PASS / 36 expected FAIL**, with all 204 prior
 identities retained, normal Excel closure, unchanged candidate hashes and zero
 matching Application events. All failures are new presentation checks. The Core
-read boundary and reusable Operations view are now source drafts awaiting an
-isolated GREEN. The candidate builds and all five packages compile; its compiled
+read boundary and reusable Operations view now pass focused **243/243 GREEN**,
+including all 39 presentation checks and 204 previous identities. Excel closes
+normally after slow shutdown, with no intervention or matching Application event.
+The candidate builds and all five packages compile; its compiled
 scope is one changed library form plus the new Core reader and Operations view.
 Static duplicates/dynamic calls and all 28 prior module-size limits hold. These
 gates do not establish visible or full presentation acceptance. See
