@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.197 (published-guide visible gate GREEN 351/351)
+**Version:** 1.198 (published-guide visible 351/351 and restart 27/27)
 
 **Complete visible guide regression verified:** The unchanged corrected candidate
 passes **351/351**, retaining all 305 prior checks and 46 published-guide edit
@@ -10,9 +10,17 @@ results, unavailable evidence, reopened editing and preserved version conflict.
 Excel closes normally; the Application event audit is clear; running sources and
 packages are unchanged. The optional readonly retry was not needed. Maintenance
 metrics remain unchanged and all 28 module-size limits pass. Role regressions,
-fresh-process preference on this candidate, live roles, full chain and human
+live roles, full chain and human
 acceptance remain separate gates. The earlier interrupted attempt remains evidence
 of an unproven COM cause, not a diagnosed runtime defect or architecture approval.
+
+Fresh-process preference on the corrected guide-edit candidate now passes **27/27**.
+The original owned Excel exits normally before a different verified process opens
+Operations/Core/Domain without Admin. Saved Compare both overrides the previous
+unsaved How-To switch; explicit guide/run selection retains exact identities and
+creates no evaluation. All three captures were individually reviewed. Final closure,
+unchanged Config/training/probe/source/package bytes and zero matching Application
+events are verified. This supplements the complete visible gate above.
 
 **Published-guide editing and notices have isolated GREEN:** The initial **17 PASS /
 34 expected FAIL** becomes **51/51**. Visible review then finds a blank draft notice;

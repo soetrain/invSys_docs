@@ -6447,6 +6447,16 @@ acceptance remain separate gates. Neither pending architecture proposal is appro
 by this evidence-only checkpoint; D13 does not require inventing a new product RED
 for an acceptance-record update.
 
+The corrected guide-edit candidate also passes the fresh-process gate **27/27**
+at `ad220eef446e40bbabeae5885c443a2f`, **2026-09-22 05:36:26.4660945--
+05:39:06.7599580 UTC**. Original owned Excel closure is normal, followed by a
+different verified process with Operations/Core/Domain and no Admin dependency.
+Saved Compare both restores over an unsaved How-To switch; no automatic pair or
+evaluation is inferred. Exact explicit guide/run binding and all Config/training/
+probe bytes are preserved. All three captures are directly reviewed and hashed;
+final closure, unchanged sources/packages and zero matching Application events
+are verified. Role/live/full-chain and human acceptance remain pending.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,
