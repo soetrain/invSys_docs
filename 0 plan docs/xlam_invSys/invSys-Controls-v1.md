@@ -26,6 +26,12 @@ bounded harness retry for the exact rejected observational getters passes
 actions and changes no runtime/package/control. The full guide gate is restarted
 with fresh disposable fixtures; its result remains pending.
 
+Direct-curation source-integrity follow-up is pending packaged RED: malformed
+observation identity and mismatched attempt/result catalog/package/build metadata
+must be unavailable under existing D18. The test will use the actual picker with
+valid outer/inner hashes and an unaffected valid action. Source review identifies
+the coverage gap; behavioral evidence must precede any Core correction.
+
 The first isolated curation build compiles, but rejects valid published actions.
 Published activity lines include their existing ContentSha256 envelope field;
 guide observations require their original 26-field body. D18 now explicitly

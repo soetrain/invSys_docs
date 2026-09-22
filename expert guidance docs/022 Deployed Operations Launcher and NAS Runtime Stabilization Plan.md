@@ -6565,6 +6565,19 @@ four-attempt policy and first-failure retention. Offline test-first evidence is
 single execution of actions. The full packaged gate is restarted on the same
 frozen candidate; no runtime or architectural contract changes.
 
+**Direct-curation source-integrity D13 follow-up:** Read-only review identifies
+uncovered malformed RecordId and attempt/result CatalogVersion, PackageSetVersion
+and BuildIdentity agreement cases. D18 already requires immutable valid activity
+identities and agreement on the producing package/build/catalog; its direct-source
+picker inherits those rules. The recorded-run reader already enforces that release
+agreement. After the active regression closes, extend the actual Choose tracked
+actions test with separately rehashed disposable publication fixtures for each
+case, retaining one valid action alongside the changed group. Expected RED is the
+invalid group remaining selectable; unrelated valid actions and original source
+bytes must remain intact. Confirm behavior before changing private Core validation.
+This is protection of the current contract, not a new source schema or approval
+to rewrite evidence. No runtime defect is claimed solely from the code review.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,
