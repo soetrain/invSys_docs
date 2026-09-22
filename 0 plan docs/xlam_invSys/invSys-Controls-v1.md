@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.185 (paired candidate Viewer and Boxing regressions verified)
+**Version:** 1.186 (paired candidate evaluation regression verified)
 
 **4be.5 controls; isolated candidate, acceptance pending:** Action Paths `btnViewActionPath`,
 **View guide and run**, opens reusable Operations `frmActionPathView` for the
@@ -53,6 +53,14 @@ the owned-form capture helper now exposes the expected denied/stale-session
 Shipping notices. This changes capture tooling only. Business success and tracking
 unavailability remain visibly separate. No pending architecture decision, layout
 limitation, paired visible gate or full-release requirement is waived.
+
+Evaluation on the same frozen candidate passes 376/376, preserving all preceding
+identities, with immediate normal Excel closure and zero matching Application
+events. All 19 captures were individually reviewed and hash-verified. Pending and
+partial publication remain Awaiting; only full application shows Conclusion
+observed. The expectation editor fits minimum/default/large layouts and displays
+ordered outcomes, retry choices and explicit conclusion selection correctly.
+This does not close the paired visible gate or full Release 1 chain.
 
 **Guide-to-run controls (isolated candidate; acceptance pending):** D18 names
 `lblGuideObservedRun` and `btnUseGuideForRun`, **Use for selected run**, in the

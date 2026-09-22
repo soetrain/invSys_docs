@@ -6272,6 +6272,14 @@ checks pass 10/10. Neither gate approves D8-A, the scrolling proposal, the faile
 paired visible run or full Release 1 acceptance. Evaluation and full chain follow
 serially before the next paired visible diagnostic.
 
+The paired candidate's evaluation regression now passes 376/376 with every prior
+GREEN identity retained. Excel closes immediately and normally; zero matching
+Application events are verified. All 19 captures were individually reviewed and
+hash-verified: pending/partial publication remains Awaiting, only the applied case
+shows Conclusion observed, and the ordered expectation editor and its three sizes
+remain readable. The full chain is next, followed serially by the paired visible
+diagnostic. Neither pending gate is accepted by this regression result.
+
 **Activity-line label D13 entry:** Under D18's contributing-line label refinement,
 the Operations picker will display each User activity line's published caption
 and observed outcome, with a source-neutral prompt. Exact inventory key labels,
