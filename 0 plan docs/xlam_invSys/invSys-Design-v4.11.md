@@ -1042,6 +1042,12 @@ checks but does not reproduce the preceding live-role context. Its strict worker
 lifetime closure check fails; Excel exits without assistance after worker release,
 with zero delayed Application failures. No runtime correction or architectural
 change follows from that diagnostic; full-chain acceptance remains unresolved.
+The subsequent same-session control retains all 35 preceding ordered checks with
+normal closure. A complete candidate chain then passes 32/48/15 chain/live-role/
+Create Warehouse checks with all prior identities, normal unassisted closure and
+zero delayed Application failures. Settings/reports and runtime/package hashes
+are preserved. This verifies that candidate's chain gate, not the complete D18
+scope or human acceptance; earlier crashes remain unexplained and recorded.
 The next discovered coverage group comprises the ten deliberate Tracking editor
 actions, eight Event Detail editor actions, and four personal-preference actions
 on each of the Admin and Operations surfaces. Catalog 11 preserves every catalog

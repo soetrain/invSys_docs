@@ -7013,6 +7013,17 @@ five package hashes remain unchanged; all 252 PowerShell files parse. Next retai
 the exact preceding role-handler sequence in a same-session phase-cut diagnostic
 before retrying the full chain. Fresh-session success is not a cause or correction
 for the earlier crash. Exact roots and receipts remain in the shutdown-header record.
+The resulting same-session phase cut passes **35/35**, preserving the exact ordered
+prior check prefix through projection recovery and normal unassisted closure.
+One subsequent full chain runs 2026-09-23 23:28:23--23:33:45 UTC and passes
+**32/32 chain, 48/48 live roles, 15/15 Create Warehouse**, retaining every prior
+identity. Delayed audit 23:34:07 UTC confirms zero Application failures and normal
+closure. Settings/three tracked reports are restored; 299 runtime/253 tooling/
+five package hashes remain unchanged and all 253 PowerShell files parse. The
+current frozen candidate's chain gate is verified; preceding crash causes remain
+unexplained and retained. Preserve this result without another unchanged retry.
+No runtime contract or full-slice acceptance changes. Exact receipt:
+`reports/runtime/settings-diagnostic-projection-checked-chain-verification.json`.
 
 An older-policy test-envelope mistake is corrected
 without changing the existing fail-closed policy reader. Exact evidence and

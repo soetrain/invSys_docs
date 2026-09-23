@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.228 (Projection boundary narrowed; same-session chain gate remains open)
+**Version:** 1.229 (Current candidate full-chain gate verified; broader Slice 4be open)
 
 The [remaining Slice 4be acceptance checklist](../../../invSys_fork/tests/integration/plan022_slice4be_remaining_acceptance.md)
 indexes the existing six workstreams and candidate gates. Control-level contracts
@@ -56,6 +56,12 @@ exits without assistance only after worker release, so strict lifecycle acceptan
 fails despite zero delayed Application failures. Runtime and packages are unchanged;
 no new visible control acceptance is claimed. The same test record retains all
 three earlier fixture-precondition calibration failures and the completed control.
+The later same-session control passes 35/35 ordered preceding checks. A complete
+candidate chain then passes 32/48/15 with all prior identities, normal unassisted
+closure and zero delayed Application failures. Settings/three reports and all
+299 runtime/253 tooling/five package hashes are preserved. The candidate chain
+gate is verified; earlier unexplained crashes remain recorded. No new control
+contract or visible human acceptance is implied; the remaining workstreams stay open.
 
 The 26 Settings controls have an expanded 450/450 actual-handler GREEN after
 141 original failures and five denied-Reload synthetic-selection failures.
