@@ -2,6 +2,10 @@
 
 **Version:** 1.221 (Settings: 780-check behavioral GREEN, 202-check Settings and 460-check owner regressions; broader gates pending)
 
+The [remaining Slice 4be acceptance checklist](../../../invSys_fork/tests/integration/plan022_slice4be_remaining_acceptance.md)
+indexes the existing six workstreams and candidate gates. Control-level contracts
+and acceptance remain in this catalog; the checklist introduces no new approval.
+
 The 26 Settings controls have an expanded 450/450 actual-handler GREEN after
 141 original failures and five denied-Reload synthetic-selection failures.
 The diagnostic candidate passes 780/780 after 27 expected failures; shutdown and

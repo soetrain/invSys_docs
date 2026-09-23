@@ -3283,6 +3283,12 @@ live warehouse without the operator's explicit staging approval.
 
 ### Slice 4be -- approved implementation: shared Events and How-To/Diagnostic Action Paths
 
+**Remaining acceptance index, 2026-09-23:** The
+[six-workstream checklist](../../invSys_fork/tests/integration/plan022_slice4be_remaining_acceptance.md)
+separates verified foundations, current-candidate gates, pending decisions and
+unimplemented requirements. It indexes the existing D18 contract and the
+subslice table below; it changes no architectural rule or acceptance criterion.
+
 **D5 prerequisite approved 2026-09-06; implemented and technically validated.** Following
 the D5 explanation, the user approved a read-only Core configuration API plus
 a separate authorized headless Core write service. This replaces the earlier
