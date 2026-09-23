@@ -1,10 +1,20 @@
 # invSys Form Controls v1
 
-**Version:** 1.222 (Settings diagnostics and prior Boxing/Shipping behavior retained; clean shutdown and broader acceptance pending)
+**Version:** 1.223 (Comparison attempt failures recorded; comprehensive coverage and release acceptance pending)
 
 The [remaining Slice 4be acceptance checklist](../../../invSys_fork/tests/integration/plan022_slice4be_remaining_acceptance.md)
 indexes the existing six workstreams and candidate gates. Control-level contracts
 and acceptance remain in this catalog; the checklist introduces no new approval.
+
+The current-candidate comparison attempt records 177 PASS / 8 FAIL with 237
+preceding checks unreached. The actual policy-change interruption assertion
+passes, but two byte-preservation checks, five diagnostic foreground captures
+and a 0x800AC472 form-state read fail. One How-To image is reviewed; diagnostic
+and paired-view acceptance remain open. Excel closes without assistance after
+a delay, with zero audited Application failure events and preserved source/test/
+package hashes. Desktop access succeeds during this attempt; the earlier error 5
+remains unexplained. Preserve this failed attempt and require focused diagnosis
+before repeating the broad gate. This evidence update changes no control contract.
 
 The 26 Settings controls have an expanded 450/450 actual-handler GREEN after
 141 original failures and five denied-Reload synthetic-selection failures.

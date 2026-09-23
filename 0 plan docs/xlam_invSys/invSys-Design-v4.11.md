@@ -1008,7 +1008,11 @@ but its strict audit fails on Excel shutdown error events. After the preserved
 capture failures, the broader Boxing/Shipping run retains 1,707 prior passes and
 seven pending D8-A failures, with 22 reviewed captures. The DPI geometry correction
 passes 4/4 and its packaged captures are now reviewed, but test-host teardown
-requires cleanup and clean shutdown remains unaccepted. Comprehensive coverage and clean release
+requires cleanup and clean shutdown remains unaccepted. The later comparison
+attempt stops at 177 PASS / 8 FAIL with 237 prior checks unreached; the actual
+policy-change interruption assertion passes, but comparison acceptance remains
+open. Its two byte-preservation failures, five foreground-capture failures and
+COM form-state failure require focused diagnosis. Comprehensive coverage and clean release
 acceptance remain pending. Plan 022 and its referenced test record preserve the
 exact results, failed attempts and limitations; the following contract remains
 normative and unchanged by this checkpoint.

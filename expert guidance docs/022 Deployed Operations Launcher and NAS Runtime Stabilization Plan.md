@@ -6936,6 +6936,17 @@ hashes, zero Application failure events and Excel absence. It explicitly refuses
 clean-shutdown/full-slice acceptance. Preserve the behavioral result and investigate
 shutdown from specific evidence; do not repeat the whole gate unchanged. Exact
 receipts are in the Settings diagnostics result record below.
+The following current-candidate comparison attempt ends at 177 PASS / 8 FAIL,
+leaving 237 prior checks unreached. The strengthened actual policy-change
+interruption assertion passes. Two byte-preservation checks, five Pending
+diagnostic foreground captures and a 0x800AC472 form-state read fail. Only one
+How-To image is accepted. Delayed unassisted Excel closure, zero Application
+failure events and unchanged 299/189/five source/test/package hashes are verified;
+these do not establish comparison acceptance. Investigate the intentional policy
+save observations separately from reader nonmutation, and diagnose capture/COM
+failures before a further broad run. Desktop access succeeds during this attempt;
+the earlier error 5 remains unexplained. Exact failures and receipts are retained
+in the same result record.
 
 An older-policy test-envelope mistake is corrected
 without changing the existing fail-closed policy reader. Exact evidence and
