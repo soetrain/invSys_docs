@@ -1012,7 +1012,11 @@ requires cleanup and clean shutdown remains unaccepted. The later comparison
 attempt stops at 177 PASS / 8 FAIL with 237 prior checks unreached; the actual
 policy-change interruption assertion passes, but comparison acceptance remains
 open. Its two byte-preservation failures, five foreground-capture failures and
-COM form-state failure require focused diagnosis. Comprehensive coverage and clean release
+COM form-state failure require focused diagnosis. A subsequent compiled reader
+gate passes 124/124 while retaining 116 prior checks: its corrected fixture
+accounts for exact observations from deliberate policy saves and preserves all
+read-only file hashes. Runtime/packages remain unchanged; visible comparison
+acceptance remains open. Comprehensive coverage and clean release
 acceptance remain pending. Plan 022 and its referenced test record preserve the
 exact results, failed attempts and limitations; the following contract remains
 normative and unchanged by this checkpoint.

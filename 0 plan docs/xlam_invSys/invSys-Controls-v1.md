@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.223 (Comparison attempt failures recorded; comprehensive coverage and release acceptance pending)
+**Version:** 1.224 (Focused reader preservation corrected; visible comparison and release acceptance pending)
 
 The [remaining Slice 4be acceptance checklist](../../../invSys_fork/tests/integration/plan022_slice4be_remaining_acceptance.md)
 indexes the existing six workstreams and candidate gates. Control-level contracts
@@ -15,6 +15,16 @@ a delay, with zero audited Application failure events and preserved source/test/
 package hashes. Desktop access succeeds during this attempt; the earlier error 5
 remains unexplained. Preserve this failed attempt and require focused diagnosis
 before repeating the broad gate. This evidence update changes no control contract.
+
+The subsequent focused reader correction passes **124/124**, retaining all 116
+preceding checks. Eight additional boundary checks permit only the exact audit
+observations from deliberate policy saves while preserving every read-only
+interval and subsequent record hash. Both original preservation check IDs pass;
+the guard calibration passes 74/74. Five instrumented projects compile, static
+metrics and size limits are unchanged, and Excel closes without assistance after
+a delay with zero audited Application failures. No runtime/package or control
+contract changes. The earlier diagnostic-capture and COM failure remain open;
+this focused result does not provide new visible comparison acceptance.
 
 The 26 Settings controls have an expanded 450/450 actual-handler GREEN after
 141 original failures and five denied-Reload synthetic-selection failures.

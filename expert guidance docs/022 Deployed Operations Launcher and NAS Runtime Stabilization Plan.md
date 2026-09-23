@@ -6947,6 +6947,18 @@ save observations separately from reader nonmutation, and diagnose capture/COM
 failures before a further broad run. Desktop access succeeds during this attempt;
 the earlier error 5 remains unexplained. Exact failures and receipts are retained
 in the same result record.
+The focused preservation correction then passes **124/124**, retaining all 116
+preceding reader/recording identities and adding eight checks bracketing the four
+real policy saves. Only their exact request observations and intentional Config
+writes advance the relevant pins; all read-only intervals retain exact file sets
+and hashes. A 74/74 guard calibration rejects unrelated writes and malformed
+allowances. All five instrumented projects compile, all 191 PowerShell scripts
+parse, and the 21:32:30 UTC audit verifies delayed unassisted closure, zero
+Application failures and unchanged 299 runtime/191 test/five package hashes.
+Regenerated static metrics, three schemas and 28 size limits do not regress.
+This is a test-fixture correction under the existing D18 policy-save contract,
+not new runtime behavior. The five diagnostic captures and COM form-state
+failure remain open; the narrower gate supplies no visible comparison acceptance.
 
 An older-policy test-envelope mistake is corrected
 without changing the existing fail-closed policy reader. Exact evidence and
