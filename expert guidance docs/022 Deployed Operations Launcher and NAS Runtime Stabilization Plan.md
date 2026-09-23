@@ -6975,6 +6975,17 @@ unchanged. Preserve this failed attempt and isolate the COM fault before another
 broad comparison retry. No runtime or architectural contract changes; exact
 receipts and calibration roots are retained in the Settings diagnostics record.
 
+The passive full-chain control retains **32/32 chain, 48/48 live-role and 15/15
+Create Warehouse** checks, with prior identities and 299 runtime/250 tooling/five
+package hashes preserved. Settings and three tracked reports are restored; Excel
+is closed. Clean shutdown still fails: the original restart process crashes in
+combase.dll with c0000005, followed by OFFICE_MODULE_VERSION_MISMATCH. No external
+post-Quit COM reattachment or additional Quit occurs, so those actions are not
+required for this failure. The guarded cleanup terminates no process. Corrected
+local-time event re-audits confirm the counts in all eleven earlier timed
+candidate receipts. Isolate restart shutdown with a bounded control rather than
+repeating the broad chain unchanged. Exact evidence is in the Settings record.
+
 An older-policy test-envelope mistake is corrected
 without changing the existing fail-closed policy reader. Exact evidence and
 preserved failed attempts are recorded in

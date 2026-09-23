@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.225 (Pending/Partial comparison verified; Applied pair transport and release acceptance pending)
+**Version:** 1.226 (Partial comparison retained; passive chain confirms shutdown failure)
 
 The [remaining Slice 4be acceptance checklist](../../../invSys_fork/tests/integration/plan022_slice4be_remaining_acceptance.md)
 indexes the existing six workstreams and candidate gates. Control-level contracts
@@ -35,6 +35,12 @@ after a delay; zero Application failures and unchanged 299 runtime/192 test/five
 package hashes are audited. The bounded State-read retry calibration passes
 36/36 after five expected failures, but this does not resolve the broader COM
 failure. No control contract changes; full comparison and release remain open.
+
+The passive chain retains 32/48/15 chain/live-role/Create Warehouse passes and
+restores settings/reports, but original restart Excel crashes in combase.dll
+without post-Quit COM reattachment or another Quit. Clean shutdown remains failed.
+No process is terminated by the cleanup guard; Excel is now closed. The detailed
+test record preserves both Application events and corrected event-query evidence.
 
 The 26 Settings controls have an expanded 450/450 actual-handler GREEN after
 141 original failures and five denied-Reload synthetic-selection failures.

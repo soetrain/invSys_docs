@@ -1024,6 +1024,10 @@ coverage and clean release
 acceptance remain pending. Plan 022 and its referenced test record preserve the
 exact results, failed attempts and limitations; the following contract remains
 normative and unchanged by this checkpoint.
+The passive full-chain control also retains 32/48/15 chain/live-role/Create
+Warehouse passes, but the original restart Excel process still crashes after
+Quit without external COM reattachment or another Quit. Restored settings/reports
+and unchanged packages do not override this failed clean-shutdown gate.
 The next discovered coverage group comprises the ten deliberate Tracking editor
 actions, eight Event Detail editor actions, and four personal-preference actions
 on each of the Admin and Operations surfaces. Catalog 11 preserves every catalog
