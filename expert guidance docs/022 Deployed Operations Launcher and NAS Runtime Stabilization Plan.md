@@ -6924,6 +6924,19 @@ native capture-geometry test exposes 320x160 output where physical bounds requir
 480x240 (3 PASS / 1 FAIL); scoped thread DPI handling then passes 4/4. Packages
 are unchanged. Windows input-desktop access is separately denied with error 5;
 visible reruns await restored access. This does not establish broader acceptance.
+On 2026-09-23 UTC, restored desktop access permits a fresh complete broader run:
+**1,707 PASS / seven pending D8-A FAIL across 1,714 checks**, with every preceding
+GREEN retained and all 22 captures directly reviewed. The formerly misframed UNBOX
+capture is now correctly framed. Five instrumented projects compile. Test-host
+teardown stalls after reporting the completed result; exact host cleanup is
+required and Excel subsequently disappears without an Excel termination request.
+Strict normal-closure verification fails and is preserved. The separate 20:54:30
+UTC behavior audit verifies 299 runtime/189 test/five package hashes, all image
+hashes, zero Application failure events and Excel absence. It explicitly refuses
+clean-shutdown/full-slice acceptance. Preserve the behavioral result and investigate
+shutdown from specific evidence; do not repeat the whole gate unchanged. Exact
+receipts are in the Settings diagnostics result record below.
+
 An older-policy test-envelope mistake is corrected
 without changing the existing fail-closed policy reader. Exact evidence and
 preserved failed attempts are recorded in

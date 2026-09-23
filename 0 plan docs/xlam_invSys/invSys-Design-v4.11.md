@@ -1004,10 +1004,11 @@ all 450 observation checks. That run has an unresolved shutdown limitation.
 Separate Settings (202/202), owner (460/460) and UOM (228/228) regressions retain
 their prior GREENs, accepted images and immediate unassisted final closure.
 The full-chain retry passes 32/32, live-role 48/48 and Create Warehouse 15/15,
-but its strict audit fails on Excel shutdown error events. The broader
-Boxing/Shipping run is incomplete after a capture-harness failure. Its DPI
-geometry correction passes 4/4 as harness evidence only; visible packaged
-reruns await input-desktop access. Comprehensive coverage and clean release
+but its strict audit fails on Excel shutdown error events. After the preserved
+capture failures, the broader Boxing/Shipping run retains 1,707 prior passes and
+seven pending D8-A failures, with 22 reviewed captures. The DPI geometry correction
+passes 4/4 and its packaged captures are now reviewed, but test-host teardown
+requires cleanup and clean shutdown remains unaccepted. Comprehensive coverage and clean release
 acceptance remain pending. Plan 022 and its referenced test record preserve the
 exact results, failed attempts and limitations; the following contract remains
 normative and unchanged by this checkpoint.

@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.221 (Settings: 780-check behavioral GREEN, 202-check Settings and 460-check owner regressions; broader gates pending)
+**Version:** 1.222 (Settings diagnostics and prior Boxing/Shipping behavior retained; clean shutdown and broader acceptance pending)
 
 The [remaining Slice 4be acceptance checklist](../../../invSys_fork/tests/integration/plan022_slice4be_remaining_acceptance.md)
 indexes the existing six workstreams and candidate gates. Control-level contracts
@@ -48,7 +48,15 @@ failure events. Broader acceptance remains pending.
 The broader Boxing/Shipping attempt is incomplete after a capture-harness failure
 and one rejected DPI-misframed image. The focused capture-geometry correction
 passes 4/4 after its observed failure; this is not packaged operator acceptance.
-Visible reruns await restored Windows input-desktop access (currently error 5).
+On 2026-09-23 UTC, restored desktop access permits the fresh broader run to finish
+with all 1,707 prior passes and the same seven pending D8-A failures across 1,714
+checks. All 22 captures are reviewed, including the formerly misframed UNBOX case.
+The completed test host requires teardown cleanup; its Excel process subsequently
+disappears without an Excel termination request. Strict normal-closure verification
+fails. The separate behavior audit preserves source/package and image hashes and
+records zero Application failure events through 20:54:30 UTC. This is behavioral
+regression retention with a shutdown limitation, not full acceptance. Event Detail
+scrolling/multiline reachability and human acceptance remain separately pending.
 
 The five UOM/Boxing diagnostic completion mappings now pass **460/460** packaged
 checks after **eight expected RED failures**. The recorded owner facts, actual
