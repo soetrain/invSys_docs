@@ -7003,6 +7003,16 @@ RED/GREEN, failed attempts and receipts are in
 `tests/integration/plan022_slice4be_shutdown_header_results.md`. Slice 4be remains
 incomplete; this tooling correction neither approves pending amendments nor
 establishes full-chain acceptance.
+A fresh-session control on a copied generated warehouse then passes six checks
+through the same packaged processor: projections rebuilt, one applied/log append,
+exact event/key identity, processed status and replay without duplicates. Three
+earlier attempts stopped at a fixture precondition and are not product RED. The
+strict lifecycle check fails because Excel exits only after worker release, though
+without assistance and with zero delayed Application failures. All 299 runtime and
+five package hashes remain unchanged; all 252 PowerShell files parse. Next retain
+the exact preceding role-handler sequence in a same-session phase-cut diagnostic
+before retrying the full chain. Fresh-session success is not a cause or correction
+for the earlier crash. Exact roots and receipts remain in the shutdown-header record.
 
 An older-policy test-envelope mistake is corrected
 without changing the existing fail-closed policy reader. Exact evidence and

@@ -1037,6 +1037,11 @@ An ntdll.dll/c0000028 crash and Office mismatch remain unresolved. This checkpoi
 changes no normative behavior; focused tooling GREEN does not establish full
 release acceptance. Plan 022 and the linked shutdown-header test record preserve
 the failed attempt, assisted recovery and unchanged runtime/package evidence.
+A subsequent fresh-session projection control passes six processor/identity/replay
+checks but does not reproduce the preceding live-role context. Its strict worker-
+lifetime closure check fails; Excel exits without assistance after worker release,
+with zero delayed Application failures. No runtime correction or architectural
+change follows from that diagnostic; full-chain acceptance remains unresolved.
 The next discovered coverage group comprises the ten deliberate Tracking editor
 actions, eight Event Detail editor actions, and four personal-preference actions
 on each of the Admin and Operations surfaces. Catalog 11 preserves every catalog

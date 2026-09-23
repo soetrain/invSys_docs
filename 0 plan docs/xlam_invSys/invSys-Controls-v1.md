@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.227 (Focused restart correction; earlier projection-rebuild gate remains open)
+**Version:** 1.228 (Projection boundary narrowed; same-session chain gate remains open)
 
 The [remaining Slice 4be acceptance checklist](../../../invSys_fork/tests/integration/plan022_slice4be_remaining_acceptance.md)
 indexes the existing six workstreams and candidate gates. Control-level contracts
@@ -50,6 +50,12 @@ and Office mismatch remain unresolved. Saved generated fixtures are closed with
 assistance; settings/reports are restored and runtime/packages remain unchanged.
 No control contract or new visible acceptance is claimed. Exact evidence is in
 `tests/integration/plan022_slice4be_shutdown_header_results.md` in the code repository.
+A fresh-session projection control passes six processor/identity/replay checks,
+but excludes the preceding role sequence and does not resolve its crash. Excel
+exits without assistance only after worker release, so strict lifecycle acceptance
+fails despite zero delayed Application failures. Runtime and packages are unchanged;
+no new visible control acceptance is claimed. The same test record retains all
+three earlier fixture-precondition calibration failures and the completed control.
 
 The 26 Settings controls have an expanded 450/450 actual-handler GREEN after
 141 original failures and five denied-Reload synthetic-selection failures.
