@@ -1048,6 +1048,16 @@ Create Warehouse checks with all prior identities, normal unassisted closure and
 zero delayed Application failures. Settings/reports and runtime/package hashes
 are preserved. This verifies that candidate's chain gate, not the complete D18
 scope or human acceptance; earlier crashes remain unexplained and recorded.
+The same frozen candidate also retains 77/77 direct-curation checks with 18
+reviewed sizing captures, five instrumented compiles, normal immediate closure
+and zero Application failures. The library captures prove layout/direct entry
+with unavailable recordings, not populated-library acceptance. No contract change.
+The subsequent presentation-restart attempt retains 25 passing checks but fails
+close dispatch/fixture cleanup; two preceding checks remain unreached and the
+Compare capture contains an insufficient-memory dialog. Native evidence reaches
+the configured GDI quota; assisted empty-process closure is not acceptance.
+Resource-growth origin remains unresolved. Plan 022 and the presentation test
+record retain the failure without changing the normative contract.
 The next discovered coverage group comprises the ten deliberate Tracking editor
 actions, eight Event Detail editor actions, and four personal-preference actions
 on each of the Admin and Operations surfaces. Catalog 11 preserves every catalog

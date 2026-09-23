@@ -7024,6 +7024,30 @@ current frozen candidate's chain gate is verified; preceding crash causes remain
 unexplained and retained. Preserve this result without another unchanged retry.
 No runtime contract or full-slice acceptance changes. Exact receipt:
 `reports/runtime/settings-diagnostic-projection-checked-chain-verification.json`.
+The same frozen candidate then retains **77/77** direct-curation checks and **18**
+directly reviewed images, 2026-09-23 23:34:15--23:39:45 UTC. All five instrumented
+projects compile, Excel closes immediately without assistance, and the 23:39:51
+audit finds zero Application failures with unchanged 299 runtime/195 test/five
+package hashes. Library images cover layout/direct entry with unavailable
+recordings, not populated-library acceptance; picker/editor images preserve
+authored-versus-observed distinctions across all six sizing states. No contract
+change. Exact receipt: `settings-diagnostic-fixed-regression-curation-verification.json`
+under `reports/runtime/`; maintained result is
+`tests/integration/plan022_slice4be_guide_action_curation_results.md`.
+The subsequent presentation-restart gate records **25 PASS/two harness failures**,
+with two prior preservation checks unreached. The restored preference and exact
+explicit guide/run pairing pass, but the final Compare image is obscured by an
+Excel insufficient-memory dialog; close-macro dispatch returns 0x800A03EC and
+fixture cleanup fails. Two planned images are accepted, one rejected, plus one
+diagnostic capture. Native measurements reach the configured 10,000 GDI quota
+and count 301 XLMAIN windows; the origin of resource growth is unresolved.
+The identified empty test process requires assisted termination after Quit.
+Post-harness settings are preserved, but independent equivalence to pre-test
+settings is unproven. All 299 runtime/195 test/five package hashes remain unchanged;
+zero Application events do not override the visible failure. No broad restart or
+comparison retry until focused counts localize growth around pairing, rendering
+and capture. No runtime/contract change. Exact attempt and recovery receipts are
+in `tests/integration/plan022_slice4be_guide_presentation_results.md`.
 
 An older-policy test-envelope mistake is corrected
 without changing the existing fail-closed policy reader. Exact evidence and

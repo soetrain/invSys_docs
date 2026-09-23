@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.229 (Current candidate full-chain gate verified; broader Slice 4be open)
+**Version:** 1.230 (Chain/curation verified; restart resource failure retained)
 
 The [remaining Slice 4be acceptance checklist](../../../invSys_fork/tests/integration/plan022_slice4be_remaining_acceptance.md)
 indexes the existing six workstreams and candidate gates. Control-level contracts
@@ -62,6 +62,21 @@ closure and zero delayed Application failures. Settings/three reports and all
 299 runtime/253 tooling/five package hashes are preserved. The candidate chain
 gate is verified; earlier unexplained crashes remain recorded. No new control
 contract or visible human acceptance is implied; the remaining workstreams stay open.
+Direct curation on the same frozen candidate retains 77/77 checks and all 18 sizing
+captures, with five instrumented compiles, normal immediate closure and zero
+Application failures. All source/package hashes remain unchanged. The library
+captures show unavailable recordings and reachable direct curation; populated
+recording-library acceptance is outside their scope. Picker/editor controls and
+authored-versus-observed evidence remain visible across all six sizing states.
+Exact result: `tests/integration/plan022_slice4be_guide_action_curation_results.md`.
+The presentation-restart attempt retains 25 passing checks, then fails close-macro
+dispatch and fixture cleanup; two prior checks are unreached. Two captures pass;
+the restored Compare capture is rejected for an Excel insufficient-memory dialog,
+also preserved in a diagnostic capture. Native GDI peak reaches the configured
+10,000 quota and 301 XLMAIN windows are observed; origin is unproven. Empty test
+Excel requires assisted termination. Current restart acceptance remains open;
+see `tests/integration/plan022_slice4be_guide_presentation_results.md` for exact
+evidence, settings-restoration limits and the required focused resource diagnosis.
 
 The 26 Settings controls have an expanded 450/450 actual-handler GREEN after
 141 original failures and five denied-Reload synthetic-selection failures.
