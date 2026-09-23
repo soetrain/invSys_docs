@@ -8,8 +8,8 @@ remains active and incomplete. Accepted focused evidence is not full acceptance.
 
 ## 2. Current verified state
 
-- Last verified 2026-09-22: code `main` **e986b51**, docs `main` **2fb413a**, both
-  pushed before this handoff. Controls v1.221. This handoff is a separate commit.
+- Last verified 2026-09-23 UTC: code `main` **5d64abc**, docs `main` **db29def**,
+  pushed before this handoff update. Controls v1.221. Runtime remains e986b51.
 - Frozen isolated candidate: `deploy/validation-settings-diagnostic`. Runtime
   and package pins are in `reports/runtime/settings-diagnostic-runtime-pins.json`
   (299 files) and `settings-diagnostic-package-pins.json` (five packages).
@@ -25,9 +25,13 @@ remains active and incomplete. Accepted focused evidence is not full acceptance.
   harness exception. Nineteen of twenty images accepted; one is misframed.
 - Harness DPI correction: focused geometry RED 3/4, GREEN **4/4**. This is
   harness evidence only; visible packaged rerun remains required.
-- At 21:32 UTC Excel was closed, but `OpenInputDesktop(0,false,1)` returned
-  NULL/error 5. User reported technical difficulties resolved; actual desktop
-  access remains unverified. A follow-up request to unlock/connect is pending.
+- On resume, input-desktop access succeeded at 02:10:48 UTC and the disposable
+  capture calibration passed all three cases with reviewed readable images and
+  normal closure. The next packaged gate stopped at 17 PASS / 1 capture-harness
+  FAIL, after five package compiles. At 02:13:01 UTC desktop access again returned
+  NULL/error 5. Cause of the change is unknown. No product image was produced.
+  Excel closed immediately; source/package pins and zero Application errors were
+  verified at 02:14:11 UTC. Do not repeat visible runs until access is restored.
 - Preserve unrelated code `src/Operations/Forms/frmEventDetail.frm` (+18 measurement
   lines, Locked=True), modified docs handoff067, and untracked critique023.
   They were excluded from both checkpoints. No operational/NAS deployment changed.
@@ -59,6 +63,9 @@ Ignored receipts in `reports/runtime/`:
 - `settings-diagnostic-uom-verification.json`: 228 checks.
 - `settings-diagnostic-regression-boxing-attempt-verification.json`: incomplete
   1689-check attempt, preserved pins and normal closure.
+- `settings-diagnostic-capture-regression-boxing-attempt-verification.json`:
+  resumed attempt, 17 PASS / 1 capture-harness FAIL; 299 runtime/189 test/five
+  package hashes preserved, immediate closure and zero Application errors.
 - `settings-diagnostic-chain-retry-behavior-verification.json` and
   `settings-diagnostic-chain-trace-behavior-verification.json`: passing behavior,
   two Application events each, clean/full release acceptance false.
@@ -96,8 +103,11 @@ files and reinterpret the original receipts. Runtime/package pins remain fixed.
 
 ## 7. Open questions and blockers
 
-- Restore accessible input desktop before visible tests. Pending user question is
-  about unlocking/connecting the desktop, not permission to continue authorized work.
+- Restore sustained input-desktop access before visible tests. Successful short
+  calibration did not establish sustained access for the subsequent gate.
+- A fresh combined question asks approval of the existing concrete D8-A and Event
+  Detail scrolling amendments; no reply was received before this update. Neither
+  is made effective by resuming work or by the successful capture calibration.
 - D8-A approval: seven `Shipping.Access.AuthUnavailable.*.MissingFileNotRecreated`
   failures remain real failures, never GREEN. Event Detail scrolling approval also
   remains pending; preserve user edits and Locked=True.
@@ -121,8 +131,10 @@ resuming the packaged gates.
 
 ## 9. Critical references
 
-- Next unused broader gate:
-  `reports/runtime/run-settings-diagnostic-capture-regression.ps1 -Gate boxing`.
+- The broader runner
+  `reports/runtime/run-settings-diagnostic-capture-regression.ps1 -Gate boxing`
+  has now been used and must not overwrite its failed attempt. Prepare a fresh
+  prefix only after stable desktop access returns.
   Preserve all 1,714 baseline identities, with only the seven existing D8 failures;
   require all 22 images accepted. Clone the original regression verifier with the
   new capture-prefix path only; do not relax checks.
