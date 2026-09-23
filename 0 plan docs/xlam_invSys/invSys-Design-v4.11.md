@@ -1028,6 +1028,15 @@ The passive full-chain control also retains 32/48/15 chain/live-role/Create
 Warehouse passes, but the original restart Excel process still crashes after
 Quit without external COM reattachment or another Quit. Restored settings/reports
 and unchanged packages do not override this failed clean-shutdown gate.
+The subsequent verification-only header-scan correction passes 12 original
+restart checks and eight header-compatibility checks with normal closure and
+zero Application failures. The broad retry fails earlier during projection
+rebuilding, before that corrected stage: chain 5 PASS/one exception, live roles
+32 PASS/one exception, Create Warehouse 15/15, with 27/16 prior checks unreached.
+An ntdll.dll/c0000028 crash and Office mismatch remain unresolved. This checkpoint
+changes no normative behavior; focused tooling GREEN does not establish full
+release acceptance. Plan 022 and the linked shutdown-header test record preserve
+the failed attempt, assisted recovery and unchanged runtime/package evidence.
 The next discovered coverage group comprises the ten deliberate Tracking editor
 actions, eight Event Detail editor actions, and four personal-preference actions
 on each of the Admin and Operations surfaces. Catalog 11 preserves every catalog

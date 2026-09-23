@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.226 (Partial comparison retained; passive chain confirms shutdown failure)
+**Version:** 1.227 (Focused restart correction; earlier projection-rebuild gate remains open)
 
 The [remaining Slice 4be acceptance checklist](../../../invSys_fork/tests/integration/plan022_slice4be_remaining_acceptance.md)
 indexes the existing six workstreams and candidate gates. Control-level contracts
@@ -41,6 +41,15 @@ restores settings/reports, but original restart Excel crashes in combase.dll
 without post-Quit COM reattachment or another Quit. Clean shutdown remains failed.
 No process is terminated by the cleanup guard; Excel is now closed. The detailed
 test record preserves both Application events and corrected event-query evidence.
+The subsequent verification-only correction passes 12 original restart checks
+and eight header-compatibility checks with normal closure and zero Application
+failures. The full-chain retry fails earlier at projection rebuilding, before
+the corrected stage: chain 5 PASS/one exception, live roles 32 PASS/one exception,
+Create Warehouse 15/15; 27/16 prior checks unreached. An ntdll.dll/c0000028 crash
+and Office mismatch remain unresolved. Saved generated fixtures are closed with
+assistance; settings/reports are restored and runtime/packages remain unchanged.
+No control contract or new visible acceptance is claimed. Exact evidence is in
+`tests/integration/plan022_slice4be_shutdown_header_results.md` in the code repository.
 
 The 26 Settings controls have an expanded 450/450 actual-handler GREEN after
 141 original failures and five denied-Reload synthetic-selection failures.

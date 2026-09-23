@@ -6985,6 +6985,24 @@ required for this failure. The guarded cleanup terminates no process. Corrected
 local-time event re-audits confirm the counts in all eleven earlier timed
 candidate receipts. Isolate restart shutdown with a bounded control rather than
 repeating the broad chain unchanged. Exact evidence is in the Settings record.
+The resulting verification-only correction isolates the restart header scan's
+COM-reference lifetime: 12 original restart checks and eight header-compatibility
+checks pass with normal closure and zero Application failures. Indexed enumeration
+alone failed; the final name-based helper releases each acquired reference and
+preserves hidden headers and unknown columns. Runtime and all five XLAMs remain
+unchanged; no new architectural behavior is introduced.
+The subsequent actual full-chain attempt fails earlier at projection rebuilding:
+chain 5 PASS/one exception, live roles 32 PASS/one exception, Create Warehouse
+15/15; 27/16 prior checks unreached. An ntdll.dll/c0000028 crash and Office mismatch
+occur before the corrected restart stage. Recovered saved generated fixtures are
+closed with assistance; byte preservation across that closure is unproven because
+pre-closure hashing was locked. Settings/three reports are restored. Static
+metrics remain unchanged; three schemas, 28 size limits and 252 PowerShell parses
+pass. Isolate this earlier projection failure before another broad retry. Exact
+RED/GREEN, failed attempts and receipts are in
+`tests/integration/plan022_slice4be_shutdown_header_results.md`. Slice 4be remains
+incomplete; this tooling correction neither approves pending amendments nor
+establishes full-chain acceptance.
 
 An older-policy test-envelope mistake is corrected
 without changing the existing fail-closed policy reader. Exact evidence and
