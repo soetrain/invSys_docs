@@ -1,12 +1,12 @@
 # invSys Form Controls v1
 
-**Version:** 1.224 (Focused reader preservation corrected; visible comparison and release acceptance pending)
+**Version:** 1.225 (Pending/Partial comparison verified; Applied pair transport and release acceptance pending)
 
 The [remaining Slice 4be acceptance checklist](../../../invSys_fork/tests/integration/plan022_slice4be_remaining_acceptance.md)
 indexes the existing six workstreams and candidate gates. Control-level contracts
 and acceptance remain in this catalog; the checklist introduces no new approval.
 
-The current-candidate comparison attempt records 177 PASS / 8 FAIL with 237
+The earlier current-candidate comparison attempt records 177 PASS / 8 FAIL with 237
 preceding checks unreached. The actual policy-change interruption assertion
 passes, but two byte-preservation checks, five diagnostic foreground captures
 and a 0x800AC472 form-state read fail. One How-To image is reviewed; diagnostic
@@ -23,8 +23,18 @@ interval and subsequent record hash. Both original preservation check IDs pass;
 the guard calibration passes 74/74. Five instrumented projects compile, static
 metrics and size limits are unchanged, and Excel closes without assistance after
 a delay with zero audited Application failures. No runtime/package or control
-contract changes. The earlier diagnostic-capture and COM failure remain open;
-this focused result does not provide new visible comparison acceptance.
+contract changes. The earlier diagnostic-capture and COM failure remain open at
+this focused checkpoint; it provides no new visible comparison acceptance.
+
+The following comparison attempt records **333 PASS / one harness exception**,
+with 96 preceding checks unreached. All 15 diagnostic-library captures and the
+Pending/Partial paired comparisons pass; 23 images are directly reviewed. The
+Applied pair-label read fails with 0x800AC472, preventing its paired captures and
+later checks. All reached preceding checks pass. Excel closes without assistance
+after a delay; zero Application failures and unchanged 299 runtime/192 test/five
+package hashes are audited. The bounded State-read retry calibration passes
+36/36 after five expected failures, but this does not resolve the broader COM
+failure. No control contract changes; full comparison and release remain open.
 
 The 26 Settings controls have an expanded 450/450 actual-handler GREEN after
 141 original failures and five denied-Reload synthetic-selection failures.

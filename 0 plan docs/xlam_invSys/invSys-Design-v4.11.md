@@ -1015,8 +1015,12 @@ open. Its two byte-preservation failures, five foreground-capture failures and
 COM form-state failure require focused diagnosis. A subsequent compiled reader
 gate passes 124/124 while retaining 116 prior checks: its corrected fixture
 accounts for exact observations from deliberate policy saves and preserves all
-read-only file hashes. Runtime/packages remain unchanged; visible comparison
-acceptance remains open. Comprehensive coverage and clean release
+read-only file hashes. The next comparison attempt reaches 333 passes and one
+harness exception, leaving 96 prior checks unreached. All 15 diagnostic-library
+captures and Pending/Partial paired views pass, with 23 reviewed images and
+delayed unassisted closure. A new 0x800AC472 Applied pair-label read prevents
+remaining comparison acceptance. Runtime/packages remain unchanged; comprehensive
+coverage and clean release
 acceptance remain pending. Plan 022 and its referenced test record preserve the
 exact results, failed attempts and limitations; the following contract remains
 normative and unchanged by this checkpoint.

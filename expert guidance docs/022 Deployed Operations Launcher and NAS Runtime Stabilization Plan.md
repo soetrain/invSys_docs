@@ -6960,6 +6960,21 @@ This is a test-fixture correction under the existing D18 policy-save contract,
 not new runtime behavior. The five diagnostic captures and COM form-state
 failure remain open; the narrower gate supplies no visible comparison acceptance.
 
+The capture/transport follow-up then records **333 PASS / one harness exception**,
+leaving 96 prior checks unreached. Every reached prior identity passes. All 15
+diagnostic-library captures and Pending/Partial paired-view checks pass, with
+23 images directly reviewed. Partial retains one Awaiting source; the Applied
+library shows all four Applied sources and Conclusion observed. An 0x800AC472
+Applied pair-label read prevents its paired captures and later expectation
+checks. The bounded State-probe transport calibration passes 36/36 after five
+expected failures; it is harness evidence, not product behavioral RED or proof
+that the broader COM failure is resolved. The 22:09:59 UTC audit verifies delayed
+unassisted closure, zero Application failures and unchanged 299 runtime/192 test/
+five package hashes. Static metrics, three schemas and 28 size limits remain
+unchanged. Preserve this failed attempt and isolate the COM fault before another
+broad comparison retry. No runtime or architectural contract changes; exact
+receipts and calibration roots are retained in the Settings diagnostics record.
+
 An older-policy test-envelope mistake is corrected
 without changing the existing fail-closed policy reader. Exact evidence and
 preserved failed attempts are recorded in
