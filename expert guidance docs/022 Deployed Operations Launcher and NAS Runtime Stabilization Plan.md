@@ -2,6 +2,21 @@
 
 **Status:** Current corrective implementation plan
 
+**Production preservation checkpoint, 2026-09-24:** Slice4be.6 adds guarded
+palette captures and isolated fixture shutdown evidence without runtime or
+contract changes. Captured predecessor RED is 12 PASS/four expected height FAIL;
+current multiline candidate is 16/16, retaining all 11 previous checks. Four
+reviewed sizes show eight complete display-only rows. A separate shutdown RED
+(11 PASS/one FAIL) becomes 12/12 through the actual Close handler and disposable
+workbook cleanup. The broader reusable harness remains outside that fix.
+The predecessor default also shows eight short rows; do not infer clipping from
+the height predicate. A clipped Inventory Check heading remains a separate
+visible defect; the maximized lower-status tooltip limits whole-form acceptance.
+See [palette evidence](../../invSys_fork/tests/integration/plan022_production_palette_results.md).
+The earlier packaged smoke 86/86 remains behavioral evidence; unassisted smoke
+shutdown is unproven because its helper can terminate Excel without recording
+that branch. Focused Detail, Viewer and full-chain closure evidence is unaffected.
+
 **Active multiline rendering refinement, 2026-09-24:** D18 now names a read-only
 multiline area beneath the existing Detail field list. It follows the current
 contributing-line selection and includes only loaded-profile-permitted multiline
@@ -7284,7 +7299,9 @@ protected fixture text-format correction (12/12), which changes no runtime Auth 
 The broader reusable gate subsequently passes with all 67 Boolean observations
 retained; only EightPaletteRows changes from False to True. Two-batch and Chai
 completion evidence is preserved. Its existing cleanup helper does not prove
-normal shutdown, and native visible evidence is still open.
+normal shutdown; native visible evidence was still open at that checkpoint.
+The later focused 16/16 palette checkpoint above supplies scoped visible evidence
+and normal palette-fixture closure, without extending that proof to this broader gate.
 The palette candidate also passes full chain/live roles/Create Warehouse at
 32/48/15 with exact preceding identities, normal unassisted closure, preserved
 settings/reports/package bytes and zero Application failure events.

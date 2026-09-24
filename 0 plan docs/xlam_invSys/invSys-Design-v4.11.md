@@ -1182,7 +1182,15 @@ correction. Evidence and the remaining visible/regression limits are in
 fixture text-format correction changes no runtime Auth behavior; D8-A is still pending.
 The broader reusable gate then passes: all 67 Boolean observations are retained,
 and only EightPaletteRows changes from False to True. Its existing cleanup helper
-does not establish normal shutdown; native visible evidence remains open.
+does not establish normal shutdown; native visible evidence remained open at that checkpoint.
+The subsequent focused palette capture checkpoint on the multiline candidate
+retains all 11 checks and passes 16/16 with four reviewed size captures and
+separately protected normal fixture shutdown. This establishes eight visible
+display-only palette rows, not whole-form or human acceptance. The predecessor
+also shows eight short rows; its RED proves requested-height loss, not a clipped
+eighth row. The clipped Inventory Check heading and broader reusable cleanup
+remain separate. This records evidence under the existing contract; see the
+same palette results record for limits and exact runs.
 The palette candidate's final full chain/live roles/Create Warehouse pass 32/48/15
 with exact preceding identities and normal unassisted closure. Settings, reports,
 package bytes and source pins are preserved; no Application failure events occur.

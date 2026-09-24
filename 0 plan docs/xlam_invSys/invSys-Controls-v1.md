@@ -1,6 +1,20 @@
 # invSys Form Controls v1
 
-**Version:** 1.246 (multiline native scrolling and scoped visible evidence GREEN)
+**Version:** 1.247 (Production palette scoped captures and focused normal shutdown)
+
+**Production palette evidence, 2026-09-24:** The unchanged current multiline
+candidate passes 16/16 after captured predecessor RED 12 PASS/four expected
+height FAIL. All 11 prior checks remain. Four reviewed minimum/default/native-
+maximize/restored captures show eight complete display-only rows. The separately
+tested isolated cleanup uses the real Close handler and exits normally; broader
+reusable cleanup is still unproven. The predecessor also displays eight short
+rows, so the height RED is not evidence of a clipped eighth row. A clipped
+**Committed / Used** Inventory Check heading and maximized lower-status tooltip
+prevent whole-form visual acceptance. See
+[palette evidence](../../../invSys_fork/tests/integration/plan022_production_palette_results.md).
+No control contract or runtime package changes. Separately, the earlier smoke
+86/86 proves behavior but not unassisted shutdown; its possible termination was
+not recorded. Detail, Viewer and full-chain closure evidence is unaffected.
 
 **Multiline rendering refinement, 2026-09-24:** Architecture v4.11 D18 names
 `lblDetailMultiline` (**Multiline fields for selected line**) and
@@ -286,14 +300,15 @@ requested 96 points at minimum/default and restored sizes (118.6 expanded), with
 all-page bounds/overlap checks passing. The prior 88.45-point result is retained
 as RED; the accepted predicate is unchanged. See
 `tests/integration/plan022_production_palette_results.md` for regression and
-visible acceptance limits. No native visible acceptance is inferred.
+visible acceptance limits. That original run does not establish native visibility;
+the later scoped capture checkpoint at the top of this catalog supplies it.
 The broader reusable gate now passes with the same 67 Boolean observations;
 only EightPaletteRows changes from False to True. All previously passing reusable
 and Chai observations remain passing. Normal-shutdown proof is separate from the
 existing reusable harness's cleanup behavior.
 The palette candidate's full chain/live roles/Create Warehouse pass 32/48/15
 with exact prior identities, normal unassisted closure and preserved settings,
-reports and package bytes. Broader Slice 4be and native visible acceptance remain open.
+reports and package bytes. Broader Slice 4be and whole-form visible acceptance remain open.
 
 The 2026-09-24 desktop recheck succeeds without elevation, and the separate blank
 fixture calibration captures all three cases with normal closure. The palette
