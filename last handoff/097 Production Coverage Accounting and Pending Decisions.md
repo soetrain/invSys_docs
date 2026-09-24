@@ -3,7 +3,10 @@
 ## 1. Goal and release outcome
 
 Finish Release 1/Slice 4be under Architecture v4.11 and Plan022 without regressing
-accepted workflows. Goal remains active and incomplete. This turn advances D18
+accepted workflows. Goal is blocked and incomplete as of 05:30:40 UTC on
+2026-09-24 after the same desktop-input blocker persists for three consecutive
+goal turns and the explicit architecture decisions remain unanswered. The full
+objective is unchanged. This checkpoint advances D18
 coverage accounting; it introduces no runtime or architecture contract change.
 
 ## 2. Current verified state
@@ -57,10 +60,12 @@ Do not rerun unchanged successful behavior or visible tests without changed acce
 
 ## 6. Assumptions to Re-verify
 
-At 05:18:03 UTC the fresh desktop probe still reports GetCursorPos error 5 and
+At 05:30:40 UTC the fresh desktop probe still reports GetCursorPos error 5 and
 UOI_IO=False; Excel is closed. Earlier active-RDP/ordinary-access-right findings
 remain scoped to their timestamps (handoff096). No permission or session change
 was made. A user response or restored desktop input has not been observed.
+Latest private receipt: `reports/runtime/production-diagnostics-blocked-audit.json`.
+No test or process is being waited on, and no passing gate was rerun.
 
 ## 7. Open questions and blockers
 
