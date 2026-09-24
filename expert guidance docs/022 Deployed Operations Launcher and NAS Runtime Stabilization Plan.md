@@ -7172,9 +7172,35 @@ observations and the exact prior full-chain/live-role/Create Warehouse checks
 (32/48/15). The chain closes without assistance, restores settings/three reports,
 preserves five packages/269 tooling hashes and has no Application failure events.
 The reusable harness's existing cleanup does not prove unassisted shutdown.
-Positive Recipe validation, recording/publication/diagnostic integration and
-native designer evidence remain required; this is not complete six-control or
-Slice 4be acceptance.
+The same six controls are protected through actual recording Start/Stop, Admin
+publication, Viewer selection and packaged expectation editor/Evaluate. Under
+D18's explicit Production draft mapping, NEW/CLEAR + STAGED and VALIDATE +
+VALIDATED are positive local command completions; REQUESTED/REJECTED/DENIED/FAILED
+are not. Empty source references must never establish Domain application.
+The predecessor editor omitted VALIDATED and the evaluator had no six-control
+entries; the behavioral failures below precede edits to modExpectationDraft and
+modEvaluationMatches. Preserve original recordings, publication and saved
+authority and retain all focused GREEN identities. This advances 4be.1 coverage
+and 4be.4 diagnostics together; it does not close broader six-control acceptance.
+Positive Recipe validation now passes with a real released Process: expanded
+RED 67 PASS/177 expected FAIL becomes 244/244 GREEN on unchanged caption packages.
+The subsequent recording/publication/diagnostic gate reaches 370 PASS/eight
+expected FAIL, retaining all 244 prior checks, with five compiles and eventual
+unassisted closure. Four NEW/CLEAR completion mappings and four VALIDATED editor
+choices fail as expected. Adapter calibration failures remain recorded separately.
+Only then are the two Core modules corrected (+4 runtime lines). Five-package
+build/compile/cold start passes; only those two of 244 compiled components change.
+Static schemas/ratchets pass without dynamic/duplicate growth. The first visible
+attempt stops at 315 PASS/one desktop cursor exception after two reviewed designer
+captures; it closes unassisted. The capture-disabled run passes 390/390, retaining
+every RED and preceding GREEN identity. The GREEN run closes unassisted,
+restores settings and preserves five package/
+215 test hashes, with no Excel Application failure events through 05:13:47 UTC.
+Remaining Detail/diagnostic captures and owner/full-chain regressions await
+restored desktop input (error5, UOI_IO=False
+during active RDP; ordinary attribute access succeeds). This is not complete
+six-control or Slice 4be acceptance. Exact evidence:
+`tests/integration/plan022_slice4be_production_paths_results.md` in the code repository.
 
 Explicit scoped maintenance exception for these six new observations: +45 lines
 in the existing oversized frmProduction provide one 42-line shared action path

@@ -353,6 +353,23 @@ unknown workbook columns, distinguish valid/rejected validation, cover disabled
 tracking and stale bindings, and retain prior catalog versions. This is a D18
 discovered-control refinement, not an amendment to authority or permissions.
 
+**Explicit diagnostic terminal facts for the six Production draft controls:**
+Following the existing registered-owner rule and Settings staging distinction,
+the exact Process/Recipe NEW and CLEAR controls above use STAGED as their positive
+CommandCompleted outcome. The exact two VALIDATE controls use VALIDATED. The
+expectation editor must offer that supported outcome for each validation control.
+REQUESTED, REJECTED, DENIED and FAILED are never positive terminal facts. A
+stopped, intact recording and an explicitly authored matching expectation remain
+required; do not classify other controls by an outcome suffix, severity, message,
+handler return or DataEffect. A successful diagnostic retains the display
+"Command completed; Domain application not asserted" and the original local-draft
+observation. SourceEventsApplied cannot conclude from these empty-reference
+observations. Recording preserves exact original action order. Events publication
+preserves exact original records, control/outcome identities, captions, correlation
+and timestamps under the existing activity-group wire contract. This extends the
+existing D18 owner map to discovered controls; it does not change their actions,
+observations, saved authority or required permissions.
+
 - Maintain a versioned coverage catalog for every reachable Operations/Admin
   launcher, form command, deliberate page/selection action and result. Each
   entry names a stable ControlId, fixed captions, role/family, public handler,

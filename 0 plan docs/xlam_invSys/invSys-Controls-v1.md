@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.237 (Production designer draft observations pass focused RED/GREEN; full acceptance pending)
+**Version:** 1.238 (Production draft diagnostics pass 390 behavioral checks; visible/regression acceptance pending)
 
 The [remaining Slice 4be acceptance checklist](../../../invSys_fork/tests/integration/plan022_slice4be_remaining_acceptance.md)
 indexes the existing six workstreams and candidate gates. Control-level contracts
@@ -178,9 +178,9 @@ passes; reusable Production retains all 67 Boolean observations.
 The exact-caption follow-up adds six checks:
 231 PASS/three expected metadata failures becomes 234/234 GREEN, retaining the
 initial 228. All fixed captions now match the actual buttons; all five corrected
-packages compile and only the vocabulary module changes. Positive Recipe
-validation, recording/publication/diagnostic integration and native designer
-visibility remain unverified; complete six-control acceptance is not claimed.
+packages compile and only the vocabulary module changes. At that checkpoint,
+positive Recipe validation, path integration and native designer visibility
+remain unverified; the subsequent evidence below advances those gates.
 The corrected candidate also retains all 202 compiled Settings checks and ten
 reviewed native captures, with immediate unassisted closure and settings/package
 preservation. This establishes Settings visibility without administrator elevation,
@@ -189,6 +189,26 @@ Reusable Production retains all 67 Boolean observations. Full chain/live roles/
 Create Warehouse retain the exact prior 32/48/15 checks with unassisted closure,
 settings/report restoration, preserved hashes and no Application failure events.
 The reusable harness retains its separately documented cleanup limitation.
+The valid Recipe fixture passes: expanded RED 67 PASS/177 expected FAIL
+becomes 244/244 GREEN, retaining all 234 previous checks without runtime changes.
+The fixture saves/releases an actual fresh Process and validates a Recipe that
+reads it through the Designs boundary. Diagnostic integration is specified
+under D18: NEW/CLEAR + STAGED and VALIDATE + VALIDATED are positive local
+CommandCompleted facts. The editor must offer VALIDATED for the two Validate
+controls. REQUESTED/REJECTED/DENIED/FAILED remain negative and empty source
+references cannot prove Domain application. Actual recording/publication/Viewer/
+expectation/Evaluate tests reach 370 PASS/eight expected FAIL while retaining all
+244 previous checks. Five compiles and eventual unassisted closure pass; original
+records, journal order and saved authority are preserved. The two Core omissions
+are then corrected. Five-package build/compile/cold start and static checks pass;
+only two of 244 compiled components change (+4 lines, no dynamic/duplicate growth).
+The first visible attempt stops at 315 PASS/one desktop cursor exception, with two
+reviewed Production designer captures and unassisted closure. The separate
+capture-disabled run passes 390/390, retaining all 378 RED and 244 prior GREEN
+identities. Remaining Detail/diagnostic images and owner/full-chain regressions
+await restored desktop input. Broader six-control acceptance remains incomplete.
+The GREEN run closes without assistance, restores settings, preserves five
+package/215 tooling hashes and has no Excel Application failure events.
 See `tests/integration/plan022_slice4be_production_designer_results.md` in the code
 repository for exact candidate scope and remaining gates.
 
