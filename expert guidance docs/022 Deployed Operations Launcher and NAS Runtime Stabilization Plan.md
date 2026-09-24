@@ -2,6 +2,32 @@
 
 **Status:** Current corrective implementation plan
 
+**Current D8-A implementation evidence, 2026-09-24:** On isolated candidate
+`validation-auth-read-separated`, ordinary Auth reads now use existing exact-context
+authority without provisioning, schema repair or saves. Focused packaged RED is
+60 PASS / 22 expected FAIL; GREEN is 82/82 with all identities retained and five
+instrumented compiles. Healthy authority/custom values, TTL behavior, denied
+Settings mutation, explicit provisioning and the D2 credential-authorized station
+transition are protected. Existing headless bootstrap binding is retained through
+the explicit Core root and matching validated Config; arbitrary discovery is removed.
+All five package builds/compiles and Operations cold start pass; only Core/modAuth
+changes among 244 compiled components. The reconciled Phase 6 unit passes 1/1.
+Full-chain/live-role/Create Warehouse pass 32/48/15 with exact prior identities,
+normal closure, restored settings/reports, preserved packages/tooling and zero
+Application failure events. Maintenance metrics decrease by three procedures,
+53 lines and two duplicate-body candidates, with no dynamic-call growth.
+Broader Shipping/Boxing reaches 1630 PASS / three FAIL, with 82 prior checks
+unreached. All seven Auth-recreation failures now pass through actual handlers.
+Two tests still require the superseded Event Detail Locked=True setting; the
+third is an owned-caption capture exception. Sixteen images are reviewed.
+Cleanup requires termination of the completed test host and residual disposable
+Excel; settings are restored and package/tooling pins preserved. Normal shutdown
+is not accepted. Reconcile the stale probe with approved D18 and isolate capture
+failure before a broad retry. Multiline and comprehensive Slice 4be remain open. See
+[D8-A evidence](../../invSys_fork/tests/integration/plan022_slice4be_auth_read_results.md).
+This entry supersedes implementation-pending wording in earlier checkpoints;
+it implements the approved specification without introducing a new contract.
+
 **Current decision update, 2026-09-24 -- Slice 4be:** The user approved the
 Architecture v4.11 D8-A Auth read/provisioning separation and D18 Event Detail
 selection/scrolling amendments. This supersedes pending/unapproved wording in

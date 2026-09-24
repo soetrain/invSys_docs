@@ -1,6 +1,29 @@
 # invSys Form Controls v1
 
-**Version:** 1.241 (Event Detail native scrolling GREEN; D8-A implementation and broader acceptance pending)
+**Version:** 1.242 (approved D8-A packaged GREEN; broader acceptance pending)
+
+**Approved D8-A implementation, 2026-09-24:** Candidate
+`validation-auth-read-separated` passes focused packaged 82/82 after 60 PASS /
+22 expected FAIL. Ordinary Load/Reload, sign-in and capability refresh refuse
+missing, invalid or unreadable exact-context Auth without creating, repairing or
+saving authority. The actual Admin Settings Save handler denies mutation with
+missing authority and leaves that file absent. Healthy open/dirty workbooks,
+custom columns, valid TTL, explicit provisioning and the D2 credential-authorized
+station transition remain protected. No form control is added or repurposed.
+All five packages build/compile; only Core/modAuth changes among 244 components.
+The updated unit passes 1/1 and full-chain/live-role/Create Warehouse pass
+32/48/15, with exact previous identities, normal closure, settings/report
+restoration, preserved packages/tooling and zero Application failure events.
+Maintenance metrics do not grow. Broader Shipping/Boxing reaches 1630 PASS /
+three FAIL; all seven historical Auth-recreation checks now pass. Two stale
+tests require the superseded Locked=True setting; an owned-caption capture
+exception leaves 82 previous checks unreached. Sixteen images are reviewed.
+Completed-host and residual-Excel termination are required; settings restore,
+but normal shutdown is not accepted. Reconcile the probe and isolate capture
+failure before a broad retry; do not weaken the approved read-only contract.
+This supersedes implementation-pending wording below, without promoting older
+visible evidence to a new candidate. Multiline and full Slice 4be acceptance
+remain open. See [D8-A evidence](../../../invSys_fork/tests/integration/plan022_slice4be_auth_read_results.md).
 
 **Approved Event Detail implementation, 2026-09-24:** The isolated
 `validation-approved-detail-scroll` candidate passes focused native-input GREEN
