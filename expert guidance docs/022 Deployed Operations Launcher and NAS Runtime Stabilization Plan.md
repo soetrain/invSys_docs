@@ -24,6 +24,32 @@ form edits and the 390/390 Production diagnostic GREEN; compile, packaged,
 static, layout, live-role, full-chain and visible acceptance remain required.
 Approval is recorded; neither amendment is implemented or accepted by this entry.
 
+**Subsequent Event Detail implementation, 2026-09-24:** Fresh packaged RED on the
+Production diagnostic candidate records 43 PASS / one expected native movement
+FAIL; GREEN on `validation-approved-detail-scroll` passes 44/44 with every prior
+identity retained. The approved runtime change is solely lstEventFields.Locked
+to False; the pre-existing font-measurement edit is preserved. A native typing
+probe protects non-editability, and four reviewed captures show the formerly
+clipped Coverage ending reachable at the right edge. Five package compiles,
+Operations cold start and the 244-component comparison pass (only frmEventDetail
+changes). Both focused runs close without assistance, restore settings and preserve
+package/source evidence, with zero audited Excel Application failure events.
+Multiline rendering, D8-A implementation and broader candidate acceptance remain
+open. See the code repository's `plan022_slice4be_detail_overflow_results.md`.
+
+The approved Detail candidate subsequently retains Viewer **98/98** and owner
+**460/460**, plus full-chain/live-role/Create Warehouse **32/48/15** with exact
+prior identities, normal unassisted closure and unchanged packages. The chain
+restores settings/three reports, preserves 273 tooling hashes and records zero
+Application failures. Static metrics are unchanged. Viewer images are reviewed;
+owner review finds 16 clean images, four taskbar overlays and three incorrect
+dialog crops. The latter seven do not count as clean visual acceptance. Production
+subsequently passes 390/390 with ten reviewed images and five instrumented compiles,
+normal delayed closure, restored settings, unchanged packages and zero Application
+failures. Its controller now uses the existing bounded pre-dispatch readiness
+observation, with no command replay. Earlier partial attempts remain preserved;
+these results do not close comprehensive Production tracking or the full slice.
+
 **Created:** 2026-07-28
 **Applies to:** invSys Architecture v4.11, especially D2, D3, D12-D14, the
 operator deployment model, and Phase 6 saved-workbook acceptance
