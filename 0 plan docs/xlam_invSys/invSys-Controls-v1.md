@@ -1,6 +1,23 @@
 # invSys Form Controls v1
 
-**Version:** 1.243 (Boxing probe reconciled; isolated GREEN, broader capture failure retained)
+**Version:** 1.244 (caption failure localized; multiline value-preservation test required)
+
+**Caption lifecycle diagnosis, 2026-09-24:** Developer capture tooling now rejects
+offscreen candidates and verifies cursor positioning before input. Eight disposable
+cases pass: seven reviewed captures and the expected offscreen rejection, with
+original topmost state restored and normal closure. No product control or package
+changes. The complete Shipping/Boxing diagnostic remains 1632 PASS / one capture
+failure, with 82 checks unreached. Its owned form is on-screen and not cloaked;
+the successful native raise call leaves it below VS Code and all three hit tests
+resolve there. GDI use is 816 at failure (930 peak), not quota exhaustion.
+Underlying z-order cause remains unresolved. Host/Excel termination is required;
+original settings restore and package/tooling hashes hold, with zero Application
+failures. Sixteen new diagnostic images are not claimed as accepted visual evidence.
+Multiline work must also protect literal escape sequences through the actual
+published Viewer path: static source/algorithm inspection identifies a decoding
+risk but is not packaged D13 RED. The focused product work can proceed while
+broader capture/normal-shutdown gates remain open. See
+[diagnostic evidence](../../../invSys_fork/tests/integration/plan022_slice4be_capture_lifecycle_results.md).
 
 **Event Detail probe and capture verification, 2026-09-24:** The stale Boxing
 read-only probe is reconciled with approved D18: non-editable ListBox cells allow

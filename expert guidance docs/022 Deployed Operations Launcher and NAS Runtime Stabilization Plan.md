@@ -2,6 +2,27 @@
 
 **Status:** Current corrective implementation plan
 
+**Current caption diagnosis, 2026-09-24:** The capture helper rejects offscreen
+points before input and verifies cursor coordinates; eight disposable calibration
+cases pass with seven reviewed images and normal closure. No runtime/XLAM or
+architectural change. The full Shipping/Boxing diagnostic remains 1632 PASS / one
+capture exception, preserving all reached identities and leaving 82 checks unreached.
+The owned form is on-screen, enabled and non-cloaked. SetWindowPos returns success
+without changing its topmost/z-order state; all caption candidates hit VS Code.
+GDI use is 816 at failure, peak930. This identifies the failed activation condition
+without proving its underlying cause. Host/Excel termination is required; original
+settings restoration, five package/217 tooling pins and zero Application failures
+are verified. Normal closure and broader acceptance remain open; sixteen produced
+diagnostic images are not new accepted visual evidence. Before alternate raise flags,
+calibrate ownership, native hit tests and restored topmost state. Existing probes
+are installed before forms; a late-install explanation is not established.
+
+Next independent product work is D18 original-value/multiline acceptance: source
+inspection identifies sequential Viewer unescaping that can alter literal backslash
+sequences. Establish actual publication/Viewer/Detail packaged RED before correction;
+retain the broader failure and all other Slice4be requirements. See
+[caption lifecycle evidence](../../invSys_fork/tests/integration/plan022_slice4be_capture_lifecycle_results.md).
+
 **Current probe/capture reconciliation, 2026-09-24:** The broader Boxing test's
 obsolete Locked=True predicate now follows the approved D18 read-only ListBox
 contract. Focused actual-Viewer evidence is 49 PASS / one expected probe FAIL,
