@@ -7130,6 +7130,16 @@ The palette candidate also passes full chain/live roles/Create Warehouse at
 32/48/15 with exact preceding identities, normal unassisted closure, preserved
 settings/reports/package bytes and zero Application failure events.
 
+The 2026-09-24 desktop recheck and three-case blank-form capture calibration
+succeed without elevation; both the shell and Excel use Medium integrity.
+The palette candidate's presentation attempt stops at Create guide fixture
+dispatch (10 PASS/one harness exception), before restart/layout/screenshots.
+Both attempts close normally; settings/package bytes are preserved. Inspect the
+exact fixture return/context before retrying; no runtime or contract change is
+made. Earlier error5 remains unexplained, with console/RDP switching a hypothesis
+only. The layout-stability evidence records these attempts; product visible
+acceptance and the six Slice 4be workstreams remain open.
+
 An older-policy test-envelope mistake is corrected
 without changing the existing fail-closed policy reader. Exact evidence and
 preserved failed attempts are recorded in

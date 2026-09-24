@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.235 (Production requested list heights restored; broader Slice 4be acceptance remains open)
+**Version:** 1.236 (Desktop capture access reverified without elevation; Slice 4be acceptance remains open)
 
 The [remaining Slice 4be acceptance checklist](../../../invSys_fork/tests/integration/plan022_slice4be_remaining_acceptance.md)
 indexes the existing six workstreams and candidate gates. Control-level contracts
@@ -143,6 +143,15 @@ existing reusable harness's cleanup behavior.
 The palette candidate's full chain/live roles/Create Warehouse pass 32/48/15
 with exact prior identities, normal unassisted closure and preserved settings,
 reports and package bytes. Broader Slice 4be and native visible acceptance remain open.
+
+The 2026-09-24 desktop recheck succeeds without elevation, and the separate blank
+fixture calibration captures all three cases with normal closure. The palette
+candidate's presentation attempt stops at Create guide fixture dispatch (10 PASS/
+one harness exception), before restart/layout/screenshots; settings/packages are
+preserved and Excel closes normally. No control contract or product visible
+acceptance changes. Earlier error5 remains unexplained; console/RDP switching is
+a hypothesis. See `tests/integration/plan022_slice4be_layout_stability_results.md`
+in the code repository before retrying that exact fixture boundary.
 
 The 26 Settings controls have an expanded 450/450 actual-handler GREEN after
 141 original failures and five denied-Reload synthetic-selection failures.
