@@ -1,10 +1,21 @@
 # invSys Form Controls v1
 
-**Version:** 1.238 (Production draft diagnostics pass 390 behavioral checks; visible/regression acceptance pending)
+**Version:** 1.239 (Production source coverage accounted; 390 diagnostic checks retained, broader acceptance pending)
 
 The [remaining Slice 4be acceptance checklist](../../../invSys_fork/tests/integration/plan022_slice4be_remaining_acceptance.md)
 indexes the existing six workstreams and candidate gates. Control-level contracts
 and acceptance remain in this catalog; the checklist introduces no new approval.
+
+The [Production form tracking coverage audit](invSys-Production-Tracking-Coverage-v1.md)
+accounts for 68 constructed buttons: seven registered tracking IDs and 61 pending
+observation contracts. It lists each exact caption, control and handler, separates
+14 unconstructed Recipe Builder buttons, and identifies 34 non-button handlers
+for reachability/semantic review. This is source evidence, not registration,
+runtime behavior, a new permission, or complete Production/Operations coverage.
+The six visible pages, hidden internal connection list, disabled future scaling
+controls and experimental-but-constructed Tree controls remain distinct.
+Architecture v4.11 D18 is unchanged. Lifecycle queue acceptance, projected status
+and exact event application must remain distinct in the next implementation.
 
 The earlier current-candidate comparison attempt records 177 PASS / 8 FAIL with 237
 preceding checks unreached. The actual policy-change interruption assertion

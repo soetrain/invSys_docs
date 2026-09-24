@@ -7141,8 +7141,24 @@ only. The layout-stability evidence records these attempts; product visible
 acceptance and the six Slice 4be workstreams remain open.
 
 Current Production coverage group: D18's six designer-draft observations (catalog12,
-acceptance incomplete). Process/Recipe New and Clear report local STAGED;
-Their fixed captions must match the existing buttons: New Process, Clear,
+acceptance incomplete). Process/Recipe New and Clear report local STAGED.
+
+The subsequent source-only census in
+`0 plan docs/xlam_invSys/invSys-Production-Tracking-Coverage-v1.md` accounts for
+all 82 AddButton constructions: 68 on six constructed pages/shared Close and
+14 in the uncalled Recipe Builder constructor. Seven constructed buttons map to
+registered tracking IDs; 61 remain pending. It also separates 34 non-button
+handlers, hidden/unconstructed helpers, disabled future controls and page
+selection with no current handler. This is coverage accounting under unchanged
+D18, not new catalog registration or runtime acceptance. Future grouped work must
+preserve owner boundaries: local draft/selection, lifecycle queue/correlation,
+worksheet/Config, run/inventory and launcher/context. In particular, the current
+SubmitReusableDesignEvent Boolean combines queueing and expected projected status;
+do not infer exact submitted-event application from it, a batch applied count,
+or status text. The existing queue boundary supplies an exact event ID that must
+remain separately correlated through later processing/projection failure.
+
+The six draft controls' fixed captions match the existing buttons: New Process, Clear,
 Validate; New Recipe, Clear, Validate Recipe. Packaged adapters compare catalog
 metadata against those actual controls before the observation checks.
 Validate reports VALIDATED or REJECTED, never saved/Domain-applied completion.
