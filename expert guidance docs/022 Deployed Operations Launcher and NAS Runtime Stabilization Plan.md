@@ -2,6 +2,23 @@
 
 **Status:** Current corrective implementation plan
 
+**Current original-value correction, 2026-09-24:** Slice 4be.3 restores the
+existing D18 published-text contract. The packaged test records 52 PASS / four
+expected FAIL, then 56/56 through Operations/Admin Viewer and actual Detail line
+selection, retaining all preceding 50 checks. Literal backslash escapes and real
+line breaks/tabs/Unicode remain exact after a single-pass decoder correction.
+Both runs close normally, restore settings and preserve source/package evidence;
+four Detail images are reviewed. All five packages build/compile, with only the
+Viewer form changed among 244 components. There is no new architectural contract.
+Viewer regression retains 98/98 with three reviewed captures. The unchanged-
+candidate chain retry passes 32/48/15, with normal closure, restored settings/
+reports and no Application failures; static/layout gates pass. The initial
+chain attempt's Excel/ntdll crash, incomplete checks and assisted recovery cleanup
+remain recorded. Its cause is not established by the later successful retry.
+Complete multiline rendering remains the next independent acceptance item; the
+broader Shipping/Boxing caption and shutdown failures remain open. See
+[original-text evidence](../../invSys_fork/tests/integration/plan022_slice4be_original_text_results.md).
+
 **Current caption diagnosis, 2026-09-24:** The capture helper rejects offscreen
 points before input and verifies cursor coordinates; eight disposable calibration
 cases pass with seven reviewed images and normal closure. No runtime/XLAM or
@@ -17,7 +34,7 @@ diagnostic images are not new accepted visual evidence. Before alternate raise f
 calibrate ownership, native hit tests and restored topmost state. Existing probes
 are installed before forms; a late-install explanation is not established.
 
-Next independent product work is D18 original-value/multiline acceptance: source
+At that checkpoint, next independent product work was D18 original-value/multiline acceptance: source
 inspection identifies sequential Viewer unescaping that can alter literal backslash
 sequences. Establish actual publication/Viewer/Detail packaged RED before correction;
 retain the broader failure and all other Slice4be requirements. See

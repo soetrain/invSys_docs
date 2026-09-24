@@ -1,6 +1,24 @@
 # invSys Form Controls v1
 
-**Version:** 1.244 (caption failure localized; multiline value-preservation test required)
+**Version:** 1.245 (original event text preserved through Operations/Admin Viewer)
+
+**Original event text, 2026-09-24:** Slice 4be.3 restores D18's existing value
+contract with a single-pass Viewer decoder. Actual publication and form selection
+record 52 PASS / four expected FAIL, then 56/56; all preceding 50 checks remain.
+Literal escape text and real CRLF/LF/CR, tabs, Unicode and mixed text preserve
+their exact values in Operations and Admin. Both runs close normally, restore
+settings and preserve packages/source bytes. Four Detail images are reviewed;
+native scrolling, non-editability, profile restrictions and context invalidation
+remain protected. All five candidate packages compile; only the Viewer form
+changes among 244 components. No control or authority contract changes.
+Viewer regression retains 98/98 with three reviewed images. Current-candidate
+chain/live-role/Create Warehouse pass 32/48/15 on an unchanged-candidate retry,
+with normal closure, restored settings/reports and no Application failures. The
+first attempt's Excel/ntdll crash and assisted recovery cleanup remain recorded;
+the underlying crash cause is unproven. Static/layout gates pass without growth
+in dynamic calls, duplicate groups or oversized-module limits.
+Complete multiline readability and the broader capture/shutdown gates remain
+open. See [original-text evidence](../../../invSys_fork/tests/integration/plan022_slice4be_original_text_results.md).
 
 **Caption lifecycle diagnosis, 2026-09-24:** Developer capture tooling now rejects
 offscreen candidates and verifies cursor positioning before input. Eight disposable
@@ -4565,6 +4583,12 @@ identities remain Unavailable and are not grouped together.
 | `lstEventFields` | Read-only caption/value list following the saved profile's enabled fields and order. Approved 2026-09-24: `Locked=False` is implemented solely for selection and native scrolling; values remain non-editable. Required identity, source, time provenance, coverage, uncertainty and guidance remain visible. Complete permitted single-line text is reachable using native horizontal scrolling when wider than the viewport, with minimum/larger/maximized/restored geometry protected. Fresh RED 43 PASS / one expected movement FAIL; GREEN 44/44 with four reviewed captures, unchanged values/source bytes and a native typing preservation check. Broader candidate and human acceptance remain open. Multiline rendering needs separate evidence. Scrolling remains excluded window mechanics. Raw Note and unknown user columns are excluded. |
 | `lblDetailStatus` | Read-only line count or fixed context-loss guidance; field freshness identifies retained Stale data after failed Refresh. |
 | `btnClose` | **Close** releases the detail instance without changing source workbooks. |
+
+Original-value preservation is additionally protected by the 2026-09-24 packaged
+56/56 gate (after 52 PASS / four expected FAIL): literal escape sequences and
+actual line breaks/tabs/Unicode remain exact in this list for Operations and
+Admin. The decoder fix does not establish complete multiline visual readability.
+See [original-text evidence](../../../invSys_fork/tests/integration/plan022_slice4be_original_text_results.md).
 
 Default/minimum size is 820 × 640 points. The line selector stretches horizontally;
 the field list grows with the form and Close stays at the lower right. Packaged
