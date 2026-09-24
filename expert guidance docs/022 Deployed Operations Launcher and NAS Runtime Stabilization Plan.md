@@ -2,6 +2,52 @@
 
 **Status:** Current corrective implementation plan
 
+**Active 4be.1 lifecycle coverage, 2026-09-24:** Architecture D18 now specifies
+the six Process/Recipe Save Draft, Release and Obsolete controls for catalog13,
+preserving versions1-12. Register explicit owner submission/completion facts and
+Designs references; CONFIRMED means command completion with Unknown Domain effect.
+Only matching complete published Designs application evidence can satisfy
+SourceEventsApplied. No status-message parsing or inference from current definition
+status. First establish packaged missing-observation RED through all six real
+handlers on the frozen header candidate, then implement and test each outcome,
+context/capability guard and published/recorded/diagnostic route. Preserve all
+earlier GREENs and the owner boundaries. This is discovered-control refinement
+under the approved semantic-inheritance rule, not an authority amendment.
+
+The first implementation checkpoint passes294/294 after139 PASS/155 expected
+RED failures. It registers six controls and preserves the previous68 definitions;
+actual successful, denied/rejected and stale target/session routes are covered.
+Published/recorded Designs conclusions, native cancellation, failure/pending,
+tracking-off/re-entrancy and closed-workbook fixture evidence remain open. Five
+package compiles/cold start and layout8/8+7/7 pass. See
+[lifecycle evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_lifecycle_results.md).
+
+**Reviewed static exception for this checkpoint only:** duplicate-body groups
+increase191->192 because the scanner replaces string literals in the two
+`ControlIds` functions in `modProductionDraftCodes` and
+`modProductionLifecycleCodes`. These return intentionally disjoint, versioned
+fixed lists, protected by all68 historical-definition comparisons and catalog13's
+exact74 unique IDs. This literal-only match does not justify merging the lists or
+deleting a callback. Permit that one named group; no general duplicate-growth
+waiver. New catalog/facts ownership adds two small components/eight procedures,
+net121 source lines. All28 oversized limits hold (Production form11745->11743,
+writer3035->3020); dynamic calls remain9 literal/45 unresolved. The six thin click
+handlers join existing callback groups and require their separate MSForms events.
+
+Current candidate retains smoke86/86 and headless Settings202/202. The required
+full chain remains unaccepted: two candidate attempts and the frozen predecessor
+stop with RPC800706BE at inventory projection rebuilding (chain5/1, live32/1,
+warehouse creation15/15). Verified recovery Excel termination lets the original
+controllers restore settings/reports. Reusable Production also stops on RPC800706BE
+before its aggregate observations. The predecessor comparison does not prove a
+cause or waive either gate. Native cursor error5 returned; no policy was changed
+and no new capture is accepted. Continue independent lifecycle tests while desktop
+availability and the separate runtime failure remain unresolved.
+Earlier draft/recording/publication/diagnostic regression retains390/390 with
+delayed normal unassisted exit; the planned recovery finds Excel already absent
+and does not execute. Preserve that distinction from the assisted chain recovery.
+No native capture or new lifecycle Action Path is accepted by this regression.
+
 **Production header correction, 2026-09-24:** Slice4be.6 protects existing Run
 List readability with packaged RED16 PASS/four expected caption-fit FAIL, then
 20/20 GREEN on `validation-production-header`. Only the Committed / Used column

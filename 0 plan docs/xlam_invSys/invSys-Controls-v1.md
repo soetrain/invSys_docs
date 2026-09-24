@@ -1,6 +1,50 @@
 # invSys Form Controls v1
 
-**Version:** 1.248 (Production Inventory Check heading readability)
+**Version:** 1.249 (Production lifecycle observations; partial packaged GREEN)
+
+**Production lifecycle coverage, 2026-09-24:** The six existing designer buttons
+below inherit Architecture D18's explicit lifecycle owner contract. OwnerId
+`PRODUCTION_DESIGN_LIFECYCLE`, role Production, class Command; existing PROD_POST
+or ADMIN_MAINT capability. Catalog13 preserves1-12. The lifecycle candidate now
+registers these controls: focused RED139 PASS/155 expected FAIL becomes294/294
+through actual handlers, fixed metadata, exact Designs references, pre-write
+denial/rejection and stale target/session guards. Acceptance remains incomplete.
+
+| Existing handler | Caption | ControlId |
+|---|---|---|
+| `mBtnProcessSave_Click` | Save Draft | `PRODUCTION_PROCESS_SAVE` |
+| `mBtnProcessRelease_Click` | Release | `PRODUCTION_PROCESS_RELEASE` |
+| `mBtnProcessObsolete_Click` | Obsolete | `PRODUCTION_PROCESS_OBSOLETE` |
+| `mBtnRecipeSave_Click` | Save Draft | `PRODUCTION_RECIPE_SAVE` |
+| `mBtnRecipeRelease_Click` | Release | `PRODUCTION_RECIPE_RELEASE` |
+| `mBtnRecipeObsolete_Click` | Obsolete | `PRODUCTION_RECIPE_OBSOLETE` |
+
+Surface is Operations > Production > Process Designer / Recipe Designer.
+REQUESTED/FAILED retain Unknown effect; pre-write REJECTED/DENIED and declined
+confirmation CANCELLED retain Unchanged. PENDING/CONFIRMED retain Unknown effect
+and exact Submitted Designs references. FAILED preserves genuinely attempted
+Submitted/Unknown references. No entered design text or definition IDs enter
+activity records. Only CONFIRMED is positive CommandCompleted; SourceEventsApplied
+requires the complete matching published Designs group under D18. Actual handler,
+context/capability, failure/cancellation, policy, publication, both Action Path
+methods and visible evidence remain required. Native cancellation, uncertain/pending
+owner failures, tracking-off/re-entrancy, closed-workbook protection and both Action
+Path methods are not established by that GREEN. The closed-workbook test attempt
+encountered a fixture automation error and is not product RED or acceptance.
+See [lifecycle evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_lifecycle_results.md).
+No new button or permission grant.
+
+Current-candidate smoke86/86 and headless Settings202/202 pass. Full-chain/live-role
+acceptance is open: two candidate attempts and the frozen predecessor each fail
+with RPC800706BE during inventory projection rebuilding (chain5/1, live32/1,
+Create Warehouse15/15), requiring assisted recovery. Reusable Production also
+stops before its aggregate observations. Cursor error5 returned; no new visible
+acceptance is claimed. These failures do not invalidate earlier scoped records,
+but those records do not accept the lifecycle candidate.
+The existing draft/recording/publication/diagnostic regression retains390/390;
+Excel exits normally after a delay, before any recovery executes. Settings and
+package hashes restore. No new lifecycle Action Path or capture acceptance follows
+from this earlier-family regression.
 
 **Production header correction, 2026-09-24:** `hdrManagerCheck8` retains
 **Committed / Used**, with its shared list/header column widened from72 to100

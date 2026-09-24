@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.0. Last reviewed: 2026-09-24 UTC, code `9cf03db`.
+Version 1.1. Last reviewed: 2026-09-24 UTC, lifecycle observation checkpoint.
 Subordinate to Architecture v4.11 D18, Plan022 and `invSys-Controls-v1.md`.
 This is reviewed source reachability/evidence accounting, not a new runtime
 contract, catalog version, permission grant or acceptance claim. D13 behavioral
@@ -13,16 +13,21 @@ still requires its exact owner contract and packaged-handler RED before edits.
 constructs six pages through BuildLayout and one shared Close button. It contains
 82 AddButton constructions: **68 constructed buttons with Click handlers** and
 **14 buttons confined to the uncalled BuildRecipeBuilderPage**. All 82 are
-accounted for below. The existing activity catalog contains seven IDs mapped to
-these 68 buttons: the six draft controls and UOM Retrieve. **61 constructed button
+accounted for below. Catalog13 contains thirteen IDs mapped to
+these 68 buttons: six draft controls, six lifecycle controls and UOM Retrieve. **55 constructed button
 actions still require registered observation contracts and implementation.**
 Registration is not full acceptance: the six draft controls pass 390 behavioral
 checks but retain the visible/owner/full-chain gates recorded in the controls
 catalog. Existing UOM evidence retains its recorded candidate scope.
+The six lifecycle controls pass294/294 after packaged RED139/155, but retain
+failure/cancellation, policy, closed-workbook, publication, recording, both
+Action Path methods and visible acceptance work. See
+[lifecycle evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_lifecycle_results.md).
 
 The census checks construction and handler binding, not current enabled state
-or successful workflow execution. No business action, workbook, add-in or printer
-was opened or executed. A lexical Click/Change name alone does not prove operator
+or successful workflow execution. The original census performed no business
+action; subsequent lifecycle evidence uses disposable packaged fixtures.
+A lexical Click/Change name alone does not prove operator
 reachability. Legacy construction, hidden controls and user versus programmatic
 events are handled separately below. Ribbon/worksheet launchers and other forms
 remain outside this form census and still require their own complete accounting.
@@ -57,21 +62,21 @@ from permission to stage or export a catalog worksheet.
 | `btnProcessInstructionUpdate` | Update | `mBtnProcessInstructionUpdate_Click` | Pending |
 | `btnProcessLoad` | View Process | `mBtnProcessLoad_Click` | Pending |
 | `btnProcessNew` | New Process | `mBtnProcessNew_Click` | `PRODUCTION_PROCESS_NEW` |
-| `btnProcessObsolete` | Obsolete | `mBtnProcessObsolete_Click` | Pending |
+| `btnProcessObsolete` | Obsolete | `mBtnProcessObsolete_Click` | `PRODUCTION_PROCESS_OBSOLETE` (partial) |
 | `btnProcessOutputAdd` | Add | `mBtnProcessOutputAdd_Click` | Pending |
 | `btnProcessOutputDown` | Down | `mBtnProcessOutputDown_Click` | Pending |
 | `btnProcessOutputRemove` | Remove | `mBtnProcessOutputRemove_Click` | Pending |
 | `btnProcessOutputUp` | Up | `mBtnProcessOutputUp_Click` | Pending |
 | `btnProcessOutputUpdate` | Update | `mBtnProcessOutputUpdate_Click` | Pending |
 | `btnProcessRefresh` | Refresh | `mBtnProcessRefresh_Click` | Pending |
-| `btnProcessRelease` | Release | `mBtnProcessRelease_Click` | Pending |
+| `btnProcessRelease` | Release | `mBtnProcessRelease_Click` | `PRODUCTION_PROCESS_RELEASE` (partial) |
 | `btnProcessRequirementAdd` | Add | `mBtnProcessRequirementAdd_Click` | Pending |
 | `btnProcessRequirementDown` | Down | `mBtnProcessRequirementDown_Click` | Pending |
 | `btnProcessRequirementRemove` | Remove | `mBtnProcessRequirementRemove_Click` | Pending |
 | `btnProcessRequirementUp` | Up | `mBtnProcessRequirementUp_Click` | Pending |
 | `btnProcessRequirementUpdate` | Update | `mBtnProcessRequirementUpdate_Click` | Pending |
 | `btnProcessReuse` | Edit as New Version | `mBtnProcessReuse_Click` | Pending |
-| `btnProcessSave` | Save Draft | `mBtnProcessSave_Click` | Pending |
+| `btnProcessSave` | Save Draft | `mBtnProcessSave_Click` | `PRODUCTION_PROCESS_SAVE` (partial) |
 | `btnProcessValidate` | Validate | `mBtnProcessValidate_Click` | `PRODUCTION_PROCESS_VALIDATE` |
 | `btnProcessWorksheetAddAlternative` | Add Acceptable Item | `mBtnProcessWorksheetAddAlternative_Click` | Pending |
 | `btnProcessWorksheetCreate` | Send Process to Sheet | `mBtnProcessWorksheetCreate_Click` | Pending |
@@ -90,11 +95,11 @@ from permission to stage or export a catalog worksheet.
 | `btnRecipeMoveDown` | Move Down | `mBtnRecipeMoveDown_Click` | Pending |
 | `btnRecipeMoveUp` | Move Up | `mBtnRecipeMoveUp_Click` | Pending |
 | `btnRecipeNew` | New Recipe | `mBtnRecipeNew_Click` | `PRODUCTION_RECIPE_NEW` |
-| `btnRecipeObsolete` | Obsolete | `mBtnRecipeObsolete_Click` | Pending |
+| `btnRecipeObsolete` | Obsolete | `mBtnRecipeObsolete_Click` | `PRODUCTION_RECIPE_OBSOLETE` (partial) |
 | `btnRecipeRefresh` | Refresh | `mBtnRecipeRefresh_Click` | Pending |
-| `btnRecipeRelease` | Release | `mBtnRecipeRelease_Click` | Pending |
+| `btnRecipeRelease` | Release | `mBtnRecipeRelease_Click` | `PRODUCTION_RECIPE_RELEASE` (partial) |
 | `btnRecipeRemoveProcess` | Remove Process | `mBtnRecipeRemoveProcess_Click` | Pending |
-| `btnRecipeSave` | Save Draft | `mBtnRecipeSave_Click` | Pending |
+| `btnRecipeSave` | Save Draft | `mBtnRecipeSave_Click` | `PRODUCTION_RECIPE_SAVE` (partial) |
 | `btnRecipeUpdateConnection` | Update | `mBtnRecipeUpdateConnection_Click` | Pending |
 | `btnRecipeValidate` | Validate Recipe | `mBtnRecipeValidate_Click` | `PRODUCTION_RECIPE_VALIDATE` |
 

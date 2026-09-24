@@ -324,6 +324,67 @@ may still read an authored guide, whose provenance remains visible.
 
 **What is tracked and published:**
 
+**4be.1 Production lifecycle observations (implementation in progress):** Under the
+existing discovered-control and owner-evidence rules, catalog13 adds exactly
+`PRODUCTION_PROCESS_SAVE`, `PRODUCTION_PROCESS_RELEASE`,
+`PRODUCTION_PROCESS_OBSOLETE`, `PRODUCTION_RECIPE_SAVE`,
+`PRODUCTION_RECIPE_RELEASE`, and `PRODUCTION_RECIPE_OBSOLETE`, preserving
+versions1-12. OwnerId is `PRODUCTION_DESIGN_LIFECYCLE`, role Production, class
+Command, capability PROD_POST with its existing ADMIN_MAINT alternative. Surfaces
+are Operations > Production > Process Designer / Recipe Designer. Captions remain
+Save Draft, Release and Obsolete; EventCode is ControlId + `_` + OutcomeCode.
+Only the actual user handlers observe these actions; shared submission helpers,
+worksheet imports, setup and programmatic refresh are not additional clicks.
+
+Require the live captured operator workbook and unchanged target/session before
+draft identity generation, validation, confirmation or submission; check current
+capability before mutation. Recheck context after confirmation and other yielding
+boundaries. Current-context denial is observable; stale context must not emit
+under a replacement binding. Tracking-off/failure cannot block an otherwise
+authorized workflow. Do not persist names, descriptions, payloads, entered notes,
+paths or generated definition/component identities in activity records.
+
+REQUESTED is Info/Unknown. REJECTED is Warning/Unchanged for confirmed local
+pre-submission validation; DENIED is Blocked/Unchanged; CANCELLED is
+Notice/Unchanged for declining Release/Obsolete confirmation. Those four outcomes
+have empty references. PENDING is Notice/Unknown after confirmed submission when
+the existing processing/projection/refresh command does not finish successfully.
+CONFIRMED is Info/Unknown when that owning command finishes successfully; it is
+not proof that this event changed Designs. FAILED is Error/Unknown and retains
+any possibly submitted event identity with its actual submission state. Never
+parse report text, counts or current definition status to claim Domain application.
+
+SourceEventRefs uses the existing four-field envelope with registered SourceKind
+`Designs` for these six controls. Preserve the exact generated EventId and captured
+warehouse. PENDING/CONFIRMED require a nonempty Submitted reference; FAILED may
+retain Submitted or Unknown only when the owner reached a write attempt. Do not
+invent a source ID after failure or record an unused pre-write generated ID.
+Inventory references remain invalid for these controls, and Designs references
+remain invalid for existing Inventory controls. Unknown fields, duplicate IDs,
+unsupported sources/states and cross-warehouse references remain rejected.
+The owning submission path exposes typed local facts and declared primitive
+cross-package results; canonical business-event schemas stay unchanged.
+
+For these exact six controls, only CONFIRMED is a positive CommandCompleted fact.
+SourceEventsApplied still requires every exact referenced event in an available
+owning published source. Designs applied evidence requires a complete nonempty
+Designs Business event group: each contributing line has its exact EventID,
+matching WarehouseId, nonempty AppliedAtUTC and positive integer AppliedSeq,
+and matches its corresponding published outcome. Retain complete line count/hash;
+SystemKeys is empty for Designs, with no invented inventory identity. A current
+Process/Recipe status, another event, submission or processor count is insufficient.
+Missing submitted IDs yield Awaiting only with complete available Designs coverage;
+unavailable/omitted required evidence remains Incomplete. Reads/evaluation never
+open authority, process queues or publish. Imported origin evidence stays origin-only.
+
+Required D13 evidence includes all six actual packaged handlers, fixed metadata,
+retained catalog versions, confirmed/pending/uncertain references, denied/rejected/
+cancelled outcomes, tracking-off, re-entrancy and stale target/session/workbook
+guards; preserve unknown workbook columns and existing local-draft semantics.
+Published Events, recording, How-To/Diagnostic and Designs applied/awaiting/
+incomplete cases require their own packaged evidence before acceptance. This
+clarifies discovered controls under D18; it does not change permissions or authority.
+
 **4be.1 Production designer draft observations (implementation in progress):** The
 reachable Process Designer and Recipe Designer New, Clear and Validate handlers
 inherit the observation/context rules above. Catalog 12 adds
