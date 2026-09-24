@@ -1,6 +1,20 @@
 # invSys Form Controls v1
 
-**Version:** 1.247 (Production palette scoped captures and focused normal shutdown)
+**Version:** 1.248 (Production Inventory Check heading readability)
+
+**Production header correction, 2026-09-24:** `hdrManagerCheck8` retains
+**Committed / Used**, with its shared list/header column widened from72 to100
+points so the caption fits one line. Packaged RED16 PASS/four expected fit FAIL
+becomes20/20; every preceding palette/launcher/shutdown check remains passing.
+Four reviewed sizes show the full heading, clear adjacent headings and eight
+palette rows without overlays. No identity, row count, authority or workflow
+change. This resolves the clipped-heading item from the preceding checkpoint;
+human/full-workflow visible acceptance remains separate. Five builds/compiles,
+cold start, layout8/8+7/7 and static checks pass. See
+[header evidence](../../../invSys_fork/tests/integration/plan022_production_header_results.md).
+The header candidate also passes chain/live-role/Create Warehouse32/48/15 with
+normal closure, broader reusable Production with67 unchanged Boolean observations
+and smoke86/86. Reusable/smoke cleanup does not establish unassisted exit.
 
 **Production palette evidence, 2026-09-24:** The unchanged current multiline
 candidate passes 16/16 after captured predecessor RED 12 PASS/four expected

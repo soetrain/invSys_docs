@@ -2,6 +2,22 @@
 
 **Status:** Current corrective implementation plan
 
+**Production header correction, 2026-09-24:** Slice4be.6 protects existing Run
+List readability with packaged RED16 PASS/four expected caption-fit FAIL, then
+20/20 GREEN on `validation-production-header`. Only the Committed / Used column
+width changes, preserving caption, shared header/list alignment and every prior
+palette/launcher/shutdown check. Four reviewed minimum/default/native-maximize/
+restored images show the full caption and eight rows without overlays. All five
+builds/compiles, cold start, layout8/8+7/7 and unchanged static metrics pass.
+See [header evidence](../../invSys_fork/tests/integration/plan022_production_header_results.md)
+for remaining regression and acceptance scope. This restores the existing contract;
+it introduces no architectural decision, workflow change or tracking completion.
+Current-candidate chain/live-role/Create Warehouse pass32/48/15 with exact prior
+identities and normal closure. Broader reusable Production retains all67 Boolean
+observations; smoke retains86/86. Settings, reports and package bytes are
+preserved, with zero Application failures. Reusable/smoke unassisted closure
+remains unproven under their existing cleanup helpers.
+
 **Production preservation checkpoint, 2026-09-24:** Slice4be.6 adds guarded
 palette captures and isolated fixture shutdown evidence without runtime or
 contract changes. Captured predecessor RED is 12 PASS/four expected height FAIL;

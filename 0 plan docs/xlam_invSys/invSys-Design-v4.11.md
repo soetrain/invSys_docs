@@ -1190,7 +1190,12 @@ display-only palette rows, not whole-form or human acceptance. The predecessor
 also shows eight short rows; its RED proves requested-height loss, not a clipped
 eighth row. The clipped Inventory Check heading and broader reusable cleanup
 remain separate. This records evidence under the existing contract; see the
-same palette results record for limits and exact runs.
+same palette results record for limits and exact runs. The subsequent header
+correction retains the existing readability contract: packaged RED16 PASS/four
+expected caption-fit FAIL becomes20/20, with four reviewed captures. Widening
+only the existing Committed / Used column preserves its complete caption and
+shared list/header alignment. No workflow or identity changes; exact candidate
+and regression scope are in `tests/integration/plan022_production_header_results.md`.
 The palette candidate's final full chain/live roles/Create Warehouse pass 32/48/15
 with exact preceding identities and normal unassisted closure. Settings, reports,
 package bytes and source pins are preserved; no Application failure events occur.
