@@ -1,1 +1,1 @@
-`097 Production Coverage Accounting and Pending Decisions.md`
+`098 Approved Auth and Event Detail Decisions.md`

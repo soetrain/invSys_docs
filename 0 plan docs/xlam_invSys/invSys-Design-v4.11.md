@@ -5,6 +5,12 @@
 **Author:** Codex  
 **Purpose:** Complete architectural specification for Release 1 (VBA/Excel only).
 
+**Decision update, 2026-09-24:** The user approved D8-A Auth read/provisioning
+separation and D18 Event Detail selection/scrolling. The operative requirements
+below supersede earlier pending-approval checkpoint wording in this document,
+Plan 022 and the controls catalog. Approval is not implementation or acceptance;
+all protecting D13 and release gates remain required.
+
 ---
 ## Reference Links
 - `https://www.perplexity.ai/search/https-github-com-soetrain-invs-IL_KZ22YSsW5kMph4kOzxA?preview=1#7`
@@ -1508,7 +1514,7 @@ lines. A transient list selection position is not an event or inventory identity
 The detail surface is read-only, reuses its owned instance, and closes with Viewer.
 Its actions validate the captured context before rendering retained content.
 
-**Horizontal field-value reachability:** The locked caption/value list must make
+**Horizontal field-value reachability:** The read-only caption/value list must make
 each permitted single-line field's complete text reachable at the supported minimum,
 larger, maximized and restored sizes. Size the columns for their rendered text;
 use the list's horizontal scrolling when they exceed the visible width. Retain
@@ -1519,19 +1525,19 @@ rendering under semantic inheritance and introduces no new selection contract.
 This addresses horizontal overflow; it does not make horizontal scrolling alone
 sufficient evidence for complete multiline-field rendering.
 
-**Proposed Event Detail scrolling decision -- approval pending:** A disposable
+**Event Detail scrolling decision -- approved 2026-09-24:** A disposable
 packaged-form comparison found that `lstEventFields.Locked=True` prevents native
 horizontal scrollbar interaction; identical input with `Locked=False` reaches
-the right edge without changing field values. The proposed amendment replaces
-"locked caption/value list" above with "read-only caption/value list" and permits
+the right edge without changing field values. This approved amendment replaces
+the former locked-list requirement with a read-only list requirement and permits
 `lstEventFields.Locked=False` solely for selection and scrolling. Its cells remain
 non-editable ListBox projections: no text editor, persisted selection, authority
 read/write, activity event or workflow action is introduced. Original captions,
 values, ordering, context checks and full-text reachability remain required.
 Packaged D13 must prove native scrolling and unchanged values/source bytes.
-This is an explicit proposed change to the lock requirement, not a Plan 022
-override. **Until the user approves, the current locked-list requirement remains
-in force and runtime unlocking is prohibited.** Multiline rendering remains a
+This is an explicit approved change to the lock requirement, not a Plan 022
+override. Runtime implementation must follow the protecting packaged D13 RED;
+approval alone does not establish successful scrolling. Multiline rendering remains a
 separate open acceptance requirement.
 
 **Contributing-line labels:** `lblDetailLines` reads **Contributing lines - select
@@ -2755,34 +2761,34 @@ Action Path replacement proposal.
 - Capability cache uses TTL; if cache expires and cannot refresh, write operations fail closed.
 - If TTL expires mid-processor-run, finish current run with current cache and refresh before next run.
 
-**Proposed D8-A -- Auth read/provisioning separation (pending user approval):**
-This proposal is not an operative runtime contract. The Shipping access-interruption
+**D8-A -- Auth read/provisioning separation (approved 2026-09-24):**
+This is the operative runtime contract approved by the user. The Shipping access-interruption
 test found that an ordinary permission check recreates a missing Auth workbook
 through `modAuth.LoadAuth` -> `ResolveAuthWorkbook` ->
 `modRuntimeWorkbooks.OpenOrCreateAuthWorkbookRuntime`. Shipping rejects the new
 mutation, but the permission read also creates authority. D5's explicit read-only
 rule governs Config, not Auth; the Phase 6 checked acceptance entry for Config/Auth
 auto-bootstrap does not distinguish ordinary reads from explicit provisioning.
-Removing ordinary Auth bootstrap therefore requires this explicit decision rather
+Removing ordinary Auth bootstrap is authorized by this explicit decision rather
 than a Plan-only inference or treating the new test expectation as authority.
 
-If approved, ordinary Auth Load/Reload, sign-in reads and capability refreshes will
+Ordinary Auth Load/Reload, sign-in reads and capability refreshes must
 open and validate only the existing Auth workbook belonging to the selected trusted
-warehouse. They will not create directories/workbooks, seed users or capabilities,
+warehouse. They must not create directories/workbooks, seed users or capabilities,
 repair schema, format, dirty or save Auth authority. A missing, unreadable or invalid
-Auth source will fail the attempted read/refresh closed; it will not fall back to
+Auth source must fail the attempted read/refresh closed; it must not fall back to
 another warehouse or an arbitrary open lookalike. Existing D8 cache/processor-run
 rules remain unchanged. Explicit Admin Generate Warehouse/Create Warehouse and
 authorized station provisioning retain their separate creation/setup paths.
-The Phase 6 auto-bootstrap entry will then be narrowed to those explicit setup
-paths; this proposal does not authorize recovery of lost credentials or inventory.
+The Phase 6 auto-bootstrap entry is narrowed to those explicit setup
+paths; this decision does not authorize recovery of lost credentials or inventory.
 
 D13 must first prove the ordinary packaged caller's creation/repair failure,
 then protect missing/invalid/unreadable Auth, exact target selection, unchanged
 healthy bytes and unknown columns, denied mutation, explicit provisioning and
 existing sign-in/capability/processor behavior. Shipping's stopped-owner probes
-alone cannot establish that broader Core acceptance. No implementation of D8-A
-is authorized until this pending proposal is approved and recorded as effective.
+alone cannot establish that broader Core acceptance. Approval authorizes test-first
+implementation; it does not turn the existing failures into passing evidence.
 
 ---
 ### D9 -- Operator Read Models and Refresh Contract (R1 Locked)
@@ -4542,7 +4548,8 @@ If any of those are false, LAN architecture may be partially proven, but LAN end
 - [ ] Prove operator-facing global totals remain visibly advisory and are not confused with warehouse-authoritative balances
 
 **Tests:**
-- [x] Test: Config/Auth auto-bootstrap creates and opens canonical `WHx.invSys.Config.xlsb` / `WHx.invSys.Auth.xlsb` runtime workbooks with seeded tables/default rows
+- [x] Historical test: Config/Auth bootstrap created and opened canonical `WHx.invSys.Config.xlsb` / `WHx.invSys.Auth.xlsb` runtime workbooks with seeded tables/default rows. Under approved D8-A, creation/setup is restricted to explicit authorized provisioning; this historical pass does not establish read/provisioning separation.
+- [ ] Test: D8-A ordinary Auth reads validate existing exact-target authority without creation, repair or saves, while explicit authorized provisioning retains setup and existing sign-in/capability/processor behavior passes.
 - [x] Test: Each pre-D12 role/Admin XLAM opens from deployment path with no VBA compile errors and expected workbook surfaces (historical package evidence)
 - [x] Test: Ribbon controls execute against live workbook/table systems without missing-object/runtime failures
 - [ ] Test: The full five-XLAM D12 package loads and remains stable across Excel restart/reopen scenarios

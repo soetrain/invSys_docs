@@ -1,6 +1,29 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
 **Status:** Current corrective implementation plan
+
+**Current decision update, 2026-09-24 -- Slice 4be:** The user approved the
+Architecture v4.11 D8-A Auth read/provisioning separation and D18 Event Detail
+selection/scrolling amendments. This supersedes pending/unapproved wording in
+the historical checkpoints below; their test results retain their original scope.
+Ordinary Core Auth reads must validate existing exact-target authority without
+creation, repair or saves; explicit authorized setup retains provisioning.
+Operations Event Detail may use `lstEventFields.Locked=False` solely for
+selection and native scrolling while its values remain non-editable. Multiline
+readability remains open. These are explicit normative decisions, not Plan-only
+exceptions, and do not change D12 packaging or waive D13.
+
+Next implementation gates: retain the Event Detail native-input RED (42 PASS /
+one expected movement FAIL) and all prior checks through the packaged Viewer
+handler; prove native-scroll GREEN and unchanged values/source bytes. For D8-A,
+first establish focused packaged-caller Core RED protecting missing, invalid and
+unreadable Auth, exact target, healthy bytes/unknown columns, denied mutation,
+explicit setup and existing sign-in/capability/processor behavior. The seven
+Shipping Auth recreation failures supplement that coverage. Preserve unrelated
+form edits and the 390/390 Production diagnostic GREEN; compile, packaged,
+static, layout, live-role, full-chain and visible acceptance remain required.
+Approval is recorded; neither amendment is implemented or accepted by this entry.
+
 **Created:** 2026-07-28
 **Applies to:** invSys Architecture v4.11, especially D2, D3, D12-D14, the
 operator deployment model, and Phase 6 saved-workbook acceptance

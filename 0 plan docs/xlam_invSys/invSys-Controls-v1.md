@@ -1,6 +1,17 @@
 # invSys Form Controls v1
 
-**Version:** 1.239 (Production source coverage accounted; 390 diagnostic checks retained, broader acceptance pending)
+**Version:** 1.240 (D8-A and Event Detail scrolling approved; implementation and acceptance pending)
+
+**User approval recorded, 2026-09-24:** Architecture v4.11 now makes D8-A Auth
+read/provisioning separation and D18 Event Detail selection/scrolling effective.
+This supersedes historical pending-approval wording below without changing any
+recorded test result. Ordinary Auth reads must leave authority unchanged; explicit
+authorized setup retains provisioning. Event Detail may use `Locked=False` solely
+for non-editable selection and scrolling. Its native-input RED remains 42 PASS /
+one expected movement FAIL; GREEN and visible acceptance are still required.
+Multiline readability remains separately open. D8-A requires broader focused
+Core/package coverage beyond the seven existing Shipping failures. No runtime
+change or new acceptance is claimed; the 390/390 Production GREEN is preserved.
 
 The [remaining Slice 4be acceptance checklist](../../../invSys_fork/tests/integration/plan022_slice4be_remaining_acceptance.md)
 indexes the existing six workstreams and candidate gates. Control-level contracts
@@ -4464,7 +4475,7 @@ identities remain Unavailable and are not grouped together.
 | `lblDetailLines` | **Contributing lines - select a line to inspect its fields**. Isolated RED/GREEN, regression/layout and assisted full-chain evidence verified; human/deployed acceptance remains open. |
 | `lstEventLines` | User activity uses original published fixed caption + ` - ` + recorded outcome, with Unavailable for missing values. Other lines keep exact System_Key labels, retaining repeats. Key accessors and cached selection remain unchanged, without another projection/profile read. Isolated regression and visible evidence verified; human/deployed acceptance remains open. |
 | `lblDetailFields` | **Permitted event and selected-line fields**. |
-| `lstEventFields` | Locked caption/value list following the saved profile's enabled fields and order. Required identity, source, time provenance, coverage, uncertainty and guidance remain visible. Complete permitted single-line text must be reachable using native horizontal scrolling when wider than the viewport, at minimum/larger/maximized/restored sizes; the observed fixed-width Coverage clipping correction is entering D13 and is not yet accepted. Multiline rendering needs separate evidence. Scrolling remains excluded window mechanics. Raw Note and unknown user columns are excluded. |
+| `lstEventFields` | Read-only caption/value list following the saved profile's enabled fields and order. Approved 2026-09-24: `Locked=False` is permitted solely for selection and native scrolling; values remain non-editable. Required identity, source, time provenance, coverage, uncertainty and guidance remain visible. Complete permitted single-line text must be reachable using native horizontal scrolling when wider than the viewport, at minimum/larger/maximized/restored sizes. Native-input RED is 42 PASS / one expected movement FAIL; implementation, GREEN and visible acceptance remain pending. Multiline rendering needs separate evidence. Scrolling remains excluded window mechanics. Raw Note and unknown user columns are excluded. |
 | `lblDetailStatus` | Read-only line count or fixed context-loss guidance; field freshness identifies retained Stale data after failed Refresh. |
 | `btnClose` | **Close** releases the detail instance without changing source workbooks. |
 
