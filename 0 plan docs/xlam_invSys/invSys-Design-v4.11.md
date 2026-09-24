@@ -318,6 +318,41 @@ may still read an authored guide, whose provenance remains visible.
 
 **What is tracked and published:**
 
+**4be.1 Production designer draft observations (implementation in progress):** The
+reachable Process Designer and Recipe Designer New, Clear and Validate handlers
+inherit the observation/context rules above. Catalog 12 adds
+`PRODUCTION_PROCESS_NEW`, `PRODUCTION_PROCESS_CLEAR`,
+`PRODUCTION_PROCESS_VALIDATE`, `PRODUCTION_RECIPE_NEW`,
+`PRODUCTION_RECIPE_CLEAR`, and `PRODUCTION_RECIPE_VALIDATE`, preserving catalog
+versions 1-11 exactly. OwnerId is `PRODUCTION_DESIGNER`, role Production, class
+Command, capability PROD_POST with the existing ADMIN_MAINT alternative. Fixed
+surfaces are Operations > Production > Process Designer / Recipe Designer;
+fixed captions match the existing buttons: Process Designer has New Process,
+Clear and Validate; Recipe Designer has New Recipe, Clear and Validate Recipe.
+EventCode is ControlId + `_` +
+OutcomeCode. These controls have no source-event references or Domain-applied
+terminal fact. They never persist draft text or generated design/component IDs
+in activity payloads.
+
+REQUESTED is Info/Unknown. New/Clear success is STAGED, Validate success is
+VALIDATED and invalid draft validation is REJECTED (Warning); each is Unchanged
+with respect to saved definitions, explicitly described as local draft staging
+or validation, following the existing Settings staging distinction. DENIED is
+Blocked/Unchanged. FAILED is Error/Unknown and preserves uncertainty. COMPLETED,
+CONFIRMED and APPLIED are not supported outcomes for these controls. Save,
+Release, Obsolete and other Production controls remain separate coverage.
+
+Before any draft reset/validation, require the original live operator workbook,
+captured target/session and current Production/Admin capability. Stale target,
+session or closed workbook refuses the action without retargeting or emitting
+under a replacement context; current-context capability denial may be observed.
+Disabled/unavailable optional tracking must not block an otherwise authorized
+action. Internal draft helpers and initialization never masquerade as clicks.
+Packaged tests must invoke the six actual handlers, preserve saved authority and
+unknown workbook columns, distinguish valid/rejected validation, cover disabled
+tracking and stale bindings, and retain prior catalog versions. This is a D18
+discovered-control refinement, not an amendment to authority or permissions.
+
 - Maintain a versioned coverage catalog for every reachable Operations/Admin
   launcher, form command, deliberate page/selection action and result. Each
   entry names a stable ControlId, fixed captions, role/family, public handler,

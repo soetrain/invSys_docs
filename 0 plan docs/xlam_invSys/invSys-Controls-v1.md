@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.236 (Desktop capture access reverified without elevation; Slice 4be acceptance remains open)
+**Version:** 1.237 (Production designer draft observations pass focused RED/GREEN; full acceptance pending)
 
 The [remaining Slice 4be acceptance checklist](../../../invSys_fork/tests/integration/plan022_slice4be_remaining_acceptance.md)
 indexes the existing six workstreams and candidate gates. Control-level contracts
@@ -152,6 +152,45 @@ preserved and Excel closes normally. No control contract or product visible
 acceptance changes. Earlier error5 remains unexplained; console/RDP switching is
 a hypothesis. See `tests/integration/plan022_slice4be_layout_stability_results.md`
 in the code repository before retrying that exact fixture boundary.
+
+Production designer draft tracking has a focused checkpoint under D18/catalog12.
+Owner PRODUCTION_DESIGNER; class Command; PROD_POST or the existing ADMIN_MAINT
+alternative. All six capture the original operator workbook and target/session.
+
+| ControlId | Surface / caption | Actual frmProduction handler | Local success |
+|---|---|---|---|
+| PRODUCTION_PROCESS_NEW | Process Designer / New Process | mBtnProcessNew_Click | STAGED |
+| PRODUCTION_PROCESS_CLEAR | Process Designer / Clear | mBtnProcessClear_Click | STAGED |
+| PRODUCTION_PROCESS_VALIDATE | Process Designer / Validate | mBtnProcessValidate_Click | VALIDATED or REJECTED |
+| PRODUCTION_RECIPE_NEW | Recipe Designer / New Recipe | mBtnRecipeNew_Click | STAGED |
+| PRODUCTION_RECIPE_CLEAR | Recipe Designer / Clear | mBtnRecipeClear_Click | STAGED |
+| PRODUCTION_RECIPE_VALIDATE | Recipe Designer / Validate Recipe | mBtnRecipeValidate_Click | VALIDATED or REJECTED |
+
+Surfaces are under Operations > Production. EventCode is ControlId + `_` + outcome;
+REQUESTED Unknown, local success/rejection and DENIED Unchanged for saved
+definitions, FAILED Unknown. No entered values, source-event references or
+Domain-applied conclusion. No observation from passive initialization/internal
+helpers. Disabled collection preserves actions; stale session/target/workbook
+refuses before draft mutation. Catalog1-11 stay exact. Packaged RED 63 PASS/165
+expected FAIL becomes 228/228 GREEN, covering all six handlers, valid Process
+validation, denial, disabled collection and stale bindings. Five-package compile
+passes; reusable Production retains all 67 Boolean observations.
+The exact-caption follow-up adds six checks:
+231 PASS/three expected metadata failures becomes 234/234 GREEN, retaining the
+initial 228. All fixed captions now match the actual buttons; all five corrected
+packages compile and only the vocabulary module changes. Positive Recipe
+validation, recording/publication/diagnostic integration and native designer
+visibility remain unverified; complete six-control acceptance is not claimed.
+The corrected candidate also retains all 202 compiled Settings checks and ten
+reviewed native captures, with immediate unassisted closure and settings/package
+preservation. This establishes Settings visibility without administrator elevation,
+not native Production designer acceptance or permanent error5 resolution.
+Reusable Production retains all 67 Boolean observations. Full chain/live roles/
+Create Warehouse retain the exact prior 32/48/15 checks with unassisted closure,
+settings/report restoration, preserved hashes and no Application failure events.
+The reusable harness retains its separately documented cleanup limitation.
+See `tests/integration/plan022_slice4be_production_designer_results.md` in the code
+repository for exact candidate scope and remaining gates.
 
 The 26 Settings controls have an expanded 450/450 actual-handler GREEN after
 141 original failures and five denied-Reload synthetic-selection failures.

@@ -7140,6 +7140,53 @@ made. Earlier error5 remains unexplained, with console/RDP switching a hypothesi
 only. The layout-stability evidence records these attempts; product visible
 acceptance and the six Slice 4be workstreams remain open.
 
+Current Production coverage group: D18's six designer-draft observations (catalog12,
+acceptance incomplete). Process/Recipe New and Clear report local STAGED;
+Their fixed captions must match the existing buttons: New Process, Clear,
+Validate; New Recipe, Clear, Validate Recipe. Packaged adapters compare catalog
+metadata against those actual controls before the observation checks.
+Validate reports VALIDATED or REJECTED, never saved/Domain-applied completion.
+Require real packaged-handler RED before runtime edits, exact original context
+and workbook guards even with tracking disabled, and unchanged versions1-11.
+Run focused GREEN, five-package compile/layout/static and affected reusable/live/
+chain regressions plus visible evidence before claiming this group complete.
+Lifecycle Save/Release/Obsolete still needs exact queued-event owner correlation.
+
+The packaged draft checkpoint records RED 63 PASS/165 expected FAIL, then
+228/228 GREEN with exact check retention. All six handlers, valid Process
+validation, capability denial, disabled collection and stale target/session/
+closed-workbook refusal are exercised. Saved authority and custom workbook
+content are preserved. Five-package compile and cold-start checks pass; only
+modActivityCatalog, new modProductionDraftCodes and frmProduction differ among
+244 compiled components. Reusable Production retains all 67 Boolean observations.
+The exact-caption follow-up records 231 PASS/three expected failures, then
+234/234 GREEN retaining every earlier check. It corrects the discovered metadata
+to match existing button captions; only modProductionDraftCodes changes among
+244 compiled components and all five packages compile again. The candidate is
+`deploy/validation-production-designer-captions`; no accepted deployment changes.
+Its Settings regression retains all 202 checks, ten reviewed native captures,
+immediate unassisted closure and settings/package preservation. The test shell
+remains non-elevated; this does not resolve the cause of earlier desktop error5.
+The corrected candidate also retains all 67 reusable Production Boolean
+observations and the exact prior full-chain/live-role/Create Warehouse checks
+(32/48/15). The chain closes without assistance, restores settings/three reports,
+preserves five packages/269 tooling hashes and has no Application failure events.
+The reusable harness's existing cleanup does not prove unassisted shutdown.
+Positive Recipe validation, recording/publication/diagnostic integration and
+native designer evidence remain required; this is not complete six-control or
+Slice 4be acceptance.
+
+Explicit scoped maintenance exception for these six new observations: +45 lines
+in the existing oversized frmProduction provide one 42-line shared action path
+and one 10-line captured-context guard while replacing six duplicated handler
+bodies. Moving private form state across a new public boundary would add surface
+without improving authority. Together with +16 catalog lines and the 63-line
+Core vocabulary module, the feature adds 124 lines, five procedures and one
+component. Dynamic calls remain 9 literal/45 unresolved and duplicate bodies 193;
+the other 27 oversized components do not grow. No deletion or dynamic-call
+exception is granted. Exact evidence belongs in
+`tests/integration/plan022_slice4be_production_designer_results.md`.
+
 An older-policy test-envelope mistake is corrected
 without changing the existing fail-closed policy reader. Exact evidence and
 preserved failed attempts are recorded in
