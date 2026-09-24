@@ -7071,6 +7071,26 @@ observations; no architecture change, blanket exclusion, runtime workaround or
 waiver of add-in-only stress is introduced. Exact evidence:
 `tests/integration/plan022_slice4be_gui_resource_results.md`.
 
+The subsequent 4be.5 layout diagnosis finds repeated unchanged-size callbacks
+performing full guide/policy reads. The packaged focused RED records two unwanted
+refreshes while its real-resize protection passes. A four-line paired-view fix
+suppresses only redundant notifications; opening, activation, method changes,
+Refresh and resizing retain D18 validation. The new isolated five-package candidate
+compiles, with exactly one of 243 compiled components changed. Focused GREEN is
+36/36, retaining all 34 preceding identities: zero redundant refreshes and two
+real-resize validations, normal closure, preserved bytes and zero Application
+failures. Capture-disabled timing is 8.355 seconds; full responsiveness and visible
+acceptance remain open after the separate cursor failure. Remaining gates are
+tracked in `tests/integration/plan022_slice4be_layout_stability_results.md`.
+No new architecture, policy caching or add-in-only workaround is introduced.
+The new candidate's complete ordered chain/live-role/Create Warehouse gates pass
+32/48/15 with exact prior identities, normal closure, restored settings/reports,
+unchanged packages and zero audited Application failures. These results do not
+close the separate visible or broader Viewer/guide/comparison gates.
+The subsequent four-size extension passes 40/40, retaining all 36 preceding checks,
+normal closure and preservation. Capture-disabled observation is 6.879 seconds;
+native visible acceptance and broader regressions remain open.
+
 An older-policy test-envelope mistake is corrected
 without changing the existing fail-closed policy reader. Exact evidence and
 preserved failed attempts are recorded in

@@ -1078,6 +1078,23 @@ calibration passes 32/32. Current images have an external thumbnail over the
 lower-right controls, and a selected-view observation takes 84.485 seconds;
 full visible acceptance and operator responsiveness remain open. Earlier clean
 captures remain separate evidence. The add-in-only failure is not waived or fixed.
+The subsequent 4be.5 diagnosis identifies repeated unchanged-size layout callbacks
+performing full reads. A packaged handler RED observes two unwanted refreshes;
+real resizing still revalidates. The focused correction suppresses only redundant
+layout notifications and retains all D18 action/activation validation. Its new
+five-package candidate compiles with only the paired-view component changed.
+Focused GREEN passes 36/36, retaining all 34 previous identities, zero redundant
+refreshes and two real-resize validations, with normal closure and byte preservation.
+Capture-disabled timing improves to 8.355 seconds but does not establish full
+responsiveness or visible acceptance. Remaining gates are tracked in
+`tests/integration/plan022_slice4be_layout_stability_results.md`. This is an
+implementation correction under the existing contract, not a validation waiver.
+The new candidate also retains all 32 chain, 48 live-role and 15 Create Warehouse
+checks with normal closure and preserved artifacts; visible and broader acceptance
+remain separate gates.
+The four-size packaged layout extension passes 40/40, retaining all preceding 36
+identities. Its capture-disabled observation is 6.879 seconds; this establishes
+geometry and the redundant-read correction, not full visible acceptance.
 The next discovered coverage group comprises the ten deliberate Tracking editor
 actions, eight Event Detail editor actions, and four personal-preference actions
 on each of the Admin and Operations surfaces. Catalog 11 preserves every catalog

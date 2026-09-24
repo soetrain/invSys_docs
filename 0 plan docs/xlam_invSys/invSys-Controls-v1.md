@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.231 (Saved-workbook restart behavior verified; visual/responsiveness limits retained)
+**Version:** 1.232 (Paired-view redundant layout correction; acceptance gates remain open)
 
 The [remaining Slice 4be acceptance checklist](../../../invSys_fork/tests/integration/plan022_slice4be_remaining_acceptance.md)
 indexes the existing six workstreams and candidate gates. Control-level contracts
@@ -91,6 +91,25 @@ captures have a Task Manager thumbnail over the lower-right control area, and an
 remain separate evidence; full visible acceptance and responsiveness stay open.
 No runtime/control contract changes or waiver of the add-in-only failure.
 See `tests/integration/plan022_slice4be_gui_resource_results.md` for exact scope.
+
+The subsequent focused layout RED confirms two unnecessary refreshes for two
+unchanged-size notifications; real resizing still revalidates. The paired-view
+correction remembers completed dimensions and suppresses only those duplicate
+notifications. Every D18 view action and activation retains its existing checks.
+Five packages compile with only `frmActionPathView` changed among 243 compiled
+components. Focused GREEN passes 36/36 with all 34 prior identities, zero redundant
+refreshes, two real-resize validations, normal closure and preserved bytes.
+The capture-disabled observation takes 8.355 seconds; full responsiveness is still
+open. Remaining evidence is tracked in
+`tests/integration/plan022_slice4be_layout_stability_results.md`; visible acceptance
+remains open after a separate Windows cursor-positioning failure. No displayed
+wording, control, authority, preference or evaluation contract changes.
+The new candidate also retains all 32 chain, 48 live-role and 15 Create Warehouse
+checks, with normal closure and preserved artifacts; broader/visible acceptance
+remains incomplete.
+The four-size extension passes 40/40, retaining all preceding 36 identities and
+proving bounds/non-overlap at minimum, default, larger and restored sizes. Its
+capture-disabled observation is 6.879 seconds; no screenshot acceptance is inferred.
 
 The 26 Settings controls have an expanded 450/450 actual-handler GREEN after
 141 original failures and five denied-Reload synthetic-selection failures.
