@@ -1109,11 +1109,25 @@ are tracked in `tests/integration/plan022_production_quiet_boundary_results.md`.
 The corrected candidate's full chain/live roles/Create Warehouse pass 32/48/15
 with all preceding identities, normal unassisted closure and preserved settings,
 reports and package bytes. Visible and broader Slice 4be acceptance remain open.
-The separate reusable-Production gate remains failed on both corrected and
+The separate reusable-Production gate failed on both boundary and
 preceding candidates at EightPaletteRows=False, with 67 matching Boolean
 observations. This is not waived by passing completion/Chai envelopes or the full
 chain; the accepted eight-row requirement remains binding pending focused layout
-measurement and correction. The cause is not yet confirmed.
+measurement and correction on those candidates.
+The subsequent focused palette probe confirms MSForms rounds the requested
+96-point height to 88.45 when Height is assigned before IntegralHeight=False.
+Moving that existing setting earlier restores the requested height: packaged RED
+7 PASS/four expected FAIL, GREEN 11/11 across minimum/default, expanded and
+restored sizes, with all-page bounds/overlap preserved. This is an existing-layout
+correction. Evidence and the remaining visible/regression limits are in
+`tests/integration/plan022_production_palette_results.md`. The separately protected
+fixture text-format correction changes no runtime Auth behavior; D8-A is still pending.
+The broader reusable gate then passes: all 67 Boolean observations are retained,
+and only EightPaletteRows changes from False to True. Its existing cleanup helper
+does not establish normal shutdown; native visible evidence remains open.
+The palette candidate's final full chain/live roles/Create Warehouse pass 32/48/15
+with exact preceding identities and normal unassisted closure. Settings, reports,
+package bytes and source pins are preserved; no Application failure events occur.
 The next discovered coverage group comprises the ten deliberate Tracking editor
 actions, eight Event Detail editor actions, and four personal-preference actions
 on each of the Admin and Operations surfaces. Catalog 11 preserves every catalog

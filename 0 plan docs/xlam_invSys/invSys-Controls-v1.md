@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.234 (Production completion boundary correction; broader Slice 4be acceptance remains open)
+**Version:** 1.235 (Production requested list heights restored; broader Slice 4be acceptance remains open)
 
 The [remaining Slice 4be acceptance checklist](../../../invSys_fork/tests/integration/plan022_slice4be_remaining_acceptance.md)
 indexes the existing six workstreams and candidate gates. Control-level contracts
@@ -124,11 +124,25 @@ regression status is in `tests/integration/plan022_production_quiet_boundary_res
 visible acceptance is not inferred from these automated results.
 Its full chain/live roles/Create Warehouse pass 32/48/15 with exact prior identities,
 normal unassisted closure, restored settings/reports and preserved package bytes.
-The separate reusable-Production aggregate remains failed on both this candidate
+The separate reusable-Production aggregate failed on both the boundary candidate
 and its predecessor at EightPaletteRows=False (67 matching Boolean observations).
 Successful two-batch and Chai completion envelopes do not waive the accepted
 eight-row layout requirement. A focused packaged measurement/correction remains
 required; no palette runtime change is included in the boundary correction.
+The subsequent palette correction is protected by RED 7 PASS/four expected FAIL
+and GREEN 11/11. Disabling IntegralHeight before assigning Height preserves the
+requested 96 points at minimum/default and restored sizes (118.6 expanded), with
+all-page bounds/overlap checks passing. The prior 88.45-point result is retained
+as RED; the accepted predicate is unchanged. See
+`tests/integration/plan022_production_palette_results.md` for regression and
+visible acceptance limits. No native visible acceptance is inferred.
+The broader reusable gate now passes with the same 67 Boolean observations;
+only EightPaletteRows changes from False to True. All previously passing reusable
+and Chai observations remain passing. Normal-shutdown proof is separate from the
+existing reusable harness's cleanup behavior.
+The palette candidate's full chain/live roles/Create Warehouse pass 32/48/15
+with exact prior identities, normal unassisted closure and preserved settings,
+reports and package bytes. Broader Slice 4be and native visible acceptance remain open.
 
 The 26 Settings controls have an expanded 450/450 actual-handler GREEN after
 141 original failures and five denied-Reload synthetic-selection failures.

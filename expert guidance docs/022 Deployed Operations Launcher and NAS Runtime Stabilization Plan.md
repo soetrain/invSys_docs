@@ -7107,13 +7107,28 @@ The corrected candidate also passes full chain/live roles/Create Warehouse at
 32/48/15 with exact prior identities, normal unassisted closure, preserved bytes
 and zero Application failure events. This does not close broader Slice 4be or
 visible acceptance.
-The separate focused reusable-Production aggregate fails on both this candidate
+The separate focused reusable-Production aggregate failed on both the boundary candidate
 and its predecessor at EightPaletteRows=False; all 67 Boolean observations match.
 Its successful reusable/Chai completion envelopes do not close the layout gate.
 The accepted eight-row requirement is retained. Measure the actual packaged
 palette before changing its implementation; the IntegralHeight setup-order cause
 is only a hypothesis. Exact candidate/control attempts are in the boundary
 evidence above; no palette runtime change is included in that correction.
+The subsequent palette gate isolates the cause: the ListBox factory rounds a
+requested 96 points to 88.45 before IntegralHeight is disabled. Applying the
+existing setting before Height restores exactly 96, with packaged RED 7 PASS/four
+expected FAIL and GREEN 11/11 across minimum/default, expanded and restored sizes.
+All-page geometry remains valid. The actual eight-row predicate is retained;
+visible acceptance and broader gates have their own recorded status. See
+`tests/integration/plan022_production_palette_results.md`, including the separately
+protected fixture text-format correction (12/12), which changes no runtime Auth contract.
+The broader reusable gate subsequently passes with all 67 Boolean observations
+retained; only EightPaletteRows changes from False to True. Two-batch and Chai
+completion evidence is preserved. Its existing cleanup helper does not prove
+normal shutdown, and native visible evidence is still open.
+The palette candidate also passes full chain/live roles/Create Warehouse at
+32/48/15 with exact preceding identities, normal unassisted closure, preserved
+settings/reports/package bytes and zero Application failure events.
 
 An older-policy test-envelope mistake is corrected
 without changing the existing fail-closed policy reader. Exact evidence and
