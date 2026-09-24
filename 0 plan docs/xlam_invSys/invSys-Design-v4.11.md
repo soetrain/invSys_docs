@@ -1095,6 +1095,11 @@ remain separate gates.
 The four-size packaged layout extension passes 40/40, retaining all preceding 36
 identities. Its capture-disabled observation is 6.879 seconds; this establishes
 geometry and the redundant-read correction, not full visible acceptance.
+The associated CRLF build-helper correction passes 12/12 and produces all 243
+compiled components identically to the validated candidate. Its audit separately
+finds a pre-existing Production Workbook-object call across the Core boundary;
+the existing D12 primitive-boundary rule remains binding. Exact evidence and the
+required focused next test are in `tests/integration/plan022_crlf_build_regions_results.md`.
 The next discovered coverage group comprises the ten deliberate Tracking editor
 actions, eight Event Detail editor actions, and four personal-preference actions
 on each of the Admin and Operations surfaces. Catalog 11 preserves every catalog

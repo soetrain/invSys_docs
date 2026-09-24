@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.232 (Paired-view redundant layout correction; acceptance gates remain open)
+**Version:** 1.233 (Layout evidence preserved; CRLF build guard and existing Production boundary gap)
 
 The [remaining Slice 4be acceptance checklist](../../../invSys_fork/tests/integration/plan022_slice4be_remaining_acceptance.md)
 indexes the existing six workstreams and candidate gates. Control-level contracts
@@ -110,6 +110,11 @@ remains incomplete.
 The four-size extension passes 40/40, retaining all preceding 36 identities and
 proving bounds/non-overlap at minimum, default, larger and restored sizes. Its
 capture-disabled observation is 6.879 seconds; no screenshot acceptance is inferred.
+The separate CRLF build guard passes 12/12 with 243 identical compiled components;
+it changes no control behavior. Its audit finds a pre-existing D12 Production
+completion boundary failure (13/14 on both current and predecessor source). That
+failure remains open and is not waived by the 32/48/15 behavioral chain. See
+`tests/integration/plan022_crlf_build_regions_results.md`.
 
 The 26 Settings controls have an expanded 450/450 actual-handler GREEN after
 141 original failures and five denied-Reload synthetic-selection failures.

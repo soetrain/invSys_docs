@@ -7090,6 +7090,12 @@ close the separate visible or broader Viewer/guide/comparison gates.
 The subsequent four-size extension passes 40/40, retaining all 36 preceding checks,
 normal closure and preservation. Capture-disabled observation is 6.879 seconds;
 native visible acceptance and broader regressions remain open.
+The independently protected CRLF import correction passes 12/12; its five-package
+control compiles and matches all 243 validated runtime components. A separate
+pre-existing Production primitive-boundary failure is reproduced at 13/14 on the
+predecessor. It remains a D12 blocker requiring a packaged completion-boundary RED;
+no authority exception is inferred from the passing behavioral chain. See
+`tests/integration/plan022_crlf_build_regions_results.md`.
 
 An older-policy test-envelope mistake is corrected
 without changing the existing fail-closed policy reader. Exact evidence and
