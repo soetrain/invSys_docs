@@ -1537,8 +1537,36 @@ values, ordering, context checks and full-text reachability remain required.
 Packaged D13 must prove native scrolling and unchanged values/source bytes.
 This is an explicit approved change to the lock requirement, not a Plan 022
 override. Runtime implementation must follow the protecting packaged D13 RED;
-approval alone does not establish successful scrolling. Multiline rendering remains a
-separate open acceptance requirement.
+approval alone does not establish successful scrolling. Multiline rendering requires
+separate acceptance evidence.
+
+**Multiline field rendering refinement:** Keep the existing contributing-line
+selector and read-only caption/value list. Beneath the list, `lblDetailMultiline`
+labels **Multiline fields for selected line** and `fraDetailMultiline` displays
+each permitted field containing a CR or LF, in the same loaded-profile order,
+using non-editable caption/value Labels. The area follows the existing selected
+line automatically; no additional field selection or text editor is introduced.
+Single-line fields retain their existing list presentation. An empty area states
+**No multiline fields for this line.** Fixed captions and all field text, including
+literal backslashes, ampersands, tabs and Unicode, remain intact; caption mnemonic
+interpretation must not consume characters. Native scrolling makes every line
+and its complete width reachable at minimum, larger, maximized and restored sizes.
+The list, multiline area, status and Close must remain reachable without overlap.
+CRLF, LF and CR each represent a visual line break. Office may normalize the
+Label's display separators to CRLF; the exact original field string, including
+its original separators, remains unchanged in the loaded projection and field
+list. Display normalization must never be written back to source or authority.
+
+Rebuild this area only from the already permitted field projection on existing
+line selection or refresh; profile-disabled and unknown fields stay excluded.
+Clear its retained values and scroll positions with existing context invalidation
+and parent closure. Rendering and scrolling create no authority access, activity
+or persisted selection. This names discovered display controls under D18 semantic
+inheritance and implements the already required full-text reachability; it does
+not relax the approved read-only scrolling decision. Packaged D13 must establish
+missing rendering before implementation, then prove original-value preservation,
+native scroll reachability, all size states and context/profile safety with visible
+operator evidence. This refinement alone does not establish acceptance.
 
 **Contributing-line labels:** `lblDetailLines` reads **Contributing lines - select
 a line to inspect its fields**. A User activity line in `lstEventLines` displays

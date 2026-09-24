@@ -1,6 +1,30 @@
 # invSys Form Controls v1
 
-**Version:** 1.245 (original event text preserved through Operations/Admin Viewer)
+**Version:** 1.246 (multiline native scrolling and scoped visible evidence GREEN)
+
+**Multiline rendering refinement, 2026-09-24:** Architecture v4.11 D18 names
+`lblDetailMultiline` (**Multiline fields for selected line**) and
+`fraDetailMultiline`, containing read-only caption/value Labels for permitted
+multiline fields of the existing selected line. It preserves the field list,
+profile order, original characters and context clearing. Native scrolling must
+reach every line/width at all supported sizes without overlaps. No editor,
+additional selection, authority access or activity is introduced. This is a
+display refinement of existing D18. Final captured RED is 57 PASS / 31 expected
+FAIL; GREEN is **88/88**, retaining all 56 prior checks and seven native-input
+checks. Fourteen principal images are reviewed, including the last of multiple
+fields and the long final line through its last character. Profile/sign-out/target
+clearing, normal closure, settings/pins and five instrumented compiles hold.
+Two permitted fields retain their values, profile order and separate geometry
+in both roles. Cursor access has returned; the earlier error5 cause is unproven.
+The DPI detector correction is separately tested; earlier incomplete attempts
+remain recorded. Current-candidate chain/live-role/warehouse creation pass
+32/32, 48/48, 15/15. Viewer regression passes 98/98 with all prior identities and
+three reviewed images; packaged smoke passes 86/86. Human and broader Slice4be
+acceptance remain open. See
+[multiline evidence](../../../invSys_fork/tests/integration/plan022_slice4be_multiline_results.md).
+Office Label display separators may normalize to CRLF. CRLF/LF/CR must each
+render as a line break, and exact original strings remain unchanged in the
+loaded field list/projection. No source or authority value is normalized.
 
 **Original event text, 2026-09-24:** Slice 4be.3 restores D18's existing value
 contract with a single-pass Viewer decoder. Actual publication and form selection
@@ -4580,7 +4604,9 @@ identities remain Unavailable and are not grouped together.
 | `lblDetailLines` | **Contributing lines - select a line to inspect its fields**. Isolated RED/GREEN, regression/layout and assisted full-chain evidence verified; human/deployed acceptance remains open. |
 | `lstEventLines` | User activity uses original published fixed caption + ` - ` + recorded outcome, with Unavailable for missing values. Other lines keep exact System_Key labels, retaining repeats. Key accessors and cached selection remain unchanged, without another projection/profile read. Isolated regression and visible evidence verified; human/deployed acceptance remains open. |
 | `lblDetailFields` | **Permitted event and selected-line fields**. |
-| `lstEventFields` | Read-only caption/value list following the saved profile's enabled fields and order. Approved 2026-09-24: `Locked=False` is implemented solely for selection and native scrolling; values remain non-editable. Required identity, source, time provenance, coverage, uncertainty and guidance remain visible. Complete permitted single-line text is reachable using native horizontal scrolling when wider than the viewport, with minimum/larger/maximized/restored geometry protected. Fresh RED 43 PASS / one expected movement FAIL; GREEN 44/44 with four reviewed captures, unchanged values/source bytes and a native typing preservation check. Broader candidate and human acceptance remain open. Multiline rendering needs separate evidence. Scrolling remains excluded window mechanics. Raw Note and unknown user columns are excluded. |
+| `lstEventFields` | Read-only caption/value list following the saved profile's enabled fields and order. Approved 2026-09-24: `Locked=False` is implemented solely for selection and native scrolling; values remain non-editable. Required identity, source, time provenance, coverage, uncertainty and guidance remain visible. Complete permitted single-line text is reachable using native horizontal scrolling when wider than the viewport, with minimum/larger/maximized/restored geometry protected. Fresh RED 43 PASS / one expected movement FAIL; GREEN 44/44 with four reviewed captures, unchanged values/source bytes and a native typing preservation check. Broader candidate and human acceptance remain open. Separate multiline native/visible evidence is now recorded below. Scrolling remains excluded window mechanics. Raw Note and unknown user columns are excluded. |
+| `lblDetailMultiline` | **Multiline fields for selected line** labels the area beneath the existing field list. Packaged size-state geometry and scoped visible evidence are GREEN. |
+| `fraDetailMultiline` | Read-only caption/value Labels for permitted multiline fields, following the existing line selection and loaded-profile order. An empty area states **No multiline fields for this line.** Native horizontal/vertical scrolling reaches the last of multiple fields and the wide last line; 88/88 focused checks and 14 reviewed principal images establish scoped automated acceptance. Exact original strings remain in the list/projection, while CRLF/LF/CR are interpreted as display line breaks. Profile-hidden fields stay excluded; sign-out and target invalidation clear retained labels and scroll positions. No editor, authority read/write or activity is introduced. Human acceptance remains open. |
 | `lblDetailStatus` | Read-only line count or fixed context-loss guidance; field freshness identifies retained Stale data after failed Refresh. |
 | `btnClose` | **Close** releases the detail instance without changing source workbooks. |
 

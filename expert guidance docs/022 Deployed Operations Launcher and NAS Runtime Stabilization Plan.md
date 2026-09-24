@@ -2,6 +2,32 @@
 
 **Status:** Current corrective implementation plan
 
+**Active multiline rendering refinement, 2026-09-24:** D18 now names a read-only
+multiline area beneath the existing Detail field list. It follows the current
+contributing-line selection and includes only loaded-profile-permitted multiline
+fields, with native scrolling, literal characters preserved and context clearing.
+This implements existing full-text reachability without a text editor, new
+selection contract, authority access or activity. Establish packaged missing-
+rendering RED before changing the form; retain all 56 focused checks and require
+native visible reachability, profile/context safety and current-candidate gates.
+CRLF/LF/CR must render as line breaks while the exact original string remains
+unchanged in the loaded projection/list; Office Label display normalization
+does not authorize a source write or relaxation of original-value checks.
+The implementation passes final captured predecessor RED 57 PASS / 31 expected
+FAIL, then **88/88 GREEN**, preserving all 56 preceding identities and seven
+native-input checks. Profile hiding, sign-out and target-switch clearing remain
+protected. Two permitted fields retain both values, profile order and separate
+geometry in both roles. Fourteen principal images are reviewed: native scrolling
+reaches the last field/line and its full width. Normal closure, settings/pins and
+five instrumented compiles hold. A DPI-aware detector correction has separate
+4 PASS / four FAIL RED to 8/8 GREEN and still rejects the preserved locked-scroll case; the
+earlier 87/1 attempt is not relabelled. Cursor access has returned, but the
+earlier error5 cause remains unproven. Viewer regression passes 98/98 with all
+prior identities and three reviewed images. Current-candidate chain,
+live-role and warehouse creation pass 32/32, 48/48, 15/15. Packaged smoke passes 86/86. Human and broader Slice4be
+acceptance remain open. Initial runtime/probe failures and their corrections remain
+recorded in [multiline evidence](../../invSys_fork/tests/integration/plan022_slice4be_multiline_results.md).
+
 **Current original-value correction, 2026-09-24:** Slice 4be.3 restores the
 existing D18 published-text contract. The packaged test records 52 PASS / four
 expected FAIL, then 56/56 through Operations/Admin Viewer and actual Detail line
