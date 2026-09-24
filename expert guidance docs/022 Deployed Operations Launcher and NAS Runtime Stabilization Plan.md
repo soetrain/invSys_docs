@@ -2,6 +2,26 @@
 
 **Status:** Current corrective implementation plan
 
+**Current probe/capture reconciliation, 2026-09-24:** The broader Boxing test's
+obsolete Locked=True predicate now follows the approved D18 read-only ListBox
+contract. Focused actual-Viewer evidence is 49 PASS / one expected probe FAIL,
+then 50/50 with all 44 earlier identities, five compiles and four reviewed images.
+No runtime/package change or new architectural decision is introduced. The
+submission-only diagnostic admits Boxing's existing probes without claiming full
+recording coverage; unsupported recording and owner-completion combinations still
+reject. It passes 794/794, recovers all 82 previously unreached checks, reviews
+seven captures and closes normally with settings/pins preserved and zero
+Application failures. The earlier caption failure does not reproduce in that
+isolated section; its cause remains unproven. The complete corrected route reaches
+1632 PASS / one repeated unavailable-store Make caption-capture exception, with
+82 checks unreached and sixteen reviewed images. Both corrected read-only checks
+and all seven Auth-recreation checks pass. Only disposable Excel termination is
+required; the original host writes its terminal report and restores settings.
+Five packages/217 tooling hashes are preserved, with zero Application failures;
+normal shutdown is not accepted. Observe the caption hit-test/z-order/cloaking
+state at failure before another full retry. Multiline remains open. See
+[probe/capture evidence](../../invSys_fork/tests/integration/plan022_slice4be_detail_overflow_results.md).
+
 **Current D8-A implementation evidence, 2026-09-24:** On isolated candidate
 `validation-auth-read-separated`, ordinary Auth reads now use existing exact-context
 authority without provisioning, schema repair or saves. Focused packaged RED is

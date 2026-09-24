@@ -1,6 +1,27 @@
 # invSys Form Controls v1
 
-**Version:** 1.242 (approved D8-A packaged GREEN; broader acceptance pending)
+**Version:** 1.243 (Boxing probe reconciled; isolated GREEN, broader capture failure retained)
+
+**Event Detail probe and capture verification, 2026-09-24:** The stale Boxing
+read-only probe is reconciled with approved D18: non-editable ListBox cells allow
+native selection/scrolling with Locked=False. Focused probe reconciliation records
+49 PASS / one expected probe FAIL, then 50/50, retaining all 44 preceding checks
+including native typing/value preservation and adding five instrumented compiles.
+Four principal images are reviewed; both runs close normally and preserve settings,
+source/package evidence. No runtime or control behavior changes.
+An isolated Shipping/Boxing submission route passes 794/794, including all 82
+checks unreached in the preceding partial run, five compiles and seven reviewed
+captures. The failed capture section now succeeds, and Excel closes normally
+after a delay; settings and package/tooling hashes are restored/preserved, with
+zero Application failure events. This does not explain the older failure or
+replace full recording coverage. The corrected complete route reaches 1632 PASS /
+one repeated caption-capture exception, leaving 82 checks unreached. Both corrected
+read-only assertions and all seven Auth-recreation checks pass; sixteen images
+are reviewed. Disposable Excel termination is required; the original host writes
+the terminal report and restores settings. Five packages/217 tooling hashes remain
+unchanged, with zero Application failures. Normal shutdown and broader acceptance
+remain open. Observe caption hit-test/z-order/cloaking state before another full retry.
+See [probe/capture evidence](../../../invSys_fork/tests/integration/plan022_slice4be_detail_overflow_results.md).
 
 **Approved D8-A implementation, 2026-09-24:** Candidate
 `validation-auth-read-separated` passes focused packaged 82/82 after 60 PASS /
