@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.233 (Layout evidence preserved; CRLF build guard and existing Production boundary gap)
+**Version:** 1.234 (Production completion boundary correction; broader Slice 4be acceptance remains open)
 
 The [remaining Slice 4be acceptance checklist](../../../invSys_fork/tests/integration/plan022_slice4be_remaining_acceptance.md)
 indexes the existing six workstreams and candidate gates. Control-level contracts
@@ -113,8 +113,22 @@ capture-disabled observation is 6.879 seconds; no screenshot acceptance is infer
 The separate CRLF build guard passes 12/12 with 243 identical compiled components;
 it changes no control behavior. Its audit finds a pre-existing D12 Production
 completion boundary failure (13/14 on both current and predecessor source). That
-failure remains open and is not waived by the 32/48/15 behavioral chain. See
+failure was not waived by the 32/48/15 behavioral chain. See
 `tests/integration/plan022_crlf_build_regions_results.md`.
+The boundary correction subsequently passes 52/52 through actual two-batch form
+actions after a 50 PASS/two expected FAIL RED, plus the original 14/14 audit.
+Both batches enter Core through the captured workbook-name bridge and restore UI
+state. Five packages compile; only mProduction changes among 243 compiled
+components. No displayed control or workflow contract changes. Current-candidate
+regression status is in `tests/integration/plan022_production_quiet_boundary_results.md`;
+visible acceptance is not inferred from these automated results.
+Its full chain/live roles/Create Warehouse pass 32/48/15 with exact prior identities,
+normal unassisted closure, restored settings/reports and preserved package bytes.
+The separate reusable-Production aggregate remains failed on both this candidate
+and its predecessor at EightPaletteRows=False (67 matching Boolean observations).
+Successful two-batch and Chai completion envelopes do not waive the accepted
+eight-row layout requirement. A focused packaged measurement/correction remains
+required; no palette runtime change is included in the boundary correction.
 
 The 26 Settings controls have an expanded 450/450 actual-handler GREEN after
 141 original failures and five denied-Reload synthetic-selection failures.

@@ -7093,9 +7093,27 @@ native visible acceptance and broader regressions remain open.
 The independently protected CRLF import correction passes 12/12; its five-package
 control compiles and matches all 243 validated runtime components. A separate
 pre-existing Production primitive-boundary failure is reproduced at 13/14 on the
-predecessor. It remains a D12 blocker requiring a packaged completion-boundary RED;
-no authority exception is inferred from the passing behavioral chain. See
+predecessor. It required a packaged completion-boundary RED before correction;
+no authority exception was inferred from the passing behavioral chain. See
 `tests/integration/plan022_crlf_build_regions_results.md`.
+The subsequent actual two-batch form-action probe records 50 PASS/two expected
+FAIL before correction and 52/52 after using the existing primitive workbook-name
+bridge. Both batches preserve captured binding and restore UI state; the original
+retirement audit returns to 14/14. All five packages compile, with only mProduction
+changed among 243 compiled components. The normative D12 rule is unchanged;
+regression status and limitations are in
+`tests/integration/plan022_production_quiet_boundary_results.md`.
+The corrected candidate also passes full chain/live roles/Create Warehouse at
+32/48/15 with exact prior identities, normal unassisted closure, preserved bytes
+and zero Application failure events. This does not close broader Slice 4be or
+visible acceptance.
+The separate focused reusable-Production aggregate fails on both this candidate
+and its predecessor at EightPaletteRows=False; all 67 Boolean observations match.
+Its successful reusable/Chai completion envelopes do not close the layout gate.
+The accepted eight-row requirement is retained. Measure the actual packaged
+palette before changing its implementation; the IntegralHeight setup-order cause
+is only a hypothesis. Exact candidate/control attempts are in the boundary
+evidence above; no palette runtime change is included in that correction.
 
 An older-policy test-envelope mistake is corrected
 without changing the existing fail-closed policy reader. Exact evidence and

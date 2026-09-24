@@ -1099,7 +1099,21 @@ The associated CRLF build-helper correction passes 12/12 and produces all 243
 compiled components identically to the validated candidate. Its audit separately
 finds a pre-existing Production Workbook-object call across the Core boundary;
 the existing D12 primitive-boundary rule remains binding. Exact evidence and the
-required focused next test are in `tests/integration/plan022_crlf_build_regions_results.md`.
+original required focused test are in `tests/integration/plan022_crlf_build_regions_results.md`.
+That Production boundary now has a packaged two-batch RED (50 PASS/two expected
+FAIL) and GREEN (52/52). The one-call correction uses the existing captured-name
+bridge, restores UI state and passes the original 14/14 boundary audit. Five
+packages compile; only mProduction changes among 243 compiled components. This
+restores D12 without a new contract. Candidate regression and acceptance limits
+are tracked in `tests/integration/plan022_production_quiet_boundary_results.md`.
+The corrected candidate's full chain/live roles/Create Warehouse pass 32/48/15
+with all preceding identities, normal unassisted closure and preserved settings,
+reports and package bytes. Visible and broader Slice 4be acceptance remain open.
+The separate reusable-Production gate remains failed on both corrected and
+preceding candidates at EightPaletteRows=False, with 67 matching Boolean
+observations. This is not waived by passing completion/Chai envelopes or the full
+chain; the accepted eight-row requirement remains binding pending focused layout
+measurement and correction. The cause is not yet confirmed.
 The next discovered coverage group comprises the ten deliberate Tracking editor
 actions, eight Event Detail editor actions, and four personal-preference actions
 on each of the Admin and Operations surfaces. Catalog 11 preserves every catalog
