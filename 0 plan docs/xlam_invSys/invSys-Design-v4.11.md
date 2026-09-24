@@ -1058,6 +1058,26 @@ Compare capture contains an insufficient-memory dialog. Native evidence reaches
 the configured GDI quota; assisted empty-process closure is not acceptance.
 Resource-growth origin remains unresolved. Plan 022 and the presentation test
 record retain the failure without changing the normative contract.
+The subsequent native trace localizes growth before pairing/capture, and an
+Excel-only synthetic XLAM reproduces one retained window per VBA open/close.
+A separate saved workbook prevents growth in that control; the R1 operator
+deployment model already requires saved-workbook acceptance. This is not a new
+runtime workaround or a waiver of the retained add-in-only stress failure.
+The saved-workbook packaged control also exposes an obsolete test expectation:
+Save My Preference appends its required VIEWER_PATH_PREFERENCE_SAVE REQUESTED/
+COMPLETED pair under the existing Settings observation contract below. Tests
+must validate only that exact correlated pair at the explicit Save boundary,
+preserve all preceding Config/training bytes, then preserve the new records too
+through subsequent read-only/restart actions. No general activity-directory
+exclusion is permitted. Detailed evidence and remaining acceptance are in
+`tests/integration/plan022_slice4be_gui_resource_results.md`; no contract changes.
+That corrected saved-workbook control now passes 34/34, retaining all 27 preceding
+identities, with five compiled probes, normal unassisted closure, restored settings,
+zero Application failures and unchanged runtime/package hashes. The guard's
+calibration passes 32/32. Current images have an external thumbnail over the
+lower-right controls, and a selected-view observation takes 84.485 seconds;
+full visible acceptance and operator responsiveness remain open. Earlier clean
+captures remain separate evidence. The add-in-only failure is not waived or fixed.
 The next discovered coverage group comprises the ten deliberate Tracking editor
 actions, eight Event Detail editor actions, and four personal-preference actions
 on each of the Admin and Operations surfaces. Catalog 11 preserves every catalog

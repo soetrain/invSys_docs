@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.230 (Chain/curation verified; restart resource failure retained)
+**Version:** 1.231 (Saved-workbook restart behavior verified; visual/responsiveness limits retained)
 
 The [remaining Slice 4be acceptance checklist](../../../invSys_fork/tests/integration/plan022_slice4be_remaining_acceptance.md)
 indexes the existing six workstreams and candidate gates. Control-level contracts
@@ -77,6 +77,20 @@ also preserved in a diagnostic capture. Native GDI peak reaches the configured
 Excel requires assisted termination. Current restart acceptance remains open;
 see `tests/integration/plan022_slice4be_guide_presentation_results.md` for exact
 evidence, settings-restoration limits and the required focused resource diagnosis.
+The focused diagnosis reproduces native-window retention with a synthetic XLAM
+without invSys. Holding a saved workbook prevents growth in the host control.
+Saved-workbook packaged attempts reach all 32 checks with normal closure but
+retain one outdated preservation failure: the explicit Save My Preference
+appends exactly its required correlated REQUESTED/COMPLETED observations. The
+corrected test validates that pair while preserving every prior file and
+all subsequent read-only bytes. It passes 34/34 with all 27 preceding identities,
+five compiled probes, normal closure, restored settings, zero Application failures
+and unchanged runtime/package hashes; guard calibration passes 32/32. Current
+captures have a Task Manager thumbnail over the lower-right control area, and an
+84.485-second selected-view observation remains unresolved. Earlier clean captures
+remain separate evidence; full visible acceptance and responsiveness stay open.
+No runtime/control contract changes or waiver of the add-in-only failure.
+See `tests/integration/plan022_slice4be_gui_resource_results.md` for exact scope.
 
 The 26 Settings controls have an expanded 450/450 actual-handler GREEN after
 141 original failures and five denied-Reload synthetic-selection failures.

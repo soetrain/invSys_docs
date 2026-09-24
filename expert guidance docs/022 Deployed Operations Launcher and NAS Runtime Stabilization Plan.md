@@ -7049,6 +7049,28 @@ comparison retry until focused counts localize growth around pairing, rendering
 and capture. No runtime/contract change. Exact attempt and recovery receipts are
 in `tests/integration/plan022_slice4be_guide_presentation_results.md`.
 
+The following focused trace finds growth before pairing/capture. An Excel-only
+synthetic XLAM reproduces one retained native window per VBA read/close; COM
+reads remain stable, and holding a separate saved workbook prevents that growth.
+The saved-workbook packaged control follows the existing R1 deployment model,
+retains all prior restart identities and adds five host identity/byte checks.
+Two completed attempts reach **31 PASS/one preservation failure**, normal closure
+and three captures. The difference is exactly the approved preference Save's
+correlated REQUESTED/COMPLETED activity pair, with all preceding bytes unchanged.
+The verification correction validates only those two observations at Save,
+preserves every preceding Config/training file, and freezes both appended records
+through the remaining read/restart interval. Its calibration passes 32/32;
+the corrected saved-workbook behavior passes 34/34, retaining every preceding
+identity, with five instrumented compiles, normal closure, restored settings,
+zero Application failures and unchanged source/package hashes. Three reviewed
+current images have an external Task Manager thumbnail over lower-right controls;
+earlier clean captures remain separate. An 84.485-second selected-view observation
+still needs focused diagnosis. Full visible acceptance and operator responsiveness
+remain open. D18 already requires these Settings
+observations; no architecture change, blanket exclusion, runtime workaround or
+waiver of add-in-only stress is introduced. Exact evidence:
+`tests/integration/plan022_slice4be_gui_resource_results.md`.
+
 An older-policy test-envelope mistake is corrected
 without changing the existing fail-closed policy reader. Exact evidence and
 preserved failed attempts are recorded in
