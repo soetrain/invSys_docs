@@ -2,7 +2,7 @@
 
 **Status:** Current corrective implementation plan
 
-**Lifecycle recording / D5 RED checkpoint, 2026-09-25 UTC:** The new
+**Lifecycle recording / D5 GREEN checkpoint, 2026-09-25 UTC:** The new
 packaged recording gate discovers that the processor reads Config through a
 provisioning path when optional Timezone is absent. That path deletes the tracking
 policy sheets and saves Config, changing policy1 to defaults/version0 and losing
@@ -13,16 +13,24 @@ borrowed workbooks and closing only its own transient read. The intermediate
 candidate preserves Config through24 actual lifecycle actions and retains their
 original recording, real publication and Viewer detail identities. Its evaluator
 records668 PASS/40 expected FAIL for the missing CommandCompleted/Designs
-classifications, with all708 unique checks retained. The source correction follows
-that packaged editor RED but is not built or GREEN. Windows cleanup remains stuck
-after owned Excel/worker termination requests. Subsequent tested PowerShell runspace
-recovery lets the original controller verify settings restoration and all five
-package hashes at01:45 UTC, then exit; no snapshot values are exported. Windows
-still enumerates the exited Excel process. A host restart is requested after that
-restoration; ordinary Excel gates remain paused. This is assisted recovery, not
-normal shutdown acceptance.
-Source static/layout/schema checks pass; package compile, GREEN, regressions and
-presentation/visible gates remain required. No normative contract or authority
+classifications, with all708 unique checks retained. After the previous host entry
+disappears, the final `validation-production-paths` builds and compiles all five
+packages, passes Operations cold start, and records **708/708 functional GREEN**.
+All40 RED failures are corrected with the exact check set and five test hashes
+preserved through the run. Compiled comparison isolates four Core modules among246
+components; no component is added. Existing D5/D18 semantics remain unchanged.
+
+Normal shutdown is not accepted. The GREEN worker saves all708 results, but Windows
+retains Excel as exited with a kernel-busy cleanup thread. No Excel termination is
+requested. Completed-worker termination and the previously tested process-local
+controller recovery restore settings and preserve all packages at02:52 UTC, without
+exporting snapshot values or changing the repository cleanup guard. The controller
+exits; ordinary Excel gates await disappearance of the retained Windows entry.
+Refreshed static metrics remain253/6058/133166,9 literal/45 unresolved calls and191
+duplicate groups. Test-only native No/cancellation and distinct-guide-source versus
+observed-run presentation routes are prepared, not yet executed. Current-candidate
+615/390/202/86 regressions, full-chain/live-role, reusable behavior, normal closure
+and native/paired visible evidence remain required. No normative contract or authority
 change is proposed. See
 [lifecycle path evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_lifecycle_paths_results.md).
 

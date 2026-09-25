@@ -1,22 +1,27 @@
 # invSys Form Controls v1
 
-**Version:** 1.252 (Production lifecycle RED recovery and non-button source review; partial acceptance)
+**Version:** 1.253 (Production lifecycle Action Path functional GREEN; partial acceptance)
 
-**Lifecycle Action Path RED checkpoint, 2026-09-25 UTC:** A packaged
+**Lifecycle Action Path GREEN checkpoint, 2026-09-25 UTC:** A packaged
 recording of24 actual lifecycle actions exposes a D5 processor read defect: absent
 optional Timezone triggers provisioning, which removes tracking policy and prevents
 the successful action's completion from being recorded. The intermediate read-only
 correction preserves Config and policy through all24 actions, exact original
 recording order, real Activity/Designs publication and Viewer detail selection.
 Diagnostic command/applied/pending classifications produce668 PASS/40 expected
-FAIL across708 checks. The final source correction is unbuilt and not GREEN.
-Shutdown requires assisted recovery. At01:45 UTC, tested PowerShell runspace recovery
-lets the original controller verify settings restoration and package preservation,
-then exit. Windows still retains the exited Excel process; a host restart is requested
-before ordinary Excel gates resume. No normal-shutdown acceptance is claimed.
-The existing D18 owner/reference contract remains unchanged; compile, packaged
-GREEN, both presentations, native cancellation, current-candidate regressions and
-visible acceptance remain required. Source static/layout checks pass. See
+FAIL across708 checks. Final `validation-production-paths` now builds/compiles all
+five packages, passes cold start and records **708/708 functional GREEN**, preserving
+the exact RED check set and all five protecting test hashes. Both ordered six-action
+conclusions and immutable source/journal/publication checks pass. Compiled comparison
+isolates four Core modules; no form or control contract changes.
+Shutdown still needs qualification: Windows marks Excel exited but retains its
+kernel-busy process entry. No Excel termination is requested. Completed-worker
+termination and tested controller recovery verify settings restoration and all
+package hashes at02:52 UTC. The controller exits; ordinary Excel gates await host
+entry cleanup. No normal-shutdown acceptance is claimed. The existing D18 contract
+is unchanged. Isolated native-cancellation and paired lifecycle-presentation tests
+are prepared but unrun; current-candidate615/390/202/86, full-chain/live-role, reusable
+and visible acceptance remain required. Refreshed source static metrics hold. See
 [path evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_lifecycle_paths_results.md).
 
 **Non-button audit clarification:** Production coverage audit1.4 accounts for34
