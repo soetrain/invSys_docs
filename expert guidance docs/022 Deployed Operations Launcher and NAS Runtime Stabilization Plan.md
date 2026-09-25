@@ -15,13 +15,26 @@ original recording, real publication and Viewer detail identities. Its evaluator
 records668 PASS/40 expected FAIL for the missing CommandCompleted/Designs
 classifications, with all708 unique checks retained. The source correction follows
 that packaged editor RED but is not built or GREEN. Windows cleanup remains stuck
-after owned Excel/worker termination requests; the original controller retains the
-settings snapshot, and its closure/restoration receipt is still pending. Preserve
-that controller and resolve cleanup before building or starting another Excel gate.
+after owned Excel/worker termination requests. Subsequent tested PowerShell runspace
+recovery lets the original controller verify settings restoration and all five
+package hashes at01:45 UTC, then exit; no snapshot values are exported. Windows
+still enumerates the exited Excel process. A host restart is requested after that
+restoration; ordinary Excel gates remain paused. This is assisted recovery, not
+normal shutdown acceptance.
 Source static/layout/schema checks pass; package compile, GREEN, regressions and
 presentation/visible gates remain required. No normative contract or authority
 change is proposed. See
 [lifecycle path evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_lifecycle_paths_results.md).
+
+**Non-button source review, 2026-09-25 UTC:** Production coverage audit1.4 matches
+all34 current non-button handlers, separating editor changes, mirrored selections,
+hidden-list cascades, reusable in-memory Actual Output/Batch Note updates and the
+non-reusable location branch's staging-allocation clearing. Do not assign generic
+read-only Navigation outcomes to all of these. D18's deliberate-action/no-keystroke
+rules govern the eventual owner/commit contracts and packaged tests. This corrects
+source accounting and stale owner names only; catalog13, thirteen registered IDs
+and55 pending constructed buttons remain unchanged. No normative amendment or
+runtime behavior is introduced by the audit.
 
 **Active 4be.1 lifecycle coverage, 2026-09-24:** Architecture D18 now specifies
 the six Process/Recipe Save Draft, Release and Obsolete controls for catalog13,

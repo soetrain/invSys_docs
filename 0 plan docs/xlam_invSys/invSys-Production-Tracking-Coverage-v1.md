@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.3. Last reviewed: 2026-09-25 UTC, lifecycle recording checkpoint in progress.
+Version 1.4. Last reviewed: 2026-09-25 UTC, lifecycle RED and non-button source review.
 Subordinate to Architecture v4.11 D18, Plan022 and `invSys-Controls-v1.md`.
 This is reviewed source reachability/evidence accounting, not a new runtime
 contract, catalog version, permission grant or acceptance claim. D13 behavioral
@@ -32,7 +32,8 @@ read-only correction retains24 actual actions, original journal order and real
 published Activity/Designs identity through Viewer detail. The existing D18
 CommandCompleted and Designs applied/awaiting mappings record668 PASS/40 expected
 FAIL across708 packaged checks. Their source correction is unbuilt/not GREEN while
-Windows cleanup and the original controller's settings restoration remain pending.
+Windows retains the exited Excel process. Subsequent runspace recovery lets the
+original controller verify settings restoration and package preservation at01:45 UTC.
 Source static/layout checks pass; both presentations and full acceptance remain open. No additional
 controls are registered by this checkpoint, and the55 pending buttons remain pending.
 
@@ -182,44 +183,67 @@ BuildRecipeBuilderPage has no invocation in source; BuildLayout constructs the n
 
 ## Non-button event audit
 
-The source contains 34 non-button Click/Change handlers. Three belong to the unconstructed Recipe Builder and one to the hidden internal connection list. The remaining 30 require semantic review: deliberate selections may need observation; text changes and mirrored programmatic events must not become keystroke surveillance or duplicate actions. This list does not invent terminal outcomes.
+The source contains 34 non-button Click/Change handlers. Three belong to the
+unconstructed Recipe Builder and one to the hidden internal connection list.
+The remaining30 are reviewed below against their current helpers. These are source
+facts and required test distinctions, not new IDs, approved terminal outcomes or
+runtime acceptance. Deliberate selections still need observation contracts; text
+changes and mirrored programmatic events must not become keystroke surveillance
+or duplicate actions under D18.
 
-| Handler | Source reachability / next review |
+| Handler | Current source effect / required distinction |
 |---|---|
-| `mLstProcesses_Click` | Constructed control; distinguish deliberate selection from mLoading/programmatic updates |
-| `mLstProcessRequirements_Click` | Constructed control; distinguish deliberate selection from mLoading/programmatic updates |
-| `mLstProcessOutputs_Click` | Constructed control; distinguish deliberate selection from mLoading/programmatic updates |
-| `mCmbRequirementQtyMode_Change` | Constructed control; distinguish deliberate selection from mLoading/programmatic updates |
-| `mCmbProcessOutputQtyMode_Change` | Constructed control; distinguish deliberate selection from mLoading/programmatic updates |
-| `mCmbOutputRegulationScope_Change` | Constructed control; distinguish deliberate selection from mLoading/programmatic updates |
-| `mCmbOutputRegulationNode_Change` | Constructed control; distinguish deliberate selection from mLoading/programmatic updates |
-| `mLstOutputRegulations_Click` | Constructed control; distinguish deliberate selection from mLoading/programmatic updates |
-| `mLstProcessInstructions_Click` | Constructed control; distinguish deliberate selection from mLoading/programmatic updates |
-| `mCmbConnectionFromNode_Change` | Constructed control; distinguish deliberate selection from mLoading/programmatic updates |
-| `mCmbConnectionOutput_Change` | Constructed control; distinguish deliberate selection from mLoading/programmatic updates |
-| `mCmbConnectionToNode_Change` | Constructed control; distinguish deliberate selection from mLoading/programmatic updates |
+| `mLstProcesses_Click` | Reports selected identity only; does not load or persist a draft |
+| `mLstProcessRequirements_Click` | Copies selected row into editor and applies quantity mode; programmatic combo changes can cascade |
+| `mLstProcessOutputs_Click` | Copies selected row into editor, refreshes UOM choices and applies quantity mode; suppress cascaded observations |
+| `mCmbRequirementQtyMode_Change` | Locks/unlocks editor fields; ACTUAL clears three entered fields in ApplyRequirementQtyMode; not a display-only selection |
+| `mCmbProcessOutputQtyMode_Change` | Locks/unlocks editor fields; ACTUAL clears three entered fields in ApplyOutputQtyMode; not a display-only selection |
+| `mCmbOutputRegulationScope_Change` | Rebuilds regulation/node choices and clears regulation editor; Recipe scope reads selected Process version |
+| `mCmbOutputRegulationNode_Change` | Same rebuild only for Recipe scope; mLoading suppresses internal node-list changes |
+| `mLstOutputRegulations_Click` | Copies regulation flag/floor/ceiling into editor; does not invoke Apply |
+| `mLstProcessInstructions_Click` | Copies selected instruction into editor; no mLoading guard in this handler, so deliberate input needs separate proof |
+| `mCmbConnectionFromNode_Change` | Refreshes available outputs and dependent choices; distinguish initiating selection from helper cascades |
+| `mCmbConnectionOutput_Change` | Refreshes compatible downstream choices; distinguish initiating selection from helper cascades |
+| `mCmbConnectionToNode_Change` | Binds matching Process requirement defaults (quantity/percent/UOM); does not save the connection |
 | `mLstRecipeConnections_Click` | Hidden internal list; visible owner is mLstRecipeConnectionDisplay_Click |
-| `mLstRecipeConnectionDisplay_Click` | Constructed control; distinguish deliberate selection from mLoading/programmatic updates |
+| `mLstRecipeConnectionDisplay_Click` | Existing row selects hidden list and loads editor; finished-output row prepares routing choices. One visible action must not duplicate hidden-list/combo callbacks |
 | `mLstBuilderRecipes_Click` | Unconstructed Recipe Builder |
 | `mLstBuilderLines_Click` | Unconstructed Recipe Builder |
 | `mCmbLineIo_Change` | Unconstructed Recipe Builder |
-| `mLstAssignRecipes_Click` | Constructed control; distinguish deliberate selection from mLoading/programmatic updates |
-| `mLstAssignIngredients_Click` | Constructed control; distinguish deliberate selection from mLoading/programmatic updates |
-| `mTxtInventorySearch_Change` | Input-change helper; review semantic commit boundary, never capture entered text |
-| `mCmbRunLocation_Change` | Constructed control; distinguish deliberate selection from mLoading/programmatic updates |
-| `mCmbTreeRunLocation_Change` | Constructed control; distinguish deliberate selection from mLoading/programmatic updates |
-| `mTxtPaletteSplit_Change` | Input-change helper; review semantic commit boundary, never capture entered text |
-| `mTxtTreePaletteSplit_Change` | Input-change helper; review semantic commit boundary, never capture entered text |
-| `mTxtPaletteQty_Change` | Input-change helper; review semantic commit boundary, never capture entered text |
-| `mTxtTreePaletteQty_Change` | Input-change helper; review semantic commit boundary, never capture entered text |
-| `mTxtOutputReal_Change` | Input-change helper; review semantic commit boundary, never capture entered text |
-| `mTxtRunBatchNote_Change` | Input-change helper; review semantic commit boundary, never capture entered text |
-| `mLstLoaderLines_Click` | Constructed control; distinguish deliberate selection from mLoading/programmatic updates |
-| `mLstRunPalette_Click` | Constructed control; distinguish deliberate selection from mLoading/programmatic updates |
-| `mLstRunTree_Click` | Constructed control; distinguish deliberate selection from mLoading/programmatic updates |
-| `mLstManagerOutput_Click` | Constructed control; distinguish deliberate selection from mLoading/programmatic updates |
-| `mCmbRunProcess_Change` | Constructed control; distinguish deliberate selection from mLoading/programmatic updates |
-| `mCmbTreeRunProcess_Change` | Constructed control; distinguish deliberate selection from mLoading/programmatic updates |
+| `mLstAssignRecipes_Click` | Reads selected Process, replaces local requirements/alternatives and refreshes allowed items; same owner helper is used by Select Process button |
+| `mLstAssignIngredients_Click` | Refreshes allowed items for selected requirement; same owner helper is used by Select Requirement button |
+| `mTxtInventorySearch_Change` | Filters inventory through RefreshInventoryList; no entered search text or per-keystroke observations |
+| `mCmbRunLocation_Change` | Mirrors Tree selection under mLoading; reusable branch refreshes controls, non-reusable branch can clear incompatible staging allocations |
+| `mCmbTreeRunLocation_Change` | Mirrors List selection under mLoading with the same two branches; test one deliberate action, not two observations |
+| `mTxtPaletteSplit_Change` | Computes mirrored quantity and allocation visual state; mUpdatingPaletteInputs prevents recursive edits; does not invoke Apply Split |
+| `mTxtTreePaletteSplit_Change` | Tree counterpart of split-input computation; no per-keystroke observation |
+| `mTxtPaletteQty_Change` | Computes mirrored percentage and allocation visual state; does not invoke Apply Split |
+| `mTxtTreePaletteQty_Change` | Tree counterpart of quantity-input computation; no per-keystroke observation |
+| `mTxtOutputReal_Change` | Loaded reusable run stages or clears actual-output quantity in memory through StageSelectedReusableActualOutput(False); not merely editor formatting |
+| `mTxtRunBatchNote_Change` | Loaded reusable run calls SetReusableRunBatchNote; length/frozen-note refusal can occur before any inventory submission |
+| `mLstLoaderLines_Click` | Reusable branch displays selected line; non-reusable branch refreshes acceptable inventory palette |
+| `mLstRunPalette_Click` | Loads selected allocation editor; guard programmatic selection and linked input changes |
+| `mLstRunTree_Click` | Parent toggles expansion/rebuilds Tree; leaf loads allocation editor. Distinguish navigation outcomes before assigning IDs |
+| `mLstManagerOutput_Click` | Loads selected output editor; reusable helper changes Actual Output text under mLoading to avoid staging it again |
+| `mCmbRunProcess_Change` | Mirrors Tree filter under mLoading, then refreshes reusable palette/instructions or non-reusable palette; no run submission |
+| `mCmbTreeRunProcess_Change` | Mirrors List filter under mLoading with same refresh owner; test one deliberate action |
+
+Specific protecting cases still required: quantity-mode selection must preserve
+the existing editor-clearing behavior without reporting persistence; a displayed
+connection selection must not double count its hidden list or combo cascades;
+List/Tree process and location mirrors must observe only the initiating action;
+Tree parent expansion and leaf selection must remain distinguishable. Actual
+Output and Batch Note update reusable in-memory state during Change, so an eventual
+semantic commit contract must account for that state without capturing entered
+values or emitting one event per keystroke. Source review does not choose a new
+commit boundary or authorize changing these behaviors.
+
+The non-reusable location branch calls ClearMismatchedRunLocationAllocations,
+then ClearRunAllocationForListRow, which can clear SPLIT %/QUANTITY cells in a
+captured staging table as well as local List/Tree state. Therefore a generic
+read-only Navigation label would be misleading without branch-specific owner
+facts. This source observation does not accept that branch, authorize fallback
+when DesignsEnabled=True, or change immutable System_Key identity requirements.
 
 There is no mPages_Change handler for the six visible tabs. Deliberate page
 selection therefore still needs its own observation contract. Selectable controls
@@ -233,8 +257,10 @@ not silently excluded because Run - List is the Release 1 proving path.
 
 ## Owner boundaries that must govern the next contracts
 
-1. Process/Recipe Save, Release and Obsolete call SubmitProcessAction or
-   SubmitRecipeAction, then modProductionReusableDesigns.SubmitReusableDesignEvent.
+1. Process/Recipe Save, Release and Obsolete now call ExecuteDesignerLifecycle,
+   SubmitDesignerAction and modProductionReusableDesigns.SubmitReusableDesignEvent.
+   The six registered handlers now carry cProductionLifecycleFacts; other callers
+   of SubmitDesignerAction are not thereby covered by those six control contracts.
    QueueDesignEventCurrent already returns the exact event ID and queue Boolean.
    The helper subsequently runs a processor batch and compares the definition's
    projected status. Its final Boolean can be False after successful queueing;
@@ -274,14 +300,16 @@ not silently excluded because Run - List is the Release 1 proving path.
 
 The source audit reconciles every AddButton construction, all six BuildLayout
 page calls, every bound button's actual Click procedure and the sole uncalled
-Recipe Builder constructor. The seven known mappings are cross-checked against
-the actual DesignerDraftAction and modProductionUomAction call paths; no runtime
+Recipe Builder constructor. The thirteen registered mappings are cross-checked
+against DesignerDraftAction/ExecuteDesignerLifecycle and modProductionUomAction;
+all34 non-button handlers and the relevant mutation/mirroring helpers are reviewed.
+No runtime
 tracking or catalog mutation occurs. Private source-only census/verification
 artifacts are ignored; this reviewed record contains no operational values.
 
-Use the existing six-control candidate to finish its remaining visible and
+Use the existing registered-control candidates to finish their remaining visible and
 regression gates once desktop input recovers. For broader implementation, review
 the grouped local-edit/selection, lifecycle/queue, worksheet/Config, run/inventory
 and launcher/context owners from this census; specify complete owner facts and
 focused packaged tests before implementing each group. Do not substitute the
-seven registered Production IDs for comprehensive Operations/Admin coverage.
+thirteen registered Production IDs for comprehensive Operations/Admin coverage.

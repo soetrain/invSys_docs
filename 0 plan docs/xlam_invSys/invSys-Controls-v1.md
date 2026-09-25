@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.251 (Production lifecycle recording and diagnostic work; partial acceptance)
+**Version:** 1.252 (Production lifecycle RED recovery and non-button source review; partial acceptance)
 
 **Lifecycle Action Path RED checkpoint, 2026-09-25 UTC:** A packaged
 recording of24 actual lifecycle actions exposes a D5 processor read defect: absent
@@ -10,12 +10,22 @@ correction preserves Config and policy through all24 actions, exact original
 recording order, real Activity/Designs publication and Viewer detail selection.
 Diagnostic command/applied/pending classifications produce668 PASS/40 expected
 FAIL across708 checks. The final source correction is unbuilt and not GREEN.
-Shutdown requires assisted recovery and remains unresolved at01:37 UTC; the original
-controller retains the settings snapshot and final restoration is pending.
+Shutdown requires assisted recovery. At01:45 UTC, tested PowerShell runspace recovery
+lets the original controller verify settings restoration and package preservation,
+then exit. Windows still retains the exited Excel process; a host restart is requested
+before ordinary Excel gates resume. No normal-shutdown acceptance is claimed.
 The existing D18 owner/reference contract remains unchanged; compile, packaged
 GREEN, both presentations, native cancellation, current-candidate regressions and
 visible acceptance remain required. Source static/layout checks pass. See
 [path evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_lifecycle_paths_results.md).
+
+**Non-button audit clarification:** Production coverage audit1.4 accounts for34
+exact handlers and their current owner helpers. Actual Output and Batch Note Change
+handlers can update reusable in-memory state; mirrored List/Tree choices and the
+hidden connection list can create duplicate callbacks; a non-reusable location
+change can clear staging allocations. These source facts require explicit semantic
+commit/owner tests under D18. They grant no new tracking IDs, terminal outcomes or
+acceptance. The thirteen registered IDs and55 pending constructed buttons remain.
 
 **Production lifecycle coverage, 2026-09-24:** The six existing designer buttons
 below inherit Architecture D18's explicit lifecycle owner contract. OwnerId
