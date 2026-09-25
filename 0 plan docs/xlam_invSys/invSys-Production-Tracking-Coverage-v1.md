@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.2. Last reviewed: 2026-09-25 UTC, lifecycle safety checkpoint.
+Version 1.3. Last reviewed: 2026-09-25 UTC, lifecycle recording checkpoint in progress.
 Subordinate to Architecture v4.11 D18, Plan022 and `invSys-Controls-v1.md`.
 This is reviewed source reachability/evidence accounting, not a new runtime
 contract, catalog version, permission grant or acceptance claim. D13 behavioral
@@ -25,6 +25,16 @@ tracking-off/unavailable storage, nested actions and closed-workbook guards pass
 without runtime changes. Native cancellation, publication, original recording,
 both Action Path methods and visible acceptance work remain open. See
 [lifecycle evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_lifecycle_results.md).
+
+The subsequent [recording gate](../../../invSys_fork/tests/integration/plan022_slice4be_production_lifecycle_paths_results.md)
+exposes and protects a D5 Config-repair breach in the processor. Its intermediate
+read-only correction retains24 actual actions, original journal order and real
+published Activity/Designs identity through Viewer detail. The existing D18
+CommandCompleted and Designs applied/awaiting mappings record668 PASS/40 expected
+FAIL across708 packaged checks. Their source correction is unbuilt/not GREEN while
+Windows cleanup and the original controller's settings restoration remain pending.
+Source static/layout checks pass; both presentations and full acceptance remain open. No additional
+controls are registered by this checkpoint, and the55 pending buttons remain pending.
 
 The census checks construction and handler binding, not current enabled state
 or successful workflow execution. The original census performed no business

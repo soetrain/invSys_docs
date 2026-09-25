@@ -2,6 +2,27 @@
 
 **Status:** Current corrective implementation plan
 
+**Lifecycle recording / D5 RED checkpoint, 2026-09-25 UTC:** The new
+packaged recording gate discovers that the processor reads Config through a
+provisioning path when optional Timezone is absent. That path deletes the tracking
+policy sheets and saves Config, changing policy1 to defaults/version0 and losing
+the otherwise successful action's completion. This contradicts existing D5; do not
+weaken the completion policy guard or restore the optional header to hide the defect.
+Replace the processor read with Core's existing read-only resolver, preserving
+borrowed workbooks and closing only its own transient read. The intermediate
+candidate preserves Config through24 actual lifecycle actions and retains their
+original recording, real publication and Viewer detail identities. Its evaluator
+records668 PASS/40 expected FAIL for the missing CommandCompleted/Designs
+classifications, with all708 unique checks retained. The source correction follows
+that packaged editor RED but is not built or GREEN. Windows cleanup remains stuck
+after owned Excel/worker termination requests; the original controller retains the
+settings snapshot, and its closure/restoration receipt is still pending. Preserve
+that controller and resolve cleanup before building or starting another Excel gate.
+Source static/layout/schema checks pass; package compile, GREEN, regressions and
+presentation/visible gates remain required. No normative contract or authority
+change is proposed. See
+[lifecycle path evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_lifecycle_paths_results.md).
+
 **Active 4be.1 lifecycle coverage, 2026-09-24:** Architecture D18 now specifies
 the six Process/Recipe Save Draft, Release and Obsolete controls for catalog13,
 preserving versions1-12. Register explicit owner submission/completion facts and

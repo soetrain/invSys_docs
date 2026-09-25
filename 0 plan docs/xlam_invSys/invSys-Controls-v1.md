@@ -1,6 +1,21 @@
 # invSys Form Controls v1
 
-**Version:** 1.250 (Production lifecycle failure and safety evidence; partial acceptance)
+**Version:** 1.251 (Production lifecycle recording and diagnostic work; partial acceptance)
+
+**Lifecycle Action Path RED checkpoint, 2026-09-25 UTC:** A packaged
+recording of24 actual lifecycle actions exposes a D5 processor read defect: absent
+optional Timezone triggers provisioning, which removes tracking policy and prevents
+the successful action's completion from being recorded. The intermediate read-only
+correction preserves Config and policy through all24 actions, exact original
+recording order, real Activity/Designs publication and Viewer detail selection.
+Diagnostic command/applied/pending classifications produce668 PASS/40 expected
+FAIL across708 checks. The final source correction is unbuilt and not GREEN.
+Shutdown requires assisted recovery and remains unresolved at01:37 UTC; the original
+controller retains the settings snapshot and final restoration is pending.
+The existing D18 owner/reference contract remains unchanged; compile, packaged
+GREEN, both presentations, native cancellation, current-candidate regressions and
+visible acceptance remain required. Source static/layout checks pass. See
+[path evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_lifecycle_paths_results.md).
 
 **Production lifecycle coverage, 2026-09-24:** The six existing designer buttons
 below inherit Architecture D18's explicit lifecycle owner contract. OwnerId
