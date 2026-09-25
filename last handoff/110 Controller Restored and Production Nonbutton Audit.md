@@ -8,8 +8,8 @@ and clarifies Production source coverage; it does not accept the unbuilt correct
 
 ## Current verified state
 
-Last verified: 2026-09-25,01:53 UTC. Code main **19f2cc8**, runtime correction
-**f6d52a3**; docs preceding main **558e7aa**, followed by this synchronized checkpoint.
+Last verified: 2026-09-25,01:55 UTC. Code main **19f2cc8**, runtime correction
+**f6d52a3**; docs checkpoint **8f0d41e**, followed by this blocker-state update.
 Push both and verify synchronization before ending. Preserve unrelated modified
 `last handoff/067 Partial Goal Action Path NAS Contract.md` and untracked
 `expert guidance docs/023 Slice 4be Critique.md`; original pins remain unchanged.
@@ -28,6 +28,11 @@ to suppress that guard. An asynchronous question requests a host restart and off
 user-performed restart, explicit authorization for agent restart, or keeping the PC
 running/pausing Excel tests. No response yet; do not infer restart authorization.
 The earlier unlocked/RDP question is superseded by this recovery state.
+
+The same host blocker is verified across three consecutive goal turns. The goal
+is now **blocked**, not complete, pending an external host-state change or the
+user's restart choice. Recovery/audit progress is committed; do not repeat static
+checks or make documentation churn stand in for the pending packaged GREEN.
 
 Final `deploy/validation-production-paths` is **not built/compiled/GREEN**. Intermediate
 `deploy/validation-production-policy-read` proves D5 preservation and evaluator RED.
@@ -91,8 +96,10 @@ and preservation pins. Prior final source static remains253/6058/133166 lines,
 
 ## Assumptions to re-verify
 
-Host restart response, OS process state and desktop input are pending/stale. Cursor
-probe briefly succeeded at01:10 UTC and returned error5 at01:29. Group Policy and a
+Host restart response and OS process state remain pending. Cursor access succeeds
+again at01:55 UTC (error0), while the same exited Excel process is still enumerated;
+the current blocker is the retained process, not unavailable cursor access. Earlier
+cursor success at01:10 and error5 at01:29 remain historical. Group Policy and a
 shared cause with the shutdown/RPC failures remain unproven. No policy changed.
 Recheck package/test hashes, unrelated-doc pins and Git state after any restart.
 
