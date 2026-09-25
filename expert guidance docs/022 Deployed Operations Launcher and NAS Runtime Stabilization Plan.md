@@ -2,6 +2,24 @@
 
 **Status:** Current corrective implementation plan
 
+**Native cancellation and lifecycle comparison, 2026-09-25 UTC:** Native94/94 and
+paired-view84/84 pass with nine reviewed principal images, normal closure, restored
+settings and unchanged packages. Two independent six-action recordings keep guide
+provenance separate from observed diagnostics; all six instructions, three views
+and the six-match/applied-source conclusion are visible. Actual No choices preserve
+source/draft and workbook binding. Author/reader separation and immutable evidence
+pass. Rejected native captures have developer RED6/2 to GREEN8/8 before replay;
+an initial56/1 presentation fixture omits author capability and is not product RED.
+No runtime or permission guard changes. Static metrics/28 caps hold;3 schemas/290
+PS parses pass. The current-candidate lifecycle regression retains615/615 exact prior
+identities with normal closure and preservation; packaged smoke passes86/86 likewise.
+The full chain reproduces the projection-rebuild crash (chain5/1, live roles32/1,
+Create Warehouse15/15). Settings/packages/reports restore after terminating the
+identity-verified generated recovery Excel process; failed assisted closure is not
+acceptance. Investigate that boundary before another unchanged chain run. Broader
+regressions, control coverage and human/NAS acceptance remain.
+See [visible lifecycle evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_lifecycle_visible_results.md).
+
 **Lifecycle recording / D5 GREEN checkpoint, 2026-09-25 UTC:** The new
 packaged recording gate discovers that the processor reads Config through a
 provisioning path when optional Timezone is absent. That path deletes the tracking
@@ -25,12 +43,13 @@ retains Excel as exited with a kernel-busy cleanup thread. No Excel termination 
 requested. Completed-worker termination and the previously tested process-local
 controller recovery restore settings and preserve all packages at02:52 UTC, without
 exporting snapshot values or changing the repository cleanup guard. The controller
-exits; ordinary Excel gates await disappearance of the retained Windows entry.
+exits; the retained entry disappears before03:15, permitting the native/paired gates
+above. The long run's assisted-cleanup limitation remains.
 Refreshed static metrics remain253/6058/133166,9 literal/45 unresolved calls and191
 duplicate groups. Test-only native No/cancellation and distinct-guide-source versus
-observed-run presentation routes are prepared, not yet executed. Current-candidate
-615/390/202/86 regressions, full-chain/live-role, reusable behavior, normal closure
-and native/paired visible evidence remain required. No normative contract or authority
+observed-run presentation routes now pass as recorded above. Current-candidate
+390/202/86 regressions, full-chain/live-role, reusable behavior, normal closure
+and broader visible evidence remain required. No normative contract or authority
 change is proposed. See
 [lifecycle path evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_lifecycle_paths_results.md).
 

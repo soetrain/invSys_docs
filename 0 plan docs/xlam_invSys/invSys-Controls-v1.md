@@ -1,6 +1,22 @@
 # invSys Form Controls v1
 
-**Version:** 1.253 (Production lifecycle Action Path functional GREEN; partial acceptance)
+**Version:** 1.254 (Production native cancellation and paired lifecycle views verified; partial acceptance)
+
+**Native and paired lifecycle evidence, 2026-09-25 UTC:** The same candidate passes
+94/94 native cancellation and84/84 paired presentation checks, with normal closure,
+restored settings and preserved packages. Four reviewed question images show actual
+No choices; five paired-view images show six instructions, a separate observed run,
+three views and six matches/zero extras with an applied Designs conclusion. Author/
+reader separation, captured workbook and immutable evidence pass. The first four
+native captures are rejected; developer capture RED6/2 becomes8/8 before replay.
+An initial56/1 presentation fixture omits author capability and is not behavioral
+RED. Runtime, catalog13 and normative contracts are unchanged. Static metrics/28
+caps hold;3 schemas/290 PS parses pass. The current-candidate lifecycle regression
+retains615/615 exact prior identities with normal closure and preservation; smoke
+passes86/86 likewise. Full chain reproduces the projection-rebuild crash (chain5/1,
+live roles32/1, Create Warehouse15/15); restoration follows recovery-process
+termination, so this is failed assisted closure. Broader regressions and human/NAS acceptance
+remain. See [visible lifecycle evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_lifecycle_visible_results.md).
 
 **Lifecycle Action Path GREEN checkpoint, 2026-09-25 UTC:** A packaged
 recording of24 actual lifecycle actions exposes a D5 processor read defect: absent
@@ -17,11 +33,11 @@ isolates four Core modules; no form or control contract changes.
 Shutdown still needs qualification: Windows marks Excel exited but retains its
 kernel-busy process entry. No Excel termination is requested. Completed-worker
 termination and tested controller recovery verify settings restoration and all
-package hashes at02:52 UTC. The controller exits; ordinary Excel gates await host
-entry cleanup. No normal-shutdown acceptance is claimed. The existing D18 contract
-is unchanged. Isolated native-cancellation and paired lifecycle-presentation tests
-are prepared but unrun; current-candidate615/390/202/86, full-chain/live-role, reusable
-and visible acceptance remain required. Refreshed source static metrics hold. See
+package hashes at02:52 UTC. The controller exits; the retained entry disappears
+before03:15 without an agent-requested restart. No normal-shutdown acceptance is
+claimed for that long run. Native/paired gates subsequently pass as recorded above;
+current-candidate390/202/86, full-chain/live-role, reusable and broader visible
+acceptance remain required. Refreshed source static metrics hold. See
 [path evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_lifecycle_paths_results.md).
 
 **Non-button audit clarification:** Production coverage audit1.4 accounts for34
