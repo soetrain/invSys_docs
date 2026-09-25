@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.1. Last reviewed: 2026-09-24 UTC, lifecycle observation checkpoint.
+Version 1.2. Last reviewed: 2026-09-25 UTC, lifecycle safety checkpoint.
 Subordinate to Architecture v4.11 D18, Plan022 and `invSys-Controls-v1.md`.
 This is reviewed source reachability/evidence accounting, not a new runtime
 contract, catalog version, permission grant or acceptance claim. D13 behavioral
@@ -19,9 +19,11 @@ actions still require registered observation contracts and implementation.**
 Registration is not full acceptance: the six draft controls pass 390 behavioral
 checks but retain the visible/owner/full-chain gates recorded in the controls
 catalog. Existing UOM evidence retains its recorded candidate scope.
-The six lifecycle controls pass294/294 after packaged RED139/155, but retain
-failure/cancellation, policy, closed-workbook, publication, recording, both
-Action Path methods and visible acceptance work. See
+The six lifecycle controls now pass615/615 after packaged RED316/299, retaining
+the original294 and failure-extension486 identities. Owner uncertainty/pending,
+tracking-off/unavailable storage, nested actions and closed-workbook guards pass
+without runtime changes. Native cancellation, publication, original recording,
+both Action Path methods and visible acceptance work remain open. See
 [lifecycle evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_lifecycle_results.md).
 
 The census checks construction and handler binding, not current enabled state

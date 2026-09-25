@@ -17,10 +17,26 @@ under the approved semantic-inheritance rule, not an authority amendment.
 The first implementation checkpoint passes294/294 after139 PASS/155 expected
 RED failures. It registers six controls and preserves the previous68 definitions;
 actual successful, denied/rejected and stale target/session routes are covered.
-Published/recorded Designs conclusions, native cancellation, failure/pending,
-tracking-off/re-entrancy and closed-workbook fixture evidence remain open. Five
+Published/recorded Designs conclusions and native cancellation remain open. Five
 package compiles/cold start and layout8/8+7/7 pass. See
 [lifecycle evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_lifecycle_results.md).
+
+**Lifecycle safety extension, 2026-09-25 UTC:** Test-only work under unchanged D18
+extends the same frozen candidate to615/615 after316 PASS/299 expected RED failures,
+retaining every preceding294/486 identity. Four real owner-failure boundaries per
+handler distinguish unused IDs, uncertain writes, acknowledged pending submission
+and refresh failure after application. Tracking-off/unavailable storage preserve
+authorized commands; nested actual handlers produce only one submission/pair;
+closed captured workbooks refuse all six actions without retargeting. The final
+RED/GREEN have five instrumented compiles, normal delayed closure, restored settings,
+unchanged package/test bytes and zero Application failures. Intermediate publication,
+open-file hash and VBA80010007 fixture failures remain recorded; one requires
+assisted disposable Excel termination and is not accepted RED. The corrected
+closed-book fixture preserves a separate form host window. No runtime or normative
+contract change, new size exception, rebuild or broader gate waiver is introduced.
+Static metrics are unchanged, all28 existing caps hold, three schemas and282 tooling
+PowerShell parses pass. Native cancellation, publication/original recording, both
+new lifecycle Action Path methods and the failed release regressions remain open.
 
 **Reviewed static exception for this checkpoint only:** duplicate-body groups
 increase191->192 because the scanner replaces string literals in the two

@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.249 (Production lifecycle observations; partial packaged GREEN)
+**Version:** 1.250 (Production lifecycle failure and safety evidence; partial acceptance)
 
 **Production lifecycle coverage, 2026-09-24:** The six existing designer buttons
 below inherit Architecture D18's explicit lifecycle owner contract. OwnerId
@@ -9,6 +9,19 @@ or ADMIN_MAINT capability. Catalog13 preserves1-12. The lifecycle candidate now
 registers these controls: focused RED139 PASS/155 expected FAIL becomes294/294
 through actual handlers, fixed metadata, exact Designs references, pre-write
 denial/rejection and stale target/session guards. Acceptance remains incomplete.
+
+**Subsequent safety evidence, 2026-09-25 UTC:** The unchanged lifecycle candidate
+passes615/615 after316 PASS/299 expected RED failures, retaining all294 original
+and486 failure-extension identities. All six handlers have before-write, uncertain
+append, processing and refresh-failure evidence with exact owner references; an
+applied source never upgrades a failed refresh to command completion. Tracking-off
+and unavailable storage leave authorized commands usable. Nested actual handlers
+produce one owner submission and one correlated observation pair. A closed captured
+workbook refuses all six actions without redirecting to the surviving decoy window.
+Unknown columns, saved workbook bytes and prior activity records are preserved.
+Both final runs compile five instrumented packages, close normally after a delay,
+restore settings and preserve package/test bytes; no runtime change was needed.
+The earlier fixture failures, including assisted VBA80010007 cleanup, remain recorded.
 
 | Existing handler | Caption | ControlId |
 |---|---|---|
@@ -27,10 +40,10 @@ Submitted/Unknown references. No entered design text or definition IDs enter
 activity records. Only CONFIRMED is positive CommandCompleted; SourceEventsApplied
 requires the complete matching published Designs group under D18. Actual handler,
 context/capability, failure/cancellation, policy, publication, both Action Path
-methods and visible evidence remain required. Native cancellation, uncertain/pending
-owner failures, tracking-off/re-entrancy, closed-workbook protection and both Action
-Path methods are not established by that GREEN. The closed-workbook test attempt
-encountered a fixture automation error and is not product RED or acceptance.
+methods and visible evidence remain required. Native cancellation, original recording,
+publication, Designs applied/awaiting/incomplete conclusions and both new lifecycle
+Action Path methods remain open after615/615. The corrected closed-workbook evidence
+does not erase the earlier invalid fixture attempts or establish their broader cause.
 See [lifecycle evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_lifecycle_results.md).
 No new button or permission grant.
 
