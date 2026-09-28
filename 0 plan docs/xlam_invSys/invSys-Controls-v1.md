@@ -1,6 +1,16 @@
 # invSys Form Controls v1
 
-**Version:** 1.254 (Production native cancellation and paired lifecycle views verified; partial acceptance)
+**Version:** 1.255 (Settings regression reconciled; attended visible gates pending)
+
+**Continuation reconciliation, 2026-09-28:** Current-candidate Settings finishes
+202/202, with five instrumented compiles, exit0, Excel closed, restored settings
+and preserved packages. This records the completed2026-09-25 run without repeating
+it; runtime/control contracts are unchanged. The user will keep the desktop
+unlocked during screen-dependent work. Disconnect reproduces error5; direct-monitor
+access passes60/60 without testing an actual lock. Visible acceptance remains
+conditional on desktop access, and the projection-rebuild chain failure is open.
+The user-disabled `invSys.StationUpdate` task is verified disabled; preserve that
+station preference. See [current evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_lifecycle_visible_results.md).
 
 **Native and paired lifecycle evidence, 2026-09-25 UTC:** The same candidate passes
 94/94 native cancellation and84/84 paired presentation checks, with normal closure,

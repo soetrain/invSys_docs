@@ -2,6 +2,18 @@
 
 **Status:** Current corrective implementation plan
 
+**Continuation reconciliation, 2026-09-28:** The previously running Settings
+regression finished202/202 on2026-09-25, with five instrumented compiles, exit0,
+Excel closed and restored settings/preserved packages. The projection-rebuild
+chain failure remains unresolved. The user will arrange an unlocked desktop for
+screen-dependent gates: a controlled RDP disconnect produced140 error5 samples
+and reconnect39 successes; direct-monitor access passes60/60 over five minutes
+without encountering a lock. This does not establish unattended availability.
+The user disabled `invSys.StationUpdate`; verified disabled, do not silently
+re-enable it. No architectural contract changes; the goal is usage-limited and
+Slice4be remains incomplete. See the maintained
+[remaining acceptance index](../../invSys_fork/tests/integration/plan022_slice4be_remaining_acceptance.md).
+
 **Native cancellation and lifecycle comparison, 2026-09-25 UTC:** Native94/94 and
 paired-view84/84 pass with nine reviewed principal images, normal closure, restored
 settings and unchanged packages. Two independent six-action recordings keep guide
