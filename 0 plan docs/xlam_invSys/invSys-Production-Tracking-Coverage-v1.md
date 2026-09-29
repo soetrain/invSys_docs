@@ -16,8 +16,10 @@ changes are preserved. Current registration is29/68,39 pending. Paired paths pas
 captures including the exact STAGED terminal. Ten actions match the distinct
 observed run in all three views without claiming Domain application. Current
 layout, Settings202/202, Instructions411/411, instruction paths105/105 and UOM
-paths84/84 pass with normal closure/preservation; both path routes have six reviewed
-principal captures. Remaining regressions and full release/native gates remain open. Static
+paths84/84 pass with normal final closure/preservation; both path routes have six
+reviewed principal captures. Settings' internal preference restart can force
+termination without recording the branch; that shutdown remains unobserved,
+including earlier runs of the helper. Remaining regressions and full release/native gates remain open. Static
 dynamic/duplicate metrics and all28 module limits hold; frmProduction shrinks one line.
 
 The unchanged extent candidate now passes combined visible264/264 with every prior

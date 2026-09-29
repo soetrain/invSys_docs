@@ -15,7 +15,9 @@ Ten original actions match a distinct observed run in How-To/Diagnostic/Compare;
 local CommandCompleted does not assert Domain application. Current layout passes
 with three reviewed captures; Settings retains202/202, Instructions411/411,
 instruction paths105/105 and UOM paths84/84. Both path routes have six reviewed
-principal captures. All close unassisted and preserve settings/packages.
+principal captures. Final closure is unassisted and settings/packages are preserved.
+Settings' internal preference restart can force termination without recording the
+branch; its shutdown remains unobserved, including earlier runs of that helper.
 Remaining regressions and release/native gates remain
 open. Candidate is not promoted. Stop
 again on actual desktop error5.

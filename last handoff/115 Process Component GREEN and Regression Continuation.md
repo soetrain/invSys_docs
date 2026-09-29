@@ -9,10 +9,10 @@ desktop error5 occurs in this work period; stop again if it returns.
 
 ## Current verified state
 
-Last verified:2026-09-29,23:37 UTC. Both branches are `main`. Code **2b3b768** is
+Last verified:2026-09-29,23:39 UTC. Both branches are `main`. Code **49094e0** is
 pushed; runtime implementation is **115b616**, protecting RED checkpoint **8d616cd**.
-Documentation **e510bd0** is the pre-handoff head; this handoff, pointer and scoped
-regression updates form the following documentation commit. Code is clean. Preserve
+Documentation **6df1f76** records this handoff and scoped regressions; the following
+documentation commit qualifies unobserved Settings restart cleanup. Code is clean. Preserve
 the unrelated modified `last handoff/067 Partial Goal Action Path NAS Contract.md`
 and untracked `expert guidance docs/023 Slice 4be Critique.md`; private pins match.
 
@@ -53,7 +53,7 @@ Exact controllers/results and qualifications are in code
 | Component publication/paired paths |**142/142**, all140 preceding checks plus two calibrated selected-field checks; six principal captures reviewed, normal closure/preservation. Ten actual actions match a distinct observed run in all three views. |
 | Build/static |Five builds/compiles and cold Operations load pass. Exactly three changed plus three new compiled components,252 total, none removed. Static259 components/6078 procedures/133764 lines;9 literal/45 unresolved calls,191 duplicate groups unchanged;28 existing limits hold, form11736->11735. Three schemas pass;310 PowerShell scripts parse. |
 | Layout |Three sizes/five pages, no bounds/overlap failures, native window actions pass; three principal captures reviewed, normal closure/preservation. |
-| Settings / Instructions |**202/202 /411/411**, exact preceding identities, five compiles each, normal closure/preservation. |
+| Settings / Instructions |**202/202 /411/411**, exact preceding identities, five compiles each, normal final closure/preservation. Settings' internal preference-restart shutdown is unobserved: its helper can force termination without recording the branch. |
 | Instruction / UOM paths |**105/105 /84/84**, exact preceding identities, five compiles and six reviewed principal images per route; normal closure/preservation. Both conclusions explicitly avoid a Domain-application claim. |
 
 Focused, path, layout and regression gates above record zero matching Excel
@@ -88,6 +88,9 @@ established and this success period does not prove the setting fixed it.
   Read batch-boundary evidence before repeating an unchanged diagnostic variant.
 - Do not use VBE Debug/Reset after an uncertain modal. Do not call a forced exit
   normal shutdown. Read live observer/worker logs with FileShare.ReadWrite.
+- `Test-ActionPathPreferenceRestart` in `Slice4beActionPathPreference.ps1` can call
+  Stop-Process after five seconds. Record its cleanup branch before claiming normal
+  restart/shutdown for Settings; earlier202/202 results have the same qualification.
 
 ## Assumptions to re-verify
 
@@ -101,7 +104,8 @@ created and no completion or pause was requested.
 Current candidate still needs combined visible UOM264/264, actual public UOM61/61,
 draft/paths390/390, lifecycle615/615, native cancellation94/94, Settings observations
 (previous468; expect added catalog16 exclusions, verify actual count), smoke86/86,
-and applicable full-chain/live-role/reusable restart/export gates. Prior frozen
+and applicable full-chain/live-role/reusable restart/export gates. Settings also
+needs observed internal-restart closure, distinct from its normal final exit. Prior frozen
 extent evidence is indexed in `plan022_slice4be_production_uom_activity_results.md`.
 Native crash/delayed-exit causes remain unresolved. Remaining39 Production buttons,
 14 unconstructed legacy buttons,34 non-button handlers and other Operations/Admin
