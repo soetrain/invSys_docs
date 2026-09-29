@@ -2,6 +2,13 @@
 
 **Status:** Current corrective implementation plan
 
+**Execution paused,2026-09-29:** desktop cursor error5 recurs15:34:46 Pacific
+(22:34:46 UTC); the goal is paused under the user's stop condition. Excel is closed
+and settings/packages restored. The component gate has two rejected fixture
+attempts: snapshot List-property access, then unavailable partial-write probe
+anchor. No protecting RED or component runtime implementation yet. After explicit
+resume, fix/calibrate the adapter and obtain packaged RED before runtime edits.
+
 **Next 4be.1 group,2026-09-29:** implement Architecture D18 catalog16 observations
 for the ten Process requirement/output Add, Update, Remove, Up and Down handlers.
 This is a discovered-control refinement under the approved semantic-inheritance

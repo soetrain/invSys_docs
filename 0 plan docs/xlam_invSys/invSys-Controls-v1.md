@@ -1,6 +1,12 @@
 # invSys Form Controls v1
 
-**Version:** 1.271 (Process requirement/output observation contract; implementation pending)
+**Version:** 1.272 (component gate pending; goal paused on desktop error5)
+
+The goal paused2026-09-29 at15:34:46 Pacific after desktop cursor error5. Component
+test attempts fail in snapshot access and probe-anchor setup; neither establishes
+protecting RED. Runtime registration stays19/68; no component implementation has
+begun. Excel is closed and settings/packages restored. Resume requires the user's
+instruction; repair the fixture and establish packaged RED before runtime changes.
 
 **Discovered Process component controls,2026-09-29:** Architecture D18 catalog16
 specifies `PRODUCTION_PROCESS_REQUIREMENT_{ADD,UPDATE,REMOVE,UP,DOWN}` and

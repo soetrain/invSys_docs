@@ -1,6 +1,10 @@
 # Production form tracking coverage audit
 
-Version 1.14. Last reviewed: 2026-09-29 UTC, next Process component contract.
+Version 1.15. Last reviewed: 2026-09-29 UTC, component fixture and desktop pause.
+
+Goal paused15:34:46 Pacific after desktop cursor error5. Two component test attempts
+fail in fixture snapshot/probe-anchor setup; protecting RED remains unestablished
+and runtime unchanged. See the [component continuation](../../../invSys_fork/tests/integration/plan022_slice4be_production_component_results.md).
 
 Architecture D18 now specifies catalog16 for the ten requirement/output Add,
 Update, Remove, Up and Down controls below; implementation and packaged RED/GREEN
