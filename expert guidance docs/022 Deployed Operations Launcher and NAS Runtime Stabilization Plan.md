@@ -2,22 +2,36 @@
 
 **Status:** Current corrective implementation plan
 
-**Discovered UOM extent blocker,2026-09-29:** Packaged actual Retrieve/Edit with
+**UOM observation and extent checkpoint,2026-09-29:** Catalog15 implements
+`PRODUCTION_UOM_EDIT` with actual-handler RED98/134 ->232/232; the first path
+gate passes84/84 with fixture-dialog assistance, so unattended acceptance is open.
+The corrected extent candidate below passes separate visible110/110, five compiles,
+static caps and normal closure. Its combined visible suite stops255/1 at the
+closed-workbook test adapter call with80010007; diagnostic Debug/Reset precedes
+an oleaut32/c0000005 crash and assisted recovery termination. Do not classify that
+as desktop error5 or acceptance GREEN. Controlled visibility comparison and final
+regressions remain pending. See [UOM observation evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_uom_activity_results.md).
+
+**UOM extent correction,2026-09-29:** Packaged actual Retrieve/Edit with
 an internal blank row passes84 checks but fails complete table extent restoration
 on `validation-production-uom-activity`. Cells survive; rows below the gap fall
 outside the reopened table. Architecture's approved reuse decision now clarifies
 hidden, owned worksheet-local extent metadata across Retrieve/unlist/save/reopen.
 Protect the complete range, unknown columns, no implicit save and invalid/name
 collision rejection before changing runtime. This is preservation implementation,
-not a new catalog authority or refresh behavior. Focused correction is pending.
+not a new catalog authority or refresh behavior. Expanded RED96/14 now becomes
+visible110/110 on `validation-production-uom-extent`; all prior78 GREEN identities
+remain. Settings/packages and Core authority are preserved; five compiles and
+static gates pass. The combined visible guard failure above remains open.
 
-**Next 4be.1 observation,2026-09-29:** Architecture D18 now specifies the discovered
+**4be.1 UOM observation contract,2026-09-29:** Architecture D18 specifies the discovered
 `PRODUCTION_UOM_EDIT` control for catalog15, retaining1-14. Extend actual packaged
 Send-handler tests for OPENED/REUSED/REJECTED/DENIED/FAILED, redaction, current
 captured context, loading/re-entry, optional tracking and exact completion facts
 before implementing observation. Recheck existing launcher PROD_POST permission;
-do not infer Core publication permission from staging. Registration and acceptance
-are pending. The UOM preservation GREEN and full-chain/native blocker below remain.
+do not infer Core publication permission from staging. Registration
+is implemented in the isolated candidate; acceptance is pending. The UOM
+preservation GREEN and full-chain/native blocker below remain.
 
 **UOM staging correction,2026-09-29:** User-approved reuse is implemented in
 `validation-production-uom-staging`: expanded packaged RED60/18 -> GREEN78/78;

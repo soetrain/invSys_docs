@@ -1,16 +1,20 @@
 # invSys Form Controls v1
 
-**Version:** 1.265 (UOM observation contract; blank-row extent correction pending)
+**Version:** 1.266 (UOM observation implemented; extent GREEN; acceptance partial)
 
-**UOM extent preservation blocker,2026-09-29:** Actual Retrieve followed by Edit
+**UOM extent preservation,2026-09-29:** Actual Retrieve followed by Edit
 must restore the complete draft table, including blank internal rows and all
-unknown columns, also after an operator save/reopen. The current candidate passes
-84 checks but fails the full-extent check. Architecture specifies owned local
+unknown columns, also after an operator save/reopen. The initial expanded gate on
+the observation candidate passes84 checks but fails full extent. Architecture specifies owned local
 extent metadata and refusal of ambiguous markers before mutation/publication;
 no caption, authority, catalog refresh or implicit-save behavior changes.
-Correction and acceptance remain pending.
+Expanded RED96/14 becomes separate visible110/110 with normal closure on
+`validation-production-uom-extent`. Five compiles/static gates pass and all prior78
+GREEN checks remain. Acceptance of the combined visible suite remains open:255/1
+at the closed-workbook test adapter,80010007 dialog, then oleaut32/c0000005 after
+diagnostic Reset; recovery cleanup needed assistance. This is not desktop error5.
 
-**Pending UOM Edit observation,2026-09-29:** D18 catalog15 adds
+**Partial UOM Edit observation,2026-09-29:** D18 catalog15 adds
 `PRODUCTION_UOM_EDIT` for `mBtnUomCatalogSend_Click`, caption **Edit UOM Catalog on
 Sheet**, on Operations > Production > Production Settings > UOM Catalog.
 Owner `PRODUCTION_UOM_STAGING`, Production/Command, existing launcher PROD_POST
@@ -21,10 +25,12 @@ Only OPENED/REUSED satisfy CommandCompleted; source references stay empty.
 No catalog rows, paths, notes or formulas enter observations. Stale/closed/loading/
 re-entrant actions are suppressed; optional tracking cannot block authorized
 staging. Catalogs1-14 and Core publication permission remain unchanged.
-Runtime registration and Action Path acceptance are pending.
+Runtime registration is implemented: focused RED98/134 ->232/232 on the observation
+candidate. Paths84/84 need fixture-dialog assistance; an unattended rerun and final
+regressions remain. See [UOM evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_uom_activity_results.md).
 
 **UOM staging preservation correction,2026-09-29:** Existing **Edit UOM Catalog on
-Sheet** (`mBtnUomCatalogSend_Click`) remains untracked. The approved reuse contract
+Sheet** (`mBtnUomCatalogSend_Click`) was untracked in this earlier candidate. The approved reuse contract
 is implemented in `validation-production-uom-staging`: retain existing edits and
 custom columns; load saved catalog only for a new empty workbench; reopen a unique
 unlisted managed region; reject ambiguous shapes before mutation. Retrieve resolves

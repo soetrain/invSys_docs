@@ -1,17 +1,25 @@
 # Production form tracking coverage audit
 
-Version 1.8. Last reviewed: 2026-09-29 UTC, UOM Edit observation contract.
+Version 1.9. Last reviewed: 2026-09-29 UTC, UOM Edit implementation checkpoint.
 
-D18 now defines `PRODUCTION_UOM_EDIT` for catalog15; runtime registration and
-acceptance are pending. The existing18 registered constructed controls remain
-18/68 until implementation. This refinement rechecks launcher PROD_POST in the
-captured context without conferring publication authority.
+D18 catalog15 now implements `PRODUCTION_UOM_EDIT`: **19/68 constructed controls
+registered;49 remain**. Existing launcher PROD_POST is rechecked in the captured
+context without conferring publication authority. Actual-handler RED98/134 reaches
+232/232 on the observation candidate; paths84/84 require fixture-dialog assistance.
+Registration is not acceptance. The later extent candidate passes separate visible
+110/110 but its combined visible suite stops255/1 at the closed-workbook adapter;
+80010007 is followed by an oleaut32/c0000005 crash after diagnostic Reset and
+assisted recovery cleanup. Current regressions and visible guard acceptance remain
+open. See [UOM observation evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_uom_activity_results.md).
 
-The still-untracked UOM Send handler now preserves staging under the approved reuse
+The UOM Send handler preserves staging under the approved reuse
 contract: expanded packaged RED60/18 -> GREEN78/78 and visible78/78. Normalized
 retrieval, custom cells and ambiguous-shape rejection are covered. Build/compile,
 layout/static pass, but the candidate's full chain fails at Shipping Sent/native
-c0000028. No additional control is registered or release acceptance claimed. See
+c0000028. That earlier preservation-only checkpoint registered no control. The
+later blank-row extent correction reaches RED96/14 -> visible110/110, preserving
+all earlier78 identities, with normal closure and unchanged authority. No release
+acceptance is claimed. See
 [UOM staging evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_uom_staging_results.md).
 Subordinate to Architecture v4.11 D18, Plan022 and `invSys-Controls-v1.md`.
 This is reviewed source reachability/evidence accounting, not a new runtime
@@ -25,9 +33,9 @@ still requires its exact owner contract and packaged-handler RED before edits.
 constructs six pages through BuildLayout and one shared Close button. It contains
 82 AddButton constructions: **68 constructed buttons with Click handlers** and
 **14 buttons confined to the uncalled BuildRecipeBuilderPage**. All 82 are
-accounted for below. Catalog14 contains eighteen IDs mapped to
+accounted for below. Catalog15 contains nineteen IDs mapped to
 these 68 buttons: six draft controls, six lifecycle controls, five instruction
-controls and UOM Retrieve. **50 constructed button actions still need their exact
+controls, UOM Retrieve and UOM Edit. **49 constructed button actions still need their exact
 observation contracts and implementation.** The five instruction controls have
 focused packaged RED105/306 -> GREEN411/411 with exact identities, normal closure
 and preserved authority/settings/packages. Recording/publication and paired views
@@ -205,7 +213,7 @@ from permission to stage or export a catalog worksheet.
 | `btnOutputRegulationApply` | Apply Regulation | `mBtnOutputRegulationApply_Click` | Pending |
 | `btnOutputRegulationClear` | Clear Override | `mBtnOutputRegulationClear_Click` | Pending |
 | `btnUomCatalogRetrieve` | Retrieve UOM Catalog | `mBtnUomCatalogRetrieve_Click` | `PRODUCTION_UOM_RETRIEVE` |
-| `btnUomCatalogSend` | Edit UOM Catalog on Sheet | `mBtnUomCatalogSend_Click` | `PRODUCTION_UOM_EDIT` contract; implementation pending |
+| `btnUomCatalogSend` | Edit UOM Catalog on Sheet | `mBtnUomCatalogSend_Click` | `PRODUCTION_UOM_EDIT` implemented; visible guard/regression acceptance pending |
 
 ## Unconstructed Recipe Builder controls
 
@@ -326,14 +334,15 @@ not silently excluded because Run - List is the Release 1 proving path.
    regulation and alternatives have distinct local-draft and persistence
    boundaries. Map actions to those actual boundaries before assigning outcomes;
    names such as Apply, Save or Clear do not determine Domain effect.
-4. UOM Send calls modProductionUomCatalog.SendUomCatalogToWorksheet (source file
-   modProductionUomCatalogWorksheet.bas): it writes the captured staging sheet.
-   It unlists an existing staging table and clears that worksheet before writing
-   the catalog. User-column preservation for that path is not proved by this
-   audit; protect it with a focused behavioral test before changing the writer.
-   It is not a read-only observation and does not publish warehouse Config.
-   Retrieve uses modProductionUomAction and the existing authorized Config owner.
-   Preserve unknown user columns and unrelated user content in any future change.
+4. UOM Edit uses typed modProductionUomAction.OpenWorkbench and the owning
+   modProductionUomCatalog.SendUomCatalogToWorksheet. It creates only an empty
+   workbench, otherwise retains the existing draft and custom columns. Retrieve
+   resolves normalized managed headers and retains local extent metadata before
+   unlisting. The initial destructive writer and the later blank-gap truncation
+   are protected by separate actual-handler RED/GREEN evidence. Observations
+   distinguish OPENED/REUSED from the separate authorized Config publication.
+   Visible closed-workbook guard acceptance remains unresolved; registration does
+   not waive preservation or the existing Core publication boundary.
 5. Run selection, allocation, scale, actual-output and note helpers can react to
    programmatic changes and synchronize List/Tree controls. Observe deliberate
    operator actions once. Check In and Complete Run need exact inventory-event
