@@ -7,10 +7,10 @@
 deletes unknown columns, their values/formula/order and an unrelated worksheet
 note. Five instrumented compiles, captured binding, Config/workbook preservation
 checks, normal exit and settings/package preservation pass. Architecture's
-header-extension rule is already binding. A pending Architecture decision proposes
-opening/reusing the existing workbench rather than resetting its managed values;
-user approval is needed before implementing that workflow choice. Expand packaged
-header/retrieval/reopen tests while awaiting it. No runtime change or new tracking
+header-extension rule is already binding. The user approved the Architecture
+decision on2026-09-29: open/reuse existing staging without resetting its managed
+values; load saved catalog only for a new empty workbench. Expand packaged
+header/retrieval/reopen tests before implementation. No runtime change or new tracking
 ID has been made. See [UOM staging evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_uom_staging_results.md).
 
 **Active 4be.1 instruction-editor coverage,2026-09-29:** D18 now specifies the

@@ -1,15 +1,16 @@
 # invSys Form Controls v1
 
-**Version:** 1.261 (Native cancellation and remaining Production failure)
+**Version:** 1.262 (Approved UOM staging reuse; implementation pending)
 
 **UOM staging preservation reopened,2026-09-29:** Existing **Edit UOM Catalog on
 Sheet** (`mBtnUomCatalogSend_Click`) remains untracked. Its actual packaged handler
 records49 PASS/5 behavioral FAIL when called again with custom columns/formulas
 and an unrelated worksheet note. The worksheet-wide clear violates the existing
 header-extension rule. Initial creation, captured binding, Config bytes and normal
-exit pass. A pending Architecture proposal would open/reuse existing staging
-instead of resetting it; approval is pending because that changes current Send's
-managed-value refresh behavior. No runtime behavior, wording, tracking ID or
+exit pass. The user approved Architecture's reuse decision on2026-09-29:
+open existing staging without resetting edits; load the saved catalog only for a
+new empty workbench. Reused drafts do not reload later saved-catalog changes.
+Implementation is pending. No runtime behavior, wording, tracking ID or
 acceptance is changed. See [preservation evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_uom_staging_results.md).
 
 **Partial 4be.1 instruction-editor observations,2026-09-29:** These existing

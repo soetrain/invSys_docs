@@ -3547,10 +3547,10 @@ relax routed Recipe-edge compatibility.
   **Retrieve UOM Catalog**. The worksheet is staging only; retrieval validates
   the complete table and publishes a new catalog version rather than mutating
   historical definitions or events. No additional form is introduced.
-**Pending UOM workbench preservation decision,2026-09-29 -- not approved:**
+**Approved UOM workbench preservation decision,2026-09-29:**
 The existing header-extension rules remain normative. Actual packaged Send
 currently deletes custom columns/formulas and unrelated worksheet content;
-focused evidence is49 PASS/5 behavioral FAIL. The proposed correction interprets
+focused evidence is49 PASS/5 behavioral FAIL. The approved correction interprets
 **Edit UOM Catalog on Sheet** as opening/reusing a draft: create from the saved
 catalog only for a new empty workbench; reopen an existing table without rewriting
 its cells. Successful Retrieve continues to unlist without clearing cells; the
@@ -3558,9 +3558,9 @@ next Edit reopens the identifiable managed region. Required columns are resolved
 by normalized name, extra columns remain local, and ambiguous ownership/header
 shapes are rejected before mutation. Reused drafts must not be represented as
 automatically refreshed from later saved-catalog changes. Core publication and
-authorization remain unchanged. Approval is requested before implementing this
-reuse choice because current Send resets managed staging values. This proposal
-does not waive preservation or authorize a runtime change before approval. See
+authorization remain unchanged. The user explicitly approved reuse of existing
+staging on2026-09-29, replacing current Send's managed-value reset behavior.
+This decision does not waive preservation or establish implementation acceptance. See
 [focused evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_uom_staging_results.md).
 
 - A convertible UOM declares a positive quantity of itself per one Base UOM in
