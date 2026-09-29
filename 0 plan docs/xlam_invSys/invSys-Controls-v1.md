@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.267 (UOM paths unassisted; final-candidate regressions partial)
+**Version:** 1.268 (lifecycle retained; visible UOM adapter failure still open)
 
 **UOM extent preservation,2026-09-29:** Actual Retrieve followed by Edit
 must restore the complete draft table, including blank internal rows and all
@@ -26,6 +26,19 @@ Instruction paths105/105 subsequently retain exact prior identities, six reviewe
 principal images, normal unassisted closure and settings/package preservation.
 Draft/Action Paths390/390 also retain exact prior identities, normal unassisted
 closure and preservation on the extent candidate; no Excel Application event occurs.
+Lifecycle615/615 also retains exact identities, normal closure and preservation.
+The visible closed-workbook adapter diagnosis reproduces262/1 without Debug/Reset;
+original Excel is still listed at failure, then exits during cleanup; its child
+requires termination. This does not prove a native crash or establish form entry.
+Settings/packages are restored. Durable markers then complete271/2 with normal
+closure: the retained-form dispatch returns80010007 before its entry marker;
+no redirected activity occurs. Prove the actual launcher-owned UOM close/reopen
+lifecycle before reconsidering the failed message oracle. No runtime repair or
+acceptance is claimed.
+Native cancellation94/94 retains exact identities, normal unassisted closure,
+settings/packages and four reviewed principal dialog images on the extent candidate.
+Packaged smoke86/86 retains prior identities and preservation; its automatic
+cleanup is unobserved because the harness can force termination without a receipt.
 
 **Partial UOM Edit observation,2026-09-29:** D18 catalog15 adds
 `PRODUCTION_UOM_EDIT` for `mBtnUomCatalogSend_Click`, caption **Edit UOM Catalog on

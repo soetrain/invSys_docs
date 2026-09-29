@@ -22,6 +22,19 @@ Instruction paths105/105 also retain exact prior identities, six reviewed princi
 images, normal unassisted closure and settings/package preservation.
 Draft/Action Paths390/390 also retain exact prior identities, normal unassisted
 closure and preservation on the extent candidate, with no Excel Application event.
+Lifecycle615/615 also retains exact identities, normal closure and preservation.
+The opt-in adapter diagnostic reproduces the visible closed-workbook failure262/1
+without Debug/Reset intervention. Original Excel is listed at failure, then exits
+during cleanup; the child needs termination. This does not prove a native crash.
+In-memory state cannot prove entry at the failed boundary. The durable extension
+completes271/2 with normal closure and preservation:80010007 follows adapter entry
+before the form-entry marker, without redirected activity. Prove the actual
+launcher-owned UOM close/reopen lifecycle before reconsidering the failed
+retained-instance message oracle. No runtime repair or acceptance is claimed.
+Native cancellation94/94 retains exact identities, normal unassisted closure,
+settings/packages and four reviewed principal dialog images on the extent candidate.
+Packaged smoke86/86 retains prior identities and preservation; its automatic
+cleanup is unobserved because the harness can force termination without a receipt.
 See [UOM observation evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_uom_activity_results.md).
 
 **UOM extent correction,2026-09-29:** Packaged actual Retrieve/Edit with

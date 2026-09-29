@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.10. Last reviewed: 2026-09-29 UTC, UOM paths and regression checkpoint.
+Version 1.11. Last reviewed: 2026-09-29 UTC, UOM dispatch diagnostic and regressions.
 
 D18 catalog15 now implements `PRODUCTION_UOM_EDIT`: **19/68 constructed controls
 registered;49 remain**. Existing launcher PROD_POST is rechecked in the captured
@@ -24,6 +24,19 @@ Instruction paths105/105 also retain exact prior identities, six reviewed princi
 images, normal unassisted closure and settings/package preservation.
 Draft/Action Paths390/390 also retain exact prior identities, normal unassisted
 closure and preservation on the extent candidate, with no Excel Application event.
+Lifecycle615/615 also retains exact identities, normal closure and preservation.
+The visible adapter diagnostic reproduces262/1 at the closed-workbook call without
+Debug/Reset; original Excel is listed at failure, then exits during cleanup;
+the child needs termination. This does not prove a native crash. In-memory state
+cannot prove form entry. The durable extension completes271/2 with normal closure
+and preservation:80010007 follows adapter entry before the form-entry marker;
+no redirected activity occurs. A focused actual-launcher UOM close/reopen proof
+is needed before reconsidering the retained-instance message oracle. The failed
+visible gate stays open.
+Native cancellation94/94 retains exact identities, normal unassisted closure,
+settings/packages and four reviewed principal dialog images on the extent candidate.
+Packaged smoke86/86 retains prior identities and preservation; its automatic
+cleanup is unobserved because the harness can force termination without a receipt.
 
 The UOM Send handler preserves staging under the approved reuse
 contract: expanded packaged RED60/18 -> GREEN78/78 and visible78/78. Normalized
