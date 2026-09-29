@@ -48,8 +48,12 @@ Native exception observation, with and without routine first-chance filtering,
 also passes standard workflow assertions without VBE preparation, but both runs
 require final termination and do not reproduce the cold crash. Observer calibration
 passes34/34. A blank-workbook control demonstrates retained child COM references
-can prevent process exit; actual packaged cleanup remains to be tested. No runtime
-repair, normal shutdown or complete acceptance follows from these controls.
+can prevent process exit. The resulting cleanup helper passes8/8 calibration,
+but packaged scoped controls retain7/7 callbacks and still require termination
+after30 seconds, including a separate post-report error-record control. Neither
+is adopted into ordinary validation. No runtime repair, normal shutdown or
+complete acceptance follows from these controls; continue independent coverage
+with these gates open.
 Require remaining current-candidate regressions and Release1 gates before
 acceptance. The full Production native failure remains an independent open gate;
 do not hide it behind this new coverage. These five controls are implemented with

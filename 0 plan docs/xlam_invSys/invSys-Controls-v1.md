@@ -48,8 +48,9 @@ launcher with the same native signature and no termination request. This
 experiment is rejected as a repair; native/COM diagnosis remains open. Two native
 observer modes pass workflow assertions without VBE preparation but require final
 termination; neither reproduces the cold crash. A blank-workbook control exposes
-retained child COM references as a possible harness cleanup influence, requiring
-actual packaged verification. No acceptance status changes. Other
+retained child COM references as a possible harness cleanup influence. Subsequent
+packaged cleanup controls retain7/7 scoped callbacks but still require termination
+after30 seconds; no cleanup repair or acceptance status change is established. Other
 regression gates remain pending. See the
 [instruction evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_instruction_results.md).
 This refines approved D18 without a new authority or permission grant.

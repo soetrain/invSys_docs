@@ -31,7 +31,12 @@ smoke86/86 retains prior identities with automatic cleanup unobserved. Reusable
 run-only fails at batch scale with the prior RPC/native signature and no
 termination request. Prior67 reusable observations are not re-established.
 Prepared standard-flow controls pass with automatic cleanup; these do not repair
-the cold candidate. A separate saved-compile artifact is the next experiment.
+the cold candidate. A separate saved-compile artifact also crashes cold. Native
+observers pass workflow assertions without explicit VBE preparation but require
+termination and do not reproduce the crash. Bounded post-report COM-reference
+cleanup controls retain7/7 scoped callbacks but still require termination after
+30 seconds. Cold failure and normal shutdown remain open; no runtime repair is
+adopted. See [boundary diagnostics](../../../invSys_fork/tests/integration/plan022_slice4be_production_batch_boundary_results.md).
 Other regressions remain pending. See the
 [instruction evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_instruction_results.md).
 Registration is not full acceptance: the six draft controls retain390/390 on the
