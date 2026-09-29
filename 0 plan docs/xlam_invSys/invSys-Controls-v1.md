@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.275 (component focused/paired-path GREEN; regressions pending)
+**Version:** 1.276 (component GREEN and scoped regressions; release gates pending)
 
 User-authorized work resumes2026-09-29 with successful desktop checks. Component
 RED180/615 becomes GREEN795/795 with exact identities, five compiles, normal
@@ -13,8 +13,10 @@ Publication/paired paths pass142/142 with all140 preceding checks, two calibrate
 selected-field checks, normal closure, preservation and six reviewed captures.
 Ten original actions match a distinct observed run in How-To/Diagnostic/Compare;
 local CommandCompleted does not assert Domain application. Current layout passes
-with three reviewed captures; Settings retains202/202 and Instructions411/411. All close unassisted and
-preserve settings/packages. Remaining regressions and release/native gates remain
+with three reviewed captures; Settings retains202/202, Instructions411/411,
+instruction paths105/105 and UOM paths84/84. Both path routes have six reviewed
+principal captures. All close unassisted and preserve settings/packages.
+Remaining regressions and release/native gates remain
 open. Candidate is not promoted. Stop
 again on actual desktop error5.
 

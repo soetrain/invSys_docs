@@ -18,8 +18,10 @@ normal closure/preservation and six reviewed principal images. Ten actual contro
 match a distinct observed run in all three views; STAGED is selected by exact
 RecordId and local CommandCompleted never claims Domain application. Earlier
 capture/getter mistakes remain qualified test evidence. Current-candidate layout
-passes with three reviewed captures; Settings retains202/202 and Instructions411/411. All close unassisted
-and preserve settings/packages. Remaining regressions and full release/native gates remain open;
+passes with three reviewed captures; Settings retains202/202, Instructions411/411,
+instruction paths105/105 and UOM paths84/84. Both path routes have six reviewed
+principal captures. All close unassisted and preserve settings/packages.
+Remaining regressions and full release/native gates remain open;
 do not promote or call Slice4be complete.
 
 **User-authorized resumption and component RED,2026-09-29:** desktop checks pass

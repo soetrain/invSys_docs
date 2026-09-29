@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.18. Last reviewed: 2026-09-29 UTC, component focused/paired-path GREEN.
+Version 1.19. Last reviewed: 2026-09-29 UTC, component GREEN and scoped regressions.
 
 User-authorized work resumes with successful desktop checks. Corrected component
 adapters complete RED180/615, then GREEN795/795 with exact identities, five compiles,
@@ -15,8 +15,9 @@ changes are preserved. Current registration is29/68,39 pending. Paired paths pas
 142/142, retaining140 preceding checks, normal closure/preservation and six reviewed
 captures including the exact STAGED terminal. Ten actions match the distinct
 observed run in all three views without claiming Domain application. Current
-layout, Settings202/202 and Instructions411/411 pass with normal closure/preservation; remaining
-regressions and full release/native gates remain open. Static
+layout, Settings202/202, Instructions411/411, instruction paths105/105 and UOM
+paths84/84 pass with normal closure/preservation; both path routes have six reviewed
+principal captures. Remaining regressions and full release/native gates remain open. Static
 dynamic/duplicate metrics and all28 module limits hold; frmProduction shrinks one line.
 
 The unchanged extent candidate now passes combined visible264/264 with every prior
