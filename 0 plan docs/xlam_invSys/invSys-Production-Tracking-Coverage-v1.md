@@ -20,6 +20,10 @@ and packaged layout pass; prior check identities, settings and packages are
 preserved. Public-launcher captured-workbook close/reopen passes1/1 but uses forced
 cleanup. That workflow check does not prove normal shutdown or resolve the failed
 combined visible guard. Remaining regressions and release acceptance stay open.
+Instruction paths105/105 also retain exact prior identities, six reviewed principal
+images, normal unassisted closure and settings/package preservation.
+Draft/Action Paths390/390 also retain exact prior identities, normal unassisted
+closure and preservation on the extent candidate, with no Excel Application event.
 
 The UOM Send handler preserves staging under the approved reuse
 contract: expanded packaged RED60/18 -> GREEN78/78 and visible78/78. Normalized

@@ -22,6 +22,10 @@ Instructions411/411 retain exact prior identities; packaged layout and reviewed
 images pass. Settings/packages are preserved. The actual Production public-launcher
 captured-workbook close/reopen check passes1/1 but uses forced cleanup, so normal
 shutdown is not established. Remaining regressions and the visible guard stay open.
+Instruction paths105/105 subsequently retain exact prior identities, six reviewed
+principal images, normal unassisted closure and settings/package preservation.
+Draft/Action Paths390/390 also retain exact prior identities, normal unassisted
+closure and preservation on the extent candidate; no Excel Application event occurs.
 
 **Partial UOM Edit observation,2026-09-29:** D18 catalog15 adds
 `PRODUCTION_UOM_EDIT` for `mBtnUomCatalogSend_Click`, caption **Edit UOM Catalog on

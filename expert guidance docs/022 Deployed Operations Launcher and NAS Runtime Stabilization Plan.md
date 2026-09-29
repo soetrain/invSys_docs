@@ -18,6 +18,10 @@ retain exact prior checks. Packaged layout and reviewed images pass. Settings an
 packages are preserved. Public-launcher captured-workbook close/reopen passes1/1
 but uses forced cleanup; this does not establish normal shutdown or repair the
 combined visible guard. Remaining regressions and Release1 acceptance stay open.
+Instruction paths105/105 also retain exact prior identities, six reviewed principal
+images, normal unassisted closure and settings/package preservation.
+Draft/Action Paths390/390 also retain exact prior identities, normal unassisted
+closure and preservation on the extent candidate, with no Excel Application event.
 See [UOM observation evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_uom_activity_results.md).
 
 **UOM extent correction,2026-09-29:** Packaged actual Retrieve/Edit with
