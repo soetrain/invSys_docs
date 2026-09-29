@@ -1,6 +1,23 @@
 # invSys Form Controls v1
 
-**Version:** 1.270 (visible UOM and current-candidate Settings regression verified)
+**Version:** 1.271 (Process requirement/output observation contract; implementation pending)
+
+**Discovered Process component controls,2026-09-29:** Architecture D18 catalog16
+specifies `PRODUCTION_PROCESS_REQUIREMENT_{ADD,UPDATE,REMOVE,UP,DOWN}` and
+`PRODUCTION_PROCESS_OUTPUT_{ADD,UPDATE,REMOVE,UP,DOWN}` for the existing
+`mBtnProcessRequirement*` / `mBtnProcessOutput*` Click handlers in frmProduction.
+Brace notation here abbreviates ten exact IDs; it is not a runtime identifier.
+Captions Add/Update/Remove/Up/Down remain on Process Designer > Requirements/Outputs.
+Owner PRODUCTION_DESIGNER, Production/Command, existing PROD_POST or ADMIN_MAINT.
+REQUESTED Info/Unknown; STAGED Info/Unchanged for saved definitions; REJECTED
+Warning/Unchanged; DENIED Blocked/Unchanged; FAILED Error/Unknown. Only STAGED is
+CommandCompleted; no source references or saved/Domain effects are asserted.
+Preserve the existing Update append/fallback, validation-time editor normalization,
+no-selection Remove reset, generated component identity, quantity/UOM validation,
+output regulation and move behavior. Stale/closed/session guards precede all local
+changes; optional tracking cannot block authorized editing. No entered values or
+identities enter activity records. These ten remain pending implementation and
+packaged RED/GREEN; current runtime coverage remains19/68, with49 unregistered.
 
 **Current UOM visible closure checkpoint,2026-09-29:** combined visible264/264
 retains every prior assertion, five instrumented compiles, normal unassisted

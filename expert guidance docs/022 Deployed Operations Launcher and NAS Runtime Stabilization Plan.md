@@ -2,6 +2,25 @@
 
 **Status:** Current corrective implementation plan
 
+**Next 4be.1 group,2026-09-29:** implement Architecture D18 catalog16 observations
+for the ten Process requirement/output Add, Update, Remove, Up and Down handlers.
+This is a discovered-control refinement under the approved semantic-inheritance
+rule, with no new permission or saved-authority contract. Preserve Update's
+identity/fallback/append behavior, Add versus Update editor clearing, rejected-edit
+normalization, no-selection Remove reset, output-regulation cleanup and movement
+semantics. Only STAGED concludes CommandCompleted; saved authority remains
+Unchanged, empty references never imply Domain application. Require captured
+context/current capability before any local normalization or identity generation.
+Protect with `Test-Slice4beProductionComponents.ps1` through the actual packaged
+handlers: expected RED is missing catalog16 definitions/action pairs/terminal facts
+and unguarded stale/denied local edits on the frozen extent candidate. Compile or
+fixture failures are not RED. Only after focused RED change Core catalog/owner
+codes/evaluator and typed Operations owner/form delegation; keep the oversized
+form within its existing static limit. Then build/compile, GREEN, paired Action
+Paths, relevant regressions, layout/static and current Release1 chain/reuse evidence
+remain required. Prior native failures need a specific investigation hypothesis,
+not unchanged broad retries. Registration alone is not acceptance.
+
 **Current UOM visible closure checkpoint,2026-09-29:** the unchanged extent
 candidate now completes the combined visible gate264/264 with exact prior check
 identities, five instrumented compiles, normal unassisted closure, preserved

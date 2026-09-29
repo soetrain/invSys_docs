@@ -1,6 +1,11 @@
 # Production form tracking coverage audit
 
-Version 1.13. Last reviewed: 2026-09-29 UTC, visible UOM and Settings regression.
+Version 1.14. Last reviewed: 2026-09-29 UTC, next Process component contract.
+
+Architecture D18 now specifies catalog16 for the ten requirement/output Add,
+Update, Remove, Up and Down controls below; implementation and packaged RED/GREEN
+are pending. The existing Update append/fallback and rejection-time editor changes
+are preserved explicitly. Current runtime coverage stays19/68, with49 pending.
 
 The unchanged extent candidate now passes combined visible264/264 with every prior
 check retained, five instrumented compiles, normal unassisted closure and preserved
@@ -47,9 +52,9 @@ Debug/Reset; original Excel is listed at failure, then exits during cleanup;
 the child needs termination. This does not prove a native crash. In-memory state
 cannot prove form entry. The durable extension completes271/2 with normal closure
 and preservation:80010007 follows adapter entry before the form-entry marker;
-no redirected activity occurs. A focused actual-launcher UOM close/reopen proof
-is needed before reconsidering the retained-instance message oracle. The failed
-visible gate stays open.
+no redirected activity occurs. At that historical checkpoint a focused public
+UOM close/reopen proof was still needed. The current proof and unchanged refusal
+assertions now pass as recorded above; the native-crash cause remains unresolved.
 Native cancellation94/94 retains exact identities, normal unassisted closure,
 settings/packages and four reviewed principal dialog images on the extent candidate.
 Packaged smoke86/86 retains prior identities and preservation; its automatic
@@ -256,7 +261,7 @@ from permission to stage or export a catalog worksheet.
 | `btnOutputRegulationApply` | Apply Regulation | `mBtnOutputRegulationApply_Click` | Pending |
 | `btnOutputRegulationClear` | Clear Override | `mBtnOutputRegulationClear_Click` | Pending |
 | `btnUomCatalogRetrieve` | Retrieve UOM Catalog | `mBtnUomCatalogRetrieve_Click` | `PRODUCTION_UOM_RETRIEVE` |
-| `btnUomCatalogSend` | Edit UOM Catalog on Sheet | `mBtnUomCatalogSend_Click` | `PRODUCTION_UOM_EDIT` implemented; visible guard/regression acceptance pending |
+| `btnUomCatalogSend` | Edit UOM Catalog on Sheet | `mBtnUomCatalogSend_Click` | `PRODUCTION_UOM_EDIT`; visible guards264/264 and public lifecycle61/61 pass; release acceptance pending |
 
 ## Unconstructed Recipe Builder controls
 
@@ -384,8 +389,8 @@ not silently excluded because Run - List is the Release 1 proving path.
    unlisting. The initial destructive writer and the later blank-gap truncation
    are protected by separate actual-handler RED/GREEN evidence. Observations
    distinguish OPENED/REUSED from the separate authorized Config publication.
-   Visible closed-workbook guard acceptance remains unresolved; registration does
-   not waive preservation or the existing Core publication boundary.
+   Visible closed-workbook guards and the public lifecycle now pass; registration
+   still does not waive preservation, Core publication or full release acceptance.
 5. Run selection, allocation, scale, actual-output and note helpers can react to
    programmatic changes and synchronize List/Tree controls. Observe deliberate
    operator actions once. Check In and Complete Run need exact inventory-event

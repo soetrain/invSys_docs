@@ -467,6 +467,56 @@ unchanged. Packaged actual-handler RED/GREEN and published Action Path evidence
 are required; discovery/registration does not establish acceptance. This is a
 semantic-inheritance clarification, not a new permission or authority boundary.
 
+**4be.1 Process requirement/output observations (discovered-control refinement):**
+Under the approved D18 local-draft and semantic-inheritance rules, catalog16 adds
+`PRODUCTION_PROCESS_REQUIREMENT_ADD`, `PRODUCTION_PROCESS_REQUIREMENT_UPDATE`,
+`PRODUCTION_PROCESS_REQUIREMENT_REMOVE`, `PRODUCTION_PROCESS_REQUIREMENT_UP`,
+`PRODUCTION_PROCESS_REQUIREMENT_DOWN`, `PRODUCTION_PROCESS_OUTPUT_ADD`,
+`PRODUCTION_PROCESS_OUTPUT_UPDATE`, `PRODUCTION_PROCESS_OUTPUT_REMOVE`,
+`PRODUCTION_PROCESS_OUTPUT_UP` and `PRODUCTION_PROCESS_OUTPUT_DOWN`, preserving
+catalogs1-15. OwnerId is `PRODUCTION_DESIGNER`, role Production, class Command,
+existing PROD_POST capability with the existing ADMIN_MAINT alternative. Surfaces
+are Operations > Production > Process Designer > Requirements / Outputs; captions
+are Add, Update, Remove, Up and Down. EventCode is ControlId + `_` + OutcomeCode.
+
+REQUESTED is Info/Unknown before current-context permission and local validation.
+STAGED is Info/Unchanged with respect to saved definitions when the owner finishes
+the requested local row edit. REJECTED is Warning/Unchanged when validation fails,
+Remove has no selected row, or movement has no valid source/destination. This is
+not a claim that every editor field was untouched: preserve existing identity
+generation, output identity/yield normalization before validation, and Remove's
+editor reset even with no selected row. Never infer local rollback from rejection.
+DENIED is Blocked/Unchanged before editing; FAILED is Error/Unknown with a visible
+instruction to inspect the current draft, not a rollback claim.
+
+Preserve the existing Update lookup by component identity, remembered-selection
+fallback and append behavior when no row resolves. Add clears its editor after
+success; Update retains it. Existing trimmed fields, ACTUAL/FIXED quantity rules,
+whole-UOM validation, output catalog validation, generated component identities
+and output yield-default behavior remain. Output removal clears only that output's
+local regulation; movement preserves component identities, selection-following and
+the existing helper's instruction-ordinal normalization. No implicit draft save,
+release, Config publication, inventory action or new authority is introduced.
+
+Before identity generation, normalization or any edit, require the original live
+captured workbook, unchanged warehouse/session and current capability. Stale,
+signed-out or closed binding refuses without redirecting or recording under a
+replacement context. Loading, re-entrancy, initialization and programmatic control
+changes do not create extra actions. Disabled or unavailable optional tracking
+cannot block authorized edits; unavailable tracking is visibly reported. Activity
+contains no names, quantities, UOM choices, component/design IDs, selected-row
+values, workbook paths or source-event references.
+
+For exactly these ten controls, only STAGED is a positive CommandCompleted owner
+fact. REQUESTED, REJECTED, DENIED and FAILED cannot conclude; COMPLETED, CONFIRMED,
+VALIDATED and APPLIED are unsupported. Empty source references cannot establish
+SourceEventsApplied. Packaged actual-handler tests must protect existing edit and
+rejection side effects, captured-context/permission guards, nested suppression,
+optional tracking, redaction, immutable records, saved authority and unknown
+workbook columns. Publication, original recording order and How-To/Diagnostic/
+Compare both require separate evidence. This records discovered controls within
+the approved contract; it does not amend authority, permissions or saved semantics.
+
 **4be.1 Process instruction editor observations (discovered-control refinement):**
 The existing `mBtnProcessInstructionAdd_Click`, `mBtnProcessInstructionUpdate_Click`,
 `mBtnProcessInstructionRemove_Click`, `mBtnProcessInstructionUp_Click` and
