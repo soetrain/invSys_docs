@@ -42,8 +42,10 @@ identities with automatic cleanup unobserved. Reusable run-only fails at batch
 scale with the prior RPC/native signature and no termination request; prior67
 observations are not re-established. Standard-flow tracing/VBE and VBE-only
 controls subsequently pass with automatic cleanup; no cold-package repair or
-normal shutdown is inferred. A separate saved-compile candidate is the next
-bounded experiment. Other
+normal shutdown is inferred. A separate saved-compile candidate retains all248
+exact component source hashes but also crashes cold at the initial Production
+launcher with the same native signature and no termination request. This
+experiment is rejected as a repair; native/COM diagnosis remains open. Other
 regression gates remain pending. See the
 [instruction evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_instruction_results.md).
 This refines approved D18 without a new authority or permission grant.

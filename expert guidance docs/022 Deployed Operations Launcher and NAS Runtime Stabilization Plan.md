@@ -38,8 +38,12 @@ Standard-flow controls subsequently pass with tracing/VBE preparation and with
 VBE preparation alone; all four compile commands execute in the latter. Both
 request automatic final termination. These are diagnostic passes, not a cold
 package repair or normal shutdown. The existing compile gate is read-only and
-does not save compiled packages. Next: a separate saved-compile candidate and the
-unmodified cold standard validator. See [boundary evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_batch_boundary_results.md).
+does not save compiled packages. A separate saved-compile candidate preserves
+all248 exact component source hashes but also crashes under the unmodified cold
+validator, at the initial Production launcher with the same native signature and
+no termination request. Do not promote this rejected experiment or introduce VBE
+preparation as a runtime workaround. Continue bounded native/COM diagnosis. See
+[boundary evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_batch_boundary_results.md).
 Require remaining current-candidate regressions and Release1 gates before
 acceptance. The full Production native failure remains an independent open gate;
 do not hide it behind this new coverage. These five controls are implemented with
