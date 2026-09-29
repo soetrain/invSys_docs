@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.12. Last reviewed: 2026-09-29 UTC, visible UOM guards and public lifecycle.
+Version 1.13. Last reviewed: 2026-09-29 UTC, visible UOM and Settings regression.
 
 The unchanged extent candidate now passes combined visible264/264 with every prior
 check retained, five instrumented compiles, normal unassisted closure and preserved
@@ -11,8 +11,13 @@ runtime change is involved. The actual public-launcher UOM close/reopen gate pas
 61/61 with normal closure, saved-draft/custom-column retention and the exact REUSED
 pair. Two combined-gate and three public-launcher principal images are reviewed;
 neither run records an Excel Application event. Earlier failures below remain
-historical evidence. This does not explain the native crashes or complete release
-acceptance; Settings-observation/full-chain gates remain open. Coverage is unchanged.
+historical evidence. Settings observations now pass468/468, retaining all467 prior
+identities plus the existing catalog-driven UOM exclusion check, five compiles and
+eight reviewed captures. Settings/packages are preserved with no Excel Application
+event. Hidden Excel exits unassisted about118 seconds after its report; the controller
+only waits. This does not explain delayed exit, erase earlier assisted runs or
+resolve the native crashes. Full-chain/release acceptance remains open; coverage
+is unchanged.
 
 D18 catalog15 now implements `PRODUCTION_UOM_EDIT`: **19/68 constructed controls
 registered;49 remain**. Existing launcher PROD_POST is rechecked in the captured

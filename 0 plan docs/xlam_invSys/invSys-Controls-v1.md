@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.269 (visible UOM guards and public close/reopen verified)
+**Version:** 1.270 (visible UOM and current-candidate Settings regression verified)
 
 **Current UOM visible closure checkpoint,2026-09-29:** combined visible264/264
 retains every prior assertion, five instrumented compiles, normal unassisted
@@ -15,8 +15,13 @@ form; reopen retains the saved draft and custom column; Edit records REUSED with
 saved authority Unchanged and no implicit save. Two combined-gate and three public-
 launcher principal images are reviewed; neither run records an Excel Application
 event. Earlier failed diagnostics below remain historical evidence. No caption,
-permission, handler or normative contract changes. Settings-observation/full-chain
-acceptance remains open; Production coverage stays19/68, with49 controls pending.
+permission, handler or normative contract changes. Settings observations now pass
+468/468, retaining all467 prior identities plus the existing catalog-driven UOM
+exclusion check, five compiles and eight reviewed captures. Settings/packages are
+preserved with no Excel Application event. Hidden Excel exits unassisted about118
+seconds after its report; the controller only waits. This does not explain delayed
+exit or erase earlier assisted runs. Full-chain/native blockers and release
+acceptance remain open; Production coverage stays19/68, with49 controls pending.
 
 **UOM extent preservation,2026-09-29:** Actual Retrieve followed by Edit
 must restore the complete draft table, including blank internal rows and all

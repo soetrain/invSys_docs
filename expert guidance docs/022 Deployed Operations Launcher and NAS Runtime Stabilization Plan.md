@@ -14,8 +14,13 @@ The separate actual public-launcher UOM close/reopen gate passes61/61 with norma
 closure and three reviewed principal images: owner closure disposes the real form;
 reopening retains the saved draft/custom column and records the exact REUSED pair.
 Both runs preserve settings/packages and have no Excel Application event. Earlier
-failed diagnostics below remain historical evidence. Settings-observation regression,
-full chain/native blockers and Release1 acceptance remain open. D12/D18 and the
+failed diagnostics below remain historical evidence. Settings observations now pass
+468/468, retaining all467 prior identities plus the existing catalog-driven UOM
+exclusion check, five compiles and eight reviewed captures. Settings/packages are
+preserved and no Excel Application event occurs. Hidden Excel exits unassisted
+about118 seconds after its report; the controller only waits. This run establishes
+unassisted closure without explaining delayed exit or erasing earlier assisted runs.
+Full chain/native blockers and Release1 acceptance remain open. D12/D18 and the
 approved reuse contract are unchanged; this is test/evidence work.
 
 **UOM observation and extent checkpoint,2026-09-29:** Catalog15 implements
