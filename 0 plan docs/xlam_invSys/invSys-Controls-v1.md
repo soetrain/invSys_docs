@@ -45,7 +45,11 @@ controls subsequently pass with automatic cleanup; no cold-package repair or
 normal shutdown is inferred. A separate saved-compile candidate retains all248
 exact component source hashes but also crashes cold at the initial Production
 launcher with the same native signature and no termination request. This
-experiment is rejected as a repair; native/COM diagnosis remains open. Other
+experiment is rejected as a repair; native/COM diagnosis remains open. Two native
+observer modes pass workflow assertions without VBE preparation but require final
+termination; neither reproduces the cold crash. A blank-workbook control exposes
+retained child COM references as a possible harness cleanup influence, requiring
+actual packaged verification. No acceptance status changes. Other
 regression gates remain pending. See the
 [instruction evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_instruction_results.md).
 This refines approved D18 without a new authority or permission grant.

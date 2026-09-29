@@ -44,6 +44,12 @@ validator, at the initial Production launcher with the same native signature and
 no termination request. Do not promote this rejected experiment or introduce VBE
 preparation as a runtime workaround. Continue bounded native/COM diagnosis. See
 [boundary evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_batch_boundary_results.md).
+Native exception observation, with and without routine first-chance filtering,
+also passes standard workflow assertions without VBE preparation, but both runs
+require final termination and do not reproduce the cold crash. Observer calibration
+passes34/34. A blank-workbook control demonstrates retained child COM references
+can prevent process exit; actual packaged cleanup remains to be tested. No runtime
+repair, normal shutdown or complete acceptance follows from these controls.
 Require remaining current-candidate regressions and Release1 gates before
 acceptance. The full Production native failure remains an independent open gate;
 do not hide it behind this new coverage. These five controls are implemented with
