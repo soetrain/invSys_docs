@@ -3593,6 +3593,19 @@ staging on2026-09-29, replacing current Send's managed-value reset behavior.
 This decision does not waive preservation or establish implementation acceptance. See
 [focused evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_uom_staging_results.md).
 
+**Extent-preservation clarification,2026-09-29:** The complete draft includes
+blank rows inside its table. Retrieve must retain that extent when it unlists;
+the next Edit, including after an operator save/reopen, restores the complete
+extent rather than inferring a shorter table from `CurrentRegion`. Store the
+extent as a hidden worksheet-local `_invSysUomDraftExtent` name, with ownership
+comment `invSys.UomDraftExtent.v1`, at successful retrieval. It is local staging
+metadata, never catalog or Domain authority, and does not cause an implicit save.
+Validate the marker's ownership, same-sheet rectangular reference and managed
+headers before reuse; reject a conflicting or invalid marker before mutation
+or publication. Never overwrite an unrelated name. Unmarked identifiable drafts
+retain the existing fallback. This implements the approved preservation decision
+under D18 semantic inheritance; no catalog refresh or authority change is approved.
+
 - A convertible UOM declares a positive quantity of itself per one Base UOM in
   its declared Dimension. The current catalog is initialized as `MASS`:
   `LB=1`, `LBS=1`, `OZ=16`, `KG=2.2046226218`, `G=453.59237` per `LB`; and

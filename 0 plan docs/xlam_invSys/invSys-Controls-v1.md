@@ -1,6 +1,14 @@
 # invSys Form Controls v1
 
-**Version:** 1.264 (UOM Edit observation contract; implementation pending)
+**Version:** 1.265 (UOM observation contract; blank-row extent correction pending)
+
+**UOM extent preservation blocker,2026-09-29:** Actual Retrieve followed by Edit
+must restore the complete draft table, including blank internal rows and all
+unknown columns, also after an operator save/reopen. The current candidate passes
+84 checks but fails the full-extent check. Architecture specifies owned local
+extent metadata and refusal of ambiguous markers before mutation/publication;
+no caption, authority, catalog refresh or implicit-save behavior changes.
+Correction and acceptance remain pending.
 
 **Pending UOM Edit observation,2026-09-29:** D18 catalog15 adds
 `PRODUCTION_UOM_EDIT` for `mBtnUomCatalogSend_Click`, caption **Edit UOM Catalog on

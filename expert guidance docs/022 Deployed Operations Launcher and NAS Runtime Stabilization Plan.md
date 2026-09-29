@@ -2,6 +2,15 @@
 
 **Status:** Current corrective implementation plan
 
+**Discovered UOM extent blocker,2026-09-29:** Packaged actual Retrieve/Edit with
+an internal blank row passes84 checks but fails complete table extent restoration
+on `validation-production-uom-activity`. Cells survive; rows below the gap fall
+outside the reopened table. Architecture's approved reuse decision now clarifies
+hidden, owned worksheet-local extent metadata across Retrieve/unlist/save/reopen.
+Protect the complete range, unknown columns, no implicit save and invalid/name
+collision rejection before changing runtime. This is preservation implementation,
+not a new catalog authority or refresh behavior. Focused correction is pending.
+
 **Next 4be.1 observation,2026-09-29:** Architecture D18 now specifies the discovered
 `PRODUCTION_UOM_EDIT` control for catalog15, retaining1-14. Extend actual packaged
 Send-handler tests for OPENED/REUSED/REJECTED/DENIED/FAILED, redaction, current
