@@ -1,16 +1,25 @@
 # Production form tracking coverage audit
 
-Version 1.9. Last reviewed: 2026-09-29 UTC, UOM Edit implementation checkpoint.
+Version 1.10. Last reviewed: 2026-09-29 UTC, UOM paths and regression checkpoint.
 
 D18 catalog15 now implements `PRODUCTION_UOM_EDIT`: **19/68 constructed controls
 registered;49 remain**. Existing launcher PROD_POST is rechecked in the captured
 context without conferring publication authority. Actual-handler RED98/134 reaches
-232/232 on the observation candidate; paths84/84 require fixture-dialog assistance.
+232/232 on the observation candidate; its initial paths84/84 require fixture-dialog assistance.
 Registration is not acceptance. The later extent candidate passes separate visible
 110/110 but its combined visible suite stops255/1 at the closed-workbook adapter;
 80010007 is followed by an oleaut32/c0000005 crash after diagnostic Reset and
-assisted recovery cleanup. Current regressions and visible guard acceptance remain
+assisted recovery cleanup. The unchanged candidate's capture-disabled comparison
+passes264/264, retaining all earlier232 identities and normal closure. It does not
+resolve the visible failure. Current regressions and visible guard acceptance remain
 open. See [UOM observation evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_uom_activity_results.md).
+
+On the extent candidate, paths now pass84/84 unassisted with exact prior checks
+and a reviewed terminal REUSED detail capture. Settings202/202, Instructions411/411
+and packaged layout pass; prior check identities, settings and packages are
+preserved. Public-launcher captured-workbook close/reopen passes1/1 but uses forced
+cleanup. That workflow check does not prove normal shutdown or resolve the failed
+combined visible guard. Remaining regressions and release acceptance stay open.
 
 The UOM Send handler preserves staging under the approved reuse
 contract: expanded packaged RED60/18 -> GREEN78/78 and visible78/78. Normalized

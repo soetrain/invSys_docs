@@ -4,13 +4,21 @@
 
 **UOM observation and extent checkpoint,2026-09-29:** Catalog15 implements
 `PRODUCTION_UOM_EDIT` with actual-handler RED98/134 ->232/232; the first path
-gate passes84/84 with fixture-dialog assistance, so unattended acceptance is open.
+gate passes84/84 with fixture-dialog assistance; a later unassisted gate is below.
 The corrected extent candidate below passes separate visible110/110, five compiles,
 static caps and normal closure. Its combined visible suite stops255/1 at the
 closed-workbook test adapter call with80010007; diagnostic Debug/Reset precedes
 an oleaut32/c0000005 crash and assisted recovery termination. Do not classify that
-as desktop error5 or acceptance GREEN. Controlled visibility comparison and final
-regressions remain pending. See [UOM observation evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_uom_activity_results.md).
+as desktop error5 or acceptance GREEN. The capture-disabled comparison passes
+264/264 on unchanged packages, with all earlier232 identities and normal closure;
+visible guard acceptance and final regressions remain pending.
+The extent candidate now passes UOM paths84/84 unassisted with exact identities
+and a reviewed terminal REUSED detail capture; Settings202/202 and Instructions411/411
+retain exact prior checks. Packaged layout and reviewed images pass. Settings and
+packages are preserved. Public-launcher captured-workbook close/reopen passes1/1
+but uses forced cleanup; this does not establish normal shutdown or repair the
+combined visible guard. Remaining regressions and Release1 acceptance stay open.
+See [UOM observation evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_uom_activity_results.md).
 
 **UOM extent correction,2026-09-29:** Packaged actual Retrieve/Edit with
 an internal blank row passes84 checks but fails complete table extent restoration

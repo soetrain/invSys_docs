@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.266 (UOM observation implemented; extent GREEN; acceptance partial)
+**Version:** 1.267 (UOM paths unassisted; final-candidate regressions partial)
 
 **UOM extent preservation,2026-09-29:** Actual Retrieve followed by Edit
 must restore the complete draft table, including blank internal rows and all
@@ -13,6 +13,15 @@ Expanded RED96/14 becomes separate visible110/110 with normal closure on
 GREEN checks remain. Acceptance of the combined visible suite remains open:255/1
 at the closed-workbook test adapter,80010007 dialog, then oleaut32/c0000005 after
 diagnostic Reset; recovery cleanup needed assistance. This is not desktop error5.
+The same candidate's capture-disabled comparison passes264/264 with all earlier232
+identities and normal closure; it does not close the failed visible guard gate.
+
+On this extent candidate, UOM paths now pass84/84 unassisted with exact prior
+identities and a reviewed terminal REUSED detail capture. Settings202/202 and
+Instructions411/411 retain exact prior identities; packaged layout and reviewed
+images pass. Settings/packages are preserved. The actual Production public-launcher
+captured-workbook close/reopen check passes1/1 but uses forced cleanup, so normal
+shutdown is not established. Remaining regressions and the visible guard stay open.
 
 **Partial UOM Edit observation,2026-09-29:** D18 catalog15 adds
 `PRODUCTION_UOM_EDIT` for `mBtnUomCatalogSend_Click`, caption **Edit UOM Catalog on
@@ -26,7 +35,8 @@ No catalog rows, paths, notes or formulas enter observations. Stale/closed/loadi
 re-entrant actions are suppressed; optional tracking cannot block authorized
 staging. Catalogs1-14 and Core publication permission remain unchanged.
 Runtime registration is implemented: focused RED98/134 ->232/232 on the observation
-candidate. Paths84/84 need fixture-dialog assistance; an unattended rerun and final
+candidate. Its initial paths84/84 needed fixture-dialog assistance; the extent
+candidate's unassisted evidence above supersedes that path limitation. Final
 regressions remain. See [UOM evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_uom_activity_results.md).
 
 **UOM staging preservation correction,2026-09-29:** Existing **Edit UOM Catalog on
