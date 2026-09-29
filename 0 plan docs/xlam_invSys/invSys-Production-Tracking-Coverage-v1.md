@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.4. Last reviewed: 2026-09-25 UTC, lifecycle RED and non-button source review.
+Version 1.5. Last reviewed: 2026-09-29 UTC, lifecycle evidence reconciliation.
 Subordinate to Architecture v4.11 D18, Plan022 and `invSys-Controls-v1.md`.
 This is reviewed source reachability/evidence accounting, not a new runtime
 contract, catalog version, permission grant or acceptance claim. D13 behavioral
@@ -16,26 +16,37 @@ constructs six pages through BuildLayout and one shared Close button. It contain
 accounted for below. Catalog13 contains thirteen IDs mapped to
 these 68 buttons: six draft controls, six lifecycle controls and UOM Retrieve. **55 constructed button
 actions still require registered observation contracts and implementation.**
-Registration is not full acceptance: the six draft controls pass 390 behavioral
-checks but retain the visible/owner/full-chain gates recorded in the controls
-catalog. Existing UOM evidence retains its recorded candidate scope.
+Registration is not full acceptance: the six draft controls retain390/390 on the
+current lifecycle candidate with normal closure; ten reviewed images retain their
+preceding candidate scope. Existing UOM evidence retains its recorded candidate
+scope.
 The six lifecycle controls now pass615/615 after packaged RED316/299, retaining
 the original294 and failure-extension486 identities. Owner uncertainty/pending,
 tracking-off/unavailable storage, nested actions and closed-workbook guards pass
-without runtime changes. Native cancellation, publication, original recording,
-both Action Path methods and visible acceptance work remain open. See
+without runtime changes. Subsequent native cancellation, publication, original
+recording and both Action Path methods have the scoped evidence below. See
 [lifecycle evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_lifecycle_results.md).
 
 The subsequent [recording gate](../../../invSys_fork/tests/integration/plan022_slice4be_production_lifecycle_paths_results.md)
 exposes and protects a D5 Config-repair breach in the processor. Its intermediate
 read-only correction retains24 actual actions, original journal order and real
 published Activity/Designs identity through Viewer detail. The existing D18
-CommandCompleted and Designs applied/awaiting mappings record668 PASS/40 expected
-FAIL across708 packaged checks. Their source correction is unbuilt/not GREEN while
-Windows retains the exited Excel process. Subsequent runspace recovery lets the
-original controller verify settings restoration and package preservation at01:45 UTC.
-Source static/layout checks pass; both presentations and full acceptance remain open. No additional
-controls are registered by this checkpoint, and the55 pending buttons remain pending.
+CommandCompleted and Designs applied/awaiting mappings advance668 PASS/40 expected
+FAIL to708/708 on the built and compiled `validation-production-paths` candidate,
+preserving every check identity. The long run requires assisted controller cleanup;
+that limitation remains. Subsequent native cancellation94/94 and paired
+How-To/Diagnostic/Compare84/84 pass with nine reviewed principal images and normal
+closure. Current-candidate lifecycle615/615, Settings202/202, smoke86/86 and full
+chain/live roles/Create Warehouse32/48/15 pass. Reusable Production retains its
+aggregate PASS and all67 Boolean observations; its automatic cleanup was unobserved,
+so normal unassisted closure remains unproved.
+Its later full restart/export attempt crashes at the batch-scale adapter before
+the full-only steps; that gate remains open, with settings/packages preserved.
+The earlier chain crash remains unexplained; a later GREEN is not a root-cause fix.
+No additional controls are registered by these gates, and all55 pending buttons
+remain pending. Full Slice4be, human and NAS acceptance remain open; use the
+[acceptance index](../../../invSys_fork/tests/integration/plan022_slice4be_remaining_acceptance.md)
+for current gate status, rather than treating this source census as acceptance.
 
 The census checks construction and handler binding, not current enabled state
 or successful workflow execution. The original census performed no business
@@ -307,8 +318,9 @@ No runtime
 tracking or catalog mutation occurs. Private source-only census/verification
 artifacts are ignored; this reviewed record contains no operational values.
 
-Use the existing registered-control candidates to finish their remaining visible and
-regression gates once desktop input recovers. For broader implementation, review
+Use the existing registered-control candidates to finish the remaining acceptance
+gates under the user's attended-desktop arrangement; stop the goal if desktop
+error5 returns. For broader implementation, review
 the grouped local-edit/selection, lifecycle/queue, worksheet/Config, run/inventory
 and launcher/context owners from this census; specify complete owner facts and
 focused packaged tests before implementing each group. Do not substitute the

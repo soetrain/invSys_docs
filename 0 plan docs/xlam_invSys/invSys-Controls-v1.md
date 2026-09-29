@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.256 (Current chain verified after paired projection diagnostics)
+**Version:** 1.257 (Current Production regression evidence reconciliation)
 
 **Projection-boundary checkpoint,2026-09-29:** Traced/untraced35/35 controls pass;
 the unchanged candidate's full chain/live roles/Create Warehouse then pass32/48/15
@@ -8,8 +8,25 @@ with exact prior identities, normal unassisted closure, settings/package/report
 preservation and zero Excel Application failures. Earlier crashes are retained
 with cause unresolved. No control/runtime contract changes;3 schemas,291 parses
 and unchanged static metrics/28 caps hold. The user is attending visible gates
-and requires pausing the goal if desktop error5 returns. Draft/reusable and broader
-acceptance remain pending. See [boundary evidence](../../../invSys_fork/tests/integration/plan022_slice4be_projection_boundary_results.md).
+and requires pausing the goal if desktop error5 returns. Focused reusable
+Production subsequently retains its aggregate PASS and all67 Boolean values with
+preservation; normal closure is unproved because the automatic termination fallback
+was unobserved. Its `-ProductionRunOnly` scope excludes
+the separate full restart/export gate. Draft/path regression retains390/390 exact
+prior identities, five compiles, normal unassisted closure and preservation, with
+zero Excel Application failures. Full reusable/restart subsequently stops0/1 at
+the batch-scale adapter with RPC0x800706BE and ntdll.dll0xc0000028 before full-only
+steps. Settings/packages restore; no desktop error5 is observed. This native
+crash is neither meaningful product RED nor normal closure; finer internal-boundary
+evidence is required before another unchanged full retry. Full restart/export and broader acceptance remain
+pending. Coverage audit1.5 corrects stale evidence status;
+catalog13 and55 pending Production buttons are unchanged. No runtime/control
+contract changes or product D13 behavioral RED are applicable to this reconciliation.
+Separate tooling-only receipt RED9/18 becomes27/27 through the actual restart/final
+cleanup blocks; all nine existing termination decisions are retained. This corrects
+evidence observability without changing cleanup policy or proving earlier shutdown.
+Refreshed static metrics/28 caps remain unchanged;3 schemas and292 parses pass.
+See [boundary evidence](../../../invSys_fork/tests/integration/plan022_slice4be_projection_boundary_results.md).
 
 **Continuation reconciliation, 2026-09-28:** Current-candidate Settings finishes
 202/202, with five instrumented compiles, exit0, Excel closed, restored settings

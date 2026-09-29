@@ -9,8 +9,26 @@ normal unassisted closure, preservation and zero Excel Application failures.
 Earlier crashes remain unexplained and retained; the latest chain gate is GREEN.
 Only diagnostic tooling changes; static metrics/28 caps hold,3 schemas and291
 PowerShell parses pass. The user is attending the desktop and explicitly requests
-pausing the goal if desktop error5 returns. Draft/reusable and broader Slice4be
-acceptance remain pending. See [boundary evidence](../../invSys_fork/tests/integration/plan022_slice4be_projection_boundary_results.md).
+pausing the goal if desktop error5 returns. The subsequent focused reusable
+Production aggregate passes with all67 prior Boolean values and preservation;
+normal closure is unproved because the automatic termination fallback was
+unobserved. `-ProductionRunOnly` excludes the separate full
+restart/export gate. Draft/path regression retains390/390 exact prior identities,
+five instrumented compiles, normal unassisted closure and preservation, with zero
+Excel Application failures. The subsequent full reusable/restart attempt stops0/1
+at the batch-scale adapter with RPC0x800706BE and ntdll.dll0xc0000028, before its
+full-only steps. Settings/packages restore; no desktop error5 is observed. This
+native crash is not meaningful product RED or normal closure. Its exact internal
+boundary remains unresolved; require finer fixed-stage evidence before an
+unchanged full retry. Full restart/export and broader Slice4be acceptance
+remain pending. Coverage audit1.5 reconciles these results without registering
+any of the55 pending Production buttons. This is evidence maintenance under the
+existing D18 contract; no normative amendment or product behavioral RED is
+applicable. A tooling-only cleanup-receipt correction has focused9/18 RED to27/27
+GREEN through both actual cleanup blocks, retaining all nine existing termination
+decisions. It does not retrospectively establish normal shutdown for earlier runs.
+Refreshed static metrics/28 caps remain unchanged;3 schemas and292 parses pass.
+See [boundary evidence](../../invSys_fork/tests/integration/plan022_slice4be_projection_boundary_results.md).
 
 **Continuation reconciliation, 2026-09-28:** The previously running Settings
 regression finished202/202 on2026-09-25, with five instrumented compiles, exit0,
