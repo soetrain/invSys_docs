@@ -1,6 +1,15 @@
 # invSys Form Controls v1
 
-**Version:** 1.255 (Settings regression reconciled; attended visible gates pending)
+**Version:** 1.256 (Current chain verified after paired projection diagnostics)
+
+**Projection-boundary checkpoint,2026-09-29:** Traced/untraced35/35 controls pass;
+the unchanged candidate's full chain/live roles/Create Warehouse then pass32/48/15
+with exact prior identities, normal unassisted closure, settings/package/report
+preservation and zero Excel Application failures. Earlier crashes are retained
+with cause unresolved. No control/runtime contract changes;3 schemas,291 parses
+and unchanged static metrics/28 caps hold. The user is attending visible gates
+and requires pausing the goal if desktop error5 returns. Draft/reusable and broader
+acceptance remain pending. See [boundary evidence](../../../invSys_fork/tests/integration/plan022_slice4be_projection_boundary_results.md).
 
 **Continuation reconciliation, 2026-09-28:** Current-candidate Settings finishes
 202/202, with five instrumented compiles, exit0, Excel closed, restored settings

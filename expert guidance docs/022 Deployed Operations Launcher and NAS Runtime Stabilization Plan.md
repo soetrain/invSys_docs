@@ -2,6 +2,16 @@
 
 **Status:** Current corrective implementation plan
 
+**Projection-boundary checkpoint,2026-09-29:** Focused traced/untraced controls
+both pass35/35 on the unchanged lifecycle candidate. The full Release1 chain then
+passes32/32, live roles48/48 and Create Warehouse15/15 with exact prior identities,
+normal unassisted closure, preservation and zero Excel Application failures.
+Earlier crashes remain unexplained and retained; the latest chain gate is GREEN.
+Only diagnostic tooling changes; static metrics/28 caps hold,3 schemas and291
+PowerShell parses pass. The user is attending the desktop and explicitly requests
+pausing the goal if desktop error5 returns. Draft/reusable and broader Slice4be
+acceptance remain pending. See [boundary evidence](../../invSys_fork/tests/integration/plan022_slice4be_projection_boundary_results.md).
+
 **Continuation reconciliation, 2026-09-28:** The previously running Settings
 regression finished202/202 on2026-09-25, with five instrumented compiles, exit0,
 Excel closed and restored settings/preserved packages. The projection-rebuild
