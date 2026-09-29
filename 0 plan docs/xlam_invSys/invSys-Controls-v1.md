@@ -1,12 +1,13 @@
 # invSys Form Controls v1
 
-**Version:** 1.272 (component gate pending; goal paused on desktop error5)
+**Version:** 1.273 (component packaged RED established; implementation pending)
 
-The goal paused2026-09-29 at15:34:46 Pacific after desktop cursor error5. Component
-test attempts fail in snapshot access and probe-anchor setup; neither establishes
-protecting RED. Runtime registration stays19/68; no component implementation has
-begun. Excel is closed and settings/packages restored. Resume requires the user's
-instruction; repair the fixture and establish packaged RED before runtime changes.
+User-authorized work resumes2026-09-29 with successful desktop checks. Corrected
+component adapters establish packaged RED180/615,795 unique checks, five compiles,
+no harness failure, normal closure and preserved settings/packages. ACTUAL-mode
+setup is calibrated; actual movement errors, missing observations and missing
+guards remain product RED. Runtime registration stays19/68; no component runtime
+implementation precedes this evidence. Stop again on actual desktop error5.
 
 **Discovered Process component controls,2026-09-29:** Architecture D18 catalog16
 specifies `PRODUCTION_PROCESS_REQUIREMENT_{ADD,UPDATE,REMOVE,UP,DOWN}` and
@@ -22,8 +23,8 @@ Preserve the existing Update append/fallback, validation-time editor normalizati
 no-selection Remove reset, generated component identity, quantity/UOM validation,
 output regulation and move behavior. Stale/closed/session guards precede all local
 changes; optional tracking cannot block authorized editing. No entered values or
-identities enter activity records. These ten remain pending implementation and
-packaged RED/GREEN; current runtime coverage remains19/68, with49 unregistered.
+identities enter activity records. These ten have protecting packaged RED and
+remain pending implementation/GREEN; runtime coverage remains19/68,49 unregistered.
 
 **Current UOM visible closure checkpoint,2026-09-29:** combined visible264/264
 retains every prior assertion, five instrumented compiles, normal unassisted
