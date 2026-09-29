@@ -2,6 +2,22 @@
 
 **Status:** Current corrective implementation plan
 
+**Production batch-boundary diagnostic,2026-09-29:** Traced and untraced scoped
+controls pass7/7 with the exact same identities on the unchanged candidate.
+Offline marker calibration passes70/70;31 fixed markers cover repeated launch,
+visibility and scale calculation. Four loaded projects compile before forms;
+55 allowlisted entries show the traced sequence returning. Both controls preserve
+settings/packages and have zero Excel Application failures, but both request
+automatic final termination. Neither establishes normal shutdown or complete
+Production/restart acceptance. The earlier native crash remains unexplained.
+The subsequent standard full run stops0/1 at the same adapter with RPC0x800706BE
+and ntdll.dll0xc0000028 before full-only steps. Settings/packages restore and the
+cleanup receipt records no termination request. Stop unchanged broad retries;
+successful scoped controls do not explain the failed execution or waive the gate.
+Static metrics/28 caps remain unchanged;3 schemas and295 PowerShell parses pass.
+No runtime/architectural contract change. See
+[boundary evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_batch_boundary_results.md).
+
 **Projection-boundary checkpoint,2026-09-29:** Focused traced/untraced controls
 both pass35/35 on the unchanged lifecycle candidate. The full Release1 chain then
 passes32/32, live roles48/48 and Create Warehouse15/15 with exact prior identities,

@@ -1,6 +1,20 @@
 # invSys Form Controls v1
 
-**Version:** 1.257 (Current Production regression evidence reconciliation)
+**Version:** 1.258 (Scoped Production batch-boundary evidence)
+
+**Batch-boundary diagnostic,2026-09-29:** Traced/untraced7/7 controls retain the
+same identities; fixed marker calibration passes70/70. The traced sequence returns
+through repeated launcher, visibility and scale-test boundaries, with55 allowlisted
+entries and four instrumented compiles. Settings/packages remain intact and no
+Excel Application failure is observed, but automatic final termination is requested
+in both controls. No normal-shutdown or full Production/restart acceptance follows.
+The earlier native crash remains unexplained.
+The subsequent full standard run stops0/1 at the same adapter with RPC/native
+failure before full-only steps; no final termination is requested, and settings/
+packages restore. Stop unchanged broad retries. No runtime, caption, permission,
+catalog13 or pending-control coverage change.
+Static metrics/28 caps remain unchanged;3 schemas and295 PowerShell parses pass. See
+[diagnostic evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_batch_boundary_results.md).
 
 **Projection-boundary checkpoint,2026-09-29:** Traced/untraced35/35 controls pass;
 the unchanged candidate's full chain/live roles/Create Warehouse then pass32/48/15
