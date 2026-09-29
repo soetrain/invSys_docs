@@ -3547,6 +3547,22 @@ relax routed Recipe-edge compatibility.
   **Retrieve UOM Catalog**. The worksheet is staging only; retrieval validates
   the complete table and publishes a new catalog version rather than mutating
   historical definitions or events. No additional form is introduced.
+**Pending UOM workbench preservation decision,2026-09-29 -- not approved:**
+The existing header-extension rules remain normative. Actual packaged Send
+currently deletes custom columns/formulas and unrelated worksheet content;
+focused evidence is49 PASS/5 behavioral FAIL. The proposed correction interprets
+**Edit UOM Catalog on Sheet** as opening/reusing a draft: create from the saved
+catalog only for a new empty workbench; reopen an existing table without rewriting
+its cells. Successful Retrieve continues to unlist without clearing cells; the
+next Edit reopens the identifiable managed region. Required columns are resolved
+by normalized name, extra columns remain local, and ambiguous ownership/header
+shapes are rejected before mutation. Reused drafts must not be represented as
+automatically refreshed from later saved-catalog changes. Core publication and
+authorization remain unchanged. Approval is requested before implementing this
+reuse choice because current Send resets managed staging values. This proposal
+does not waive preservation or authorize a runtime change before approval. See
+[focused evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_uom_staging_results.md).
+
 - A convertible UOM declares a positive quantity of itself per one Base UOM in
   its declared Dimension. The current catalog is initialized as `MASS`:
   `LB=1`, `LBS=1`, `OZ=16`, `KG=2.2046226218`, `G=453.59237` per `LB`; and

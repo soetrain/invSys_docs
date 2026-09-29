@@ -2,6 +2,17 @@
 
 **Status:** Current corrective implementation plan
 
+**Discovered UOM staging blocker,2026-09-29:** The actual Production
+`mBtnUomCatalogSend_Click` gate records49 PASS/5 behavioral FAIL: repeated Send
+deletes unknown columns, their values/formula/order and an unrelated worksheet
+note. Five instrumented compiles, captured binding, Config/workbook preservation
+checks, normal exit and settings/package preservation pass. Architecture's
+header-extension rule is already binding. A pending Architecture decision proposes
+opening/reusing the existing workbench rather than resetting its managed values;
+user approval is needed before implementing that workflow choice. Expand packaged
+header/retrieval/reopen tests while awaiting it. No runtime change or new tracking
+ID has been made. See [UOM staging evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_uom_staging_results.md).
+
 **Active 4be.1 instruction-editor coverage,2026-09-29:** D18 now specifies the
 five existing Process Designer Instructions Add/Update/Remove/Up/Down handlers as
 catalog14 additions, preserving1-13. They inherit the existing Production/Admin
