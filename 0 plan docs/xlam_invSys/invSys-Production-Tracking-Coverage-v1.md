@@ -1,6 +1,18 @@
 # Production form tracking coverage audit
 
-Version 1.11. Last reviewed: 2026-09-29 UTC, UOM dispatch diagnostic and regressions.
+Version 1.12. Last reviewed: 2026-09-29 UTC, visible UOM guards and public lifecycle.
+
+The unchanged extent candidate now passes combined visible264/264 with every prior
+check retained, five instrumented compiles, normal unassisted closure and preserved
+settings/packages. Only the ClosedWorkbook fixture constructs its retained form
+with the unrelated decoy active before explicit target binding/closure; its original
+refusal and no-redirection assertions remain. No diagnostic instrumentation or
+runtime change is involved. The actual public-launcher UOM close/reopen gate passes
+61/61 with normal closure, saved-draft/custom-column retention and the exact REUSED
+pair. Two combined-gate and three public-launcher principal images are reviewed;
+neither run records an Excel Application event. Earlier failures below remain
+historical evidence. This does not explain the native crashes or complete release
+acceptance; Settings-observation/full-chain gates remain open. Coverage is unchanged.
 
 D18 catalog15 now implements `PRODUCTION_UOM_EDIT`: **19/68 constructed controls
 registered;49 remain**. Existing launcher PROD_POST is rechecked in the captured

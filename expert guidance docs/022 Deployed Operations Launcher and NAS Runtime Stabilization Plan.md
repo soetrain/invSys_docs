@@ -2,6 +2,22 @@
 
 **Status:** Current corrective implementation plan
 
+**Current UOM visible closure checkpoint,2026-09-29:** the unchanged extent
+candidate now completes the combined visible gate264/264 with exact prior check
+identities, five instrumented compiles, normal unassisted closure, preserved
+settings/packages and two reviewed principal images. The ClosedWorkbook fixture
+constructs its retained test form while the unrelated decoy is active, then binds
+and closes the target as before. The original refusal/no-redirection assertions
+remain unchanged; no diagnostic instrumentation or runtime changes are involved.
+This supports a fixture-lifetime explanation, not a proven native-crash root cause.
+The separate actual public-launcher UOM close/reopen gate passes61/61 with normal
+closure and three reviewed principal images: owner closure disposes the real form;
+reopening retains the saved draft/custom column and records the exact REUSED pair.
+Both runs preserve settings/packages and have no Excel Application event. Earlier
+failed diagnostics below remain historical evidence. Settings-observation regression,
+full chain/native blockers and Release1 acceptance remain open. D12/D18 and the
+approved reuse contract are unchanged; this is test/evidence work.
+
 **UOM observation and extent checkpoint,2026-09-29:** Catalog15 implements
 `PRODUCTION_UOM_EDIT` with actual-handler RED98/134 ->232/232; the first path
 gate passes84/84 with fixture-dialog assistance; a later unassisted gate is below.

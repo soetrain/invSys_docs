@@ -1,6 +1,22 @@
 # invSys Form Controls v1
 
-**Version:** 1.268 (lifecycle retained; visible UOM adapter failure still open)
+**Version:** 1.269 (visible UOM guards and public close/reopen verified)
+
+**Current UOM visible closure checkpoint,2026-09-29:** combined visible264/264
+retains every prior assertion, five instrumented compiles, normal unassisted
+closure and settings/package preservation on the unchanged extent candidate.
+Only the closed-workbook fixture construction context changes: keep its separate
+decoy active when constructing the retained form, then explicitly bind and close
+the target as before. The original refusal and no-redirection checks pass without
+diagnostic instrumentation. This supports fixture lifetime as the dispatch issue;
+it does not explain the separate native crashes. The actual public-launcher UOM
+close/reopen gate also passes61/61 with normal closure: owner closure disposes the
+form; reopen retains the saved draft and custom column; Edit records REUSED with
+saved authority Unchanged and no implicit save. Two combined-gate and three public-
+launcher principal images are reviewed; neither run records an Excel Application
+event. Earlier failed diagnostics below remain historical evidence. No caption,
+permission, handler or normative contract changes. Settings-observation/full-chain
+acceptance remains open; Production coverage stays19/68, with49 controls pending.
 
 **UOM extent preservation,2026-09-29:** Actual Retrieve followed by Edit
 must restore the complete draft table, including blank internal rows and all
