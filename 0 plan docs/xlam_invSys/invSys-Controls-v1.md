@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.259 (Process instruction observations and paired views)
+**Version:** 1.260 (Instruction candidate operational regressions)
 
 **Partial 4be.1 instruction-editor observations,2026-09-29:** These existing
 Operations > Production > Process Designer > Instructions buttons inherit D18's
@@ -30,7 +30,14 @@ application. Catalogs1-13, original identities, unknown columns and prior GREENs
 remain protected. Focused gates retain exact identities, normal closure and
 settings/package preservation. Publication/recording/comparison passes105/105 with
 six reviewed principal images, separate guide provenance and observed runs, and
-read-only preservation. Current-candidate regression gates remain pending; see the
+read-only preservation. Current-candidate chain32/32, live roles48/48, Create
+Warehouse15/15, Settings202/202, draft390/390 and lifecycle615/615 retain exact prior
+identities, normal closure and preservation. Packaged layout geometry/native
+actions and complete captures pass after a tested DPI capture-tool correction.
+Settings observations449/1 expose a stale historical fixture; corrected467/467
+retains all450 prior identities and eight reviewed captures. Both runs require
+assisted cleanup; normal Settings shutdown remains open. Other
+regression gates remain pending. See the
 [instruction evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_instruction_results.md).
 This refines approved D18 without a new authority or permission grant.
 

@@ -18,7 +18,17 @@ Five builds/compiles/cold-start validation pass; dynamic-call and duplicate metr
 do not grow. See [focused instruction evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_instruction_results.md).
 Publication/recording/both Action Path views pass105/105 with six reviewed principal
 images, exact original identities, canonical/workbook preservation and normal
-closure. Require relevant current-candidate regressions and Release1 gates before
+closure. Current-candidate chain32/32, live roles48/48, Create Warehouse15/15,
+Settings202/202, draft390/390 and lifecycle615/615 retain exact prior identities,
+normal closure and preservation. Packaged layout geometry/native actions and
+complete captures pass after capture-tool RED5/2 to GREEN7/7; runtime packages
+are unchanged. Settings observations449/1 expose a stale catalog-10 fixture;
+corrected467/467 retains all450 prior identities and eight reviewed captures.
+Both Settings runs require assisted cleanup. Normal Settings shutdown remains
+open; investigate with a bounded diagnostic retaining actual callback behavior,
+not unchanged full retries. Refreshed maintenance retains all metrics/caps;
+three schemas and300 PowerShell parses pass.
+Require remaining current-candidate regressions and Release1 gates before
 acceptance. The full Production native failure remains an independent open gate;
 do not hide it behind this new coverage. These five controls are implemented with
 partial evidence; their remaining acceptance gates stay open. This is semantic inheritance of approved D18,

@@ -19,8 +19,14 @@ controls and UOM Retrieve. **50 constructed button actions still need their exac
 observation contracts and implementation.** The five instruction controls have
 focused packaged RED105/306 -> GREEN411/411 with exact identities, normal closure
 and preserved authority/settings/packages. Recording/publication and paired views
-pass105/105 with six reviewed principal images and normal closure; current-candidate
-regression acceptance is pending. See the
+pass105/105 with six reviewed principal images and normal closure. Current-candidate
+chain/live roles/Create Warehouse32/48/15, Settings202/202, draft390/390 and
+lifecycle615/615 retain exact prior identities, normal closure and preservation.
+Packaged geometry/native layout actions and complete captures pass after a tested
+DPI capture-tool correction. Settings observations449/1 expose a stale historical
+fixture; corrected467/467 retains all450 prior identities and eight reviewed
+captures. Both runs require assisted cleanup; normal Settings shutdown stays open.
+Other regressions remain pending. See the
 [instruction evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_instruction_results.md).
 Registration is not full acceptance: the six draft controls retain390/390 on the
 current lifecycle candidate with normal closure; ten reviewed images retain their
