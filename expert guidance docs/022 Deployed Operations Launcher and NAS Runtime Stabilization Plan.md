@@ -2,16 +2,17 @@
 
 **Status:** Current corrective implementation plan
 
-**Discovered UOM staging blocker,2026-09-29:** The actual Production
-`mBtnUomCatalogSend_Click` gate records49 PASS/5 behavioral FAIL: repeated Send
-deletes unknown columns, their values/formula/order and an unrelated worksheet
-note. Five instrumented compiles, captured binding, Config/workbook preservation
-checks, normal exit and settings/package preservation pass. Architecture's
-header-extension rule is already binding. The user approved the Architecture
-decision on2026-09-29: open/reuse existing staging without resetting its managed
-values; load saved catalog only for a new empty workbench. Expand packaged
-header/retrieval/reopen tests before implementation. No runtime change or new tracking
-ID has been made. See [UOM staging evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_uom_staging_results.md).
+**UOM staging correction,2026-09-29:** User-approved reuse is implemented in
+`validation-production-uom-staging`: expanded packaged RED60/18 -> GREEN78/78;
+visible78/78; five builds/compiles, layout and static gates pass. Exactly one of248
+compiled components changes, Operations `modProductionUomCatalog`. Retain draft
+cells and unknown columns, resolve managed headers by name, and reject ambiguous
+staging; Core publication/authorization stay unchanged. No tracking ID is added.
+The current candidate's full chain fails5/1 and live roles40/1 at Shipping Sent
+with native c0000028; recovery termination was needed before preservation completed.
+Earlier32/32 chain evidence belongs to the preceding candidate. Full-chain/native
+and broad coverage acceptance remain open; do not promote or repeatedly rerun the
+unchanged failing chain. See [UOM staging evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_uom_staging_results.md).
 
 **Active 4be.1 instruction-editor coverage,2026-09-29:** D18 now specifies the
 five existing Process Designer Instructions Add/Update/Remove/Up/Down handlers as

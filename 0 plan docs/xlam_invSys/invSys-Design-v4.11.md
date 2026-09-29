@@ -3548,9 +3548,9 @@ relax routed Recipe-edge compatibility.
   the complete table and publishes a new catalog version rather than mutating
   historical definitions or events. No additional form is introduced.
 **Approved UOM workbench preservation decision,2026-09-29:**
-The existing header-extension rules remain normative. Actual packaged Send
-currently deletes custom columns/formulas and unrelated worksheet content;
-focused evidence is49 PASS/5 behavioral FAIL. The approved correction interprets
+The existing header-extension rules remain normative. The previous packaged Send
+deleted custom columns/formulas and unrelated worksheet content;
+initial focused evidence was49 PASS/5 behavioral FAIL. The approved correction interprets
 **Edit UOM Catalog on Sheet** as opening/reusing a draft: create from the saved
 catalog only for a new empty workbench; reopen an existing table without rewriting
 its cells. Successful Retrieve continues to unlist without clearing cells; the

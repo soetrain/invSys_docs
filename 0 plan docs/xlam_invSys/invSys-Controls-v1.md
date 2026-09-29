@@ -1,17 +1,19 @@
 # invSys Form Controls v1
 
-**Version:** 1.262 (Approved UOM staging reuse; implementation pending)
+**Version:** 1.263 (UOM staging preservation GREEN; full chain open)
 
-**UOM staging preservation reopened,2026-09-29:** Existing **Edit UOM Catalog on
-Sheet** (`mBtnUomCatalogSend_Click`) remains untracked. Its actual packaged handler
-records49 PASS/5 behavioral FAIL when called again with custom columns/formulas
-and an unrelated worksheet note. The worksheet-wide clear violates the existing
-header-extension rule. Initial creation, captured binding, Config bytes and normal
-exit pass. The user approved Architecture's reuse decision on2026-09-29:
-open existing staging without resetting edits; load the saved catalog only for a
-new empty workbench. Reused drafts do not reload later saved-catalog changes.
-Implementation is pending. No runtime behavior, wording, tracking ID or
-acceptance is changed. See [preservation evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_uom_staging_results.md).
+**UOM staging preservation correction,2026-09-29:** Existing **Edit UOM Catalog on
+Sheet** (`mBtnUomCatalogSend_Click`) remains untracked. The approved reuse contract
+is implemented in `validation-production-uom-staging`: retain existing edits and
+custom columns; load saved catalog only for a new empty workbench; reopen a unique
+unlisted managed region; reject ambiguous shapes before mutation. Retrieve resolves
+the seven managed columns by normalized name and leaves extra columns local.
+Reuse status: "UOM Catalog draft reopened in the captured workbook. Existing edits
+retained; saved catalog not reloaded." Expanded actual-handler RED60/18 becomes
+GREEN78/78; a visible78/78, five builds/compiles, layout and static gates pass.
+Full chain fails5/1 with live roles40/1 at Shipping Sent/native c0000028; recovery
+cleanup required assistance. No release acceptance or new tracking ID is claimed.
+See [preservation evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_uom_staging_results.md).
 
 **Partial 4be.1 instruction-editor observations,2026-09-29:** These existing
 Operations > Production > Process Designer > Instructions buttons inherit D18's

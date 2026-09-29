@@ -1,12 +1,12 @@
 # Production form tracking coverage audit
 
-Version 1.6. Last reviewed: 2026-09-29 UTC, focused instruction handler evidence.
+Version 1.7. Last reviewed: 2026-09-29 UTC, UOM preservation correction.
 
-The still-untracked UOM Send handler now has a separate preservation RED:
-49 PASS/5 FAIL through the actual packaged handler. Repeated Send clears unknown
-columns/formulas and an unrelated worksheet note. The user approved Architecture's
-reuse contract on2026-09-29; implementation is pending and no additional control
-is registered. See
+The still-untracked UOM Send handler now preserves staging under the approved reuse
+contract: expanded packaged RED60/18 -> GREEN78/78 and visible78/78. Normalized
+retrieval, custom cells and ambiguous-shape rejection are covered. Build/compile,
+layout/static pass, but the candidate's full chain fails at Shipping Sent/native
+c0000028. No additional control is registered or release acceptance claimed. See
 [UOM staging evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_uom_staging_results.md).
 Subordinate to Architecture v4.11 D18, Plan022 and `invSys-Controls-v1.md`.
 This is reviewed source reachability/evidence accounting, not a new runtime
