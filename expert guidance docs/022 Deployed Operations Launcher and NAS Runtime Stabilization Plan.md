@@ -2,6 +2,28 @@
 
 **Status:** Current corrective implementation plan
 
+**Active 4be.1 instruction-editor coverage,2026-09-29:** D18 now specifies the
+five existing Process Designer Instructions Add/Update/Remove/Up/Down handlers as
+catalog14 additions, preserving1-13. They inherit the existing Production/Admin
+guard and captured-workbook context; instruction text never enters activity.
+Success is local STAGED, invalid input/selection/move is REJECTED, and neither
+asserts saved Designs or Domain application. Empty Update remains permitted.
+Only exact STAGED owner facts can satisfy CommandCompleted; empty source references
+cannot satisfy SourceEventsApplied. No new permission or authority is introduced.
+Packaged missing-observation/context-guard RED on frozen
+`validation-production-paths` reaches105 PASS/306 FAIL; typed dispatch/owner facts
+reach411/411 on `validation-production-instructions-typed`, retaining every check
+identity and prior GREEN, normal closure, settings/packages and all size limits.
+Five builds/compiles/cold-start validation pass; dynamic-call and duplicate metrics
+do not grow. See [focused instruction evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_instruction_results.md).
+Publication/recording/both Action Path views pass105/105 with six reviewed principal
+images, exact original identities, canonical/workbook preservation and normal
+closure. Require relevant current-candidate regressions and Release1 gates before
+acceptance. The full Production native failure remains an independent open gate;
+do not hide it behind this new coverage. These five controls are implemented with
+partial evidence; their remaining acceptance gates stay open. This is semantic inheritance of approved D18,
+not a contradictory architecture amendment or a waiver of D13.
+
 **Production batch-boundary diagnostic,2026-09-29:** Traced and untraced scoped
 controls pass7/7 with the exact same identities on the unchanged candidate.
 Offline marker calibration passes70/70;31 fixed markers cover repeated launch,

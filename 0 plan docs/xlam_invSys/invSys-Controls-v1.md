@@ -1,6 +1,38 @@
 # invSys Form Controls v1
 
-**Version:** 1.258 (Scoped Production batch-boundary evidence)
+**Version:** 1.259 (Process instruction observations and paired views)
+
+**Partial 4be.1 instruction-editor observations,2026-09-29:** These existing
+Operations > Production > Process Designer > Instructions buttons inherit D18's
+local-draft and captured-context rules. Catalog14 is implemented with focused
+packaged RED105/306 -> GREEN411/411; acceptance of all five remains pending.
+OwnerId PRODUCTION_DESIGNER, role Production, class
+Command; existing PROD_POST or ADMIN_MAINT guard. No instruction text, selection
+value, draft identity or source-event reference is recorded.
+
+| Existing handler | Caption | ControlId (acceptance pending) |
+|---|---|---|
+| `mBtnProcessInstructionAdd_Click` | Add | `PRODUCTION_PROCESS_INSTRUCTION_ADD` |
+| `mBtnProcessInstructionUpdate_Click` | Update | `PRODUCTION_PROCESS_INSTRUCTION_UPDATE` |
+| `mBtnProcessInstructionRemove_Click` | Remove | `PRODUCTION_PROCESS_INSTRUCTION_REMOVE` |
+| `mBtnProcessInstructionUp_Click` | Up | `PRODUCTION_PROCESS_INSTRUCTION_UP` |
+| `mBtnProcessInstructionDown_Click` | Down | `PRODUCTION_PROCESS_INSTRUCTION_DOWN` |
+
+REQUESTED precedes authorization/validation; successful local edits use STAGED.
+Blank Add, missing selection and out-of-range moves use REJECTED. Preserve trimmed
+Add/Update, including empty Update, and existing ordinal/selection behavior.
+Saved definitions remain unchanged. DENIED prevents the edit; FAILED preserves
+uncertainty rather than implying rollback. Stale target/session/closed captured
+workbook cannot edit or redirect activity. Initialization/re-entrancy does not
+produce extra clicks; optional tracking failure cannot block authorized editing.
+Only STAGED satisfies CommandCompleted; empty references never establish Domain
+application. Catalogs1-13, original identities, unknown columns and prior GREENs
+remain protected. Focused gates retain exact identities, normal closure and
+settings/package preservation. Publication/recording/comparison passes105/105 with
+six reviewed principal images, separate guide provenance and observed runs, and
+read-only preservation. Current-candidate regression gates remain pending; see the
+[instruction evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_instruction_results.md).
+This refines approved D18 without a new authority or permission grant.
 
 **Batch-boundary diagnostic,2026-09-29:** Traced/untraced7/7 controls retain the
 same identities; fixed marker calibration passes70/70. The traced sequence returns

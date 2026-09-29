@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.5. Last reviewed: 2026-09-29 UTC, lifecycle evidence reconciliation.
+Version 1.6. Last reviewed: 2026-09-29 UTC, focused instruction handler evidence.
 Subordinate to Architecture v4.11 D18, Plan022 and `invSys-Controls-v1.md`.
 This is reviewed source reachability/evidence accounting, not a new runtime
 contract, catalog version, permission grant or acceptance claim. D13 behavioral
@@ -13,9 +13,15 @@ still requires its exact owner contract and packaged-handler RED before edits.
 constructs six pages through BuildLayout and one shared Close button. It contains
 82 AddButton constructions: **68 constructed buttons with Click handlers** and
 **14 buttons confined to the uncalled BuildRecipeBuilderPage**. All 82 are
-accounted for below. Catalog13 contains thirteen IDs mapped to
-these 68 buttons: six draft controls, six lifecycle controls and UOM Retrieve. **55 constructed button
-actions still require registered observation contracts and implementation.**
+accounted for below. Catalog14 contains eighteen IDs mapped to
+these 68 buttons: six draft controls, six lifecycle controls, five instruction
+controls and UOM Retrieve. **50 constructed button actions still need their exact
+observation contracts and implementation.** The five instruction controls have
+focused packaged RED105/306 -> GREEN411/411 with exact identities, normal closure
+and preserved authority/settings/packages. Recording/publication and paired views
+pass105/105 with six reviewed principal images and normal closure; current-candidate
+regression acceptance is pending. See the
+[instruction evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_instruction_results.md).
 Registration is not full acceptance: the six draft controls retain390/390 on the
 current lifecycle candidate with normal closure; ten reviewed images retain their
 preceding candidate scope. Existing UOM evidence retains its recorded candidate
@@ -43,8 +49,8 @@ so normal unassisted closure remains unproved.
 Its later full restart/export attempt crashes at the batch-scale adapter before
 the full-only steps; that gate remains open, with settings/packages preserved.
 The earlier chain crash remains unexplained; a later GREEN is not a root-cause fix.
-No additional controls are registered by these gates, and all55 pending buttons
-remain pending. Full Slice4be, human and NAS acceptance remain open; use the
+Those lifecycle gates registered no additional controls; the later instruction
+checkpoint above adds five. Full Slice4be, human and NAS acceptance remain open; use the
 [acceptance index](../../../invSys_fork/tests/integration/plan022_slice4be_remaining_acceptance.md)
 for current gate status, rather than treating this source census as acceptance.
 
@@ -59,7 +65,8 @@ remain outside this form census and still require their own complete accounting.
 ## Constructed buttons
 
 The exact UI name and handler identify pending entries; `Pending` means no
-registered ControlId/outcome/owner contract has been established for this action.
+ControlId/outcome/owner contract has been established for this action. A partial
+entry has runtime registration and scoped evidence but incomplete acceptance.
 Do not treat these UI names as new ControlIds or log every handler automatically.
 All entries belong to the Production role in `invSys.Operations.xlam`.
 The public launcher `mProduction.BtnOpenProductionForm` currently checks PROD_POST;
@@ -79,11 +86,11 @@ from permission to stage or export a catalog worksheet.
 | UI control | Caption | Actual handler | Tracking ID/status |
 |---|---|---|---|
 | `btnProcessClear` | Clear | `mBtnProcessClear_Click` | `PRODUCTION_PROCESS_CLEAR` |
-| `btnProcessInstructionAdd` | Add | `mBtnProcessInstructionAdd_Click` | Pending |
-| `btnProcessInstructionDown` | Down | `mBtnProcessInstructionDown_Click` | Pending |
-| `btnProcessInstructionRemove` | Remove | `mBtnProcessInstructionRemove_Click` | Pending |
-| `btnProcessInstructionUp` | Up | `mBtnProcessInstructionUp_Click` | Pending |
-| `btnProcessInstructionUpdate` | Update | `mBtnProcessInstructionUpdate_Click` | Pending |
+| `btnProcessInstructionAdd` | Add | `mBtnProcessInstructionAdd_Click` | `PRODUCTION_PROCESS_INSTRUCTION_ADD` (partial) |
+| `btnProcessInstructionDown` | Down | `mBtnProcessInstructionDown_Click` | `PRODUCTION_PROCESS_INSTRUCTION_DOWN` (partial) |
+| `btnProcessInstructionRemove` | Remove | `mBtnProcessInstructionRemove_Click` | `PRODUCTION_PROCESS_INSTRUCTION_REMOVE` (partial) |
+| `btnProcessInstructionUp` | Up | `mBtnProcessInstructionUp_Click` | `PRODUCTION_PROCESS_INSTRUCTION_UP` (partial) |
+| `btnProcessInstructionUpdate` | Update | `mBtnProcessInstructionUpdate_Click` | `PRODUCTION_PROCESS_INSTRUCTION_UPDATE` (partial) |
 | `btnProcessLoad` | View Process | `mBtnProcessLoad_Click` | Pending |
 | `btnProcessNew` | New Process | `mBtnProcessNew_Click` | `PRODUCTION_PROCESS_NEW` |
 | `btnProcessObsolete` | Obsolete | `mBtnProcessObsolete_Click` | `PRODUCTION_PROCESS_OBSOLETE` (partial) |

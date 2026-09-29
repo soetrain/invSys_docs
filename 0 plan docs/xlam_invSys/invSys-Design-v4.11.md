@@ -437,6 +437,48 @@ and timestamps under the existing activity-group wire contract. This extends the
 existing D18 owner map to discovered controls; it does not change their actions,
 observations, saved authority or required permissions.
 
+**4be.1 Process instruction editor observations (discovered-control refinement):**
+The existing `mBtnProcessInstructionAdd_Click`, `mBtnProcessInstructionUpdate_Click`,
+`mBtnProcessInstructionRemove_Click`, `mBtnProcessInstructionUp_Click` and
+`mBtnProcessInstructionDown_Click` handlers inherit the approved D18 local-draft,
+captured-context, owner-fact and no-keystroke rules. Catalog14 adds exactly
+`PRODUCTION_PROCESS_INSTRUCTION_ADD`, `PRODUCTION_PROCESS_INSTRUCTION_UPDATE`,
+`PRODUCTION_PROCESS_INSTRUCTION_REMOVE`, `PRODUCTION_PROCESS_INSTRUCTION_UP` and
+`PRODUCTION_PROCESS_INSTRUCTION_DOWN`, preserving catalogs1-13. OwnerId is
+`PRODUCTION_DESIGNER`, role Production, class Command, existing capability PROD_POST
+with the existing ADMIN_MAINT alternative. Fixed captions are Add, Update, Remove,
+Up and Down; the fixed surface is Operations > Production > Process Designer >
+Instructions. EventCode is ControlId + `_` + OutcomeCode.
+
+REQUESTED is Info/Unknown before current-context capability and local validation.
+STAGED is Info/Unchanged with respect to saved definitions: the selected local
+instruction operation finished. Blank Add, absent required selection and a move
+beyond either list boundary produce REJECTED (Warning/Unchanged), not completion.
+Preserve existing authorized edit semantics: Add and Update trim text; Update may
+set an empty instruction for subsequent validation; Remove and movement preserve
+the existing ordinal rules. Do not introduce automatic saves, releases, text
+clearing or selection changes. DENIED is Blocked/Unchanged before the edit. FAILED
+is Error/Unknown and does not imply rollback of a partially changed local list.
+COMPLETED, CONFIRMED, VALIDATED and APPLIED are unsupported for these five controls.
+
+Use the original live captured workbook and target/session, without redirecting
+to the active window. Stale context/closed workbook refuses the edit without a
+replacement-context record. Current-context denial is observable. Re-entrant,
+initialization and programmatic list changes do not create extra user actions;
+optional disabled/unavailable tracking must not block the authorized edit.
+Activity carries no instruction text, selected-row value, draft/design identity
+or source-event reference. Canonical Designs and inventory remain unchanged.
+
+For precisely these five controls, only STAGED is a positive CommandCompleted
+owner fact; REQUESTED/REJECTED/DENIED/FAILED are not. SourceEventsApplied cannot
+conclude from their empty references. Record original action order and publish
+original identities; How-To, Diagnostic and Compare retain that distinction.
+Packaged tests invoke the actual handlers, cover valid/rejected/denied edits,
+tracking failure and stale bindings, preserve unknown workbook columns and saved
+authority, and retain prior catalog definitions and GREEN identities. This
+clarifies discovered controls under semantic inheritance; it changes no authority,
+permission grant or saved-definition contract.
+
 - Maintain a versioned coverage catalog for every reachable Operations/Admin
   launcher, form command, deliberate page/selection action and result. Each
   entry names a stable ControlId, fixed captions, role/family, public handler,
