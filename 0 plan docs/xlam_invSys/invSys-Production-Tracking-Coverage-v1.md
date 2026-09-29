@@ -1,17 +1,23 @@
 # Production form tracking coverage audit
 
-Version 1.16. Last reviewed: 2026-09-29 UTC, component packaged RED.
+Version 1.18. Last reviewed: 2026-09-29 UTC, component focused/paired-path GREEN.
 
 User-authorized work resumes with successful desktop checks. Corrected component
-adapters complete RED180/615,795 unique checks, five compiles, no harness failure,
-normal closure and preserved settings/packages; runtime remains unchanged. See the
+adapters complete RED180/615, then GREEN795/795 with exact identities, five compiles,
+normal closure, preserved settings/packages and two reviewed principal images. See the
 [component evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_component_results.md).
 Stop again on actual desktop error5; the display-setting change is not a proven fix.
 
 Architecture D18 now specifies catalog16 for the ten requirement/output Add,
-Update, Remove, Up and Down controls below; protecting RED is established and
-implementation/GREEN are pending. Existing Update append/fallback and editor changes
-are preserved explicitly. Current runtime coverage stays19/68, with49 pending.
+Update, Remove, Up and Down controls below; catalog16 is implemented in unpromoted
+`validation-production-components`. Existing Update append/fallback and editor
+changes are preserved. Current registration is29/68,39 pending. Paired paths pass
+142/142, retaining140 preceding checks, normal closure/preservation and six reviewed
+captures including the exact STAGED terminal. Ten actions match the distinct
+observed run in all three views without claiming Domain application. Current
+layout, Settings202/202 and Instructions411/411 pass with normal closure/preservation; remaining
+regressions and full release/native gates remain open. Static
+dynamic/duplicate metrics and all28 module limits hold; frmProduction shrinks one line.
 
 The unchanged extent candidate now passes combined visible264/264 with every prior
 check retained, five instrumented compiles, normal unassisted closure and preserved
@@ -30,8 +36,8 @@ only waits. This does not explain delayed exit, erase earlier assisted runs or
 resolve the native crashes. Full-chain/release acceptance remains open; coverage
 is unchanged.
 
-D18 catalog15 now implements `PRODUCTION_UOM_EDIT`: **19/68 constructed controls
-registered;49 remain**. Existing launcher PROD_POST is rechecked in the captured
+At the preceding catalog15 checkpoint, `PRODUCTION_UOM_EDIT` brings registration
+to19/68 constructed controls,49 remaining. Existing launcher PROD_POST is rechecked in the captured
 context without conferring publication authority. Actual-handler RED98/134 reaches
 232/232 on the observation candidate; its initial paths84/84 require fixture-dialog assistance.
 Registration is not acceptance. The later extent candidate passes separate visible
@@ -87,9 +93,10 @@ still requires its exact owner contract and packaged-handler RED before edits.
 constructs six pages through BuildLayout and one shared Close button. It contains
 82 AddButton constructions: **68 constructed buttons with Click handlers** and
 **14 buttons confined to the uncalled BuildRecipeBuilderPage**. All 82 are
-accounted for below. Catalog15 contains nineteen IDs mapped to
+accounted for below. Catalog16 contains twenty-nine IDs mapped to
 these 68 buttons: six draft controls, six lifecycle controls, five instruction
-controls, UOM Retrieve and UOM Edit. **49 constructed button actions still need their exact
+controls, ten requirement/output controls, UOM Retrieve and UOM Edit.
+**39 constructed button actions still need their exact
 observation contracts and implementation.** The five instruction controls have
 focused packaged RED105/306 -> GREEN411/411 with exact identities, normal closure
 and preserved authority/settings/packages. Recording/publication and paired views
@@ -185,18 +192,18 @@ from permission to stage or export a catalog worksheet.
 | `btnProcessLoad` | View Process | `mBtnProcessLoad_Click` | Pending |
 | `btnProcessNew` | New Process | `mBtnProcessNew_Click` | `PRODUCTION_PROCESS_NEW` |
 | `btnProcessObsolete` | Obsolete | `mBtnProcessObsolete_Click` | `PRODUCTION_PROCESS_OBSOLETE` (partial) |
-| `btnProcessOutputAdd` | Add | `mBtnProcessOutputAdd_Click` | Pending |
-| `btnProcessOutputDown` | Down | `mBtnProcessOutputDown_Click` | Pending |
-| `btnProcessOutputRemove` | Remove | `mBtnProcessOutputRemove_Click` | Pending |
-| `btnProcessOutputUp` | Up | `mBtnProcessOutputUp_Click` | Pending |
-| `btnProcessOutputUpdate` | Update | `mBtnProcessOutputUpdate_Click` | Pending |
+| `btnProcessOutputAdd` | Add | `mBtnProcessOutputAdd_Click` | Catalog16; focused795/795; paths142/142; regressions pending |
+| `btnProcessOutputDown` | Down | `mBtnProcessOutputDown_Click` | Catalog16; focused795/795; paths142/142; regressions pending |
+| `btnProcessOutputRemove` | Remove | `mBtnProcessOutputRemove_Click` | Catalog16; focused795/795; paths142/142; regressions pending |
+| `btnProcessOutputUp` | Up | `mBtnProcessOutputUp_Click` | Catalog16; focused795/795; paths142/142; regressions pending |
+| `btnProcessOutputUpdate` | Update | `mBtnProcessOutputUpdate_Click` | Catalog16; focused795/795; paths142/142; regressions pending |
 | `btnProcessRefresh` | Refresh | `mBtnProcessRefresh_Click` | Pending |
 | `btnProcessRelease` | Release | `mBtnProcessRelease_Click` | `PRODUCTION_PROCESS_RELEASE` (partial) |
-| `btnProcessRequirementAdd` | Add | `mBtnProcessRequirementAdd_Click` | Pending |
-| `btnProcessRequirementDown` | Down | `mBtnProcessRequirementDown_Click` | Pending |
-| `btnProcessRequirementRemove` | Remove | `mBtnProcessRequirementRemove_Click` | Pending |
-| `btnProcessRequirementUp` | Up | `mBtnProcessRequirementUp_Click` | Pending |
-| `btnProcessRequirementUpdate` | Update | `mBtnProcessRequirementUpdate_Click` | Pending |
+| `btnProcessRequirementAdd` | Add | `mBtnProcessRequirementAdd_Click` | Catalog16; focused795/795; paths142/142; regressions pending |
+| `btnProcessRequirementDown` | Down | `mBtnProcessRequirementDown_Click` | Catalog16; focused795/795; paths142/142; regressions pending |
+| `btnProcessRequirementRemove` | Remove | `mBtnProcessRequirementRemove_Click` | Catalog16; focused795/795; paths142/142; regressions pending |
+| `btnProcessRequirementUp` | Up | `mBtnProcessRequirementUp_Click` | Catalog16; focused795/795; paths142/142; regressions pending |
+| `btnProcessRequirementUpdate` | Update | `mBtnProcessRequirementUpdate_Click` | Catalog16; focused795/795; paths142/142; regressions pending |
 | `btnProcessReuse` | Edit as New Version | `mBtnProcessReuse_Click` | Pending |
 | `btnProcessSave` | Save Draft | `mBtnProcessSave_Click` | `PRODUCTION_PROCESS_SAVE` (partial) |
 | `btnProcessValidate` | Validate | `mBtnProcessValidate_Click` | `PRODUCTION_PROCESS_VALIDATE` |

@@ -1,13 +1,22 @@
 # invSys Form Controls v1
 
-**Version:** 1.273 (component packaged RED established; implementation pending)
+**Version:** 1.275 (component focused/paired-path GREEN; regressions pending)
 
-User-authorized work resumes2026-09-29 with successful desktop checks. Corrected
-component adapters establish packaged RED180/615,795 unique checks, five compiles,
-no harness failure, normal closure and preserved settings/packages. ACTUAL-mode
-setup is calibrated; actual movement errors, missing observations and missing
-guards remain product RED. Runtime registration stays19/68; no component runtime
-implementation precedes this evidence. Stop again on actual desktop error5.
+User-authorized work resumes2026-09-29 with successful desktop checks. Component
+RED180/615 becomes GREEN795/795 with exact identities, five compiles, normal
+closure, preserved settings/packages and two reviewed principal images. Catalog16
+in `validation-production-components` registers ten more buttons:29/68,39 pending.
+Typed context/permission/loading guards, truthful local outcomes and seven/ten-field
+movement preserve the approved contract. Five builds/compiles/cold load and static
+limits pass; the form shrinks one line and dynamic/duplicate metrics do not grow.
+Publication/paired paths pass142/142 with all140 preceding checks, two calibrated
+selected-field checks, normal closure, preservation and six reviewed captures.
+Ten original actions match a distinct observed run in How-To/Diagnostic/Compare;
+local CommandCompleted does not assert Domain application. Current layout passes
+with three reviewed captures; Settings retains202/202 and Instructions411/411. All close unassisted and
+preserve settings/packages. Remaining regressions and release/native gates remain
+open. Candidate is not promoted. Stop
+again on actual desktop error5.
 
 **Discovered Process component controls,2026-09-29:** Architecture D18 catalog16
 specifies `PRODUCTION_PROCESS_REQUIREMENT_{ADD,UPDATE,REMOVE,UP,DOWN}` and
@@ -23,8 +32,8 @@ Preserve the existing Update append/fallback, validation-time editor normalizati
 no-selection Remove reset, generated component identity, quantity/UOM validation,
 output regulation and move behavior. Stale/closed/session guards precede all local
 changes; optional tracking cannot block authorized editing. No entered values or
-identities enter activity records. These ten have protecting packaged RED and
-remain pending implementation/GREEN; runtime coverage remains19/68,49 unregistered.
+identities enter activity records. These ten have focused packaged RED/GREEN;
+runtime coverage is29/68,39 unregistered. Broader acceptance remains pending.
 
 **Current UOM visible closure checkpoint,2026-09-29:** combined visible264/264
 retains every prior assertion, five instrumented compiles, normal unassisted

@@ -2,6 +2,26 @@
 
 **Status:** Current corrective implementation plan
 
+**Component focused GREEN,2026-09-29:** protecting RED180/615 becomes795/795 on
+`deploy/validation-production-components`, retaining every check, five instrumented
+compiles, normal unassisted closure, settings/package preservation and two reviewed
+principal captures. Catalog16 implements the ten handlers through a typed owner;
+context/permission/loading/nested guards precede edits and error cleanup restores
+busy/loading. Seven/ten-field movement fixes the observed errors while the three
+Recipe movement callers retain their existing behavior. Five builds/compiles/cold
+load pass; exactly three existing compiled components change and three helpers are
+added,252 total. Static259/6078/133764; dynamic9/45 and191 duplicate groups unchanged,
+all28 size limits retained and frmProduction11736->11735. All three schemas pass.
+Current Production registration29/68,39 pending. Publication/paired paths now pass
+142/142 with all140 preceding checks plus two calibrated visible-field checks,
+normal closure/preservation and six reviewed principal images. Ten actual controls
+match a distinct observed run in all three views; STAGED is selected by exact
+RecordId and local CommandCompleted never claims Domain application. Earlier
+capture/getter mistakes remain qualified test evidence. Current-candidate layout
+passes with three reviewed captures; Settings retains202/202 and Instructions411/411. All close unassisted
+and preserve settings/packages. Remaining regressions and full release/native gates remain open;
+do not promote or call Slice4be complete.
+
 **User-authorized resumption and component RED,2026-09-29:** desktop checks pass
 after the reported RDP-client display setting change; this does not prove a lock
 fix. The corrected packaged component gate completes180 PASS/615 FAIL,795 unique
@@ -14,7 +34,7 @@ and the oversized-form limit. No runtime changes precede this RED. Exact evidenc
 `tests/integration/plan022_slice4be_production_component_results.md` in code.
 Stop again on actual desktop error5 and record its first timestamp.
 
-**Next 4be.1 group,2026-09-29:** implement Architecture D18 catalog16 observations
+**Catalog16 contract established before implementation,2026-09-29:** Architecture D18 observations
 for the ten Process requirement/output Add, Update, Remove, Up and Down handlers.
 This is a discovered-control refinement under the approved semantic-inheritance
 rule, with no new permission or saved-authority contract. Preserve Update's
