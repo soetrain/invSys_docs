@@ -437,6 +437,36 @@ and timestamps under the existing activity-group wire contract. This extends the
 existing D18 owner map to discovered controls; it does not change their actions,
 observations, saved authority or required permissions.
 
+**4be.1 UOM workbench observation (discovered-control refinement):**
+Under D18's comprehensive coverage, captured-context and owner-fact rules,
+catalog15 adds `PRODUCTION_UOM_EDIT` for `mBtnUomCatalogSend_Click`, caption
+**Edit UOM Catalog on Sheet**, surface Operations > Production > Production
+Settings > UOM Catalog. Preserve catalogs1-14. OwnerId is
+`PRODUCTION_UOM_STAGING`, role Production, class Command. Recheck the existing
+launcher's PROD_POST capability in the captured current context before opening
+staging; this does not confer Core catalog-publication permission.
+
+REQUESTED is Info/Unknown before current-context permission and staging validation.
+The owning worksheet boundary reports OPENED for a newly created workbench and
+REUSED for an existing or reopened draft, both Info/Unchanged with respect to
+saved authority. REJECTED is Warning/Unchanged for invalid or ambiguous staging;
+DENIED is Blocked/Unchanged before mutation; FAILED is Error/Unknown without a
+rollback claim. EventCode is ControlId + `_` + OutcomeCode. Only OPENED and REUSED
+are positive CommandCompleted facts. Empty source references cannot establish
+SourceEventsApplied. COMPLETED, CONFIRMED, STAGED, VALIDATED and APPLIED are not
+supported outcomes for this control.
+
+Use the original live captured workbook and warehouse/session. Stale context,
+sign-out or closed binding refuses action without attributing it to a replacement
+context. Loading and re-entrant entry produce no duplicate action. Optional
+disabled/unavailable tracking must not block an authorized workbench operation;
+unavailable tracking is visibly reported. Store fixed explanations only: no UOM
+rows, cell values/formulas, workbook paths, entered notes or source-event identities.
+The approved workbench reuse/preservation contract and Core authorization remain
+unchanged. Packaged actual-handler RED/GREEN and published Action Path evidence
+are required; discovery/registration does not establish acceptance. This is a
+semantic-inheritance clarification, not a new permission or authority boundary.
+
 **4be.1 Process instruction editor observations (discovered-control refinement):**
 The existing `mBtnProcessInstructionAdd_Click`, `mBtnProcessInstructionUpdate_Click`,
 `mBtnProcessInstructionRemove_Click`, `mBtnProcessInstructionUp_Click` and

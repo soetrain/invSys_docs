@@ -1,6 +1,11 @@
 # Production form tracking coverage audit
 
-Version 1.7. Last reviewed: 2026-09-29 UTC, UOM preservation correction.
+Version 1.8. Last reviewed: 2026-09-29 UTC, UOM Edit observation contract.
+
+D18 now defines `PRODUCTION_UOM_EDIT` for catalog15; runtime registration and
+acceptance are pending. The existing18 registered constructed controls remain
+18/68 until implementation. This refinement rechecks launcher PROD_POST in the
+captured context without conferring publication authority.
 
 The still-untracked UOM Send handler now preserves staging under the approved reuse
 contract: expanded packaged RED60/18 -> GREEN78/78 and visible78/78. Normalized
@@ -200,7 +205,7 @@ from permission to stage or export a catalog worksheet.
 | `btnOutputRegulationApply` | Apply Regulation | `mBtnOutputRegulationApply_Click` | Pending |
 | `btnOutputRegulationClear` | Clear Override | `mBtnOutputRegulationClear_Click` | Pending |
 | `btnUomCatalogRetrieve` | Retrieve UOM Catalog | `mBtnUomCatalogRetrieve_Click` | `PRODUCTION_UOM_RETRIEVE` |
-| `btnUomCatalogSend` | Edit UOM Catalog on Sheet | `mBtnUomCatalogSend_Click` | Pending |
+| `btnUomCatalogSend` | Edit UOM Catalog on Sheet | `mBtnUomCatalogSend_Click` | `PRODUCTION_UOM_EDIT` contract; implementation pending |
 
 ## Unconstructed Recipe Builder controls
 

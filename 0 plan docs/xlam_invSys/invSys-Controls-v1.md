@@ -1,6 +1,19 @@
 # invSys Form Controls v1
 
-**Version:** 1.263 (UOM staging preservation GREEN; full chain open)
+**Version:** 1.264 (UOM Edit observation contract; implementation pending)
+
+**Pending UOM Edit observation,2026-09-29:** D18 catalog15 adds
+`PRODUCTION_UOM_EDIT` for `mBtnUomCatalogSend_Click`, caption **Edit UOM Catalog on
+Sheet**, on Operations > Production > Production Settings > UOM Catalog.
+Owner `PRODUCTION_UOM_STAGING`, Production/Command, existing launcher PROD_POST
+permission rechecked in the captured current context. REQUESTED is Info/Unknown;
+OPENED and REUSED are Info/Unchanged for saved authority; REJECTED is
+Warning/Unchanged; DENIED is Blocked/Unchanged; FAILED is Error/Unknown.
+Only OPENED/REUSED satisfy CommandCompleted; source references stay empty.
+No catalog rows, paths, notes or formulas enter observations. Stale/closed/loading/
+re-entrant actions are suppressed; optional tracking cannot block authorized
+staging. Catalogs1-14 and Core publication permission remain unchanged.
+Runtime registration and Action Path acceptance are pending.
 
 **UOM staging preservation correction,2026-09-29:** Existing **Edit UOM Catalog on
 Sheet** (`mBtnUomCatalogSend_Click`) remains untracked. The approved reuse contract

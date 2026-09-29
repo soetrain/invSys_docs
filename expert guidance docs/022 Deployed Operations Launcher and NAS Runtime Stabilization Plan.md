@@ -2,6 +2,14 @@
 
 **Status:** Current corrective implementation plan
 
+**Next 4be.1 observation,2026-09-29:** Architecture D18 now specifies the discovered
+`PRODUCTION_UOM_EDIT` control for catalog15, retaining1-14. Extend actual packaged
+Send-handler tests for OPENED/REUSED/REJECTED/DENIED/FAILED, redaction, current
+captured context, loading/re-entry, optional tracking and exact completion facts
+before implementing observation. Recheck existing launcher PROD_POST permission;
+do not infer Core publication permission from staging. Registration and acceptance
+are pending. The UOM preservation GREEN and full-chain/native blocker below remain.
+
 **UOM staging correction,2026-09-29:** User-approved reuse is implemented in
 `validation-production-uom-staging`: expanded packaged RED60/18 -> GREEN78/78;
 visible78/78; five builds/compiles, layout and static gates pass. Exactly one of248
