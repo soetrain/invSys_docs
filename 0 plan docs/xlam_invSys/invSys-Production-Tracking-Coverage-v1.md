@@ -26,6 +26,12 @@ Packaged geometry/native layout actions and complete captures pass after a teste
 DPI capture-tool correction. Settings observations449/1 expose a stale historical
 fixture; corrected467/467 retains all450 prior identities and eight reviewed
 captures. Both runs require assisted cleanup; normal Settings shutdown stays open.
+Native cancellation94/94 retains four reviewed captures and normal closure;
+smoke86/86 retains prior identities with automatic cleanup unobserved. Reusable
+run-only fails at batch scale with the prior RPC/native signature and no
+termination request. Prior67 reusable observations are not re-established.
+Prepared standard-flow controls pass with automatic cleanup; these do not repair
+the cold candidate. A separate saved-compile artifact is the next experiment.
 Other regressions remain pending. See the
 [instruction evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_instruction_results.md).
 Registration is not full acceptance: the six draft controls retain390/390 on the

@@ -28,6 +28,18 @@ Both Settings runs require assisted cleanup. Normal Settings shutdown remains
 open; investigate with a bounded diagnostic retaining actual callback behavior,
 not unchanged full retries. Refreshed maintenance retains all metrics/caps;
 three schemas and300 PowerShell parses pass.
+Native cancellation94/94 retains four complete captures and normal closure;
+smoke86/86 retains prior identities with automatic cleanup unobserved. Current
+reusable run-only fails at batch scale with RPC0x800706BE/ntdll.dll0xc0000028 and
+TerminationRequested=False. Prior67 reusable observations are not re-established.
+Trace the failing standard flow rather than repeating unchanged broad runs or
+inferring repair from passing shortened diagnostics.
+Standard-flow controls subsequently pass with tracing/VBE preparation and with
+VBE preparation alone; all four compile commands execute in the latter. Both
+request automatic final termination. These are diagnostic passes, not a cold
+package repair or normal shutdown. The existing compile gate is read-only and
+does not save compiled packages. Next: a separate saved-compile candidate and the
+unmodified cold standard validator. See [boundary evidence](../../invSys_fork/tests/integration/plan022_slice4be_production_batch_boundary_results.md).
 Require remaining current-candidate regressions and Release1 gates before
 acceptance. The full Production native failure remains an independent open gate;
 do not hide it behind this new coverage. These five controls are implemented with

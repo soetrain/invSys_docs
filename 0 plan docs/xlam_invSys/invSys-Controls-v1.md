@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.260 (Instruction candidate operational regressions)
+**Version:** 1.261 (Native cancellation and remaining Production failure)
 
 **Partial 4be.1 instruction-editor observations,2026-09-29:** These existing
 Operations > Production > Process Designer > Instructions buttons inherit D18's
@@ -36,7 +36,14 @@ identities, normal closure and preservation. Packaged layout geometry/native
 actions and complete captures pass after a tested DPI capture-tool correction.
 Settings observations449/1 expose a stale historical fixture; corrected467/467
 retains all450 prior identities and eight reviewed captures. Both runs require
-assisted cleanup; normal Settings shutdown remains open. Other
+assisted cleanup; normal Settings shutdown remains open. Native cancellation94/94
+retains four complete captures and normal closure. Smoke86/86 retains prior
+identities with automatic cleanup unobserved. Reusable run-only fails at batch
+scale with the prior RPC/native signature and no termination request; prior67
+observations are not re-established. Standard-flow tracing/VBE and VBE-only
+controls subsequently pass with automatic cleanup; no cold-package repair or
+normal shutdown is inferred. A separate saved-compile candidate is the next
+bounded experiment. Other
 regression gates remain pending. See the
 [instruction evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_instruction_results.md).
 This refines approved D18 without a new authority or permission grant.
