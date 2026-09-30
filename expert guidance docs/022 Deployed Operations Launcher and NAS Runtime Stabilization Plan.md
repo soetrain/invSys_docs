@@ -60,6 +60,12 @@ Six principal captures show five authored instructions and five matching STAGED
 actions from a separate recording, with zero extras and no Domain application
 claim. This is agent review; remaining gates and human acceptance stay open.
 
+Recipe ordering on catalog20 retains 463/463 focused and 93/93 paired-path checks,
+with exact prior identities, five compiles each, preservation, normal closure and
+zero delayed Excel failures. Six reviewed captures show three readable instructions,
+three matches from the separate observed run, zero extras and the local-only
+conclusion. Runtime and frozen packages remain unchanged; human acceptance is open.
+
 **Designer load/refresh focused GREEN,2026-09-30 UTC:**
 The isolated `validation-production-design-reads-final` catalog19 candidate passes
 621/621 focused checks and114/114 paired-path checks. The focused gate retains the
