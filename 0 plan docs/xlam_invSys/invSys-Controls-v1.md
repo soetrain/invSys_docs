@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.313 (output-regulation focused/paths/full chain GREEN; remaining gates pending)
+**Version:** 1.314 (output-regulation focused/paths/full chain GREEN; remaining gates pending)
 
 Catalog20 output-regulation focused GREEN,2026-09-30 UTC: the isolated
 `validation-production-regulation-final` candidate registers105 global controls
@@ -73,6 +73,13 @@ instructions are readable; the final diagnostic viewport shows matches4-10,
 zero extras and all ten matched identity pairs. The full local-only conclusion
 is protected by text assertions; its heading is above that viewport. Human
 acceptance and the remaining candidate gates remain open.
+
+Instruction regressions on catalog20 retain 411/411 focused and 105/105 paired-path
+checks, with exact prior identities, five compiles each, preservation, normal
+closure and zero delayed Excel failures. Six captures are reviewed: the selected
+REQUESTED line shows Info/Unknown, all five instructions are readable, and five
+STAGED matches conclude locally with zero extras. Runtime/packages remain unchanged;
+agent review does not establish human acceptance.
 
 The isolated `validation-production-design-reads-final` catalog19 candidate passes
 621/621 focused checks and114/114 paired-path checks. The focused gate retains the
