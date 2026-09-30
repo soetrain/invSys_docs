@@ -1,6 +1,23 @@
 # invSys Form Controls v1
 
-**Version:** 1.335 (Production Close paths, smoke, layout, chain and reusable GREEN)
+**Version:** 1.336 (Production Close scoped automated gates GREEN)
+
+Close's scoped automated gate set is complete on the isolated catalog21 candidate:
+focused312, independent paths90, shared regulation paths102, smoke86, chain32/
+live48/Create15, three-size/five-page layout, full reusable171 observations,
+Settings202, activity494, lifecycle615, Draft/Paths390 and native cancellation94.
+Build/compile, static limits, preservation, unassisted cleanup, delayed Excel
+audits and reviewed captures pass. Registration remains106 global IDs and45/68
+Production buttons;23 buttons and30 nonbutton handlers retain coverage work.
+No package promotion, complete Slice4be coverage or human acceptance is claimed.
+
+Close's candidate retains Settings202/202 and passes Settings activity494/494.
+All493 earlier activity checks retain relative order; the sole new check verifies
+that older policies exclude PRODUCTION_CLOSE. Both gates compile five packages,
+preserve settings/packages and finish with zero delayed Excel failures. Preference
+restart and final cleanup are unassisted. Eight activity captures were directly
+reviewed; the longer activity exit required no intervention. Lifecycle, Draft/
+Paths and native cancellation now pass; broader Slice4be acceptance remains open.
 
 Close's frozen catalog21 candidate retains smoke86/86, chain32/32, live-role48/48
 and warehouse creation15/15 in exact prior order. Layout preserves three-size/
@@ -8,7 +25,7 @@ five-page geometry, with three reviewed captures and reachable Close. Cleanup,
 preservation and delayed Excel audits pass. Full reusable Production retains both
 aggregates and all171 observations in exact prior order, with unassisted restart/
 final shutdown, preserved settings/packages and zero delayed Excel failures.
-Current Settings/activity, lifecycle, Draft/Paths and native cancellation remain pending;
+Current Settings/activity, lifecycle, Draft/Paths and native cancellation now pass above;
 comprehensive Slice4be coverage and human acceptance remain open.
 
 Close Action Paths pass90/90 after frozen pre-Close RED45/1, preserving all46 RED
@@ -19,8 +36,8 @@ shared Close observations prove two dismissals without identifying gestures.
 Five compiles, normal closure/preservation, zero delayed Excel failures and seven
 directly reviewed captures pass. Shared regulation paths retain102/102 exact
 ordered checks, five compiles, normal cleanup/preservation and zero delayed Excel
-failures. Runtime remains unchanged. Broader post-change
-gates and human acceptance remain open.
+failures. Runtime remains unchanged. Scoped post-change
+gates now pass; human acceptance remains open.
 
 Catalog21 `PRODUCTION_CLOSE` passes312/312 exact ordered packaged checks after
 175/137 RED, retaining80 query checks and42 prior checks. Button and native close
@@ -32,7 +49,7 @@ images pass. A first assisted run exposed a missing older-policy notice observer
 in the fixture; the clean repeat uses unchanged packages. Current registration
 is106 global IDs and45/68 Production buttons, with23 buttons unregistered and30
 nonbutton handlers pending coverage review. Close-specific paths now pass above;
-broader regressions remain pending. See `tests/integration/plan022_slice4be_production_close_results.md` in code.
+scoped regressions now pass above. See `tests/integration/plan022_slice4be_production_close_results.md` in code.
 
 Production Close retains the approved dismissal-only contract and protecting
 packaged RED. `PRODUCTION-CLOSE-NATIVE-HOOK-01` permits only four form lines for

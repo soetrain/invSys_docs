@@ -2,6 +2,29 @@
 
 **Status:** Current corrective implementation plan
 
+Production Close scoped automated gates complete,2026-09-30 UTC: focused312,
+independent paths90, shared regulation paths102, smoke86, chain32/live48/Create15,
+three-size/five-page layout, full reusable171 observations, Settings202, Settings
+activity494, lifecycle615, Draft/Paths390 and native cancellation94 pass. Required
+build/compile, static ratchets, preservation, normal unassisted cleanup, delayed
+Excel audits and reviewed visible evidence pass. The lifecycle/Draft/native gates
+retain exact ordered prior checks. Catalog21 remains an isolated unpromoted
+candidate:106 global IDs,45/68 Production buttons registered,23 buttons and30
+nonbutton handlers still requiring coverage work. Production Open and broader
+Operations/Admin completeness remain unproved; no human acceptance or crash repair
+is asserted. Continue the maintained coverage audit and specify/test the next
+owner boundary before implementation. Exact evidence:
+`tests/integration/plan022_slice4be_production_close_results.md` in code.
+
+Production Close Settings checkpoint,2026-09-30 UTC: Settings202/202 retains exact
+prior checks, five compiles and unassisted preference restart. Settings activity
+passes494/494, retaining all493 prior checks in relative order and adding exactly
+`SettingsActivity.OlderPolicy.Excludes.PRODUCTION_CLOSE` through existing catalog
+enumeration. Five compiles, eight reviewed captures, settings/package preservation
+and zero delayed Excel failures pass. Activity cleanup takes longer after the
+assertions but exits normally without assistance; no error5 or crash repair is
+claimed. Designer lifecycle, Draft/Paths and native cancellation now pass above.
+
 Production Close regression checkpoint,2026-09-30 UTC: packaged smoke86/86,
 chain32/32, live-role48/48 and warehouse creation15/15 retain exact prior checks.
 Layout retains the accepted three-size/five-page geometry and three reviewed
@@ -9,7 +32,7 @@ captures. Full reusable Production retains both aggregates and all171 observatio
 in exact prior order, with unassisted restart/final shutdown and no termination
 request. Cleanup/preservation and delayed Excel audits pass. Current-catalog
 Settings/activity, lifecycle, Draft/Paths and native
-cancellation remain pending; the evidence record maps that scope to changed
+cancellation now pass above. The evidence record maps that scope to changed
 components and distinguishes retained frozen suites from new-candidate runs.
 No comprehensive Slice4be or human acceptance is claimed.
 
@@ -23,7 +46,7 @@ button/window-X instructions do not make the shared Close event distinguish
 gestures or assert saved work/Domain application. Runtime is unchanged from the
 focused candidate. The shared harness also retains regulation paths102/102 in
 exact prior order, with five compiles, normal cleanup/preservation and zero
-delayed Excel failures. Broader post-change regressions remain pending. Evidence:
+delayed Excel failures. Scoped post-change regressions now pass above. Evidence:
 `tests/integration/plan022_slice4be_production_close_results.md` in code.
 
 Production Close focused GREEN,2026-09-30 UTC: the isolated
@@ -38,7 +61,7 @@ observer; the clean repeat changes only that fixture observer. Runtime remains
 unchanged between the runs. Current-record/editor fixture expectations advance
 to catalog21/106 controls; historical catalogs remain protected. Close-specific
 independent recordings/How-To/Diagnostic/Compare now pass as recorded above;
-broader regressions remain pending. Evidence: `tests/integration/plan022_slice4be_production_close_results.md`
+scoped regressions now pass above. Evidence: `tests/integration/plan022_slice4be_production_close_results.md`
 in code. No promotion, complete Slice4be coverage or human acceptance is claimed.
 
 Production Close implementation basis: the verified query candidate.

@@ -1,14 +1,29 @@
 # Production form tracking coverage audit
 
-Version 1.75. Last reviewed: 2026-09-30 UTC, Close smoke/layout/chain/reusable GREEN.
+Version 1.76. Last reviewed: 2026-09-30 UTC, Close scoped automated gates GREEN.
+
+The isolated catalog21 Close candidate completes its scoped automated gate set:
+focused312, paths90, regulation paths102, smoke86, chain32/live48/Create15,
+three-size/five-page layout, full reusable171 observations, Settings202,
+activity494, lifecycle615, Draft/Paths390 and native94. Build/compile, static,
+preservation, normal cleanup, delayed Excel audits and reviewed visible evidence
+pass. Comprehensive Slice4be coverage and human acceptance remain open;23
+Production buttons and30 nonbutton handlers still require coverage work.
+
+Settings202/202 retains prior checks; Settings activity494/494 retains all493
+prior checks and adds only the older-policy exclusion for PRODUCTION_CLOSE.
+Five compiles per gate, unassisted restart/cleanup, preserved settings/packages,
+zero delayed Excel failures and eight reviewed activity captures pass. Longer
+activity cleanup completes normally without intervention. Lifecycle, Draft/Paths
+and native cancellation now pass; registration counts remain unchanged.
 
 Close's frozen candidate retains smoke86/86, chain32/32, live-role48/48 and
 warehouse creation15/15 in exact prior order. Three-size/five-page layout geometry
 and three reviewed captures pass, with cleanup/preservation and zero delayed
 Excel failures. Full reusable Production retains both aggregates and all171
 observations in exact prior order, with unassisted restart/final shutdown,
-preservation and zero delayed Excel failures. Settings/activity, lifecycle,
-Draft/Paths and native cancellation remain pending. Registration counts below
+preservation and zero delayed Excel failures. Settings/activity now pass above; lifecycle,
+Draft/Paths and native cancellation now pass. Registration counts below
 are unchanged; no new control or final acceptance is implied.
 
 Close-specific independent recordings and Action Paths pass90/90 after frozen
@@ -20,7 +35,7 @@ Instructions distinguish button/window-X gestures; recorded events prove two
 dismissals without distinguishing those gestures or asserting Domain application.
 The shared harness also retains regulation paths102/102 in exact prior order,
 five compiles, normal cleanup/preservation and zero delayed Excel failures.
-Runtime is unchanged; broader post-change regressions remain pending.
+Runtime is unchanged; scoped post-change regressions now pass above.
 
 Current catalog21 candidate `validation-production-close-observations` registers
 106 global IDs and45/68 constructed Production buttons;23 buttons remain
@@ -30,14 +45,14 @@ prior checks. Five builds/compiles, cold-start references, static limits, normal
 closure/preservation, zero delayed Excel failures and four reviewed images pass.
 An assisted first run is excluded; the clean repeat fixes only the older-policy
 notice observer. Close-specific separate recordings/How-To/Diagnostic/Compare
-now pass above; broader regressions remain required. Evidence:
+and scoped regressions now pass above. Evidence:
 `tests/integration/plan022_slice4be_production_close_results.md` in code.
 
 Close's existing catalog21 contract proceeds under the four-line native event
 exception `PRODUCTION-CLOSE-NATIVE-HOOK-01`. Only typed form delegates belong in
 the oversized form; a bounded Operations helper owns its observation flow.
 That constraint does not itself grant acceptance; the evidence above establishes
-the focused implementation only.
+the bounded Close automated checkpoint only.
 
 The preceding isolated Core query candidate passes80/80 supplemental cases and real public
 launch/close/reopen authority preservation after query RED88/34. Combined results
@@ -659,7 +674,7 @@ from permission to stage or export a catalog worksheet.
 
 | UI control | Caption | Actual handler | Tracking ID/status |
 |---|---|---|---|
-| `btnProductionClose` | Close | `mBtnClose_Click` | `PRODUCTION_CLOSE`, catalog21; focused312/312 including native QueryClose, public reopen, preservation and80 query checks. Independent paths and broader regressions pending. |
+| `btnProductionClose` | Close | `mBtnClose_Click` | `PRODUCTION_CLOSE`, catalog21; focused312/312, independent paths90/90 and scoped automated regressions GREEN. Native QueryClose, public reopen, preservation and80 query checks protected; human acceptance remains open. |
 
 ### Process Designer (27)
 
