@@ -651,6 +651,80 @@ Compare evidence and the required regressions remain necessary. This names
 discovered controls under approved D18; a change to the preserved editing or
 conversion algorithms requires a separate architecture decision.
 
+**4be.1 Process worksheet observations (discovered-control refinement; acceptance pending):**
+Under approved D18 semantic inheritance, catalog22 adds exactly
+`PRODUCTION_PROCESS_WORKSHEET_SEND`, `PRODUCTION_PROCESS_WORKSHEET_ADD_ITEM`,
+and `PRODUCTION_PROCESS_WORKSHEET_RETRIEVE`, preserving versions1-21. OwnerId is
+`PRODUCTION_PROCESS_WORKSHEET`, role Production, class Command, capability
+PROD_POST with the existing ADMIN_MAINT alternative. Surface is
+Operations > Production > Process Designer. Captions remain Send Process to Sheet,
+Add Acceptable Item, and Retrieve Selected Process. EventCode is ControlId + `_`
++ OutcomeCode. These are observations of the three actual user handlers; internal
+worksheet maintenance, item selection, import helpers and nested lifecycle saves
+are not additional user clicks.
+
+D14/D15 continue to own the workbench behavior. Send creates a new local table,
+saves the captured workbook, then clears the form draft only after success. Add
+appends a numbered item/SKU pair to the selected table and saves that workbook.
+Retrieve validates every selected table before its first Designs submission,
+restores the prior form draft on validation rejection, imports in the existing
+deterministic order and removes/saves only each confirmed table. Failed/unselected
+tables and unknown columns remain. Managed formula/identity maintenance during
+validation may remain locally even when retrieval is rejected; rejection does
+not imply that every worksheet cell was unchanged. Preserve existing draft
+version generation, mixed-UOM handling, status/error presentation and save rules.
+
+Before identity generation, normalization, editing, saving or submission, require
+the original live captured workbook, unchanged warehouse/session and current
+capability. Recheck context after yielding boundaries and before each submission
+or subsequent table removal. Stop remaining work on context loss; never retarget
+or emit under a replacement binding. Loading, re-entrancy and programmatic setup
+create no extra actions. Optional tracking being disabled/unavailable cannot
+block an authorized command, and unavailable tracking remains visible.
+
+REQUESTED is Info/Unknown. DENIED is Blocked/Unchanged before edits. REJECTED is
+Warning/Unchanged with respect to saved Designs after a known pre-submission
+validation/selection refusal; local staging maintenance may remain. Send/Add
+success is STAGED, Info/Unchanged with respect to Designs, explicitly describing
+the local workbook save. These outcomes have empty source references. Retrieve
+success is CONFIRMED, Info/Unknown, only when every selected draft's owning save,
+processing/refresh path and selected-table removal/save finishes successfully.
+CONFIRMED requires nonempty Submitted Designs references and does not prove
+Domain application. FAILED is Error/Unknown for exceptions, failed required steps,
+partial/mixed results or uncertain acknowledgments; preserve the existing work
+already done and never claim rollback. PENDING, APPLIED, COMPLETED, VALIDATED and
+CANCELLED are unsupported for these three controls. STAGED is supported only for
+Send/Add; CONFIRMED only for Retrieve.
+
+Only Retrieve may carry source references. Retain every exact event identity
+actually supplied by each owning Designs submission for this ActivityId, with
+its individual Submitted or Unknown state. A failed multi-table command may
+contain both states; do not collapse them, lose earlier successful submissions,
+borrow catch-up events, include a preallocated-but-unsubmitted identity or invent
+an ID. Unknown is permitted only with FAILED. The existing exact four-field,
+captured-warehouse, identity, uniqueness and size constraints remain binding;
+Inventory references are invalid. Typed local facts extend the existing owning
+submission observations without changing canonical schemas or write authority.
+
+Only STAGED for the exact Send/Add controls and CONFIRMED for the exact Retrieve
+control establish CommandCompleted. REQUESTED, REJECTED, DENIED and FAILED do not.
+SourceEventsApplied requires complete owning published evidence for every exact
+reference; retain D18's distinction between Awaiting and unavailable/Incomplete
+coverage. Empty references never establish application. How-To, Diagnostic and
+Compare remain advisory and never execute or retry these actions. Publish only
+fixed redacted messages and allowed source identities, not names, table/workbook
+paths, cell data, selected text, generated definition IDs or error descriptions.
+
+D13 requires actual packaged-handler RED/GREEN before implementation, covering
+local saves, single/multiple selected retrievals, all-before-write validation,
+partial results, failed removal/save, exact per-event references, guards,
+optional tracking, older policies, prior records, normalized/custom columns and
+unchanged Inventory business state. Separate recording/publication/detail and
+all three Action Path modes, compile/layout/static/live-role/full-chain/reusable
+regressions and visible evidence remain required. This refines discovered controls
+within approved D18; it changes no authority, permission, worksheet save or import
+algorithm, and confers no acceptance by documentation alone.
+
 **4be.1 Production Close observations (discovered-control refinement; acceptance pending):**
 Under approved D18 semantic inheritance, catalog21 adds `PRODUCTION_CLOSE` for
 the existing `btnProductionClose` / `mBtnClose_Click` and explicit native window

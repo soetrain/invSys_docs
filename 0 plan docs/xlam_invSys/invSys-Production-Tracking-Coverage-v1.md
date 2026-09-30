@@ -1,6 +1,12 @@
 # Production form tracking coverage audit
 
-Version 1.85. Last reviewed: 2026-09-30 UTC, picker scoped gates complete.
+Version 1.86. Last reviewed: 2026-09-30 UTC, worksheet observation contract specified.
+
+Catalog22's three Process worksheet observations are now specified in Architecture
+v4.11 D18, with local STAGED versus all-selected Retrieve CONFIRMED and FAILED
+partial results retaining exact per-submission Designs states. Actual-handler
+RED/GREEN is next; implementation, registration and acceptance remain pending.
+Runtime counts below remain unchanged until verified registration.
 
 Next grouping: the three Process worksheet buttons. Send saves a newly created
 local table; Add Acceptable Item saves additional local columns; Retrieve validates

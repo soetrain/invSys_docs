@@ -2,6 +2,15 @@
 
 **Status:** Current corrective implementation plan
 
+Slice4be next: implement catalog22's three Process worksheet observations under
+Architecture v4.11 D18's discovered-control refinement. Send/Add conclude STAGED
+for local saves; Retrieve concludes CONFIRMED only after every selected import
+and removal/save succeeds. Partial/uncertain failures retain each actual Designs
+reference and its state. No worksheet algorithm, authority or permission change.
+First establish actual packaged-handler RED on the completed picker candidate;
+then implement with the full D13/recording/Action Path/regression evidence listed
+in the normative section. Registration and acceptance remain pending.
+
 Active Slice4be: Core Process picker scoped gates now complete before the
 three worksheet actions are registered. Under unchanged D4/D14/D15 ownership,
 allocation and save rules, the normalized-header correction goes from packaged

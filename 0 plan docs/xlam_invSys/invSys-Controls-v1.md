@@ -1,6 +1,18 @@
 # invSys Form Controls v1
 
-**Version:** 1.345 (Picker scoped gates complete; worksheet tracking next)
+**Version:** 1.346 (Process worksheet observation contract; implementation pending)
+
+Architecture v4.11 D18 now specifies catalog22's three discovered controls:
+PRODUCTION_PROCESS_WORKSHEET_SEND / ADD_ITEM / RETRIEVE (each with the full
+PRODUCTION_PROCESS_WORKSHEET_ prefix), owner PRODUCTION_PROCESS_WORKSHEET,
+Operations > Production > Process Designer. Captions remain Send Process to Sheet,
+Add Acceptable Item and Retrieve Selected Process. Send/Add use STAGED for local
+save completion; Retrieve uses CONFIRMED only for all selected imports and
+removals/saves. FAILED retains exact individual Designs submission states,
+including partial results. No Inventory reference or inferred Domain application.
+Existing authority, local save/import rules and D14/D15 preservation remain.
+Actual-handler RED/GREEN and full acceptance evidence are pending. No runtime
+registration/count increase is claimed by this contract entry.
 
 Process worksheet tracking remains pending. Source review found positional
 managed-field access that can target inserted user columns before Retrieve
