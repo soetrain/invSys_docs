@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.19. Last reviewed: 2026-09-29 UTC, component GREEN and scoped regressions.
+Version 1.20. Last reviewed: 2026-09-30 UTC, UOM/draft regressions and Settings test cleanup.
 
 User-authorized work resumes with successful desktop checks. Corrected component
 adapters complete RED180/615, then GREEN795/795 with exact identities, five compiles,
@@ -17,9 +17,17 @@ captures including the exact STAGED terminal. Ten actions match the distinct
 observed run in all three views without claiming Domain application. Current
 layout, Settings202/202, Instructions411/411, instruction paths105/105 and UOM
 paths84/84 pass with normal final closure/preservation; both path routes have six
-reviewed principal captures. Settings' internal preference restart can force
-termination without recording the branch; that shutdown remains unobserved,
-including earlier runs of the helper. Remaining regressions and full release/native gates remain open. Static
+reviewed principal captures. Combined visible UOM264/264 and public UOM61/61 retain
+exact checks, normal closure/preservation and two/three reviewed captures.
+Draft/diagnostic paths390/390 retains exact identities, five compiles and delayed
+normal closure/preservation; earlier visible evidence retains its original scope.
+Settings' baseline retains202/202 with forced internal-restart cleanup. The opt-in
+comparison and corrected ordinary route each retain202/202, release10 completed-
+host references without errors. Internal restart exits unassisted within the
+unchanged wait; final-host exit is also unassisted. Earlier assisted/unobserved
+records remain qualified; this harness correction
+does not repair or explain the separate native chain/reusable failures. Remaining
+regressions and full release/native gates remain open. Static
 dynamic/duplicate metrics and all28 module limits hold; frmProduction shrinks one line.
 
 The unchanged extent candidate now passes combined visible264/264 with every prior

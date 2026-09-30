@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.276 (component GREEN and scoped regressions; release gates pending)
+**Version:** 1.277 (UOM/draft regressions retained; Settings test restart corrected)
 
 User-authorized work resumes2026-09-29 with successful desktop checks. Component
 RED180/615 becomes GREEN795/795 with exact identities, five compiles, normal
@@ -16,8 +16,17 @@ local CommandCompleted does not assert Domain application. Current layout passes
 with three reviewed captures; Settings retains202/202, Instructions411/411,
 instruction paths105/105 and UOM paths84/84. Both path routes have six reviewed
 principal captures. Final closure is unassisted and settings/packages are preserved.
-Settings' internal preference restart can force termination without recording the
-branch; its shutdown remains unobserved, including earlier runs of that helper.
+Combined visible UOM264/264 and actual public UOM61/61 retain exact checks, five
+compiles, normal closure/preservation and two/three reviewed principal captures.
+Draft/diagnostic paths390/390 retains exact identities, five compiles and delayed
+normal closure/preservation; its earlier visible evidence keeps its original scope.
+The Settings baseline retains202/202 with forced internal-restart cleanup. An
+opt-in comparison and the corrected ordinary route each retain202/202, release10
+owned completed-host COM references without errors and complete internal restart
+unassisted within the unchanged wait. Final-host exit is also unassisted
+(verified2026-09-30 UTC). Earlier assisted/unobserved
+records retain their qualifications; this test harness correction does not repair
+or explain the separate native chain/reusable failures.
 Remaining regressions and release/native gates remain
 open. Candidate is not promoted. Stop
 again on actual desktop error5.

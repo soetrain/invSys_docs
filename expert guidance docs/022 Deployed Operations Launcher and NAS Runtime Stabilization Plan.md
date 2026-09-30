@@ -21,9 +21,18 @@ capture/getter mistakes remain qualified test evidence. Current-candidate layout
 passes with three reviewed captures; Settings retains202/202, Instructions411/411,
 instruction paths105/105 and UOM paths84/84. Both path routes have six reviewed
 principal captures. Final closure is unassisted and settings/packages are preserved.
-Settings' internal preference restart can force termination without recording the
-branch; its shutdown remains unobserved, including earlier runs of that helper.
-Record the restart cleanup branch before claiming all-host normal closure.
+Combined visible UOM264/264 and actual public UOM61/61 retain exact checks, five
+compiles, normal closure/preservation and two/three reviewed principal captures.
+Draft/diagnostic paths390/390 retains exact identities, five compiles and delayed
+normal closure/preservation; this regression requests no new principal captures.
+Settings' instrumented baseline retains202/202 but confirms forced internal-restart
+cleanup after its five-second wait. The opt-in comparison and corrected ordinary
+route each retain202/202 and release10 completed-host COM references without errors.
+Internal restart exits unassisted within the unchanged wait; final-host exit is
+also unassisted (verified2026-09-30 UTC).
+This is a test harness correction with fixed metadata receipts and unchanged
+workflow statements/package bytes. Earlier assisted/unobserved records keep their
+qualifications; the separate native chain/reusable failures remain unexplained.
 Remaining regressions and full release/native gates remain open;
 do not promote or call Slice4be complete.
 
