@@ -2,13 +2,30 @@
 
 **Status:** Current corrective implementation plan
 
+**Reusable test shutdown correction,2026-09-30 UTC:** The ordinary full reusable
+workbench/export/restart gate retains2 aggregate assertions and the exact171
+Boolean observations (166 distinct pairs), including all67 run-only values. Both
+hosts now exit unassisted: observed waits541ms at restart and2465ms at final exit.
+The harness validates/closes owned fixtures, closes packages in reverse dependency
+order and releases completed-host references with a bounded30-second exit wait.
+All original validator statements and restart saves remain; no runtime contract or
+XLAM changes. Settings/five packages are preserved, with zero Excel Application
+failures. Ownership calibration7/7, unchanged static metrics/all28 caps, three
+schemas and312 PowerShell parses pass. Exact evidence:
+`tests/integration/plan022_slice4be_automation_cleanup_results.md` in code.
+Earlier assisted records below remain historical; native causes, comprehensive
+coverage, guide transfer and human/NAS acceptance remain open.
+Ordinary run-only also retains its aggregate and exact67 Boolean observations,
+unassisted final exit after2657ms, preservation and zero Excel Application failures.
+
 **Isolated test cleanup correction,2026-09-30 UTC:** Smoke retains86/86 with
 unassisted Initial/Final exit after releasing completed-host references. Original
 calibration8/8 and nested-expired-reference calibration9/9 protect the shared
 helper; Settings retains202/202 and unassisted internal/final exit. All packages,
 settings and reports are preserved, with zero Excel Application failure events.
 Every original smoke validator statement and its1000ms wait remain. This changes
-test cleanup only; normal reusable shutdown and earlier native causes remain open.
+test cleanup only; the later reusable result above supersedes its shutdown status,
+while earlier native causes remain open.
 Exact evidence: `tests/integration/plan022_slice4be_automation_cleanup_results.md`
 in code. Earlier assisted and rejected attempts below keep their original scope.
 

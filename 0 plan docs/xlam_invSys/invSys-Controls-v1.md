@@ -1,12 +1,25 @@
 # invSys Form Controls v1
 
-**Version:** 1.279 (smoke shutdown corrected; Settings restart regression retained)
+**Version:** 1.280 (ordinary full reusable workflow and unassisted shutdown retained)
+
+The ordinary full reusable workbench/export/restart gate retains2 aggregate
+assertions and all171 Boolean observations in their exact order, including all67
+run-only values. Restart and final exit are unassisted, with measured waits541ms
+and2465ms. The test harness closes owned fixtures and packages before releasing
+references and waiting up to30 seconds for exit. Ownership calibration7/7 passes;
+settings/five packages are preserved with zero Excel Application failures. Runtime
+VBA, forms, captions and permissions are unchanged. Current Production registration
+remains29/68,39 pending; broader coverage and human/NAS acceptance remain open.
+Ordinary run-only also retains its aggregate and exact67 Boolean observations with
+unassisted exit after2657ms, preservation and zero Excel Application failures.
+See code `tests/integration/plan022_slice4be_automation_cleanup_results.md`.
 
 Smoke86/86 now retains unassisted Initial/Final exit after completed-host reference
 release. The repaired test helper passes original8/8 and nested-expired9/9
 calibrations; Settings retains202/202 and both unassisted exits. Preservation and
 zero Excel Application events hold. No form, caption, permission or runtime
-contract changes; normal reusable shutdown and broader acceptance remain open.
+contract changes; the later full reusable result above supersedes its shutdown
+status, while broader acceptance remains open.
 See code `tests/integration/plan022_slice4be_automation_cleanup_results.md`.
 Earlier assisted/failed records below remain historical evidence.
 

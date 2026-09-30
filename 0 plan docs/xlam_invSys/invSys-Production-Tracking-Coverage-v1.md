@@ -1,12 +1,24 @@
 # Production form tracking coverage audit
 
-Version 1.22. Last reviewed: 2026-09-30 UTC, isolated smoke cleanup corrected.
+Version 1.23. Last reviewed: 2026-09-30 UTC, ordinary full reusable shutdown retained.
+
+The ordinary full reusable workbench/export/restart gate now retains2 aggregate
+assertions and the exact171 Boolean observations, including all67 run-only values,
+with unassisted restart/final exit. Settings/five packages are preserved and zero
+Excel Application failures occur. Ownership calibration7/7 protects the cleanup
+scope; the harness closes fixtures/packages, releases references and observes exit
+with a30-second bound. This changes no runtime behavior or registration count.
+Ordinary run-only also retains its aggregate and exact67 Boolean observations,
+unassisted exit after2657ms, preservation and zero Excel Application failures.
+Earlier assisted records below keep their historical scope. See
+[cleanup evidence](../../../invSys_fork/tests/integration/plan022_slice4be_automation_cleanup_results.md).
 
 Later test-tooling correction: Smoke86/86 now exits both hosts unassisted. The
 shared helper passes original8/8 and nested-expired9/9 calibration, and Settings
 retains202/202 with unassisted internal/final exit. Packages/settings/reports are
 preserved with zero Excel Application failures. No runtime behavior changes;
-normal reusable shutdown and broader acceptance remain open. See
+the later full reusable result above supersedes its shutdown status, while broader
+acceptance remains open. See
 [cleanup evidence](../../../invSys_fork/tests/integration/plan022_slice4be_automation_cleanup_results.md).
 
 User-authorized work resumes with successful desktop checks. Corrected component
