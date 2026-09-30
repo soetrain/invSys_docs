@@ -82,6 +82,12 @@ or human acceptance are claimed for these two regressions.
 Native cancellation also retains94/94 exact prior checks, five compiles,
 preservation, unassisted closure and zero delayed Application failures. Four
 actual Release/Obsolete dialog captures are directly reviewed with No selected.
+Settings retains202/202, with unassisted preference restart/final exit and ten
+completed-host references released without failure. Settings activity passes491/491,
+retaining all486 prior checks plus exactly five catalog19 older-policy exclusions.
+Both retain five compiles, preservation and zero delayed Application failures;
+activity also has eight reviewed captures and delayed unassisted exit. No native
+repair or human acceptance is established.
 Remaining regression gates are pending; focused621/paired114 GREEN does not
 establish complete acceptance.
 
