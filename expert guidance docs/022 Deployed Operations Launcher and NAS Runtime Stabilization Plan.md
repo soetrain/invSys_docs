@@ -18,8 +18,12 @@ roles48/48 and Create Warehouse15/15 retain exact prior checks, normal closure
 and preservation. Smoke86/86 retains normal closure after a calibrated test-only
 deadline increase from1 to30 seconds: both comparison and ordinary Final exits
 take over2.3 seconds. All assertions and ownership guards remain unchanged;
-earlier assisted evidence retains its scope. Remaining regressions/reusable and
-broader acceptance remain pending. Exact evidence: code
+earlier assisted evidence retains its scope. Full reusable retains both aggregate
+checks and all 171 prior Boolean observations; run-only retains its aggregate and
+all 67 observations. All restart/final exits are unassisted, with preservation and
+no Excel Application failures. Settings retains202/202 with exact prior checks,
+five compiles, unassisted restart/final exit and preservation. Remaining activity
+regressions and broader acceptance remain pending. Exact evidence: code
 `tests/integration/plan022_slice4be_production_recipe_order_results.md`.
 Preserve the existing bounded ordering algorithm, node identities, non-order row
 fields, connection values, renumbering and refresh side effects, including local changes before a

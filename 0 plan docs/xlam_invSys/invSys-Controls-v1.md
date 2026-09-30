@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.283 (Recipe ordering chain regression GREEN; acceptance pending)
+**Version:** 1.284 (Recipe ordering reusable and Settings regressions GREEN; acceptance pending)
 
 Architecture v4.11 D18 specifies catalog17 for the existing Recipe Designer Move
 Up, Move Down and Auto Order controls: `PRODUCTION_RECIPE_MOVE_UP`,
@@ -21,8 +21,13 @@ captures are reviewed. Layout passes with three reviewed captures; full chain32/
 live roles48/48 and Create Warehouse15/15 retain exact prior checks, normal closure
 and preservation. Smoke86/86 also retains normal closure after its test-only exit
 deadline advances from1 to30 seconds; two observed natural exits exceed2.3 seconds.
-Earlier assisted evidence remains qualified. Remaining regressions/reusable gates
-and broader acceptance remain pending. Move Up/Down retain the existing status text;
+Earlier assisted evidence remains qualified. Full reusable Production retains both
+aggregate checks and all 171 prior Boolean observations; run-only retains its
+aggregate and all 67 observations. All restart/final exits are unassisted, with
+preservation and no Excel Application failures. Settings retains202/202 with exact
+prior checks, five compiles, unassisted restart/final exit and preservation.
+Remaining activity regressions and broader acceptance remain pending.
+Move Up/Down retain the existing status text;
 their capture does not establish a new success notice. See Plan022 and code
 `tests/integration/plan022_slice4be_production_recipe_order_results.md`.
 Earlier catalog16 evidence below remains scoped to its original candidate.

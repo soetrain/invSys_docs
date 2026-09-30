@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.26. Last reviewed: 2026-09-30 UTC, Recipe ordering chain regression GREEN.
+Version 1.27. Last reviewed: 2026-09-30 UTC, Recipe ordering reusable and Settings regressions GREEN.
 
 Next bounded group: Architecture v4.11 D18 and Plan022 specify catalog17 observations
 for Recipe Designer Move Up, Move Down and Auto Order. This preserves existing
@@ -17,8 +17,12 @@ Six paired-view captures are reviewed. Layout passes with three reviewed capture
 full chain32/32, live roles48/48 and Create Warehouse15/15 retain exact prior
 checks, normal closure and preservation. Smoke86/86 also closes normally after
 a calibrated test-only deadline increase from1 to30 seconds; final exit takes
-over2.3 seconds. Earlier assisted evidence remains qualified. Remaining regressions
-and reusable evidence remain pending. Registration does not mean acceptance. See
+over2.3 seconds. Earlier assisted evidence remains qualified. Full reusable retains
+both aggregate checks and all 171 prior Boolean observations; run-only retains its
+aggregate and all 67 observations. Restart/final exits are unassisted, with
+preservation and no Excel Application failures. Settings retains202/202 with exact
+prior checks, five compiles, unassisted restart/final exit and preservation.
+Remaining activity regressions remain pending. Registration does not mean acceptance. See
 [Recipe ordering evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_recipe_order_results.md).
 The catalog16 records below retain their original candidate scope.
 
