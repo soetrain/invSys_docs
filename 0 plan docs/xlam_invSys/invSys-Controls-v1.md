@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.360 (Worksheet Recipe structure and ordering regressions GREEN; acceptance pending)
+**Version:** 1.361 (Worksheet component regressions GREEN; acceptance pending)
 
 Architecture v4.11 D18's catalog22 controls PRODUCTION_PROCESS_WORKSHEET_SEND,
 PRODUCTION_PROCESS_WORKSHEET_ADD_ITEM and PRODUCTION_PROCESS_WORKSHEET_RETRIEVE
@@ -66,7 +66,13 @@ and paths93 retain exact prior ordered checks, five compiles, normal cleanup,
 preservation and delayed audits. Two focused and six path captures are reviewed;
 Move Down's focused image retains an earlier injected-failure notice and proves
 row layout only. Its separate three-step comparison matches all actions with zero
-extras and a local-only conclusion. Component editing and remaining families follow.
+extras and a local-only conclusion. Component editing795/paths142 retain prior
+ordered checks, five compiles, preservation, normal cleanup and delayed audits.
+Two focused and six path captures are reviewed; the lower comparison viewport
+shows matches4-10 and zero extras, while assertions establish all ten matches and
+local-only completion. Assignment source boundaries are clarified in the coverage
+audit without new IDs or contract changes. Instruction editing and remaining
+families follow.
 Regenerated static evidence retains all metrics and347 valid PowerShell parses.
 Remaining shared observation regressions are pending. No deployment
 promotion or human acceptance is claimed. Code evidence:

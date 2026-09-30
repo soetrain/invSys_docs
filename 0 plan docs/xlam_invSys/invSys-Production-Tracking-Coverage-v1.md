@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.100. Last reviewed: 2026-09-30 UTC, worksheet Recipe structure and ordering regressions GREEN.
+Version 1.101. Last reviewed: 2026-09-30 UTC, worksheet component regressions GREEN and Assignment source boundaries reviewed.
 
 Catalog22 now defines109 global controls and observes48/68 constructed Production
 buttons. The three Process worksheet handlers are implemented and pass595/595
@@ -60,7 +60,13 @@ and paths93 retain exact prior ordered checks, five compiles, normal cleanup,
 preservation and delayed audits. Two focused and six path captures are reviewed;
 Move Down's focused image retains an earlier injected-failure notice and proves
 row layout only. Its separate three-step comparison matches all actions with zero
-extras and a local-only conclusion. Component editing and remaining families follow.
+extras and a local-only conclusion. Component editing795/paths142 retain prior
+ordered checks, five compiles, preservation, normal cleanup and delayed audits.
+Two focused and six path captures are reviewed; the lower comparison viewport
+shows matches4-10 and zero extras, while assertions establish all ten matches and
+local-only completion. The owner-boundary section clarifies the seven Assignment
+buttons' current local/submission behavior without new IDs or contract changes.
+Instruction editing and remaining families follow.
 No promotion or human acceptance.
 Exact evidence: `tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.
 The prerequisite history below retains its own frozen-candidate counts.
@@ -1020,12 +1026,33 @@ not silently excluded because Run - List is the Release 1 proving path.
 6. Close and public/repeated launcher behavior must preserve captured-workbook
    reuse and invalidate observation/recording context correctly. A visible control
    or an enabled legacy helper does not authorize a different session/warehouse.
+7. Ingredients Assignment source review (last verified2026-09-30) distinguishes
+   all seven constructed buttons. Refresh resets the inventory cache, refreshes
+   the shared Design lists, clears visible requirements/allowed items and reloads
+   inventory; it does not itself replace mProcessAlternatives. Select Process
+   reads the selected version, replaces local requirements/alternatives after
+   parsing and refreshes allowed items. Select Requirement only refreshes the
+   allowed-item view. Add requires selected requirement/inventory and ITEM_CODE,
+   rejects a duplicate requirement/code pair, then changes the local collection.
+   Remove uses the selected visible requirement/code to remove a matching local
+   alternative; no selection is a no-op. Clear clears both visible lists and
+   replaces the alternatives collection. That collection is shared with Process
+   Designer, so these local effects must not be described as an isolated sheet edit.
+   Save Alternatives clones the collection, calls LoadProcessDefinitionIntoDesigner
+   with reuseAsNewVersion=True, restores alternatives, validates the draft and
+   calls SubmitDesignerAction(PROCESS_SAVE). A failure can therefore follow local
+   designer replacement; it does not prove rollback. This caller currently omits
+   the optional cProductionLifecycleFacts argument, so its Boolean/status cannot
+   supply exact owning submission evidence. The Process/Requirement list Click
+   handlers share their respective selection helpers with buttons; future tests
+   must distinguish deliberate entry from cascades. These are source facts in
+   frmProduction, not new IDs, terminal outcomes, a contract amendment or acceptance.
 
 ## Validation and next implementation grouping
 
 The source audit reconciles every AddButton construction, all six BuildLayout
 page calls, every bound button's actual Click procedure and the sole uncalled
-Recipe Builder constructor. The thirteen registered mappings are cross-checked
+Recipe Builder constructor. The original thirteen registered mappings were cross-checked
 against DesignerDraftAction/ExecuteDesignerLifecycle and modProductionUomAction;
 all34 non-button handlers and the relevant mutation/mirroring helpers are reviewed.
 No runtime
@@ -1038,4 +1065,5 @@ error5 returns. For broader implementation, review
 the grouped local-edit/selection, lifecycle/queue, worksheet/Config, run/inventory
 and launcher/context owners from this census; specify complete owner facts and
 focused packaged tests before implementing each group. Do not substitute the
-thirteen registered Production IDs for comprehensive Operations/Admin coverage.
+original thirteen registered Production IDs for comprehensive Operations/Admin coverage;
+the current count and pending controls are stated at the start of this audit.

@@ -68,7 +68,13 @@ compiles, preservation, normal cleanup and delayed audits. Two focused and six
 path captures are reviewed; the focused Move Down image retains an earlier
 injected-failure notice and is used only for row layout. The separate three-step
 comparison matches all actions with zero extras and a local-only conclusion.
-Next complete component editing and the remaining families.
+Component editing795 and paired paths142 retain all prior ordered checks, five
+compiles, preservation, normal cleanup and delayed audits. Two focused and six
+path captures are reviewed. The lower comparison viewport shows matches4-10 and
+zero extras; assertions establish all ten matches and local-only completion.
+The coverage audit also records the seven Assignment buttons' existing local/
+submission boundaries; that source review introduces no IDs or new contract.
+Next complete instruction editing and the remaining families.
 Preserve the595 checks and their documented
 closure mapping. No promotion, desktop-error5, crash-repair or human-acceptance
 claim. Exact evidence and pending gates:
