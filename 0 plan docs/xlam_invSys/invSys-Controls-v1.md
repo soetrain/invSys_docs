@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.341 (Core Process picker normalized-header RED)
+**Version:** 1.342 (Core Process picker focused GREEN; regressions pending)
 
 Process worksheet tracking remains pending. Source review found positional
 managed-field access that can target inserted user columns before Retrieve
@@ -30,6 +30,12 @@ through the actual picker commit: five normalized INPUT cases leave the selected
 SKU unchanged. Canonical/OUTPUT cases, other cells and captured-book/authority
 preservation pass; all42 shared prior GREEN checks and five compiles pass.
 Exact code evidence: `tests/integration/plan022_slice4be_process_worksheet_picker_results.md`.
+The isolated Core correction passes115/115 exact checks, build/five compiles,
+unchanged static ratchets, preservation and normal focused cleanup. A directly
+reviewed picker capture shows the actual pre-commit selection; assertions prove
+the selected-pair result. The first full reusable regression suffered a native
+Excel crash during batch-scale setup and is excluded. One unchanged rerun and
+remaining regression gates are pending. No desktop error5 or crash-repair claim.
 
 Close's scoped automated gate set is complete on the isolated catalog21 candidate:
 focused312, independent paths90, shared regulation paths102, smoke86, chain32/

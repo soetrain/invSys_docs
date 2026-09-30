@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.81. Last reviewed: 2026-09-30 UTC, Core picker normalized-header RED.
+Version 1.82. Last reviewed: 2026-09-30 UTC, Core picker focused GREEN.
 
 Next grouping: the three Process worksheet buttons. Send saves a newly created
 local table; Add Acceptable Item saves additional local columns; Retrieve validates
@@ -27,6 +27,11 @@ matching can leave the SKU unchanged after the visible label is updated; there i
 no pair1 fallback. Packaged RED now proves110 PASS/5 selected-SKU failures/115,
 with five compiles, all42 prior shared GREEN checks and preservation passing.
 Exact code evidence: `tests/integration/plan022_slice4be_process_worksheet_picker_results.md`.
+The isolated Core correction passes115/115 exact focused checks, five compiles,
+unchanged static ratchets and preservation/normal cleanup. Only one compiled
+component changes. First full reusable attempt is excluded after a native Excel
+crash at batch-scale setup; unchanged rerun and remaining regression gates are
+pending. No desktop error5, tracking registration or release acceptance.
 D4/D14/D15 require exact
 selected-pair matching, other-pair/custom preservation and captured-book binding.
 

@@ -10,6 +10,12 @@ There is no pair1 fallback. Packaged RED now proves five selected-SKU failures:
 110 PASS/5 FAIL/115, all42 shared prior GREEN checks and five compiles retained.
 Canonical/OUTPUT cases, other cells, captured/decoy books and authority bytes pass.
 Exact evidence: `tests/integration/plan022_slice4be_process_worksheet_picker_results.md`.
+The isolated two-line Core correction now passes115/115 exact checks, five
+compiles/cold start and unchanged static ratchets. Only cDynItemSearch changes
+among265 compiled components. Full reusable first attempt encountered the known
+native failure signature at batch-scale setup; it is excluded and an unchanged
+isolated rerun is pending. Desktop access remained healthy; this was not error5.
+Remaining regression gates and broader worksheet tracking stay open.
 D4/D14/D15 require the same normalized selected-pair matching; the normative
 clarification preserves ownership, record types, allocation and save behavior.
 Protect the actual packaged picker commit first, including canonical/normalized
