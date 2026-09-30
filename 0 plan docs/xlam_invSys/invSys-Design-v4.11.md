@@ -1525,6 +1525,20 @@ business rule. UOM selection, text entry exclusions and other Admin controls
 remain separately accounted for; these three commands are not comprehensive
 Admin acceptance.
 
+**4be.2 Event Detail editor heading alignment (visual acceptance clarification):**
+The existing Admin Event Tracking > Event Detail field list retains its hidden
+field identity and visible Field, Show, Order and Required columns. Each visible
+heading must align with the corresponding list-column start within three points,
+fit its column, and remain above the list without overlap at the default form
+size, enlarged size and restored size. Measure the actual font and current list
+column widths; space-padded caption text is not evidence of alignment. Keep field
+order, required-field protection, selection, preview, profile save/reload and
+tracking observations unchanged. This applies D13's existing visual-only
+acceptance rule and D18's Settings surface; it introduces no control action,
+configuration schema, authority or permission change. Define and run the packaged
+geometry criterion on the current candidate before correcting the layout, then
+verify the same criterion and visible screenshots on the corrected candidate.
+
 **4be.1 Settings editor observation refinement (isolated observation checkpoint; completion pending):**
 The diagnostic candidate passes 780/780 after 27 expected failures, retaining
 all 450 observation checks. That run has an unresolved shutdown limitation.

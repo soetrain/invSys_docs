@@ -1,6 +1,16 @@
 # invSys Form Controls v1
 
-**Version:** 1.320 (output-regulation automated gates GREEN; broader acceptance open)
+**Version:** 1.321 (output-regulation automated gates GREEN; broader acceptance open)
+
+Next bounded Slice4be work: Admin Event Tracking > Event Detail heading alignment.
+The prior catalog19 and current20 images both show Show/Order/Required offset
+from the list values. Architecture v4.11's visual clarification preserves the
+hidden identity and all editor behavior. Before runtime edits, a packaged test
+will measure rendered heading starts against actual column widths (three-point
+tolerance), text fit and vertical separation at default/enlarged/restored sizes,
+including the real Admin Settings launcher. Then require GREEN and visible proof.
+Expected files: cAdminEventDetail, focused layout probe/harness and evidence.
+This is D13 visual acceptance work, not a new event or configuration contract.
 
 Catalog20 output-regulation focused GREEN,2026-09-30 UTC: the isolated
 `validation-production-regulation-final` candidate registers105 global controls
