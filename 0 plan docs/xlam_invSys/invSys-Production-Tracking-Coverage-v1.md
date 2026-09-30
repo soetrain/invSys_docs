@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.53. Last reviewed: 2026-09-30 UTC, output-regulation focused and paths GREEN.
+Version 1.54. Last reviewed: 2026-09-30 UTC, output-regulation focused and paths GREEN.
 
 Catalog20 output-regulation focused GREEN,2026-09-30 UTC: the isolated
 `validation-production-regulation-final` candidate registers105 global controls
@@ -52,6 +52,13 @@ compiles each, preservation, normal closure and zero delayed Excel Application
 failures. Six principal path captures are directly reviewed: all five instructions
 and matched steps remain visible, with zero extras and a local-only conclusion.
 This is agent review, not human acceptance. No runtime or package change was needed.
+
+Recipe structure regressions on catalog20 retain 786/786 focused, 55/55
+released-data and 109/109 paired-path checks, with exact prior ordered identities,
+five compiles each, preservation, normal closure and zero delayed Excel failures.
+Six principal captures show five authored instructions and five matching STAGED
+actions from a separate recording, with zero extras and no Domain application
+claim. This is agent review; remaining gates and human acceptance stay open.
 
 The isolated `validation-production-design-reads-final` catalog19 candidate passes
 621/621 focused checks and114/114 paired-path checks. The focused gate retains the
