@@ -2,6 +2,19 @@
 
 **Status:** Current corrective implementation plan
 
+Inventory UI query correction within Slice4be,2026-09-30 UTC: D3 now explicitly
+clarifies read-only resolver/lifetime requirements under approved semantic
+inheritance. Core's four Inventory UI query bridges must use an existing exact
+source, never schema ensure/create/save, preserve caller-owned dirty workbooks,
+and close only their own temporary read-only source without saving. Missing
+sources keep existing empty/unavailable results. Protect nonempty query results,
+`System_Key`, custom columns and public Production launch/reopen byte preservation
+before runtime edits. Expected behavioral RED is the observed launch write plus
+focused query ownership/missing-store violations; compile or trace failures are
+not product RED. Planned runtime scope is Core query dispatch/resolution;
+Domain query semantics, explicit write/bootstrap paths and the Close contract
+remain intact. Any broader discrepancy requires separate evidence and scope.
+
 Production Close test-first checkpoint,2026-09-30 UTC: the frozen Detail candidate
 produces93 PASS/139 FAIL, repeated with trace-only instrumentation. All232 check
 identities and42 prior GREEN checks are retained; five compiles, preservation,

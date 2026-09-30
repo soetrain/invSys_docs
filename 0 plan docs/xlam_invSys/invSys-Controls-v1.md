@@ -1,6 +1,15 @@
 # invSys Form Controls v1
 
-**Version:** 1.326 (Production Close RED diagnosis; initial-launch Inventory write open)
+**Version:** 1.327 (D3 Inventory query clarification; runtime correction pending)
+
+Production launcher/Inventory picker acceptance now explicitly applies D3's
+read-only resolver and workbook-lifetime clarification: existing exact sources,
+no create/ensure/unprotect/save, caller-owned state preserved, temporary sources
+read-only and closed without saving. Existing query results, immutable keys and
+custom columns remain protected. The launch-byte preservation failure is still
+open; neither this clarification nor the test-only trace registers a control,
+repairs runtime or completes acceptance. Plan022 names the supplemental D13
+query cases required before a Core correction.
 
 Production Close gate,2026-09-30 UTC:232 packaged checks initially produce93 PASS /
 139 FAIL, including137 expected missing-contract failures and two extra failures.

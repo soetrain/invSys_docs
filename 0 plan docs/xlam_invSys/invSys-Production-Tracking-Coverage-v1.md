@@ -1,6 +1,12 @@
 # Production form tracking coverage audit
 
-Version 1.66. Last reviewed: 2026-09-30 UTC, Close RED diagnosis and initial-launch write.
+Version 1.67. Last reviewed: 2026-09-30 UTC, D3 query clarification before correction.
+
+Architecture D3 now makes resolver/workbook lifetime part of the existing
+read-only UI query rule. Plan022 and controls1.327 require focused nonempty-result,
+missing-source, dirty caller-workbook and byte-preservation coverage before a
+Core query correction. Runtime coverage counts remain unchanged; neither this
+clarification nor supplying-call instrumentation is a registered control or GREEN.
 
 The packaged Close baseline has232 checks:93 PASS/139 FAIL initially and with
 trace-only instrumentation, then94 PASS/138 FAIL after enabling real Excel events
@@ -18,7 +24,7 @@ conclude CLOSED; internal unload/workbook shutdown do not invent user activity.
 No runtime registration or clean focused RED/GREEN is claimed yet. The implemented
 census remains44/68 constructed buttons and24 unregistered, including this now
 specified Close control. Thirty nonbutton handlers and other role/launcher
-surfaces retain their separate pending coverage. Plan022 and controls1.326 name
+surfaces retain their separate pending coverage. Plan022 and controls1.327 name
 the test-first next action; do not count contract documentation as implementation.
 
 The separate Admin Detail heading correction now completes its planned matrix:

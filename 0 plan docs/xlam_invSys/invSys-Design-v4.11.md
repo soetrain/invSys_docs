@@ -3207,6 +3207,33 @@ Example:
 - OK: Admin calls Core.Orchestrate("ADJUST_INVENTORY", payload) (creates event in inbox)
 ```
 
+**Inventory UI query clarification (Slice4be discovered blocker, 2026-09-30):**
+The read-only rule includes the resolver and workbook lifetime used by a query.
+Opening Production or populating an Inventory picker must not create an authority
+store, ensure or repair its schema, remove blank rows or columns, unprotect its
+sheets, refresh or recalculate it, or save it. Core's Inventory quantity,
+location-balance, picker and available-entity query bridges must resolve an
+existing source for the selected target without entering the write/create path.
+They retain their existing result shapes and Domain query semantics.
+
+A query may read a supplied workbook or reuse an already-open exact source;
+it must not change its contents, protection, saved/dirty state or ownership, and
+must not close that caller-owned workbook. A workbook opened solely for the
+query opens read-only with external-link updating disabled and closes without
+saving on success or failure. An unavailable source returns the existing
+unavailable/empty result; it must not create a replacement store, borrow an
+unrelated open warehouse, or invoke schema repair as a fallback. Explicit
+write/bootstrap/processor operations retain their separately authorized paths.
+This clarifies D3 and D9/D10; it grants no write-on-read exception and does not
+replace the existing snapshot contract for operator read-model refreshes.
+
+The protecting D13 evidence must use the packaged public Production launcher
+and retain authority byte hashes from before launch through dismissal/reopen.
+Supplemental query tests must protect nonempty results, unknown columns and
+exact `System_Key` values, temporary-read cleanup, caller-owned dirty workbooks,
+and the missing-store case. Resetting the preservation baseline after a query
+is not a valid repair. Close observations and their acceptance remain separate.
+
 ---
 ### D4 -- Forms Strategy (Shared Search Form + Role Profiles)
 **Decision:** Item search uses one runtime-built Core form, `frmItemSearch`, with role-aware profiles for Receiving, Shipping, Production, and Admin. The caller supplies the role profile; Core owns the shared form, normalization, query, filtering, and dynamic event wiring. Role packages must not carry empty role-named search forms or unused dynamic-form templates.
