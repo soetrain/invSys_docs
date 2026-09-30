@@ -1,15 +1,22 @@
 # Production form tracking coverage audit
 
-Version 1.24. Last reviewed: 2026-09-30 UTC, Recipe ordering contract specified.
+Version 1.25. Last reviewed: 2026-09-30 UTC, Recipe ordering focused GREEN.
 
 Next bounded group: Architecture v4.11 D18 and Plan022 specify catalog17 observations
 for Recipe Designer Move Up, Move Down and Auto Order. This preserves existing
 ordering/normalization and rejected-graph side effects, adds captured-context and
 permission guards, and permits only STAGED as a local CommandCompleted fact.
-The three IDs below are specified, not registered or accepted. Current runtime
-remains catalog16,29/68 registered and39 pending; packaged actual-handler RED must
-precede implementation. Separate publication/paired-view and regression evidence
-remain required.
+The three IDs below are registered in unpromoted catalog17 candidate
+`validation-production-recipe-order-final`:32/68 registered,36 pending. Packaged
+actual-handler RED146/317 becomes463/463 with exact identities, five compiles,
+preservation, normal closure and two reviewed principal captures. Five builds/
+compiles/cold load and static limits pass, with unchanged9/45 dynamic calls and191
+duplicate groups. Final paired paths retain93/93 and component regression retains
+795/795, exact prior identities, five compiles, preservation and normal closure.
+Six paired-view captures are reviewed. Remaining regressions/layout/full chain
+and reusable evidence remain pending. Registration does not mean acceptance. See
+[Recipe ordering evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_recipe_order_results.md).
+The catalog16 records below retain their original candidate scope.
 
 The ordinary full reusable workbench/export/restart gate now retains2 aggregate
 assertions and the exact171 Boolean observations, including all67 run-only values,
@@ -273,13 +280,13 @@ from permission to stage or export a catalog worksheet.
 | UI control | Caption | Actual handler | Tracking ID/status |
 |---|---|---|---|
 | `btnRecipeAddProcess` | Add Process | `mBtnRecipeAddProcess_Click` | Pending |
-| `btnRecipeAutoOrder` | Auto Order | `mBtnRecipeAutoOrder_Click` | `PRODUCTION_RECIPE_AUTO_ORDER`: catalog17 specified; not implemented |
+| `btnRecipeAutoOrder` | Auto Order | `mBtnRecipeAutoOrder_Click` | `PRODUCTION_RECIPE_AUTO_ORDER`: catalog17 focused GREEN; acceptance pending |
 | `btnRecipeClear` | Clear | `mBtnRecipeClear_Click` | `PRODUCTION_RECIPE_CLEAR` |
 | `btnRecipeConnect` | Connect | `mBtnRecipeConnect_Click` | Pending |
 | `btnRecipeDisconnect` | Disconnect | `mBtnRecipeDisconnect_Click` | Pending |
 | `btnRecipeLoad` | Load | `mBtnRecipeLoad_Click` | Pending |
-| `btnRecipeMoveDown` | Move Down | `mBtnRecipeMoveDown_Click` | `PRODUCTION_RECIPE_MOVE_DOWN`: catalog17 specified; not implemented |
-| `btnRecipeMoveUp` | Move Up | `mBtnRecipeMoveUp_Click` | `PRODUCTION_RECIPE_MOVE_UP`: catalog17 specified; not implemented |
+| `btnRecipeMoveDown` | Move Down | `mBtnRecipeMoveDown_Click` | `PRODUCTION_RECIPE_MOVE_DOWN`: catalog17 focused GREEN; acceptance pending |
+| `btnRecipeMoveUp` | Move Up | `mBtnRecipeMoveUp_Click` | `PRODUCTION_RECIPE_MOVE_UP`: catalog17 focused GREEN; acceptance pending |
 | `btnRecipeNew` | New Recipe | `mBtnRecipeNew_Click` | `PRODUCTION_RECIPE_NEW` |
 | `btnRecipeObsolete` | Obsolete | `mBtnRecipeObsolete_Click` | `PRODUCTION_RECIPE_OBSOLETE` (partial) |
 | `btnRecipeRefresh` | Refresh | `mBtnRecipeRefresh_Click` | Pending |

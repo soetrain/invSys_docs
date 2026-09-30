@@ -2,19 +2,29 @@
 
 **Status:** Current corrective implementation plan
 
-**Next bounded4be group: Recipe ordering observations.** Architecture v4.11 D18
+**Active bounded4be group: Recipe ordering observations.** Architecture v4.11 D18
 now specifies catalog17 for Move Up, Move Down and Auto Order in Recipe Designer,
-under the approved discovered-control/semantic-inheritance rules. This is specified,
-not implemented or accepted; current packages remain catalog16 with29/68 controls.
+under the approved discovered-control/semantic-inheritance rules. Unpromoted
+`validation-production-recipe-order-final` implements catalog17 with32/68 controls,
+36 pending. Actual-handler RED146/317 becomes463/463 with exact identities, five
+compiles, preservation, normal closure and two reviewed principal captures. Five
+builds/compiles/cold load pass. The initial candidate's duplicate-builder regression
+is consolidated into one typed Core owner; final dynamic9/45/duplicates191 and all
+28 module limits hold, with frmProduction11735->11719 and three schemas valid.
+Final paired paths93/93 and component regression795/795 retain exact prior
+identities, five compiles, preservation and normal closure; six paired captures
+are reviewed. Layout/remaining regressions/full chain/reusable evidence and broader
+acceptance remain pending. Exact evidence: code
+`tests/integration/plan022_slice4be_production_recipe_order_results.md`.
 Preserve the existing bounded ordering algorithm, node identities, non-order row
 fields, connection values, renumbering and refresh side effects, including local changes before a
 rejected Auto Order. Only STAGED is a positive local CommandCompleted fact; no
 Domain application or saved-definition change follows. Require captured-context,
 current capability, loading/nested guards and optional-tracking behavior.
-Create/run `Test-Slice4beProductionRecipeOrder.ps1` against the frozen component
-candidate before runtime edits. It must invoke the three actual Click handlers
-and establish missing registrations/observations/guards as behavioral RED, then
-protect preserved ordering semantics through GREEN. Publication/recording/paired
+`Test-Slice4beProductionRecipeOrder.ps1` ran against the frozen component candidate
+before runtime edits. It invokes the three actual Click handlers and establishes
+missing registrations/observations/guards as behavioral RED, then protects
+preserved ordering semantics through GREEN. Publication/recording/paired
 views, packaged compile/layout/static, current regressions/full chain/reusable
 gates and visible evidence remain required. No authority or permission amendment.
 

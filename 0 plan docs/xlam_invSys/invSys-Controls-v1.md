@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.281 (Recipe ordering observation contract specified; not implemented)
+**Version:** 1.282 (Recipe ordering focused GREEN; acceptance pending)
 
 Architecture v4.11 D18 specifies catalog17 for the existing Recipe Designer Move
 Up, Move Down and Auto Order controls: `PRODUCTION_RECIPE_MOVE_UP`,
@@ -10,9 +10,18 @@ local ordering semantics; only STAGED can conclude CommandCompleted, with no
 Domain application or saved-definition claim. Rejection may retain existing local
 renumbering/partial ordering. Captured-context/capability and loading/nested guards,
 optional tracking, fixed redacted detail and packaged actual-handler RED/GREEN are
-required. Status: specified, not implemented or accepted. Current catalog16 still
-registers29/68 constructed Production controls, with39 pending. See the normative
-"Recipe ordering observations" entry and Plan022's next bounded group.
+required. Unpromoted `validation-production-recipe-order-final` implements catalog17:
+32/68 constructed Production controls registered,36 pending. Actual-handler
+RED146/317 becomes463/463 with exact identities, five compiles, preservation,
+normal closure and two reviewed principal captures. Five builds/compiles/cold load
+and static limits pass; the form shrinks16 lines and dynamic9/45/duplicates191
+remain unchanged. Final paired paths93/93 and component regression795/795 retain
+exact prior identities, five compiles, preservation and normal closure; six paired
+captures are reviewed. Layout/remaining regressions/full chain/reusable gates and
+broader acceptance remain pending. Move Up/Down retain the existing status text;
+their capture does not establish a new success notice. See Plan022 and code
+`tests/integration/plan022_slice4be_production_recipe_order_results.md`.
+Earlier catalog16 evidence below remains scoped to its original candidate.
 
 The ordinary full reusable workbench/export/restart gate retains2 aggregate
 assertions and all171 Boolean observations in their exact order, including all67
