@@ -12,8 +12,19 @@ Initial actual packaged-handler RED on the completed picker candidate is verifie
 Existing local/rejected/single/multi-table behavior and exact owner submission
 counts pass; catalog22 and six activity pairs are absent. Pins/settings, normal
 closure, delayed audits and a reviewed populated-form capture pass. Before runtime
-edits, extend RED for partial/uncertain submissions, removal/save failure, guards,
-optional tracking and older policies. Then implement with the full D13/recording/
+edits, extended RED now verifies119 PASS/214 expected FAIL/333, retaining all220
+initial results. Three actual-submission fault cases retain precise mixed/per-event
+states and post-delete unsaved state. Missing failure pairs and32 guard violations
+account for the new failures; preservation/normal closure/delayed audit pass.
+Closed-workbook coverage is a fixture-calibration blocker: an isolated visible-form
+diagnostic enters the handler normally, but the longer sequence cannot enter its
+form adapter after closure. One earlier attempt required owned-host termination
+for a noncontinuable VBA dialog; the defensive trap now permits normal cleanup.
+Both broader attempts are excluded, with no desktop error5 or proven crash repair.
+Next measure actual operator visibility/workbook lifetime and entry at that
+boundary, then finish the written capability/optional-tracking/older-policy cases.
+Do not repeat an unchanged full run or count a disconnected form as handler RED.
+Then implement with the full D13/recording/
 Action Path/regression evidence in the normative section. Registration and
 acceptance remain pending. Code evidence:
 `tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.

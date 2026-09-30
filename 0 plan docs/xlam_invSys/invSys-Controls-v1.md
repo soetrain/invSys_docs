@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.347 (Process worksheet initial RED; extended cases next)
+**Version:** 1.348 (Partial/guard RED; closed-workbook fixture unresolved)
 
 Architecture v4.11 D18 now specifies catalog22's three discovered controls:
 PRODUCTION_PROCESS_WORKSHEET_SEND / ADD_ITEM / RETRIEVE (each with the full
@@ -22,6 +22,16 @@ registration/count increase. Exact code evidence:
 Removal's workbook save can fail after a confirmed Designs save and local table
 deletion. FAILED retains that source reference and reports uncertainty; no restored
 table is asserted, and no table may be removed before its draft save is confirmed.
+Extended RED verifies119 PASS/214 expected FAIL/333, retaining every initial220
+result and all42 prior GREEN. Three real-submission fault cases prove individual
+Submitted/Unknown states and partial local effects;32 guard violations are also
+protected. Five compiles, preservation, normal closure and delayed audit pass.
+The broader closed-workbook case remains uncalibrated: its isolated visible-form
+diagnostic enters the adapter, while the longer sequence cannot enter it after
+closure. Two broader attempts are excluded; one required owned-host termination,
+the later defensive trap closes normally. No desktop error5 or runtime repair.
+Measure actual operator reachability/lifetime before further full runs; written
+capability/tracking/policy tests and implementation remain unverified.
 
 Process worksheet tracking remains pending. Source review found positional
 managed-field access that can target inserted user columns before Retrieve

@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.87. Last reviewed: 2026-09-30 UTC, initial worksheet observation RED verified.
+Version 1.88. Last reviewed: 2026-09-30 UTC, extended RED/closed fixture unresolved.
 
 Catalog22's three Process worksheet observations are now specified in Architecture
 v4.11 D18, with local STAGED versus all-selected Retrieve CONFIRMED and FAILED
@@ -13,6 +13,15 @@ guard/tracking/older-policy cases before implementation. GREEN, registration and
 acceptance remain pending. Code evidence:
 `tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.
 Runtime counts below remain unchanged until verified registration.
+Extended RED is119 PASS/214 expected FAIL/333, retaining all220 initial results.
+Three actual-submission fault cases and32 guard violations are protected; five
+compiles, preservation, normal closure and delayed audit pass. Full closed-binding
+coverage remains a fixture issue: a fresh visible-form diagnostic enters the
+handler, but the longer sequence cannot enter the adapter after workbook closure.
+Two broader runs are excluded, with the later outer trap permitting normal cleanup.
+No error5 or repair claim. Calibrate actual visible-surface/workbook lifetime and
+entry, then finish written capability/optional-tracking/older-policy cases before
+runtime work. Catalog counts and acceptance status remain unchanged.
 
 Next grouping: the three Process worksheet buttons. Send saves a newly created
 local table; Add Acceptable Item saves additional local columns; Retrieve validates
