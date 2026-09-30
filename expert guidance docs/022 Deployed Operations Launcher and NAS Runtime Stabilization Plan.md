@@ -13,8 +13,10 @@ unchanged. Five compiles, preservation, normal exits and zero delayed Excel
 failures pass; three corrected images are reviewed. Static limits pass with
 one helper/+12 lines and unchanged dynamic-call, duplicate and oversized metrics.
 Packaged smoke retains86/86 exact prior checks, normal Initial/Final exits,
-preservation and zero delayed Excel failures. Settings activity and full-chain/
-live-role gates remain pending; no promotion or human acceptance. Exact evidence is in the code repository's
+preservation and zero delayed Excel failures. The full Release1 chain also retains
+32/32 chain,48/48 live-role and15/15 Create Warehouse exact prior checks, with
+normal closure, preservation and zero delayed Excel failures. Settings activity
+remains pending; no promotion or human acceptance. Exact evidence is in the code repository's
 `tests/integration/plan022_slice4be_detail_columns_results.md`.
 
 Catalog20 output-regulation focused GREEN,2026-09-30 UTC: the isolated
