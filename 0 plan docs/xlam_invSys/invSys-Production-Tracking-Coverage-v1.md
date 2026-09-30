@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.41. Last reviewed: 2026-09-30 UTC, designer load/refresh and paired paths GREEN recorded.
+Version 1.42. Last reviewed: 2026-09-30 UTC, designer load/refresh and paired paths GREEN recorded.
 
 The isolated `validation-production-design-reads-final` catalog19 candidate passes
 621/621 focused checks and114/114 paired-path checks. The focused gate retains the
@@ -18,6 +18,19 @@ This candidate registers103 global IDs and42/68 constructed Production controls,
 final artifact remain pending. Catalog17,18 and the first19 candidate are frozen.
 Exact evidence is in the code repository's
 `tests/integration/plan022_slice4be_production_design_read_results.md`.
+
+The first final-candidate full chain fails during inventory projection rebuild:
+chain5 PASS/one failure, live32 PASS/one interruption, Create Warehouse15/15.
+Excel/ntdll c0000028/offset12d2f accompanies RPC800706BE at the processor batch
+boundary. Settings/packages/reports restore after closing an identity-verified
+automatic `/restore` instance; closure is assisted. Desktop probes have no error5.
+The native cause remains unresolved. Frozen catalog18 comparison passes32/48/15
+with exact prior checks, normal closure, preservation and zero Excel failures.
+The unchanged catalog19 repeat also passes the exact32/48/15 checks, normal
+closure, preservation and zero Excel failures. Both executions remain recorded;
+the passing repeat does not establish a native repair. Packaged smoke also retains
+86/86 prior checks, Initial/Final unassisted exit, preservation and zero Excel
+Application failures. Remaining regression gates are pending. Focused621/paired114 GREEN does not establish full-chain acceptance.
 
 Active bounded group: five existing designer load/refresh controls are specified
 under Architecture v4.11 D18 for catalog19 and now registered in the isolated candidate. Process Refresh
