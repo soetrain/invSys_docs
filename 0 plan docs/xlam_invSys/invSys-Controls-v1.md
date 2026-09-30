@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.306 (output-regulation focused GREEN; broader acceptance pending)
+**Version:** 1.307 (output-regulation focused and paths GREEN; regressions pending)
 
 Catalog20 output-regulation focused GREEN,2026-09-30 UTC: the isolated
 `validation-production-regulation-final` candidate registers105 global controls
@@ -17,9 +17,17 @@ calibration6/4 ->10/10 corrects short-ID substring collisions and escaped-text
 checking; the exact initial matching field was not retained by normal cleanup.
 Static metrics:269 components,6107 procedures,134347 lines, unchanged9/45 dynamic
 calls and190 duplicate groups,28 non-growing oversized caps, three schemas and330
-PowerShell parses. The Production form shrinks by four lines. Paired paths and
-required final-candidate regressions remain pending; no promotion is authorized
-by these results. Catalog19 remains frozen and its native full reusable failure
+PowerShell parses. The Production form shrinks by four lines. Paired paths now
+pass102/102 with exact prior identities, five instrumented compiles, preservation,
+normal closure and zero delayed Excel failures. Six principal images are directly
+reviewed. Two separate recordings contain Apply/Clear in both scopes; the explicit
+four-step expectation matches all four actions with zero extras. How-To,
+Diagnostic and Compare both retain the same evidence and local-only conclusion.
+The initial100/two-test-assertion failures are retained: a single repeated Clear
+expectation correctly matches the first occurrence; the test now authors all
+four steps explicitly. No evaluator contract or runtime package changed for this
+correction. Required final-candidate regressions remain pending; no promotion is
+authorized by these results. Catalog19 remains frozen and its native full reusable failure
 stays unresolved. Exact evidence is in the code repository's
 `tests/integration/plan022_slice4be_production_regulation_results.md`.
 
