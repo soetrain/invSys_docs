@@ -2,6 +2,23 @@
 
 **Status:** Current corrective implementation plan
 
+**Implementation checkpoint2026-09-30 UTC:** isolated, unpromoted
+`validation-production-recipe-structure` implements the approved stable connection
+write and catalog18 observations. Released-Process changed-value RED52/3 becomes
+55/55 with exact check identities, five instrumented compiles, preservation,
+normal closure and zero Excel Application failures. The reviewed capture retains
+quantity4 and percentage75 with intact routing. Five builds/compiles/cold load and
+static limits pass; dynamic calls9/45 and duplicate groups191 remain unchanged.
+The first full structure gate was incomplete because of macro-dispatch/cleanup
+errors; desktop access remained available. Its cause is unresolved. An unchanged
+candidate retry passes786/786 with exact RED identities, five compiles, preservation,
+unassisted closure and zero Excel Application failures. Paired Action Paths passes
+109/109: two independent five-action recordings, publication, exact selected detail,
+explicit guide intent and observed conclusion, all three views and six reviewed
+captures. Five compiles, preservation, unassisted closure and zero Excel Application
+failures also pass. Broad regressions remain required before this checkpoint
+can replace the catalog17 acceptance baseline. See the code evidence below.
+
 **Recipe structure correction approved2026-09-30 UTC:** baseline Update does not satisfy
 the proposed seven-field preservation assertions. Architecture v4.11 now carries
 the explicitly approved connection-write-stability decision: snapshot the validated
@@ -11,7 +28,7 @@ seven correct pre-action editor values, a selection callback during Update and
 three cleared routing fields with old quantity/percentage afterwards. The user
 explicitly approved this exception to the existing-algorithm preservation rule;
 approval is recorded in Architecture v4.11 before runtime implementation.
-Runtime remains unchanged. Final baseline182/604 across786 unique checks separates
+Before implementation, final baseline182/604 across786 unique checks separated
 599 missing tracking/guard failures from five approved-correction Update assertions.
 Five instrumented compiles, settings/package preservation, normal closure and
 zero Excel Application failures pass. See code evidence
@@ -20,8 +37,8 @@ zero Excel Application failures pass. See code evidence
 **Active bounded4be group: Recipe structure observations.** Architecture v4.11 D18
 specifies catalog18 for the existing Add Process, Remove Process, Connect, Update
 and Disconnect handlers. This is an approved semantic-inheritance refinement;
-runtime registration remains catalog17,32/68,36 pending until protecting RED and
-implementation. Preserve current node allocation, incident-edge removal,
+the validated acceptance baseline remains catalog17,32/68,36 pending until the
+new candidate completes its required gates. Preserve current node allocation, incident-edge removal,
 connection validation, Update append fallback, display-index mapping, selections
 and refresh side effects. Only STAGED concludes local CommandCompleted; records
 cannot assert saved definitions or Domain application. Captured-context/current

@@ -1,13 +1,25 @@
 # Production form tracking coverage audit
 
-Version 1.33. Last reviewed: 2026-09-30 UTC, Recipe structure Update correction approved.
+Version 1.34. Last reviewed: 2026-09-30 UTC, Recipe structure candidate under validation.
+
+The isolated `validation-production-recipe-structure` candidate implements the
+approved connection snapshot and five catalog18 observations. Released-data
+RED52/3 becomes55/55 with exact identities, five compiles, preservation, normal
+closure and zero Excel Application failures. The unchanged-candidate full structure
+retry passes786/786 with exact RED identities and the same preservation/compile/
+closure gates. Paired paths passes109/109, with original publication/detail,
+distinct guide/observed run, all three views and six reviewed captures. Five compiles,
+preservation, normal closure and zero Excel Application failures pass. Broad
+regressions remain pending; catalog17 remains
+the validated baseline.
+The initial incomplete full gate is retained in the code evidence below.
 
 Packaged structure baseline:182 PASS/604 FAIL,786 unique checks;599 missing
 tracking/guard checks and five Update-behavior assertions protecting the explicit
 connection-write-stability decision approved by the user in Architecture v4.11.
-Runtime implementation remains pending. All five instrumented
+For that RED baseline, all five instrumented
 compiles, package/settings preservation and normal closure pass with zero Excel
-Application failures. Runtime remains unchanged. See code evidence
+Application failures. See code evidence
 `tests/integration/plan022_slice4be_production_recipe_structure_results.md`.
 
 Next bounded group: Architecture v4.11 D18 and Plan022 specify catalog18 for the

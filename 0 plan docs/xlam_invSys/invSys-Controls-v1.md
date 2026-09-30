@@ -1,6 +1,19 @@
 # invSys Form Controls v1
 
-**Version:** 1.290 (Recipe structure Update correction approved; implementation pending)
+**Version:** 1.291 (Recipe structure candidate; focused GREEN, broader gates pending)
+
+The unpromoted `validation-production-recipe-structure` candidate now implements
+the approved connection write and five catalog18 observations. The released-data
+changed-value gate passes55/55 with exact RED identities, five compiles,
+preservation, normal closure and zero Excel Application failures. Its reviewed
+capture retains quantity4 and percentage75 with intact routing/UOM. The full
+structure retry passes786/786 with exact RED identities, five compiles, preservation,
+unassisted closure and zero Excel Application failures; the earlier incomplete run
+remains unexplained. Paired Action Paths passes109/109 with five compiles,
+preservation, unassisted closure, zero Excel Application failures and six reviewed
+captures of original publication/detail and How-To/Diagnostic/Compare both.
+Broad regressions remain incomplete;
+catalog17 remains the validated baseline. No user acceptance is claimed.
 
 The packaged baseline exposes five Update-behavior assertion failures in addition
 to missing tracking/guards. Architecture v4.11 records the user's explicit
@@ -11,8 +24,8 @@ selection/refresh, local-only staging and separate Save authority remain require
 The diagnostic confirms correct pre-action fields and a selection callback during
 Update, followed by three cleared routing fields and old quantity/percentage.
 This is an approved explicit exception to preserving the existing connection-edit
-algorithm; runtime implementation must follow the focused RED evidence.
-No GREEN, registration increase or user acceptance is claimed.
+algorithm; the candidate implementation followed the focused RED evidence.
+Only the focused and released-data GREEN above are claimed at this checkpoint.
 Final baseline182/604 has786 unique checks:599 missing tracking/guard facts and
 five assertions protecting the approved Update correction. Five instrumented compiles, preservation, normal
 closure and zero Excel Application failures pass. See code evidence
@@ -29,8 +42,8 @@ REQUESTED/STAGED/REJECTED/DENIED/FAILED are fixed and redacted; only STAGED can
 conclude local CommandCompleted, never Domain application. Require captured live
 workbook/context, current capability, loading/nested guards, non-blocking optional
 tracking and truthful failure uncertainty. Packaged actual-handler RED precedes
-implementation; no new registration or acceptance is claimed. Current runtime
-remains catalog17 with32/68 constructed Production controls registered,36 pending.
+implementation. The validated baseline remains catalog17 with32/68 constructed
+Production controls registered,36 pending, until the candidate completes its gates.
 See the exact normative refinement and active group in Plan022.
 
 Architecture v4.11 D18 specifies catalog17 for the existing Recipe Designer Move

@@ -517,7 +517,7 @@ workbook columns. Publication, original recording order and How-To/Diagnostic/
 Compare both require separate evidence. This records discovered controls within
 the approved contract; it does not amend authority, permissions or saved semantics.
 
-**4be.1 Recipe connection write stability (approved 2026-09-30 UTC; implementation pending):**
+**4be.1 Recipe connection write stability (approved 2026-09-30 UTC):**
 The structure refinement below requires preserving the existing editing algorithm.
 Packaged baseline tests reveal that Update can retain old quantity/percentage and
 lose routing values despite a successful local status. The disposable diagnostic
@@ -525,7 +525,8 @@ confirms all seven expected editor values immediately before Update and one
 hidden-list selection callback during the handler; afterwards three routing
 fields are empty and quantity/percentage retain their original values. The
 callback reloads the editor while the writer still reads subsequent fields from
-that editor. Runtime source and frozen packages remain unchanged.
+that editor. This diagnosis and approval preceded runtime changes; the frozen
+baseline remains available for the protecting RED evidence.
 
 Approved explicit exception: after existing connection validation succeeds,
 Connect/Update capture the seven editor values once and write that snapshot to
