@@ -2,6 +2,18 @@
 
 **Status:** Current corrective implementation plan
 
+**Later harness checkpoint2026-09-30 UTC:** the failed-host cleanup correction
+retains original workflow failures, adds a sanitized failing cleanup receipt and
+allows final release bookkeeping to finish. Offline calibration is7 PASS/14 FAIL
+before correction,21/21 afterwards; live ownership/closure remains7/7. A standard
+run without debugger/tracing retains its aggregate and all67 exact prior Boolean
+observations, normal unassisted exit, preservation and zero Excel Application
+failures. All listed automated gates now have a passing catalog18 execution.
+The earlier intermittent native crash remains unresolved; catalog17 stays frozen
+for comparison. No operational promotion or complete Slice4be/user acceptance is
+claimed. See `tests/integration/plan022_slice4be_automation_cleanup_results.md` in
+the code repository for the exact06:52:45--06:58:45 UTC execution and calibration.
+
 **Implementation checkpoint2026-09-30 UTC:** isolated, unpromoted
 `validation-production-recipe-structure` implements the approved stable connection
 write and catalog18 observations:37/68 constructed Production controls registered,
@@ -17,8 +29,9 @@ unassisted closure and zero Excel Application failures. Paired Action Paths pass
 109/109: two independent five-action recordings, publication, exact selected detail,
 explicit guide intent and observed conclusion, all three views and six reviewed
 captures. Five compiles, preservation, unassisted closure and zero Excel Application
-failures also pass. Broad regressions remain required before this checkpoint
-can replace the catalog17 acceptance baseline. See the code evidence below.
+failures also pass. The later checkpoint above completes the listed automated
+regression executions; native stability and user acceptance remain open.
+See the code evidence below.
 Current-candidate ordering retains463/463; full chain32/32, live roles48/48 and
 Create Warehouse15/15 retain exact prior identities, unassisted closure,
 settings/package/report preservation and zero Excel Application failures.

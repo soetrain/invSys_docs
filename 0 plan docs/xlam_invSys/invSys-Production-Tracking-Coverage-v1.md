@@ -1,6 +1,15 @@
 # Production form tracking coverage audit
 
-Version 1.36. Last reviewed: 2026-09-30 UTC, Recipe structure candidate under validation.
+Version 1.37. Last reviewed: 2026-09-30 UTC, Recipe structure candidate under validation.
+
+After the failed-host cleanup harness correction, standard unobserved run-only
+retains its aggregate and all67 exact prior Boolean observations, unassisted exit,
+preservation and zero Excel Application failures. Every listed automated gate now
+has a passing catalog18 execution. The earlier intermittent native crash remains
+unresolved; catalog17 stays frozen for comparison. No operational promotion or
+complete Slice4be/user acceptance is claimed. Exact evidence and21/21 failed-host
+calibration are in the code repository's
+`tests/integration/plan022_slice4be_automation_cleanup_results.md`.
 
 A late-attached native diagnostic passes its aggregate with unassisted closure,
 preservation and zero Excel Application failures, but captures no fatal exception
@@ -16,9 +25,9 @@ closure and zero Excel Application failures. The unchanged-candidate full struct
 retry passes786/786 with exact RED identities and the same preservation/compile/
 closure gates. Paired paths passes109/109, with original publication/detail,
 distinct guide/observed run, all three views and six reviewed captures. Five compiles,
-preservation, normal closure and zero Excel Application failures pass. Broad
-regressions remain pending; catalog17 remains
-the validated baseline.
+preservation, normal closure and zero Excel Application failures pass. The later
+checkpoint above completes the listed automated regression executions; native
+stability and user acceptance remain open.
 The new candidate also retains ordering463/463 and chain32/32/live48/48/Create
 Warehouse15/15 with exact prior checks, unassisted closure, preservation and zero
 Excel Application failures. Other regression gates remain outstanding.

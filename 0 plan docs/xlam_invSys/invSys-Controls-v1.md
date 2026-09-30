@@ -1,6 +1,15 @@
 # invSys Form Controls v1
 
-**Version:** 1.293 (Recipe structure candidate; native diagnostic recorded, acceptance pending)
+**Version:** 1.294 (Recipe structure automated gates recorded; native stability and acceptance pending)
+
+After the failed-host cleanup harness correction, standard unobserved run-only
+retains its aggregate and all67 exact prior Boolean observations, unassisted exit,
+preservation and zero Excel Application failures. Every listed automated gate now
+has a passing catalog18 execution. The earlier intermittent native crash remains
+unresolved; catalog17 stays frozen for comparison. No operational promotion or
+complete Slice4be/user acceptance is claimed. Exact evidence and21/21 failed-host
+calibration are in the code repository's
+`tests/integration/plan022_slice4be_automation_cleanup_results.md`.
 
 A late-attached native diagnostic passes its aggregate with unassisted closure,
 preservation and zero Excel Application failures, but captures no fatal exception
@@ -20,8 +29,8 @@ unassisted closure and zero Excel Application failures; the earlier incomplete r
 remains unexplained. Paired Action Paths passes109/109 with five compiles,
 preservation, unassisted closure, zero Excel Application failures and six reviewed
 captures of original publication/detail and How-To/Diagnostic/Compare both.
-Broad regressions remain incomplete;
-catalog17 remains the validated baseline. No user acceptance is claimed.
+The later checkpoint above completes the listed automated regression executions;
+native stability and user acceptance remain open.
 On the new candidate, ordering463/463 and chain32/32/live48/48/Create Warehouse15/15
 retain exact prior checks, unassisted closure, preservation and zero Excel failures.
 Full reusable retains2 aggregates/171 exact prior Boolean observations; smoke86/86
