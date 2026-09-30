@@ -92,6 +92,13 @@ not run. Desktop probes found no error5. The unchanged repeat passes all84 with
 six reviewed captures, but establishes no repair for that unresolved capture
 failure. Runtime, tests and packages remain unchanged; human acceptance is open.
 
+Draft/designer regression on catalog20 retains 390/390 exact prior ordered checks,
+including Action Path diagnostics, with five compiles, preservation, normal
+closure and zero delayed Excel failures. No new screenshots are requested by
+this gate; it establishes no new visual or human acceptance. Lifecycle, native
+cancellation, Settings and run-only gates remain pending. Runtime/packages are
+unchanged; exact evidence is in the regulation result record.
+
 **Designer load/refresh focused GREEN,2026-09-30 UTC:**
 The isolated `validation-production-design-reads-final` catalog19 candidate passes
 621/621 focused checks and114/114 paired-path checks. The focused gate retains the
@@ -675,7 +682,7 @@ pausing the goal if desktop error5 returns. The subsequent focused reusable
 Production aggregate passes with all67 prior Boolean values and preservation;
 normal closure is unproved because the automatic termination fallback was
 unobserved. `-ProductionRunOnly` excludes the separate full
-restart/export gate. Draft/path regression retains390/390 exact prior identities,
+restart/export gate. Draft/path regression retains 390/390 exact prior identities,
 five instrumented compiles, normal unassisted closure and preservation, with zero
 Excel Application failures. The subsequent full reusable/restart attempt stops0/1
 at the batch-scale adapter with RPC0x800706BE and ntdll.dll0xc0000028, before its
@@ -822,7 +829,7 @@ before its aggregate observations. The predecessor comparison does not prove a
 cause or waive either gate. Native cursor error5 returned; no policy was changed
 and no new capture is accepted. Continue independent lifecycle tests while desktop
 availability and the separate runtime failure remain unresolved.
-Earlier draft/recording/publication/diagnostic regression retains390/390 with
+Earlier draft/recording/publication/diagnostic regression retains 390/390 with
 delayed normal unassisted exit; the planned recovery finds Excel already absent
 and does not execute. Preserve that distinction from the assisted chain recovery.
 No native capture or new lifecycle Action Path is accepted by this regression.

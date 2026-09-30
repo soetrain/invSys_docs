@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.315 (output-regulation focused/paths/full chain GREEN; remaining gates pending)
+**Version:** 1.316 (output-regulation focused/paths/full chain GREEN; remaining gates pending)
 
 Catalog20 output-regulation focused GREEN,2026-09-30 UTC: the isolated
 `validation-production-regulation-final` candidate registers105 global controls
@@ -91,6 +91,13 @@ foreground to another form in the same Excel process; seven trailing checks did
 not run. Desktop probes found no error5. The unchanged repeat passes all84 with
 six reviewed captures, but establishes no repair for that unresolved capture
 failure. Runtime, tests and packages remain unchanged; human acceptance is open.
+
+Draft/designer regression on catalog20 retains 390/390 exact prior ordered checks,
+including Action Path diagnostics, with five compiles, preservation, normal
+closure and zero delayed Excel failures. No new screenshots are requested by
+this gate; it establishes no new visual or human acceptance. Lifecycle, native
+cancellation, Settings and run-only gates remain pending. Runtime/packages are
+unchanged; exact evidence is in the regulation result record.
 
 The isolated `validation-production-design-reads-final` catalog19 candidate passes
 621/621 focused checks and114/114 paired-path checks. The focused gate retains the
@@ -609,7 +616,7 @@ and requires pausing the goal if desktop error5 returns. Focused reusable
 Production subsequently retains its aggregate PASS and all67 Boolean values with
 preservation; normal closure is unproved because the automatic termination fallback
 was unobserved. Its `-ProductionRunOnly` scope excludes
-the separate full restart/export gate. Draft/path regression retains390/390 exact
+the separate full restart/export gate. Draft/path regression retains 390/390 exact
 prior identities, five compiles, normal unassisted closure and preservation, with
 zero Excel Application failures. Full reusable/restart subsequently stops0/1 at
 the batch-scale adapter with RPC0x800706BE and ntdll.dll0xc0000028 before full-only
@@ -733,7 +740,7 @@ Create Warehouse15/15), requiring assisted recovery. Reusable Production also
 stops before its aggregate observations. Cursor error5 returned; no new visible
 acceptance is claimed. These failures do not invalidate earlier scoped records,
 but those records do not accept the lifecycle candidate.
-The existing draft/recording/publication/diagnostic regression retains390/390;
+The existing draft/recording/publication/diagnostic regression retains 390/390;
 Excel exits normally after a delay, before any recovery executes. Settings and
 package hashes restore. No new lifecycle Action Path or capture acceptance follows
 from this earlier-family regression.

@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.58. Last reviewed: 2026-09-30 UTC, output-regulation focused and paths GREEN.
+Version 1.59. Last reviewed: 2026-09-30 UTC, output-regulation focused and paths GREEN.
 
 Catalog20 output-regulation focused GREEN,2026-09-30 UTC: the isolated
 `validation-production-regulation-final` candidate registers105 global controls
@@ -91,6 +91,13 @@ foreground to another form in the same Excel process; seven trailing checks did
 not run. Desktop probes found no error5. The unchanged repeat passes all84 with
 six reviewed captures, but establishes no repair for that unresolved capture
 failure. Runtime, tests and packages remain unchanged; human acceptance is open.
+
+Draft/designer regression on catalog20 retains 390/390 exact prior ordered checks,
+including Action Path diagnostics, with five compiles, preservation, normal
+closure and zero delayed Excel failures. No new screenshots are requested by
+this gate; it establishes no new visual or human acceptance. Lifecycle, native
+cancellation, Settings and run-only gates remain pending. Runtime/packages are
+unchanged; exact evidence is in the regulation result record.
 
 The isolated `validation-production-design-reads-final` catalog19 candidate passes
 621/621 focused checks and114/114 paired-path checks. The focused gate retains the
