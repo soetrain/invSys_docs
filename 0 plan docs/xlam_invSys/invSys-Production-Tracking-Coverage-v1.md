@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.42. Last reviewed: 2026-09-30 UTC, designer load/refresh and paired paths GREEN recorded.
+Version 1.43. Last reviewed: 2026-09-30 UTC, designer load/refresh and paired paths GREEN recorded.
 
 The isolated `validation-production-design-reads-final` catalog19 candidate passes
 621/621 focused checks and114/114 paired-path checks. The focused gate retains the
@@ -30,7 +30,24 @@ The unchanged catalog19 repeat also passes the exact32/48/15 checks, normal
 closure, preservation and zero Excel failures. Both executions remain recorded;
 the passing repeat does not establish a native repair. Packaged smoke also retains
 86/86 prior checks, Initial/Final unassisted exit, preservation and zero Excel
-Application failures. Remaining regression gates are pending. Focused621/paired114 GREEN does not establish full-chain acceptance.
+Application failures. Layout retains the exact prior geometry at three sizes/five
+pages, with three directly reviewed captures, preservation and zero Application
+failures. The ordinary full reusable gate then fails before its first aggregate:
+zero PASS/two failures (HARNESS and HARNESS_CLEANUP), RPC800706BE at the initial
+batch-scale adapter and the same ntdll/c0000028/offset12d2f signature. Settings,
+packages and reports restore; no termination is requested, but crashed-process
+absence is not normal closure. Its171 prior observations remain unestablished.
+Desktop probes remain healthy. A test-first diagnostic extension now permits
+native observation of this full flow:19 PASS/two expected failures becomes21/21
+in offline calibration. It changes no runtime contract and proves no native repair.
+The observed full flow passes both aggregates and restart with unassisted closure,
+preservation and zero Application failures; no failing stack is captured. This
+redacted diagnostic does not independently compare the171 Boolean observations
+or explain the ordinary failure. Refreshed static metrics/caps, three schemas and
+325 script parses pass. See the code repository's batch-boundary result record
+for exact evidence and limitations.
+Remaining regression gates are pending; focused621/paired114 GREEN does not
+establish complete acceptance.
 
 Active bounded group: five existing designer load/refresh controls are specified
 under Architecture v4.11 D18 for catalog19 and now registered in the isolated candidate. Process Refresh
