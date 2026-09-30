@@ -1,16 +1,21 @@
 # invSys Form Controls v1
 
-**Version:** 1.321 (output-regulation automated gates GREEN; broader acceptance open)
+**Version:** 1.322 (output-regulation automated gates GREEN; broader acceptance open)
 
-Next bounded Slice4be work: Admin Event Tracking > Event Detail heading alignment.
-The prior catalog19 and current20 images both show Show/Order/Required offset
-from the list values. Architecture v4.11's visual clarification preserves the
-hidden identity and all editor behavior. Before runtime edits, a packaged test
-will measure rendered heading starts against actual column widths (three-point
-tolerance), text fit and vertical separation at default/enlarged/restored sizes,
-including the real Admin Settings launcher. Then require GREEN and visible proof.
-Expected files: cAdminEventDetail, focused layout probe/harness and evidence.
-This is D13 visual acceptance work, not a new event or configuration contract.
+Slice4be Admin Event Detail heading alignment is focused GREEN,2026-09-30 UTC.
+The unchanged baseline gives222 PASS/18 expected alignment failures; the isolated
+validation-detail-columns candidate passes the same240 checks, retaining all202
+prior Settings checks. Both the packaged form and real Admin launcher pass at
+default/enlarged/restored sizes. cAdminEventDetail replaces the space-padded
+lblDetailColumns caption with lblDetailColumn1-4 positioned from the existing
+list widths. Hidden identity and all editor/configuration/tracking behavior stay
+unchanged. Five compiles, preservation, normal exits and zero delayed Excel
+failures pass; three corrected images are reviewed. Static limits pass with
+one helper/+12 lines and unchanged dynamic-call, duplicate and oversized metrics.
+Packaged smoke retains86/86 exact prior checks, normal Initial/Final exits,
+preservation and zero delayed Excel failures. Settings activity and full-chain/
+live-role gates remain pending; no promotion or human acceptance. Exact evidence is in the code repository's
+`tests/integration/plan022_slice4be_detail_columns_results.md`.
 
 Catalog20 output-regulation focused GREEN,2026-09-30 UTC: the isolated
 `validation-production-regulation-final` candidate registers105 global controls
