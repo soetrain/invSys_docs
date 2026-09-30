@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.353 (Worksheet paths and initial release regressions GREEN; acceptance pending)
+**Version:** 1.354 (Worksheet paths and reusable regression GREEN; acceptance pending)
 
 Architecture v4.11 D18's catalog22 controls PRODUCTION_PROCESS_WORKSHEET_SEND,
 PRODUCTION_PROCESS_WORKSHEET_ADD_ITEM and PRODUCTION_PROCESS_WORKSHEET_RETRIEVE
@@ -36,11 +36,13 @@ delayed audit and six reviewed worksheet captures pass. The shared harness retai
 Close paths90 in exact prior order with clean closure/preservation/audit. Smoke86,
 three-size/five-page layout and chain32/live48/Create15 also pass, preserving prior
 checks, packages/settings, normal cleanup and delayed audits. Three reviewed layout
-captures are empty Run Lists, not populated acceptance. Full reusable/restart and
-remaining shared observation regressions are pending. An initial full-reusable
-attempt hits the previously seen native Excel batch-scale failure and is excluded.
-Bounded observed/unobserved callbacks pass; a full run remains unverified, with no
-crash-repair claim. No deployment
+captures are empty Run Lists, not populated acceptance. Full reusable retains both
+aggregates and171 prior Boolean observations; independent replay retains37 checks.
+Both are uninstrumented with normal cleanup, preservation and clean delayed audits.
+An initial full attempt hit the previously seen native Excel batch-scale failure
+and remains excluded. Bounded observed/unobserved callbacks preceded the successful
+full validation; no crash repair is claimed. Remaining shared observation regressions
+are pending. No deployment
 promotion or human acceptance is claimed. Code evidence:
 `tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.
 

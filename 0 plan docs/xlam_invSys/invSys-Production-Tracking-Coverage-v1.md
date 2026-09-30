@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.93. Last reviewed: 2026-09-30 UTC, worksheet paths and initial release regressions GREEN.
+Version 1.94. Last reviewed: 2026-09-30 UTC, worksheet paths and reusable regression GREEN.
 
 Catalog22 now defines109 global controls and observes48/68 constructed Production
 buttons. The three Process worksheet handlers are implemented and pass595/595
@@ -28,11 +28,13 @@ references and all three views. Five compiles, preservation, normal cleanup,
 delayed audit and six reviewed worksheet captures pass. Close paths90 also retains
 its exact prior checks with clean closure/preservation/audit. Smoke86, three-size/
 five-page layout and chain32/live48/Create15 pass prior checks, preservation, normal
-cleanup and delayed audits. Reviewed layout captures show empty Run Lists. Next
-complete full reusable/restart and remaining shared-observation regressions.
-The first full-reusable attempt is excluded for the previously seen native Excel
-batch-scale failure. Bounded observed/unobserved callbacks pass; the subsequent
-full run remains unverified. No crash-repair claim.
+cleanup and delayed audits. Reviewed layout captures show empty Run Lists. Full
+reusable retains both aggregates and171 prior Boolean observations; independent
+replay retains37 checks. Both are uninstrumented with normal cleanup, preservation
+and clean delayed audits. The first full attempt remains excluded for the prior
+native batch-scale failure; bounded observed/unobserved callbacks precede the
+successful full validation. No crash repair is claimed. Next complete remaining
+shared-observation regressions.
 No promotion or human acceptance.
 Exact evidence: `tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.
 The prerequisite history below retains its own frozen-candidate counts.
