@@ -2,6 +2,22 @@
 
 **Status:** Current corrective implementation plan
 
+Production Close test-first checkpoint,2026-09-30 UTC: the frozen Detail candidate
+produces93 PASS/139 FAIL, repeated with trace-only instrumentation. All232 check
+identities and42 prior GREEN checks are retained; five compiles, preservation,
+normal closure and delayed Excel audits pass. Of the failures,137 identify the
+missing catalog21/Close observations. Two extra failures required diagnosis.
+Explicitly enabling native Excel events in the public fixture resolves its
+workbook-close disposal failure (one owner entry, zero remaining forms), yielding
+94 PASS/138 FAIL without runtime changes. The remaining extra failure is a
+canonical Inventory workbook write on the first public Production launch: six
+container parts change, including table and worksheet parts, then its hash stays
+stable through Close/reopen. D3 requires read-only UI queries; D9/D10 retain the
+read/write split. Trace the query/resolver/schema/save boundary before implementing
+Close observations. No write-on-read exception or reset preservation pin is
+authorized. Exact evidence and the unresolved supplying-call question are in
+`tests/integration/plan022_slice4be_production_close_results.md` in the code repository.
+
 Next discovered control within Slice4be.1: Architecture v4.11 now specifies
 Production Close observations under approved D18 semantic inheritance. Reserved
 catalog21 `PRODUCTION_CLOSE` covers the real Close button and native window close;

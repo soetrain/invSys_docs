@@ -1,6 +1,19 @@
 # invSys Form Controls v1
 
-**Version:** 1.325 (Detail alignment gates GREEN; Production Close specified)
+**Version:** 1.326 (Production Close RED diagnosis; initial-launch Inventory write open)
+
+Production Close gate,2026-09-30 UTC:232 packaged checks initially produce93 PASS /
+139 FAIL, including137 expected missing-contract failures and two extra failures.
+Five compiles and all42 prior command/activity checks pass. A traced repeat
+identifies disabled harness events as the workbook-disposal cause. Enabling and
+restoring those events yields94 PASS/138 FAIL, one real workbook-close owner entry
+and zero loaded forms, with runtime unchanged. The remaining extra failure is
+an authoritative Inventory file write during the first public Production launch;
+six file-container parts change before any Close action. D3's read-only query rule
+governs the next diagnosis. Normal closure, settings/package preservation and
+zero delayed Excel Application failures hold for all three runs. Close tracking
+and broader acceptance remain pending; no runtime repair or promotion is claimed.
+See the code repository's `tests/integration/plan022_slice4be_production_close_results.md`.
 
 Production Close discovery,2026-09-30 UTC: Architecture v4.11's new 4be.1
 refinement reserves catalog21 `PRODUCTION_CLOSE` for `btnProductionClose` /

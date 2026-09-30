@@ -1,14 +1,24 @@
 # Production form tracking coverage audit
 
-Version 1.65. Last reviewed: 2026-09-30 UTC, Detail alignment gates complete; Close specified.
+Version 1.66. Last reviewed: 2026-09-30 UTC, Close RED diagnosis and initial-launch write.
+
+The packaged Close baseline has232 checks:93 PASS/139 FAIL initially and with
+trace-only instrumentation, then94 PASS/138 FAIL after enabling real Excel events
+for the public workbook-close fixture. All42 prior checks and five compiles pass;
+normal closure, preservation and zero delayed Excel failures hold. Missing Close
+registration/observations account for137 failures. The remaining extra failure
+is an Inventory authority write during the first public launch, before Close;
+trace the supplying query under D3 rather than resetting the preservation pin.
+Runtime remains catalog20 with44/68 constructed buttons registered. Evidence:
+`tests/integration/plan022_slice4be_production_close_results.md` in the code repository.
 
 Architecture v4.11 now reserves catalog21 `PRODUCTION_CLOSE` under D18 for the
 existing Close button and native window close. Only committed UI dismissal may
 conclude CLOSED; internal unload/workbook shutdown do not invent user activity.
-No runtime registration or focused RED/GREEN is claimed yet. The implemented
+No runtime registration or clean focused RED/GREEN is claimed yet. The implemented
 census remains44/68 constructed buttons and24 unregistered, including this now
 specified Close control. Thirty nonbutton handlers and other role/launcher
-surfaces retain their separate pending coverage. Plan022 and controls1.325 name
+surfaces retain their separate pending coverage. Plan022 and controls1.326 name
 the test-first next action; do not count contract documentation as implementation.
 
 The separate Admin Detail heading correction now completes its planned matrix:
