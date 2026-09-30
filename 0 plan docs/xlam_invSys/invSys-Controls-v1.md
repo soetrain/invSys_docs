@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.317 (output-regulation focused/paths/full chain GREEN; remaining gates pending)
+**Version:** 1.318 (output-regulation focused/paths/full chain GREEN; remaining gates pending)
 
 Catalog20 output-regulation focused GREEN,2026-09-30 UTC: the isolated
 `validation-production-regulation-final` candidate registers105 global controls
@@ -99,9 +99,12 @@ this gate; it establishes no new visual or human acceptance. Lifecycle now retai
 615/615 and native cancellation 94/94 exact prior checks, each with five compiles,
 preservation, normal closure and zero delayed Excel failures. Five native-gate
 images are reviewed: all four confirmation questions focus No, and Settings
-explicitly reports saved configuration with unavailable tracking. Settings and
-run-only gates remain pending. Runtime/packages are unchanged; exact evidence
-is in the regulation result record. Agent review does not establish human acceptance.
+explicitly reports saved configuration with unavailable tracking. Settings now
+retains 202/202 exact prior checks, five compiles, unassisted preference restart
+with ten references released and zero failures, preservation, normal final exit
+and zero delayed Excel failures. Settings activity and run-only gates remain
+pending. Runtime/packages are unchanged; exact evidence is in the regulation
+result record. Agent review does not establish human acceptance.
 
 The isolated `validation-production-design-reads-final` catalog19 candidate passes
 621/621 focused checks and114/114 paired-path checks. The focused gate retains the
