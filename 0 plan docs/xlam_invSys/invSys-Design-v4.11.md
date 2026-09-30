@@ -517,7 +517,7 @@ workbook columns. Publication, original recording order and How-To/Diagnostic/
 Compare both require separate evidence. This records discovered controls within
 the approved contract; it does not amend authority, permissions or saved semantics.
 
-**4be.1 Recipe connection write stability (proposal; approval pending):**
+**4be.1 Recipe connection write stability (approved 2026-09-30 UTC; implementation pending):**
 The structure refinement below requires preserving the existing editing algorithm.
 Packaged baseline tests reveal that Update can retain old quantity/percentage and
 lose routing values despite a successful local status. The disposable diagnostic
@@ -527,7 +527,7 @@ fields are empty and quantity/percentage retain their original values. The
 callback reloads the editor while the writer still reads subsequent fields from
 that editor. Runtime source and frozen packages remain unchanged.
 
-Proposed explicit exception: after existing connection validation succeeds,
+Approved explicit exception: after existing connection validation succeeds,
 Connect/Update capture the seven editor values once and write that snapshot to
 the chosen local connection row. Selection callbacks must not substitute older
 or cleared editor values into the same write. Preserve the existing validation,
@@ -537,10 +537,10 @@ unchanged-value Update must preserve the row and may finish STAGED. This is loca
 draft behavior only; it changes no authority, permission, schema or Domain write.
 Failures remain FAILED/Unknown without a rollback promise.
 
-This proposal is not active normative authorization. It would explicitly qualify
-the preservation language in the next subsection; do not silently implement a
-new algorithm as tracking instrumentation. Approval is required before this
-exception or runtime implementation of the affected structure group. Protect it
+The user explicitly approved this connection-write change on 2026-09-30 UTC.
+This decision qualifies the preservation language in the next subsection;
+the stable-input correction is authorized before runtime implementation and must
+not be hidden as tracking instrumentation. Protect it
 through the actual packaged Update handler, including all seven fields, blank/
 nonnumeric/negative-other-field cases allowed by current validation, unchanged
 values, other rows, selection and existing reusable Production regressions.
@@ -566,7 +566,7 @@ local edit finishes. REJECTED is Warning/Unchanged for missing selection or
 existing validation refusal; DENIED is Blocked/Unchanged before editing. FAILED
 is Error/Unknown and advises inspecting the current draft without promising rollback.
 
-Preserve existing edit semantics:
+Preserve existing edit semantics except for the approved stable-input correction above:
 
 - Add Process copies the selected entry from the released-Process list into a
   new local node, using the existing count-based `N` identifier search with
@@ -613,7 +613,8 @@ redaction, immutable earlier records, saved authority and unknown user columns.
 Separate recording/publication/How-To/Diagnostic/Compare evidence and current
 compile/layout/static/live-role/full-chain/reusable regressions remain required.
 This names discovered controls within the approved contract; it changes no
-authority store, permission boundary, Domain schema or existing editing algorithm.
+authority store, permission boundary or Domain schema. The only authorized
+connection-edit algorithm correction is the explicit stable-input decision above.
 
 **4be.1 Recipe ordering observations (discovered-control refinement; acceptance pending):**
 Under the approved D18 local-draft and semantic-inheritance rules, catalog17 adds

@@ -2,17 +2,17 @@
 
 **Status:** Current corrective implementation plan
 
-**Recipe structure blocker; decision pending:** baseline Update does not satisfy
+**Recipe structure correction approved2026-09-30 UTC:** baseline Update does not satisfy
 the proposed seven-field preservation assertions. Architecture v4.11 now carries
-an explicitly pending connection-write-stability proposal: snapshot the validated
+the explicitly approved connection-write-stability decision: snapshot the validated
 editor fields before writing the local row, so selection callbacks cannot replace
 them with older or cleared values. The disposable packaged diagnostic confirms
 seven correct pre-action editor values, a selection callback during Update and
-three cleared routing fields with old quantity/percentage afterwards. Obtain
-approval before implementing this exception to the
-existing-algorithm preservation rule. This is not approval inferred from Plan022.
+three cleared routing fields with old quantity/percentage afterwards. The user
+explicitly approved this exception to the existing-algorithm preservation rule;
+approval is recorded in Architecture v4.11 before runtime implementation.
 Runtime remains unchanged. Final baseline182/604 across786 unique checks separates
-599 missing tracking/guard failures from five pending Update-behavior assertions.
+599 missing tracking/guard failures from five approved-correction Update assertions.
 Five instrumented compiles, settings/package preservation, normal closure and
 zero Excel Application failures pass. See code evidence
 `tests/integration/plan022_slice4be_production_recipe_structure_results.md`.
@@ -33,11 +33,12 @@ invoke the five actual packaged Click handlers on frozen
 catalog18 observations/terminal facts and inherited guards; existing authorized
 edit semantics must remain GREEN. Protect failure uncertainty and partial edits
 without asserting rollback. No compile, fixture or harness failure counts as RED.
-After resolving the explicit Update decision above, implement typed Operations
+After completing the supplemental released-Process changed-value RED, implement typed Operations
 actions and Core catalog/outcome matching, retain
 all current GREENs, and require independent recorded guide/observed-run comparison,
 packaged compile/layout/static/live-role/full-chain/reusable and visible evidence.
-No authority, capability, saved-schema or edit-algorithm amendment is proposed.
+No authority, capability or saved-schema amendment is proposed. Apply only the
+explicit approved connection-write correction in addition to tracking and guards.
 
 **Bounded4be checkpoint: Recipe ordering automated gates GREEN.** Architecture v4.11 D18
 now specifies catalog17 for Move Up, Move Down and Auto Order in Recipe Designer,
