@@ -1,34 +1,35 @@
 # invSys Form Controls v1
 
-**Version:** 1.328 (Inventory launch query write traced; runtime correction pending)
+**Version:** 1.329 (Inventory query focused GREEN; broad regressions pending)
 
-Retained public-launch trace now proves Picker.Query -> write/create resolver ->
-schema unprotect -> dirty workbook -> save. The unchanged candidate still has
-94 PASS/138 FAIL across232 checks. Supplemental Admin-seeded query cases now
-protect all four Core query bridges before correction; Close observations remain
-unimplemented. The trace and its earlier harness/reporting failures are retained
-in the code repository's Production Close results record. Runtime is unchanged.
+The isolated D3 query candidate passes all80 supplemental cases and preserves
+authority bytes through the real Production launch/close/reopen route. Its312
+checks yield175 PASS/137 expected missing-Close failures, retaining all42 prior
+GREEN checks and exact earlier identities. Five builds/compiles, static limits, smoke86,
+normal closure, package/settings preservation and four reviewed images pass;
+the delayed Excel audit is zero. Only Core's Inventory bridge changes. Broad
+regressions remain pending; no control registration, catalog increment, promotion
+or full acceptance is claimed. Evidence and excluded harness/native failures:
+`tests/integration/plan022_slice4be_inventory_query_results.md` in code.
 
 Production launcher/Inventory picker acceptance now explicitly applies D3's
 read-only resolver and workbook-lifetime clarification: existing exact sources,
 no create/ensure/unprotect/save, caller-owned state preserved, temporary sources
 read-only and closed without saving. Existing query results, immutable keys and
-custom columns remain protected. The launch-byte preservation failure is still
-open; neither this clarification nor the test-only trace registers a control,
-repairs runtime or completes acceptance. Plan022 names the supplemental D13
-query cases required before a Core correction.
+custom columns remain protected. The launch-byte preservation failure now passes
+the focused gate; Plan022 requires broader regressions before acceptance.
 
-Production Close gate,2026-09-30 UTC:232 packaged checks initially produce93 PASS /
+Production Close baseline,2026-09-30 UTC:232 packaged checks initially produce93 PASS /
 139 FAIL, including137 expected missing-contract failures and two extra failures.
 Five compiles and all42 prior command/activity checks pass. A traced repeat
 identifies disabled harness events as the workbook-disposal cause. Enabling and
 restoring those events yields94 PASS/138 FAIL, one real workbook-close owner entry
-and zero loaded forms, with runtime unchanged. The remaining extra failure is
+and zero loaded forms, with runtime unchanged at that point. The extra failure was
 an authoritative Inventory file write during the first public Production launch;
-six file-container parts change before any Close action. D3's read-only query rule
-governs the next diagnosis. Normal closure, settings/package preservation and
+six file-container parts changed before any Close action. D3 governs the focused
+correction above. Normal closure, settings/package preservation and
 zero delayed Excel Application failures hold for all three runs. Close tracking
-and broader acceptance remain pending; no runtime repair or promotion is claimed.
+and broader acceptance remain pending; no Close implementation or promotion is claimed.
 See the code repository's `tests/integration/plan022_slice4be_production_close_results.md`.
 
 Production Close discovery,2026-09-30 UTC: Architecture v4.11's new 4be.1

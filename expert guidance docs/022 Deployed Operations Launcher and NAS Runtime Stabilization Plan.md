@@ -2,6 +2,20 @@
 
 **Status:** Current corrective implementation plan
 
+Inventory query focused GREEN,2026-09-30 UTC: the isolated
+`validation-inventory-query-readonly` candidate passes all80 query cases and the
+real Production launch/close/reopen authority-byte checks. The combined312-check
+run is175 PASS/137 expected missing-Close failures, preserving the original232
+check identities, all42 prior GREEN checks and the80 supplemental identities.
+Five builds/compiles, cold-start references, static ratchets, smoke86, normal closure,
+settings/package preservation, zero delayed Excel failures and four reviewed
+operator images pass. Only Core `modInventoryDomainBridge` differs among262
+compiled components. Broad regressions/live roles/Release1 chain remain required
+before accepting the correction or implementing Close observations. Current
+evidence: `tests/integration/plan022_slice4be_inventory_query_results.md` in code.
+That record separately retains harness calibration and the assisted injected-error
+run followed by an oleaut32 access violation; it is not acceptance or crash repair.
+
 Inventory UI query correction within Slice4be,2026-09-30 UTC: D3 now explicitly
 clarifies read-only resolver/lifetime requirements under approved semantic
 inheritance. Core's four Inventory UI query bridges must use an existing exact
@@ -9,20 +23,19 @@ source, never schema ensure/create/save, preserve caller-owned dirty workbooks,
 and close only their own temporary read-only source without saving. Missing
 sources keep existing empty/unavailable results. Protect nonempty query results,
 `System_Key`, custom columns and public Production launch/reopen byte preservation
-before runtime edits. Expected behavioral RED is the observed launch write plus
+before runtime edits. The protecting behavioral RED was the observed launch write plus
 focused query ownership/missing-store violations; compile or trace failures are
-not product RED. Planned runtime scope is Core query dispatch/resolution;
+not product RED. Runtime scope is Core query dispatch/resolution;
 Domain query semantics, explicit write/bootstrap paths and the Close contract
 remain intact. Any broader discrepancy requires separate evidence and scope.
 
-Supplying-call trace is now retained: the public Production launcher enters
+The baseline supplying-call trace is retained: the public Production launcher enters
 Picker.Query -> Resolver -> OpenOrCreate -> schema ensure, unprotects a sheet,
 changes the source from Saved=True to False, then saves it back to True. The
-frozen candidate remains94 PASS/138 FAIL across232 checks; no runtime repair has
-been made. The trace-destination mistake in an earlier repeat is recorded in the
-evidence file and excluded from causal proof. Run the new supplemental seeded
-query gate before changing Core dispatch; retain the initial-launch byte failure
-as the packaged behavioral RED.
+frozen baseline has94 PASS/138 FAIL across232 checks. The trace-destination mistake
+in an earlier repeat is recorded and excluded from causal proof. Supplemental
+query RED88/34 across122 checks was established before changing Core dispatch.
+Retain the initial-launch byte failure as the packaged behavioral RED.
 
 Production Close test-first checkpoint,2026-09-30 UTC: the frozen Detail candidate
 produces93 PASS/139 FAIL, repeated with trace-only instrumentation. All232 check
@@ -36,7 +49,7 @@ canonical Inventory workbook write on the first public Production launch: six
 container parts change, including table and worksheet parts, then its hash stays
 stable through Close/reopen. D3 requires read-only UI queries; D9/D10 retain the
 read/write split. The retained query/resolver/schema/save trace above supplies
-the cause that must be corrected before Close observations. No write-on-read
+the cause corrected by the focused candidate above. No write-on-read
 exception or reset preservation pin is authorized. Exact evidence is in
 `tests/integration/plan022_slice4be_production_close_results.md` in the code repository.
 

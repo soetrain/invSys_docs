@@ -1,25 +1,27 @@
 # Production form tracking coverage audit
 
-Version 1.68. Last reviewed: 2026-09-30 UTC, initial-launch query write traced.
+Version 1.69. Last reviewed: 2026-09-30 UTC, D3 query focused GREEN.
 
-The retained public-launch trace identifies the picker query entering the
-write/create resolver, unprotecting a sheet during schema ensure and saving the
-dirty authority workbook. Runtime remains unchanged; supplemental query RED is
-next. This resolves the supplying-call question, not the runtime defect.
+The isolated Core query candidate passes80/80 supplemental cases and real public
+launch/close/reopen authority preservation after query RED88/34. Combined results
+are175/137 across312 checks; all137 failures are missing Close observations.
+Five builds/compiles, static ratchets, smoke86, normal closure/preservation, zero delayed
+Excel failures and four reviewed images pass. Broad regressions are pending.
+Only Core's Inventory bridge changes; control coverage remains44/68 constructed
+buttons in catalog20. Evidence and excluded fixture/native failures are in
+`tests/integration/plan022_slice4be_inventory_query_results.md` in code.
 
 Architecture D3 now makes resolver/workbook lifetime part of the existing
-read-only UI query rule. Plan022 and controls1.328 require focused nonempty-result,
-missing-source, dirty caller-workbook and byte-preservation coverage before a
-Core query correction. Runtime coverage counts remain unchanged; neither this
-clarification nor supplying-call instrumentation is a registered control or GREEN.
+read-only UI query rule. Plan022 and controls1.329 retain nonempty-result,
+missing-source, dirty caller-workbook and byte-preservation requirements. Query
+GREEN does not register or accept Production Close or another tracked control.
 
 The packaged Close baseline has232 checks:93 PASS/139 FAIL initially and with
 trace-only instrumentation, then94 PASS/138 FAIL after enabling real Excel events
 for the public workbook-close fixture. All42 prior checks and five compiles pass;
 normal closure, preservation and zero delayed Excel failures hold. Missing Close
-registration/observations account for137 failures. The remaining extra failure
-is an Inventory authority write during the first public launch, before Close;
-correct the now-traced query under D3 without resetting the preservation pin.
+registration/observations account for137 failures. The extra launch-write failure
+is now corrected in the focused candidate without resetting its preservation pin.
 Runtime remains catalog20 with44/68 constructed buttons registered. Evidence:
 `tests/integration/plan022_slice4be_production_close_results.md` in the code repository.
 
@@ -29,7 +31,7 @@ conclude CLOSED; internal unload/workbook shutdown do not invent user activity.
 No runtime registration or clean focused RED/GREEN is claimed yet. The implemented
 census remains44/68 constructed buttons and24 unregistered, including this now
 specified Close control. Thirty nonbutton handlers and other role/launcher
-surfaces retain their separate pending coverage. Plan022 and controls1.328 name
+surfaces retain their separate pending coverage. Plan022 and controls1.329 name
 the test-first next action; do not count contract documentation as implementation.
 
 The separate Admin Detail heading correction now completes its planned matrix:
