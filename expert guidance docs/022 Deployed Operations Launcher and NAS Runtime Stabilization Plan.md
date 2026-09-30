@@ -13,8 +13,13 @@ is consolidated into one typed Core owner; final dynamic9/45/duplicates191 and a
 28 module limits hold, with frmProduction11735->11719 and three schemas valid.
 Final paired paths93/93 and component regression795/795 retain exact prior
 identities, five compiles, preservation and normal closure; six paired captures
-are reviewed. Layout/remaining regressions/full chain/reusable evidence and broader
-acceptance remain pending. Exact evidence: code
+are reviewed. Layout passes with three reviewed captures; full chain32/32, live
+roles48/48 and Create Warehouse15/15 retain exact prior checks, normal closure
+and preservation. Smoke86/86 retains normal closure after a calibrated test-only
+deadline increase from1 to30 seconds: both comparison and ordinary Final exits
+take over2.3 seconds. All assertions and ownership guards remain unchanged;
+earlier assisted evidence retains its scope. Remaining regressions/reusable and
+broader acceptance remain pending. Exact evidence: code
 `tests/integration/plan022_slice4be_production_recipe_order_results.md`.
 Preserve the existing bounded ordering algorithm, node identities, non-order row
 fields, connection values, renumbering and refresh side effects, including local changes before a
