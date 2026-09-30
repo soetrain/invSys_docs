@@ -1,19 +1,27 @@
 # invSys Form Controls v1
 
-**Version:** 1.296 (designer load/refresh focused RED recorded; implementation pending)
+**Version:** 1.297 (designer load/refresh focused GREEN; acceptance gates pending)
 
-The unchanged catalog18 package completes166 PASS/455 FAIL across621 unique
-checks through the five existing load/refresh Click handlers, with five compiles,
-preservation, unassisted closure and zero Excel Application failures. All failures
-are classified missing observations/metadata or required guards/failure reporting.
-Existing local behavior, saved authority, unknown columns and older records remain
-intact. No runtime implementation or coverage increase is claimed. Exact evidence
-and separate remaining recording/view/regression gates are in the code repository's
-`tests/integration/plan022_slice4be_production_design_read_results.md`.
+The isolated `validation-production-design-reads` catalog19 candidate completes
+621/621 focused checks with the exact preceding RED identities (166 PASS/455 FAIL).
+Five instrumented compiles, settings/package preservation, unassisted closure and
+zero Excel Application failures pass. Existing local behavior, saved authority,
+unknown columns and older records remain intact. It registers103 global IDs and
+42/68 constructed Production controls,26 unregistered. Registration is not acceptance.
+Separate recording/view evidence and the broad regression gates remain pending.
+Catalog18 and17 comparison packages are preserved. Exact evidence is in the code
+repository's `tests/integration/plan022_slice4be_production_design_read_results.md`.
+
+The separate recording gate exposes a pending integration defect: PRESENTED is
+published correctly but absent from the Expected Conclusion editor's fixed outcome
+list. Clean actual-editor RED is90 PASS/two expected missing-PRESENTED failures,
+with five compiles, preservation, normal closure and zero Excel Application
+failures. Correct that Core choice list before full paired-path GREEN. The initial absent-value write triggers VBA380 and assisted fixture closure;
+it is retained as incomplete evidence, not a full paired-path GREEN.
 
 Architecture v4.11 D18 specifies these five discovered controls for catalog19:
 
-| Planned ControlId | Existing caption / actual handler | Positive local fact |
+| ControlId | Existing caption / actual handler | Positive local fact |
 |---|---|---|
 | `PRODUCTION_PROCESS_REFRESH` | Refresh / `mBtnProcessRefresh_Click` | REFRESHED |
 | `PRODUCTION_PROCESS_LOAD` | View Process / `mBtnProcessLoad_Click` | PRESENTED |
@@ -21,8 +29,7 @@ Architecture v4.11 D18 specifies these five discovered controls for catalog19:
 | `PRODUCTION_RECIPE_REFRESH` | Refresh / `mBtnRecipeRefresh_Click` | REFRESHED |
 | `PRODUCTION_RECIPE_LOAD` | Load / `mBtnRecipeLoad_Click` | PRESENTED |
 
-These remain unregistered and unaccepted. Current runtime is catalog18/98 global
-IDs,37/68 constructed Production controls. Owner PRODUCTION_DESIGNER, role
+These are registered in the isolated catalog19 candidate and remain unaccepted. Owner PRODUCTION_DESIGNER, role
 Production, class Command, existing PROD_POST/ADMIN_MAINT boundary. Only the
 listed outcome per control can establish local CommandCompleted, with saved
 definitions unchanged and no Domain application claim. Refresh does not establish

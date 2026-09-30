@@ -2,24 +2,29 @@
 
 **Status:** Current corrective implementation plan
 
-**Designer load/refresh focused RED,2026-09-30 UTC:** the unchanged catalog18
-package completes166 PASS/455 FAIL across621 unique checks through the five actual
-Click handlers, after five instrumented compiles. Failures are exactly the missing
-catalog/observations, current-context/permission/loading/nested guards, visible
-tracking-failure notices and handled local failures. Existing local algorithms,
-saved authority, unknown columns, workbook bytes and older records are preserved.
-Settings/package preservation, unassisted closure and the full-interval Application
-audit pass; no desktop error5 occurs. Two earlier harness failures are retained
-separately. Runtime remains unchanged; next is typed owner/catalog implementation,
-exact focused GREEN and separate recording/view plus complete regression evidence.
-See `tests/integration/plan022_slice4be_production_design_read_results.md` in the
-code repository for exact controllers, classifications and remaining gates.
+**Designer load/refresh focused GREEN,2026-09-30 UTC:**
+The isolated `validation-production-design-reads` catalog19 candidate completes
+621/621 focused checks with the exact preceding RED identities (166 PASS/455 FAIL).
+Five instrumented compiles, settings/package preservation, unassisted closure and
+zero Excel Application failures pass. Existing local behavior, saved authority,
+unknown columns and older records remain intact. It registers103 global IDs and
+42/68 constructed Production controls,26 unregistered. Registration is not acceptance.
+Separate recording/view evidence and the broad regression gates remain pending.
+Catalog18 and17 comparison packages are preserved. Exact evidence is in the code
+repository's `tests/integration/plan022_slice4be_production_design_read_results.md`.
 
-**Next bounded work: Production designer load/refresh observations.** Architecture
+The separate recording gate exposes a pending integration defect: PRESENTED is
+published correctly but absent from the Expected Conclusion editor's fixed outcome
+list. Clean actual-editor RED is90 PASS/two expected missing-PRESENTED failures,
+with five compiles, preservation, normal closure and zero Excel Application
+failures. Correct that Core choice list before full paired-path GREEN. The initial absent-value write triggers VBA380 and assisted fixture closure;
+it is retained as incomplete evidence, not a full paired-path GREEN.
+
+**Active bounded work: Production designer load/refresh observations.** Architecture
 v4.11 D18's discovered-control refinement specifies catalog19 for Process Refresh,
-View Process, Edit as New Version, Recipe Refresh and Load. Runtime remains
-catalog18/98 global IDs and37/68 constructed Production controls; the five planned
-IDs are not yet registered. Preserve catalogs1-18 and the frozen comparison
+View Process, Edit as New Version, Recipe Refresh and Load. The isolated candidate
+now registers these five IDs; full acceptance remains pending. Preserve catalogs1-18
+and the frozen comparison
 packages. This uses the approved D18 semantic-inheritance rule, not a new source
 read, permission, authority or algorithm decision.
 
@@ -39,8 +44,9 @@ frozen catalog18 package through those actual handlers. The focused RED above
 records missing observations/context guards, not compilation or fixture failure.
 Protect real released definitions, empty/malformed responses, partial failure,
 saved authority, unknown columns, exact old catalog identities, immutable records
-and all guard/optional-tracking paths. Then implement typed Operations ownership
-plus Core catalog/matching support, followed by separate original recording,
+and all guard/optional-tracking paths. Typed Operations ownership and Core
+catalog/matching support pass the exact focused GREEN. Next require separate
+original recording,
 publication and How-To/Diagnostic/Compare evidence and the complete established
 regression set. A new read-validation/repair behavior would need an explicit
 architecture decision before implementation; none is proposed here.
