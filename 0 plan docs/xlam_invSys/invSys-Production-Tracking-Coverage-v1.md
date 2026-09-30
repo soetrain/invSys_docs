@@ -1,6 +1,12 @@
 # Production form tracking coverage audit
 
-Version 1.30. Last reviewed: 2026-09-30 UTC, Recipe ordering automated gates GREEN.
+Version 1.31. Last reviewed: 2026-09-30 UTC, Recipe structure contract specified.
+
+Next bounded group: Architecture v4.11 D18 and Plan022 specify catalog18 for the
+five Recipe structure commands below. This preserves existing local editing and
+adds the inherited observation/context guards. Protect actual packaged handlers
+with RED before runtime implementation; current catalog17 registration remains
+32/68,36 pending. Specified IDs are not yet runtime registrations or acceptance.
 
 Bounded checkpoint: Architecture v4.11 D18 and Plan022 specify catalog17 observations
 for Recipe Designer Move Up, Move Down and Auto Order. This preserves existing
@@ -302,11 +308,11 @@ from permission to stage or export a catalog worksheet.
 
 | UI control | Caption | Actual handler | Tracking ID/status |
 |---|---|---|---|
-| `btnRecipeAddProcess` | Add Process | `mBtnRecipeAddProcess_Click` | Pending |
+| `btnRecipeAddProcess` | Add Process | `mBtnRecipeAddProcess_Click` | `PRODUCTION_RECIPE_ADD_PROCESS`: catalog18 specified; RED/implementation pending |
 | `btnRecipeAutoOrder` | Auto Order | `mBtnRecipeAutoOrder_Click` | `PRODUCTION_RECIPE_AUTO_ORDER`: catalog17 automated gates GREEN; user acceptance pending |
 | `btnRecipeClear` | Clear | `mBtnRecipeClear_Click` | `PRODUCTION_RECIPE_CLEAR` |
-| `btnRecipeConnect` | Connect | `mBtnRecipeConnect_Click` | Pending |
-| `btnRecipeDisconnect` | Disconnect | `mBtnRecipeDisconnect_Click` | Pending |
+| `btnRecipeConnect` | Connect | `mBtnRecipeConnect_Click` | `PRODUCTION_RECIPE_CONNECT`: catalog18 specified; RED/implementation pending |
+| `btnRecipeDisconnect` | Disconnect | `mBtnRecipeDisconnect_Click` | `PRODUCTION_RECIPE_DISCONNECT`: catalog18 specified; RED/implementation pending |
 | `btnRecipeLoad` | Load | `mBtnRecipeLoad_Click` | Pending |
 | `btnRecipeMoveDown` | Move Down | `mBtnRecipeMoveDown_Click` | `PRODUCTION_RECIPE_MOVE_DOWN`: catalog17 automated gates GREEN; user acceptance pending |
 | `btnRecipeMoveUp` | Move Up | `mBtnRecipeMoveUp_Click` | `PRODUCTION_RECIPE_MOVE_UP`: catalog17 automated gates GREEN; user acceptance pending |
@@ -314,9 +320,9 @@ from permission to stage or export a catalog worksheet.
 | `btnRecipeObsolete` | Obsolete | `mBtnRecipeObsolete_Click` | `PRODUCTION_RECIPE_OBSOLETE` (partial) |
 | `btnRecipeRefresh` | Refresh | `mBtnRecipeRefresh_Click` | Pending |
 | `btnRecipeRelease` | Release | `mBtnRecipeRelease_Click` | `PRODUCTION_RECIPE_RELEASE` (partial) |
-| `btnRecipeRemoveProcess` | Remove Process | `mBtnRecipeRemoveProcess_Click` | Pending |
+| `btnRecipeRemoveProcess` | Remove Process | `mBtnRecipeRemoveProcess_Click` | `PRODUCTION_RECIPE_REMOVE_PROCESS`: catalog18 specified; RED/implementation pending |
 | `btnRecipeSave` | Save Draft | `mBtnRecipeSave_Click` | `PRODUCTION_RECIPE_SAVE` (partial) |
-| `btnRecipeUpdateConnection` | Update | `mBtnRecipeUpdateConnection_Click` | Pending |
+| `btnRecipeUpdateConnection` | Update | `mBtnRecipeUpdateConnection_Click` | `PRODUCTION_RECIPE_UPDATE_CONNECTION`: catalog18 specified; RED/implementation pending |
 | `btnRecipeValidate` | Validate Recipe | `mBtnRecipeValidate_Click` | `PRODUCTION_RECIPE_VALIDATE` |
 
 ### Ingredients Assignment (7)

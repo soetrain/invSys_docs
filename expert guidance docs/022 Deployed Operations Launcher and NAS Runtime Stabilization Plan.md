@@ -2,6 +2,27 @@
 
 **Status:** Current corrective implementation plan
 
+**Active bounded4be group: Recipe structure observations.** Architecture v4.11 D18
+specifies catalog18 for the existing Add Process, Remove Process, Connect, Update
+and Disconnect handlers. This is an approved semantic-inheritance refinement;
+runtime registration remains catalog17,32/68,36 pending until protecting RED and
+implementation. Preserve current node allocation, incident-edge removal,
+connection validation, Update append fallback, display-index mapping, selections
+and refresh side effects. Only STAGED concludes local CommandCompleted; records
+cannot assert saved definitions or Domain application. Captured-context/current
+capability and loading/nested guards precede edits; optional tracking remains
+non-blocking and fixed metadata remains redacted.
+Create `Test-Slice4beProductionRecipeStructure.ps1` and disposable adapters to
+invoke the five actual packaged Click handlers on frozen
+`deploy/validation-production-recipe-order-final`. Expected RED is missing
+catalog18 observations/terminal facts and inherited guards; existing authorized
+edit semantics must remain GREEN. Protect failure uncertainty and partial edits
+without asserting rollback. No compile, fixture or harness failure counts as RED.
+Then implement typed Operations actions and Core catalog/outcome matching, retain
+all current GREENs, and require independent recorded guide/observed-run comparison,
+packaged compile/layout/static/live-role/full-chain/reusable and visible evidence.
+No authority, capability, saved-schema or edit-algorithm amendment is proposed.
+
 **Bounded4be checkpoint: Recipe ordering automated gates GREEN.** Architecture v4.11 D18
 now specifies catalog17 for Move Up, Move Down and Auto Order in Recipe Designer,
 under the approved discovered-control/semantic-inheritance rules. Unpromoted

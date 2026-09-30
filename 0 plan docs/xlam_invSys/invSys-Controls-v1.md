@@ -1,6 +1,21 @@
 # invSys Form Controls v1
 
-**Version:** 1.287 (Recipe ordering automated gates GREEN; user acceptance pending)
+**Version:** 1.288 (Recipe structure contract specified; implementation pending)
+
+Architecture v4.11 D18 specifies catalog18 observations for existing Recipe
+Designer Add Process, Remove Process, Connect, Update and Disconnect commands:
+`PRODUCTION_RECIPE_ADD_PROCESS`, `PRODUCTION_RECIPE_REMOVE_PROCESS`,
+`PRODUCTION_RECIPE_CONNECT`, `PRODUCTION_RECIPE_UPDATE_CONNECTION` and
+`PRODUCTION_RECIPE_DISCONNECT`. Owner PRODUCTION_DESIGNER; existing PROD_POST
+with ADMIN_MAINT alternative. Preserve existing local edit/validation/selection
+semantics, including Update append fallback and incident-edge removal. Outcomes
+REQUESTED/STAGED/REJECTED/DENIED/FAILED are fixed and redacted; only STAGED can
+conclude local CommandCompleted, never Domain application. Require captured live
+workbook/context, current capability, loading/nested guards, non-blocking optional
+tracking and truthful failure uncertainty. Packaged actual-handler RED precedes
+implementation; no new registration or acceptance is claimed. Current runtime
+remains catalog17 with32/68 constructed Production controls registered,36 pending.
+See the exact normative refinement and active group in Plan022.
 
 Architecture v4.11 D18 specifies catalog17 for the existing Recipe Designer Move
 Up, Move Down and Auto Order controls: `PRODUCTION_RECIPE_MOVE_UP`,

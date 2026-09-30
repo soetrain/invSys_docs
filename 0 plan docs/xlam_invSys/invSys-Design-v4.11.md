@@ -517,6 +517,76 @@ workbook columns. Publication, original recording order and How-To/Diagnostic/
 Compare both require separate evidence. This records discovered controls within
 the approved contract; it does not amend authority, permissions or saved semantics.
 
+**4be.1 Recipe structure observations (discovered-control refinement; implementation pending):**
+Under the approved D18 local-draft and semantic-inheritance rules, catalog18 adds
+the following existing Recipe Designer commands, preserving catalogs1-17 exactly:
+
+| ControlId | Caption | Actual handler |
+|---|---|---|
+| `PRODUCTION_RECIPE_ADD_PROCESS` | Add Process | `mBtnRecipeAddProcess_Click` |
+| `PRODUCTION_RECIPE_REMOVE_PROCESS` | Remove Process | `mBtnRecipeRemoveProcess_Click` |
+| `PRODUCTION_RECIPE_CONNECT` | Connect | `mBtnRecipeConnect_Click` |
+| `PRODUCTION_RECIPE_UPDATE_CONNECTION` | Update | `mBtnRecipeUpdateConnection_Click` |
+| `PRODUCTION_RECIPE_DISCONNECT` | Disconnect | `mBtnRecipeDisconnect_Click` |
+
+OwnerId is `PRODUCTION_DESIGNER`, role Production, class Command, capability
+PROD_POST with the existing ADMIN_MAINT alternative. Surface is Operations >
+Production > Recipe Designer. EventCode is ControlId + `_` + OutcomeCode.
+REQUESTED is Info/Unknown before current-context permission and local validation.
+STAGED is Info/Unchanged with respect to saved definitions after the selected
+local edit finishes. REJECTED is Warning/Unchanged for missing selection or
+existing validation refusal; DENIED is Blocked/Unchanged before editing. FAILED
+is Error/Unknown and advises inspecting the current draft without promising rollback.
+
+Preserve existing edit semantics:
+
+- Add Process copies the selected entry from the released-Process list into a
+  new local node, using the existing count-based `N` identifier search with
+  case-insensitive collision detection. Preserve Process identity/version/name,
+  appended execution order, selected row and connection-choice refresh. The
+  observation does not assert a fresh Domain status check or save/release.
+- Remove Process requires a selected node, removes its incoming and outgoing
+  local connections using case-insensitive node matching, removes that node,
+  renumbers remaining execution order and refreshes choices/display. Preserve
+  unrelated nodes, connections and instruction values; missing selection is a
+  no-op and cannot conclude successfully.
+- Connect and Update retain the existing required source/output/target/input
+  checks, self-node refusal, at-least-one-positive quantity/percentage check,
+  UOM selection and existing whole-quantity validation. Do not silently tighten
+  the other quantity/percentage field or add graph repair/validation. Preserve
+  case-insensitive duplicate-target-input refusal and Update's exclusion of its
+  selected connection from that check. Connect appends; Update overwrites the
+  selected hidden connection row, or appends when no row is selected. Preserve
+  all seven declared connection fields, trimming of quantity/percentage text,
+  selection and display refresh. An unchanged-value Update can finish STAGED.
+- Disconnect retains visible display-row mapping to the hidden connection index
+  and the existing hidden-selection fallback when that mapping is negative.
+  An invalid final index is a no-op/refusal. A valid row is removed, display and
+  choices refresh, and the connection editor clears. Preserve unaffected rows
+  and existing status wording, including no new success notice for Remove Process.
+
+Require the original live captured workbook, unchanged warehouse/session and
+current capability before any edit or normalization. Stale, signed-out or closed
+bindings refuse without retargeting or attributing records to a replacement
+context. Loading, re-entrancy and programmatic choice/display callbacks create
+no extra actions. Disabled or unavailable optional tracking cannot block an
+authorized edit; unavailable tracking is visible. Record fixed redacted facts,
+never draft text, node/Process/Recipe identities, entered numbers, selections,
+workbook paths or source-event references. A partial failure may retain local
+changes and cannot claim rollback or saved-definition mutation.
+
+For these five controls, only STAGED establishes local CommandCompleted, with
+Domain application not asserted. REQUESTED/REJECTED/DENIED/FAILED cannot conclude;
+VALIDATED/COMPLETED/CONFIRMED/APPLIED are unsupported. Empty references cannot
+establish SourceEventsApplied. D13 requires packaged actual-handler RED/GREEN
+before runtime edits, protecting these existing behaviors, partial-failure
+uncertainty, context/permission/loading/nested guards, optional tracking,
+redaction, immutable earlier records, saved authority and unknown user columns.
+Separate recording/publication/How-To/Diagnostic/Compare evidence and current
+compile/layout/static/live-role/full-chain/reusable regressions remain required.
+This names discovered controls within the approved contract; it changes no
+authority store, permission boundary, Domain schema or existing editing algorithm.
+
 **4be.1 Recipe ordering observations (discovered-control refinement; acceptance pending):**
 Under the approved D18 local-draft and semantic-inheritance rules, catalog17 adds
 `PRODUCTION_RECIPE_MOVE_UP`, `PRODUCTION_RECIPE_MOVE_DOWN` and
