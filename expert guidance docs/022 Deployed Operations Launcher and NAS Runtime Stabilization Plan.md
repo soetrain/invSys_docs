@@ -2,6 +2,19 @@
 
 **Status:** Current corrective implementation plan
 
+Production Close Action Paths GREEN,2026-09-30 UTC: separate source/observed
+recordings, publication, guide authoring, Event Detail and all three presentation
+modes pass90/90 after frozen pre-Close RED45/1. All46 RED identities retain
+relative order and42 prior checks remain GREEN. Five compiles, normal unassisted
+closure, package/settings preservation, zero delayed Excel failures and seven
+reviewed captures pass. The diagnostic proves two dismissals only; authored
+button/window-X instructions do not make the shared Close event distinguish
+gestures or assert saved work/Domain application. Runtime is unchanged from the
+focused candidate. The shared harness also retains regulation paths102/102 in
+exact prior order, with five compiles, normal cleanup/preservation and zero
+delayed Excel failures. Broader post-change regressions remain pending. Evidence:
+`tests/integration/plan022_slice4be_production_close_results.md` in code.
+
 Production Close focused GREEN,2026-09-30 UTC: the isolated
 `validation-production-close-observations` candidate passes312/312 exact ordered
 pre-implementation checks (baseline175/137), including all80 query and42 prior
@@ -13,8 +26,8 @@ as assisted evidence because the older-policy fixture omitted a required notice
 observer; the clean repeat changes only that fixture observer. Runtime remains
 unchanged between the runs. Current-record/editor fixture expectations advance
 to catalog21/106 controls; historical catalogs remain protected. Close-specific
-independent recordings/How-To/Diagnostic/Compare and broader regressions remain
-pending. Evidence: `tests/integration/plan022_slice4be_production_close_results.md`
+independent recordings/How-To/Diagnostic/Compare now pass as recorded above;
+broader regressions remain pending. Evidence: `tests/integration/plan022_slice4be_production_close_results.md`
 in code. No promotion, complete Slice4be coverage or human acceptance is claimed.
 
 Production Close implementation basis: the verified query candidate.

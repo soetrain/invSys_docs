@@ -1,6 +1,17 @@
 # Production form tracking coverage audit
 
-Version 1.73. Last reviewed: 2026-09-30 UTC, Close focused GREEN.
+Version 1.74. Last reviewed: 2026-09-30 UTC, Close paths GREEN.
+
+Close-specific independent recordings and Action Paths pass90/90 after frozen
+pre-Close RED45/1; all46 RED identities retain relative order and42 prior checks
+remain GREEN. Publication, actual guide authoring, Event Detail and all three
+presentation modes preserve the dismissal-only contract. Five compiles, normal
+closure/preservation, zero delayed Excel failures and seven reviewed images pass.
+Instructions distinguish button/window-X gestures; recorded events prove two
+dismissals without distinguishing those gestures or asserting Domain application.
+The shared harness also retains regulation paths102/102 in exact prior order,
+five compiles, normal cleanup/preservation and zero delayed Excel failures.
+Runtime is unchanged; broader post-change regressions remain pending.
 
 Current catalog21 candidate `validation-production-close-observations` registers
 106 global IDs and45/68 constructed Production buttons;23 buttons remain
@@ -9,8 +20,8 @@ unregistered and30 nonbutton handlers retain pending coverage review. Close pass
 prior checks. Five builds/compiles, cold-start references, static limits, normal
 closure/preservation, zero delayed Excel failures and four reviewed images pass.
 An assisted first run is excluded; the clean repeat fixes only the older-policy
-notice observer. Close-specific separate recordings/How-To/Diagnostic/Compare and
-broader regressions remain required. Evidence:
+notice observer. Close-specific separate recordings/How-To/Diagnostic/Compare
+now pass above; broader regressions remain required. Evidence:
 `tests/integration/plan022_slice4be_production_close_results.md` in code.
 
 Close's existing catalog21 contract proceeds under the four-line native event

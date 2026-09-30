@@ -1,6 +1,17 @@
 # invSys Form Controls v1
 
-**Version:** 1.333 (Production Close focused GREEN; paths/regressions pending)
+**Version:** 1.334 (Production Close paths GREEN; broader regressions pending)
+
+Close Action Paths pass90/90 after frozen pre-Close RED45/1, preserving all46 RED
+identities in relative order and42 prior checks. Separate source/observed
+recordings, publication, guide authoring, Event Detail, How-To, Diagnostic and
+Compare retain dismissal-only meaning. Instructions teach button/window X;
+shared Close observations prove two dismissals without identifying gestures.
+Five compiles, normal closure/preservation, zero delayed Excel failures and seven
+directly reviewed captures pass. Shared regulation paths retain102/102 exact
+ordered checks, five compiles, normal cleanup/preservation and zero delayed Excel
+failures. Runtime remains unchanged. Broader post-change
+gates and human acceptance remain open.
 
 Catalog21 `PRODUCTION_CLOSE` passes312/312 exact ordered packaged checks after
 175/137 RED, retaining80 query checks and42 prior checks. Button and native close
@@ -11,8 +22,8 @@ limits, normal closure/preservation, zero delayed Excel failures and four review
 images pass. A first assisted run exposed a missing older-policy notice observer
 in the fixture; the clean repeat uses unchanged packages. Current registration
 is106 global IDs and45/68 Production buttons, with23 buttons unregistered and30
-nonbutton handlers pending coverage review. Close-specific paths and broader regressions remain
-pending. See `tests/integration/plan022_slice4be_production_close_results.md` in code.
+nonbutton handlers pending coverage review. Close-specific paths now pass above;
+broader regressions remain pending. See `tests/integration/plan022_slice4be_production_close_results.md` in code.
 
 Production Close retains the approved dismissal-only contract and protecting
 packaged RED. `PRODUCTION-CLOSE-NATIVE-HOOK-01` permits only four form lines for
