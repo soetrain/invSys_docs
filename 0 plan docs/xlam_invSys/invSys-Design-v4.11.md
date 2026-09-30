@@ -4152,7 +4152,13 @@ for the constrained external-stock allocation described here.
   generated Requirement ID. Entering any acceptable-item cell by mouse, Tab,
   or Enter invokes the existing Core item-search interaction and fills that
   exact numbered managed item/SKU pair without allocating a physical
-  `System_Key`. Historical vertical `ALTERNATIVE` rows remain import-compatible
+  `System_Key`. D14's normalized-header rule also applies when Core identifies
+  that selected pair during commit: changed header case or surrounding spaces
+  must not leave the visible item and hidden paired SKU inconsistent, or redirect
+  the commit to another pair. Other pairs and unknown columns remain unchanged.
+  This clarifies the existing D4/D14/D15 selection contract; ownership, supported
+  record types, inventory allocation and save behavior are unchanged.
+  Historical vertical `ALTERNATIVE` rows remain import-compatible
   but are not the primary operator layout.
 - UOM cells use an in-cell dropdown sourced from the current warehouse **Recipe
   UOM Catalog** maintained in Settings. Retrieval rejects a UOM absent from

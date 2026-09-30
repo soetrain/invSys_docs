@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.339 (Process worksheet header-preservation focused GREEN)
+**Version:** 1.340 (Operations worksheet gates complete; Core picker prerequisite)
 
 Process worksheet tracking remains pending. Source review found positional
 managed-field access that can target inserted user columns before Retrieve
@@ -10,13 +10,22 @@ Retrieve-handler test established RED before runtime changes:97 PASS/10 expected
 failures across107 checks on the frozen Close baseline. Ordinary import and
 preservation checks pass. The isolated correction now passes107/107 exact checks,
 five compiles, static limits and normal cleanup/preservation. Three operator
-captures were reviewed; one blank worksheet capture is excluded. Full reusable,
-smoke, chain/live/Create, layout and Close/query regression gates remain pending.
+captures were reviewed; one blank worksheet capture is excluded. Full reusable171,
+smoke86, chain32/live48/Create15, three-size/five-page layout and Close/query312 now
+pass with exact prior checks, normal cleanup/preservation and delayed Excel audits.
+The layout's three captures and Close's four captures were also reviewed.
 Exact evidence is in code:
 `tests/integration/plan022_slice4be_process_worksheet_headers_results.md`. Send Process to
 Sheet and Add Acceptable Item save local worksheet edits; Retrieve may submit
 multiple Designs DRAFT-save events. Their observation contract must preserve
 those distinct owners and partial results. No new tracking IDs or acceptance.
+
+Next prerequisite: Core's actual picker commit must preserve the selected numbered
+item/SKU pair under normalized headers. Source audit finds untrimmed/case-sensitive
+pair-prefix matching may change the visible item but leave its paired SKU unchanged.
+No pair1 fallback exists in this path. D4/D14/D15 already govern this behavior;
+the normative clarification adds no ownership/allocation/save change. Establish
+packaged behavioral RED before correcting Core. This case is not yet runtime-proven.
 
 Close's scoped automated gate set is complete on the isolated catalog21 candidate:
 focused312, independent paths90, shared regulation paths102, smoke86, chain32/

@@ -2,25 +2,26 @@
 
 **Status:** Current corrective implementation plan
 
-Next within Slice4be: Process worksheet header preservation before registering
-its three discovered actions. Source review finds fixed-position reads/writes in
-`modProductionProcessWorksheet`, including ID and Requirement ID maintenance
-before retrieval validation. This conflicts with D14's normalized managed-header
-and unknown-column rules; D15 now explicitly names their application to this
-workbench. Protect the actual packaged Retrieve handler first: an invalid draft
-with a custom column inserted before a managed field must be rejected without
-overwriting that custom data. Test header normalization and retained identity
-alongside the ordinary layout. Packaged RED now proves the defect:97 PASS/10
-expected failures across107 checks, including preserved ordinary mixed-UOM import,
-five compiles and normal cleanup. The isolated Operations-only correction now
-passes107/107 exact checks, five compiles, static limits, normal preservation/
-cleanup and three reviewed operator captures. Full reusable Production, smoke,
-chain/live roles/Create Warehouse, layout and Close/query regressions are pending.
-No catalog22 registration is claimed. Exact evidence:
-`tests/integration/plan022_slice4be_process_worksheet_headers_results.md`. Preserve the
-completed Close candidate and its GREEN regressions. Observation design must
-separately reflect local worksheet changes and Retrieve's possibly multiple
-Designs submissions, rather than inferring application from a handler Boolean.
+Next within Slice4be: Core Process item-picker header alignment, before the three
+worksheet actions are registered. Source audit finds the case-sensitive/untrimmed
+prefix in `cDynItemSearch.ProcessAlternativePairNumber` can fail to resolve the
+selected numbered pair after the item label changes, leaving its SKU unchanged.
+There is no pair1 fallback. This is source-predicted, not runtime-proven RED.
+D4/D14/D15 require the same normalized selected-pair matching; the normative
+clarification preserves ownership, record types, allocation and save behavior.
+Protect the actual packaged picker commit first, including canonical/normalized
+later pairs, exact selected SKU, other-pair/custom preservation and captured book.
+
+Operations worksheet maintenance/retrieval completes its scoped gates,2026-09-30
+UTC: RED97 PASS/10 expected failures -> GREEN107/107, build/five compiles, static,
+full reusable171, smoke86, chain32/live48/Create15, three-size/five-page layout and
+Close/query312. Exact prior checks, normal cleanup, preservation, delayed Excel
+audits and reviewed captures pass. The candidate is isolated/unpromoted; Core
+picker normalization is not covered by that success. No catalog22 registration.
+Exact evidence: `tests/integration/plan022_slice4be_process_worksheet_headers_results.md`.
+Preserve this candidate and the completed Close evidence. Later observation design
+must distinguish local worksheet changes from Retrieve's possibly multiple Designs
+submissions and partial results, without inferring application from a handler Boolean.
 
 Production Close scoped automated gates complete,2026-09-30 UTC: focused312,
 independent paths90, shared regulation paths102, smoke86, chain32/live48/Create15,

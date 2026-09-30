@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.79. Last reviewed: 2026-09-30 UTC, Process worksheet focused GREEN.
+Version 1.80. Last reviewed: 2026-09-30 UTC, worksheet gates/Core picker prerequisite.
 
 Next grouping: the three Process worksheet buttons. Send saves a newly created
 local table; Add Acceptable Item saves additional local columns; Retrieve validates
@@ -14,10 +14,18 @@ reordered-header failures:97 PASS/10 FAIL/107, ordinary mixed-UOM import passes,
 five compiles and normal cleanup/preservation hold. The isolated two-module
 Operations correction passes107/107 exact focused checks, build/five compiles,
 static ratchets and normal cleanup/preservation. Three operator captures are
-reviewed; one blank worksheet image is excluded. Full reusable, smoke, chain/live/
-Create, layout and Close/query regressions remain pending. No worksheet tracking
-control is registered. Exact code evidence:
+reviewed; one blank worksheet image is excluded. Full reusable171, smoke86,
+chain32/live48/Create15, three-size/five-page layout and Close/query312 now pass,
+retaining exact prior checks with normal cleanup/preservation and delayed audits.
+Three layout and four Close captures are reviewed. No worksheet tracking control
+is registered. Exact code evidence:
 `tests/integration/plan022_slice4be_process_worksheet_headers_results.md`.
+
+Before registration, protect Core `cDynItemSearch.CommitSelection` for normalized
+numbered Process headers. Source audit shows case-sensitive/untrimmed pair-prefix
+matching can leave the SKU unchanged after the visible label is updated; there is
+no pair1 fallback. This is not runtime-proven RED yet. D4/D14/D15 require exact
+selected-pair matching, other-pair/custom preservation and captured-book binding.
 
 The isolated catalog21 Close candidate completes its scoped automated gate set:
 focused312, paths90, regulation paths102, smoke86, chain32/live48/Create15,
