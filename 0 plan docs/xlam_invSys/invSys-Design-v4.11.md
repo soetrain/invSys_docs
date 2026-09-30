@@ -546,7 +546,7 @@ through the actual packaged Update handler, including all seven fields, blank/
 nonnumeric/negative-other-field cases allowed by current validation, unchanged
 values, other rows, selection and existing reusable Production regressions.
 
-**4be.1 Recipe structure observations (discovered-control refinement; implementation pending):**
+**4be.1 Recipe structure observations (discovered-control refinement; acceptance pending):**
 Under the approved D18 local-draft and semantic-inheritance rules, catalog18 adds
 the following existing Recipe Designer commands, preserving catalogs1-17 exactly:
 

@@ -27,6 +27,12 @@ observations, with unassisted restart/final exit. Smoke retains86/86 with unassi
 Initial/Final exit. Both preserve settings/packages and record zero Excel failures.
 Component edits795/795 and Settings202/202 retain exact prior identities and five
 compiles, with unassisted closure/restart, preservation and zero Excel failures.
+Settings activity486/486 retains all481 prior identities plus five new older-policy
+exclusions, five compiles, eight reviewed captures, delayed unassisted closure,
+preservation and zero Excel Application failures.
+Recipe-order Action Paths retains93/93 exact prior checks, five compiles,
+six reviewed principal captures, unassisted closure, preservation and zero Excel
+Application failures. All three guide steps match the distinct observed run.
 
 **Recipe structure correction approved2026-09-30 UTC:** baseline Update does not satisfy
 the proposed seven-field preservation assertions. Architecture v4.11 now carries

@@ -21,6 +21,12 @@ Full reusable retains2 aggregates/171 exact prior Boolean observations; smoke86/
 also retains unassisted closure, preservation and zero Excel failures.
 Components795/795 and Settings202/202 retain exact prior checks and five compiles,
 unassisted closure/restart, preservation and zero Excel failures.
+Settings activity486/486 retains481 prior identities plus the five catalog18
+older-policy exclusions, five compiles, eight reviewed captures, delayed unassisted
+closure, preservation and zero Excel failures.
+Recipe-order Action Paths retains93/93 exact prior checks, five compiles,
+six reviewed principal captures, unassisted closure, preservation and zero Excel
+Application failures. All three guide steps match the distinct observed run.
 
 The packaged baseline exposes five Update-behavior assertion failures in addition
 to missing tracking/guards. Architecture v4.11 records the user's explicit

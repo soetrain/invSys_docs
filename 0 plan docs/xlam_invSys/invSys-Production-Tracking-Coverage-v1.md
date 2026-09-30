@@ -20,6 +20,12 @@ restart/final exit. Smoke86/86 retains unassisted Initial/Final exit. Both prese
 settings/packages and record zero Excel Application failures.
 Components795/795 and Settings202/202 retain exact prior checks and five compiles,
 unassisted closure/restart, preservation and zero Excel failures.
+Settings activity486/486 retains481 prior identities plus the five catalog18
+older-policy exclusions, five compiles, eight reviewed captures, delayed unassisted
+closure, preservation and zero Excel failures.
+Recipe-order Action Paths retains93/93 exact prior checks, five compiles,
+six reviewed principal captures, unassisted closure, preservation and zero Excel
+Application failures. All three guide steps match the distinct observed run.
 The initial incomplete full gate is retained in the code evidence below.
 
 Packaged structure baseline:182 PASS/604 FAIL,786 unique checks;599 missing
