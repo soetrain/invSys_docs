@@ -2,6 +2,19 @@
 
 **Status:** Current corrective implementation plan
 
+**Designer load/refresh focused RED,2026-09-30 UTC:** the unchanged catalog18
+package completes166 PASS/455 FAIL across621 unique checks through the five actual
+Click handlers, after five instrumented compiles. Failures are exactly the missing
+catalog/observations, current-context/permission/loading/nested guards, visible
+tracking-failure notices and handled local failures. Existing local algorithms,
+saved authority, unknown columns, workbook bytes and older records are preserved.
+Settings/package preservation, unassisted closure and the full-interval Application
+audit pass; no desktop error5 occurs. Two earlier harness failures are retained
+separately. Runtime remains unchanged; next is typed owner/catalog implementation,
+exact focused GREEN and separate recording/view plus complete regression evidence.
+See `tests/integration/plan022_slice4be_production_design_read_results.md` in the
+code repository for exact controllers, classifications and remaining gates.
+
 **Next bounded work: Production designer load/refresh observations.** Architecture
 v4.11 D18's discovered-control refinement specifies catalog19 for Process Refresh,
 View Process, Edit as New Version, Recipe Refresh and Load. Runtime remains
@@ -21,9 +34,9 @@ FAILED/Unknown. Preserve current-context PROD_POST/ADMIN_MAINT guards, optional
 tracking, fixed redaction and empty source references. Only the actual five
 handlers observe actions; shared helper calls are not extra clicks.
 
-Next D13 gate: add and run `Test-Slice4beProductionDesignReads.ps1` against the
-frozen catalog18 package through those actual handlers. Expected behavioral RED
-is missing observations/context guards, not compilation or fixture failure.
+The D13 gate `Test-Slice4beProductionDesignReads.ps1` runs against the
+frozen catalog18 package through those actual handlers. The focused RED above
+records missing observations/context guards, not compilation or fixture failure.
 Protect real released definitions, empty/malformed responses, partial failure,
 saved authority, unknown columns, exact old catalog identities, immutable records
 and all guard/optional-tracking paths. Then implement typed Operations ownership

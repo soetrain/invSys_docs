@@ -1,6 +1,15 @@
 # Production form tracking coverage audit
 
-Version 1.38. Last reviewed: 2026-09-30 UTC, designer load/refresh contract specified.
+Version 1.39. Last reviewed: 2026-09-30 UTC, designer load/refresh focused RED recorded.
+
+The unchanged catalog18 package completes166 PASS/455 FAIL across621 unique
+checks through the five existing load/refresh Click handlers, with five compiles,
+preservation, unassisted closure and zero Excel Application failures. All failures
+are classified missing observations/metadata or required guards/failure reporting.
+Existing local behavior, saved authority, unknown columns and older records remain
+intact. No runtime implementation or coverage increase is claimed. Exact evidence
+and separate remaining recording/view/regression gates are in the code repository's
+`tests/integration/plan022_slice4be_production_design_read_results.md`.
 
 Next bounded group: five existing designer load/refresh controls are specified
 under Architecture v4.11 D18 for catalog19 but remain unregistered. Process Refresh

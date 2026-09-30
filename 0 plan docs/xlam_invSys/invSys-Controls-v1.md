@@ -1,6 +1,15 @@
 # invSys Form Controls v1
 
-**Version:** 1.295 (designer load/refresh contract specified; implementation pending)
+**Version:** 1.296 (designer load/refresh focused RED recorded; implementation pending)
+
+The unchanged catalog18 package completes166 PASS/455 FAIL across621 unique
+checks through the five existing load/refresh Click handlers, with five compiles,
+preservation, unassisted closure and zero Excel Application failures. All failures
+are classified missing observations/metadata or required guards/failure reporting.
+Existing local behavior, saved authority, unknown columns and older records remain
+intact. No runtime implementation or coverage increase is claimed. Exact evidence
+and separate remaining recording/view/regression gates are in the code repository's
+`tests/integration/plan022_slice4be_production_design_read_results.md`.
 
 Architecture v4.11 D18 specifies these five discovered controls for catalog19:
 
@@ -24,7 +33,7 @@ exceptions are FAILED/Unknown. Guard the original workbook/session/warehouse and
 current permission before work; preserve loading/nested suppression, optional
 tracking and fixed redaction with no definition values or source references.
 No existing caption, sizing or load algorithm is changed by this refinement.
-Focused packaged actual-handler RED is required before runtime implementation;
+Focused packaged actual-handler RED is recorded before runtime implementation;
 Plan022 names the test and complete remaining evidence.
 
 After the failed-host cleanup harness correction, standard unobserved run-only
