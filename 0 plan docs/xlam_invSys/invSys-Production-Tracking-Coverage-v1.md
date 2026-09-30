@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.91. Last reviewed: 2026-09-30 UTC, worksheet observations focused GREEN.
+Version 1.92. Last reviewed: 2026-09-30 UTC, worksheet observations and paths GREEN.
 
 Catalog22 now defines109 global controls and observes48/68 constructed Production
 buttons. The three Process worksheet handlers are implemented and pass595/595
@@ -22,8 +22,11 @@ and the worksheet service6. Initial compile/payload-transfer failures are retain
 as failed evidence and corrected without changing the worksheet algorithm.
 
 Worksheet107 and picker115 pass exact prior checks, five compiles, preservation,
-normal cleanup and delayed audits. Next complete separate recording/publication/Event Detail
-and all three Action Path modes, then remaining layout/live-role/full-chain/
+normal cleanup and delayed audits. Independent paths139 pass separate four-action
+guide/observed recordings, publication, Event Detail, both exact applied Designs
+references and all three views. Five compiles, preservation, normal cleanup,
+delayed audit and six reviewed worksheet captures pass. Close paths90 also retains
+its exact prior checks with clean closure/preservation/audit. Next complete remaining layout/live-role/full-chain/
 reusable and shared-observation regressions. No promotion or human acceptance.
 Exact evidence: `tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.
 The prerequisite history below retains its own frozen-candidate counts.
@@ -778,9 +781,9 @@ from permission to stage or export a catalog worksheet.
 | `btnProcessReuse` | Edit as New Version | `mBtnProcessReuse_Click` | `PRODUCTION_PROCESS_REUSE`: catalog19 candidate; focused/paths GREEN, regressions pending |
 | `btnProcessSave` | Save Draft | `mBtnProcessSave_Click` | `PRODUCTION_PROCESS_SAVE` (partial) |
 | `btnProcessValidate` | Validate | `mBtnProcessValidate_Click` | `PRODUCTION_PROCESS_VALIDATE` |
-| `btnProcessWorksheetAddAlternative` | Add Acceptable Item | `mBtnProcessWorksheetAddAlternative_Click` | `PRODUCTION_PROCESS_WORKSHEET_ADD_ITEM`, catalog22; local STAGED, focused595 GREEN; independent paths and broader regressions pending |
-| `btnProcessWorksheetCreate` | Send Process to Sheet | `mBtnProcessWorksheetCreate_Click` | `PRODUCTION_PROCESS_WORKSHEET_SEND`, catalog22; local STAGED, focused595 GREEN; independent paths and broader regressions pending |
-| `btnProcessWorksheetRetrieve` | Retrieve Selected Process | `mBtnProcessWorksheetRetrieve_Click` | `PRODUCTION_PROCESS_WORKSHEET_RETRIEVE`, catalog22; all-selected CONFIRMED or exact partial FAILED, focused595 GREEN; independent paths and broader regressions pending |
+| `btnProcessWorksheetAddAlternative` | Add Acceptable Item | `mBtnProcessWorksheetAddAlternative_Click` | `PRODUCTION_PROCESS_WORKSHEET_ADD_ITEM`, catalog22; local STAGED, focused595 and independent paths139 GREEN; broader regressions pending |
+| `btnProcessWorksheetCreate` | Send Process to Sheet | `mBtnProcessWorksheetCreate_Click` | `PRODUCTION_PROCESS_WORKSHEET_SEND`, catalog22; local STAGED, focused595 and independent paths139 GREEN; broader regressions pending |
+| `btnProcessWorksheetRetrieve` | Retrieve Selected Process | `mBtnProcessWorksheetRetrieve_Click` | `PRODUCTION_PROCESS_WORKSHEET_RETRIEVE`, catalog22; all-selected CONFIRMED or exact partial FAILED, focused595 and independent paths139 GREEN; broader regressions pending |
 
 ### Recipe Designer (16)
 

@@ -27,8 +27,12 @@ Catalog22 defines109 controls;48/68 constructed Production buttons now have
 observations, with20 buttons and30 nonbutton handlers still requiring coverage
 review. Worksheet107 and picker115 pass their exact prior checks, five compiles,
 preservation, normal cleanup and delayed audits. Focused GREEN is not full
-acceptance. Next complete independent recording/publication/Event Detail and all
-three Action Path modes, then remaining layout/live-role/full-chain/reusable and
+acceptance. Independent paths139 now pass separate four-action recordings, exact
+publication/Event Detail, both applied Designs references, explicit guide intent
+and a reader's independent observed run through all three views. Five compiles,
+normal cleanup, preservation, delayed audit and six reviewed worksheet captures
+pass. Close paths90 retains its exact prior checks with clean closure/preservation/
+audit. Next complete remaining layout/live-role/full-chain/reusable and
 shared observation regressions. Preserve the595 checks and their documented
 closure mapping. No promotion, desktop-error5, crash-repair or human-acceptance
 claim. Exact evidence and pending gates:
