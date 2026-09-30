@@ -33,6 +33,19 @@ preservation and zero Excel Application failures.
 Recipe-order Action Paths retains93/93 exact prior checks, five compiles,
 six reviewed principal captures, unassisted closure, preservation and zero Excel
 Application failures. All three guide steps match the distinct observed run.
+Component Action Paths retains142/142 exact prior checks, five compiles,
+six reviewed principal captures, unassisted closure, preservation and zero Excel
+Application failures, including the ten-step guide and separate observed recording.
+Instruction edits retain411/411 exact prior checks, five compiles, unassisted
+closure, settings/package preservation and zero Excel Application failures.
+Instruction Action Paths retains105/105 exact prior checks, five compiles,
+six reviewed principal captures, delayed unassisted closure, preservation and zero
+Excel Application failures; all five guide steps match with no extra actions.
+Combined visible UOM staging/activity retains264/264 exact prior checks, five
+compiles, both reviewed principal captures, unassisted closure, preservation and
+zero Excel Application failures, including existing-draft reuse and custom columns.
+UOM public Close/reopen retains61/61 exact prior checks, five compiles, three reviewed
+principal captures, unassisted closure, preservation and zero Excel failures.
 
 **Recipe structure correction approved2026-09-30 UTC:** baseline Update does not satisfy
 the proposed seven-field preservation assertions. Architecture v4.11 now carries
