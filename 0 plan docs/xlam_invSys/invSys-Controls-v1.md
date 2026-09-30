@@ -1,6 +1,13 @@
 # invSys Form Controls v1
 
-**Version:** 1.292 (Recipe structure candidate; regression checkpoint, acceptance pending)
+**Version:** 1.293 (Recipe structure candidate; native diagnostic recorded, acceptance pending)
+
+A late-attached native diagnostic passes its aggregate with unassisted closure,
+preservation and zero Excel Application failures, but captures no fatal exception
+or stack. It does not replace the unobserved run-only failure or independently
+compare the67 prior Boolean values. No native cause or repair is established;
+catalog17 remains the validated baseline. Exact diagnostic evidence is in the
+code repository's `tests/integration/plan022_slice4be_production_batch_boundary_results.md`.
 
 The unpromoted `validation-production-recipe-structure` candidate now implements
 the approved connection write and five catalog18 observations:37/68 constructed

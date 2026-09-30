@@ -1,6 +1,13 @@
 # Production form tracking coverage audit
 
-Version 1.35. Last reviewed: 2026-09-30 UTC, Recipe structure candidate under validation.
+Version 1.36. Last reviewed: 2026-09-30 UTC, Recipe structure candidate under validation.
+
+A late-attached native diagnostic passes its aggregate with unassisted closure,
+preservation and zero Excel Application failures, but captures no fatal exception
+or stack. It does not replace the unobserved run-only failure or independently
+compare the67 prior Boolean values. No native cause or repair is established;
+catalog17 remains the validated baseline. Exact diagnostic evidence is in the
+code repository's `tests/integration/plan022_slice4be_production_batch_boundary_results.md`.
 
 The isolated `validation-production-recipe-structure` candidate implements the
 approved connection snapshot and five catalog18 observations. Released-data

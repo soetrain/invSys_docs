@@ -68,6 +68,14 @@ passes, but crash exit is not normal shutdown; post-crash cleanup also loses its
 `IsAddin` property. No desktop error5 is observed. See the structure evidence for
 the exact controller and timestamps; bounded acceptance remains incomplete.
 
+A late-attached native diagnostic passes its aggregate with unassisted closure,
+preservation and zero Excel Application failures, but captures no fatal exception
+or stack. Its redacted report does not independently compare the67 prior values.
+The unobserved run-only failure remains open; no native cause or repair is
+established. See the code repository's
+`tests/integration/plan022_slice4be_production_batch_boundary_results.md` for
+43/43 stack-observer and12/12 placement calibrations and exact runtime evidence.
+
 **Recipe structure correction approved2026-09-30 UTC:** baseline Update does not satisfy
 the proposed seven-field preservation assertions. Architecture v4.11 now carries
 the explicitly approved connection-write-stability decision: snapshot the validated
