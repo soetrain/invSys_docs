@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.303 (designer read focused/paths GREEN; full-chain native failure open)
+**Version:** 1.304 (designer read focused/paths GREEN; full-chain native failure open)
 
 The isolated `validation-production-design-reads-final` catalog19 candidate passes
 621/621 focused checks and114/114 paired-path checks. The focused gate retains the
@@ -63,6 +63,11 @@ Six captures are directly reviewed; How-To shows all ten instructions and the
 scrolled diagnostic tail shows the later matches with zero extra actions. Automated
 checks retain all ten matches and the local-only conclusion; human acceptance
 remains open.
+Instruction editing retains411/411 and instruction paths105/105 exact prior
+checks, five compiles, preservation, unassisted closure and zero Application
+failures. Six captures are directly reviewed: the selected REQUESTED detail is
+separate from STAGED, while the scrolled diagnostic shows all five expected
+STAGED matches, zero extra actions and no Domain-application claim.
 Remaining regression gates are pending; focused621/paired114 GREEN does not
 establish complete acceptance.
 
