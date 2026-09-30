@@ -1,6 +1,14 @@
 # invSys Form Controls v1
 
-**Version:** 1.278 (current-candidate lifecycle, cancellation and Settings observations retained)
+**Version:** 1.279 (smoke shutdown corrected; Settings restart regression retained)
+
+Smoke86/86 now retains unassisted Initial/Final exit after completed-host reference
+release. The repaired test helper passes original8/8 and nested-expired9/9
+calibrations; Settings retains202/202 and both unassisted exits. Preservation and
+zero Excel Application events hold. No form, caption, permission or runtime
+contract changes; normal reusable shutdown and broader acceptance remain open.
+See code `tests/integration/plan022_slice4be_automation_cleanup_results.md`.
+Earlier assisted/failed records below remain historical evidence.
 
 User-authorized work resumes2026-09-29 with successful desktop checks. Component
 RED180/615 becomes GREEN795/795 with exact identities, five compiles, normal

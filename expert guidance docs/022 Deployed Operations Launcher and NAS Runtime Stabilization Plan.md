@@ -2,6 +2,16 @@
 
 **Status:** Current corrective implementation plan
 
+**Isolated test cleanup correction,2026-09-30 UTC:** Smoke retains86/86 with
+unassisted Initial/Final exit after releasing completed-host references. Original
+calibration8/8 and nested-expired-reference calibration9/9 protect the shared
+helper; Settings retains202/202 and unassisted internal/final exit. All packages,
+settings and reports are preserved, with zero Excel Application failure events.
+Every original smoke validator statement and its1000ms wait remain. This changes
+test cleanup only; normal reusable shutdown and earlier native causes remain open.
+Exact evidence: `tests/integration/plan022_slice4be_automation_cleanup_results.md`
+in code. Earlier assisted and rejected attempts below keep their original scope.
+
 **Component focused GREEN,2026-09-29:** protecting RED180/615 becomes795/795 on
 `deploy/validation-production-components`, retaining every check, five instrumented
 compiles, normal unassisted closure, settings/package preservation and two reviewed

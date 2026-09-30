@@ -1,6 +1,13 @@
 # Production form tracking coverage audit
 
-Version 1.21. Last reviewed: 2026-09-30 UTC, lifecycle, cancellation and Settings observations retained.
+Version 1.22. Last reviewed: 2026-09-30 UTC, isolated smoke cleanup corrected.
+
+Later test-tooling correction: Smoke86/86 now exits both hosts unassisted. The
+shared helper passes original8/8 and nested-expired9/9 calibration, and Settings
+retains202/202 with unassisted internal/final exit. Packages/settings/reports are
+preserved with zero Excel Application failures. No runtime behavior changes;
+normal reusable shutdown and broader acceptance remain open. See
+[cleanup evidence](../../../invSys_fork/tests/integration/plan022_slice4be_automation_cleanup_results.md).
 
 User-authorized work resumes with successful desktop checks. Corrected component
 adapters complete RED180/615, then GREEN795/795 with exact identities, five compiles,
