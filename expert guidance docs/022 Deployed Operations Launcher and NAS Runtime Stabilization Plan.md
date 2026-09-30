@@ -95,9 +95,13 @@ failure. Runtime, tests and packages remain unchanged; human acceptance is open.
 Draft/designer regression on catalog20 retains 390/390 exact prior ordered checks,
 including Action Path diagnostics, with five compiles, preservation, normal
 closure and zero delayed Excel failures. No new screenshots are requested by
-this gate; it establishes no new visual or human acceptance. Lifecycle, native
-cancellation, Settings and run-only gates remain pending. Runtime/packages are
-unchanged; exact evidence is in the regulation result record.
+this gate; it establishes no new visual or human acceptance. Lifecycle now retains
+615/615 and native cancellation 94/94 exact prior checks, each with five compiles,
+preservation, normal closure and zero delayed Excel failures. Five native-gate
+images are reviewed: all four confirmation questions focus No, and Settings
+explicitly reports saved configuration with unavailable tracking. Settings and
+run-only gates remain pending. Runtime/packages are unchanged; exact evidence
+is in the regulation result record. Agent review does not establish human acceptance.
 
 **Designer load/refresh focused GREEN,2026-09-30 UTC:**
 The isolated `validation-production-design-reads-final` catalog19 candidate passes
