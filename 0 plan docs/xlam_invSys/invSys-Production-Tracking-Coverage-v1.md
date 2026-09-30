@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.88. Last reviewed: 2026-09-30 UTC, extended RED/closed fixture unresolved.
+Version 1.89. Last reviewed: 2026-09-30 UTC, expanded RED/closure fixture calibrated.
 
 Catalog22's three Process worksheet observations are now specified in Architecture
 v4.11 D18, with local STAGED versus all-selected Retrieve CONFIRMED and FAILED
@@ -8,20 +8,26 @@ partial results retaining exact per-submission Designs states. Initial actual
 handler RED is62 PASS/158 expected FAIL/220, with42 prior GREEN and five compiles.
 Existing local/rejected/single/multi behavior and owner counts pass; missing
 catalog22 and six pairs account for the failures. Preservation, normal closure,
-delayed audits and a reviewed populated-form capture pass. Extend partial/failure/
-guard/tracking/older-policy cases before implementation. GREEN, registration and
+delayed audits and a reviewed populated-form capture pass. Extended cases are
+recorded below. GREEN, registration and
 acceptance remain pending. Code evidence:
 `tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.
 Runtime counts below remain unchanged until verified registration.
 Extended RED is119 PASS/214 expected FAIL/333, retaining all220 initial results.
 Three actual-submission fault cases and32 guard violations are protected; five
-compiles, preservation, normal closure and delayed audit pass. Full closed-binding
-coverage remains a fixture issue: a fresh visible-form diagnostic enters the
-handler, but the longer sequence cannot enter the adapter after workbook closure.
-Two broader runs are excluded, with the later outer trap permitting normal cleanup.
-No error5 or repair claim. Calibrate actual visible-surface/workbook lifetime and
-entry, then finish written capability/optional-tracking/older-policy cases before
-runtime work. Catalog counts and acceptance status remain unchanged.
+compiles, preservation, normal closure and delayed audit pass. Native-window and
+workbook measurements now resolve the fixture ambiguity: Send's surface dismisses
+on shutdown in the longer sequence; Add/Retrieve remain visible and enter their
+handlers. The dismissed branch verifies preservation and the existing binding
+guard without claiming an operator click. Earlier failed attempts stay excluded.
+Expanded RED completes185 PASS/256 expected FAIL/441, retaining exact prior333
+results/order and all42 shared GREEN. Capability loss preserves the same captured
+context; optional tracking and older-policy cases complete. The42 new failures
+are10 draft guards,29 denial assertions and3 absent unavailable notices. Five
+compiles, helper/package/settings preservation, normal closure and delayed audit
+pass. No desktop error5 or runtime repair. Implement the specified observations
+and guards next, keeping441 checks and adding after-yield context-loss/reference
+rejection coverage at those boundaries. Counts and acceptance remain unchanged.
 
 Next grouping: the three Process worksheet buttons. Send saves a newly created
 local table; Add Acceptable Item saves additional local columns; Retrieve validates

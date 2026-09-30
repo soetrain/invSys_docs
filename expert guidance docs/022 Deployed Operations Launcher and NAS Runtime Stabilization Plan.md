@@ -16,15 +16,20 @@ edits, extended RED now verifies119 PASS/214 expected FAIL/333, retaining all220
 initial results. Three actual-submission fault cases retain precise mixed/per-event
 states and post-delete unsaved state. Missing failure pairs and32 guard violations
 account for the new failures; preservation/normal closure/delayed audit pass.
-Closed-workbook coverage is a fixture-calibration blocker: an isolated visible-form
-diagnostic enters the handler normally, but the longer sequence cannot enter its
-form adapter after closure. One earlier attempt required owned-host termination
-for a noncontinuable VBA dialog; the defensive trap now permits normal cleanup.
-Both broader attempts are excluded, with no desktop error5 or proven crash repair.
-Next measure actual operator visibility/workbook lifetime and entry at that
-boundary, then finish the written capability/optional-tracking/older-policy cases.
-Do not repeat an unchanged full run or count a disconnected form as handler RED.
-Then implement with the full D13/recording/
+The closed-workbook fixture is now calibrated: fixed native-window and workbook
+facts prove shutdown dismisses Send's surface in the longer sequence. That branch
+checks preservation and the existing binding guard without invoking a disconnected
+reference; Add/Retrieve stay visible and enter their actual handlers normally.
+Earlier failed attempts remain excluded, including one assisted host termination.
+Expanded RED verifies185 PASS/256 expected FAIL/441, retaining all333 prior
+results/order and all42 shared GREEN. Capability loss in the same captured context,
+optional tracking and older-policy cases now complete. New failures are10 draft
+guard violations,29 denial assertions and3 unavailable notices. Five compiles,
+normal cleanup, helper/package/settings preservation and delayed audit pass.
+No desktop error5, runtime repair, catalog registration or acceptance is claimed.
+Next implement the specified catalog22 observations and guards, preserving all441
+checks. Add focused after-yield context-loss and source-reference rejection cases
+as those integration boundaries are introduced. Then complete D13/recording/
 Action Path/regression evidence in the normative section. Registration and
 acceptance remain pending. Code evidence:
 `tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.

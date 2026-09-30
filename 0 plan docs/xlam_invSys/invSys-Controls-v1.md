@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.348 (Partial/guard RED; closed-workbook fixture unresolved)
+**Version:** 1.349 (Expanded worksheet RED; closure fixture calibrated)
 
 Architecture v4.11 D18 now specifies catalog22's three discovered controls:
 PRODUCTION_PROCESS_WORKSHEET_SEND / ADD_ITEM / RETRIEVE (each with the full
@@ -15,8 +15,8 @@ Initial actual-handler RED records62 PASS/158 expected FAIL/220, with42 shared
 GREEN and five compiles retained. Actual local/rejected/single/multi behavior,
 exact submission counts, preservation, normal closure, delayed audits and a
 reviewed populated-form capture pass. Missing catalog22 and six activity pairs
-cause the expected failures. Extend partial/failure/guard/tracking/older-policy
-cases before runtime edits. GREEN and full acceptance remain pending; no runtime
+cause the expected failures. Extended coverage is recorded below.
+GREEN and full acceptance remain pending; no runtime
 registration/count increase. Exact code evidence:
 `tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.
 Removal's workbook save can fail after a confirmed Designs save and local table
@@ -26,12 +26,18 @@ Extended RED verifies119 PASS/214 expected FAIL/333, retaining every initial220
 result and all42 prior GREEN. Three real-submission fault cases prove individual
 Submitted/Unknown states and partial local effects;32 guard violations are also
 protected. Five compiles, preservation, normal closure and delayed audit pass.
-The broader closed-workbook case remains uncalibrated: its isolated visible-form
-diagnostic enters the adapter, while the longer sequence cannot enter it after
-closure. Two broader attempts are excluded; one required owned-host termination,
-the later defensive trap closes normally. No desktop error5 or runtime repair.
-Measure actual operator reachability/lifetime before further full runs; written
-capability/tracking/policy tests and implementation remain unverified.
+Native-window/workbook measurements now calibrate the closed binding fixture.
+Send's surface is dismissed by shutdown in the longer sequence; preservation and
+the existing binding guard pass without claiming a click. Add/Retrieve remain
+visible and their actual handlers enter normally. Earlier failed attempts remain
+excluded, including one assisted host termination; no runtime repair is claimed.
+Expanded RED is185 PASS/256 expected FAIL/441, retaining all333 prior results/order
+and all42 shared GREEN. Same-context capability loss, optional tracking and older
+policy cases complete. New failures are10 draft guards,29 denial assertions and
+3 missing unavailable notices. Five compiles, helper/package/settings preservation,
+normal closure and delayed Excel audit pass; no desktop error5. Implement the
+specified catalog22 guards/observations next, protecting all441 checks and adding
+after-yield context-loss/reference-rejection cases at their integration boundaries.
 
 Process worksheet tracking remains pending. Source review found positional
 managed-field access that can target inserted user columns before Retrieve
