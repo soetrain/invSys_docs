@@ -33,7 +33,24 @@ also unassisted (verified2026-09-30 UTC).
 This is a test harness correction with fixed metadata receipts and unchanged
 workflow statements/package bytes. Earlier assisted/unobserved records keep their
 qualifications; the separate native chain/reusable failures remain unexplained.
-Remaining regressions and full release/native gates remain open;
+Lifecycle615/615 and native cancellation94/94 now retain exact prior identities,
+five compiles, unassisted closure and settings/package preservation on this
+candidate (2026-09-30 UTC). Four native-dialog captures are reviewed; neither gate
+records an Excel Application failure event. Settings observations pass478/478,
+retaining all468 preceding identities plus ten catalog16 older-policy exclusions.
+Five compiles, eight reviewed captures, delayed unassisted closure, preservation
+and zero Excel Application events hold. Smoke retains86/86 and preservation;
+new fixed metadata proves both shutdowns are forced. A reference-release trial
+stops74/1 at a cleanup error, is restored safely and removed. It is not product
+RED or a native fix. Current-candidate full chain32/32, live roles48/48 and Create
+Warehouse15/15 retain exact prior identities, unassisted closure, preservation and
+zero Excel Application events. Earlier native failures remain unexplained;
+reusable run-only now retains its aggregate PASS and all67 Boolean observations,
+preservation and zero Excel Application events, but its final cleanup requests
+termination. The full reusable workbench/export/restart gate also passes2 aggregate
+assertions,171 Boolean observations (166 distinct pairs), with all67 run-only values
+retained. Preservation and zero Excel Application events hold; restart and final
+cleanup both request termination. Normal shutdown and broader acceptance remain open;
 do not promote or call Slice4be complete.
 
 **User-authorized resumption and component RED,2026-09-29:** desktop checks pass

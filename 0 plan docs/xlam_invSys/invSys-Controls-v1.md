@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.277 (UOM/draft regressions retained; Settings test restart corrected)
+**Version:** 1.278 (current-candidate lifecycle, cancellation and Settings observations retained)
 
 User-authorized work resumes2026-09-29 with successful desktop checks. Component
 RED180/615 becomes GREEN795/795 with exact identities, five compiles, normal
@@ -27,8 +27,24 @@ unassisted within the unchanged wait. Final-host exit is also unassisted
 (verified2026-09-30 UTC). Earlier assisted/unobserved
 records retain their qualifications; this test harness correction does not repair
 or explain the separate native chain/reusable failures.
-Remaining regressions and release/native gates remain
-open. Candidate is not promoted. Stop
+Lifecycle615/615 and native cancellation94/94 retain exact prior identities, five
+compiles, unassisted closure and settings/package preservation (2026-09-30 UTC).
+Four native-dialog captures are reviewed; both gates record zero Excel Application
+failure events. Settings observations pass478/478 with all468 preceding identities
+and ten catalog16 older-policy exclusions. Five compiles, eight reviewed captures,
+delayed unassisted closure, preservation and zero Excel Application events hold.
+Smoke retains86/86 and preservation, with both shutdowns now observed as forced.
+An unsuccessful reference-release trial stops74/1 at a harness cleanup error;
+it is safely restored and removed, not product RED. Current-candidate full chain
+32/32, live roles48/48 and Create Warehouse15/15 retain exact identities, unassisted
+closure, preservation and zero Excel Application events. Earlier native failures
+remain unexplained. Reusable run-only retains its aggregate PASS and all67 Boolean
+observations with preservation and no Excel Application event, but final cleanup
+requests termination. The full reusable workbench/export/restart gate passes2
+aggregate assertions and171 Boolean observations (166 distinct pairs), retaining
+all67 run-only values. Preservation and zero Excel Application events hold; restart
+and final cleanup both request termination. Normal shutdown and broader acceptance
+remain open. Candidate is not promoted. Stop
 again on actual desktop error5.
 
 **Discovered Process component controls,2026-09-29:** Architecture D18 catalog16

@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.20. Last reviewed: 2026-09-30 UTC, UOM/draft regressions and Settings test cleanup.
+Version 1.21. Last reviewed: 2026-09-30 UTC, lifecycle, cancellation and Settings observations retained.
 
 User-authorized work resumes with successful desktop checks. Corrected component
 adapters complete RED180/615, then GREEN795/795 with exact identities, five compiles,
@@ -26,8 +26,26 @@ comparison and corrected ordinary route each retain202/202, release10 completed-
 host references without errors. Internal restart exits unassisted within the
 unchanged wait; final-host exit is also unassisted. Earlier assisted/unobserved
 records remain qualified; this harness correction
-does not repair or explain the separate native chain/reusable failures. Remaining
-regressions and full release/native gates remain open. Static
+does not repair or explain the separate native chain/reusable failures.
+Smoke retains86/86 and preservation, with both shutdowns explicitly observed as
+forced. A reference-release trial stops74/1 at a harness cleanup error and is
+safely restored and removed; no product RED or native fix is claimed. Normal smoke
+shutdown and reusable Production remain open. Current-candidate full chain32/32,
+live roles48/48 and Create Warehouse15/15 retain exact prior identities, unassisted
+closure, preservation and zero Excel Application events; this does not establish
+the cause of earlier native failures or complete broader acceptance. Reusable
+run-only retains its aggregate PASS and all67 Boolean observations, preservation
+and zero Excel Application events; final cleanup explicitly requests termination.
+Full reusable workbench/export/restart passes2 aggregate assertions and171 Boolean
+observations (166 distinct pairs), retaining all67 run-only values with preservation
+and zero Excel Application events. Restart and final cleanup both request
+termination; normal shutdown and human acceptance remain open.
+Current-candidate lifecycle615/615 and native cancellation94/94 retain exact prior
+identities, five compiles, unassisted closure, settings/packages and zero Excel
+Application failure events; four native-dialog captures are reviewed. Settings
+observations pass478/478 with all468 preceding identities plus ten catalog16
+older-policy exclusions; five compiles, eight reviewed captures, delayed unassisted
+closure, preservation and zero Excel Application events hold. Static
 dynamic/duplicate metrics and all28 module limits hold; frmProduction shrinks one line.
 
 The unchanged extent candidate now passes combined visible264/264 with every prior
