@@ -32,8 +32,13 @@ publication/Event Detail, both applied Designs references, explicit guide intent
 and a reader's independent observed run through all three views. Five compiles,
 normal cleanup, preservation, delayed audit and six reviewed worksheet captures
 pass. Close paths90 retains its exact prior checks with clean closure/preservation/
-audit. Next complete remaining layout/live-role/full-chain/reusable and
-shared observation regressions. Preserve the595 checks and their documented
+audit. Smoke86, three-size/five-page layout and chain32/live48/Create15 also pass
+prior checks, preservation, normal cleanup and delayed audits. Reviewed layout
+captures show empty Run Lists. Next complete full reusable/restart and remaining
+shared observation regressions. The first full-reusable attempt reproduces the
+earlier native Excel batch-scale failure and is excluded. Bounded observed and
+unobserved callbacks pass; a subsequent full run remains unverified and no crash
+repair is claimed. Preserve the595 checks and their documented
 closure mapping. No promotion, desktop-error5, crash-repair or human-acceptance
 claim. Exact evidence and pending gates:
 `tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.
