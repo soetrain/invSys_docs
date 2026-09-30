@@ -29,8 +29,11 @@ with zero Excel Application failures. Component paths retain142/142, exact prior
 checks, five compiles, six reviewed captures, normal closure and preservation.
 Instruction editing retains411/411, exact prior checks, five compiles, normal
 closure and preservation, with zero Excel Application failures. Instruction paths
-retain105/105 with the same gates and six reviewed captures. Remaining Production
-activity regressions and broader acceptance remain pending. Exact evidence: code
+retain105/105 with the same gates and six reviewed captures. Combined UOM264/264,
+public Close/reopen61/61 and UOM paths84/84 retain exact prior checks, five compiles
+per gate, normal closure, preservation and zero Excel Application failures;
+two/three/six principal captures are reviewed respectively. Draft diagnostics,
+lifecycle, native cancellation and broader acceptance remain pending. Exact evidence: code
 `tests/integration/plan022_slice4be_production_recipe_order_results.md`.
 Preserve the existing bounded ordering algorithm, node identities, non-order row
 fields, connection values, renumbering and refresh side effects, including local changes before a
