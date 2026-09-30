@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.314 (output-regulation focused/paths/full chain GREEN; remaining gates pending)
+**Version:** 1.315 (output-regulation focused/paths/full chain GREEN; remaining gates pending)
 
 Catalog20 output-regulation focused GREEN,2026-09-30 UTC: the isolated
 `validation-production-regulation-final` candidate registers105 global controls
@@ -80,6 +80,17 @@ closure and zero delayed Excel failures. Six captures are reviewed: the selected
 REQUESTED line shows Info/Unknown, all five instructions are readable, and five
 STAGED matches conclude locally with zero extras. Runtime/packages remain unchanged;
 agent review does not establish human acceptance.
+
+UOM regressions on catalog20 retain 264/264 staging/activity, 61/61 public Close
+and 84/84 paired-path checks, exact prior identities, five compiles each,
+preservation, normal closure and zero delayed Excel failures. Reviewed captures
+show preserved draft/custom columns, public Close/reopen, and OPENED/REUSED
+matches with zero extras and no Domain-application claim. The first path attempt
+remains recorded as incomplete77/one harness failure: Compare both capture lost
+foreground to another form in the same Excel process; seven trailing checks did
+not run. Desktop probes found no error5. The unchanged repeat passes all84 with
+six reviewed captures, but establishes no repair for that unresolved capture
+failure. Runtime, tests and packages remain unchanged; human acceptance is open.
 
 The isolated `validation-production-design-reads-final` catalog19 candidate passes
 621/621 focused checks and114/114 paired-path checks. The focused gate retains the
