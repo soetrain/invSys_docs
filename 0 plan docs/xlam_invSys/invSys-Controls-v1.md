@@ -14,8 +14,9 @@ clean90 PASS/two expected failures. The earlier VBA380/assisted attempt remains
 separate incomplete evidence. Static metrics and all size/dynamic-call limits pass.
 
 This candidate registers103 global IDs and42/68 constructed Production controls,
-26 unregistered. Registration is not acceptance. Broad packaged regressions on this
-final artifact remain pending. Catalog17,18 and the first19 candidate are frozen.
+26 unregistered. Registration is not acceptance. The listed packaged regressions
+now pass except the ordinary full reusable gate, whose native failure remains
+unresolved. Catalog17,18 and the first19 candidate are frozen.
 Exact evidence is in the code repository's
 `tests/integration/plan022_slice4be_production_design_read_results.md`.
 
@@ -88,8 +89,11 @@ retaining all486 prior checks plus exactly five catalog19 older-policy exclusion
 Both retain five compiles, preservation and zero delayed Application failures;
 activity also has eight reviewed captures and delayed unassisted exit. No native
 repair or human acceptance is established.
-Remaining regression gates are pending; focused621/paired114 GREEN does not
-establish complete acceptance.
+Ordinary run-only retains its aggregate and all67 prior Boolean observations,
+completed workbook/package closure, unassisted exit, preservation and zero delayed
+Application failures. The ordinary full reusable gate remains unresolved after
+its native failure; passing focused/paired/regression evidence does not establish
+complete acceptance or a native repair.
 
 Architecture v4.11 D18 specifies these five discovered controls for catalog19:
 
