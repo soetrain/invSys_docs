@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.64. Last reviewed: 2026-09-30 UTC, Production Close contract specified.
+Version 1.65. Last reviewed: 2026-09-30 UTC, Detail alignment gates complete; Close specified.
 
 Architecture v4.11 now reserves catalog21 `PRODUCTION_CLOSE` under D18 for the
 existing Close button and native window close. Only committed UI dismissal may
@@ -8,8 +8,18 @@ conclude CLOSED; internal unload/workbook shutdown do not invent user activity.
 No runtime registration or focused RED/GREEN is claimed yet. The implemented
 census remains44/68 constructed buttons and24 unregistered, including this now
 specified Close control. Thirty nonbutton handlers and other role/launcher
-surfaces retain their separate pending coverage. Plan022 and controls1.324 name
+surfaces retain their separate pending coverage. Plan022 and controls1.325 name
 the test-first next action; do not count contract documentation as implementation.
+
+The separate Admin Detail heading correction now completes its planned matrix:
+focused222/18 RED ->240/240 GREEN, five compiles, static limits, smoke86,
+chain32/live-role48/Create15 and Settings activity493. Exact prior checks and
+preservation hold; closure is unassisted with zero delayed Excel Application
+failures. Three focused and eight Settings images are reviewed. Only
+cAdminEventDetail differs among262 compiled components; Production coverage counts
+remain unchanged. See the code repository's
+`tests/integration/plan022_slice4be_detail_columns_results.md`. This is isolated
+candidate evidence, not human/NAS acceptance or historical native-crash repair.
 
 Catalog20 output-regulation focused GREEN,2026-09-30 UTC: the isolated
 `validation-production-regulation-final` candidate registers105 global controls
@@ -114,14 +124,15 @@ with ten references released and zero failures, preservation, normal final exit
 and zero delayed Excel failures. Settings activity now passes 493/493, retaining
 all491 prior checks in order plus the two new older-policy exclusions. Five
 compiles, preservation, unassisted closure and zero delayed Excel failures pass;
-eight images are reviewed. A visual follow-up remains: Event Detail column
-headings appear offset from their row values; compare existing geometry before
-any repair. Run-only now retains the prior aggregate and all67 exact ordered
+eight images are reviewed. The discovered Event Detail heading offset is now
+corrected on the separate Detail candidate with its complete bounded matrix;
+the frozen regulation images and packages remain unchanged. Run-only now retains
+the prior aggregate and all67 exact ordered
 observations, complete closure of three workbooks and four reverse-order packages,
 zero release failures or termination requests, preservation and zero delayed
 Excel failures. The planned regulation regression matrix is complete on unchanged
-packages. Comprehensive control coverage, the visual correction and human/NAS
-acceptance remain open; no promotion or historical native-crash repair is claimed.
+packages. Comprehensive control coverage and human/NAS acceptance remain open;
+no promotion or historical native-crash repair is claimed.
 Exact evidence is in the regulation result record.
 
 The isolated `validation-production-design-reads-final` catalog19 candidate passes

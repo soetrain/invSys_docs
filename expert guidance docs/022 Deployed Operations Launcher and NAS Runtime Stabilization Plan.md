@@ -17,10 +17,10 @@ internal-close exclusion, public reopen, context, redaction and preservation.
 Planned files: a dedicated Production Close test/probe, `frmProduction`, a typed
 Operations close-observation helper, Core catalog/outcome/evaluation definitions,
 and synchronized evidence/catalog records. Independent Action Path recordings and
-required regressions follow GREEN. The Admin Detail alignment gate below continues
-on its frozen candidate; this refinement does not change that candidate.
+required regressions follow GREEN. The Admin Detail alignment matrix below is
+complete on its frozen candidate; this refinement does not change that candidate.
 
-Slice4be Admin Event Detail heading alignment is focused GREEN,2026-09-30 UTC.
+Slice4be Admin Event Detail heading alignment has all planned automated gates GREEN,2026-09-30 UTC.
 The unchanged baseline gives222 PASS/18 expected alignment failures; the isolated
 validation-detail-columns candidate passes the same240 checks, retaining all202
 prior Settings checks. Both the packaged form and real Admin launcher pass at
@@ -34,7 +34,11 @@ Packaged smoke retains86/86 exact prior checks, normal Initial/Final exits,
 preservation and zero delayed Excel failures. The full Release1 chain also retains
 32/32 chain,48/48 live-role and15/15 Create Warehouse exact prior checks, with
 normal closure, preservation and zero delayed Excel failures. Settings activity
-remains pending; no promotion or human acceptance. Exact evidence is in the code repository's
+also retains493/493 exact ordered prior checks and five compiles, with preserved
+settings/packages, unassisted closure and zero delayed Excel failures. Eight
+images are directly reviewed; preferences, denials and unavailable-tracking notices
+retain their meanings with corrected Detail headings. This completes the bounded
+Admin layout matrix; no promotion or human acceptance. Exact evidence is in the code repository's
 `tests/integration/plan022_slice4be_detail_columns_results.md`.
 
 Catalog20 output-regulation focused GREEN,2026-09-30 UTC: the isolated
@@ -140,14 +144,15 @@ with ten references released and zero failures, preservation, normal final exit
 and zero delayed Excel failures. Settings activity now passes 493/493, retaining
 all491 prior checks in order plus the two new older-policy exclusions. Five
 compiles, preservation, unassisted closure and zero delayed Excel failures pass;
-eight images are reviewed. A visual follow-up remains: Event Detail column
-headings appear offset from their row values; compare existing geometry before
-any repair. Run-only now retains the prior aggregate and all67 exact ordered
+eight images are reviewed. The discovered Event Detail heading offset is now
+corrected on the separate Detail candidate with its complete bounded matrix;
+the frozen regulation images and packages remain unchanged. Run-only now retains
+the prior aggregate and all67 exact ordered
 observations, complete closure of three workbooks and four reverse-order packages,
 zero release failures or termination requests, preservation and zero delayed
 Excel failures. The planned regulation regression matrix is complete on unchanged
-packages. Comprehensive control coverage, the visual correction and human/NAS
-acceptance remain open; no promotion or historical native-crash repair is claimed.
+packages. Comprehensive control coverage and human/NAS acceptance remain open;
+no promotion or historical native-crash repair is claimed.
 Exact evidence is in the regulation result record.
 
 **Designer load/refresh focused GREEN,2026-09-30 UTC:**
