@@ -2,6 +2,17 @@
 
 **Status:** Current corrective implementation plan
 
+Production Close regression checkpoint,2026-09-30 UTC: packaged smoke86/86,
+chain32/32, live-role48/48 and warehouse creation15/15 retain exact prior checks.
+Layout retains the accepted three-size/five-page geometry and three reviewed
+captures. Full reusable Production retains both aggregates and all171 observations
+in exact prior order, with unassisted restart/final shutdown and no termination
+request. Cleanup/preservation and delayed Excel audits pass. Current-catalog
+Settings/activity, lifecycle, Draft/Paths and native
+cancellation remain pending; the evidence record maps that scope to changed
+components and distinguishes retained frozen suites from new-candidate runs.
+No comprehensive Slice4be or human acceptance is claimed.
+
 Production Close Action Paths GREEN,2026-09-30 UTC: separate source/observed
 recordings, publication, guide authoring, Event Detail and all three presentation
 modes pass90/90 after frozen pre-Close RED45/1. All46 RED identities retain

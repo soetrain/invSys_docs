@@ -1,6 +1,15 @@
 # invSys Form Controls v1
 
-**Version:** 1.334 (Production Close paths GREEN; broader regressions pending)
+**Version:** 1.335 (Production Close paths, smoke, layout, chain and reusable GREEN)
+
+Close's frozen catalog21 candidate retains smoke86/86, chain32/32, live-role48/48
+and warehouse creation15/15 in exact prior order. Layout preserves three-size/
+five-page geometry, with three reviewed captures and reachable Close. Cleanup,
+preservation and delayed Excel audits pass. Full reusable Production retains both
+aggregates and all171 observations in exact prior order, with unassisted restart/
+final shutdown, preserved settings/packages and zero delayed Excel failures.
+Current Settings/activity, lifecycle, Draft/Paths and native cancellation remain pending;
+comprehensive Slice4be coverage and human acceptance remain open.
 
 Close Action Paths pass90/90 after frozen pre-Close RED45/1, preserving all46 RED
 identities in relative order and42 prior checks. Separate source/observed

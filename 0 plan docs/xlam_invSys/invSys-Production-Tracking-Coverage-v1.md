@@ -1,6 +1,15 @@
 # Production form tracking coverage audit
 
-Version 1.74. Last reviewed: 2026-09-30 UTC, Close paths GREEN.
+Version 1.75. Last reviewed: 2026-09-30 UTC, Close smoke/layout/chain/reusable GREEN.
+
+Close's frozen candidate retains smoke86/86, chain32/32, live-role48/48 and
+warehouse creation15/15 in exact prior order. Three-size/five-page layout geometry
+and three reviewed captures pass, with cleanup/preservation and zero delayed
+Excel failures. Full reusable Production retains both aggregates and all171
+observations in exact prior order, with unassisted restart/final shutdown,
+preservation and zero delayed Excel failures. Settings/activity, lifecycle,
+Draft/Paths and native cancellation remain pending. Registration counts below
+are unchanged; no new control or final acceptance is implied.
 
 Close-specific independent recordings and Action Paths pass90/90 after frozen
 pre-Close RED45/1; all46 RED identities retain relative order and42 prior checks
