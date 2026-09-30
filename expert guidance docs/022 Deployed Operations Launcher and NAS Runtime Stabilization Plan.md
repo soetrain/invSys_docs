@@ -46,7 +46,11 @@ historical-policy fixture; both test-only corrections follow approved catalog22.
 Current-record expectations in twelve other fixtures and the109-control Settings
 editor are aligned before their runs; historical assertions remain intact.
 Static evidence is regenerated with unchanged runtime metrics and347 valid parses.
-Next complete remaining shared observation regressions.
+Settings now retains202 ordered checks, including saved-preference restart and
+Operations without Admin. Settings activity passes497: all494 prior checks remain
+ordered, with exactly three new worksheet older-policy exclusions. Both gates
+pass five compiles, normal cleanup, preservation and delayed audits; eight Settings
+captures are reviewed. Next complete remaining Production observation regressions.
 Preserve the595 checks and their documented
 closure mapping. No promotion, desktop-error5, crash-repair or human-acceptance
 claim. Exact evidence and pending gates:

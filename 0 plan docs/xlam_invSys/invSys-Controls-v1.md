@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.355 (Worksheet Close/query regression GREEN; acceptance pending)
+**Version:** 1.356 (Worksheet Settings regressions GREEN; acceptance pending)
 
 Architecture v4.11 D18's catalog22 controls PRODUCTION_PROCESS_WORKSHEET_SEND,
 PRODUCTION_PROCESS_WORKSHEET_ADD_ITEM and PRODUCTION_PROCESS_WORKSHEET_RETRIEVE
@@ -46,7 +46,11 @@ checks, five compiles, preservation, normal cleanup, clean delayed audit and fou
 reviewed captures. The first307/5 result remains excluded for stale catalog21
 expectations and an invalid historical-policy fixture. Test-only alignment uses
 approved catalog22 and109 current controls while preserving historical assertions.
-Twelve other aligned fixtures still require their own packaged regression results.
+Settings now retains202 ordered checks, saved-preference restart and Operations
+without Admin. Settings activity passes497: all494 prior checks remain ordered,
+with exactly three worksheet older-policy exclusions. Both gates pass five
+compiles, normal cleanup, preservation and delayed audits; eight Settings captures
+are reviewed. Other aligned Production fixtures still require their packaged runs.
 Regenerated static evidence retains all metrics and347 valid PowerShell parses.
 Remaining shared observation regressions are pending. No deployment
 promotion or human acceptance is claimed. Code evidence:
