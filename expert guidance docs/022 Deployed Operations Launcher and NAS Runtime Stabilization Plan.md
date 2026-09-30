@@ -58,7 +58,12 @@ cancelled result. Regulation696/paths102 and design reads621/paths114 now retain
 all prior ordered checks, five compiles, preservation, normal cleanup and clean
 delayed audits. Two focused Regulation captures and six captures for each paired
 family are reviewed. Four/five matched steps retain explicit local-only conclusions
-with zero extras. Next complete Recipe structure and the remaining families.
+with zero extras. Recipe structure786, released-data55 and paired paths109 now
+retain all prior ordered checks, five compiles, normal cleanup, preservation and
+clean delayed audits. Three focused/released captures and six paired-path captures
+are reviewed. Update retains all seven validated fields; the five-step comparison
+concludes local command completion with zero extras and no Domain application.
+Next complete Recipe ordering and the remaining families.
 Preserve the595 checks and their documented
 closure mapping. No promotion, desktop-error5, crash-repair or human-acceptance
 claim. Exact evidence and pending gates:

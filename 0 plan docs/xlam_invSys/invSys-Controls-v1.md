@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.358 (Worksheet Regulation and designer-read regressions GREEN; acceptance pending)
+**Version:** 1.359 (Worksheet Recipe structure regressions GREEN; acceptance pending)
 
 Architecture v4.11 D18's catalog22 controls PRODUCTION_PROCESS_WORKSHEET_SEND,
 PRODUCTION_PROCESS_WORKSHEET_ADD_ITEM and PRODUCTION_PROCESS_WORKSHEET_RETRIEVE
@@ -57,7 +57,12 @@ and state checks prove the cancelled result. Regulation696/paths102 and design
 reads621/paths114 retain all prior ordered checks, five compiles, preservation,
 normal cleanup and delayed audits. Two focused Regulation and six captures for
 each paired family are reviewed. Four/five matched steps retain local-only
-conclusions with zero extras. Recipe structure and the remaining families follow.
+conclusions with zero extras. Recipe structure786, released-data55 and paths109
+retain exact prior ordered checks, five compiles, preservation, normal cleanup and
+clean delayed audits. Three focused/released and six paired-path captures are
+reviewed. Update retains all seven validated fields; the five-step comparison
+concludes locally with zero extras and no Domain application. Recipe ordering and
+the remaining families follow.
 Regenerated static evidence retains all metrics and347 valid PowerShell parses.
 Remaining shared observation regressions are pending. No deployment
 promotion or human acceptance is claimed. Code evidence:
