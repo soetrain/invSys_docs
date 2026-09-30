@@ -40,6 +40,27 @@ compiles, both reviewed principal captures, unassisted closure, preservation and
 zero Excel Application failures, including existing-draft reuse and custom columns.
 UOM public Close/reopen retains61/61 exact prior checks, five compiles, three reviewed
 principal captures, unassisted closure, preservation and zero Excel failures.
+UOM Action Paths retains84/84 exact prior checks, five compiles, six reviewed
+principal captures, unassisted closure, preservation and zero Excel failures.
+The Open/Reopen guide matches the distinct run's OPENED/REUSED outcomes.
+Draft/diagnostic paths retain390/390 exact prior checks after correcting a disposable
+setup click that consumed an extra recording ordinal. All actual tested handlers
+and assertions remain unchanged. Five compiles, preservation, unassisted closure
+and zero Excel Application failures pass; the runtime candidate is unchanged.
+Lifecycle retains615/615 exact prior checks, five compiles, unassisted closure,
+preservation and zero Excel Application failures across the full controller interval.
+Native cancellation retains94/94 exact prior checks, five compiles, four reviewed
+dialog captures, unassisted closure, preservation and zero Excel failures.
+Layout matches the prior three-size/five-page report exactly, with zero bounds/
+overlap violations, all native window checks, three reviewed captures, normal
+closure, preservation and zero Excel Application failures.
+The separate run-only attempt fails at
+`mProduction.RunReusableProductionRunActionContractTest` with RPC0x800706BE and
+Excel/ntdll c0000028/offset12d2f. Its67 prior observations are not re-established;
+the earlier full reusable171-observation GREEN retains its own scope. Preservation
+passes, but crash exit is not normal shutdown; post-crash cleanup also loses its
+`IsAddin` property. No desktop error5 is observed. See the structure evidence for
+the exact controller and timestamps; bounded acceptance remains incomplete.
 
 The packaged baseline exposes five Update-behavior assertion failures in addition
 to missing tracking/guards. Architecture v4.11 records the user's explicit
