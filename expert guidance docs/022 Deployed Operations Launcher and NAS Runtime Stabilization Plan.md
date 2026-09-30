@@ -69,6 +69,12 @@ checks, five compiles, preservation, unassisted closure and zero Application
 failures. Six captures are directly reviewed: the selected REQUESTED detail is
 separate from STAGED, while the scrolled diagnostic shows all five expected
 STAGED matches, zero extra actions and no Domain-application claim.
+UOM activity retains264/264, public Close/reopen61/61 and UOM paths84/84 exact
+prior checks, five compiles, preservation, unassisted closure and zero Application
+failures. Eleven principal captures across these gates are directly reviewed:
+draft edits/custom columns and the unrelated workbook survive; the saved catalog
+is not reloaded. The separate observed run matches OPENED then REUSED with zero
+extra actions and a command-only conclusion. Human acceptance remains open.
 Remaining regression gates are pending; focused621/paired114 GREEN does not
 establish complete acceptance.
 
