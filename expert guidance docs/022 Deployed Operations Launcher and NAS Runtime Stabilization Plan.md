@@ -2,6 +2,24 @@
 
 **Status:** Current corrective implementation plan
 
+Next discovered control within Slice4be.1: Architecture v4.11 now specifies
+Production Close observations under approved D18 semantic inheritance. Reserved
+catalog21 `PRODUCTION_CLOSE` covers the real Close button and native window close;
+only committed dismissal can produce CLOSED/Info/Unchanged. Internal unload and
+workbook shutdown are excluded. Closing remains possible with stale context,
+lost permission or unavailable optional tracking. Existing close/reopen behavior,
+captured workbook, saved authority and unknown columns remain binding. Runtime
+registration and acceptance are pending: the current candidate still has105
+global/44 constructed Production controls in catalog20. The next focused packaged
+gate must demonstrate missing registration/correlated observations on the unchanged
+baseline before runtime edits, and protect actual button/native dismissal,
+internal-close exclusion, public reopen, context, redaction and preservation.
+Planned files: a dedicated Production Close test/probe, `frmProduction`, a typed
+Operations close-observation helper, Core catalog/outcome/evaluation definitions,
+and synchronized evidence/catalog records. Independent Action Path recordings and
+required regressions follow GREEN. The Admin Detail alignment gate below continues
+on its frozen candidate; this refinement does not change that candidate.
+
 Slice4be Admin Event Detail heading alignment is focused GREEN,2026-09-30 UTC.
 The unchanged baseline gives222 PASS/18 expected alignment failures; the isolated
 validation-detail-columns candidate passes the same240 checks, retaining all202

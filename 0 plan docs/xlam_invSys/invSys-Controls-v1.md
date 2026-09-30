@@ -1,6 +1,23 @@
 # invSys Form Controls v1
 
-**Version:** 1.323 (output-regulation automated gates GREEN; broader acceptance open)
+**Version:** 1.324 (Production Close specified; runtime and acceptance pending)
+
+Production Close discovery,2026-09-30 UTC: Architecture v4.11's new 4be.1
+refinement reserves catalog21 `PRODUCTION_CLOSE` for `btnProductionClose` /
+`mBtnClose_Click` and native window close. Owner PRODUCTION_WORKFLOW, class
+Command, role Production, caption Close, surface Operations > Production;
+PROD_POST describes existing workflow eligibility and cannot block dismissal.
+REQUESTED/Info/Unknown precedes CLOSED/Info/Unchanged for committed dismissal
+only; FAILED/Error/Unknown retains uncertainty. No business application, form-draft
+retention or source events are implied. Internal unload, termination and workbook
+shutdown add no user Close records. Stale context and lost permission still allow
+dismissal; unavailable optional tracking remains visible without blocking it.
+Existing public reopen, captured workbook and unknown-column behavior are preserved.
+This is an approved-D18 discovered-control clarification, not implementation or
+acceptance. Runtime remains catalog20,105 global IDs and44/68 constructed Production
+buttons; the Close focused packaged RED/GREEN and independent path evidence are
+pending. Exact normative requirements are in Architecture v4.11; Plan022 names the
+test-first next action and expected files.
 
 Slice4be Admin Event Detail heading alignment is focused GREEN,2026-09-30 UTC.
 The unchanged baseline gives222 PASS/18 expected alignment failures; the isolated

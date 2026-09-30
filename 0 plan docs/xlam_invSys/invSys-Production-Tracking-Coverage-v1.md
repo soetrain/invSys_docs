@@ -1,6 +1,15 @@
 # Production form tracking coverage audit
 
-Version 1.63. Last reviewed: 2026-09-30 UTC, output-regulation focused and paths GREEN.
+Version 1.64. Last reviewed: 2026-09-30 UTC, Production Close contract specified.
+
+Architecture v4.11 now reserves catalog21 `PRODUCTION_CLOSE` under D18 for the
+existing Close button and native window close. Only committed UI dismissal may
+conclude CLOSED; internal unload/workbook shutdown do not invent user activity.
+No runtime registration or focused RED/GREEN is claimed yet. The implemented
+census remains44/68 constructed buttons and24 unregistered, including this now
+specified Close control. Thirty nonbutton handlers and other role/launcher
+surfaces retain their separate pending coverage. Plan022 and controls1.324 name
+the test-first next action; do not count contract documentation as implementation.
 
 Catalog20 output-regulation focused GREEN,2026-09-30 UTC: the isolated
 `validation-production-regulation-final` candidate registers105 global controls
@@ -570,7 +579,7 @@ from permission to stage or export a catalog worksheet.
 
 | UI control | Caption | Actual handler | Tracking ID/status |
 |---|---|---|---|
-| `btnProductionClose` | Close | `mBtnClose_Click` | Pending |
+| `btnProductionClose` | Close | `mBtnClose_Click` | `PRODUCTION_CLOSE` reserved catalog21; specification only, packaged RED/GREEN pending |
 
 ### Process Designer (27)
 

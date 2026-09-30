@@ -651,6 +651,56 @@ Compare evidence and the required regressions remain necessary. This names
 discovered controls under approved D18; a change to the preserved editing or
 conversion algorithms requires a separate architecture decision.
 
+**4be.1 Production Close observations (discovered-control refinement; acceptance pending):**
+Under approved D18 semantic inheritance, catalog21 adds `PRODUCTION_CLOSE` for
+the existing `btnProductionClose` / `mBtnClose_Click` and explicit native window
+close. Catalogs1-20 retain their exact definitions; an older saved policy cannot
+implicitly enable the new control. Its OwnerId is `PRODUCTION_WORKFLOW`, class
+Command, role Production, caption Close, surface `Operations > Production`,
+capability PROD_POST and EventCode prefix `PRODUCTION_CLOSE_`. The capability
+describes the existing workflow eligibility; it is not a new permission gate on
+dismissal. Losing permission must never trap a retained form on screen.
+
+One deliberate dismissal records one correlated REQUESTED/Info/Unknown followed
+by CLOSED/Info/Unchanged only when UI dismissal is committed. Unchanged refers to
+saved definitions, workbook staging and inventory authority: it does not promise
+to retain unsaved controls in a form being unloaded. Preserve existing dismissal
+and local-state disposal. Do not save, post, clear workbook staging, reload a
+catalog or add a confirmation prompt. The fixed CLOSED explanation is
+"Production form dismissed; no save, posting or Domain application is asserted."
+A dismissal exception may record FAILED/Error/Unknown with fixed guidance to
+inspect the form; it must never become CLOSED merely because its handler returned.
+All source-event references are empty. No draft values, identities, paths, raw
+exceptions or credentials belong in these observations.
+
+Observe only the captured still-open workbook and original invSys session and
+warehouse. A stale session, changed warehouse, signed-out user or missing captured
+workbook still permits dismissal, without attribution to a new context or active
+workbook. Programmatic Unload, termination, workbook shutdown, initialization and
+internal replacement add no user Close records. Optional disabled/unavailable
+tracking cannot block dismissal or retry the owner; unavailable tracking must
+remain visibly reported through an operator notice even after the form disappears.
+
+Native QueryClose may synchronously hide the form, finish that dismissal's
+observation, then allow normal native teardown. It must not retain a hidden
+reusable instance, cancel close while reporting CLOSED, or defer the record until
+a subsequent launch. The existing public launcher must reopen the same eligible
+operator workbook normally, preserving workbook staging and unknown columns.
+This refinement does not change repeated-launch resolution, rebinding or reuse.
+Production Open remains a separately unproved control surface.
+
+For this control only CLOSED establishes CommandCompleted, solely for dismissal.
+REQUESTED and FAILED cannot conclude; CONFIRMED, APPLIED, VALIDATED and STAGED
+are unsupported. Empty source references cannot establish SourceEventsApplied.
+D13 requires packaged actual-handler and native-window RED/GREEN, internal-unload
+and workbook-close exclusions, public-launcher reopening, captured-context and
+permission-loss cases, optional tracking, redaction, immutable prior observations
+and preserved authority/workbook data. Separate recordings, publication and
+How-To/Diagnostic/Compare evidence must retain the same local-only meaning.
+Compile, layout, static-maintenance, live-role, full-chain and reusable regressions
+remain required. This names an existing control under D18; it changes no business
+owner, close behavior, permission or authority contract and needs no repeat approval.
+
 **4be.1 Recipe connection write stability (approved 2026-09-30 UTC):**
 The structure refinement below requires preserving the existing editing algorithm.
 Packaged baseline tests reveal that Update can retain old quantity/percentage and
