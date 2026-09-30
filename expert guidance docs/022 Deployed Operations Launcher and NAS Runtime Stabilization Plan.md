@@ -7,9 +7,19 @@ Architecture v4.11 D18's discovered-control refinement. Send/Add conclude STAGED
 for local saves; Retrieve concludes CONFIRMED only after every selected import
 and removal/save succeeds. Partial/uncertain failures retain each actual Designs
 reference and its state. No worksheet algorithm, authority or permission change.
-First establish actual packaged-handler RED on the completed picker candidate;
-then implement with the full D13/recording/Action Path/regression evidence listed
-in the normative section. Registration and acceptance remain pending.
+Initial actual packaged-handler RED on the completed picker candidate is verified:
+62 PASS/158 expected FAIL/220, all42 shared GREEN and five compiles retained.
+Existing local/rejected/single/multi-table behavior and exact owner submission
+counts pass; catalog22 and six activity pairs are absent. Pins/settings, normal
+closure, delayed audits and a reviewed populated-form capture pass. Before runtime
+edits, extend RED for partial/uncertain submissions, removal/save failure, guards,
+optional tracking and older policies. Then implement with the full D13/recording/
+Action Path/regression evidence in the normative section. Registration and
+acceptance remain pending. Code evidence:
+`tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.
+The existing removal boundary deletes before workbook save. Its failure after
+confirmed Designs save can leave local deletion; observe FAILED/Unknown without
+claiming restoration. D15's pre-confirmation removal prohibition remains binding.
 
 Active Slice4be: Core Process picker scoped gates now complete before the
 three worksheet actions are registered. Under unchanged D4/D14/D15 ownership,

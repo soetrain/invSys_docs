@@ -1,11 +1,17 @@
 # Production form tracking coverage audit
 
-Version 1.86. Last reviewed: 2026-09-30 UTC, worksheet observation contract specified.
+Version 1.87. Last reviewed: 2026-09-30 UTC, initial worksheet observation RED verified.
 
 Catalog22's three Process worksheet observations are now specified in Architecture
 v4.11 D18, with local STAGED versus all-selected Retrieve CONFIRMED and FAILED
-partial results retaining exact per-submission Designs states. Actual-handler
-RED/GREEN is next; implementation, registration and acceptance remain pending.
+partial results retaining exact per-submission Designs states. Initial actual
+handler RED is62 PASS/158 expected FAIL/220, with42 prior GREEN and five compiles.
+Existing local/rejected/single/multi behavior and owner counts pass; missing
+catalog22 and six pairs account for the failures. Preservation, normal closure,
+delayed audits and a reviewed populated-form capture pass. Extend partial/failure/
+guard/tracking/older-policy cases before implementation. GREEN, registration and
+acceptance remain pending. Code evidence:
+`tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.
 Runtime counts below remain unchanged until verified registration.
 
 Next grouping: the three Process worksheet buttons. Send saves a newly created

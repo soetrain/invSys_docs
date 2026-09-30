@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.346 (Process worksheet observation contract; implementation pending)
+**Version:** 1.347 (Process worksheet initial RED; extended cases next)
 
 Architecture v4.11 D18 now specifies catalog22's three discovered controls:
 PRODUCTION_PROCESS_WORKSHEET_SEND / ADD_ITEM / RETRIEVE (each with the full
@@ -11,8 +11,17 @@ save completion; Retrieve uses CONFIRMED only for all selected imports and
 removals/saves. FAILED retains exact individual Designs submission states,
 including partial results. No Inventory reference or inferred Domain application.
 Existing authority, local save/import rules and D14/D15 preservation remain.
-Actual-handler RED/GREEN and full acceptance evidence are pending. No runtime
-registration/count increase is claimed by this contract entry.
+Initial actual-handler RED records62 PASS/158 expected FAIL/220, with42 shared
+GREEN and five compiles retained. Actual local/rejected/single/multi behavior,
+exact submission counts, preservation, normal closure, delayed audits and a
+reviewed populated-form capture pass. Missing catalog22 and six activity pairs
+cause the expected failures. Extend partial/failure/guard/tracking/older-policy
+cases before runtime edits. GREEN and full acceptance remain pending; no runtime
+registration/count increase. Exact code evidence:
+`tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.
+Removal's workbook save can fail after a confirmed Designs save and local table
+deletion. FAILED retains that source reference and reports uncertainty; no restored
+table is asserted, and no table may be removed before its draft save is confirmed.
 
 Process worksheet tracking remains pending. Source review found positional
 managed-field access that can target inserted user columns before Retrieve

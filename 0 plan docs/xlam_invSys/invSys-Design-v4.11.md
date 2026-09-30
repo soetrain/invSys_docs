@@ -668,8 +668,14 @@ saves the captured workbook, then clears the form draft only after success. Add
 appends a numbered item/SKU pair to the selected table and saves that workbook.
 Retrieve validates every selected table before its first Designs submission,
 restores the prior form draft on validation rejection, imports in the existing
-deterministic order and removes/saves only each confirmed table. Failed/unselected
-tables and unknown columns remain. Managed formula/identity maintenance during
+deterministic order and removes/saves only each confirmed table. Tables whose
+Designs draft save is unconfirmed, unselected tables and retained unknown columns
+remain. After a confirmed draft save, the existing removal boundary deletes the
+local table before saving the workbook; failure of that final workbook save may
+leave the local removal in memory. FAILED must not assert restoration or that
+every table remains. This distinguishes failed draft submission from subsequent
+local cleanup failure; it does not authorize pre-confirmation removal or change
+the existing save algorithm. Managed formula/identity maintenance during
 validation may remain locally even when retrieval is rejected; rejection does
 not imply that every worksheet cell was unchanged. Preserve existing draft
 version generation, mixed-UOM handling, status/error presentation and save rules.
