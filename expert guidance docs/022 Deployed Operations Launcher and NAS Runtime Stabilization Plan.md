@@ -58,6 +58,12 @@ Recipe ordering also retains463/463 and ordering paths93/93 exact prior checks,
 with five compiles, preservation, normal closure and zero Application failures.
 Six ordering-path captures are directly reviewed; all three steps match the
 separate observed run with no extra actions and a local-only conclusion.
+Component editing retains795/795 and component paths142/142 exact prior checks,
+with five compiles, preservation, unassisted closure and zero Application failures.
+Six captures are directly reviewed; How-To shows all ten instructions and the
+scrolled diagnostic tail shows the later matches with zero extra actions. Automated
+checks retain all ten matches and the local-only conclusion; human acceptance
+remains open.
 Remaining regression gates are pending; focused621/paired114 GREEN does not
 establish complete acceptance.
 

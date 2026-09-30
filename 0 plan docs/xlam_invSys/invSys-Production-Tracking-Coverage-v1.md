@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.45. Last reviewed: 2026-09-30 UTC, designer load/refresh and paired paths GREEN recorded.
+Version 1.46. Last reviewed: 2026-09-30 UTC, designer load/refresh and paired paths GREEN recorded.
 
 The isolated `validation-production-design-reads-final` catalog19 candidate passes
 621/621 focused checks and114/114 paired-path checks. The focused gate retains the
@@ -57,6 +57,12 @@ Recipe ordering also retains463/463 and ordering paths93/93 exact prior checks,
 with five compiles, preservation, normal closure and zero Application failures.
 Six ordering-path captures are directly reviewed; all three steps match the
 separate observed run with no extra actions and a local-only conclusion.
+Component editing retains795/795 and component paths142/142 exact prior checks,
+with five compiles, preservation, unassisted closure and zero Application failures.
+Six captures are directly reviewed; How-To shows all ten instructions and the
+scrolled diagnostic tail shows the later matches with zero extra actions. Automated
+checks retain all ten matches and the local-only conclusion; human acceptance
+remains open.
 Remaining regression gates are pending; focused621/paired114 GREEN does not
 establish complete acceptance.
 
