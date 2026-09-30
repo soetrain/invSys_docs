@@ -9,8 +9,11 @@ run is175 PASS/137 expected missing-Close failures, preserving the original232
 check identities, all42 prior GREEN checks and the80 supplemental identities.
 Five builds/compiles, cold-start references, static ratchets, smoke86, normal closure,
 settings/package preservation, zero delayed Excel failures and four reviewed
-operator images pass. Only Core `modInventoryDomainBridge` differs among262
-compiled components. Broad regressions/live roles/Release1 chain remain required
+operator images pass. Full chain32/live-role48/Create15 also retain exact prior
+checks with normal closure/preservation and zero delayed Excel failures.
+Production layout retains its exact three-size/five-page report with normal
+closure and three reviewed captures. Only Core `modInventoryDomainBridge` differs
+among262 compiled components. Reusable Production and remaining regressions are required
 before accepting the correction or implementing Close observations. Current
 evidence: `tests/integration/plan022_slice4be_inventory_query_results.md` in code.
 That record separately retains harness calibration and the assisted injected-error

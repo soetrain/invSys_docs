@@ -7,7 +7,9 @@ authority bytes through the real Production launch/close/reopen route. Its312
 checks yield175 PASS/137 expected missing-Close failures, retaining all42 prior
 GREEN checks and exact earlier identities. Five builds/compiles, static limits, smoke86,
 normal closure, package/settings preservation and four reviewed images pass;
-the delayed Excel audit is zero. Only Core's Inventory bridge changes. Broad
+the delayed Excel audit is zero. Chain32/live-role48/Create15 also retain exact
+prior checks with normal closure/preservation. Production layout retains exact
+three-size/five-page geometry and three reviewed captures. Only Core's Inventory bridge changes. Broad
 regressions remain pending; no control registration, catalog increment, promotion
 or full acceptance is claimed. Evidence and excluded harness/native failures:
 `tests/integration/plan022_slice4be_inventory_query_results.md` in code.

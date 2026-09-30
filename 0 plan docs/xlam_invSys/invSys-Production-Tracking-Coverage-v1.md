@@ -6,7 +6,10 @@ The isolated Core query candidate passes80/80 supplemental cases and real public
 launch/close/reopen authority preservation after query RED88/34. Combined results
 are175/137 across312 checks; all137 failures are missing Close observations.
 Five builds/compiles, static ratchets, smoke86, normal closure/preservation, zero delayed
-Excel failures and four reviewed images pass. Broad regressions are pending.
+Excel failures and four reviewed images pass. Chain32/live-role48/Create15 retain
+exact prior checks with normal closure/preservation. Production layout retains
+exact three-size/five-page geometry and three reviewed captures. Reusable Production
+and remaining regressions are pending.
 Only Core's Inventory bridge changes; control coverage remains44/68 constructed
 buttons in catalog20. Evidence and excluded fixture/native failures are in
 `tests/integration/plan022_slice4be_inventory_query_results.md` in code.
