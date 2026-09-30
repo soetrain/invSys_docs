@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.70. Last reviewed: 2026-09-30 UTC, D3 query reusable/lifecycle GREEN.
+Version 1.71. Last reviewed: 2026-09-30 UTC, D3 query correction verified.
 
 The isolated Core query candidate passes80/80 supplemental cases and real public
 launch/close/reopen authority preservation after query RED88/34. Combined results
@@ -13,13 +13,16 @@ Production retains both aggregates and all171 observations in exact prior order,
 with unassisted restart/final shutdown, preserved settings/packages and zero
 delayed Excel failures. Lifecycle retains615/615 ordered checks and five compiles,
 with normal cleanup/preservation and zero delayed Excel failures.
-Remaining applicable Production regressions are pending.
+Draft/Action Paths retain390/390 ordered checks and five compiles with the same
+guarantees. The relevant query regression set is complete; its record maps changed
+consumers to coverage and distinguishes frozen unchanged-component evidence from
+new-candidate runs. The candidate becomes the pre-Close baseline, without promotion.
 Only Core's Inventory bridge changes; control coverage remains44/68 constructed
 buttons in catalog20. Evidence and excluded fixture/native failures are in
 `tests/integration/plan022_slice4be_inventory_query_results.md` in code.
 
 Architecture D3 now makes resolver/workbook lifetime part of the existing
-read-only UI query rule. Plan022 and controls1.330 retain nonempty-result,
+read-only UI query rule. Plan022 and controls1.331 retain nonempty-result,
 missing-source, dirty caller-workbook and byte-preservation requirements. Query
 GREEN does not register or accept Production Close or another tracked control.
 
@@ -38,7 +41,7 @@ conclude CLOSED; internal unload/workbook shutdown do not invent user activity.
 No runtime registration or clean focused RED/GREEN is claimed yet. The implemented
 census remains44/68 constructed buttons and24 unregistered, including this now
 specified Close control. Thirty nonbutton handlers and other role/launcher
-surfaces retain their separate pending coverage. Plan022 and controls1.330 name
+surfaces retain their separate pending coverage. Plan022 and controls1.331 name
 the test-first next action; do not count contract documentation as implementation.
 
 The separate Admin Detail heading correction now completes its planned matrix:

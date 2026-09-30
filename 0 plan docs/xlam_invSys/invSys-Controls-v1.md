@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.330 (Inventory query reusable/lifecycle GREEN; remaining gates pending)
+**Version:** 1.331 (Inventory query correction verified; Close remains pending)
 
 The isolated D3 query candidate passes all80 supplemental cases and preserves
 authority bytes through the real Production launch/close/reopen route. Its312
@@ -13,9 +13,11 @@ three-size/five-page geometry and three reviewed captures. Full reusable Product
 retains both aggregate checks and all171 observations in exact prior order, with
 unassisted restart/final shutdown, preserved settings/packages and zero delayed
 Excel failures. Lifecycle retains615/615 ordered checks and five compiles, with
-normal cleanup/preservation and zero delayed Excel failures.
-Only Core's Inventory bridge changes. Remaining applicable Production
-regressions are pending; no control registration, catalog increment, promotion
+normal cleanup/preservation and zero delayed Excel failures. Draft/Action Paths
+retain390/390 ordered checks and five compiles with the same guarantees.
+Only Core's Inventory bridge changes. Its relevant regression set is complete;
+the evidence record maps consumer coverage and identifies unchanged suites retained
+as frozen evidence rather than rerun. No control registration, catalog increment, promotion
 or full acceptance is claimed. Evidence and excluded harness/native failures:
 `tests/integration/plan022_slice4be_inventory_query_results.md` in code.
 

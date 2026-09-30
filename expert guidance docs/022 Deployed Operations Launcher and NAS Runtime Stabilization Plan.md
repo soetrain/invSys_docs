@@ -2,7 +2,7 @@
 
 **Status:** Current corrective implementation plan
 
-Inventory query focused GREEN,2026-09-30 UTC: the isolated
+Inventory query correction verified,2026-09-30 UTC: the isolated
 `validation-inventory-query-readonly` candidate passes all80 query cases and the
 real Production launch/close/reopen authority-byte checks. The combined312-check
 run is175 PASS/137 expected missing-Close failures, preserving the original232
@@ -17,9 +17,13 @@ among262 compiled components. Full reusable Production retains both aggregates
 and all171 observations in exact prior order, with unassisted restart/final
 shutdown, preserved settings/packages and zero delayed Excel failures. Production
 lifecycle retains615/615 ordered checks and five compiles, with normal cleanup,
-preserved settings/packages and zero delayed Excel failures.
-Remaining applicable Production regressions are required
-before accepting the correction or implementing Close observations. Current
+preserved settings/packages and zero delayed Excel failures. Draft/Action Paths
+retain390/390 ordered checks and five compiles with the same closure/preservation
+and delayed-audit guarantees. The relevant query regression set is complete;
+the evidence record maps changed query consumers to those gates and distinguishes
+unchanged component suites retained as frozen evidence from newly executed tests.
+This candidate is the pre-Close baseline; catalog21/Close and comprehensive Slice4be
+acceptance remain open, with no package promotion. Current
 evidence: `tests/integration/plan022_slice4be_inventory_query_results.md` in code.
 That record separately retains harness calibration and the assisted injected-error
 run followed by an oleaut32 access violation; it is not acceptance or crash repair.
