@@ -701,6 +701,15 @@ Compile, layout, static-maintenance, live-role, full-chain and reusable regressi
 remain required. This names an existing control under D18; it changes no business
 owner, close behavior, permission or authority contract and needs no repeat approval.
 
+Implementation constraint for this existing Close contract: the form keeps only
+typed delegates to a bounded Operations helper. Maintenance exception
+`PRODUCTION-CLOSE-NATIVE-HOOK-01` permits exactly four added source lines in
+`frmProduction` (11,681 to11,685) for the native QueryClose event and its separator.
+The existing button handler is replaced in place. Observation, context checks,
+completion and notices remain outside the oversized form. No other oversized
+module growth or dynamic-call/duplicate-body increase is authorized by this
+exception; it changes no operator behavior defined above.
+
 **4be.1 Recipe connection write stability (approved 2026-09-30 UTC):**
 The structure refinement below requires preserving the existing editing algorithm.
 Packaged baseline tests reveal that Update can retain old quantity/percentage and

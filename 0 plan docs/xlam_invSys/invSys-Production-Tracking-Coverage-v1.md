@@ -1,6 +1,11 @@
 # Production form tracking coverage audit
 
-Version 1.71. Last reviewed: 2026-09-30 UTC, D3 query correction verified.
+Version 1.72. Last reviewed: 2026-09-30 UTC, Close implementation constraints.
+
+Close's existing catalog21 contract proceeds under the four-line native event
+exception `PRODUCTION-CLOSE-NATIVE-HOOK-01`. Only typed form delegates belong in
+the oversized form; a bounded Operations helper owns its observation flow.
+This is not implementation or acceptance evidence and does not change the census.
 
 The isolated Core query candidate passes80/80 supplemental cases and real public
 launch/close/reopen authority preservation after query RED88/34. Combined results
@@ -22,7 +27,7 @@ buttons in catalog20. Evidence and excluded fixture/native failures are in
 `tests/integration/plan022_slice4be_inventory_query_results.md` in code.
 
 Architecture D3 now makes resolver/workbook lifetime part of the existing
-read-only UI query rule. Plan022 and controls1.331 retain nonempty-result,
+read-only UI query rule. Plan022 and controls1.332 retain nonempty-result,
 missing-source, dirty caller-workbook and byte-preservation requirements. Query
 GREEN does not register or accept Production Close or another tracked control.
 
@@ -41,7 +46,7 @@ conclude CLOSED; internal unload/workbook shutdown do not invent user activity.
 No runtime registration or clean focused RED/GREEN is claimed yet. The implemented
 census remains44/68 constructed buttons and24 unregistered, including this now
 specified Close control. Thirty nonbutton handlers and other role/launcher
-surfaces retain their separate pending coverage. Plan022 and controls1.331 name
+surfaces retain their separate pending coverage. Plan022 and controls1.332 name
 the test-first next action; do not count contract documentation as implementation.
 
 The separate Admin Detail heading correction now completes its planned matrix:

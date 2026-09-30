@@ -2,6 +2,18 @@
 
 **Status:** Current corrective implementation plan
 
+Production Close implementation resumes from the verified query candidate.
+The frozen packaged Close test retains232 identities (95 PASS/137 expected
+missing-Close failures), plus80 query checks GREEN. Architecture's bounded
+maintenance exception `PRODUCTION-CLOSE-NATIVE-HOOK-01` allows only four new
+`frmProduction` lines (11,681 to11,685) for a typed native QueryClose delegate;
+the existing button delegates in place. A small Operations helper owns captured
+context, dismissal observations and notices; Core owns catalog21 outcomes and
+terminal matching. No other growth or runtime contract exception is granted.
+Protecting test: `Test-Slice4beProductionClose.ps1 -CheckInventoryQueryReadOnly`.
+Independent recordings/How-To/Diagnostic/Compare and the relevant complete
+post-change gate set remain required before Close acceptance.
+
 Inventory query correction verified,2026-09-30 UTC: the isolated
 `validation-inventory-query-readonly` candidate passes all80 query cases and the
 real Production launch/close/reopen authority-byte checks. The combined312-check

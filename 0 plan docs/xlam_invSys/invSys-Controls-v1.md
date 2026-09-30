@@ -1,6 +1,13 @@
 # invSys Form Controls v1
 
-**Version:** 1.331 (Inventory query correction verified; Close remains pending)
+**Version:** 1.332 (Production Close implementation constraints; acceptance pending)
+
+Production Close retains the approved dismissal-only contract and protecting
+packaged RED. `PRODUCTION-CLOSE-NATIVE-HOOK-01` permits only four form lines for
+its native event delegate (11,681 to11,685); the button delegates in place and
+all observation logic stays in a bounded Operations helper. Core retains catalog
+and evaluator ownership. No new visible behavior, general size exception or
+acceptance is granted by this implementation constraint.
 
 The isolated D3 query candidate passes all80 supplemental cases and preserves
 authority bytes through the real Production launch/close/reopen route. Its312
