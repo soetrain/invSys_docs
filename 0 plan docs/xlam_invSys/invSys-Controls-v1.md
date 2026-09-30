@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.349 (Expanded worksheet RED; closure fixture calibrated)
+**Version:** 1.350 (Worksheet Core contract GREEN; Operations observations pending)
 
 Architecture v4.11 D18 now specifies catalog22's three discovered controls:
 PRODUCTION_PROCESS_WORKSHEET_SEND / ADD_ITEM / RETRIEVE (each with the full
@@ -16,8 +16,7 @@ GREEN and five compiles retained. Actual local/rejected/single/multi behavior,
 exact submission counts, preservation, normal closure, delayed audits and a
 reviewed populated-form capture pass. Missing catalog22 and six activity pairs
 cause the expected failures. Extended coverage is recorded below.
-GREEN and full acceptance remain pending; no runtime
-registration/count increase. Exact code evidence:
+Operations GREEN and full acceptance remain pending. Exact code evidence:
 `tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.
 Removal's workbook save can fail after a confirmed Designs save and local table
 deletion. FAILED retains that source reference and reports uncertainty; no restored
@@ -36,8 +35,18 @@ and all42 shared GREEN. Same-context capability loss, optional tracking and olde
 policy cases complete. New failures are10 draft guards,29 denial assertions and
 3 missing unavailable notices. Five compiles, helper/package/settings preservation,
 normal closure and delayed Excel audit pass; no desktop error5. Implement the
-specified catalog22 guards/observations next, protecting all441 checks and adding
-after-yield context-loss/reference-rejection cases at their integration boundaries.
+specified Operations guards/observations next. Core catalog22 now defines109
+controls; the three worksheet handlers remain unobserved and Production's observed
+button count stays45/68. Wire-contract RED147/38/185 reaches exactGREEN185 and then
+188 with three exact Recipe Order metadata checks. Final candidate
+`deploy/validation-process-worksheet-catalog-final` passes build/five compiles,
+cold start, preservation and delayed audits. A shared command-record builder
+restores duplicate bodies to190; calls stay9 literal/45 unresolved,28 caps do not
+grow. Broad actual-handler RED on the intermediate Core candidate is442/149/591:
+all441 prior identities/order remain,110 catalog checks turn GREEN, no prior GREEN
+regresses. Post-queue sign-out exposes a second queue attempt and worksheet
+removal/save after context loss. Protect all591 checks plus the three new Recipe
+Order metadata checks; full594, Operations GREEN and acceptance remain pending.
 
 Process worksheet tracking remains pending. Source review found positional
 managed-field access that can target inserted user columns before Retrieve

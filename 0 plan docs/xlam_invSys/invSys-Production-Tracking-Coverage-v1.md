@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.89. Last reviewed: 2026-09-30 UTC, expanded RED/closure fixture calibrated.
+Version 1.90. Last reviewed: 2026-09-30 UTC, Core contract GREEN/Operations pending.
 
 Catalog22's three Process worksheet observations are now specified in Architecture
 v4.11 D18, with local STAGED versus all-selected Retrieve CONFIRMED and FAILED
@@ -9,10 +9,10 @@ handler RED is62 PASS/158 expected FAIL/220, with42 prior GREEN and five compile
 Existing local/rejected/single/multi behavior and owner counts pass; missing
 catalog22 and six pairs account for the failures. Preservation, normal closure,
 delayed audits and a reviewed populated-form capture pass. Extended cases are
-recorded below. GREEN, registration and
+recorded below. Operations GREEN and
 acceptance remain pending. Code evidence:
 `tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.
-Runtime counts below remain unchanged until verified registration.
+Historical runtime counts below predate the Core-only registration noted here.
 Extended RED is119 PASS/214 expected FAIL/333, retaining all220 initial results.
 Three actual-submission fault cases and32 guard violations are protected; five
 compiles, preservation, normal closure and delayed audit pass. Native-window and
@@ -26,8 +26,17 @@ context; optional tracking and older-policy cases complete. The42 new failures
 are10 draft guards,29 denial assertions and3 absent unavailable notices. Five
 compiles, helper/package/settings preservation, normal closure and delayed audit
 pass. No desktop error5 or runtime repair. Implement the specified observations
-and guards next, keeping441 checks and adding after-yield context-loss/reference
-rejection coverage at those boundaries. Counts and acceptance remain unchanged.
+and guards next. Core catalog22 now defines109 controls, while these three actual
+worksheet handlers remain unobserved; observed Production buttons remain45/68.
+Wire-contract RED147/38/185 becomes exactGREEN185, then188 including three exact
+Recipe Order metadata checks. The final Core candidate uses a shared record
+builder to keep duplicate bodies190, calls9 literal/45 unresolved and28 oversized
+caps non-growing. Build/five compiles, cold start, preservation and delayed audits
+pass. Broader RED on the intermediate Core candidate is442/149/591: all441 prior
+checks/order survive,110 catalog checks turn GREEN, none of the prior GREEN fail.
+Post-queue sign-out establishes missing guards before the next queue attempt and
+worksheet removal/save. Preserve591 plus the three metadata checks when implementing
+Operations. Full594 and recording/Action Path acceptance remain pending.
 
 Next grouping: the three Process worksheet buttons. Send saves a newly created
 local table; Add Acceptable Item saves additional local columns; Retrieve validates

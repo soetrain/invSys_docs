@@ -26,10 +26,24 @@ results/order and all42 shared GREEN. Capability loss in the same captured conte
 optional tracking and older-policy cases now complete. New failures are10 draft
 guard violations,29 denial assertions and3 unavailable notices. Five compiles,
 normal cleanup, helper/package/settings preservation and delayed audit pass.
-No desktop error5, runtime repair, catalog registration or acceptance is claimed.
-Next implement the specified catalog22 observations and guards, preserving all441
-checks. Add focused after-yield context-loss and source-reference rejection cases
-as those integration boundaries are introduced. Then complete D13/recording/
+That test-only checkpoint claimed no desktop error5, runtime repair or acceptance.
+Core catalog22 definitions, exact outcomes, retrieval-only Designs references and
+explicit completion facts are now implemented. Wire-contract RED147/38/185 goes
+to exactGREEN185, then188 with three exact Recipe Order metadata checks. A shared
+command-record builder removes the initial duplicate-body increase. Final frozen
+candidate is `deploy/validation-process-worksheet-catalog-final`; five compiles,
+cold start, preservation and delayed audits pass. Static metrics remain9 literal/
+45 unresolved calls,190 duplicate bodies and28 non-growing oversized caps.
+The broader packaged gate on the intermediate Core candidate verifies442/149/591:
+all441 prior checks/order remain,110 catalog checks turn GREEN, no prior GREEN
+regresses. Post-queue sign-out now proves a second queue attempt and worksheet
+removal/save after context loss; these are protecting RED for the Operations fix.
+Core defines109 controls, but worksheet handlers still emit no observations and
+Production observed-button coverage remains45/68. Current source adds three
+Recipe Order checks; full594 is the next broad gate, not a completed result.
+Next implement Operations observations/guards through typed worksheet coordination
+without growing oversized modules. Preserve all591 checks plus the three metadata
+assertions. Then complete D13/recording/
 Action Path/regression evidence in the normative section. Registration and
 acceptance remain pending. Code evidence:
 `tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.
