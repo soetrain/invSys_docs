@@ -74,7 +74,13 @@ path captures are reviewed. The lower comparison viewport shows matches4-10 and
 zero extras; assertions establish all ten matches and local-only completion.
 The coverage audit also records the seven Assignment buttons' existing local/
 submission boundaries; that source review introduces no IDs or new contract.
-Next complete instruction editing and the remaining families.
+Instruction editing411 and paired paths105 retain all prior ordered checks, five
+compiles, preservation, normal cleanup and delayed audits. The first standalone
+How-To image is blank and excluded despite behavioral GREEN. One bounded recheck
+retains105 and supplies six reviewed usable captures, including standalone How-To
+and all five matched steps with zero extras in the local-only conclusion. The
+original blank remains excluded; its cause is undetermined, with no repair claim.
+Next complete UOM staging, public Close and paired paths on the frozen candidate.
 Preserve the595 checks and their documented
 closure mapping. No promotion, desktop-error5, crash-repair or human-acceptance
 claim. Exact evidence and pending gates:

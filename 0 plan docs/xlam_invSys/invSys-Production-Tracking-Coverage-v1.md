@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.101. Last reviewed: 2026-09-30 UTC, worksheet component regressions GREEN and Assignment source boundaries reviewed.
+Version 1.102. Last reviewed: 2026-09-30 UTC, worksheet instruction regressions and bounded visible recheck GREEN.
 
 Catalog22 now defines109 global controls and observes48/68 constructed Production
 buttons. The three Process worksheet handlers are implemented and pass595/595
@@ -66,7 +66,13 @@ Two focused and six path captures are reviewed; the lower comparison viewport
 shows matches4-10 and zero extras, while assertions establish all ten matches and
 local-only completion. The owner-boundary section clarifies the seven Assignment
 buttons' current local/submission behavior without new IDs or contract changes.
-Instruction editing and remaining families follow.
+Instruction editing411/paths105 retain all prior ordered checks, five compiles,
+preservation, normal cleanup and delayed audits. The first standalone How-To image
+is blank and excluded despite behavioral GREEN. One bounded recheck retains105
+and supplies six reviewed usable captures, including How-To and all five matches
+with zero extras and a local-only conclusion. The original blank's cause remains
+undetermined; no repair is claimed. UOM staging, public Close and paired paths
+follow on the frozen candidate.
 No promotion or human acceptance.
 Exact evidence: `tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.
 The prerequisite history below retains its own frozen-candidate counts.

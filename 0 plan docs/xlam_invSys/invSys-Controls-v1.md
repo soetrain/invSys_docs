@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.361 (Worksheet component regressions GREEN; acceptance pending)
+**Version:** 1.362 (Worksheet instruction regressions and visible recheck GREEN; acceptance pending)
 
 Architecture v4.11 D18's catalog22 controls PRODUCTION_PROCESS_WORKSHEET_SEND,
 PRODUCTION_PROCESS_WORKSHEET_ADD_ITEM and PRODUCTION_PROCESS_WORKSHEET_RETRIEVE
@@ -71,8 +71,13 @@ ordered checks, five compiles, preservation, normal cleanup and delayed audits.
 Two focused and six path captures are reviewed; the lower comparison viewport
 shows matches4-10 and zero extras, while assertions establish all ten matches and
 local-only completion. Assignment source boundaries are clarified in the coverage
-audit without new IDs or contract changes. Instruction editing and remaining
-families follow.
+audit without new IDs or contract changes. Instruction editing411/paths105 retain
+all prior ordered checks, five compiles, preservation, normal cleanup and delayed
+audits. The first standalone How-To image is blank and excluded despite behavioral
+GREEN. One bounded recheck retains105 and supplies six reviewed usable captures,
+including How-To and all five matches with zero extras and a local-only conclusion.
+The original blank's cause remains undetermined; no repair is claimed. UOM staging,
+public Close and paired paths follow on the frozen candidate.
 Regenerated static evidence retains all metrics and347 valid PowerShell parses.
 Remaining shared observation regressions are pending. No deployment
 promotion or human acceptance is claimed. Code evidence:
