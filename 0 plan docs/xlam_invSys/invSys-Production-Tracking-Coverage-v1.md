@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.82. Last reviewed: 2026-09-30 UTC, Core picker focused GREEN.
+Version 1.83. Last reviewed: 2026-09-30 UTC, Core picker/restart gate unresolved.
 
 Next grouping: the three Process worksheet buttons. Send saves a newly created
 local table; Add Acceptable Item saves additional local columns; Retrieve validates
@@ -28,10 +28,15 @@ no pair1 fallback. Packaged RED now proves110 PASS/5 selected-SKU failures/115,
 with five compiles, all42 prior shared GREEN checks and preservation passing.
 Exact code evidence: `tests/integration/plan022_slice4be_process_worksheet_picker_results.md`.
 The isolated Core correction passes115/115 exact focused checks, five compiles,
-unchanged static ratchets and preservation/normal cleanup. Only one compiled
-component changes. First full reusable attempt is excluded after a native Excel
-crash at batch-scale setup; unchanged rerun and remaining regression gates are
-pending. No desktop error5, tracking registration or release acceptance.
+unchanged static ratchets, smoke86, layout, chain32/live48/Create15, worksheet107
+and Close/query312, with exact prior checks, preservation/normal cleanup, delayed
+audits and reviewed captures. Only one compiled component changes. First full
+reusable attempt is excluded after a native Excel
+crash at batch-scale setup; unchanged rerun retains162 prior observations but
+fails before nine restart checks and requires verified fixture-recovery cleanup.
+Full reusable is unresolved. Next use bounded restart-phase/native-exit diagnostics
+with preserved disposable fixtures, not another undifferentiated full rerun.
+No desktop error5, tracking registration, promotion or release acceptance.
 D4/D14/D15 require exact
 selected-pair matching, other-pair/custom preservation and captured-book binding.
 

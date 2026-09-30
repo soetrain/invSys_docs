@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.342 (Core Process picker focused GREEN; regressions pending)
+**Version:** 1.343 (Core picker independent gates; reusable restart unresolved)
 
 Process worksheet tracking remains pending. Source review found positional
 managed-field access that can target inserted user columns before Retrieve
@@ -24,18 +24,25 @@ Next prerequisite: Core's actual picker commit must preserve the selected number
 item/SKU pair under normalized headers. Source audit finds untrimmed/case-sensitive
 pair-prefix matching may change the visible item but leave its paired SKU unchanged.
 No pair1 fallback exists in this path. D4/D14/D15 already govern this behavior;
-the normative clarification adds no ownership/allocation/save change. Establish
-packaged behavioral RED before correcting Core. RED now records110 PASS/5 FAIL/115
+the normative clarification adds no ownership/allocation/save change. Packaged
+behavioral RED before Core correction records110 PASS/5 FAIL/115
 through the actual picker commit: five normalized INPUT cases leave the selected
 SKU unchanged. Canonical/OUTPUT cases, other cells and captured-book/authority
 preservation pass; all42 shared prior GREEN checks and five compiles pass.
 Exact code evidence: `tests/integration/plan022_slice4be_process_worksheet_picker_results.md`.
 The isolated Core correction passes115/115 exact checks, build/five compiles,
-unchanged static ratchets, preservation and normal focused cleanup. A directly
+unchanged static ratchets, smoke86, layout, chain32/live48/Create15, worksheet107
+and Close/query312, with exact prior checks, preservation, normal cleanup and
+delayed Excel audits. Three layout, three worksheet and four Close/Settings
+captures are reviewed; the blank worksheet image is excluded. A directly
 reviewed picker capture shows the actual pre-commit selection; assertions prove
 the selected-pair result. The first full reusable regression suffered a native
-Excel crash during batch-scale setup and is excluded. One unchanged rerun and
-remaining regression gates are pending. No desktop error5 or crash-repair claim.
+Excel crash during batch-scale setup and is excluded. The unchanged rerun retains
+162 prior observations but fails before nine restart checks; verified disposable
+fixture recovery requires assisted cleanup. No matching delayed Application crash
+event was found; the second failure's cause remains unproven. Full reusable remains unresolved;
+next add bounded restart-phase/native-exit diagnostics and preserve fixture
+context for targeted replay. No desktop error5, promotion or crash-repair claim.
 
 Close's scoped automated gate set is complete on the isolated catalog21 candidate:
 focused312, independent paths90, shared regulation paths102, smoke86, chain32/

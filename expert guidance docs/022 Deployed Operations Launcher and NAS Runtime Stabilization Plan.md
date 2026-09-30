@@ -2,24 +2,26 @@
 
 **Status:** Current corrective implementation plan
 
-Next within Slice4be: Core Process item-picker header alignment, before the three
-worksheet actions are registered. Source audit finds the case-sensitive/untrimmed
-prefix in `cDynItemSearch.ProcessAlternativePairNumber` can fail to resolve the
-selected numbered pair after the item label changes, leaving its SKU unchanged.
-There is no pair1 fallback. Packaged RED now proves five selected-SKU failures:
-110 PASS/5 FAIL/115, all42 shared prior GREEN checks and five compiles retained.
-Canonical/OUTPUT cases, other cells, captured/decoy books and authority bytes pass.
+Active Slice4be prerequisite: finish Core Process picker acceptance before the
+three worksheet actions are registered. Under unchanged D4/D14/D15 ownership,
+allocation and save rules, the normalized-header correction goes from packaged
+RED110 PASS/5 selected-SKU failures to GREEN115/115, retaining all42 shared checks.
+Only cDynItemSearch changes among265 compiled components. Build/five compiles,
+cold start, unchanged static ratchets, smoke86, three-size/five-page layout,
+chain32/live48/Create15, worksheet107 and Close/query312 pass with exact prior
+checks, preservation, normal cleanup, delayed audits and reviewed captures.
+
+Full reusable remains unresolved after two excluded attempts: a native
+ntdll.dll/c0000028 failure during batch-scale setup, then an unchanged rerun that
+retains the first162 prior observations but fails before the nine restart
+observations. The latter requires verified fixture-recovery cleanup and has no
+matching delayed Excel Application failure event. Neither is GREEN or a crash
+repair. Desktop access remains healthy, zero error5. Next diagnose restart with
+fixed phase labels around recipe loading and the two retained-table Retrieve
+operations, native exit evidence and preserved disposable fixtures for targeted
+replay; do not issue another undifferentiated full rerun. Preserve frozen baselines.
 Exact evidence: `tests/integration/plan022_slice4be_process_worksheet_picker_results.md`.
-The isolated two-line Core correction now passes115/115 exact checks, five
-compiles/cold start and unchanged static ratchets. Only cDynItemSearch changes
-among265 compiled components. Full reusable first attempt encountered the known
-native failure signature at batch-scale setup; it is excluded and an unchanged
-isolated rerun is pending. Desktop access remained healthy; this was not error5.
-Remaining regression gates and broader worksheet tracking stay open.
-D4/D14/D15 require the same normalized selected-pair matching; the normative
-clarification preserves ownership, record types, allocation and save behavior.
-Protect the actual packaged picker commit first, including canonical/normalized
-later pairs, exact selected SKU, other-pair/custom preservation and captured book.
+No candidate promotion, worksheet tracking registration or full acceptance.
 
 Operations worksheet maintenance/retrieval completes its scoped gates,2026-09-30
 UTC: RED97 PASS/10 expected failures -> GREEN107/107, build/five compiles, static,
