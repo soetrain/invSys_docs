@@ -6,7 +6,10 @@ Next bounded group: catalog20's Apply Regulation and Clear Override are specifie
 under Architecture v4.11 D18, but are not implemented or registered. Preserve
 Process-default/Recipe-override staging, D15 authority and existing conversion/
 validation/clear behavior; only local STAGED can conclude. D13 packaged actual-
-handler RED is the next implementation gate. Current catalog19 registration
+handler RED records168 PASS/528 FAIL across696 unique checks, five compiles,
+no harness failures, preservation, unassisted closure and zero delayed Application
+failures. Existing local editing semantics pass; implementation/GREEN remains next.
+Current catalog19 registration
 remains103 global IDs and42/68 constructed Production controls,26 pending;
 implementing these two would leave24. The native full reusable acceptance gap
 remains open independently. No new human acceptance is claimed.
@@ -560,8 +563,8 @@ from permission to stage or export a catalog worksheet.
 
 | UI control | Caption | Actual handler | Tracking ID/status |
 |---|---|---|---|
-| `btnOutputRegulationApply` | Apply Regulation | `mBtnOutputRegulationApply_Click` | `PRODUCTION_OUTPUT_REGULATION_APPLY`: catalog20 specified; packaged RED/implementation pending |
-| `btnOutputRegulationClear` | Clear Override | `mBtnOutputRegulationClear_Click` | `PRODUCTION_OUTPUT_REGULATION_CLEAR`: catalog20 specified; packaged RED/implementation pending |
+| `btnOutputRegulationApply` | Apply Regulation | `mBtnOutputRegulationApply_Click` | `PRODUCTION_OUTPUT_REGULATION_APPLY`: catalog20 specified; packaged RED168/528 recorded; implementation pending |
+| `btnOutputRegulationClear` | Clear Override | `mBtnOutputRegulationClear_Click` | `PRODUCTION_OUTPUT_REGULATION_CLEAR`: catalog20 specified; packaged RED168/528 recorded; implementation pending |
 | `btnUomCatalogRetrieve` | Retrieve UOM Catalog | `mBtnUomCatalogRetrieve_Click` | `PRODUCTION_UOM_RETRIEVE` |
 | `btnUomCatalogSend` | Edit UOM Catalog on Sheet | `mBtnUomCatalogSend_Click` | `PRODUCTION_UOM_EDIT`; visible guards264/264 and public lifecycle61/61 pass; release acceptance pending |
 

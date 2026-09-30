@@ -10,7 +10,11 @@ Process-default/Recipe-override staging and D15 authority. Only STAGED establish
 local command completion; it is not Save/Release or Domain application. Preserve
 validation/conversion/clear semantics, status wording, captured context, current
 capability, optional tracking and fixed redaction. Packaged actual-handler RED
-must precede implementation; focused/paths/visible/regression acceptance is pending.
+records168 PASS/528 FAIL across696 unique checks, five compiles, no harness failures,
+preservation, unassisted closure and zero delayed Excel Application failures.
+Existing local editing semantics pass. Runtime implementation and focused GREEN/
+paths/visible/regression acceptance remain pending; see the regulation result
+record in the code repository.
 Neither control is registered at this checkpoint: catalog19 remains103 global
 IDs and42/68 constructed Production controls. Its native full reusable failure
 stays unresolved. See the normative discovered-control refinement and Plan022.

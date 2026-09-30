@@ -7,9 +7,14 @@ Architecture v4.11's D18 discovered-control refinement specifies catalog20 for
 Apply Regulation and Clear Override in Production Settings. Preserve the existing
 Process-default/Recipe-override algorithms and D15 authority; observe only local
 STAGED, with distinct rejection, denial and failure. No runtime change is made
-at this contract checkpoint. Add and run the packaged actual-handler RED before
-implementation, including both scopes, existing conversion/clear behavior,
-context/permission guards, optional tracking, partial failure and saved authority.
+at this contract checkpoint. Packaged actual-handler RED now records168 PASS/
+528 FAIL across696 unique checks, with five compiles, no harness failures,
+preservation, unassisted closure and zero delayed Excel Application failures.
+Both scopes' existing conversion/clear behavior and saved authority pass; missing
+catalog20 observations, context/permission/reentry guards and fixed failure
+handling remain RED. Exact evidence is in the code repository's
+`tests/integration/plan022_slice4be_production_regulation_results.md`.
+Implement only after this RED, preserving all696 identities for GREEN.
 Then require focused GREEN, paired paths, visible evidence and the established
 packaged/compile/layout/static/live-role/chain/reusable gates. Catalog19 stays
 frozen; its ordinary full reusable native failure remains open and is not repaired
