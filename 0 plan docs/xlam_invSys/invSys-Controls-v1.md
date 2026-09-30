@@ -1,54 +1,42 @@
 # invSys Form Controls v1
 
-**Version:** 1.350 (Worksheet Core contract GREEN; Operations observations pending)
+**Version:** 1.351 (Worksheet observations focused GREEN; broader acceptance pending)
 
-Architecture v4.11 D18 now specifies catalog22's three discovered controls:
-PRODUCTION_PROCESS_WORKSHEET_SEND / ADD_ITEM / RETRIEVE (each with the full
-PRODUCTION_PROCESS_WORKSHEET_ prefix), owner PRODUCTION_PROCESS_WORKSHEET,
-Operations > Production > Process Designer. Captions remain Send Process to Sheet,
-Add Acceptable Item and Retrieve Selected Process. Send/Add use STAGED for local
-save completion; Retrieve uses CONFIRMED only for all selected imports and
-removals/saves. FAILED retains exact individual Designs submission states,
-including partial results. No Inventory reference or inferred Domain application.
-Existing authority, local save/import rules and D14/D15 preservation remain.
-Initial actual-handler RED records62 PASS/158 expected FAIL/220, with42 shared
-GREEN and five compiles retained. Actual local/rejected/single/multi behavior,
-exact submission counts, preservation, normal closure, delayed audits and a
-reviewed populated-form capture pass. Missing catalog22 and six activity pairs
-cause the expected failures. Extended coverage is recorded below.
-Operations GREEN and full acceptance remain pending. Exact code evidence:
+Architecture v4.11 D18's catalog22 controls PRODUCTION_PROCESS_WORKSHEET_SEND,
+PRODUCTION_PROCESS_WORKSHEET_ADD_ITEM and PRODUCTION_PROCESS_WORKSHEET_RETRIEVE
+are implemented through their actual Operations form handlers. Owner is
+PRODUCTION_PROCESS_WORKSHEET; captions and Process Designer placement are unchanged.
+Send/Add record STAGED after local workbook saves. Retrieve records CONFIRMED
+only after every selected import and removal/save finishes. FAILED retains exact
+Submitted/Unknown Designs references and never asserts application, rollback or
+restoration after a local removal/save failure. Initial and post-yield context/
+permission guards preserve the captured workbook and prohibit retargeting.
+Optional disabled/older/unavailable tracking allows authorized work, with visible
+unavailable notices. Source fields and messages remain fixed and redacted.
+
+Focused packaged GREEN is595/595 on `validation-process-worksheet-activity-03`,
+after broadRED442/149/591 and Core wire-contract RED147/38/185 toGREEN188.
+All574 non-closure identities from591 remain ordered, and17 branch-dependent
+closure assertions map to18 stable checks with truthful handler/dismissal facts.
+The latest run dismisses Send's closed-book surface while Add/Retrieve remain
+reachable and enter their handlers; both branches protect saves/submissions/data.
+Build/five compiles, cold start, preservation, normal focused closure, delayed
+Excel audit and populated-form capture review pass. Form lines shrink to11599,
+worksheet service to1325. Static keeps190 duplicate bodies,9/45 dynamic calls,
+28 non-growing caps and three valid schemas. Earlier compile/payload failures
+remain failed evidence, not acceptance or a native-crash repair.
+
+Current catalog has109 IDs and observed Production buttons are48/68. Twenty
+buttons and30 nonbutton handlers retain coverage review. Worksheet107 and picker115
+pass their exact prior checks, five compiles, preservation, normal cleanup and
+delayed audits. Independent recording/publication/detail/How-To/Diagnostic/Compare
+and the remaining full scoped regression set are pending. No deployment
+promotion or human acceptance is claimed. Code evidence:
 `tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.
-Removal's workbook save can fail after a confirmed Designs save and local table
-deletion. FAILED retains that source reference and reports uncertainty; no restored
-table is asserted, and no table may be removed before its draft save is confirmed.
-Extended RED verifies119 PASS/214 expected FAIL/333, retaining every initial220
-result and all42 prior GREEN. Three real-submission fault cases prove individual
-Submitted/Unknown states and partial local effects;32 guard violations are also
-protected. Five compiles, preservation, normal closure and delayed audit pass.
-Native-window/workbook measurements now calibrate the closed binding fixture.
-Send's surface is dismissed by shutdown in the longer sequence; preservation and
-the existing binding guard pass without claiming a click. Add/Retrieve remain
-visible and their actual handlers enter normally. Earlier failed attempts remain
-excluded, including one assisted host termination; no runtime repair is claimed.
-Expanded RED is185 PASS/256 expected FAIL/441, retaining all333 prior results/order
-and all42 shared GREEN. Same-context capability loss, optional tracking and older
-policy cases complete. New failures are10 draft guards,29 denial assertions and
-3 missing unavailable notices. Five compiles, helper/package/settings preservation,
-normal closure and delayed Excel audit pass; no desktop error5. Implement the
-specified Operations guards/observations next. Core catalog22 now defines109
-controls; the three worksheet handlers remain unobserved and Production's observed
-button count stays45/68. Wire-contract RED147/38/185 reaches exactGREEN185 and then
-188 with three exact Recipe Order metadata checks. Final candidate
-`deploy/validation-process-worksheet-catalog-final` passes build/five compiles,
-cold start, preservation and delayed audits. A shared command-record builder
-restores duplicate bodies to190; calls stay9 literal/45 unresolved,28 caps do not
-grow. Broad actual-handler RED on the intermediate Core candidate is442/149/591:
-all441 prior identities/order remain,110 catalog checks turn GREEN, no prior GREEN
-regresses. Post-queue sign-out exposes a second queue attempt and worksheet
-removal/save after context loss. Protect all591 checks plus the three new Recipe
-Order metadata checks; full594, Operations GREEN and acceptance remain pending.
 
-Process worksheet tracking remains pending. Source review found positional
+Prerequisite history follows; its older counts describe those frozen candidates.
+
+Before worksheet tracking, source review found positional
 managed-field access that can target inserted user columns before Retrieve
 rejects an invalid draft. D14/D15 require normalized managed headers and preserved
 custom headers/values/formulas/positions in retained tables. A packaged actual
@@ -106,7 +94,7 @@ focused312, independent paths90, shared regulation paths102, smoke86, chain32/
 live48/Create15, three-size/five-page layout, full reusable171 observations,
 Settings202, activity494, lifecycle615, Draft/Paths390 and native cancellation94.
 Build/compile, static limits, preservation, unassisted cleanup, delayed Excel
-audits and reviewed captures pass. Registration remains106 global IDs and45/68
+audits and reviewed captures pass. At that checkpoint registration was106 global IDs and45/68
 Production buttons;23 buttons and30 nonbutton handlers retain coverage work.
 No package promotion, complete Slice4be coverage or human acceptance is claimed.
 
@@ -145,8 +133,8 @@ optional unavailable tracking is visible. Public reopening, workbook-shutdown
 exclusion and saved-authority preservation pass. Five builds/compiles, static
 limits, normal closure/preservation, zero delayed Excel failures and four reviewed
 images pass. A first assisted run exposed a missing older-policy notice observer
-in the fixture; the clean repeat uses unchanged packages. Current registration
-is106 global IDs and45/68 Production buttons, with23 buttons unregistered and30
+in the fixture; the clean repeat uses unchanged packages. That checkpoint's registration
+was106 global IDs and45/68 Production buttons, with23 buttons unregistered and30
 nonbutton handlers pending coverage review. Close-specific paths now pass above;
 scoped regressions now pass above. See `tests/integration/plan022_slice4be_production_close_results.md` in code.
 
@@ -5704,7 +5692,7 @@ removing the repeated Saving notices caused by unchanged read-only loads.
 The Saved Processes command row retains a clear vertical gap below its list at
 the minimum form size; its buttons must not overlap the list's rendered border.
 | Process identity | `txtProcessName`, locked `txtProcessId`, locked `txtProcessVersion`, `txtProcessDescription` | Edits the versioned Process header. invSys allocates the next available three-character Base-36 ID and version; the operator does not type either identity. |
-| Worksheet workbench | `btnProcessWorksheetCreate` -- **Send Process to Sheet**; `btnProcessWorksheetRetrieve` -- **Retrieve Selected Process**; `btnProcessWorksheetAddAlternative` -- **Add Acceptable Item** | Sends the current new/editable Process to one of any number of uniquely named Process tables in the exact captured `Production.Operator.xlsm`. If the current definition is an existing immutable version, Send first promotes it to the next generated version. Add Acceptable Item appends one numbered managed-item/hidden-SKU pair to the selected table; retrieval accepts one table or Ctrl+click cells across several tables, imports each confirmed definition as DRAFT, and deletes only successful selected tables. |
+| Worksheet workbench | `btnProcessWorksheetCreate` -- **Send Process to Sheet**; `btnProcessWorksheetRetrieve` -- **Retrieve Selected Process**; `btnProcessWorksheetAddAlternative` -- **Add Acceptable Item** | Sends the current new/editable Process to uniquely named Process tables in the exact captured `Production.Operator.xlsm`. Existing immutable definitions first advance to the next generated version. Add appends one numbered managed-item/hidden-SKU pair. Retrieve accepts one table or Ctrl+click across several, validates all before submission, and removes each table only after confirmed DRAFT save; a final workbook-save failure may leave local deletion. Catalog22 records local STAGED for Send/Add, all-selected CONFIRMED or partial FAILED for Retrieve, with exact Designs references and initial/post-yield binding guards. Focused595, worksheet107 and picker115 GREEN; independent paths and broader acceptance remain pending. |
 | Requirements | header-backed `lstProcessRequirements`; locked `txtRequirementId`, `txtRequirementName`, `txtRequirementQty`, `txtRequirementPercent`, `txtRequirementYieldBasis`, `txtRequirementUom`; `btnProcessRequirementAdd`, `btnProcessRequirementUpdate`, `btnProcessRequirementRemove`, `btnProcessRequirementUp`, `btnProcessRequirementDown` | Defines typed external/upstream input requirements under **ID / Requirement / Qty / % / Batch basis / UOM**. IDs are generated Base-36 values. Worksheet input rows calculate basis and percent within each normalized-UOM group, so unlike groups may coexist without implicit conversion. |
 | Outputs | header-backed `lstProcessOutputs`; locked `txtProcessOutputId`, `txtProcessOutputDesignId`, `txtProcessOutputDesignVersion`; `txtProcessOutputName`, `txtProcessOutputQty`, `txtProcessOutputPercent`, `txtProcessOutputYieldBasis`; catalog-dropdown `cmbProcessOutputUom`; hidden/internal `txtProcessOutputItemCode`; `btnProcessOutputAdd`, `btnProcessOutputUpdate`, `btnProcessOutputRemove`, `btnProcessOutputUp`, `btnProcessOutputDown` | Defines one or more output designs in one compact row under **ID / Output / Design / Ver / Output Qty / Yield % / Yield basis / UOM**. The hidden SKU reserves no visible gap. Quantity-defined outputs default to Yield %=100 and Yield basis=Output Qty; explicit percentage/basis values survive Update/save/reload. Output and Design identities are generated. UOM is selected from Settings' Recipe UOM Catalog. A managed output item is picker-selected and its SKU is retained internally; the operator does not type Item Code. Save/Release rejects a Process with no output, a noncatalog UOM, or an output without a selected managed SKU. |
 | Worksheet table columns | **Record Type**, text-safe generated **ID**, **Name**, **Qty**, **Percent**, **Basis Qty**, catalog-dropdown **UOM**, generated **Design ID**, **Design Version**, **Instruction**, automatic **Requirement ID**, hidden/system-managed **Output SKU**, **Acceptable Managed Item 1** through **4** (and added pairs), with each matching managed hidden **Accepted SKU n** | Record Type is dropdown-backed. INPUT, OUTPUT, and INSTRUCTION IDs use one table-wide Base-36 namespace and remain unique regardless of entry order; INPUT Percent/Basis Qty are formula-managed per normalized-UOM group, INPUT Requirement ID and OUTPUT Design identity are system managed, and mixed-UOM assembly rows are valid when every group totals 100.0%. Core item search opens only from a valid **Acceptable Managed Item n** cell: INPUT fills that numbered alternative pair; OUTPUT pair 1 fills the visible managed item and hidden Output SKU while retaining its descriptive Name. OUTPUT Name never opens search. Neither path stores a physical `System_Key`; historical ALTERNATIVE rows remain import-compatible. |

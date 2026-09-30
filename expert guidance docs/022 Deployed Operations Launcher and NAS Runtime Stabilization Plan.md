@@ -2,57 +2,40 @@
 
 **Status:** Current corrective implementation plan
 
-Slice4be next: implement catalog22's three Process worksheet observations under
-Architecture v4.11 D18's discovered-control refinement. Send/Add conclude STAGED
-for local saves; Retrieve concludes CONFIRMED only after every selected import
-and removal/save succeeds. Partial/uncertain failures retain each actual Designs
-reference and its state. No worksheet algorithm, authority or permission change.
-Initial actual packaged-handler RED on the completed picker candidate is verified:
-62 PASS/158 expected FAIL/220, all42 shared GREEN and five compiles retained.
-Existing local/rejected/single/multi-table behavior and exact owner submission
-counts pass; catalog22 and six activity pairs are absent. Pins/settings, normal
-closure, delayed audits and a reviewed populated-form capture pass. Before runtime
-edits, extended RED now verifies119 PASS/214 expected FAIL/333, retaining all220
-initial results. Three actual-submission fault cases retain precise mixed/per-event
-states and post-delete unsaved state. Missing failure pairs and32 guard violations
-account for the new failures; preservation/normal closure/delayed audit pass.
-The closed-workbook fixture is now calibrated: fixed native-window and workbook
-facts prove shutdown dismisses Send's surface in the longer sequence. That branch
-checks preservation and the existing binding guard without invoking a disconnected
-reference; Add/Retrieve stay visible and enter their actual handlers normally.
-Earlier failed attempts remain excluded, including one assisted host termination.
-Expanded RED verifies185 PASS/256 expected FAIL/441, retaining all333 prior
-results/order and all42 shared GREEN. Capability loss in the same captured context,
-optional tracking and older-policy cases now complete. New failures are10 draft
-guard violations,29 denial assertions and3 unavailable notices. Five compiles,
-normal cleanup, helper/package/settings preservation and delayed audit pass.
-That test-only checkpoint claimed no desktop error5, runtime repair or acceptance.
-Core catalog22 definitions, exact outcomes, retrieval-only Designs references and
-explicit completion facts are now implemented. Wire-contract RED147/38/185 goes
-to exactGREEN185, then188 with three exact Recipe Order metadata checks. A shared
-command-record builder removes the initial duplicate-body increase. Final frozen
-candidate is `deploy/validation-process-worksheet-catalog-final`; five compiles,
-cold start, preservation and delayed audits pass. Static metrics remain9 literal/
-45 unresolved calls,190 duplicate bodies and28 non-growing oversized caps.
-The broader packaged gate on the intermediate Core candidate verifies442/149/591:
-all441 prior checks/order remain,110 catalog checks turn GREEN, no prior GREEN
-regresses. Post-queue sign-out now proves a second queue attempt and worksheet
-removal/save after context loss; these are protecting RED for the Operations fix.
-Core defines109 controls, but worksheet handlers still emit no observations and
-Production observed-button coverage remains45/68. Current source adds three
-Recipe Order checks; full594 is the next broad gate, not a completed result.
-Next implement Operations observations/guards through typed worksheet coordination
-without growing oversized modules. Preserve all591 checks plus the three metadata
-assertions. Then complete D13/recording/
-Action Path/regression evidence in the normative section. Registration and
-acceptance remain pending. Code evidence:
-`tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.
-The existing removal boundary deletes before workbook save. Its failure after
-confirmed Designs save can leave local deletion; observe FAILED/Unknown without
-claiming restoration. D15's pre-confirmation removal prohibition remains binding.
+Active Slice4be: catalog22's three Process worksheet observations are implemented
+under Architecture v4.11 D18 and pass the focused packaged gate595/595 on
+`deploy/validation-process-worksheet-activity-03`. Send/Add conclude STAGED after
+local saves; Retrieve concludes CONFIRMED only after every selected owning import
+and removal/save succeeds. Mixed/uncertain failures retain exact per-submission
+Designs references. No Domain application, rollback or restored table is inferred.
+The existing removal boundary can delete before a final workbook-save failure;
+D15 still prohibits removal before confirmed draft save.
 
-Active Slice4be: Core Process picker scoped gates now complete before the
-three worksheet actions are registered. Under unchanged D4/D14/D15 ownership,
+Typed Operations coordination guards initial and subsequent work, retains the
+captured workbook/context, and stops after post-queue session loss. Optional
+tracking cannot block authorized work; unavailable notices are visible. The form
+shrinks11685 to11599 lines, worksheet service1331 to1325. Build/five compiles,
+cold start, normal focused cleanup, package/settings preservation, delayed audits
+and a reviewed populated-form capture pass. Static has190 duplicate bodies,
+9 literal/45 unresolved calls and28 non-growing oversized caps; all three schemas
+pass. Core188 and all574 non-closure checks from broadRED591 remain in exact order.
+The17 branch-dependent closure checks map explicitly to18 stable assertions;
+native dismissal is never represented as a handler invocation. A compile failure
+and a payload-transfer regression were corrected and remain failed evidence.
+
+Catalog22 defines109 controls;48/68 constructed Production buttons now have
+observations, with20 buttons and30 nonbutton handlers still requiring coverage
+review. Worksheet107 and picker115 pass their exact prior checks, five compiles,
+preservation, normal cleanup and delayed audits. Focused GREEN is not full
+acceptance. Next complete independent recording/publication/Event Detail and all
+three Action Path modes, then remaining layout/live-role/full-chain/reusable and
+shared observation regressions. Preserve the595 checks and their documented
+closure mapping. No promotion, desktop-error5, crash-repair or human-acceptance
+claim. Exact evidence and pending gates:
+`tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.
+
+Completed picker prerequisite (historical frozen candidate): Core Process picker
+scoped gates passed before worksheet registration. Under unchanged D4/D14/D15 ownership,
 allocation and save rules, the normalized-header correction goes from packaged
 RED110 PASS/5 selected-SKU failures to GREEN115/115, retaining all42 shared checks.
 Only cDynItemSearch changes among265 compiled components. Build/five compiles,

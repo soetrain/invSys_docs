@@ -1,44 +1,34 @@
 # Production form tracking coverage audit
 
-Version 1.90. Last reviewed: 2026-09-30 UTC, Core contract GREEN/Operations pending.
+Version 1.91. Last reviewed: 2026-09-30 UTC, worksheet observations focused GREEN.
 
-Catalog22's three Process worksheet observations are now specified in Architecture
-v4.11 D18, with local STAGED versus all-selected Retrieve CONFIRMED and FAILED
-partial results retaining exact per-submission Designs states. Initial actual
-handler RED is62 PASS/158 expected FAIL/220, with42 prior GREEN and five compiles.
-Existing local/rejected/single/multi behavior and owner counts pass; missing
-catalog22 and six pairs account for the failures. Preservation, normal closure,
-delayed audits and a reviewed populated-form capture pass. Extended cases are
-recorded below. Operations GREEN and
-acceptance remain pending. Code evidence:
-`tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.
-Historical runtime counts below predate the Core-only registration noted here.
-Extended RED is119 PASS/214 expected FAIL/333, retaining all220 initial results.
-Three actual-submission fault cases and32 guard violations are protected; five
-compiles, preservation, normal closure and delayed audit pass. Native-window and
-workbook measurements now resolve the fixture ambiguity: Send's surface dismisses
-on shutdown in the longer sequence; Add/Retrieve remain visible and enter their
-handlers. The dismissed branch verifies preservation and the existing binding
-guard without claiming an operator click. Earlier failed attempts stay excluded.
-Expanded RED completes185 PASS/256 expected FAIL/441, retaining exact prior333
-results/order and all42 shared GREEN. Capability loss preserves the same captured
-context; optional tracking and older-policy cases complete. The42 new failures
-are10 draft guards,29 denial assertions and3 absent unavailable notices. Five
-compiles, helper/package/settings preservation, normal closure and delayed audit
-pass. No desktop error5 or runtime repair. Implement the specified observations
-and guards next. Core catalog22 now defines109 controls, while these three actual
-worksheet handlers remain unobserved; observed Production buttons remain45/68.
-Wire-contract RED147/38/185 becomes exactGREEN185, then188 including three exact
-Recipe Order metadata checks. The final Core candidate uses a shared record
-builder to keep duplicate bodies190, calls9 literal/45 unresolved and28 oversized
-caps non-growing. Build/five compiles, cold start, preservation and delayed audits
-pass. Broader RED on the intermediate Core candidate is442/149/591: all441 prior
-checks/order survive,110 catalog checks turn GREEN, none of the prior GREEN fail.
-Post-queue sign-out establishes missing guards before the next queue attempt and
-worksheet removal/save. Preserve591 plus the three metadata checks when implementing
-Operations. Full594 and recording/Action Path acceptance remain pending.
+Catalog22 now defines109 global controls and observes48/68 constructed Production
+buttons. The three Process worksheet handlers are implemented and pass595/595
+focused packaged checks on `validation-process-worksheet-activity-03`. Twenty
+buttons and30 nonbutton handlers still need coverage review. The remaining gates
+below keep this implementation short of full Slice4be acceptance.
 
-Next grouping: the three Process worksheet buttons. Send saves a newly created
+Architecture v4.11 D18 retains local Send/Add STAGED, all-selected Retrieve
+CONFIRMED and partial/uncertain FAILED with exact Designs submission states.
+Typed coordination protects the captured workbook/session/warehouse, initial
+permission and post-submission continuation. No rollback/application is inferred.
+Core188 remains GREEN; all574 non-closure checks fromRED591 retain order and pass.
+Seventeen native-lifetime-dependent closure assertions map to18 stable checks;
+a dismissed surface is never counted as an invoked handler. Normal cleanup,
+package/settings preservation, five compiles, cold start, delayed audit and a
+reviewed populated-form capture pass. Static stays at190 duplicate bodies,
+9 literal/45 unresolved calls and28 non-growing caps; the form shrinks86 lines
+and the worksheet service6. Initial compile/payload-transfer failures are retained
+as failed evidence and corrected without changing the worksheet algorithm.
+
+Worksheet107 and picker115 pass exact prior checks, five compiles, preservation,
+normal cleanup and delayed audits. Next complete separate recording/publication/Event Detail
+and all three Action Path modes, then remaining layout/live-role/full-chain/
+reusable and shared-observation regressions. No promotion or human acceptance.
+Exact evidence: `tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.
+The prerequisite history below retains its own frozen-candidate counts.
+
+Worksheet prerequisite history: Send saves a newly created
 local table; Add Acceptable Item saves additional local columns; Retrieve validates
 all selected tables then may submit several Designs saves and remove confirmed
 tables. Source review identifies positional ID/Requirement ID maintenance before
@@ -121,7 +111,7 @@ The shared harness also retains regulation paths102/102 in exact prior order,
 five compiles, normal cleanup/preservation and zero delayed Excel failures.
 Runtime is unchanged; scoped post-change regressions now pass above.
 
-Current catalog21 candidate `validation-production-close-observations` registers
+The prior catalog21 candidate `validation-production-close-observations` registers
 106 global IDs and45/68 constructed Production buttons;23 buttons remain
 unregistered and30 nonbutton handlers retain pending coverage review. Close passes
 312/312 exact ordered packaged checks after175/137 RED, including80 query and42
@@ -788,9 +778,9 @@ from permission to stage or export a catalog worksheet.
 | `btnProcessReuse` | Edit as New Version | `mBtnProcessReuse_Click` | `PRODUCTION_PROCESS_REUSE`: catalog19 candidate; focused/paths GREEN, regressions pending |
 | `btnProcessSave` | Save Draft | `mBtnProcessSave_Click` | `PRODUCTION_PROCESS_SAVE` (partial) |
 | `btnProcessValidate` | Validate | `mBtnProcessValidate_Click` | `PRODUCTION_PROCESS_VALIDATE` |
-| `btnProcessWorksheetAddAlternative` | Add Acceptable Item | `mBtnProcessWorksheetAddAlternative_Click` | Pending |
-| `btnProcessWorksheetCreate` | Send Process to Sheet | `mBtnProcessWorksheetCreate_Click` | Pending |
-| `btnProcessWorksheetRetrieve` | Retrieve Selected Process | `mBtnProcessWorksheetRetrieve_Click` | Pending |
+| `btnProcessWorksheetAddAlternative` | Add Acceptable Item | `mBtnProcessWorksheetAddAlternative_Click` | `PRODUCTION_PROCESS_WORKSHEET_ADD_ITEM`, catalog22; local STAGED, focused595 GREEN; independent paths and broader regressions pending |
+| `btnProcessWorksheetCreate` | Send Process to Sheet | `mBtnProcessWorksheetCreate_Click` | `PRODUCTION_PROCESS_WORKSHEET_SEND`, catalog22; local STAGED, focused595 GREEN; independent paths and broader regressions pending |
+| `btnProcessWorksheetRetrieve` | Retrieve Selected Process | `mBtnProcessWorksheetRetrieve_Click` | `PRODUCTION_PROCESS_WORKSHEET_RETRIEVE`, catalog22; all-selected CONFIRMED or exact partial FAILED, focused595 GREEN; independent paths and broader regressions pending |
 
 ### Recipe Designer (16)
 
