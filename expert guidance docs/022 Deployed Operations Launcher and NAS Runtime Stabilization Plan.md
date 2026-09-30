@@ -63,7 +63,12 @@ retain all prior ordered checks, five compiles, normal cleanup, preservation and
 clean delayed audits. Three focused/released captures and six paired-path captures
 are reviewed. Update retains all seven validated fields; the five-step comparison
 concludes local command completion with zero extras and no Domain application.
-Next complete Recipe ordering and the remaining families.
+Recipe ordering463 and paired paths93 also retain all prior ordered checks, five
+compiles, preservation, normal cleanup and delayed audits. Two focused and six
+path captures are reviewed; the focused Move Down image retains an earlier
+injected-failure notice and is used only for row layout. The separate three-step
+comparison matches all actions with zero extras and a local-only conclusion.
+Next complete component editing and the remaining families.
 Preserve the595 checks and their documented
 closure mapping. No promotion, desktop-error5, crash-repair or human-acceptance
 claim. Exact evidence and pending gates:

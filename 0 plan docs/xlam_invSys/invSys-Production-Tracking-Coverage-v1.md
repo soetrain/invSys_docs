@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.99. Last reviewed: 2026-09-30 UTC, worksheet Recipe structure regressions GREEN.
+Version 1.100. Last reviewed: 2026-09-30 UTC, worksheet Recipe structure and ordering regressions GREEN.
 
 Catalog22 now defines109 global controls and observes48/68 constructed Production
 buttons. The three Process worksheet handlers are implemented and pass595/595
@@ -55,8 +55,12 @@ conclusions with zero extras. Recipe structure786, released-data55 and paths109
 retain exact prior ordered checks, five compiles, preservation, normal cleanup and
 clean delayed audits. Three focused/released and six paired-path captures are
 reviewed. Update retains all seven validated fields; the five-step comparison
-concludes locally with zero extras and no Domain application. Recipe ordering and
-the remaining families follow.
+concludes locally with zero extras and no Domain application. Recipe ordering463
+and paths93 retain exact prior ordered checks, five compiles, normal cleanup,
+preservation and delayed audits. Two focused and six path captures are reviewed;
+Move Down's focused image retains an earlier injected-failure notice and proves
+row layout only. Its separate three-step comparison matches all actions with zero
+extras and a local-only conclusion. Component editing and remaining families follow.
 No promotion or human acceptance.
 Exact evidence: `tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.
 The prerequisite history below retains its own frozen-candidate counts.
