@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.96. Last reviewed: 2026-09-30 UTC, worksheet Settings regressions GREEN.
+Version 1.97. Last reviewed: 2026-09-30 UTC, worksheet lifecycle and draft regressions GREEN.
 
 Catalog22 now defines109 global controls and observes48/68 constructed Production
 buttons. The three Process worksheet handlers are implemented and pass595/595
@@ -44,7 +44,10 @@ Settings retains202 ordered checks, saved-preference restart and Operations with
 Admin. Settings activity passes497, retaining494 ordered checks plus exactly three
 worksheet older-policy exclusions. Both gates pass five compiles, normal cleanup,
 preservation and delayed audits; eight Settings captures are reviewed.
-Next complete remaining Production observation regressions.
+Production lifecycle615, draft/paths390 and native cancellation94 retain all prior
+checks in order. Each passes five compiles, preservation, normal cleanup and the
+delayed audit; five native captures are reviewed. Actual native No input and state
+checks establish the cancelled result. Other Production families remain.
 No promotion or human acceptance.
 Exact evidence: `tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.
 The prerequisite history below retains its own frozen-candidate counts.

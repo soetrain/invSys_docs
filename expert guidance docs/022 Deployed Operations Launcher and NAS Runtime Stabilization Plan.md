@@ -50,7 +50,11 @@ Settings now retains202 ordered checks, including saved-preference restart and
 Operations without Admin. Settings activity passes497: all494 prior checks remain
 ordered, with exactly three new worksheet older-policy exclusions. Both gates
 pass five compiles, normal cleanup, preservation and delayed audits; eight Settings
-captures are reviewed. Next complete remaining Production observation regressions.
+captures are reviewed. Production lifecycle615, draft/paths390 and native
+cancellation94 now retain all prior checks in exact order. Each passes five
+compiles, preservation, normal cleanup and the delayed Excel audit. Five native
+captures are reviewed; actual native No input and state checks establish the
+cancelled result. Next complete Regulation and the remaining Production families.
 Preserve the595 checks and their documented
 closure mapping. No promotion, desktop-error5, crash-repair or human-acceptance
 claim. Exact evidence and pending gates:
