@@ -1,6 +1,21 @@
 # invSys Form Controls v1
 
-**Version:** 1.288 (Recipe structure contract specified; implementation pending)
+**Version:** 1.289 (Recipe structure Update decision pending; no runtime change)
+
+The packaged baseline exposes five Update-behavior assertion failures in addition
+to missing tracking/guards. Architecture v4.11 contains a pending proposal to
+write one snapshot of the seven validated connection-editor fields, preventing
+selection callbacks from substituting older/cleared values. Existing validation,
+selection/refresh, local-only staging and separate Save authority remain required.
+The diagnostic confirms correct pre-action fields and a selection callback during
+Update, followed by three cleared routing fields and old quantity/percentage.
+Approval is required before implementing
+this explicit exception to preserving the existing connection-edit algorithm.
+No GREEN, registration increase or user acceptance is claimed.
+Final baseline182/604 has786 unique checks:599 missing tracking/guard facts and
+five pending Update assertions. Five instrumented compiles, preservation, normal
+closure and zero Excel Application failures pass. See code evidence
+`tests/integration/plan022_slice4be_production_recipe_structure_results.md`.
 
 Architecture v4.11 D18 specifies catalog18 observations for existing Recipe
 Designer Add Process, Remove Process, Connect, Update and Disconnect commands:

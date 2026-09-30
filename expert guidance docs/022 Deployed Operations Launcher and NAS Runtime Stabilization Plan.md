@@ -2,6 +2,21 @@
 
 **Status:** Current corrective implementation plan
 
+**Recipe structure blocker; decision pending:** baseline Update does not satisfy
+the proposed seven-field preservation assertions. Architecture v4.11 now carries
+an explicitly pending connection-write-stability proposal: snapshot the validated
+editor fields before writing the local row, so selection callbacks cannot replace
+them with older or cleared values. The disposable packaged diagnostic confirms
+seven correct pre-action editor values, a selection callback during Update and
+three cleared routing fields with old quantity/percentage afterwards. Obtain
+approval before implementing this exception to the
+existing-algorithm preservation rule. This is not approval inferred from Plan022.
+Runtime remains unchanged. Final baseline182/604 across786 unique checks separates
+599 missing tracking/guard failures from five pending Update-behavior assertions.
+Five instrumented compiles, settings/package preservation, normal closure and
+zero Excel Application failures pass. See code evidence
+`tests/integration/plan022_slice4be_production_recipe_structure_results.md`.
+
 **Active bounded4be group: Recipe structure observations.** Architecture v4.11 D18
 specifies catalog18 for the existing Add Process, Remove Process, Connect, Update
 and Disconnect handlers. This is an approved semantic-inheritance refinement;
@@ -12,13 +27,14 @@ and refresh side effects. Only STAGED concludes local CommandCompleted; records
 cannot assert saved definitions or Domain application. Captured-context/current
 capability and loading/nested guards precede edits; optional tracking remains
 non-blocking and fixed metadata remains redacted.
-Create `Test-Slice4beProductionRecipeStructure.ps1` and disposable adapters to
+`Test-Slice4beProductionRecipeStructure.ps1` and disposable adapters now
 invoke the five actual packaged Click handlers on frozen
 `deploy/validation-production-recipe-order-final`. Expected RED is missing
 catalog18 observations/terminal facts and inherited guards; existing authorized
 edit semantics must remain GREEN. Protect failure uncertainty and partial edits
 without asserting rollback. No compile, fixture or harness failure counts as RED.
-Then implement typed Operations actions and Core catalog/outcome matching, retain
+After resolving the explicit Update decision above, implement typed Operations
+actions and Core catalog/outcome matching, retain
 all current GREENs, and require independent recorded guide/observed-run comparison,
 packaged compile/layout/static/live-role/full-chain/reusable and visible evidence.
 No authority, capability, saved-schema or edit-algorithm amendment is proposed.

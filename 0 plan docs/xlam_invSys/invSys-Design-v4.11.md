@@ -517,6 +517,34 @@ workbook columns. Publication, original recording order and How-To/Diagnostic/
 Compare both require separate evidence. This records discovered controls within
 the approved contract; it does not amend authority, permissions or saved semantics.
 
+**4be.1 Recipe connection write stability (proposal; approval pending):**
+The structure refinement below requires preserving the existing editing algorithm.
+Packaged baseline tests reveal that Update can retain old quantity/percentage and
+lose routing values despite a successful local status. The disposable diagnostic
+confirms all seven expected editor values immediately before Update and one
+hidden-list selection callback during the handler; afterwards three routing
+fields are empty and quantity/percentage retain their original values. The
+callback reloads the editor while the writer still reads subsequent fields from
+that editor. Runtime source and frozen packages remain unchanged.
+
+Proposed explicit exception: after existing connection validation succeeds,
+Connect/Update capture the seven editor values once and write that snapshot to
+the chosen local connection row. Selection callbacks must not substitute older
+or cleared editor values into the same write. Preserve the existing validation,
+case-insensitive duplicate exclusion, append/update selection rules, quantity and
+percentage trimming, visible refresh and separate owning Save command. An
+unchanged-value Update must preserve the row and may finish STAGED. This is local
+draft behavior only; it changes no authority, permission, schema or Domain write.
+Failures remain FAILED/Unknown without a rollback promise.
+
+This proposal is not active normative authorization. It would explicitly qualify
+the preservation language in the next subsection; do not silently implement a
+new algorithm as tracking instrumentation. Approval is required before this
+exception or runtime implementation of the affected structure group. Protect it
+through the actual packaged Update handler, including all seven fields, blank/
+nonnumeric/negative-other-field cases allowed by current validation, unchanged
+values, other rows, selection and existing reusable Production regressions.
+
 **4be.1 Recipe structure observations (discovered-control refinement; implementation pending):**
 Under the approved D18 local-draft and semantic-inheritance rules, catalog18 adds
 the following existing Recipe Designer commands, preserving catalogs1-17 exactly:

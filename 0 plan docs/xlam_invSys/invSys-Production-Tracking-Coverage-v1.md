@@ -1,6 +1,13 @@
 # Production form tracking coverage audit
 
-Version 1.31. Last reviewed: 2026-09-30 UTC, Recipe structure contract specified.
+Version 1.32. Last reviewed: 2026-09-30 UTC, Recipe structure baseline and pending Update decision.
+
+Packaged structure baseline:182 PASS/604 FAIL,786 unique checks;599 missing
+tracking/guard checks and five Update-behavior assertions awaiting the explicit
+connection-write-stability proposal in Architecture v4.11. All five instrumented
+compiles, package/settings preservation and normal closure pass with zero Excel
+Application failures. Runtime remains unchanged. See code evidence
+`tests/integration/plan022_slice4be_production_recipe_structure_results.md`.
 
 Next bounded group: Architecture v4.11 D18 and Plan022 specify catalog18 for the
 five Recipe structure commands below. This preserves existing local editing and
