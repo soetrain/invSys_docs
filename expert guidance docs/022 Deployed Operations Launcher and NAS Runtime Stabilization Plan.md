@@ -10,8 +10,12 @@ and unknown-column rules; D15 now explicitly names their application to this
 workbench. Protect the actual packaged Retrieve handler first: an invalid draft
 with a custom column inserted before a managed field must be rejected without
 overwriting that custom data. Test header normalization and retained identity
-alongside the ordinary layout. This is a suspected behavioral defect until RED
-is run; no runtime correction or catalog22 registration is claimed. Preserve the
+alongside the ordinary layout. Packaged RED now proves the defect:97 PASS/10
+expected failures across107 checks, including preserved ordinary mixed-UOM import,
+five compiles and normal cleanup. The isolated Operations-only correction builds
+and compiles; focused GREEN and relevant regression/visible/static gates remain
+pending. No catalog22 registration is claimed. Exact evidence:
+`tests/integration/plan022_slice4be_process_worksheet_headers_results.md`. Preserve the
 completed Close candidate and its GREEN regressions. Observation design must
 separately reflect local worksheet changes and Retrieve's possibly multiple
 Designs submissions, rather than inferring application from a handler Boolean.

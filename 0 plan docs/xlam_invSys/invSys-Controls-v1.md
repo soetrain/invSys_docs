@@ -1,12 +1,16 @@
 # invSys Form Controls v1
 
-**Version:** 1.337 (Process worksheet header-preservation prerequisite)
+**Version:** 1.338 (Process worksheet header-preservation RED)
 
 Process worksheet tracking remains pending. Source review found positional
 managed-field access that can target inserted user columns before Retrieve
 rejects an invalid draft. D14/D15 require normalized managed headers and preserved
 custom headers/values/formulas/positions in retained tables. A packaged actual
-Retrieve-handler test must establish RED before runtime changes. Send Process to
+Retrieve-handler test established RED before runtime changes:97 PASS/10 expected
+failures across107 checks on the frozen Close baseline. Ordinary import and
+preservation checks pass; the isolated correction has built/compiled, with GREEN,
+visible/static and relevant regression gates pending. Exact evidence is in code:
+`tests/integration/plan022_slice4be_process_worksheet_headers_results.md`. Send Process to
 Sheet and Add Acceptable Item save local worksheet edits; Retrieve may submit
 multiple Designs DRAFT-save events. Their observation contract must preserve
 those distinct owners and partial results. No new tracking IDs or acceptance.

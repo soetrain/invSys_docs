@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.77. Last reviewed: 2026-09-30 UTC, Process worksheet prerequisite audit.
+Version 1.78. Last reviewed: 2026-09-30 UTC, Process worksheet prerequisite RED.
 
 Next grouping: the three Process worksheet buttons. Send saves a newly created
 local table; Add Acceptable Item saves additional local columns; Retrieve validates
@@ -9,7 +9,12 @@ tables. Source review identifies positional ID/Requirement ID maintenance before
 validation, contrary to D14's extensible-header rule. Establish actual-handler RED
 for custom-column preservation before runtime correction or tracking registration.
 D15 now explicitly applies D14 to these tables; the existing workflow/authority
-contract is unchanged. The suspected overwrite is not yet runtime-proven.
+contract is unchanged. Packaged RED now proves the overwrite and normalized/
+reordered-header failures:97 PASS/10 FAIL/107, ordinary mixed-UOM import passes,
+five compiles and normal cleanup/preservation hold. The isolated two-module
+Operations correction builds/compiles; GREEN and relevant completion gates remain
+pending. No worksheet tracking control is registered. Exact code evidence:
+`tests/integration/plan022_slice4be_process_worksheet_headers_results.md`.
 
 The isolated catalog21 Close candidate completes its scoped automated gate set:
 focused312, paths90, regulation paths102, smoke86, chain32/live48/Create15,
