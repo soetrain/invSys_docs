@@ -1,6 +1,16 @@
 # Production form tracking coverage audit
 
-Version 1.37. Last reviewed: 2026-09-30 UTC, Recipe structure candidate under validation.
+Version 1.38. Last reviewed: 2026-09-30 UTC, designer load/refresh contract specified.
+
+Next bounded group: five existing designer load/refresh controls are specified
+under Architecture v4.11 D18 for catalog19 but remain unregistered. Process Refresh
+and Recipe Refresh observe only local REFRESHED; View Process and Load Recipe
+observe local PRESENTED; Edit as New Version observes local STAGED. Source
+availability, complete/valid design contents and saved mutation are not asserted.
+Preserve existing read/load algorithms, captured-context/permission guards,
+optional tracking and fixed redaction. Plan022 requires the packaged actual-handler
+RED before implementation. Current runtime remains catalog18/98 global IDs and
+37/68 constructed controls,31 unregistered; no coverage increase is claimed yet.
 
 After the failed-host cleanup harness correction, standard unobserved run-only
 retains its aggregate and all67 exact prior Boolean observations, unassisted exit,
@@ -86,11 +96,12 @@ compiles, package/settings preservation and normal closure pass with zero Excel
 Application failures. See code evidence
 `tests/integration/plan022_slice4be_production_recipe_structure_results.md`.
 
-Active bounded group: Architecture v4.11 D18 and Plan022 specify catalog18 for the
+Previous bounded group: Architecture v4.11 D18 and Plan022 specify catalog18 for the
 five Recipe structure commands below. The candidate now registers37/68 constructed
 Production controls,31 still unregistered; its focused and paired-path gates pass.
-Registration is not acceptance. Catalog17 remains the fully regressed baseline
-at32/68 until the new candidate completes its broader gates.
+Registration is not acceptance. Every listed automated catalog18 gate now has a
+passing execution; catalog17 remains frozen for comparison and the intermittent
+native failure remains unresolved.
 
 Bounded checkpoint: Architecture v4.11 D18 and Plan022 specify catalog17 observations
 for Recipe Designer Move Up, Move Down and Auto Order. This preserves existing

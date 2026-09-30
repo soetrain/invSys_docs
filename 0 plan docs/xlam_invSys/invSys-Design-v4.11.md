@@ -517,6 +517,80 @@ workbook columns. Publication, original recording order and How-To/Diagnostic/
 Compare both require separate evidence. This records discovered controls within
 the approved contract; it does not amend authority, permissions or saved semantics.
 
+**4be.1 Production designer load/refresh observations (discovered-control refinement; implementation pending):**
+Under approved D18 semantic inheritance, catalog19 adds these existing controls,
+preserving catalogs1-18 exactly. This specifies observations of existing local
+presentation/staging behavior, not a new source-read or validation contract.
+
+| ControlId | Caption | Actual handler | Positive local outcome |
+|---|---|---|---|
+| `PRODUCTION_PROCESS_REFRESH` | Refresh | `mBtnProcessRefresh_Click` | REFRESHED |
+| `PRODUCTION_PROCESS_LOAD` | View Process | `mBtnProcessLoad_Click` | PRESENTED |
+| `PRODUCTION_PROCESS_REUSE` | Edit as New Version | `mBtnProcessReuse_Click` | STAGED |
+| `PRODUCTION_RECIPE_REFRESH` | Refresh | `mBtnRecipeRefresh_Click` | REFRESHED |
+| `PRODUCTION_RECIPE_LOAD` | Load | `mBtnRecipeLoad_Click` | PRESENTED |
+
+OwnerId is `PRODUCTION_DESIGNER`, role Production, class Command, capability
+PROD_POST with the existing ADMIN_MAINT alternative. Surface is Operations >
+Production > Process Designer or Recipe Designer as applicable. EventCode is
+ControlId + `_` + OutcomeCode. REQUESTED is Info/Unknown before permission and
+selection checks. The declared positive outcome is Info/Unchanged with respect
+to saved definitions. Missing selection is REJECTED/Warning/Unchanged; current
+permission refusal is DENIED/Blocked/Unchanged. A false load-helper result or
+exception is FAILED/Error/Unknown; advise inspecting the current designer without
+claiming rollback. Do not copy raw parse errors or definition values into activity.
+
+Preserve the current algorithms and their limits:
+
+- Either Refresh invokes the existing shared four-list read and fills all five
+  displayed design lists. Preserve selection/reset behavior and existing status
+  wording. REFRESHED means this local refresh routine returned, not that the
+  sources were available, current, complete or empty. Existing bridge failures
+  and valid empty results both yield Empty; observations must not distinguish
+  those cases by inventing success evidence or silently repairing the bridge.
+- View Process and Load Recipe preserve the selected identity/version lookup,
+  parser, clear-and-populate sequence, component identity normalization, graph
+  display/choice refresh, regulation behavior and status wording. PRESENTED means
+  the existing local loader returned True. It does not certify a complete design,
+  exact source identity, release status or suitability for production. In
+  particular, the existing parser accepts a syntactically valid empty record
+  array; preserve that behavior and do not claim a valid loaded definition from it.
+  A rejected parse returns before clearing the current designer as today.
+- Edit as New Version preserves the same Process load and current next-version
+  calculation, output design identity/version update, editor reset and component
+  normalization. STAGED means the local editable draft was prepared; it does not
+  reserve or save a version or guarantee that a later Save will be accepted.
+  Preserve existing next-version fallback when its list read is unavailable.
+- None of these actions saves, releases, publishes, processes inventory or writes
+  canonical definitions. Loading may replace unsaved local edits exactly as it
+  already does. No new confirmation, parser tightening, source repair or workflow
+  permission is authorized by this observation refinement.
+
+Before reading, clearing, normalizing or changing selection, require the original
+live captured workbook, unchanged warehouse/session and current capability.
+Stale/signed-out/closed binding refuses without retargeting or recording under a
+replacement context. Loading and nested/programmatic calls create no additional
+user actions. Only these five actual Click handlers observe the commands; shared
+load/refresh helpers and fixture preparation are not extra clicks. Optional
+tracking disabled/unavailable cannot block an authorized action; unavailable
+tracking is visibly reported. Store fixed redacted facts, never names, definition
+or component identities, versions, row contents, parse text, paths or source-event
+references. Saved authority and unknown workbook columns remain unchanged.
+
+For each control only its declared positive local outcome establishes
+CommandCompleted. REQUESTED/REJECTED/DENIED/FAILED cannot conclude; outcomes from
+another control, VALIDATED/CONFIRMED/APPLIED and invented source references are
+unsupported. SourceEventsApplied remains unestablished. How-To/Diagnostic must
+preserve this distinction between local control completion and business validity.
+D13 requires packaged actual-handler RED/GREEN before implementation, including
+real released definitions, empty/malformed read results, unchanged saved authority,
+selection/replacement/normalization behavior, partial failure, all context guards,
+re-entrancy, optional tracking, redaction and immutable older records. Separate
+recording/publication/three-view evidence and compile/layout/static/live-role/
+full-chain/reusable regressions remain required. This refinement names discovered
+controls within the approved D18 contract and requires no repeat approval; a
+change to the preserved read/load algorithms would require a separate decision.
+
 **4be.1 Recipe connection write stability (approved 2026-09-30 UTC):**
 The structure refinement below requires preserving the existing editing algorithm.
 Packaged baseline tests reveal that Update can retain old quantity/percentage and

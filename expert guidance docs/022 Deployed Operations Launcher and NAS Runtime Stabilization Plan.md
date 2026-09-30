@@ -2,6 +2,36 @@
 
 **Status:** Current corrective implementation plan
 
+**Next bounded work: Production designer load/refresh observations.** Architecture
+v4.11 D18's discovered-control refinement specifies catalog19 for Process Refresh,
+View Process, Edit as New Version, Recipe Refresh and Load. Runtime remains
+catalog18/98 global IDs and37/68 constructed Production controls; the five planned
+IDs are not yet registered. Preserve catalogs1-18 and the frozen comparison
+packages. This uses the approved D18 semantic-inheritance rule, not a new source
+read, permission, authority or algorithm decision.
+
+The two Refresh controls conclude REFRESHED only for completion of the local
+routine. Process/Recipe Load conclude PRESENTED only when the existing local
+loader returns True; Process Reuse concludes STAGED for local draft preparation.
+These facts neither establish source availability/completeness nor validate or
+save a design. Preserve Empty-on-read-failure, accepted empty JSON arrays,
+next-version fallback, existing selection/replacement/normalization and status
+wording. Missing selection is REJECTED; false loader results and exceptions are
+FAILED/Unknown. Preserve current-context PROD_POST/ADMIN_MAINT guards, optional
+tracking, fixed redaction and empty source references. Only the actual five
+handlers observe actions; shared helper calls are not extra clicks.
+
+Next D13 gate: add and run `Test-Slice4beProductionDesignReads.ps1` against the
+frozen catalog18 package through those actual handlers. Expected behavioral RED
+is missing observations/context guards, not compilation or fixture failure.
+Protect real released definitions, empty/malformed responses, partial failure,
+saved authority, unknown columns, exact old catalog identities, immutable records
+and all guard/optional-tracking paths. Then implement typed Operations ownership
+plus Core catalog/matching support, followed by separate original recording,
+publication and How-To/Diagnostic/Compare evidence and the complete established
+regression set. A new read-validation/repair behavior would need an explicit
+architecture decision before implementation; none is proposed here.
+
 **Later harness checkpoint2026-09-30 UTC:** the failed-host cleanup correction
 retains original workflow failures, adds a sanitized failing cleanup receipt and
 allows final release bookkeeping to finish. Offline calibration is7 PASS/14 FAIL

@@ -1,6 +1,31 @@
 # invSys Form Controls v1
 
-**Version:** 1.294 (Recipe structure automated gates recorded; native stability and acceptance pending)
+**Version:** 1.295 (designer load/refresh contract specified; implementation pending)
+
+Architecture v4.11 D18 specifies these five discovered controls for catalog19:
+
+| Planned ControlId | Existing caption / actual handler | Positive local fact |
+|---|---|---|
+| `PRODUCTION_PROCESS_REFRESH` | Refresh / `mBtnProcessRefresh_Click` | REFRESHED |
+| `PRODUCTION_PROCESS_LOAD` | View Process / `mBtnProcessLoad_Click` | PRESENTED |
+| `PRODUCTION_PROCESS_REUSE` | Edit as New Version / `mBtnProcessReuse_Click` | STAGED |
+| `PRODUCTION_RECIPE_REFRESH` | Refresh / `mBtnRecipeRefresh_Click` | REFRESHED |
+| `PRODUCTION_RECIPE_LOAD` | Load / `mBtnRecipeLoad_Click` | PRESENTED |
+
+These remain unregistered and unaccepted. Current runtime is catalog18/98 global
+IDs,37/68 constructed Production controls. Owner PRODUCTION_DESIGNER, role
+Production, class Command, existing PROD_POST/ADMIN_MAINT boundary. Only the
+listed outcome per control can establish local CommandCompleted, with saved
+definitions unchanged and no Domain application claim. Refresh does not establish
+source availability; PRESENTED does not validate a complete design. Preserve
+Empty-on-read-failure, valid empty arrays, existing replacement/normalization and
+next-version fallback. Missing selection is REJECTED; false loader results or
+exceptions are FAILED/Unknown. Guard the original workbook/session/warehouse and
+current permission before work; preserve loading/nested suppression, optional
+tracking and fixed redaction with no definition values or source references.
+No existing caption, sizing or load algorithm is changed by this refinement.
+Focused packaged actual-handler RED is required before runtime implementation;
+Plan022 names the test and complete remaining evidence.
 
 After the failed-host cleanup harness correction, standard unobserved run-only
 retains its aggregate and all67 exact prior Boolean observations, unassisted exit,
