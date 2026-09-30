@@ -31,6 +31,19 @@ authorized by these results. Catalog19 remains frozen and its native full reusab
 stays unresolved. Exact evidence is in the code repository's
 `tests/integration/plan022_slice4be_production_regulation_results.md`.
 
+Current catalog20 regression checkpoint,2026-09-30 UTC: ordinary full reusable
+Production passes both aggregates and all171 prior ordered observations, with
+unassisted restart/final exits, zero release failures/termination requests and
+completed workbook/package closure. This is the ordinary gate, not the native
+observer diagnostic; it establishes this candidate's pass without diagnosing or
+repairing the earlier intermittent native crash. Packaged smoke retains86/86
+prior checks and normal Initial/Final exits. Production layout retains exact
+prior geometry at three sizes/five pages, with three directly reviewed captures.
+Settings/packages/tracked reports are preserved and all three delayed Application
+audits find zero Excel failures. Other focused regressions, live-role/full-chain,
+run-only and human/NAS acceptance remain pending. Exact roots and UTC intervals
+are in the regulation result record.
+
 **Designer load/refresh focused GREEN,2026-09-30 UTC:**
 The isolated `validation-production-design-reads-final` catalog19 candidate passes
 621/621 focused checks and114/114 paired-path checks. The focused gate retains the
