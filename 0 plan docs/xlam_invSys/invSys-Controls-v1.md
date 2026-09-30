@@ -1,6 +1,19 @@
 # invSys Form Controls v1
 
-**Version:** 1.304 (designer read focused/paths GREEN; full-chain native failure open)
+**Version:** 1.305 (output-regulation observations specified; native acceptance gap open)
+
+**Next bounded group,2026-09-30 UTC:** Architecture v4.11 D18 specifies catalog20
+`PRODUCTION_OUTPUT_REGULATION_APPLY` (Apply Regulation) and
+`PRODUCTION_OUTPUT_REGULATION_CLEAR` (Clear Override), both on Operations >
+Production > Production Settings. The existing actual Click handlers must retain
+Process-default/Recipe-override staging and D15 authority. Only STAGED establishes
+local command completion; it is not Save/Release or Domain application. Preserve
+validation/conversion/clear semantics, status wording, captured context, current
+capability, optional tracking and fixed redaction. Packaged actual-handler RED
+must precede implementation; focused/paths/visible/regression acceptance is pending.
+Neither control is registered at this checkpoint: catalog19 remains103 global
+IDs and42/68 constructed Production controls. Its native full reusable failure
+stays unresolved. See the normative discovered-control refinement and Plan022.
 
 The isolated `validation-production-design-reads-final` catalog19 candidate passes
 621/621 focused checks and114/114 paired-path checks. The focused gate retains the

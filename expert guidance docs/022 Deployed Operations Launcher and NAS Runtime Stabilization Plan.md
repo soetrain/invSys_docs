@@ -2,6 +2,20 @@
 
 **Status:** Current corrective implementation plan
 
+**Next bounded group,2026-09-30 UTC: Production output-regulation observations.**
+Architecture v4.11's D18 discovered-control refinement specifies catalog20 for
+Apply Regulation and Clear Override in Production Settings. Preserve the existing
+Process-default/Recipe-override algorithms and D15 authority; observe only local
+STAGED, with distinct rejection, denial and failure. No runtime change is made
+at this contract checkpoint. Add and run the packaged actual-handler RED before
+implementation, including both scopes, existing conversion/clear behavior,
+context/permission guards, optional tracking, partial failure and saved authority.
+Then require focused GREEN, paired paths, visible evidence and the established
+packaged/compile/layout/static/live-role/chain/reusable gates. Catalog19 stays
+frozen; its ordinary full reusable native failure remains open and is not repaired
+by additional tracking. Current registration stays103 global/42 of68 Production
+controls until the two new controls are implemented;24 would then remain.
+
 **Designer load/refresh focused GREEN,2026-09-30 UTC:**
 The isolated `validation-production-design-reads-final` catalog19 candidate passes
 621/621 focused checks and114/114 paired-path checks. The focused gate retains the
@@ -96,7 +110,7 @@ Application failures. The ordinary full reusable gate remains unresolved after
 its native failure; passing focused/paired/regression evidence does not establish
 complete acceptance or a native repair.
 
-**Active bounded work: Production designer load/refresh observations.** Architecture
+**Catalog19 baseline: Production designer load/refresh observations.** Architecture
 v4.11 D18's discovered-control refinement specifies catalog19 for Process Refresh,
 View Process, Edit as New Version, Recipe Refresh and Load. The isolated candidate
 now registers these five IDs; full acceptance remains pending. Preserve catalogs1-18

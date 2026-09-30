@@ -591,6 +591,66 @@ full-chain/reusable regressions remain required. This refinement names discovere
 controls within the approved D18 contract and requires no repeat approval; a
 change to the preserved read/load algorithms would require a separate decision.
 
+**4be.1 Production output-regulation observations (discovered-control refinement; acceptance pending):**
+Under approved D18 semantic inheritance, catalog20 adds these two existing
+Production Settings commands, preserving catalogs1-19 exactly:
+
+| ControlId | Caption | Actual handler |
+|---|---|---|
+| `PRODUCTION_OUTPUT_REGULATION_APPLY` | Apply Regulation | `mBtnOutputRegulationApply_Click` |
+| `PRODUCTION_OUTPUT_REGULATION_CLEAR` | Clear Override | `mBtnOutputRegulationClear_Click` |
+
+Both have OwnerId `PRODUCTION_DESIGNER`, class Command, role Production,
+capability PROD_POST with the existing ADMIN_MAINT alternative, and surface
+`Operations > Production > Production Settings`. EventCode is ControlId plus
+`_` plus OutcomeCode. REQUESTED is Info/Unknown. STAGED is Info/Unchanged with
+respect to saved definitions and means only that the existing local staging
+routine returned successfully. It does not validate, save or release a version.
+Missing selection or an existing validation refusal is REJECTED/Warning/Unchanged;
+current permission refusal is DENIED/Blocked/Unchanged. An exception is
+FAILED/Error/Unknown with fixed guidance to inspect the current local draft;
+do not assert rollback or include raw error text or entered values.
+
+Preserve D15 and the current local editing algorithms. Apply retains Process
+output defaults or the selected Recipe-node/output override, including its exact
+ProcessId/ProcessVersion/OutputId binding. Preserve enabled positive bounds,
+floor-not-above-ceiling and normalized whole-EA checks, existing disabled-bound
+handling and numeric-field conversion. Existing validation refusals remain
+refusals; conversion exceptions remain failures and cannot become successful
+staging observations. This refinement does not tighten, relax or repair input
+conversion. Clear removes only the selected Recipe override or disables and
+empties only the selected Process-output default. A selected output with no
+existing regulation can still finish the existing Clear routine as STAGED.
+Missing-selection Clear retains its quiet local no-op; recording that rejection
+does not require inventing a new validation dialog.
+
+Preserve the existing regulation-list refresh, source-read behavior and status
+wording. Source availability, complete/valid design contents and successful
+canonical mutation are not implied. Save/Release remain separate owning actions;
+neither command changes saved definitions, released versions, active runs,
+inventory identity or unknown workbook columns. No global regulation authority
+or automatic refresh of a different draft is introduced.
+
+Before any edit or read, require the original live captured workbook, unchanged
+session/warehouse and current capability. Invalid binding refuses without
+retargeting or recording under a replacement context. Loading, reentry and
+programmatic control changes produce no extra user actions. Disabled/unavailable
+optional tracking cannot prevent authorized staging; unavailable tracking is
+visibly reported. Records contain fixed control/outcome facts only, never design
+or component identities, scope selections, bounds, UOMs, row contents, paths,
+raw exceptions or source-event references.
+
+For exactly these controls only STAGED establishes CommandCompleted.
+REQUESTED/REJECTED/DENIED/FAILED cannot conclude; COMPLETED, CONFIRMED, VALIDATED
+and APPLIED are unsupported. Empty source references cannot establish
+SourceEventsApplied. D13 requires packaged actual-handler RED/GREEN for both
+scopes, existing validation/clear effects, captured context, permissions,
+loading/reentry, partial failure, optional tracking, redaction, prior-record and
+saved-authority preservation. Separate publication/recording/How-To/Diagnostic/
+Compare evidence and the required regressions remain necessary. This names
+discovered controls under approved D18; a change to the preserved editing or
+conversion algorithms requires a separate architecture decision.
+
 **4be.1 Recipe connection write stability (approved 2026-09-30 UTC):**
 The structure refinement below requires preserving the existing editing algorithm.
 Packaged baseline tests reveal that Update can retain old quantity/percentage and

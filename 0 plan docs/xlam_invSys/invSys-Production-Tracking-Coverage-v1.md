@@ -1,6 +1,15 @@
 # Production form tracking coverage audit
 
-Version 1.47. Last reviewed: 2026-09-30 UTC, designer load/refresh and paired paths GREEN recorded.
+Version 1.48. Last reviewed: 2026-09-30 UTC, output-regulation observation contract specified.
+
+Next bounded group: catalog20's Apply Regulation and Clear Override are specified
+under Architecture v4.11 D18, but are not implemented or registered. Preserve
+Process-default/Recipe-override staging, D15 authority and existing conversion/
+validation/clear behavior; only local STAGED can conclude. D13 packaged actual-
+handler RED is the next implementation gate. Current catalog19 registration
+remains103 global IDs and42/68 constructed Production controls,26 pending;
+implementing these two would leave24. The native full reusable acceptance gap
+remains open independently. No new human acceptance is claimed.
 
 The isolated `validation-production-design-reads-final` catalog19 candidate passes
 621/621 focused checks and114/114 paired-path checks. The focused gate retains the
@@ -95,7 +104,7 @@ Application failures. The ordinary full reusable gate remains unresolved after
 its native failure; passing focused/paired/regression evidence does not establish
 complete acceptance or a native repair.
 
-Active bounded group: five existing designer load/refresh controls are specified
+Catalog19 baseline: five existing designer load/refresh controls are specified
 under Architecture v4.11 D18 for catalog19 and now registered in the isolated candidate. Process Refresh
 and Recipe Refresh observe only local REFRESHED; View Process and Load Recipe
 observe local PRESENTED; Edit as New Version observes local STAGED. Source
@@ -551,8 +560,8 @@ from permission to stage or export a catalog worksheet.
 
 | UI control | Caption | Actual handler | Tracking ID/status |
 |---|---|---|---|
-| `btnOutputRegulationApply` | Apply Regulation | `mBtnOutputRegulationApply_Click` | Pending |
-| `btnOutputRegulationClear` | Clear Override | `mBtnOutputRegulationClear_Click` | Pending |
+| `btnOutputRegulationApply` | Apply Regulation | `mBtnOutputRegulationApply_Click` | `PRODUCTION_OUTPUT_REGULATION_APPLY`: catalog20 specified; packaged RED/implementation pending |
+| `btnOutputRegulationClear` | Clear Override | `mBtnOutputRegulationClear_Click` | `PRODUCTION_OUTPUT_REGULATION_CLEAR`: catalog20 specified; packaged RED/implementation pending |
 | `btnUomCatalogRetrieve` | Retrieve UOM Catalog | `mBtnUomCatalogRetrieve_Click` | `PRODUCTION_UOM_RETRIEVE` |
 | `btnUomCatalogSend` | Edit UOM Catalog on Sheet | `mBtnUomCatalogSend_Click` | `PRODUCTION_UOM_EDIT`; visible guards264/264 and public lifecycle61/61 pass; release acceptance pending |
 
