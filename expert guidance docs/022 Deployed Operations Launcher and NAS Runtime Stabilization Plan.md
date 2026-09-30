@@ -46,6 +46,13 @@ normal closure, preservation and zero delayed Application failures. Remaining
 focused regressions, run-only and human/NAS acceptance stay open. Exact roots and
 UTC intervals are in the regulation result record.
 
+Designer read regressions on catalog20 retain 621/621 focused checks and 114/114
+paired-path checks, all exact prior ordered identities, five instrumented
+compiles each, preservation, normal closure and zero delayed Excel Application
+failures. Six principal path captures are directly reviewed: all five instructions
+and matched steps remain visible, with zero extras and a local-only conclusion.
+This is agent review, not human acceptance. No runtime or package change was needed.
+
 **Designer load/refresh focused GREEN,2026-09-30 UTC:**
 The isolated `validation-production-design-reads-final` catalog19 candidate passes
 621/621 focused checks and114/114 paired-path checks. The focused gate retains the
