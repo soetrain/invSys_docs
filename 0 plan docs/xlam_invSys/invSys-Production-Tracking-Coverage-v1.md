@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.27. Last reviewed: 2026-09-30 UTC, Recipe ordering reusable and Settings regressions GREEN.
+Version 1.28. Last reviewed: 2026-09-30 UTC, Recipe ordering activity regressions advancing.
 
 Next bounded group: Architecture v4.11 D18 and Plan022 specify catalog17 observations
 for Recipe Designer Move Up, Move Down and Auto Order. This preserves existing
@@ -22,7 +22,15 @@ both aggregate checks and all 171 prior Boolean observations; run-only retains i
 aggregate and all 67 observations. Restart/final exits are unassisted, with
 preservation and no Excel Application failures. Settings retains202/202 with exact
 prior checks, five compiles, unassisted restart/final exit and preservation.
-Remaining activity regressions remain pending. Registration does not mean acceptance. See
+Settings activity481/481 retains all478 prior checks plus three catalog17
+older-policy exclusions, five compiles, eight reviewed captures, preservation and
+delayed unassisted exit with zero Excel Application failures. Component paths
+retain142/142, exact prior checks, five compiles, six reviewed captures, normal
+closure and preservation. Instruction editing retains411/411, exact prior checks,
+five compiles, normal closure and preservation, with zero Excel Application
+failures. Instruction paths retain105/105 with the same gates and six reviewed
+captures. Remaining Production activity regressions remain pending.
+Registration does not mean acceptance. See
 [Recipe ordering evidence](../../../invSys_fork/tests/integration/plan022_slice4be_production_recipe_order_results.md).
 The catalog16 records below retain their original candidate scope.
 

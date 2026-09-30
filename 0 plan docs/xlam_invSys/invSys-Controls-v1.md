@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.284 (Recipe ordering reusable and Settings regressions GREEN; acceptance pending)
+**Version:** 1.285 (Recipe ordering activity regressions advancing; acceptance pending)
 
 Architecture v4.11 D18 specifies catalog17 for the existing Recipe Designer Move
 Up, Move Down and Auto Order controls: `PRODUCTION_RECIPE_MOVE_UP`,
@@ -26,7 +26,14 @@ aggregate checks and all 171 prior Boolean observations; run-only retains its
 aggregate and all 67 observations. All restart/final exits are unassisted, with
 preservation and no Excel Application failures. Settings retains202/202 with exact
 prior checks, five compiles, unassisted restart/final exit and preservation.
-Remaining activity regressions and broader acceptance remain pending.
+Settings activity481/481 retains all478 prior checks plus three catalog17
+older-policy exclusions, five compiles, eight reviewed captures, preservation and
+delayed unassisted exit with zero Excel Application failures. Component paths
+retain142/142, exact prior checks, five compiles, six reviewed captures, normal
+closure and preservation. Instruction editing retains411/411, exact prior checks,
+five compiles, normal closure and preservation, with zero Excel Application
+failures. Instruction paths retain105/105 with the same gates and six reviewed
+captures. Remaining Production activity regressions and broader acceptance remain pending.
 Move Up/Down retain the existing status text;
 their capture does not establish a new success notice. See Plan022 and code
 `tests/integration/plan022_slice4be_production_recipe_order_results.md`.
