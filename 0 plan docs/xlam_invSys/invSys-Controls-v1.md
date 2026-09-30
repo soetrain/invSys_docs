@@ -1,6 +1,18 @@
 # invSys Form Controls v1
 
-**Version:** 1.332 (Production Close implementation constraints; acceptance pending)
+**Version:** 1.333 (Production Close focused GREEN; paths/regressions pending)
+
+Catalog21 `PRODUCTION_CLOSE` passes312/312 exact ordered packaged checks after
+175/137 RED, retaining80 query checks and42 prior checks. Button and native close
+record dismissal only; stale context/permission loss still allow closing and
+optional unavailable tracking is visible. Public reopening, workbook-shutdown
+exclusion and saved-authority preservation pass. Five builds/compiles, static
+limits, normal closure/preservation, zero delayed Excel failures and four reviewed
+images pass. A first assisted run exposed a missing older-policy notice observer
+in the fixture; the clean repeat uses unchanged packages. Current registration
+is106 global IDs and45/68 Production buttons, with23 buttons unregistered and30
+nonbutton handlers pending coverage review. Close-specific paths and broader regressions remain
+pending. See `tests/integration/plan022_slice4be_production_close_results.md` in code.
 
 Production Close retains the approved dismissal-only contract and protecting
 packaged RED. `PRODUCTION-CLOSE-NATIVE-HOOK-01` permits only four form lines for
@@ -9,7 +21,7 @@ all observation logic stays in a bounded Operations helper. Core retains catalog
 and evaluator ownership. No new visible behavior, general size exception or
 acceptance is granted by this implementation constraint.
 
-The isolated D3 query candidate passes all80 supplemental cases and preserves
+The preceding isolated D3 query candidate passes all80 supplemental cases and preserves
 authority bytes through the real Production launch/close/reopen route. Its312
 checks yield175 PASS/137 expected missing-Close failures, retaining all42 prior
 GREEN checks and exact earlier identities. Five builds/compiles, static limits, smoke86,
@@ -33,7 +45,7 @@ read-only resolver and workbook-lifetime clarification: existing exact sources,
 no create/ensure/unprotect/save, caller-owned state preserved, temporary sources
 read-only and closed without saving. Existing query results, immutable keys and
 custom columns remain protected. The launch-byte preservation failure now passes
-the focused gate; Plan022 requires broader regressions before acceptance.
+the focused gate and its relevant regression set documented above.
 
 Production Close baseline,2026-09-30 UTC:232 packaged checks initially produce93 PASS /
 139 FAIL, including137 expected missing-contract failures and two extra failures.
@@ -44,8 +56,8 @@ and zero loaded forms, with runtime unchanged at that point. The extra failure w
 an authoritative Inventory file write during the first public Production launch;
 six file-container parts changed before any Close action. D3 governs the focused
 correction above. Normal closure, settings/package preservation and
-zero delayed Excel Application failures hold for all three runs. Close tracking
-and broader acceptance remain pending; no Close implementation or promotion is claimed.
+zero delayed Excel Application failures hold for all three baseline runs. The
+focused implementation now passes as recorded above; broader acceptance remains open.
 See the code repository's `tests/integration/plan022_slice4be_production_close_results.md`.
 
 Production Close discovery,2026-09-30 UTC: Architecture v4.11's new 4be.1
@@ -59,11 +71,11 @@ retention or source events are implied. Internal unload, termination and workboo
 shutdown add no user Close records. Stale context and lost permission still allow
 dismissal; unavailable optional tracking remains visible without blocking it.
 Existing public reopen, captured workbook and unknown-column behavior are preserved.
-This is an approved-D18 discovered-control clarification, not implementation or
-acceptance. Runtime remains catalog20,105 global IDs and44/68 constructed Production
-buttons; the Close focused packaged RED/GREEN and independent path evidence are
-pending. Exact normative requirements are in Architecture v4.11; Plan022 names the
-test-first next action and expected files.
+This is an approved-D18 discovered-control clarification. Its original catalog20
+baseline had105 global IDs and44/68 constructed Production buttons; catalog21's
+focused implementation is recorded above. Independent path evidence and broader
+regressions remain pending. Exact normative requirements are in Architecture
+v4.11; Plan022 names the remaining gates.
 
 Slice4be Admin Event Detail heading alignment has all planned automated gates GREEN,2026-09-30 UTC.
 The unchanged baseline gives222 PASS/18 expected alignment failures; the isolated

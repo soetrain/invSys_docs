@@ -2,7 +2,22 @@
 
 **Status:** Current corrective implementation plan
 
-Production Close implementation resumes from the verified query candidate.
+Production Close focused GREEN,2026-09-30 UTC: the isolated
+`validation-production-close-observations` candidate passes312/312 exact ordered
+pre-implementation checks (baseline175/137), including all80 query and42 prior
+checks. Five builds/compiles, cold-start references, preservation, normal closure,
+zero delayed Excel failures, static limits and four reviewed images pass.
+Catalog21 has106 global IDs and45/68 constructed Production buttons registered;
+23 buttons and30 nonbutton handlers remain. The first candidate run is retained
+as assisted evidence because the older-policy fixture omitted a required notice
+observer; the clean repeat changes only that fixture observer. Runtime remains
+unchanged between the runs. Current-record/editor fixture expectations advance
+to catalog21/106 controls; historical catalogs remain protected. Close-specific
+independent recordings/How-To/Diagnostic/Compare and broader regressions remain
+pending. Evidence: `tests/integration/plan022_slice4be_production_close_results.md`
+in code. No promotion, complete Slice4be coverage or human acceptance is claimed.
+
+Production Close implementation basis: the verified query candidate.
 The frozen packaged Close test retains232 identities (95 PASS/137 expected
 missing-Close failures), plus80 query checks GREEN. Architecture's bounded
 maintenance exception `PRODUCTION-CLOSE-NATIVE-HOOK-01` allows only four new

@@ -1,13 +1,25 @@
 # Production form tracking coverage audit
 
-Version 1.72. Last reviewed: 2026-09-30 UTC, Close implementation constraints.
+Version 1.73. Last reviewed: 2026-09-30 UTC, Close focused GREEN.
+
+Current catalog21 candidate `validation-production-close-observations` registers
+106 global IDs and45/68 constructed Production buttons;23 buttons remain
+unregistered and30 nonbutton handlers retain pending coverage review. Close passes
+312/312 exact ordered packaged checks after175/137 RED, including80 query and42
+prior checks. Five builds/compiles, cold-start references, static limits, normal
+closure/preservation, zero delayed Excel failures and four reviewed images pass.
+An assisted first run is excluded; the clean repeat fixes only the older-policy
+notice observer. Close-specific separate recordings/How-To/Diagnostic/Compare and
+broader regressions remain required. Evidence:
+`tests/integration/plan022_slice4be_production_close_results.md` in code.
 
 Close's existing catalog21 contract proceeds under the four-line native event
 exception `PRODUCTION-CLOSE-NATIVE-HOOK-01`. Only typed form delegates belong in
 the oversized form; a bounded Operations helper owns its observation flow.
-This is not implementation or acceptance evidence and does not change the census.
+That constraint does not itself grant acceptance; the evidence above establishes
+the focused implementation only.
 
-The isolated Core query candidate passes80/80 supplemental cases and real public
+The preceding isolated Core query candidate passes80/80 supplemental cases and real public
 launch/close/reopen authority preservation after query RED88/34. Combined results
 are175/137 across312 checks; all137 failures are missing Close observations.
 Five builds/compiles, static ratchets, smoke86, normal closure/preservation, zero delayed
@@ -22,12 +34,12 @@ Draft/Action Paths retain390/390 ordered checks and five compiles with the same
 guarantees. The relevant query regression set is complete; its record maps changed
 consumers to coverage and distinguishes frozen unchanged-component evidence from
 new-candidate runs. The candidate becomes the pre-Close baseline, without promotion.
-Only Core's Inventory bridge changes; control coverage remains44/68 constructed
+Only Core's Inventory bridge changes in that baseline; its coverage was44/68 constructed
 buttons in catalog20. Evidence and excluded fixture/native failures are in
 `tests/integration/plan022_slice4be_inventory_query_results.md` in code.
 
 Architecture D3 now makes resolver/workbook lifetime part of the existing
-read-only UI query rule. Plan022 and controls1.332 retain nonempty-result,
+read-only UI query rule. Plan022 and controls1.333 retain nonempty-result,
 missing-source, dirty caller-workbook and byte-preservation requirements. Query
 GREEN does not register or accept Production Close or another tracked control.
 
@@ -37,17 +49,16 @@ for the public workbook-close fixture. All42 prior checks and five compiles pass
 normal closure, preservation and zero delayed Excel failures hold. Missing Close
 registration/observations account for137 failures. The extra launch-write failure
 is now corrected in the focused candidate without resetting its preservation pin.
-Runtime remains catalog20 with44/68 constructed buttons registered. Evidence:
+That RED runtime was catalog20 with44/68 constructed buttons registered. Evidence:
 `tests/integration/plan022_slice4be_production_close_results.md` in the code repository.
 
 Architecture v4.11 now reserves catalog21 `PRODUCTION_CLOSE` under D18 for the
 existing Close button and native window close. Only committed UI dismissal may
 conclude CLOSED; internal unload/workbook shutdown do not invent user activity.
-No runtime registration or clean focused RED/GREEN is claimed yet. The implemented
-census remains44/68 constructed buttons and24 unregistered, including this now
-specified Close control. Thirty nonbutton handlers and other role/launcher
-surfaces retain their separate pending coverage. Plan022 and controls1.332 name
-the test-first next action; do not count contract documentation as implementation.
+The focused implementation above now passes; independent path evidence and
+broader regressions remain pending. Thirty nonbutton handlers and other
+role/launcher surfaces retain their separate pending coverage. Plan022 and
+controls1.333 name the remaining gates; documentation alone is not implementation.
 
 The separate Admin Detail heading correction now completes its planned matrix:
 focused222/18 RED ->240/240 GREEN, five compiles, static limits, smoke86,
@@ -628,7 +639,7 @@ from permission to stage or export a catalog worksheet.
 
 | UI control | Caption | Actual handler | Tracking ID/status |
 |---|---|---|---|
-| `btnProductionClose` | Close | `mBtnClose_Click` | `PRODUCTION_CLOSE` reserved catalog21; specification only, packaged RED/GREEN pending |
+| `btnProductionClose` | Close | `mBtnClose_Click` | `PRODUCTION_CLOSE`, catalog21; focused312/312 including native QueryClose, public reopen, preservation and80 query checks. Independent paths and broader regressions pending. |
 
 ### Process Designer (27)
 
