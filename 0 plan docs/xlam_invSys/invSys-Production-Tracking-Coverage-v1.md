@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.62. Last reviewed: 2026-09-30 UTC, output-regulation focused and paths GREEN.
+Version 1.63. Last reviewed: 2026-09-30 UTC, output-regulation focused and paths GREEN.
 
 Catalog20 output-regulation focused GREEN,2026-09-30 UTC: the isolated
 `validation-production-regulation-final` candidate registers105 global controls
@@ -26,7 +26,7 @@ Diagnostic and Compare both retain the same evidence and local-only conclusion.
 The initial100/two-test-assertion failures are retained: a single repeated Clear
 expectation correctly matches the first occurrence; the test now authors all
 four steps explicitly. No evaluator contract or runtime package changed for this
-correction. Required final-candidate regressions remain pending; no promotion is
+correction. Final-candidate regressions are recorded below; no promotion is
 authorized by these results. Catalog19 remains frozen and its native full reusable failure
 stays unresolved. Exact evidence is in the code repository's
 `tests/integration/plan022_slice4be_production_regulation_results.md`.
@@ -42,8 +42,8 @@ prior geometry at three sizes/five pages, with three directly reviewed captures.
 Settings/packages/tracked reports are preserved and all three delayed Application
 audits find zero Excel failures. The ordinary full Release1 chain now also passes
 all32 chain/48 live-role/15 Create Warehouse checks with exact prior identities,
-normal closure, preservation and zero delayed Application failures. Remaining
-focused regressions, run-only and human/NAS acceptance stay open. Exact roots and
+normal closure, preservation and zero delayed Application failures. Subsequent
+focused/run-only results appear below; human/NAS acceptance remains open. Exact roots and
 UTC intervals are in the regulation result record.
 
 Designer read regressions on catalog20 retain 621/621 focused checks and 114/114
@@ -107,8 +107,13 @@ all491 prior checks in order plus the two new older-policy exclusions. Five
 compiles, preservation, unassisted closure and zero delayed Excel failures pass;
 eight images are reviewed. A visual follow-up remains: Event Detail column
 headings appear offset from their row values; compare existing geometry before
-any repair. Run-only remains pending. Runtime/packages are unchanged; exact
-evidence is in the regulation result record. Human acceptance remains open.
+any repair. Run-only now retains the prior aggregate and all67 exact ordered
+observations, complete closure of three workbooks and four reverse-order packages,
+zero release failures or termination requests, preservation and zero delayed
+Excel failures. The planned regulation regression matrix is complete on unchanged
+packages. Comprehensive control coverage, the visual correction and human/NAS
+acceptance remain open; no promotion or historical native-crash repair is claimed.
+Exact evidence is in the regulation result record.
 
 The isolated `validation-production-design-reads-final` catalog19 candidate passes
 621/621 focused checks and114/114 paired-path checks. The focused gate retains the
@@ -659,8 +664,8 @@ from permission to stage or export a catalog worksheet.
 
 | UI control | Caption | Actual handler | Tracking ID/status |
 |---|---|---|---|
-| `btnOutputRegulationApply` | Apply Regulation | `mBtnOutputRegulationApply_Click` | `PRODUCTION_OUTPUT_REGULATION_APPLY`: catalog20 registered; focused696/696 and paths102/102 GREEN; regressions pending |
-| `btnOutputRegulationClear` | Clear Override | `mBtnOutputRegulationClear_Click` | `PRODUCTION_OUTPUT_REGULATION_CLEAR`: catalog20 registered; focused696/696 and paths102/102 GREEN; regressions pending |
+| `btnOutputRegulationApply` | Apply Regulation | `mBtnOutputRegulationApply_Click` | `PRODUCTION_OUTPUT_REGULATION_APPLY`: catalog20; focused696/696, paths102/102 and planned automated regressions GREEN; broader acceptance open |
+| `btnOutputRegulationClear` | Clear Override | `mBtnOutputRegulationClear_Click` | `PRODUCTION_OUTPUT_REGULATION_CLEAR`: catalog20; focused696/696, paths102/102 and planned automated regressions GREEN; broader acceptance open |
 | `btnUomCatalogRetrieve` | Retrieve UOM Catalog | `mBtnUomCatalogRetrieve_Click` | `PRODUCTION_UOM_RETRIEVE` |
 | `btnUomCatalogSend` | Edit UOM Catalog on Sheet | `mBtnUomCatalogSend_Click` | `PRODUCTION_UOM_EDIT`; visible guards264/264 and public lifecycle61/61 pass; release acceptance pending |
 
