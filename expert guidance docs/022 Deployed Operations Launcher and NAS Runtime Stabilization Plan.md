@@ -2,6 +2,20 @@
 
 **Status:** Current corrective implementation plan
 
+Next within Slice4be: Process worksheet header preservation before registering
+its three discovered actions. Source review finds fixed-position reads/writes in
+`modProductionProcessWorksheet`, including ID and Requirement ID maintenance
+before retrieval validation. This conflicts with D14's normalized managed-header
+and unknown-column rules; D15 now explicitly names their application to this
+workbench. Protect the actual packaged Retrieve handler first: an invalid draft
+with a custom column inserted before a managed field must be rejected without
+overwriting that custom data. Test header normalization and retained identity
+alongside the ordinary layout. This is a suspected behavioral defect until RED
+is run; no runtime correction or catalog22 registration is claimed. Preserve the
+completed Close candidate and its GREEN regressions. Observation design must
+separately reflect local worksheet changes and Retrieve's possibly multiple
+Designs submissions, rather than inferring application from a handler Boolean.
+
 Production Close scoped automated gates complete,2026-09-30 UTC: focused312,
 independent paths90, shared regulation paths102, smoke86, chain32/live48/Create15,
 three-size/five-page layout, full reusable171 observations, Settings202, Settings

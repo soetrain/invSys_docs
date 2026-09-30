@@ -1,6 +1,15 @@
 # Production form tracking coverage audit
 
-Version 1.76. Last reviewed: 2026-09-30 UTC, Close scoped automated gates GREEN.
+Version 1.77. Last reviewed: 2026-09-30 UTC, Process worksheet prerequisite audit.
+
+Next grouping: the three Process worksheet buttons. Send saves a newly created
+local table; Add Acceptable Item saves additional local columns; Retrieve validates
+all selected tables then may submit several Designs saves and remove confirmed
+tables. Source review identifies positional ID/Requirement ID maintenance before
+validation, contrary to D14's extensible-header rule. Establish actual-handler RED
+for custom-column preservation before runtime correction or tracking registration.
+D15 now explicitly applies D14 to these tables; the existing workflow/authority
+contract is unchanged. The suspected overwrite is not yet runtime-proven.
 
 The isolated catalog21 Close candidate completes its scoped automated gate set:
 focused312, paths90, regulation paths102, smoke86, chain32/live48/Create15,

@@ -1,6 +1,15 @@
 # invSys Form Controls v1
 
-**Version:** 1.336 (Production Close scoped automated gates GREEN)
+**Version:** 1.337 (Process worksheet header-preservation prerequisite)
+
+Process worksheet tracking remains pending. Source review found positional
+managed-field access that can target inserted user columns before Retrieve
+rejects an invalid draft. D14/D15 require normalized managed headers and preserved
+custom headers/values/formulas/positions in retained tables. A packaged actual
+Retrieve-handler test must establish RED before runtime changes. Send Process to
+Sheet and Add Acceptable Item save local worksheet edits; Retrieve may submit
+multiple Designs DRAFT-save events. Their observation contract must preserve
+those distinct owners and partial results. No new tracking IDs or acceptance.
 
 Close's scoped automated gate set is complete on the isolated catalog21 candidate:
 focused312, independent paths90, shared regulation paths102, smoke86, chain32/

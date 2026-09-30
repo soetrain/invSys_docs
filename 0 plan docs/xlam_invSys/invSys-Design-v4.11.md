@@ -4086,7 +4086,8 @@ This contract supersedes the former explicit-conversion-Process-only rule only
 for the constrained external-stock allocation described here.
 
 **Process worksheet workbench:**
-- Process Designer exposes two independent actions: **Create Process Table**
+- Process Designer exposes two independent actions: **Send Process to Sheet**
+  (the existing Create Process Table action)
   and **Retrieve Selected Process**. Create writes the current or new draft to
   a uniquely named structured table in the captured saved
   `Production.Operator.xlsm`. Any number of invSys Process tables may coexist;
@@ -4094,6 +4095,15 @@ for the constrained external-stock allocation described here.
   Retrieve resolves the table containing the selected cell in that exact
   captured workbook. The current selection may identify a table but
   `ActiveWorkbook` is never an authority fallback.
+- D14's header-extension rules apply to these managed Process tables, including
+  formula/identity maintenance and retrieval validation. Resolve managed fields
+  by normalized header name when columns are moved or custom columns are inserted;
+  never use a logical field's default layout position as its runtime column index.
+  Preserve unknown headers, values, formulas and positions in tables that remain,
+  including when retrieval is rejected. Existing adjacent metadata coordinates,
+  generated identity rules, formula ownership, all-selected-table validation and
+  confirmed selected-table removal remain unchanged. This discovered D14
+  enforcement clarification changes no save, import or authority contract.
 - The worksheet is an operator editing/staging surface only. It is never
   Designs Domain authority, never receives a permanent inventory `System_Key`,
   and cannot save, release, obsolete, or execute a Process by itself.
