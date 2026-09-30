@@ -75,6 +75,14 @@ failures. Eleven principal captures across these gates are directly reviewed:
 draft edits/custom columns and the unrelated workbook survive; the saved catalog
 is not reloaded. The separate observed run matches OPENED then REUSED with zero
 extra actions and a command-only conclusion. Human acceptance remains open.
+Designer drafts/diagnostic paths390/390 and lifecycle615/615 retain exact prior
+ordered checks, five compiles, preservation, unassisted closure and zero delayed
+Application failures. Request/rejection/completion distinctions, fault outcomes,
+optional tracking and captured-context guards remain protected. No new captures
+or human acceptance are claimed for these two regressions.
+Native cancellation also retains94/94 exact prior checks, five compiles,
+preservation, unassisted closure and zero delayed Application failures. Four
+actual Release/Obsolete dialog captures are directly reviewed with No selected.
 Remaining regression gates are pending; focused621/paired114 GREEN does not
 establish complete acceptance.
 
