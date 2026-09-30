@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.34. Last reviewed: 2026-09-30 UTC, Recipe structure candidate under validation.
+Version 1.35. Last reviewed: 2026-09-30 UTC, Recipe structure candidate under validation.
 
 The isolated `validation-production-recipe-structure` candidate implements the
 approved connection snapshot and five catalog18 observations. Released-data
@@ -12,6 +12,14 @@ distinct guide/observed run, all three views and six reviewed captures. Five com
 preservation, normal closure and zero Excel Application failures pass. Broad
 regressions remain pending; catalog17 remains
 the validated baseline.
+The new candidate also retains ordering463/463 and chain32/32/live48/48/Create
+Warehouse15/15 with exact prior checks, unassisted closure, preservation and zero
+Excel Application failures. Other regression gates remain outstanding.
+Full reusable retains2 aggregates/171 prior Boolean observations and unassisted
+restart/final exit. Smoke86/86 retains unassisted Initial/Final exit. Both preserve
+settings/packages and record zero Excel Application failures.
+Components795/795 and Settings202/202 retain exact prior checks and five compiles,
+unassisted closure/restart, preservation and zero Excel failures.
 The initial incomplete full gate is retained in the code evidence below.
 
 Packaged structure baseline:182 PASS/604 FAIL,786 unique checks;599 missing
@@ -22,11 +30,11 @@ compiles, package/settings preservation and normal closure pass with zero Excel
 Application failures. See code evidence
 `tests/integration/plan022_slice4be_production_recipe_structure_results.md`.
 
-Next bounded group: Architecture v4.11 D18 and Plan022 specify catalog18 for the
-five Recipe structure commands below. This preserves existing local editing and
-adds the inherited observation/context guards. Protect actual packaged handlers
-with RED before runtime implementation; current catalog17 registration remains
-32/68,36 pending. Specified IDs are not yet runtime registrations or acceptance.
+Active bounded group: Architecture v4.11 D18 and Plan022 specify catalog18 for the
+five Recipe structure commands below. The candidate now registers37/68 constructed
+Production controls,31 still unregistered; its focused and paired-path gates pass.
+Registration is not acceptance. Catalog17 remains the fully regressed baseline
+at32/68 until the new candidate completes its broader gates.
 
 Bounded checkpoint: Architecture v4.11 D18 and Plan022 specify catalog17 observations
 for Recipe Designer Move Up, Move Down and Auto Order. This preserves existing
@@ -328,11 +336,11 @@ from permission to stage or export a catalog worksheet.
 
 | UI control | Caption | Actual handler | Tracking ID/status |
 |---|---|---|---|
-| `btnRecipeAddProcess` | Add Process | `mBtnRecipeAddProcess_Click` | `PRODUCTION_RECIPE_ADD_PROCESS`: catalog18 specified; RED/implementation pending |
+| `btnRecipeAddProcess` | Add Process | `mBtnRecipeAddProcess_Click` | `PRODUCTION_RECIPE_ADD_PROCESS`: catalog18 candidate; focused/paths GREEN, broad regressions pending |
 | `btnRecipeAutoOrder` | Auto Order | `mBtnRecipeAutoOrder_Click` | `PRODUCTION_RECIPE_AUTO_ORDER`: catalog17 automated gates GREEN; user acceptance pending |
 | `btnRecipeClear` | Clear | `mBtnRecipeClear_Click` | `PRODUCTION_RECIPE_CLEAR` |
-| `btnRecipeConnect` | Connect | `mBtnRecipeConnect_Click` | `PRODUCTION_RECIPE_CONNECT`: catalog18 specified; RED/implementation pending |
-| `btnRecipeDisconnect` | Disconnect | `mBtnRecipeDisconnect_Click` | `PRODUCTION_RECIPE_DISCONNECT`: catalog18 specified; RED/implementation pending |
+| `btnRecipeConnect` | Connect | `mBtnRecipeConnect_Click` | `PRODUCTION_RECIPE_CONNECT`: catalog18 candidate; focused/paths GREEN, broad regressions pending |
+| `btnRecipeDisconnect` | Disconnect | `mBtnRecipeDisconnect_Click` | `PRODUCTION_RECIPE_DISCONNECT`: catalog18 candidate; focused/paths GREEN, broad regressions pending |
 | `btnRecipeLoad` | Load | `mBtnRecipeLoad_Click` | Pending |
 | `btnRecipeMoveDown` | Move Down | `mBtnRecipeMoveDown_Click` | `PRODUCTION_RECIPE_MOVE_DOWN`: catalog17 automated gates GREEN; user acceptance pending |
 | `btnRecipeMoveUp` | Move Up | `mBtnRecipeMoveUp_Click` | `PRODUCTION_RECIPE_MOVE_UP`: catalog17 automated gates GREEN; user acceptance pending |
@@ -340,9 +348,9 @@ from permission to stage or export a catalog worksheet.
 | `btnRecipeObsolete` | Obsolete | `mBtnRecipeObsolete_Click` | `PRODUCTION_RECIPE_OBSOLETE` (partial) |
 | `btnRecipeRefresh` | Refresh | `mBtnRecipeRefresh_Click` | Pending |
 | `btnRecipeRelease` | Release | `mBtnRecipeRelease_Click` | `PRODUCTION_RECIPE_RELEASE` (partial) |
-| `btnRecipeRemoveProcess` | Remove Process | `mBtnRecipeRemoveProcess_Click` | `PRODUCTION_RECIPE_REMOVE_PROCESS`: catalog18 specified; RED/implementation pending |
+| `btnRecipeRemoveProcess` | Remove Process | `mBtnRecipeRemoveProcess_Click` | `PRODUCTION_RECIPE_REMOVE_PROCESS`: catalog18 candidate; focused/paths GREEN, broad regressions pending |
 | `btnRecipeSave` | Save Draft | `mBtnRecipeSave_Click` | `PRODUCTION_RECIPE_SAVE` (partial) |
-| `btnRecipeUpdateConnection` | Update | `mBtnRecipeUpdateConnection_Click` | `PRODUCTION_RECIPE_UPDATE_CONNECTION`: catalog18 specified; RED/implementation pending |
+| `btnRecipeUpdateConnection` | Update | `mBtnRecipeUpdateConnection_Click` | `PRODUCTION_RECIPE_UPDATE_CONNECTION`: catalog18 candidate; focused/paths GREEN, broad regressions pending |
 | `btnRecipeValidate` | Validate Recipe | `mBtnRecipeValidate_Click` | `PRODUCTION_RECIPE_VALIDATE` |
 
 ### Ingredients Assignment (7)

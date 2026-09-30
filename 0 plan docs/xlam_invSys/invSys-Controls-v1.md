@@ -1,9 +1,10 @@
 # invSys Form Controls v1
 
-**Version:** 1.291 (Recipe structure candidate; focused GREEN, broader gates pending)
+**Version:** 1.292 (Recipe structure candidate; regression checkpoint, acceptance pending)
 
 The unpromoted `validation-production-recipe-structure` candidate now implements
-the approved connection write and five catalog18 observations. The released-data
+the approved connection write and five catalog18 observations:37/68 constructed
+Production controls registered,31 still unregistered. Registration is not acceptance. The released-data
 changed-value gate passes55/55 with exact RED identities, five compiles,
 preservation, normal closure and zero Excel Application failures. Its reviewed
 capture retains quantity4 and percentage75 with intact routing/UOM. The full
@@ -14,6 +15,12 @@ preservation, unassisted closure, zero Excel Application failures and six review
 captures of original publication/detail and How-To/Diagnostic/Compare both.
 Broad regressions remain incomplete;
 catalog17 remains the validated baseline. No user acceptance is claimed.
+On the new candidate, ordering463/463 and chain32/32/live48/48/Create Warehouse15/15
+retain exact prior checks, unassisted closure, preservation and zero Excel failures.
+Full reusable retains2 aggregates/171 exact prior Boolean observations; smoke86/86
+also retains unassisted closure, preservation and zero Excel failures.
+Components795/795 and Settings202/202 retain exact prior checks and five compiles,
+unassisted closure/restart, preservation and zero Excel failures.
 
 The packaged baseline exposes five Update-behavior assertion failures in addition
 to missing tracking/guards. Architecture v4.11 records the user's explicit

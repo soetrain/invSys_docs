@@ -4,7 +4,8 @@
 
 **Implementation checkpoint2026-09-30 UTC:** isolated, unpromoted
 `validation-production-recipe-structure` implements the approved stable connection
-write and catalog18 observations. Released-Process changed-value RED52/3 becomes
+write and catalog18 observations:37/68 constructed Production controls registered,
+31 still unregistered. Registration is not acceptance. Released-Process changed-value RED52/3 becomes
 55/55 with exact check identities, five instrumented compiles, preservation,
 normal closure and zero Excel Application failures. The reviewed capture retains
 quantity4 and percentage75 with intact routing. Five builds/compiles/cold load and
@@ -18,6 +19,14 @@ explicit guide intent and observed conclusion, all three views and six reviewed
 captures. Five compiles, preservation, unassisted closure and zero Excel Application
 failures also pass. Broad regressions remain required before this checkpoint
 can replace the catalog17 acceptance baseline. See the code evidence below.
+Current-candidate ordering retains463/463; full chain32/32, live roles48/48 and
+Create Warehouse15/15 retain exact prior identities, unassisted closure,
+settings/package/report preservation and zero Excel Application failures.
+Full reusable Production retains both aggregates and171 exact prior Boolean
+observations, with unassisted restart/final exit. Smoke retains86/86 with unassisted
+Initial/Final exit. Both preserve settings/packages and record zero Excel failures.
+Component edits795/795 and Settings202/202 retain exact prior identities and five
+compiles, with unassisted closure/restart, preservation and zero Excel failures.
 
 **Recipe structure correction approved2026-09-30 UTC:** baseline Update does not satisfy
 the proposed seven-field preservation assertions. Architecture v4.11 now carries
