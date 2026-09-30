@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.357 (Worksheet lifecycle and draft regressions GREEN; acceptance pending)
+**Version:** 1.358 (Worksheet Regulation and designer-read regressions GREEN; acceptance pending)
 
 Architecture v4.11 D18's catalog22 controls PRODUCTION_PROCESS_WORKSHEET_SEND,
 PRODUCTION_PROCESS_WORKSHEET_ADD_ITEM and PRODUCTION_PROCESS_WORKSHEET_RETRIEVE
@@ -53,7 +53,11 @@ compiles, normal cleanup, preservation and delayed audits; eight Settings captur
 are reviewed. Production lifecycle615, draft/paths390 and native cancellation94
 retain every prior check in order. Each passes five compiles, normal cleanup,
 preservation and delayed audit; five native captures are reviewed. Native-input
-and state checks prove the cancelled result. Other Production families remain.
+and state checks prove the cancelled result. Regulation696/paths102 and design
+reads621/paths114 retain all prior ordered checks, five compiles, preservation,
+normal cleanup and delayed audits. Two focused Regulation and six captures for
+each paired family are reviewed. Four/five matched steps retain local-only
+conclusions with zero extras. Recipe structure and the remaining families follow.
 Regenerated static evidence retains all metrics and347 valid PowerShell parses.
 Remaining shared observation regressions are pending. No deployment
 promotion or human acceptance is claimed. Code evidence:

@@ -54,7 +54,11 @@ captures are reviewed. Production lifecycle615, draft/paths390 and native
 cancellation94 now retain all prior checks in exact order. Each passes five
 compiles, preservation, normal cleanup and the delayed Excel audit. Five native
 captures are reviewed; actual native No input and state checks establish the
-cancelled result. Next complete Regulation and the remaining Production families.
+cancelled result. Regulation696/paths102 and design reads621/paths114 now retain
+all prior ordered checks, five compiles, preservation, normal cleanup and clean
+delayed audits. Two focused Regulation captures and six captures for each paired
+family are reviewed. Four/five matched steps retain explicit local-only conclusions
+with zero extras. Next complete Recipe structure and the remaining families.
 Preserve the595 checks and their documented
 closure mapping. No promotion, desktop-error5, crash-repair or human-acceptance
 claim. Exact evidence and pending gates:
