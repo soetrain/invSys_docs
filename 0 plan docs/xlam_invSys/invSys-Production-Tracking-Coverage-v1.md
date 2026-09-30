@@ -1,18 +1,27 @@
 # Production form tracking coverage audit
 
-Version 1.48. Last reviewed: 2026-09-30 UTC, output-regulation observation contract specified.
+Version 1.49. Last reviewed: 2026-09-30 UTC, output-regulation focused GREEN.
 
-Next bounded group: catalog20's Apply Regulation and Clear Override are specified
-under Architecture v4.11 D18, but are not implemented or registered. Preserve
-Process-default/Recipe-override staging, D15 authority and existing conversion/
-validation/clear behavior; only local STAGED can conclude. D13 packaged actual-
-handler RED records168 PASS/528 FAIL across696 unique checks, five compiles,
-no harness failures, preservation, unassisted closure and zero delayed Application
-failures. Existing local editing semantics pass; implementation/GREEN remains next.
-Current catalog19 registration
-remains103 global IDs and42/68 constructed Production controls,26 pending;
-implementing these two would leave24. The native full reusable acceptance gap
-remains open independently. No new human acceptance is claimed.
+Catalog20 output-regulation focused GREEN,2026-09-30 UTC: the isolated
+`validation-production-regulation-final` candidate registers105 global controls
+and44/68 constructed Production controls;24 remain unregistered. Apply Regulation
+and Clear Override preserve existing Process-default/Recipe-override editing,
+conversion, clear and status semantics. Only local STAGED concludes; Save/Release
+and Domain authority remain separate. The documented168 PASS/528 FAIL RED is now
+696/696 GREEN with all ordered identities, five instrumented compiles, preserved
+saved authority/workbook bytes/custom columns/prior records, settings/package pins,
+unassisted Excel closure and zero delayed Application failures. Two principal
+Production Settings images are directly reviewed; this is not human acceptance.
+The initial695/one-redaction-check failure is retained. Deterministic test-only
+calibration6/4 ->10/10 corrects short-ID substring collisions and escaped-text
+checking; the exact initial matching field was not retained by normal cleanup.
+Static metrics:269 components,6107 procedures,134347 lines, unchanged9/45 dynamic
+calls and190 duplicate groups,28 non-growing oversized caps, three schemas and330
+PowerShell parses. The Production form shrinks by four lines. Paired paths and
+required final-candidate regressions remain pending; no promotion is authorized
+by these results. Catalog19 remains frozen and its native full reusable failure
+stays unresolved. Exact evidence is in the code repository's
+`tests/integration/plan022_slice4be_production_regulation_results.md`.
 
 The isolated `validation-production-design-reads-final` catalog19 candidate passes
 621/621 focused checks and114/114 paired-path checks. The focused gate retains the
@@ -563,8 +572,8 @@ from permission to stage or export a catalog worksheet.
 
 | UI control | Caption | Actual handler | Tracking ID/status |
 |---|---|---|---|
-| `btnOutputRegulationApply` | Apply Regulation | `mBtnOutputRegulationApply_Click` | `PRODUCTION_OUTPUT_REGULATION_APPLY`: catalog20 specified; packaged RED168/528 recorded; implementation pending |
-| `btnOutputRegulationClear` | Clear Override | `mBtnOutputRegulationClear_Click` | `PRODUCTION_OUTPUT_REGULATION_CLEAR`: catalog20 specified; packaged RED168/528 recorded; implementation pending |
+| `btnOutputRegulationApply` | Apply Regulation | `mBtnOutputRegulationApply_Click` | `PRODUCTION_OUTPUT_REGULATION_APPLY`: catalog20 registered; RED168/528 -> focused GREEN696/696; broader acceptance pending |
+| `btnOutputRegulationClear` | Clear Override | `mBtnOutputRegulationClear_Click` | `PRODUCTION_OUTPUT_REGULATION_CLEAR`: catalog20 registered; RED168/528 -> focused GREEN696/696; broader acceptance pending |
 | `btnUomCatalogRetrieve` | Retrieve UOM Catalog | `mBtnUomCatalogRetrieve_Click` | `PRODUCTION_UOM_RETRIEVE` |
 | `btnUomCatalogSend` | Edit UOM Catalog on Sheet | `mBtnUomCatalogSend_Click` | `PRODUCTION_UOM_EDIT`; visible guards264/264 and public lifecycle61/61 pass; release acceptance pending |
 

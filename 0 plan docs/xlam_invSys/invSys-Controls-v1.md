@@ -1,23 +1,27 @@
 # invSys Form Controls v1
 
-**Version:** 1.305 (output-regulation observations specified; native acceptance gap open)
+**Version:** 1.306 (output-regulation focused GREEN; broader acceptance pending)
 
-**Next bounded group,2026-09-30 UTC:** Architecture v4.11 D18 specifies catalog20
-`PRODUCTION_OUTPUT_REGULATION_APPLY` (Apply Regulation) and
-`PRODUCTION_OUTPUT_REGULATION_CLEAR` (Clear Override), both on Operations >
-Production > Production Settings. The existing actual Click handlers must retain
-Process-default/Recipe-override staging and D15 authority. Only STAGED establishes
-local command completion; it is not Save/Release or Domain application. Preserve
-validation/conversion/clear semantics, status wording, captured context, current
-capability, optional tracking and fixed redaction. Packaged actual-handler RED
-records168 PASS/528 FAIL across696 unique checks, five compiles, no harness failures,
-preservation, unassisted closure and zero delayed Excel Application failures.
-Existing local editing semantics pass. Runtime implementation and focused GREEN/
-paths/visible/regression acceptance remain pending; see the regulation result
-record in the code repository.
-Neither control is registered at this checkpoint: catalog19 remains103 global
-IDs and42/68 constructed Production controls. Its native full reusable failure
-stays unresolved. See the normative discovered-control refinement and Plan022.
+Catalog20 output-regulation focused GREEN,2026-09-30 UTC: the isolated
+`validation-production-regulation-final` candidate registers105 global controls
+and44/68 constructed Production controls;24 remain unregistered. Apply Regulation
+and Clear Override preserve existing Process-default/Recipe-override editing,
+conversion, clear and status semantics. Only local STAGED concludes; Save/Release
+and Domain authority remain separate. The documented168 PASS/528 FAIL RED is now
+696/696 GREEN with all ordered identities, five instrumented compiles, preserved
+saved authority/workbook bytes/custom columns/prior records, settings/package pins,
+unassisted Excel closure and zero delayed Application failures. Two principal
+Production Settings images are directly reviewed; this is not human acceptance.
+The initial695/one-redaction-check failure is retained. Deterministic test-only
+calibration6/4 ->10/10 corrects short-ID substring collisions and escaped-text
+checking; the exact initial matching field was not retained by normal cleanup.
+Static metrics:269 components,6107 procedures,134347 lines, unchanged9/45 dynamic
+calls and190 duplicate groups,28 non-growing oversized caps, three schemas and330
+PowerShell parses. The Production form shrinks by four lines. Paired paths and
+required final-candidate regressions remain pending; no promotion is authorized
+by these results. Catalog19 remains frozen and its native full reusable failure
+stays unresolved. Exact evidence is in the code repository's
+`tests/integration/plan022_slice4be_production_regulation_results.md`.
 
 The isolated `validation-production-design-reads-final` catalog19 candidate passes
 621/621 focused checks and114/114 paired-path checks. The focused gate retains the

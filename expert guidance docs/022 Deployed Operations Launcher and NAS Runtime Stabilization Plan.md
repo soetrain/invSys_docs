@@ -2,24 +2,26 @@
 
 **Status:** Current corrective implementation plan
 
-**Next bounded group,2026-09-30 UTC: Production output-regulation observations.**
-Architecture v4.11's D18 discovered-control refinement specifies catalog20 for
-Apply Regulation and Clear Override in Production Settings. Preserve the existing
-Process-default/Recipe-override algorithms and D15 authority; observe only local
-STAGED, with distinct rejection, denial and failure. No runtime change is made
-at this contract checkpoint. Packaged actual-handler RED now records168 PASS/
-528 FAIL across696 unique checks, with five compiles, no harness failures,
-preservation, unassisted closure and zero delayed Excel Application failures.
-Both scopes' existing conversion/clear behavior and saved authority pass; missing
-catalog20 observations, context/permission/reentry guards and fixed failure
-handling remain RED. Exact evidence is in the code repository's
+Catalog20 output-regulation focused GREEN,2026-09-30 UTC: the isolated
+`validation-production-regulation-final` candidate registers105 global controls
+and44/68 constructed Production controls;24 remain unregistered. Apply Regulation
+and Clear Override preserve existing Process-default/Recipe-override editing,
+conversion, clear and status semantics. Only local STAGED concludes; Save/Release
+and Domain authority remain separate. The documented168 PASS/528 FAIL RED is now
+696/696 GREEN with all ordered identities, five instrumented compiles, preserved
+saved authority/workbook bytes/custom columns/prior records, settings/package pins,
+unassisted Excel closure and zero delayed Application failures. Two principal
+Production Settings images are directly reviewed; this is not human acceptance.
+The initial695/one-redaction-check failure is retained. Deterministic test-only
+calibration6/4 ->10/10 corrects short-ID substring collisions and escaped-text
+checking; the exact initial matching field was not retained by normal cleanup.
+Static metrics:269 components,6107 procedures,134347 lines, unchanged9/45 dynamic
+calls and190 duplicate groups,28 non-growing oversized caps, three schemas and330
+PowerShell parses. The Production form shrinks by four lines. Paired paths and
+required final-candidate regressions remain pending; no promotion is authorized
+by these results. Catalog19 remains frozen and its native full reusable failure
+stays unresolved. Exact evidence is in the code repository's
 `tests/integration/plan022_slice4be_production_regulation_results.md`.
-Implement only after this RED, preserving all696 identities for GREEN.
-Then require focused GREEN, paired paths, visible evidence and the established
-packaged/compile/layout/static/live-role/chain/reusable gates. Catalog19 stays
-frozen; its ordinary full reusable native failure remains open and is not repaired
-by additional tracking. Current registration stays103 global/42 of68 Production
-controls until the two new controls are implemented;24 would then remain.
 
 **Designer load/refresh focused GREEN,2026-09-30 UTC:**
 The isolated `validation-production-design-reads-final` catalog19 candidate passes
