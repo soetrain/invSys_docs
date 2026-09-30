@@ -2,6 +2,22 @@
 
 **Status:** Current corrective implementation plan
 
+**Next bounded4be group: Recipe ordering observations.** Architecture v4.11 D18
+now specifies catalog17 for Move Up, Move Down and Auto Order in Recipe Designer,
+under the approved discovered-control/semantic-inheritance rules. This is specified,
+not implemented or accepted; current packages remain catalog16 with29/68 controls.
+Preserve the existing bounded ordering algorithm, node identities, non-order row
+fields, connection values, renumbering and refresh side effects, including local changes before a
+rejected Auto Order. Only STAGED is a positive local CommandCompleted fact; no
+Domain application or saved-definition change follows. Require captured-context,
+current capability, loading/nested guards and optional-tracking behavior.
+Create/run `Test-Slice4beProductionRecipeOrder.ps1` against the frozen component
+candidate before runtime edits. It must invoke the three actual Click handlers
+and establish missing registrations/observations/guards as behavioral RED, then
+protect preserved ordering semantics through GREEN. Publication/recording/paired
+views, packaged compile/layout/static, current regressions/full chain/reusable
+gates and visible evidence remain required. No authority or permission amendment.
+
 **Reusable test shutdown correction,2026-09-30 UTC:** The ordinary full reusable
 workbench/export/restart gate retains2 aggregate assertions and the exact171
 Boolean observations (166 distinct pairs), including all67 run-only values. Both

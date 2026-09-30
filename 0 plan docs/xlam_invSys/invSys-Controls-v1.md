@@ -1,6 +1,18 @@
 # invSys Form Controls v1
 
-**Version:** 1.280 (ordinary full reusable workflow and unassisted shutdown retained)
+**Version:** 1.281 (Recipe ordering observation contract specified; not implemented)
+
+Architecture v4.11 D18 specifies catalog17 for the existing Recipe Designer Move
+Up, Move Down and Auto Order controls: `PRODUCTION_RECIPE_MOVE_UP`,
+`PRODUCTION_RECIPE_MOVE_DOWN`, `PRODUCTION_RECIPE_AUTO_ORDER`, owner
+PRODUCTION_DESIGNER. Outcomes REQUESTED/STAGED/REJECTED/DENIED/FAILED preserve
+local ordering semantics; only STAGED can conclude CommandCompleted, with no
+Domain application or saved-definition claim. Rejection may retain existing local
+renumbering/partial ordering. Captured-context/capability and loading/nested guards,
+optional tracking, fixed redacted detail and packaged actual-handler RED/GREEN are
+required. Status: specified, not implemented or accepted. Current catalog16 still
+registers29/68 constructed Production controls, with39 pending. See the normative
+"Recipe ordering observations" entry and Plan022's next bounded group.
 
 The ordinary full reusable workbench/export/restart gate retains2 aggregate
 assertions and all171 Boolean observations in their exact order, including all67

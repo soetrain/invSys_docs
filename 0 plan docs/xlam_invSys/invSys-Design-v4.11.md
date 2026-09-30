@@ -517,6 +517,58 @@ workbook columns. Publication, original recording order and How-To/Diagnostic/
 Compare both require separate evidence. This records discovered controls within
 the approved contract; it does not amend authority, permissions or saved semantics.
 
+**4be.1 Recipe ordering observations (discovered-control refinement; acceptance pending):**
+Under the approved D18 local-draft and semantic-inheritance rules, catalog17 adds
+`PRODUCTION_RECIPE_MOVE_UP`, `PRODUCTION_RECIPE_MOVE_DOWN` and
+`PRODUCTION_RECIPE_AUTO_ORDER` for the existing `mBtnRecipeMoveUp_Click`,
+`mBtnRecipeMoveDown_Click` and `mBtnRecipeAutoOrder_Click` handlers. Preserve
+catalogs1-16 exactly. OwnerId is `PRODUCTION_DESIGNER`, role Production, class
+Command, capability PROD_POST with the existing ADMIN_MAINT alternative. The
+surface is Operations > Production > Recipe Designer; fixed captions remain
+Move Up, Move Down and Auto Order. EventCode is ControlId + `_` + OutcomeCode.
+
+REQUESTED is Info/Unknown before current-context permission and local validation.
+STAGED is Info/Unchanged with respect to saved definitions when a selected row
+moves to a valid adjacent row, or when the existing Auto Order operation finishes
+and its local acyclic check succeeds. Auto Order on an empty or already ordered
+draft may therefore finish STAGED without changing row order. This is not recipe
+validation, proof of complete/resolved graph references, or a claim of persistence.
+REJECTED is Warning/Unchanged for an invalid movement source/destination or an
+unsuccessful local acyclic check. DENIED is Blocked/Unchanged before editing;
+FAILED is Error/Unknown with an instruction to inspect the current draft.
+
+Preserve the existing ordering algorithm, its node-count-squared pass bound,
+case-insensitive node identity matching, declared-column row movement and
+selection-following. Preserve instruction-ordinal normalization on actual movement,
+recipe execution-order renumbering and connection-choice refresh. Up/Down retain
+renumbering/choice refresh even when movement cannot occur. Auto Order retains
+its connection-display refresh and may partially reorder/renumber before rejecting
+a cycle or other graph shape rejected by the existing check. Rejection does not
+promise a local rollback. Keep all node/component identities and connection values;
+do not introduce graph repair, implicit validation, save/release, inventory actions,
+new authority or a different ordering algorithm.
+
+Before ordering or normalization, require the original live captured workbook,
+unchanged warehouse/session and current capability. Stale, signed-out or closed
+bindings refuse without redirecting or attributing activity to a replacement
+context. Loading, re-entrancy and programmatic selection/choice refresh create no
+extra actions. Disabled/unavailable optional tracking must not block authorized
+ordering; report unavailable tracking visibly. Activity contains fixed explanations
+only, with no draft text, node/process/recipe IDs, quantities, selection values,
+workbook paths or source-event references.
+
+For exactly these three controls, only STAGED is a positive CommandCompleted
+owner fact, retaining the existing "Domain application not asserted" distinction.
+REQUESTED, REJECTED, DENIED and FAILED cannot conclude; VALIDATED, COMPLETED,
+CONFIRMED and APPLIED are unsupported. Empty references cannot establish
+SourceEventsApplied. Required packaged-handler RED/GREEN protects actual movement,
+no-selection/bounds behavior, empty/already ordered and rejected graph cases,
+partial-failure uncertainty, captured-context/permission/loading/nested guards,
+optional tracking, redaction, immutable records, saved authority and custom columns.
+Recording/publication and How-To/Diagnostic/Compare need separate evidence. This
+specifies discovered controls within the approved contract; it does not weaken an
+architectural rule or change the existing local ordering semantics.
+
 **4be.1 Process instruction editor observations (discovered-control refinement):**
 The existing `mBtnProcessInstructionAdd_Click`, `mBtnProcessInstructionUpdate_Click`,
 `mBtnProcessInstructionRemove_Click`, `mBtnProcessInstructionUp_Click` and
