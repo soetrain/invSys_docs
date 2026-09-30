@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.78. Last reviewed: 2026-09-30 UTC, Process worksheet prerequisite RED.
+Version 1.79. Last reviewed: 2026-09-30 UTC, Process worksheet focused GREEN.
 
 Next grouping: the three Process worksheet buttons. Send saves a newly created
 local table; Add Acceptable Item saves additional local columns; Retrieve validates
@@ -12,8 +12,11 @@ D15 now explicitly applies D14 to these tables; the existing workflow/authority
 contract is unchanged. Packaged RED now proves the overwrite and normalized/
 reordered-header failures:97 PASS/10 FAIL/107, ordinary mixed-UOM import passes,
 five compiles and normal cleanup/preservation hold. The isolated two-module
-Operations correction builds/compiles; GREEN and relevant completion gates remain
-pending. No worksheet tracking control is registered. Exact code evidence:
+Operations correction passes107/107 exact focused checks, build/five compiles,
+static ratchets and normal cleanup/preservation. Three operator captures are
+reviewed; one blank worksheet image is excluded. Full reusable, smoke, chain/live/
+Create, layout and Close/query regressions remain pending. No worksheet tracking
+control is registered. Exact code evidence:
 `tests/integration/plan022_slice4be_process_worksheet_headers_results.md`.
 
 The isolated catalog21 Close candidate completes its scoped automated gate set:

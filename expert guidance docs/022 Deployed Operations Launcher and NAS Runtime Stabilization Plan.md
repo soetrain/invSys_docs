@@ -12,9 +12,11 @@ with a custom column inserted before a managed field must be rejected without
 overwriting that custom data. Test header normalization and retained identity
 alongside the ordinary layout. Packaged RED now proves the defect:97 PASS/10
 expected failures across107 checks, including preserved ordinary mixed-UOM import,
-five compiles and normal cleanup. The isolated Operations-only correction builds
-and compiles; focused GREEN and relevant regression/visible/static gates remain
-pending. No catalog22 registration is claimed. Exact evidence:
+five compiles and normal cleanup. The isolated Operations-only correction now
+passes107/107 exact checks, five compiles, static limits, normal preservation/
+cleanup and three reviewed operator captures. Full reusable Production, smoke,
+chain/live roles/Create Warehouse, layout and Close/query regressions are pending.
+No catalog22 registration is claimed. Exact evidence:
 `tests/integration/plan022_slice4be_process_worksheet_headers_results.md`. Preserve the
 completed Close candidate and its GREEN regressions. Observation design must
 separately reflect local worksheet changes and Retrieve's possibly multiple
