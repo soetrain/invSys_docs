@@ -1,23 +1,23 @@
 # Production form tracking coverage audit
 
-Version 1.40. Last reviewed: 2026-09-30 UTC, designer load/refresh focused GREEN recorded.
+Version 1.41. Last reviewed: 2026-09-30 UTC, designer load/refresh and paired paths GREEN recorded.
 
-The isolated `validation-production-design-reads` catalog19 candidate completes
-621/621 focused checks with the exact preceding RED identities (166 PASS/455 FAIL).
-Five instrumented compiles, settings/package preservation, unassisted closure and
-zero Excel Application failures pass. Existing local behavior, saved authority,
-unknown columns and older records remain intact. It registers103 global IDs and
-42/68 constructed Production controls,26 unregistered. Registration is not acceptance.
-Separate recording/view evidence and the broad regression gates remain pending.
-Catalog18 and17 comparison packages are preserved. Exact evidence is in the code
-repository's `tests/integration/plan022_slice4be_production_design_read_results.md`.
+The isolated `validation-production-design-reads-final` catalog19 candidate passes
+621/621 focused checks and114/114 paired-path checks. The focused gate retains the
+exact621 RED/GREEN identities; paths retain all92 editor-RED identities. Five
+instrumented compiles, preservation, unassisted closure and zero Excel Application
+failures pass. Six principal captures are directly reviewed. Two original recordings
+supply a guide and a distinct observed run; all five steps match, with no extra
+actions. How-To, Diagnostic and Compare both preserve the same evidence and a
+local-only conclusion. Core's expectation-choice list now offers PRESENTED after
+clean90 PASS/two expected failures. The earlier VBA380/assisted attempt remains
+separate incomplete evidence. Static metrics and all size/dynamic-call limits pass.
 
-The separate recording gate exposes a pending integration defect: PRESENTED is
-published correctly but absent from the Expected Conclusion editor's fixed outcome
-list. Clean actual-editor RED is90 PASS/two expected missing-PRESENTED failures,
-with five compiles, preservation, normal closure and zero Excel Application
-failures. Correct that Core choice list before full paired-path GREEN. The initial absent-value write triggers VBA380 and assisted fixture closure;
-it is retained as incomplete evidence, not a full paired-path GREEN.
+This candidate registers103 global IDs and42/68 constructed Production controls,
+26 unregistered. Registration is not acceptance. Broad packaged regressions on this
+final artifact remain pending. Catalog17,18 and the first19 candidate are frozen.
+Exact evidence is in the code repository's
+`tests/integration/plan022_slice4be_production_design_read_results.md`.
 
 Active bounded group: five existing designer load/refresh controls are specified
 under Architecture v4.11 D18 for catalog19 and now registered in the isolated candidate. Process Refresh
@@ -393,7 +393,7 @@ from permission to stage or export a catalog worksheet.
 | `btnProcessInstructionRemove` | Remove | `mBtnProcessInstructionRemove_Click` | `PRODUCTION_PROCESS_INSTRUCTION_REMOVE` (partial) |
 | `btnProcessInstructionUp` | Up | `mBtnProcessInstructionUp_Click` | `PRODUCTION_PROCESS_INSTRUCTION_UP` (partial) |
 | `btnProcessInstructionUpdate` | Update | `mBtnProcessInstructionUpdate_Click` | `PRODUCTION_PROCESS_INSTRUCTION_UPDATE` (partial) |
-| `btnProcessLoad` | View Process | `mBtnProcessLoad_Click` | `PRODUCTION_PROCESS_LOAD`: catalog19 candidate; focused GREEN, paths/regressions pending |
+| `btnProcessLoad` | View Process | `mBtnProcessLoad_Click` | `PRODUCTION_PROCESS_LOAD`: catalog19 candidate; focused/paths GREEN, regressions pending |
 | `btnProcessNew` | New Process | `mBtnProcessNew_Click` | `PRODUCTION_PROCESS_NEW` |
 | `btnProcessObsolete` | Obsolete | `mBtnProcessObsolete_Click` | `PRODUCTION_PROCESS_OBSOLETE` (partial) |
 | `btnProcessOutputAdd` | Add | `mBtnProcessOutputAdd_Click` | Catalog16; focused795/795; paths142/142; regressions pending |
@@ -401,14 +401,14 @@ from permission to stage or export a catalog worksheet.
 | `btnProcessOutputRemove` | Remove | `mBtnProcessOutputRemove_Click` | Catalog16; focused795/795; paths142/142; regressions pending |
 | `btnProcessOutputUp` | Up | `mBtnProcessOutputUp_Click` | Catalog16; focused795/795; paths142/142; regressions pending |
 | `btnProcessOutputUpdate` | Update | `mBtnProcessOutputUpdate_Click` | Catalog16; focused795/795; paths142/142; regressions pending |
-| `btnProcessRefresh` | Refresh | `mBtnProcessRefresh_Click` | `PRODUCTION_PROCESS_REFRESH`: catalog19 candidate; focused GREEN, paths/regressions pending |
+| `btnProcessRefresh` | Refresh | `mBtnProcessRefresh_Click` | `PRODUCTION_PROCESS_REFRESH`: catalog19 candidate; focused/paths GREEN, regressions pending |
 | `btnProcessRelease` | Release | `mBtnProcessRelease_Click` | `PRODUCTION_PROCESS_RELEASE` (partial) |
 | `btnProcessRequirementAdd` | Add | `mBtnProcessRequirementAdd_Click` | Catalog16; focused795/795; paths142/142; regressions pending |
 | `btnProcessRequirementDown` | Down | `mBtnProcessRequirementDown_Click` | Catalog16; focused795/795; paths142/142; regressions pending |
 | `btnProcessRequirementRemove` | Remove | `mBtnProcessRequirementRemove_Click` | Catalog16; focused795/795; paths142/142; regressions pending |
 | `btnProcessRequirementUp` | Up | `mBtnProcessRequirementUp_Click` | Catalog16; focused795/795; paths142/142; regressions pending |
 | `btnProcessRequirementUpdate` | Update | `mBtnProcessRequirementUpdate_Click` | Catalog16; focused795/795; paths142/142; regressions pending |
-| `btnProcessReuse` | Edit as New Version | `mBtnProcessReuse_Click` | `PRODUCTION_PROCESS_REUSE`: catalog19 candidate; focused GREEN, paths/regressions pending |
+| `btnProcessReuse` | Edit as New Version | `mBtnProcessReuse_Click` | `PRODUCTION_PROCESS_REUSE`: catalog19 candidate; focused/paths GREEN, regressions pending |
 | `btnProcessSave` | Save Draft | `mBtnProcessSave_Click` | `PRODUCTION_PROCESS_SAVE` (partial) |
 | `btnProcessValidate` | Validate | `mBtnProcessValidate_Click` | `PRODUCTION_PROCESS_VALIDATE` |
 | `btnProcessWorksheetAddAlternative` | Add Acceptable Item | `mBtnProcessWorksheetAddAlternative_Click` | Pending |
@@ -424,12 +424,12 @@ from permission to stage or export a catalog worksheet.
 | `btnRecipeClear` | Clear | `mBtnRecipeClear_Click` | `PRODUCTION_RECIPE_CLEAR` |
 | `btnRecipeConnect` | Connect | `mBtnRecipeConnect_Click` | `PRODUCTION_RECIPE_CONNECT`: catalog18 candidate; focused/paths GREEN, broad regressions pending |
 | `btnRecipeDisconnect` | Disconnect | `mBtnRecipeDisconnect_Click` | `PRODUCTION_RECIPE_DISCONNECT`: catalog18 candidate; focused/paths GREEN, broad regressions pending |
-| `btnRecipeLoad` | Load | `mBtnRecipeLoad_Click` | `PRODUCTION_RECIPE_LOAD`: catalog19 candidate; focused GREEN, paths/regressions pending |
+| `btnRecipeLoad` | Load | `mBtnRecipeLoad_Click` | `PRODUCTION_RECIPE_LOAD`: catalog19 candidate; focused/paths GREEN, regressions pending |
 | `btnRecipeMoveDown` | Move Down | `mBtnRecipeMoveDown_Click` | `PRODUCTION_RECIPE_MOVE_DOWN`: catalog17 automated gates GREEN; user acceptance pending |
 | `btnRecipeMoveUp` | Move Up | `mBtnRecipeMoveUp_Click` | `PRODUCTION_RECIPE_MOVE_UP`: catalog17 automated gates GREEN; user acceptance pending |
 | `btnRecipeNew` | New Recipe | `mBtnRecipeNew_Click` | `PRODUCTION_RECIPE_NEW` |
 | `btnRecipeObsolete` | Obsolete | `mBtnRecipeObsolete_Click` | `PRODUCTION_RECIPE_OBSOLETE` (partial) |
-| `btnRecipeRefresh` | Refresh | `mBtnRecipeRefresh_Click` | `PRODUCTION_RECIPE_REFRESH`: catalog19 candidate; focused GREEN, paths/regressions pending |
+| `btnRecipeRefresh` | Refresh | `mBtnRecipeRefresh_Click` | `PRODUCTION_RECIPE_REFRESH`: catalog19 candidate; focused/paths GREEN, regressions pending |
 | `btnRecipeRelease` | Release | `mBtnRecipeRelease_Click` | `PRODUCTION_RECIPE_RELEASE` (partial) |
 | `btnRecipeRemoveProcess` | Remove Process | `mBtnRecipeRemoveProcess_Click` | `PRODUCTION_RECIPE_REMOVE_PROCESS`: catalog18 candidate; focused/paths GREEN, broad regressions pending |
 | `btnRecipeSave` | Save Draft | `mBtnRecipeSave_Click` | `PRODUCTION_RECIPE_SAVE` (partial) |

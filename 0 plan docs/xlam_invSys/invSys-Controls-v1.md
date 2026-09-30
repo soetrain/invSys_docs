@@ -1,23 +1,23 @@
 # invSys Form Controls v1
 
-**Version:** 1.297 (designer load/refresh focused GREEN; acceptance gates pending)
+**Version:** 1.298 (designer load/refresh and paired paths GREEN; regressions pending)
 
-The isolated `validation-production-design-reads` catalog19 candidate completes
-621/621 focused checks with the exact preceding RED identities (166 PASS/455 FAIL).
-Five instrumented compiles, settings/package preservation, unassisted closure and
-zero Excel Application failures pass. Existing local behavior, saved authority,
-unknown columns and older records remain intact. It registers103 global IDs and
-42/68 constructed Production controls,26 unregistered. Registration is not acceptance.
-Separate recording/view evidence and the broad regression gates remain pending.
-Catalog18 and17 comparison packages are preserved. Exact evidence is in the code
-repository's `tests/integration/plan022_slice4be_production_design_read_results.md`.
+The isolated `validation-production-design-reads-final` catalog19 candidate passes
+621/621 focused checks and114/114 paired-path checks. The focused gate retains the
+exact621 RED/GREEN identities; paths retain all92 editor-RED identities. Five
+instrumented compiles, preservation, unassisted closure and zero Excel Application
+failures pass. Six principal captures are directly reviewed. Two original recordings
+supply a guide and a distinct observed run; all five steps match, with no extra
+actions. How-To, Diagnostic and Compare both preserve the same evidence and a
+local-only conclusion. Core's expectation-choice list now offers PRESENTED after
+clean90 PASS/two expected failures. The earlier VBA380/assisted attempt remains
+separate incomplete evidence. Static metrics and all size/dynamic-call limits pass.
 
-The separate recording gate exposes a pending integration defect: PRESENTED is
-published correctly but absent from the Expected Conclusion editor's fixed outcome
-list. Clean actual-editor RED is90 PASS/two expected missing-PRESENTED failures,
-with five compiles, preservation, normal closure and zero Excel Application
-failures. Correct that Core choice list before full paired-path GREEN. The initial absent-value write triggers VBA380 and assisted fixture closure;
-it is retained as incomplete evidence, not a full paired-path GREEN.
+This candidate registers103 global IDs and42/68 constructed Production controls,
+26 unregistered. Registration is not acceptance. Broad packaged regressions on this
+final artifact remain pending. Catalog17,18 and the first19 candidate are frozen.
+Exact evidence is in the code repository's
+`tests/integration/plan022_slice4be_production_design_read_results.md`.
 
 Architecture v4.11 D18 specifies these five discovered controls for catalog19:
 
