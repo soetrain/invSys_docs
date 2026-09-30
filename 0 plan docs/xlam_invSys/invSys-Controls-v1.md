@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.340 (Operations worksheet gates complete; Core picker prerequisite)
+**Version:** 1.341 (Core Process picker normalized-header RED)
 
 Process worksheet tracking remains pending. Source review found positional
 managed-field access that can target inserted user columns before Retrieve
@@ -25,7 +25,11 @@ item/SKU pair under normalized headers. Source audit finds untrimmed/case-sensit
 pair-prefix matching may change the visible item but leave its paired SKU unchanged.
 No pair1 fallback exists in this path. D4/D14/D15 already govern this behavior;
 the normative clarification adds no ownership/allocation/save change. Establish
-packaged behavioral RED before correcting Core. This case is not yet runtime-proven.
+packaged behavioral RED before correcting Core. RED now records110 PASS/5 FAIL/115
+through the actual picker commit: five normalized INPUT cases leave the selected
+SKU unchanged. Canonical/OUTPUT cases, other cells and captured-book/authority
+preservation pass; all42 shared prior GREEN checks and five compiles pass.
+Exact code evidence: `tests/integration/plan022_slice4be_process_worksheet_picker_results.md`.
 
 Close's scoped automated gate set is complete on the isolated catalog21 candidate:
 focused312, independent paths90, shared regulation paths102, smoke86, chain32/

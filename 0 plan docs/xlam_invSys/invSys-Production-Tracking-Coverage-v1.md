@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.80. Last reviewed: 2026-09-30 UTC, worksheet gates/Core picker prerequisite.
+Version 1.81. Last reviewed: 2026-09-30 UTC, Core picker normalized-header RED.
 
 Next grouping: the three Process worksheet buttons. Send saves a newly created
 local table; Add Acceptable Item saves additional local columns; Retrieve validates
@@ -24,7 +24,10 @@ is registered. Exact code evidence:
 Before registration, protect Core `cDynItemSearch.CommitSelection` for normalized
 numbered Process headers. Source audit shows case-sensitive/untrimmed pair-prefix
 matching can leave the SKU unchanged after the visible label is updated; there is
-no pair1 fallback. This is not runtime-proven RED yet. D4/D14/D15 require exact
+no pair1 fallback. Packaged RED now proves110 PASS/5 selected-SKU failures/115,
+with five compiles, all42 prior shared GREEN checks and preservation passing.
+Exact code evidence: `tests/integration/plan022_slice4be_process_worksheet_picker_results.md`.
+D4/D14/D15 require exact
 selected-pair matching, other-pair/custom preservation and captured-book binding.
 
 The isolated catalog21 Close candidate completes its scoped automated gate set:

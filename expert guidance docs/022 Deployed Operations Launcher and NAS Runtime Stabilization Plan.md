@@ -6,7 +6,10 @@ Next within Slice4be: Core Process item-picker header alignment, before the thre
 worksheet actions are registered. Source audit finds the case-sensitive/untrimmed
 prefix in `cDynItemSearch.ProcessAlternativePairNumber` can fail to resolve the
 selected numbered pair after the item label changes, leaving its SKU unchanged.
-There is no pair1 fallback. This is source-predicted, not runtime-proven RED.
+There is no pair1 fallback. Packaged RED now proves five selected-SKU failures:
+110 PASS/5 FAIL/115, all42 shared prior GREEN checks and five compiles retained.
+Canonical/OUTPUT cases, other cells, captured/decoy books and authority bytes pass.
+Exact evidence: `tests/integration/plan022_slice4be_process_worksheet_picker_results.md`.
 D4/D14/D15 require the same normalized selected-pair matching; the normative
 clarification preserves ownership, record types, allocation and save behavior.
 Protect the actual packaged picker commit first, including canonical/normalized
