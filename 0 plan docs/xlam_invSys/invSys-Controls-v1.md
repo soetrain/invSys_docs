@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.344 (Observed restart passes; cold restart remains unresolved)
+**Version:** 1.345 (Picker scoped gates complete; worksheet tracking next)
 
 Process worksheet tracking remains pending. Source review found positional
 managed-field access that can target inserted user columns before Retrieve
@@ -40,13 +40,20 @@ the selected-pair result. The first full reusable regression suffered a native
 Excel crash during batch-scale setup and is excluded. The unchanged rerun retains
 162 prior observations but fails before nine restart checks; verified disposable
 fixture recovery requires assisted cleanup. No matching delayed Application crash
-event was found; the second failure's cause remains unproven. Full reusable remains unresolved;
-fresh-process tracing/native observation now passes exact171 observations, four
+event was found; the second failure's cause remains unproven. The earlier
+fresh-process diagnostic with tracing/native observation passes exact171 observations, four
 loaded-project compiles, both Retrieve returns, native exit0 and normal cleanup.
 Calibration10/10, preservation and delayed audits pass. This is an observed run,
 not cold acceptance or a repair. The final-state disposable fixture is retained;
-next rebuild its two drafts through the public workbench handler and compare
-restart without VBE tracing. No desktop error5, promotion or crash-repair claim.
+its random credential is not retained after the creator exits. Two rejected
+sign-in setup attempts are excluded, with no product RED. A fresh creator now
+passes its credential to replay only in memory: full uninstrumented171 and
+targeted public-workbench/fresh-restart37 pass. All four sessions close normally;
+settings/package/helper pins and delayed Excel audits pass. This completes the
+picker correction's scoped gates without debugger/VBE tracing. No desktop error5,
+promotion, crash-repair or human-acceptance claim. Next specify/test the worksheet
+observations under D18, distinguishing local saves, Designs submissions and
+partial results before registration.
 
 Close's scoped automated gate set is complete on the isolated catalog21 candidate:
 focused312, independent paths90, shared regulation paths102, smoke86, chain32/

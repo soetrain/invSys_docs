@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.84. Last reviewed: 2026-09-30 UTC, observed restart/cold gate unresolved.
+Version 1.85. Last reviewed: 2026-09-30 UTC, picker scoped gates complete.
 
 Next grouping: the three Process worksheet buttons. Send saves a newly created
 local table; Add Acceptable Item saves additional local columns; Retrieve validates
@@ -34,12 +34,18 @@ audits and reviewed captures. Only one compiled component changes. First full
 reusable attempt is excluded after a native Excel
 crash at batch-scale setup; unchanged rerun retains162 prior observations but
 fails before nine restart checks and requires verified fixture-recovery cleanup.
-Full cold reusable remains unresolved. The fresh-process diagnostic passes exact171
+The earlier fresh-process diagnostic passes exact171
 observations, four compiles, both Retrieve returns and native exit0/no relevant
 fault, with calibration10/10 and normal cleanup/preservation/delayed audit. This
-does not establish a repair. The final-state fixture is retained for a smaller
-restart comparison without VBE tracing, after public-handler recreation of its two
-draft tables. The smaller diagnosis will not replace full171 acceptance.
+does not establish a repair. Its random fixture credential cannot be reused after
+its creator exits; two rejected sign-in setup attempts are excluded. A fresh
+creator now passes the same credential to replay only in memory. Full
+uninstrumented171 and a separate public-workbench/fresh-restart37 pass, all four
+sessions close normally, and preservation/delayed audits pass. The smaller replay
+supplements full171. This completes the isolated picker prerequisite's gates,
+without debugger/VBE tracing or a claim to explain the intermittent failures.
+Next specify/test the three worksheet observations under D18 with exact owners,
+submission references and partial-result handling before registration.
 No desktop error5, tracking registration, promotion or release acceptance.
 D4/D14/D15 require exact
 selected-pair matching, other-pair/custom preservation and captured-book binding.

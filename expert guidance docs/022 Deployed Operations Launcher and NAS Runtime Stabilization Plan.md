@@ -2,7 +2,7 @@
 
 **Status:** Current corrective implementation plan
 
-Active Slice4be prerequisite: finish Core Process picker acceptance before the
+Active Slice4be: Core Process picker scoped gates now complete before the
 three worksheet actions are registered. Under unchanged D4/D14/D15 ownership,
 allocation and save rules, the normalized-header correction goes from packaged
 RED110 PASS/5 selected-SKU failures to GREEN115/115, retaining all42 shared checks.
@@ -11,7 +11,7 @@ cold start, unchanged static ratchets, smoke86, three-size/five-page layout,
 chain32/live48/Create15, worksheet107 and Close/query312 pass with exact prior
 checks, preservation, normal cleanup, delayed audits and reviewed captures.
 
-Full reusable remains unresolved after two excluded attempts: a native
+Full reusable initially failed in two excluded attempts: a native
 ntdll.dll/c0000028 failure during batch-scale setup, then an unchanged rerun that
 retains the first162 prior observations but fails before the nine restart
 observations. The latter requires verified fixture-recovery cleanup and has no
@@ -21,11 +21,18 @@ passes exact171 observations with four instrumented compiles, fixed-label trace,
 both Retrieve returns and native exit0/no relevant fault. Calibration10/10 and
 preservation/normal cleanup/delayed audits pass. This observed run is not cold
 acceptance or a repair. Its existing disposable runtime is retained in final,
-possibly mutated state, with credential-free replay metadata. Next recreate two
-draft tables through the actual public workbench handler and test the nine restart
-observations without VBE tracing, comparing native-only and unobserved controls
-as needed. This smaller diagnosis does not replace full171 acceptance. Do not
-issue another undifferentiated full rerun. Preserve frozen baselines.
+possibly mutated state, with credential-free replay metadata. Replaying it after
+its creator exits cannot reuse the random credential, which is deliberately not
+persisted. Two sign-in setup failures are excluded; no product RED is claimed.
+A fresh creator now retains the same credential only in memory and passes it to
+the targeted replay. The full uninstrumented workflow passes exact171 observations;
+the subsequent public-workbench/fresh-restart replay passes37/37. All four sessions
+close normally, pins/settings hold, and delayed Excel audits report zero failures.
+This completes the isolated picker prerequisite's gates; it does not repair or
+explain the intermittent crash. No debugger or VBE tracing is used in this run.
+Next specify and protect the three worksheet observations under D18, preserving
+their local versus Designs owners, exact submission references and partial results.
+Preserve frozen baselines; do not repeat unchanged diagnostic runs.
 Exact evidence: `tests/integration/plan022_slice4be_process_worksheet_picker_results.md`.
 No candidate promotion, worksheet tracking registration or full acceptance.
 
