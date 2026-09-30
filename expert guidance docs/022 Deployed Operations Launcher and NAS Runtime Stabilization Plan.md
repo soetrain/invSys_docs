@@ -15,6 +15,15 @@ not product RED. Planned runtime scope is Core query dispatch/resolution;
 Domain query semantics, explicit write/bootstrap paths and the Close contract
 remain intact. Any broader discrepancy requires separate evidence and scope.
 
+Supplying-call trace is now retained: the public Production launcher enters
+Picker.Query -> Resolver -> OpenOrCreate -> schema ensure, unprotects a sheet,
+changes the source from Saved=True to False, then saves it back to True. The
+frozen candidate remains94 PASS/138 FAIL across232 checks; no runtime repair has
+been made. The trace-destination mistake in an earlier repeat is recorded in the
+evidence file and excluded from causal proof. Run the new supplemental seeded
+query gate before changing Core dispatch; retain the initial-launch byte failure
+as the packaged behavioral RED.
+
 Production Close test-first checkpoint,2026-09-30 UTC: the frozen Detail candidate
 produces93 PASS/139 FAIL, repeated with trace-only instrumentation. All232 check
 identities and42 prior GREEN checks are retained; five compiles, preservation,
@@ -26,9 +35,9 @@ workbook-close disposal failure (one owner entry, zero remaining forms), yieldin
 canonical Inventory workbook write on the first public Production launch: six
 container parts change, including table and worksheet parts, then its hash stays
 stable through Close/reopen. D3 requires read-only UI queries; D9/D10 retain the
-read/write split. Trace the query/resolver/schema/save boundary before implementing
-Close observations. No write-on-read exception or reset preservation pin is
-authorized. Exact evidence and the unresolved supplying-call question are in
+read/write split. The retained query/resolver/schema/save trace above supplies
+the cause that must be corrected before Close observations. No write-on-read
+exception or reset preservation pin is authorized. Exact evidence is in
 `tests/integration/plan022_slice4be_production_close_results.md` in the code repository.
 
 Next discovered control within Slice4be.1: Architecture v4.11 now specifies

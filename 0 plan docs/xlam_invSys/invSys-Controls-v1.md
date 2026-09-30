@@ -1,6 +1,13 @@
 # invSys Form Controls v1
 
-**Version:** 1.327 (D3 Inventory query clarification; runtime correction pending)
+**Version:** 1.328 (Inventory launch query write traced; runtime correction pending)
+
+Retained public-launch trace now proves Picker.Query -> write/create resolver ->
+schema unprotect -> dirty workbook -> save. The unchanged candidate still has
+94 PASS/138 FAIL across232 checks. Supplemental Admin-seeded query cases now
+protect all four Core query bridges before correction; Close observations remain
+unimplemented. The trace and its earlier harness/reporting failures are retained
+in the code repository's Production Close results record. Runtime is unchanged.
 
 Production launcher/Inventory picker acceptance now explicitly applies D3's
 read-only resolver and workbook-lifetime clarification: existing exact sources,
