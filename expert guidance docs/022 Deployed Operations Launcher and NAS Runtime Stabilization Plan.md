@@ -39,7 +39,14 @@ Boolean observations; independent replay retains37 checks. Both are uninstrument
 with normal cleanup, preservation and clean delayed audits. The first full attempt
 reproduces the earlier native batch-scale failure and stays excluded; bounded
 observed/unobserved callbacks precede the successful full validation. No crash
-repair is claimed. Next complete remaining shared observation regressions.
+repair is claimed. Close/query now retains312 ordered checks, five compiles,
+normal cleanup, preservation, clean delayed audit and four reviewed captures.
+Its first307/5 run exposed stale catalog21 record expectations and an invalid
+historical-policy fixture; both test-only corrections follow approved catalog22.
+Current-record expectations in twelve other fixtures and the109-control Settings
+editor are aligned before their runs; historical assertions remain intact.
+Static evidence is regenerated with unchanged runtime metrics and347 valid parses.
+Next complete remaining shared observation regressions.
 Preserve the595 checks and their documented
 closure mapping. No promotion, desktop-error5, crash-repair or human-acceptance
 claim. Exact evidence and pending gates:

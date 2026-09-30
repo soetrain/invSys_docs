@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.94. Last reviewed: 2026-09-30 UTC, worksheet paths and reusable regression GREEN.
+Version 1.95. Last reviewed: 2026-09-30 UTC, worksheet Close/query regression GREEN.
 
 Catalog22 now defines109 global controls and observes48/68 constructed Production
 buttons. The three Process worksheet handlers are implemented and pass595/595
@@ -33,8 +33,14 @@ reusable retains both aggregates and171 prior Boolean observations; independent
 replay retains37 checks. Both are uninstrumented with normal cleanup, preservation
 and clean delayed audits. The first full attempt remains excluded for the prior
 native batch-scale failure; bounded observed/unobserved callbacks precede the
-successful full validation. No crash repair is claimed. Next complete remaining
-shared-observation regressions.
+successful full validation. No crash repair is claimed. Close/query retains312
+ordered checks, five compiles, preservation, normal cleanup, clean delayed audit
+and four reviewed captures after correcting stale catalog21 test expectations
+and the historical-policy fixture. The initial307/5 result remains excluded.
+Twelve other current-version fixtures are aligned with approved catalog22/109
+controls; their packaged runs remain required. Historical assertions stay intact.
+Regenerated static evidence preserves runtime metrics and347 valid parses.
+Next complete remaining shared-observation regressions.
 No promotion or human acceptance.
 Exact evidence: `tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.
 The prerequisite history below retains its own frozen-candidate counts.

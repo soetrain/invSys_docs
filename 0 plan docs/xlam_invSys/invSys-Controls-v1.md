@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.354 (Worksheet paths and reusable regression GREEN; acceptance pending)
+**Version:** 1.355 (Worksheet Close/query regression GREEN; acceptance pending)
 
 Architecture v4.11 D18's catalog22 controls PRODUCTION_PROCESS_WORKSHEET_SEND,
 PRODUCTION_PROCESS_WORKSHEET_ADD_ITEM and PRODUCTION_PROCESS_WORKSHEET_RETRIEVE
@@ -41,8 +41,14 @@ aggregates and171 prior Boolean observations; independent replay retains37 check
 Both are uninstrumented with normal cleanup, preservation and clean delayed audits.
 An initial full attempt hit the previously seen native Excel batch-scale failure
 and remains excluded. Bounded observed/unobserved callbacks preceded the successful
-full validation; no crash repair is claimed. Remaining shared observation regressions
-are pending. No deployment
+full validation; no crash repair is claimed. Close/query now retains312 ordered
+checks, five compiles, preservation, normal cleanup, clean delayed audit and four
+reviewed captures. The first307/5 result remains excluded for stale catalog21
+expectations and an invalid historical-policy fixture. Test-only alignment uses
+approved catalog22 and109 current controls while preserving historical assertions.
+Twelve other aligned fixtures still require their own packaged regression results.
+Regenerated static evidence retains all metrics and347 valid PowerShell parses.
+Remaining shared observation regressions are pending. No deployment
 promotion or human acceptance is claimed. Code evidence:
 `tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.
 
