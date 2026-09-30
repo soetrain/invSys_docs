@@ -2,7 +2,7 @@
 
 **Status:** Current corrective implementation plan
 
-**Active bounded4be group: Recipe ordering observations.** Architecture v4.11 D18
+**Bounded4be checkpoint: Recipe ordering automated gates GREEN.** Architecture v4.11 D18
 now specifies catalog17 for Move Up, Move Down and Auto Order in Recipe Designer,
 under the approved discovered-control/semantic-inheritance rules. Unpromoted
 `validation-production-recipe-order-final` implements catalog17 with32/68 controls,
@@ -32,8 +32,13 @@ closure and preservation, with zero Excel Application failures. Instruction path
 retain105/105 with the same gates and six reviewed captures. Combined UOM264/264,
 public Close/reopen61/61 and UOM paths84/84 retain exact prior checks, five compiles
 per gate, normal closure, preservation and zero Excel Application failures;
-two/three/six principal captures are reviewed respectively. Draft diagnostics,
-lifecycle, native cancellation and broader acceptance remain pending. Exact evidence: code
+two/three/six principal captures are reviewed respectively. Draft diagnostics390/390,
+lifecycle615/615 and native cancellation94/94 retain exact prior checks, five
+compiles per gate, unassisted closure, preservation and zero Excel Application
+failures; four native-dialog captures are reviewed. Bounded automated gates are
+GREEN; comprehensive coverage, guide transfer and human/NAS acceptance remain open.
+These passes neither explain earlier native crashes nor prove a desktop-lock fix.
+Retain the frozen candidate as the next group's GREEN baseline. Exact evidence: code
 `tests/integration/plan022_slice4be_production_recipe_order_results.md`.
 Preserve the existing bounded ordering algorithm, node identities, non-order row
 fields, connection values, renumbering and refresh side effects, including local changes before a
