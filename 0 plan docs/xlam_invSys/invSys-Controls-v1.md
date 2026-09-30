@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.308 (output-regulation focused/paths/full reusable GREEN; remaining gates pending)
+**Version:** 1.309 (output-regulation focused/paths/full chain GREEN; remaining gates pending)
 
 Catalog20 output-regulation focused GREEN,2026-09-30 UTC: the isolated
 `validation-production-regulation-final` candidate registers105 global controls
@@ -40,9 +40,11 @@ repairing the earlier intermittent native crash. Packaged smoke retains86/86
 prior checks and normal Initial/Final exits. Production layout retains exact
 prior geometry at three sizes/five pages, with three directly reviewed captures.
 Settings/packages/tracked reports are preserved and all three delayed Application
-audits find zero Excel failures. Other focused regressions, live-role/full-chain,
-run-only and human/NAS acceptance remain pending. Exact roots and UTC intervals
-are in the regulation result record.
+audits find zero Excel failures. The ordinary full Release1 chain now also passes
+all32 chain/48 live-role/15 Create Warehouse checks with exact prior identities,
+normal closure, preservation and zero delayed Application failures. Remaining
+focused regressions, run-only and human/NAS acceptance stay open. Exact roots and
+UTC intervals are in the regulation result record.
 
 The isolated `validation-production-design-reads-final` catalog19 candidate passes
 621/621 focused checks and114/114 paired-path checks. The focused gate retains the
