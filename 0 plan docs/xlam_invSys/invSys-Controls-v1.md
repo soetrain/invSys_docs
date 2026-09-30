@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.300 (designer read focused/paths GREEN; full-chain native failure open)
+**Version:** 1.301 (designer read focused/paths GREEN; full-chain native failure open)
 
 The isolated `validation-production-design-reads-final` catalog19 candidate passes
 621/621 focused checks and114/114 paired-path checks. The focused gate retains the
@@ -46,6 +46,13 @@ redacted diagnostic does not independently compare the171 Boolean observations
 or explain the ordinary failure. Refreshed static metrics/caps, three schemas and
 325 script parses pass. See the code repository's batch-boundary result record
 for exact evidence and limitations.
+
+Recipe structure regression retains786/786, released data55/55 and structure
+paths109/109, all with exact prior ordered identities, five compiles, preservation,
+unassisted closure and zero Application failures. Six structure-path captures
+are directly reviewed: five authored steps match a separate observed run, with
+zero additional actions and an explicitly local conclusion. This is agent review,
+not human acceptance. Exact roots are in the designer read result record.
 Remaining regression gates are pending; focused621/paired114 GREEN does not
 establish complete acceptance.
 
