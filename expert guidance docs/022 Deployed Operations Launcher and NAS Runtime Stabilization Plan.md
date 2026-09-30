@@ -16,10 +16,16 @@ ntdll.dll/c0000028 failure during batch-scale setup, then an unchanged rerun tha
 retains the first162 prior observations but fails before the nine restart
 observations. The latter requires verified fixture-recovery cleanup and has no
 matching delayed Excel Application failure event. Neither is GREEN or a crash
-repair. Desktop access remains healthy, zero error5. Next diagnose restart with
-fixed phase labels around recipe loading and the two retained-table Retrieve
-operations, native exit evidence and preserved disposable fixtures for targeted
-replay; do not issue another undifferentiated full rerun. Preserve frozen baselines.
+repair. Desktop access remains healthy, zero error5. Fresh-process diagnostic now
+passes exact171 observations with four instrumented compiles, fixed-label trace,
+both Retrieve returns and native exit0/no relevant fault. Calibration10/10 and
+preservation/normal cleanup/delayed audits pass. This observed run is not cold
+acceptance or a repair. Its existing disposable runtime is retained in final,
+possibly mutated state, with credential-free replay metadata. Next recreate two
+draft tables through the actual public workbench handler and test the nine restart
+observations without VBE tracing, comparing native-only and unobserved controls
+as needed. This smaller diagnosis does not replace full171 acceptance. Do not
+issue another undifferentiated full rerun. Preserve frozen baselines.
 Exact evidence: `tests/integration/plan022_slice4be_process_worksheet_picker_results.md`.
 No candidate promotion, worksheet tracking registration or full acceptance.
 

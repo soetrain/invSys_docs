@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.343 (Core picker independent gates; reusable restart unresolved)
+**Version:** 1.344 (Observed restart passes; cold restart remains unresolved)
 
 Process worksheet tracking remains pending. Source review found positional
 managed-field access that can target inserted user columns before Retrieve
@@ -41,8 +41,12 @@ Excel crash during batch-scale setup and is excluded. The unchanged rerun retain
 162 prior observations but fails before nine restart checks; verified disposable
 fixture recovery requires assisted cleanup. No matching delayed Application crash
 event was found; the second failure's cause remains unproven. Full reusable remains unresolved;
-next add bounded restart-phase/native-exit diagnostics and preserve fixture
-context for targeted replay. No desktop error5, promotion or crash-repair claim.
+fresh-process tracing/native observation now passes exact171 observations, four
+loaded-project compiles, both Retrieve returns, native exit0 and normal cleanup.
+Calibration10/10, preservation and delayed audits pass. This is an observed run,
+not cold acceptance or a repair. The final-state disposable fixture is retained;
+next rebuild its two drafts through the public workbench handler and compare
+restart without VBE tracing. No desktop error5, promotion or crash-repair claim.
 
 Close's scoped automated gate set is complete on the isolated catalog21 candidate:
 focused312, independent paths90, shared regulation paths102, smoke86, chain32/
