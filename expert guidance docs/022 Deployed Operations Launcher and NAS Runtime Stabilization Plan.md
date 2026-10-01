@@ -70,6 +70,17 @@ excluded. Runtime/static metrics remain unchanged;363 scripts parse. Preserve146
 alongside the earlier baselines. Worksheet branches, multi-key allocation,
 remaining source-failure semantics and paired paths are still required.
 
+The multi-key allocation companion yields82 PASS/56 expected FAIL/138 checks.
+All eight List/Tree Apply cases pass existing quantity precedence, percentage
+expansion, zero clearing and over-stock refusal using two owner-created exact
+keys. Tracking facts alone supply RED. Forty-two shared GREEN checks, five
+compiles, frozen pins/preservation, normal closure and delayed zero Excel audit
+pass. Two seed-quantity fixture attempts are excluded; the corrected fixture
+derives its sizes from the owning Inventory read. Runtime/static metrics remain
+unchanged;365 repository scripts parse. Preserve138 with the earlier baselines;
+continue worksheet branches, remaining read failures and paired paths before
+claiming the nine-control GREEN gate or broader Release1 acceptance.
+
 Active Slice4be continuation,2026-10-01 UTC: Ingredients Assignment implements
 Architecture v4.11 D18's approved discovered-control refinement in unpromoted
 `deploy/validation-production-assignment-01`. Catalog23 preserves1-22 and adds

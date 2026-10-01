@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.390 (Run real-read sign-out RED; implementation pending)
+**Version:** 1.391 (Run multi-key allocation RED; implementation pending)
 
 Architecture D18's Run preparation/allocation refinement specifies catalog24's
 nine existing controls, with no runtime registration or layout change yet:
@@ -73,6 +73,16 @@ checks, five compiles, preservation, unassisted closure and delayed zero Excel
 audit pass. One wrong-package probe setup is excluded. Runtime/static metrics
 remain unchanged;363 scripts parse. Worksheet/multi-key/remaining read-failure
 and paired-path gates remain; no runtime registration or user acceptance changes.
+
+Multi-key stock allocation RED adds82 PASS/56 expected FAIL/138 checks. All eight
+List/Tree Apply cases preserve exact keys and quantities: quantity precedence,
+percentage expansion, clearing both allocations and over-stock refusal. Only
+tracking facts are missing. Forty-two shared GREEN checks, five compiles, pins,
+preservation, unassisted closure and delayed zero Excel audit pass. Two fixture
+quantity-assumption attempts are excluded. Runtime/static metrics remain unchanged;
+365 repository scripts parse. Worksheet branches, remaining read-failure and
+paired-path gates stay open; catalog24 remains unimplemented. Exact evidence is
+in the Run-local integration record above.
 
 Architecture v4.11 D18's Ingredients Assignment refinement is implemented in
 unpromoted `validation-production-assignment-01`: catalog23 adds seven buttons
