@@ -101,6 +101,17 @@ facts. Normal cleanup, preservation and delayed audit pass. Four native-dialog
 captures are readable; the separate Settings capture has a partly obscured
 lower-right edge. This adds no full-layout or human-acceptance claim.
 
+Output regulation696 and separate Action Paths102 retain every prior ordered
+check and five compiles each. Actual Apply/Clear behavior, owner facts, guards and
+optional tracking pass. Independent four-command guide/observed recordings prove
+publication, Event Detail, authored expectations and all three views without
+equating local completion to Domain application. Both gates close without
+intervention, preserve settings/packages and pass delayed Excel audits. Three
+regulation and seven path captures are reviewed; the scrolled conclusion shows
+four matches and zero additional actions. Long Event Detail text exceeds the
+viewport. These existing-contract regressions add no runtime change, all-size
+layout or human acceptance. Exact paths and limits are in Assignment evidence.
+
 Full reusable remains open: the original edit/export callback fails with
 RPC800706BE and native ntdll/c00000ff; an empty recovery instance requires explicit
 Quit, excluding that attempt from acceptance. A narrower edit/export diagnostic

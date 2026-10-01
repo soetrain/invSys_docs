@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.114. Last reviewed:2026-10-01 UTC, Assignment native cancellation regression;
+Version 1.115. Last reviewed:2026-10-01 UTC, Assignment regulation and path regressions;
 reusable acceptance unresolved.
 
 Catalog23 now defines118 global controls and observes55/68 constructed Production
@@ -93,6 +93,17 @@ preserves captured context, drafts/source authority and unknown columns with exa
 cancelled facts. Unassisted closure, preservation and delayed audit pass. Four
 native-dialog captures are readable; the separate Settings viewport has an
 obscured lower-right edge/Close area. No full-layout or human acceptance is claimed.
+
+Output regulation696 and separate Action Paths102 retain exact prior ordered
+checks and five compiles each. Apply/Clear owner behavior, guards and optional
+tracking pass, with independent four-command guide/observed recordings,
+publication, Event Detail, authored expectations and all three views. Local
+completion remains distinct from Domain application. Both gates close normally,
+preserve settings/packages and pass delayed Excel audits. Three regulation and
+seven path captures are reviewed; the scrolled conclusion shows all four matches
+and zero additional actions. Long Event Detail text has viewport limits. No new
+control registration, runtime change, all-size layout or human acceptance is
+claimed. Exact records remain in the Assignment evidence file.
 
 Full reusable171/replay37 remain open. The original edit/export callback fails
 with RPC800706BE/ntdll c00000ff; explicitly quitting an empty recovery instance
