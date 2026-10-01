@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.388 (Run Core/policy RED; implementation pending)
+**Version:** 1.389 (Run exception/nesting RED; implementation pending)
 
 Architecture D18's Run preparation/allocation refinement specifies catalog24's
 nine existing controls, with no runtime registration or layout change yet:
@@ -56,6 +56,14 @@ zero Excel audit. Runtime/static metrics stay unchanged;361 scripts parse.
 Owner faults, yields/nesting, worksheet branches, multi-key allocation and paired
 paths remain open. Catalog24 remains specified only; evidence is in the same
 Run-local integration record.
+
+The separate owner-exception/nesting gate adds127 PASS/118 expected FAIL/245
+checks. All18 actual boundaries, existing exception propagation/local effects and
+guard measurements before fixture reset pass. Missing observation facts, repeated
+owner entry and nested Load's disturbed result supply RED. Forty-two shared GREEN
+checks, five compiles, preservation, normal closure and delayed zero Excel audit
+pass. Runtime/static metrics remain unchanged;362 scripts parse. Real-read
+failures/yields, worksheet branches, multi-key expansion and paired paths remain.
 
 Architecture v4.11 D18's Ingredients Assignment refinement is implemented in
 unpromoted `validation-production-assignment-01`: catalog23 adds seven buttons

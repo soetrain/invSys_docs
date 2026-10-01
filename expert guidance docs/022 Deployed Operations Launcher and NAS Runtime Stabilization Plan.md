@@ -51,6 +51,15 @@ normal closure and delayed zero Excel audit. Runtime/static metrics are unchange
 yield/nested entry, worksheet branches, exact multi-key allocation and paired paths
 remain required; catalog24 and full Release1 acceptance are still incomplete.
 
+Owner-exception/nested-click RED now adds127 PASS/118 expected FAIL/245 checks:
+all18 boundaries, existing exception/local-effect semantics and guards measured
+before adapter reset pass. Missing observations, nine repeated owner entries and
+the nested Load result expose the required guards. Forty-two exact prior shared
+GREEN checks, five compiles, pins/preservation, unassisted closure and delayed zero
+Excel audit pass. Runtime remains unchanged;362 scripts parse. Preserve this
+baseline too. Continue real-read failures/yields, worksheet branches, multi-key
+allocation and paired paths; no runtime implementation or acceptance is claimed.
+
 Active Slice4be continuation,2026-10-01 UTC: Ingredients Assignment implements
 Architecture v4.11 D18's approved discovered-control refinement in unpromoted
 `deploy/validation-production-assignment-01`. Catalog23 preserves1-22 and adds

@@ -1,10 +1,10 @@
 # Production form tracking coverage audit
 
-Version 1.128. Last reviewed:2026-10-01 UTC, Run Core/policy RED verified;
+Version 1.129. Last reviewed:2026-10-01 UTC, Run exception/nesting RED verified;
 runtime registration and reusable acceptance unresolved.
 
 D18 now normatively refines the nine controls in owner audit8 as catalog24,
-PRODUCTION_RUN_LOCAL. Controls1.388 lists their exact mappings. No new runtime
+PRODUCTION_RUN_LOCAL. Controls1.389 lists their exact mappings. No new runtime
 registration or acceptance is claimed. Actual-handler RED begins with Tree
 Expand/Collapse; seven remaining local/read/allocation controls and the full
 context/policy/failure matrix remain required before this group can pass.
@@ -37,6 +37,14 @@ five compiles, canonical pins, preservation, normal closure and delayed zero
 Excel audit. Runtime/static metrics remain unchanged;361 scripts parse. Owner
 faults, yields/nesting, worksheet branches, multi-key allocation and paired paths
 remain open. Catalog24 still has no runtime registration/acceptance increase.
+
+Owner-exception/nesting RED:127 PASS/118 expected FAIL/245 checks. All18 actual
+boundaries, original exception/local-effect semantics and guard measurements
+before adapter reset pass. Missing observations, repeated owner entry and nested
+Load's disturbed result supply RED. Forty-two exact shared GREEN checks, five
+compiles, preservation, normal closure and delayed zero Excel audit pass. Runtime
+metrics stay unchanged;362 parses pass. Real-read failures/yields, worksheet,
+multi-key expansion and paired-path work remains before this group can pass.
 
 Catalog23 now defines118 global controls and observes55/68 constructed Production
 buttons. Seven Ingredients Assignment buttons and two deliberate list Click
