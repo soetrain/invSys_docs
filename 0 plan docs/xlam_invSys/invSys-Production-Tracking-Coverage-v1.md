@@ -1,7 +1,31 @@
 # Production form tracking coverage audit
 
-Version 1.152. Last reviewed:2026-10-01 UTC, routed Check In continuation RED;
+Version 1.153. Last reviewed:2026-10-01 UTC, routed Check In continuation GREEN;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Routed01 passes87/87 after RED85/2, retaining all ordered checks/PASS and shared42.
+All four real upstream-read interruptions stop later reads and preserve boundary
+state/refusal/guards/activity records. The typed helper enforces existing D18
+without changing selected-Process validation, quantity-read order or diagnostics.
+Five compiles, preservation, normal cleanup and delayed zero native audit pass.
+Build changes two components/preserves281; static adds one helper/eight net lines,
+shrinks the oversized owner and retains call/duplicate/cap metrics. Original278
+and native-entry59 retain exact ordered passes, shared42/five compiles, preservation,
+normal closure and delayed zero audits. Both native forms dismiss; no hidden handler
+is invoked. Smoke86 and six-page layout retain prior checks/geometry, with both
+native smoke exits unassisted, six empty-surface captures reviewed, preservation
+and delayed zero native audits. The first chain attempt is excluded after a native Excel
+crash during projection rebuilding; recovery required assisted closure without
+saving, with settings/reports/packages restored or preserved. This is not desktop
+error5 or behavioral RED. A bounded untraced projection control retains35/35;
+the subsequent unchanged-candidate chain retains32/32, live48/48 and Create15/15
+with normal closure, preservation and delayed zero audit. The native cause remains
+unresolved. Run-local retains
+exact503 identities,445 PASS/58 known Scale failures,33 owners/shared42 and seven
+real native post-close handler invocations. Five compiles, preservation, normal
+cleanup and delayed zero audit pass. Worksheet retains257/257 ordered PASS with
+the same compile/preservation/cleanup/audit gates. No new observation
+or control is registered; positive capture still clips long values.
 
 The separate routed actual-handler gate on frozen guards02 returns85 PASS/2 FAIL
 of87, retaining shared42 and five compiles. A real two-source released Recipe
@@ -11,7 +35,7 @@ interruptions after its second read pass. All boundary-state/refusal/guard and
 activity-preservation checks pass. Saved authority/operator/package bytes and
 settings are preserved, normal closure completes and delayed native audit is
 zero. The unguarded routed requirement loop requires existing D18 continuation
-enforcement; runtime correction and original278 regression are pending. No
+enforcement; routed01 and original278 GREEN are recorded above. No
 observation/catalog/button count changes. Reviewed positive capture retains long
 value clipping. Native closed-book entry separately passes59/59 with shared42,
 five compiles, preservation, normal cleanup and delayed zero native audit. Both

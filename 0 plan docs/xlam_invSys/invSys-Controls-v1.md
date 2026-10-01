@@ -1,6 +1,36 @@
 # invSys Form Controls v1
 
-**Version:** 1.412 (routed Check In continuation RED; acceptance pending)
+**Version:** 1.413 (routed Check In continuation GREEN; acceptance pending)
+
+Unpromoted routed01 turns the protecting87-check RED85/2 into87/87 GREEN with every
+ordered check/prior PASS, shared42 and all four real interruptions retained. A typed
+helper checks captured context/current permission immediately after each upstream
+read, before another read or diagnostics. Original quantity-read order, tolerance,
+selected-Process scope and messages are preserved. Five compiles, preservation,
+normal cleanup and delayed zero native audit pass. Build changes only two modules
+and preserves281/283 components; static caps/call/duplicate metrics pass. A fresh
+reviewed positive capture retains long-value clipping. Original278 and native-entry59
+retain every ordered PASS, shared42/five compiles, preservation, normal cleanup and
+delayed zero audits. Three fresh principal captures were reviewed; two native
+receipts again show natural dismissal, with no hidden handler invoked.
+Smoke retains all86 ordered checks and
+both native unassisted exits. Layout retains18 requested size/page pairs, six
+activated/maximized pages and six individually reviewed empty-surface captures;
+minimum/default clamp to the same actual size. Both gates preserve settings and
+packages and pass delayed zero native audits. The first chain attempt is excluded after an
+Excel native crash during projection rebuilding; assisted recovery closure restored
+settings/reports and preserved saved fixture/package bytes. It is not desktop
+error5 or behavioral RED. A bounded untraced projection diagnostic then passes35/35;
+the subsequent unchanged-candidate chain retains32/32, live roles48/48 and Create
+Warehouse15/15 with normal cleanup, preservation and delayed zero native audit.
+The earlier native crash remains unexplained; no native runtime repair is claimed.
+Run-local retains exact503 identities,445 PASS/58 known Scale failures,33 owner
+cases/shared42 and seven real native post-close handler invocations. Five compiles,
+preservation, unassisted cleanup and delayed zero audit pass. Worksheet retains
+257/257 ordered PASS with the same preservation/compile/cleanup/audit gates.
+Architecture D18, catalog24 and63/68 button wiring are unchanged; Check In
+observations, mid-read workbook closure and broader reusable/human acceptance
+remain open.
 
 On frozen guards02, the new actual-handler routed gate is85 PASS/2 FAIL/87,
 retaining shared42 and five compiles. Two real upstream outputs are produced
@@ -9,7 +39,7 @@ same-session permission loss after the first upstream read still permits a secon
 read attempt; interruption after the second read passes. Boundary state, refusal,
 guards, activity records, authority/operator/package bytes and settings are
 preserved, with normal closure and delayed zero native audit. Architecture D18
-already requires an immediate continuation check. Fixing this loop is pending;
+already requires an immediate continuation check. Routed01 fixes this loop above;
 the existing278 GREEN and catalog24/63-of68 button coverage remain distinct.
 One reviewed positive routed capture shows both exact keys, with long values
 clipped; it is not refusal-specific or human acceptance. Native closed-workbook

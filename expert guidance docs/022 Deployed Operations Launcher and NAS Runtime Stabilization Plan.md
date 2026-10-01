@@ -2,6 +2,39 @@
 
 **Status:** Current corrective implementation plan
 
+Routed Check In integration,2026-10-01 UTC, code `2d49c97b`: unpromoted routed01 passes87/87 after
+RED85/2, preserving exact ordered checks/prior PASS, shared42 and four real
+read-return interruptions. The existing D18 continuation is passed through the
+routed requirements loop to a typed helper, checked immediately after each
+upstream read, with the original subsequent scaled-quantity evaluation and
+diagnostics preserved. Five compiles, preservation, normal cleanup and delayed
+zero native audit pass. Build changes two modules/preserves281 components;
+static290/6176/135514 adds one procedure/eight net lines while shrinking the
+oversized owner, with9 literal/45 unresolved calls,190 duplicate candidates and
+28 non-growing caps; three schemas/372 parses pass. Controls1.413/coverage1.153
+are synchronized. Original278 and native-entry59 retain all ordered passes,
+shared42/five compiles, preservation, normal cleanup and delayed zero audits.
+Three fresh principal captures were reviewed; two native receipts show natural
+dismissal, with no hidden handler invoked. Smoke86 retains ordered checks and both
+native unassisted exits; layout retains18 size/page pairs, six activated/maximized
+pages and six reviewed empty-surface captures. Both preserve settings/packages
+and pass delayed zero native audits. Full-chain attempt857a7161 is excluded after
+RPC800706BE at inventory projection rebuilding, with linked Excel ntdll c0000028
+and Office recovery events. Assisted recovery closure preserved saved fixture
+bytes and allowed both controllers to restore settings/reports; packages remain
+unchanged. This is not desktop error5 or behavioral RED. The existing bounded
+untraced projection control then retains35/35 with normal closure and zero audit.
+The subsequent unchanged-candidate chain4119ca61 retains32/32, live48/48 and
+Create15/15, with unassisted closure, preservation and delayed zero native audit.
+The earlier native cause remains unexplained; no native runtime repair is claimed.
+Run-local retains exact503 identities,445 PASS/58 known Scale
+failures,33 owners/shared42 and seven actual native post-close handler invocations.
+Five compiles, preservation, unassisted cleanup and delayed zero audit pass;
+worksheet retains257/257 ordered PASS with the same preservation/compile/cleanup/
+audit gates. No new architecture, catalog entry, observation or full acceptance is
+claimed; fresh positive captures still clip long values. Native mid-read closure,
+Check In observations and separate full reusable/replay acceptance remain open.
+
 Routed Check In protecting RED,2026-10-01 UTC: unchanged guards02 returns85 PASS/
 2 FAIL/87 through the actual operator handler, retaining shared42 and five
 instrumented compiles. The fixture creates a released two-source Recipe and two
@@ -9,8 +42,8 @@ real canonical upstream outputs through the real completion handlers. After its
 first upstream read, sign-out or same-session permission loss allows a second
 read attempt. Second-read interruptions and boundary-state/refusal/guard/activity
 preservation pass. Normal closure, saved authority/operator/package/settings
-preservation and delayed zero native audit are verified. Enforce the existing
-D18 continuation rule inside `ValidateProcessRequirementsReady` next, then retain
+preservation and delayed zero native audit are verified. This protects the existing
+D18 continuation correction above; retain
 the original278 GREEN and complete native closed-book coverage. This is not an
 architecture change, new observation or acceptance. Controls1.412 and coverage
 1.152 are synchronized; the Check In integration record distinguishes verified
