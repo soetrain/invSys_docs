@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.386 (Run observation contract specified; implementation pending)
+**Version:** 1.387 (Run reusable-handler RED; implementation pending)
 
 Architecture D18's Run preparation/allocation refinement specifies catalog24's
 nine existing controls, with no runtime registration or layout change yet:
@@ -34,6 +34,17 @@ delayed zero Excel audit pass. Three fixture attempts are excluded. Runtime/stat
 metrics remain unchanged; three schemas and356 parses pass. This is the initial
 two-handler RED, not nine-control GREEN, visible evidence or human acceptance.
 See `tests/integration/plan022_slice4be_production_run_local_results.md` in code.
+
+The seven preparation/read/allocation controls now have packaged reusable RED:
+171 PASS/332 expected FAIL/503 unique checks. All33 owner cases and42 prior shared
+checks pass; metadata, observations and guards supply RED. Seven measured native
+closure boundaries include four surviving actual-handler invocations and three
+dismissed surfaces with no invocation. Five compiles, frozen pins, saved/local
+preservation, normal closure and delayed zero Excel audit pass. One initial
+native-lifetime fixture attempt is excluded; the corrected narrow diagnostic is
+separate from this full baseline. Static metrics are unchanged; three schemas and
+359 parses pass. Worksheet branches, complete policy/fault/yield coverage, paired
+paths and GREEN remain open. No runtime, layout or human-acceptance change.
 
 Architecture v4.11 D18's Ingredients Assignment refinement is implemented in
 unpromoted `validation-production-assignment-01`: catalog23 adds seven buttons

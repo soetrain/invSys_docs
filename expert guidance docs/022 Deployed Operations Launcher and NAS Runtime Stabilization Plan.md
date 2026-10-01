@@ -28,6 +28,18 @@ three schemas and356 script parses pass. This protects only Expand/Collapse and
 does not authorize claiming the nine-control or full-release gate complete.
 Evidence: `tests/integration/plan022_slice4be_production_run_local_results.md`.
 
+The subsequent seven-control reusable baseline yields171 PASS/332 expected FAIL
+in503 unique checks. All33 owner cases and42 exact prior shared checks pass.
+Missing metadata/observations/loading/context guards supply behavioral RED.
+Seven native closure receipts distinguish four surviving actual-handler calls
+from three dismissals without invocation. Five compiles, canonical pins,
+saved/local preservation, unassisted closure and delayed zero Excel audit pass.
+An initial retained-form fixture crash is excluded; its narrow diagnostic is
+not acceptance. Static runtime metrics remain unchanged, with three schemas and
+359 parses. Preserve both232 presentation and503 reusable baseline identities;
+worksheet, complete policy/fault/yield, paired-path and GREEN gates remain open.
+Catalog24 remains specified only; no runtime repair or package promotion.
+
 Active Slice4be continuation,2026-10-01 UTC: Ingredients Assignment implements
 Architecture v4.11 D18's approved discovered-control refinement in unpromoted
 `deploy/validation-production-assignment-01`. Catalog23 preserves1-22 and adds

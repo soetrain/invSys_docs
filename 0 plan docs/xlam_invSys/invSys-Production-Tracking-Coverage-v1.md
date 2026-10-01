@@ -1,10 +1,10 @@
 # Production form tracking coverage audit
 
-Version 1.126. Last reviewed:2026-10-01 UTC, Run observation contract specified;
+Version 1.127. Last reviewed:2026-10-01 UTC, Run reusable-handler RED verified;
 runtime registration and reusable acceptance unresolved.
 
 D18 now normatively refines the nine controls in owner audit8 as catalog24,
-PRODUCTION_RUN_LOCAL. Controls1.386 lists their exact mappings. No new runtime
+PRODUCTION_RUN_LOCAL. Controls1.387 lists their exact mappings. No new runtime
 registration or acceptance is claimed. Actual-handler RED begins with Tree
 Expand/Collapse; seven remaining local/read/allocation controls and the full
 context/policy/failure matrix remain required before this group can pass.
@@ -17,6 +17,17 @@ audit pass; three fixture attempts are excluded. Static/runtime metrics are
 unchanged, with three schemas and356 parses. No new runtime registration or
 visible/human acceptance is established. Exact evidence is
 `tests/integration/plan022_slice4be_production_run_local_results.md` in code.
+
+Seven-control reusable RED is171 PASS/332 expected FAIL/503 unique checks, with
+all33 owner cases and42 exact prior shared checks GREEN. Missing tracking and
+guards remain. Seven native closure boundaries distinguish four surviving
+handler calls from three dismissed forms; dismissal proves no handler invocation.
+Five compiles, canonical pins, preservation, normal closure and delayed zero
+Excel audit pass. One initial native-lifetime fixture crash is excluded; no native
+repair is claimed. Static metrics remain unchanged, with three schemas and359
+parses. Preserve503 and232 baseline identities through GREEN. Worksheet branches,
+complete policy/fault/yield and paired paths remain required. Catalog24 is still
+unimplemented; no increase in observed runtime controls or user acceptance.
 
 Catalog23 now defines118 global controls and observes55/68 constructed Production
 buttons. Seven Ingredients Assignment buttons and two deliberate list Click
