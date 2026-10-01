@@ -1,8 +1,22 @@
 # invSys Form Controls v1
 
-**Version:** 1.418 (Check In permission wording restored; broader acceptance pending)
+**Version:** 1.419 (Check In recording/publication/reader paths verified; broader acceptance pending)
 
-Current unpromoted activity03 corrects CHECK-IN-PERMISSION-WORDING-01 through the
+Unchanged activity03 passes reusable91/91 and worksheet101/101 Check In path checks
+after respective missing-pair RED49/1 and54/1 on routed01. Each prepares prerequisites
+before recording one actual Check In in separate guide-source and observed runs.
+Owner/identity/custom-column checks, Admin publication, exact REQUESTED/STAGED detail,
+ordinary-reader evaluation and all three paired views pass. CommandCompleted
+concludes; SourceEventsApplied remains incomplete. All RED identities/prior PASS
+checks, shared42/five compiles, preservation, normal cleanup and delayed zero audits
+pass. Twelve captures were reviewed; long Production values still clip. Static
+runtime metrics remain unchanged with three schemas/374 parses. This is bounded
+control evidence, not full workflow, multiline/layout, human or NAS acceptance.
+Wider policy/store-fault and remaining Run controls remain open.
+The shared Load Recipe path regression retains87/87 on activity03 with exact prior
+order, five compiles, preservation, unassisted closure and delayed zero audit.
+
+Earlier permission checkpoint: activity03 corrects CHECK-IN-PERMISSION-WORDING-01 through the
 actual Check In handler: RED226/3 becomes229/229 GREEN, retaining all193 earlier
 checks. Both staging modes preserve the original permission message and record
 REQUESTED/DENIED under the captured reader actor. Tracking unavailability retains

@@ -544,7 +544,18 @@ unassisted shutdown and delayed zero audits. The earlier212 native-closure/157
 routed gates remain activity02 evidence; this correction changes only initial
 DENIED presentation. Wider policy/fault and Action Path acceptance remain open.
 This restores the established contract; no wording exception is introduced.
-Recording/publication/independent reader and wider acceptance remain pending.
+Recording/publication/independent-reader checkpoint,2026-10-01: unchanged activity03
+passes reusable91/91 and worksheet101/101 after respective missing-pair RED49/1
+and54/1 on routed01. Each prepares prerequisites before recording and observes
+one actual Check In per separate guide-source/observed run. Actual Admin publication,
+exact Event Detail selection and readers without guide-author capability pass.
+How-To, Diagnostic and Compare preserve their pairing and evidence; only
+CommandCompleted concludes, while SourceEventsApplied remains unavailable.
+Twelve captures were reviewed, with long Production fields still clipping. This
+adds verification of the existing rule, not a new contract or whole-workflow proof.
+The shared Load Recipe path regression retains87/87 with preserved prior order,
+five compiles, preservation, unassisted closure and delayed zero Excel audit.
+Wider policy/store-fault, multiline/layout, human/NAS and Release1 acceptance remain open.
 
 - One deliberate handler entry produces a REQUESTED/result pair when collection
   is enabled and the existing context/policy gates allow both writes. Loading,

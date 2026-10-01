@@ -1,7 +1,20 @@
 # Production form tracking coverage audit
 
-Version 1.158. Last reviewed:2026-10-01 UTC, Check In permission wording restored;
+Version 1.159. Last reviewed:2026-10-01 UTC, Check In recording/publication/readers verified;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Test-only Check In paths on unchanged activity03 pass reusable91/91 and
+worksheet101/101 after routed01 missing-pair RED49/1 and54/1. Prerequisites are
+prepared before recording one actual handler entry in each separate source and
+observed run. Owner facts, exact identity/custom columns, Admin publication, exact
+Event Detail lines, an independent reader without author capability and all three
+paired views pass. CommandCompleted concludes; SourceEventsApplied cannot conclude.
+Shared42/five compiles, preservation, unassisted closure and delayed zero audits
+pass; twelve captures were reviewed. Static runtime metrics are unchanged.
+This does not prove a whole Production workflow; long-value/multiline/layout,
+policy/store-fault, remaining controls and human/NAS acceptance remain open.
+The shared Load Recipe path regression retains87/87 on current catalog25 with
+all prior identities/PASS results, five compiles and preservation/clean shutdown.
 
 Unpromoted activity03 corrects CHECK-IN-PERMISSION-WORDING-01: exact-message
 actual-handler RED226/3 becomes229/229 GREEN with all193 earlier checks retained.
@@ -1622,10 +1635,10 @@ from permission to stage or export a catalog worksheet.
 |---|---|---|---|
 | `btnApplyBatchScale` | Apply Scale | `mBtnApplyBatchScale_Click` | Pending |
 | `btnLoaderClear` | Clear Run | `mBtnLoaderClear_Click` | `PRODUCTION_RUN_CLEAR`: catalog24 focused checks and independent paths102 GREEN; full acceptance pending |
-| `btnLoaderLoad` | Load Recipe | `mBtnLoaderLoad_Click` | `PRODUCTION_RUN_LOAD`: catalog24 focused checks and independent paths87 GREEN; full acceptance pending |
+| `btnLoaderLoad` | Load Recipe | `mBtnLoaderLoad_Click` | `PRODUCTION_RUN_LOAD`: earlier catalog24 focused checks; independent paths87 freshly retained on activity03/catalog25; full acceptance pending |
 | `btnLoaderRefresh` | Refresh | `mBtnLoaderRefresh_Click` | `PRODUCTION_RUN_LOADER_REFRESH`: catalog24 focused checks and independent paths167 GREEN; full acceptance pending |
 | `btnManagerApplyOutput` | Complete Run | `mBtnManagerApplyOutput_Click` | Pending |
-| `btnManagerCheckIn` | Check In | `mBtnManagerCheckIn_Click` | `PRODUCTION_RUN_CHECK_IN`: catalog25, focused193 GREEN; interruption/policy/reader and full acceptance pending |
+| `btnManagerCheckIn` | Check In | `mBtnManagerCheckIn_Click` | `PRODUCTION_RUN_CHECK_IN`: catalog25; activity03 focused229, owner/interruption404, reusable paths91 and worksheet paths101 GREEN; earlier activity02 native-closure212/routed157; wider policy/store-fault and full acceptance pending |
 | `btnManagerNext` | Next Batch | `mBtnManagerNext_Click` | Pending |
 | `btnManagerPrint` | Print Recall | `mBtnManagerPrint_Click` | Pending |
 | `btnManagerRefresh` | Refresh | `mBtnManagerRefresh_Click` | `PRODUCTION_RUN_MANAGER_REFRESH`: catalog24 focused checks and independent paths167 GREEN; full acceptance pending |

@@ -2,6 +2,20 @@
 
 **Status:** Current corrective implementation plan
 
+Check In path checkpoint,2026-10-01 UTC: test-only expansion on unchanged activity03
+passes reusable91/91 and worksheet101/101 after missing-pair RED49/1 and54/1 on
+pre-observation routed01. Each fixture is prepared before separate guide-source
+and observed recordings. Actual handler owner checks, Admin publication, exact
+Event Detail selection, ordinary-reader evaluation and How-To/Diagnostic/Compare
+pass. Only local CommandCompleted concludes; SourceEventsApplied remains incomplete.
+Twelve captures, shared42/five compiles, preservation, unassisted cleanup and delayed
+zero audits pass. Static metrics remain290/6175/135522 with9/45 calls,190 duplicates,
+28 non-growing caps, three schemas and374 parses. Controls1.419/coverage1.159 record
+this bounded evidence; policy/store-fault, remaining controls and full human/NAS
+acceptance remain open. Exact evidence is in the Check In integration record.
+The shared Load Recipe path regression retains87/87 on activity03 with exact prior
+order, five compiles, preservation, unassisted closure and delayed zero audit.
+
 Permission wording correction,2026-10-01 UTC: unpromoted activity03 restores the
 earlier initial Check In denial text at the typed DENIED boundary, preserving
 the observation contract and optional notice. Actual-handler RED226/3 becomes
