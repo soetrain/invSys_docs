@@ -1,7 +1,19 @@
 # Production form tracking coverage audit
 
-Version 1.160. Last reviewed:2026-10-01 UTC, Check In initial policy/store-fault cases verified;
+Version 1.161. Last reviewed:2026-10-01 UTC, Check In post-REQUESTED interruptions verified;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Unchanged activity03 passes525/525, retaining434 prior ordered checks and adding91.
+Real recording/Check In in both staging modes survives a valid external policy
+change or failed terminal Activity append without false terminal evidence. Owner
+success, context, exact notices, identity/custom columns, incremental incomplete
+journals and prior evidence are preserved. Actual publication and ordinary-reader
+expectation/Evaluate handlers report Incomplete for all four runs with no invented
+completion or Domain sources. Eight new captures, shared42/five compiles,
+preservation, unassisted closure/delayed zero audit and static three schemas/376
+parses pass without runtime growth. This is test-only verification under D18;
+unreadable policy after REQUESTED, additional refusals, remaining Run controls,
+multiline/layout and full human/NAS acceptance stay open.
 
 Unchanged activity03 passes434/434, preserving229 prior checks and adding205 for
 collection off, valid older24 policy, malformed policy and a real unavailable-store
@@ -10,8 +22,8 @@ messages/notices, identity/custom columns, guards and no false/fallback/redirect
 evidence. No policy repair occurs; fixture Config bytes and prior evidence are
 restored/preserved. Six new captures, shared42/five compiles, unassisted closure,
 delayed zero audit and static three schemas/375 parses pass without runtime growth.
-This is test-only coverage; mid-action policy/terminal-append faults, further
-refusals, remaining controls and full human/NAS acceptance remain open.
+This initial-policy evidence is test-only. Its post-REQUESTED gap is addressed by
+the newer bounded verification above; broader acceptance is not implied.
 
 Test-only Check In paths on unchanged activity03 pass reusable91/91 and
 worksheet101/101 after routed01 missing-pair RED49/1 and54/1. Prerequisites are

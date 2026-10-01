@@ -565,7 +565,18 @@ owner entry. Exact notices, identity/custom columns, no false/fallback/redirecte
 records, policy non-repair and preservation pass. Six new captures were reviewed;
 five compiles, static ratchets and unassisted shutdown/delayed zero audit pass.
 This verifies the existing rule; no new runtime behavior or new RED is claimed.
-Mid-action policy changes, terminal append faults and broader acceptance remain open.
+Post-REQUESTED interruption verification,2026-10-01: unchanged activity03 passes
+525/525, retaining all434 prior checks. A valid external policy-version change or
+blocked terminal Activity append after the real owner/REQUESTED preserves owner
+success, captured context, exact notices, identities/custom columns and prior
+evidence in both staging modes. The separate recording closes automatically as
+Incomplete with one REQUESTED and an intact three-entry chain. Actual Admin
+publication and ordinary-reader expectation/Evaluate handlers cannot conclude
+Check In/STAGED from any of the four interrupted runs. Eight new captures, five
+compiles, static ratchets, preservation and normal shutdown/delayed zero audit
+pass. This is verification only, with no new contract or runtime correction.
+Unreadable policy after REQUESTED, further owner refusals, remaining controls,
+multiline/layout and full human/NAS Release1 acceptance remain open.
 
 - One deliberate handler entry produces a REQUESTED/result pair when collection
   is enabled and the existing context/policy gates allow both writes. Loading,

@@ -1,6 +1,18 @@
 # invSys Form Controls v1
 
-**Version:** 1.420 (Check In initial policy/store-fault cases verified; broader acceptance pending)
+**Version:** 1.421 (Check In post-REQUESTED interruption diagnostics verified; broader acceptance pending)
+
+Unchanged activity03 passes525/525, retaining all434 prior checks and adding91.
+After actual Check In/REQUESTED, a valid external policy change or blocked terminal
+Activity write preserves owner success and shows the exact notice in both staging
+modes. Only REQUESTED remains; the recording automatically closes Incomplete.
+Actual publication, expectation and Evaluate handlers show incomplete evidence
+for all four runs to an ordinary reader, without invented completion or Domain
+sources. Eight new captures, shared42/five compiles, preservation, normal cleanup
+and delayed zero audit pass. Static metrics stay unchanged; three schemas/376
+parses pass. This adds verification under existing D18, with no new runtime
+behavior or product RED. Unreadable policy after REQUESTED, further refusals,
+remaining controls, multiline/layout and full human/NAS acceptance remain open.
 
 Test-only policy expansion on unchanged activity03 passes434/434, retaining229
 earlier checks and adding205. Collection off, valid older catalog24 policy,
@@ -10,7 +22,8 @@ identity/custom columns, no false/fallback/redirected records, policy non-repair
 guards and byte preservation pass. Six new captures were reviewed; shared42/five
 compiles, normal cleanup/delayed zero audit, unchanged static runtime metrics and
 three schemas/375 parses pass. No new runtime correction or new RED is claimed.
-Mid-action policy changes, terminal append failures and wider acceptance stay open.
+That initial-policy checkpoint did not cover post-REQUESTED interruptions;
+the newer bounded verification is recorded above. Wider acceptance stays open.
 
 Unchanged activity03 passes reusable91/91 and worksheet101/101 Check In path checks
 after respective missing-pair RED49/1 and54/1 on routed01. Each prepares prerequisites
