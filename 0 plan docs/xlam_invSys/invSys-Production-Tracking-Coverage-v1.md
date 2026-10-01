@@ -1,7 +1,23 @@
 # Production form tracking coverage audit
 
-Version 1.151. Last reviewed:2026-10-01 UTC, Check In entry/read guards GREEN;
+Version 1.152. Last reviewed:2026-10-01 UTC, routed Check In continuation RED;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+The separate routed actual-handler gate on frozen guards02 returns85 PASS/2 FAIL
+of87, retaining shared42 and five compiles. A real two-source released Recipe
+passes its positive downstream Check In. Sign-out and same-session capability
+loss after its first upstream quantity read each allow another read attempt;
+interruptions after its second read pass. All boundary-state/refusal/guard and
+activity-preservation checks pass. Saved authority/operator/package bytes and
+settings are preserved, normal closure completes and delayed native audit is
+zero. The unguarded routed requirement loop requires existing D18 continuation
+enforcement; runtime correction and original278 regression are pending. No
+observation/catalog/button count changes. Reviewed positive capture retains long
+value clipping. Native closed-book entry separately passes59/59 with shared42,
+five compiles, preservation, normal cleanup and delayed zero native audit. Both
+actual forms dismiss when their captured book closes; both decoys remain open.
+No post-dismissal handler is invoked or inferred. Read-return closure coverage
+and human acceptance remain open.
 
 Guards02 retains the278/278 GREEN established by guards01 after RED219/59, with ordered
 checks/PASS and shared42. Typed validation-only context binding checks current

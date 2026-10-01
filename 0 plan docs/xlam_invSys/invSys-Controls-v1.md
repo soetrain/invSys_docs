@@ -1,6 +1,23 @@
 # invSys Form Controls v1
 
-**Version:** 1.411 (Check In entry/read guards GREEN; acceptance pending)
+**Version:** 1.412 (routed Check In continuation RED; acceptance pending)
+
+On frozen guards02, the new actual-handler routed gate is85 PASS/2 FAIL/87,
+retaining shared42 and five compiles. Two real upstream outputs are produced
+through saved/released definitions and actual completion handlers. Sign-out or
+same-session permission loss after the first upstream read still permits a second
+read attempt; interruption after the second read passes. Boundary state, refusal,
+guards, activity records, authority/operator/package bytes and settings are
+preserved, with normal closure and delayed zero native audit. Architecture D18
+already requires an immediate continuation check. Fixing this loop is pending;
+the existing278 GREEN and catalog24/63-of68 button coverage remain distinct.
+One reviewed positive routed capture shows both exact keys, with long values
+clipped; it is not refusal-specific or human acceptance. Native closed-workbook
+entry separately passes59/59 with shared42/five compiles, preservation, normal
+cleanup and delayed zero native audit. Both forms naturally dismiss on captured
+workbook closure; the decoy stays open. No post-dismissal handler is invoked or
+claimed. Read-return closure and Check In observations remain pending. Exact RED
+and excluded fixture diagnostics are in the Check In integration record.
 
 Unpromoted guards02 passes278/278 packaged Check In checks after RED219/59,
 retaining every prior ordered check/PASS and shared42. Current Production/Admin

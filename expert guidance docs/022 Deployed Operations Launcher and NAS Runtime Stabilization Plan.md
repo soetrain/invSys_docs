@@ -2,6 +2,29 @@
 
 **Status:** Current corrective implementation plan
 
+Routed Check In protecting RED,2026-10-01 UTC: unchanged guards02 returns85 PASS/
+2 FAIL/87 through the actual operator handler, retaining shared42 and five
+instrumented compiles. The fixture creates a released two-source Recipe and two
+real canonical upstream outputs through the real completion handlers. After its
+first upstream read, sign-out or same-session permission loss allows a second
+read attempt. Second-read interruptions and boundary-state/refusal/guard/activity
+preservation pass. Normal closure, saved authority/operator/package/settings
+preservation and delayed zero native audit are verified. Enforce the existing
+D18 continuation rule inside `ValidateProcessRequirementsReady` next, then retain
+the original278 GREEN and complete native closed-book coverage. This is not an
+architecture change, new observation or acceptance. Controls1.412 and coverage
+1.152 are synchronized; the Check In integration record distinguishes verified
+RED from two corrected setup failures and reviewed positive capture limitations.
+Native Check In closed-book entry separately passes59/59 on guards02, with
+shared42/five compiles, preservation, normal cleanup and delayed zero native audit.
+Both native receipts show natural form dismissal and a remaining decoy workbook;
+no hidden/recreated handler is invoked. The first worksheet fixture attempt is
+excluded after correction of its unsaved-staging assumption. Read-return closure
+and observation coverage remain open; entry dismissal does not certify them.
+The test checkpoint adds no runtime code: final static evidence retains
+290 components/6175 procedures/135506 lines,9 literal/45 unresolved calls,
+190 duplicate candidates and28 non-growing caps; three schemas/372 parses pass.
+
 Check In guard integration,2026-10-01 UTC: unpromoted guards02 passes278/278 after
 RED219/59, preserving every ordered check/PASS and shared42. The existing action
 context class now supports binding for validation without starting an observation.
