@@ -1,7 +1,20 @@
 # Production form tracking coverage audit
 
-Version 1.156. Last reviewed:2026-10-01 UTC, Check In catalog/handler focused GREEN;
+Version 1.157. Last reviewed:2026-10-01 UTC, Check In interruption observations;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Native closure212/212 after RED149/63 and owner/interruption404/404 now verify
+captured-context records on unchanged activity02, preserving140/260 respective
+prior non-observation checks. Nine sign-outs retain only REQUESTED; nine
+permission-loss and nine native workbook-loss cases record REQUESTED/FAILED.
+Routed157/157 retains101 prior non-observation checks, replacing seven obsolete
+observations; it adds two sign-out, two permission-loss and two native-closure
+boundaries plus positive staging. Seven captures were reviewed; long-value
+acceptance remains open. Static02 retains all runtime metrics with3 schemas/374
+parses. Source review exposes CHECK-IN-PERMISSION-WORDING-01: initial denial uses
+shared Begin's wording, while D18 requires preserving the earlier Check In text.
+The current substring assertion is insufficient. Exact-message actual-handler
+RED and a preserving correction remain required; no exception is approved.
 
 Current unpromoted activity02: catalog25,64/68 buttons wired. Check In's focused193
 checks pass after RED127/60 and warning RED192/1; all prior127 catalog definitions are preserved, while

@@ -1,6 +1,22 @@
 # invSys Form Controls v1
 
-**Version:** 1.416 (Check In catalog/handler focused GREEN; broader acceptance pending)
+**Version:** 1.417 (Check In interruption observations; broader acceptance pending)
+
+Current test expansion: native closure212/212 after RED149/63 and owner/interruption
+baseline404/404, retaining all140/260 respective prior non-observation checks.
+Nine/18 obsolete no-record assertions are explicitly replaced with exact journal
+checks. Sign-out retains REQUESTED only; same-context permission/workbook loss
+records REQUESTED/FAILED. Five compiles/shared42, preservation, unassisted closure
+and delayed zero audits pass. Routed157/157 retains101 prior non-observation checks
+while replacing seven obsolete observations. It covers successful routed staging,
+both source-read interruptions and two additional native closures. Seven total
+captures were reviewed; long-value layout and human acceptance remain open.
+CHECK-IN-PERMISSION-WORDING-01 remains open: initial denial switched from the
+earlier `Production permission changed. Reopen Production before continuing.` to
+the shared Begin's `Production permission is required; the draft was not changed.`
+Existing substring tests miss this difference. Protect the exact earlier text
+through the actual handler, then restore it without changing DENIED semantics.
+This is required preservation, not an approved wording change.
 
 Unpromoted activity02 implements catalog25 `PRODUCTION_RUN_CHECK_IN` and its actual
 click-handler observation. The owner returns this attempt's explicit local outcome;
@@ -15,10 +31,10 @@ Smoke86 and layout18 requested page/size pairs pass; six empty-surface captures
 were individually reviewed. Static290/6175/135519,9/45 calls,190 duplicates and28
 non-growing caps pass, with three schemas/374 parses. The new behavior adds five
 net runtime lines and removes the superseded single-caller validation-only method.
-Broader interruption/permission/policy/fault and recording/publication/reader gates,
+Remaining permission wording/policy/fault and recording/publication/reader gates,
 populated/long-value and human acceptance remain open. RUN-SCALE-01/RUN-UI-01 remain
-pending approval. Pre-observation owner baselines must retain their owner and
-no-redirection protections while replacing obsolete no-record expectations explicitly.
+pending approval. Expanded owner baselines retain owner/no-redirection protections
+while replacing obsolete no-record expectations explicitly.
 
 A real full-chain regression exposed a tracking warning replacing the owner status.
 The focused fault test proves the correction preserves both success and warning,

@@ -525,6 +525,21 @@ Production, surface `Operations > Production > Production Run - List`, capabilit
 PROD_POST with the existing ADMIN_MAINT alternative. Preserve catalogs1-24 exactly.
 This specifies observation of the existing D14/D15 owner, not new inventory authority.
 
+Verification checkpoint,2026-10-01: native mid-read closure observations pass212
+checks after149/63 missing-record RED; the owner/interruption baseline passes404.
+All prior non-observation checks remain ordered and passing. Sign-out leaves only
+REQUESTED; same-context permission/workbook loss records REQUESTED/FAILED. Routed
+observation verification passes157 checks, retaining101 prior non-observation
+checks, including two more native closures. This changes no normative behavior.
+Source review identifies CHECK-IN-PERMISSION-WORDING-01: replacing the temporary
+validation binding with the shared Begin changed initial denial wording from
+`Production permission changed. Reopen Production before continuing.` to
+`Production permission is required; the draft was not changed.` Existing substring
+tests do not protect the required wording preservation. Add exact-message
+actual-handler RED, then restore the earlier wording while retaining DENIED and
+the observation guards. This is an open defect, not an approved wording exception.
+Recording/publication/independent reader and wider acceptance remain pending.
+
 - One deliberate handler entry produces a REQUESTED/result pair when collection
   is enabled and the existing context/policy gates allow both writes. Loading,
   nested entry and invalid captured binding do not start

@@ -2,6 +2,25 @@
 
 **Status:** Current corrective implementation plan
 
+Check In interruption checkpoint,2026-10-01 UTC: tests on unchanged activity02
+pass native closure212/212 after RED149/63 and owner/interruption404/404. Exact
+journal assertions replace only9/18 obsolete no-record assertions; all140/260
+other prior ordered checks pass. Sign-out records REQUESTED only; same-context
+permission/workbook loss records REQUESTED/FAILED. Five compiles/shared42,
+preservation, unassisted closure/delayed zero audits and seven reviewed captures
+pass. Routed157/157 retains101 prior non-observation checks while replacing seven
+obsolete observations; successful staging, four read interruptions and two more
+native closures pass. Static02 preserves all
+runtime counts and passes three schemas/374 parses. Controls1.417/coverage1.157
+remain acceptance records, not release approval.
+
+Newly discovered CHECK-IN-PERMISSION-WORDING-01 follows D18's existing requirement
+to preserve operator wording: initial permission denial changed when Check In
+began using shared Begin. Existing substring checks miss the difference. Next add
+actual-handler exact-message RED and retain DENIED/journal facts, then restore
+`Production permission changed. Reopen Production before continuing.` without
+weakening the action/context guards. No architecture exception is approved.
+
 Check In observation integration,2026-10-01 UTC: unpromoted activity02 implements
 catalog25 and current-attempt owner outcomes through the actual click handler.
 Expanded RED127/60 and tracking-warning RED192/1 become193/193 GREEN, preserving shared42 and all127 prior
@@ -13,9 +32,10 @@ Smoke86 and layout18 requested page/size pairs pass; six empty-surface captures
 were reviewed. Static290/6175/135519,9/45 calls,190 duplicates and28 non-growing caps,
 three schemas/374 parses pass. Controls1.416/coverage1.156 record64/68 button wiring.
 This is an integration checkpoint, not completed Slice4be or user acceptance.
-Next retain the149/108/278 owner protections while explicitly replacing obsolete
-no-observation assertions with the specified captured-context journal expectations;
-add permission/policy/fault and broader refusal cases through actual handlers.
+Retain the owner protections while explicitly replacing obsolete no-observation
+assertions with specified captured-context journal expectations; the newer
+checkpoint above records progress. Add exact permission wording, policy/fault
+and broader refusal cases through actual handlers.
 Recording/publication/independent Action Path readers and remaining wider gates
 remain required. RUN-SCALE-01/RUN-UI-01 remain unapproved.
 
