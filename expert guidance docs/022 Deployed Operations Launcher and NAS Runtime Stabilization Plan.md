@@ -193,6 +193,17 @@ No runtime/contract change or new product RED is claimed. Static remains
 validate and354 scripts parse. Exact roots, times and exclusions are in the
 Assignment evidence record. Coverage counts and human acceptance are unchanged.
 
+Production dismissal/inventory-query312 and separate Close Action Paths90 retain
+exact prior ordered checks and five compiles each, with unassisted closure,
+settings/package preservation and delayed Excel audits. The312 gate protects
+public owner reuse, UOM/custom-column preservation, workbook shutdown and80
+read-only inventory-query checks. Independent two-dismissal recordings,
+publication, Event Detail, authored expectations and all three path views pass
+with two matches/zero extras. The conclusion proves dismissal, not the gesture,
+saved work or Domain application. Four focused and seven path captures are
+reviewed with viewport/empty-form limits recorded in Assignment evidence.
+Runtime/static metrics, control coverage and human acceptance are unchanged.
+
 Full reusable remains open: the original edit/export callback fails with
 RPC800706BE and native ntdll/c00000ff; an empty recovery instance requires explicit
 Quit, excluding that attempt from acceptance. A narrower edit/export diagnostic

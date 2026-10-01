@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.382 (Assignment worksheet regressions; reusable acceptance unresolved)
+**Version:** 1.383 (Assignment dismissal regressions; reusable acceptance unresolved)
 
 Architecture v4.11 D18's Ingredients Assignment refinement is implemented in
 unpromoted `validation-production-assignment-01`: catalog23 adds seven buttons
@@ -186,6 +186,17 @@ No runtime/contract change or new product RED is claimed. Static remains
 280/6150/135006,9/45 calls,190 duplicates and28 non-growing caps; three schemas
 validate and354 scripts parse. Exact roots, times and exclusions are in the
 Assignment evidence record. Coverage counts and human acceptance are unchanged.
+
+Production dismissal/inventory-query312 and separate Close Action Paths90 retain
+exact prior ordered checks and five compiles each, with unassisted closure,
+settings/package preservation and delayed Excel audits. The312 gate protects
+public owner reuse, UOM/custom-column preservation, workbook shutdown and80
+read-only inventory-query checks. Independent two-dismissal recordings,
+publication, Event Detail, authored expectations and all three path views pass
+with two matches/zero extras. The conclusion proves dismissal, not the gesture,
+saved work or Domain application. Four focused and seven path captures are
+reviewed with viewport/empty-form limits recorded in Assignment evidence.
+Runtime/static metrics, control coverage and human acceptance are unchanged.
 
 Full reusable171/replay37 remain open after native Excel failures. The original
 edit/export callback fails with RPC800706BE/ntdll c00000ff and requires explicit
