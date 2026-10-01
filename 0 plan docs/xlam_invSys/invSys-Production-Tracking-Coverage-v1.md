@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.123. Last reviewed:2026-10-01 UTC, Assignment dismissal regressions;
+Version 1.124. Last reviewed:2026-10-01 UTC, bounded reusable timing diagnosis;
 reusable acceptance unresolved.
 
 Catalog23 now defines118 global controls and observes55/68 constructed Production
@@ -195,6 +195,19 @@ with two matches/zero extras. The conclusion proves dismissal, not the gesture,
 saved work or Domain application. Four focused and seven path captures are
 reviewed with viewport/empty-form limits recorded in Assignment evidence.
 Runtime/static metrics, control coverage and human acceptance are unchanged.
+
+Bounded reusable timing comparisons now pass with a 10-second pause either after
+package loading or immediately before output regulation, without injected VBA,
+explicit compilation or a native observer. Both preserve packages/settings/the
+validator, close normally and pass delayed audits. A no-delay control and an
+Excel.Ready-before-dispatch probe instead crash at output regulation with the
+same ntdll/c0000028 signature. All 14 readiness reads report Ready immediately;
+polling does not expose or fix the observed failure. These are diagnostic
+comparisons, not full reusable acceptance, product RED or a justified runtime
+delay/compile requirement. Exact evidence is in the Assignment record.
+The next bounded diagnosis will attach the existing metadata-only observer at
+the later failure boundary; observer effects remain explicit. No runtime or
+normative change, package promotion or human acceptance is claimed.
 
 Full reusable171/replay37 remain open. The original edit/export callback fails
 with RPC800706BE/ntdll c00000ff; explicitly quitting an empty recovery instance
