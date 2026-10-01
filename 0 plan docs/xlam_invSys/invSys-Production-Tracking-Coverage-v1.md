@@ -1,7 +1,21 @@
 # Production form tracking coverage audit
 
-Version 1.149. Last reviewed:2026-10-01 UTC, Check In correctness/display103 GREEN;
+Version 1.150. Last reviewed:2026-10-01 UTC, Check In permission/read-return RED;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Unchanged correctness03 preserves prior103 GREEN while expanded115 yields108
+PASS/7 permission failures. Nine actual inventory/default-location/ingredient
+read-return sign-outs then yield154 PASS/33 FAIL/187, with prior order/PASS,
+five compiles, preservation, normal closure and delayed zero audits. Post-read
+snapshots protect state at the interruption boundary; they do not require rolling
+back changes that completed before it. Current-permission and continuation guard
+implementation remains pending under the existing D18 rule, with no new catalog.
+The final278 checks return219 PASS/59 FAIL after adding isolated capability loss
+at all nine read returns. All18 interruptions take effect, including unchanged
+signed-in context with fresh Production/Admin denial; authorization bytes restore.
+All previous ordered results/passes survive, with five compiles, preservation,
+normal closure and delayed zero audit. Routed upstream-input/closed-book cases
+and actual Check In observations remain unproved.
 
 Correctness01 protects selected-Process, loading/nested/stale-context entry,
 exact-key worksheet identity and unknown Check values/formulas: expanded RED73/21

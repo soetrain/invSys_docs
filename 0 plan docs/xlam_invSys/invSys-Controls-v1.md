@@ -1,6 +1,19 @@
 # invSys Form Controls v1
 
-**Version:** 1.409 (Check In correctness and worksheet display GREEN; acceptance pending)
+**Version:** 1.410 (Check In permission/read-return RED; acceptance pending)
+
+Packaged Check In remains unobserved. On unchanged correctness03, the115-check
+baseline preserves all103 prior passes but exposes seven permission failures:
+the real handler enters its owner and changes reusable/worksheet state for a
+current-context user without Production/Admin permission. Nine real read-return
+sign-out cases expand this to187 checks,154 PASS/33 FAIL, retaining prior ordered
+results. D18 already requires current permission and post-yield context checks;
+these tests enforce that contract rather than establish a new capability or
+activity catalog entry. The final278-check expansion is219 PASS/59 FAIL: all18
+real read-return interruptions (sign-out and capability loss with the same signed-in
+context) are proved, with authorization bytes restored and prior passes retained.
+Guard implementation and GREEN remain pending; routed-input and closed-workbook
+interruption cases and observation acceptance are not established by this fixture.
 
 Unpromoted correctness01 passes94/94 after expanded RED73/21, retaining prior
 ordered checks and passes. Existing Check In now requires a selected reusable

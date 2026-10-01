@@ -2,6 +2,27 @@
 
 **Status:** Current corrective implementation plan
 
+Check In guard baseline,2026-10-01 UTC: frozen correctness03 retains103 prior
+passes but expanded permission115 returns108 PASS/7 FAIL. The same operator Click
+handler enters reusable and worksheet owners without current Production/Admin
+permission. Nine real read-return sign-out cases expand to187 checks154 PASS/33
+FAIL, retaining prior order/PASS. Five compiles, authority/operator/package
+preservation, restored settings, normal closure and delayed zero audits pass.
+Follow existing D18 current-permission/post-yield requirements; stop later reads
+and mutations and visibly refuse invalid context, without claiming rollback of
+state changed before an interruption. Tests do not register Check In observations.
+Capability loss within the same session is separately proved at all nine reads:
+final278 checks return219 PASS/59 FAIL, preserving prior ordered results/passes.
+All18 interruption effects and authorization restoration pass, with five compiles,
+normal closure, preservation and delayed zero audit. Implement current permission
+and continuation guards against this RED; keep routed upstream-input/closed-book
+coverage and observation outcomes explicitly open. Architecture v4.11 remains
+the normative contract; no exception is proposed.
+Guard RED static evidence retains290 components/6174 procedures/135482 lines,
+9 literal/45 unresolved calls,190 duplicate candidates and28 non-growing caps;
+three schemas and370 tooling parses pass. No runtime implementation is changed
+by this test-first checkpoint.
+
 Check In correctness integration,2026-10-01 UTC: unpromoted
 `validation-production-check-in-correctness-01` moves the expanded packaged
 baseline73 PASS/21 FAIL to94/94 GREEN, preserving all prior ordered identities and
