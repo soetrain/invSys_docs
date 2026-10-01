@@ -60,6 +60,16 @@ Excel audit pass. Runtime remains unchanged;362 scripts parse. Preserve this
 baseline too. Continue real-read failures/yields, worksheet branches, multi-key
 allocation and paired paths; no runtime implementation or acceptance is claimed.
 
+The real-read sign-out companion now yields97 PASS/49 expected FAIL/146 checks.
+All11 available owner read-return boundaries are reached; subsequent reads/local
+changes, missing refusal and absent original-context tracking supply RED. Tests
+retain state at the yield boundary without undoing earlier partial effects.
+Forty-two shared GREEN checks, five compiles, pins/preservation, unassisted closure
+and delayed zero Excel audit pass. The first wrong-package fixture setup is
+excluded. Runtime/static metrics remain unchanged;363 scripts parse. Preserve146
+alongside the earlier baselines. Worksheet branches, multi-key allocation,
+remaining source-failure semantics and paired paths are still required.
+
 Active Slice4be continuation,2026-10-01 UTC: Ingredients Assignment implements
 Architecture v4.11 D18's approved discovered-control refinement in unpromoted
 `deploy/validation-production-assignment-01`. Catalog23 preserves1-22 and adds

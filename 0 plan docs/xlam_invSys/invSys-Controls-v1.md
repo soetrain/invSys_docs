@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.389 (Run exception/nesting RED; implementation pending)
+**Version:** 1.390 (Run real-read sign-out RED; implementation pending)
 
 Architecture D18's Run preparation/allocation refinement specifies catalog24's
 nine existing controls, with no runtime registration or layout change yet:
@@ -64,6 +64,15 @@ owner entry and nested Load's disturbed result supply RED. Forty-two shared GREE
 checks, five compiles, preservation, normal closure and delayed zero Excel audit
 pass. Runtime/static metrics remain unchanged;362 scripts parse. Real-read
 failures/yields, worksheet branches, multi-key expansion and paired paths remain.
+
+Real-read sign-out RED adds97 PASS/49 expected FAIL/146 checks, with all11 available
+read-return boundaries reached. Continued observed reads/local projection changes,
+five additional owner-state changes and absent refusal/original-context tracking
+supply RED. Earlier partial effects are not rolled back. Forty-two shared GREEN
+checks, five compiles, preservation, unassisted closure and delayed zero Excel
+audit pass. One wrong-package probe setup is excluded. Runtime/static metrics
+remain unchanged;363 scripts parse. Worksheet/multi-key/remaining read-failure
+and paired-path gates remain; no runtime registration or user acceptance changes.
 
 Architecture v4.11 D18's Ingredients Assignment refinement is implemented in
 unpromoted `validation-production-assignment-01`: catalog23 adds seven buttons
