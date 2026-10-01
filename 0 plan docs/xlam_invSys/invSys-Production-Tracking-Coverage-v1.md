@@ -1,7 +1,21 @@
 # Production form tracking coverage audit
 
-Version 1.153. Last reviewed:2026-10-01 UTC, routed Check In continuation GREEN;
+Version 1.154. Last reviewed:2026-10-01 UTC, native Check In read-closure coverage GREEN;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Native149/149 and routed108/108 on unchanged runtime/frozen routed01 retain the
+prior59/87 and shared42. Eleven actual-handler read-return workbook closures are
+now exercised; all eleven forms survive without reinitialization, later reads,
+owner/form mutation, redirected records or saved-byte changes. Their real guards
+and refusal assertions run. The two original entry surfaces still naturally
+dismiss; no hidden form is recreated. Five compiles per gate, preservation,
+normal cleanup and delayed zero audits pass. Three refusal captures and a fresh
+routed positive capture were reviewed, retaining long-value clipping. An initial
+144/5 comparison included worksheet data that disappears on closure; the corrected
+form-only comparison plus independent saved-byte checks needs no runtime fix.
+Static metrics are unchanged;373 PowerShell files parse. Check In observation
+integration, populated/human acceptance and broader reusable gates remain open;
+catalog24 and63/68 button coverage are unchanged.
 
 Routed01 passes87/87 after RED85/2, retaining all ordered checks/PASS and shared42.
 All four real upstream-read interruptions stop later reads and preserve boundary

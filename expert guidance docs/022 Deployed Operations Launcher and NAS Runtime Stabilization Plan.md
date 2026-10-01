@@ -2,6 +2,27 @@
 
 **Status:** Current corrective implementation plan
 
+Native Check In read-closure checkpoint,2026-10-01 UTC: unchanged code `2d49c97b`
+and frozen routed01 pass native149/149 and routed108/108, retaining all59/87 prior
+ordered checks and shared42. Eleven real read-return workbook closures exercise
+the already-running handler; all eleven forms survive, with no reinitialization,
+later reads, owner/form mutation, redirected records or saved-byte changes.
+Captured-binding rejection, guards and visible refusal pass. The original two
+entry forms still naturally dismiss; no hidden form is recreated. Five compiles
+per gate, preservation, unassisted cleanup and delayed zero audits pass. Three
+refusal captures and a fresh routed positive capture were reviewed; long values
+still clip. Initial144/5 worksheet mismatches came from including the now-closed
+table in a projection snapshot; the final diagnostics prove surviving controls
+unchanged and saved bytes preserved. This is test correction/coverage, not a
+runtime RED/GREEN fix. Static290/6176/135514,9/45 calls,190 duplicate candidates
+and28 non-growing caps are unchanged; three schemas/373 parses pass. Controls
+1.414 and coverage1.154 are synchronized under existing D14/D15/D18. No new
+architecture, catalog entry or observation is implemented. The same candidate's
+preceding build/layout/smoke/Run/worksheet/full-chain evidence remains applicable.
+Check In observation owner facts, independent Action Paths and broader acceptance
+are still required. Explicit approval has been requested for RUN-SCALE-01 and
+RUN-UI-01; both remain unapproved pending the user's response.
+
 Routed Check In integration,2026-10-01 UTC, code `2d49c97b`: unpromoted routed01 passes87/87 after
 RED85/2, preserving exact ordered checks/prior PASS, shared42 and four real
 read-return interruptions. The existing D18 continuation is passed through the
@@ -32,8 +53,9 @@ failures,33 owners/shared42 and seven actual native post-close handler invocatio
 Five compiles, preservation, unassisted cleanup and delayed zero audit pass;
 worksheet retains257/257 ordered PASS with the same preservation/compile/cleanup/
 audit gates. No new architecture, catalog entry, observation or full acceptance is
-claimed; fresh positive captures still clip long values. Native mid-read closure,
-Check In observations and separate full reusable/replay acceptance remain open.
+claimed; fresh positive captures still clip long values. Native read-closure
+coverage is recorded above; Check In observations and separate full reusable/
+replay acceptance remain open.
 
 Routed Check In protecting RED,2026-10-01 UTC: unchanged guards02 returns85 PASS/
 2 FAIL/87 through the actual operator handler, retaining shared42 and five

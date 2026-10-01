@@ -1,6 +1,20 @@
 # invSys Form Controls v1
 
-**Version:** 1.413 (routed Check In continuation GREEN; acceptance pending)
+**Version:** 1.414 (native Check In read-closure coverage GREEN; acceptance pending)
+
+On unchanged runtime `2d49c97b`/frozen routed01, native149/149 retains the earlier59
+ordered checks and routed108/108 retains87. Eleven additional real read-return
+workbook closures exercise the already-running Check In handler: all eleven
+forms survive, reject the captured binding, restore guards and visibly refuse,
+with no later reads, form reinitialization, owner/form mutation, redirected
+records or saved-byte changes. Five compiles per gate, settings/packages, normal
+cleanup and delayed zero audits pass. Three refusal captures and one fresh routed
+positive capture were reviewed; long values still clip. The initial144/5 worksheet
+comparison incorrectly included the closed worksheet; separating surviving form
+controls from saved-byte checks proves149/149 without a runtime correction.
+Static metrics are unchanged and373 PowerShell parses pass. Catalog24/63-of68
+button wiring and Architecture D18 remain unchanged. Check In observations,
+populated-layout, human and broader reusable acceptance remain open.
 
 Unpromoted routed01 turns the protecting87-check RED85/2 into87/87 GREEN with every
 ordered check/prior PASS, shared42 and all four real interruptions retained. A typed
@@ -29,8 +43,8 @@ cases/shared42 and seven real native post-close handler invocations. Five compil
 preservation, unassisted cleanup and delayed zero audit pass. Worksheet retains
 257/257 ordered PASS with the same preservation/compile/cleanup/audit gates.
 Architecture D18, catalog24 and63/68 button wiring are unchanged; Check In
-observations, mid-read workbook closure and broader reusable/human acceptance
-remain open.
+observations and broader reusable/human acceptance remain open. Native read-closure
+coverage is recorded in the current checkpoint above.
 
 On frozen guards02, the new actual-handler routed gate is85 PASS/2 FAIL/87,
 retaining shared42 and five compiles. Two real upstream outputs are produced
