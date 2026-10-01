@@ -81,6 +81,14 @@ exit0 alone is insufficient. These failures are not desktop error5. Runtime and
 coverage counts remain unchanged. See the Assignment evidence file for exact
 records and exclusions; do not repeat full runs merely to obtain a pass.
 
+Bounded prefixes also pass with unsaved fixed-label VBA tracing and with explicit
+loaded-project compilation alone, without a native observer. All26 traced stages
+return; the compilation-only run injects no VBA. Normal cleanup, preservation and
+delayed audits pass. These do not reproduce the failure, distinguish compilation
+from timing, or establish a repair or cold acceptance. No compile-before-use
+operator contract or coverage-count change is introduced. Full reusable171 and
+independent replay37 remain open; see Assignment evidence for exact records.
+
 Prior worksheet checkpoint, `validation-process-worksheet-activity-03`: catalog22
 had109 IDs and48/68 observed buttons. Its three worksheet handlers passed595/595;
 twenty buttons and30 nonbutton handlers were pending at that checkpoint.

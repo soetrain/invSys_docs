@@ -87,6 +87,14 @@ the prior worksheet candidate. No root cause or repair is established. Diagnosti
 exit0 is not success when the inner report fails. Exact records and exclusions
 are in the Assignment evidence file above; neither failure is desktop error5.
 
+Bounded comparisons now also pass with unsaved fixed-label VBA tracing and with
+explicit loaded-project compilation alone, both without a native observer. The
+first proves all26 callback stages return; the second injects no VBA. Both close
+normally, preserve settings/package files and pass delayed Excel audits. Neither
+reproduces the failure or proves a repair; compilation versus timing remains
+unresolved. No compile-before-use operator contract is introduced. Full reusable
+and replay acceptance remain open; exact diagnostic limits are in Assignment evidence.
+
 Next investigate the native failures and verify current shared-observation
 regressions, full reusable171 and independent replay37. Do not repeat full runs
 merely to obtain a pass. Earlier worksheet-candidate passes do not prove this

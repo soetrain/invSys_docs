@@ -79,6 +79,13 @@ diagnostic evidence, not product RED, desktop error5, repaired behavior or full
 reusable acceptance. No control contract or runtime package changes in this
 checkpoint. Exact records and limitations are in the Assignment evidence file.
 
+Further bounded prefixes pass with unsaved fixed-label VBA tracing and with
+explicit loaded-project compilation alone, without a native observer. All26 traced
+stages return; the compilation-only run injects no VBA. Normal cleanup, preserved
+settings/packages and delayed audits pass. These do not establish a repair, cold
+uninstrumented acceptance or a compile-before-use operator requirement. The
+existing control contract and unresolved full reusable status remain unchanged.
+
 Architecture v4.11 D18's catalog22 controls PRODUCTION_PROCESS_WORKSHEET_SEND,
 PRODUCTION_PROCESS_WORKSHEET_ADD_ITEM and PRODUCTION_PROCESS_WORKSHEET_RETRIEVE
 are implemented through their actual Operations form handlers. Owner is
