@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.102. Last reviewed: 2026-09-30 UTC, worksheet instruction regressions and bounded visible recheck GREEN.
+Version 1.103. Last reviewed: 2026-10-01 UTC, worksheet UOM regressions GREEN; comprehensive coverage pending.
 
 Catalog22 now defines109 global controls and observes48/68 constructed Production
 buttons. The three Process worksheet handlers are implemented and pass595/595
@@ -71,8 +71,15 @@ preservation, normal cleanup and delayed audits. The first standalone How-To ima
 is blank and excluded despite behavioral GREEN. One bounded recheck retains105
 and supplies six reviewed usable captures, including How-To and all five matches
 with zero extras and a local-only conclusion. The original blank's cause remains
-undetermined; no repair is claimed. UOM staging, public Close and paired paths
-follow on the frozen candidate.
+undetermined; no repair is claimed. UOM staging264, public Close61 and paths84 retain
+all prior ordered checks, five compiles, preservation, normal cleanup and delayed
+audits. Two staging, three public-Close and six path captures are reviewed. Reopening
+retains the saved owner/custom draft; OPENED/REUSED match with zero extras and an
+explicit local-only conclusion. An incompatible initial path invocation stopped
+before behavioral testing and is excluded. The enumerated shared-observation
+regressions on this frozen candidate are complete. Next specify pending Ingredients
+Assignment observations from the owner-boundary audit under D18, then establish
+packaged actual-handler RED. No new control registration is claimed by this checkpoint.
 No promotion or human acceptance.
 Exact evidence: `tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.
 The prerequisite history below retains its own frozen-candidate counts.
@@ -1006,11 +1013,15 @@ not silently excluded because Run - List is the Release 1 proving path.
    from a matching status that may already have existed. Retain correlation even
    when processing/projection verification fails after queue acceptance.
 2. RefreshReusableDesignLists reads four Process/Recipe projections and fills
-   lists. The current handlers unconditionally display a refreshed status after
-   it returns. A future REFRESHED observation must come from the owning read's
-   supported result contract; status text alone is not proof that every source
-   was available. Do not add repair/publication or canonical authority reads to
-   Viewer to compensate for missing evidence.
+   five displayed lists. Architecture v4.11 D18, "Production designer load/refresh
+   observations," explicitly limits catalog19 REFRESHED to the existing local
+   routine returning. Bridge failure and a valid empty result can both yield
+   Empty; neither status wording nor REFRESHED certifies source availability,
+   freshness or completeness. This supersedes the audit's earlier future-read
+   wording; do not infer a stronger read contract from it. Changing that algorithm
+   or adding availability evidence requires its own governing decision and tests.
+   Do not add repair/publication or canonical authority reads to Viewer to
+   compensate for missing evidence.
 3. Requirement/output/instruction edits, Recipe nodes/connections, output
    regulation and alternatives have distinct local-draft and persistence
    boundaries. Map actions to those actual boundaries before assigning outcomes;
@@ -1065,9 +1076,9 @@ No runtime
 tracking or catalog mutation occurs. Private source-only census/verification
 artifacts are ignored; this reviewed record contains no operational values.
 
-Use the existing registered-control candidates to finish the remaining acceptance
-gates under the user's attended-desktop arrangement; stop the goal if desktop
-error5 returns. For broader implementation, review
+The frozen worksheet candidate's enumerated regression gates are complete; do not
+repeat unchanged GREEN gates without a new change, failure or unresolved concern.
+Stop the goal if desktop error5 returns. For broader implementation, review
 the grouped local-edit/selection, lifecycle/queue, worksheet/Config, run/inventory
 and launcher/context owners from this census; specify complete owner facts and
 focused packaged tests before implementing each group. Do not substitute the

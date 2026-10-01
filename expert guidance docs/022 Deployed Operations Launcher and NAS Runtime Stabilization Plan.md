@@ -80,10 +80,18 @@ How-To image is blank and excluded despite behavioral GREEN. One bounded recheck
 retains105 and supplies six reviewed usable captures, including standalone How-To
 and all five matched steps with zero extras in the local-only conclusion. The
 original blank remains excluded; its cause is undetermined, with no repair claim.
-Next complete UOM staging, public Close and paired paths on the frozen candidate.
+UOM staging264, public Close61 and paired paths84 now retain all prior ordered
+checks, five compiles, preservation, normal cleanup and clean delayed audits.
+Two staging, three public-Close and six paired-path captures are reviewed. Public
+reopening retains the saved owner and custom draft; the two-step comparison matches
+OPENED/REUSED with zero extras and an explicit local-only conclusion. An incompatible
+initial path invocation stopped before behavioral testing and remains excluded.
+The enumerated shared-observation regressions on this frozen candidate are complete.
+Next specify the pending Ingredients Assignment controls from the owner-boundary
+audit under D18, then establish packaged actual-handler RED before implementation.
 Preserve the595 checks and their documented
 closure mapping. No promotion, desktop-error5, crash-repair or human-acceptance
-claim. Exact evidence and pending gates:
+claim. Exact evidence and remaining coverage:
 `tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.
 
 Completed picker prerequisite (historical frozen candidate): Core Process picker
