@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.364 (Ingredients Assignment initial packaged RED; implementation pending)
+**Version:** 1.365 (Ingredients Assignment baseline and Save companion RED; implementation pending)
 
 Next Slice4be group: Architecture v4.11 D18's Ingredients Assignment refinement
 specifies catalog23's seven buttons and two deliberate list selections (section8.3).
@@ -13,8 +13,13 @@ Initial packaged Assignment RED is103 PASS/246 FAIL/349, with all42 shared check
 and all nine existing-action behavior checks passing. Failures are catalog11,
 missing observations168 and context/re-entrancy67. Five compiles, normal cleanup,
 preservation and delayed audit pass; two failed fixtures are excluded. Complete
-submission-failure, Save guard, denial, nesting and optional/navigation policy
-tests before implementation. Evidence:
+Save guard/post-yield loss, denial, nesting and optional/navigation policy
+tests before implementation. Save companion RED89 now passes59/fails30: all42
+shared checks and five actual write/application boundaries pass; missing Assignment
+facts fail. Five compiles, normal cleanup, preservation and delayed audit pass.
+An earlier duplicate-probe compile failure and its forced empty-fixture cleanup
+remain excluded; corrected-run closure needed no intervention. Runtime is unchanged.
+Evidence:
 `tests/integration/plan022_slice4be_production_assignment_results.md`.
 
 Architecture v4.11 D18's catalog22 controls PRODUCTION_PROCESS_WORKSHEET_SEND,

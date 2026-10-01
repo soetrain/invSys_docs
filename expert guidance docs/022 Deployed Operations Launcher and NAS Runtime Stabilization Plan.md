@@ -20,8 +20,14 @@ and350 valid script parses. Exact evidence:
 `tests/integration/plan022_slice4be_production_assignment_results.md`.
 
 Complete the protecting suite before runtime edits: exact owning submission/failure
-facts, Save's guards and post-yield loss, denial, nested entry, optional tracking and
-navigation policy still need focused RED. Preserve all349 baseline checks.
+facts now have companion RED89 (59 PASS/30 FAIL). All42 shared checks and five
+real write/application boundaries pass; failures are missing Assignment facts.
+Five compiles, normal cleanup, preservation and delayed audit pass. A duplicate
+fault-probe installation failed compile and required termination of the verified
+empty fixture after Quit did not exit; that attempt remains excluded. The corrected
+run needed no intervention. Static metrics remain unchanged;351 scripts parse.
+Save's guards/post-yield loss, denial, nested entry, optional tracking and navigation
+policy still need focused RED. Preserve all349 baseline and89 companion checks.
 Protect shared alternatives, exact Process/version selection, unchanged
 read/parse/next-version behavior, missing/duplicate/no-match refusals, empty Clear,
 pre-save local replacement, captured context/current capability, re-entrancy and

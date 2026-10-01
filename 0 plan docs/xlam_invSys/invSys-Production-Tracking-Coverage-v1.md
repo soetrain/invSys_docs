@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.104. Last reviewed: 2026-10-01 UTC, Ingredients Assignment initial packaged RED; implementation pending.
+Version 1.105. Last reviewed: 2026-10-01 UTC, Ingredients Assignment baseline and Save companion RED; implementation pending.
 
 The next group is Architecture v4.11 D18's Ingredients Assignment refinement:
 seven constructed buttons plus two deliberate list Click handlers, catalog23.
@@ -9,9 +9,14 @@ the observation definition follows approved semantic inheritance. Initial packag
 RED349 is103 PASS/246 FAIL: all42 shared and nine existing-action behavior checks
 pass; failures are catalog11, observations168 and context/re-entrancy67. Five compiles,
 normal cleanup, preservation and delayed audit pass. Two fixture failures are
-excluded. Complete owner-submission/failure, Save guard, denial, nested-entry and
-optional/navigation-policy tests before runtime implementation. Static retains
-all runtime metrics and350 valid script parses. Exact evidence:
+excluded. Save companion RED89 is59 PASS/30 FAIL: all42 shared checks and five
+real write/application boundaries pass; missing Assignment facts fail. Five compiles,
+normal cleanup, preservation and delayed audit pass. Its initial duplicate-probe
+compile failure required termination of the verified empty test process after Quit
+did not exit, and remains excluded. Corrected-run closure needed no intervention.
+Complete Save guard/post-yield loss, denial, nested-entry and optional/navigation-policy
+tests before runtime implementation. Static retains all metrics and351 script parses.
+Exact evidence:
 `tests/integration/plan022_slice4be_production_assignment_results.md`.
 Runtime counts below therefore stay unchanged;
 do not count specification or source audit as observed controls. The two selection
