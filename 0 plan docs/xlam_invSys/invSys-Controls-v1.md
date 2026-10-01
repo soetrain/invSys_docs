@@ -1,6 +1,39 @@
 # invSys Form Controls v1
 
-**Version:** 1.385 (bounded late-observer diagnosis; acceptance unresolved)
+**Version:** 1.386 (Run observation contract specified; implementation pending)
+
+Architecture D18's Run preparation/allocation refinement specifies catalog24's
+nine existing controls, with no runtime registration or layout change yet:
+
+| ControlId suffix (`PRODUCTION_RUN_`) | Caption | Surface | Class | Local positive |
+|---|---|---|---|---|
+| SCALE | Apply Scale | Production Run - List | Command | STAGED |
+| CLEAR | Clear Run | Production Run - List | Command | STAGED |
+| LOAD | Load Recipe | Production Run - List | Command | STAGED |
+| LOADER_REFRESH | Refresh | Production Run - List | Command | REFRESHED |
+| MANAGER_REFRESH | Refresh | Production Run - List | Command | REFRESHED |
+| ALLOCATE | Apply | Production Run - List | Command | STAGED |
+| TREE_ALLOCATE | Apply | Production Run - Tree | Command | STAGED |
+| TREE_EXPAND | Expand | Production Run - Tree | Navigation | PRESENTED |
+| TREE_COLLAPSE | Collapse | Production Run - Tree | Navigation | PRESENTED |
+
+Owner is PRODUCTION_RUN_LOCAL; PROD_POST/ADMIN_MAINT and captured-context guards
+apply. The two Navigation controls default off. Apply refers to local inventory
+allocation. Preserve partial local effects and existing reusable/non-reusable
+branches without authorizing legacy fallback or an exception to unknown-column
+rules. No source references or inventory-application conclusion are permitted.
+Tree remains experimental under D15. Actual-handler RED/GREEN, full owner/policy/
+context coverage, paired paths and regressions are pending. Runtime remains
+catalog23/118 IDs and55/68 buttons; the unresolved reusable crash remains open.
+
+The Expand/Collapse packaged baseline is now98 PASS/134 expected FAIL in232 unique
+checks. Existing tree shapes, palette values and status pass; observations and
+loading/context guards remain missing. All42 prior shared checks retain GREEN
+order. Five compiles, frozen package pins, preservation, unassisted closure and
+delayed zero Excel audit pass. Three fixture attempts are excluded. Runtime/static
+metrics remain unchanged; three schemas and356 parses pass. This is the initial
+two-handler RED, not nine-control GREEN, visible evidence or human acceptance.
+See `tests/integration/plan022_slice4be_production_run_local_results.md` in code.
 
 Architecture v4.11 D18's Ingredients Assignment refinement is implemented in
 unpromoted `validation-production-assignment-01`: catalog23 adds seven buttons

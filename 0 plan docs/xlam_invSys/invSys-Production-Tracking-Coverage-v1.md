@@ -1,7 +1,22 @@
 # Production form tracking coverage audit
 
-Version 1.125. Last reviewed:2026-10-01 UTC, bounded late-observer diagnosis;
-reusable acceptance unresolved.
+Version 1.126. Last reviewed:2026-10-01 UTC, Run observation contract specified;
+runtime registration and reusable acceptance unresolved.
+
+D18 now normatively refines the nine controls in owner audit8 as catalog24,
+PRODUCTION_RUN_LOCAL. Controls1.386 lists their exact mappings. No new runtime
+registration or acceptance is claimed. Actual-handler RED begins with Tree
+Expand/Collapse; seven remaining local/read/allocation controls and the full
+context/policy/failure matrix remain required before this group can pass.
+
+Presentation-pair baseline:98 PASS/134 expected FAIL/232 unique checks. All existing
+tree shapes, palette values and statuses pass, with42 prior shared checks GREEN
+in exact order. Missing mappings/observations/loading/context guards supply RED.
+Five compiles, frozen pins, unassisted closure, preservation and delayed zero Excel
+audit pass; three fixture attempts are excluded. Static/runtime metrics are
+unchanged, with three schemas and356 parses. No new runtime registration or
+visible/human acceptance is established. Exact evidence is
+`tests/integration/plan022_slice4be_production_run_local_results.md` in code.
 
 Catalog23 now defines118 global controls and observes55/68 constructed Production
 buttons. Seven Ingredients Assignment buttons and two deliberate list Click
@@ -1313,7 +1328,8 @@ not silently excluded because Run - List is the Release 1 proving path.
 
 8. Run preparation/allocation audit (last verified2026-10-01) distinguishes the
    nine pending local/read controls from Check In, Complete Run, Next Batch and
-   Print Recall. This is source evidence, not a new approved observation contract.
+   Print Recall. D18's Run preparation/allocation refinement now owns the
+   observation contract; this item remains source evidence subordinate to it.
    Load Recipe parses scale first, then LoadReleasedReusableRecipe clears the
    prior in-memory run before validating identifiers, released graph and Process
    definitions. A subsequent refusal can therefore follow replacement/reset;

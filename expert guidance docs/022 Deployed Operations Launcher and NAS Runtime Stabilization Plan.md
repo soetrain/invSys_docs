@@ -2,6 +2,32 @@
 
 **Status:** Current corrective implementation plan
 
+Next Slice4be bounded group,2026-10-01: Architecture v4.11 D18 now specifies nine
+Run preparation/allocation observations under its approved semantic-inheritance
+rule. Catalog24 is specified, not implemented: Scale/Clear/Load, the two Refresh
+buttons, List/Tree Apply and Tree Expand/Collapse. Preserve existing branch and
+partial-local-effect semantics, D14 columns/exact keys and D15's experimental Tree
+status. All references remain empty; positive local completion cannot prove
+inventory application. Expand/Collapse are optional Navigation, default off.
+Use packaged actual handlers for focused RED before changing runtime; begin with
+the presentation pair, then cover the seven preparation/read/allocation controls
+and the complete context/policy/failure matrix. A partial baseline is not the
+nine-control GREEN gate. Separate recording/publication/three-view evidence and
+all required regressions remain open. The native reusable crash remains unresolved;
+the new group neither repairs nor supersedes that acceptance requirement.
+Runtime remains catalog23/118 IDs and55/68 buttons until implemented and verified.
+
+The first presentation-pair baseline now yields98 PASS/134 expected FAIL across
+232 unique packaged checks. Existing tree shapes, palette values and status pass;
+missing mappings/observations/loading/context guards are RED. All42 prior shared
+checks retain exact GREEN order. Five compiles, canonical frozen package pins,
+normal unassisted closure, preservation and delayed zero Excel audit pass.
+Three fixture attempts remain explicitly excluded; no runtime repair is claimed.
+Static stays280/6150/135006,9/45 dynamic calls,190 duplicates and28 non-growing caps;
+three schemas and356 script parses pass. This protects only Expand/Collapse and
+does not authorize claiming the nine-control or full-release gate complete.
+Evidence: `tests/integration/plan022_slice4be_production_run_local_results.md`.
+
 Active Slice4be continuation,2026-10-01 UTC: Ingredients Assignment implements
 Architecture v4.11 D18's approved discovered-control refinement in unpromoted
 `deploy/validation-production-assignment-01`. Catalog23 preserves1-22 and adds

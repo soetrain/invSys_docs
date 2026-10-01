@@ -517,6 +517,107 @@ workbook columns. Publication, original recording order and How-To/Diagnostic/
 Compare both require separate evidence. This records discovered controls within
 the approved contract; it does not amend authority, permissions or saved semantics.
 
+**4be.1 Run preparation and allocation observations (discovered-control refinement; implementation pending):**
+Under approved D18 semantic inheritance, catalog24 shall add these nine existing
+controls, preserving catalogs1-23 exactly. OwnerId is `PRODUCTION_RUN_LOCAL`, role
+Production, capability PROD_POST with its existing ADMIN_MAINT alternative.
+These observations preserve D14/D15 and the current algorithms; they do not
+promote the experimental Run Tree into D15 Release1 workflow acceptance.
+
+| ControlId | Existing caption | Actual handler | Class | Positive local outcome |
+|---|---|---|---|---|
+| `PRODUCTION_RUN_SCALE` | Apply Scale | `mBtnApplyBatchScale_Click` | Command | STAGED |
+| `PRODUCTION_RUN_CLEAR` | Clear Run | `mBtnLoaderClear_Click` | Command | STAGED |
+| `PRODUCTION_RUN_LOAD` | Load Recipe | `mBtnLoaderLoad_Click` | Command | STAGED |
+| `PRODUCTION_RUN_LOADER_REFRESH` | Refresh | `mBtnLoaderRefresh_Click` | Command | REFRESHED |
+| `PRODUCTION_RUN_MANAGER_REFRESH` | Refresh | `mBtnManagerRefresh_Click` | Command | REFRESHED |
+| `PRODUCTION_RUN_ALLOCATE` | Apply | `mBtnRunApplyPalette_Click` | Command | STAGED |
+| `PRODUCTION_RUN_TREE_ALLOCATE` | Apply | `mBtnRunTreeApplyPalette_Click` | Command | STAGED |
+| `PRODUCTION_RUN_TREE_EXPAND` | Expand | `mBtnRunTreeExpandAll_Click` | Navigation | PRESENTED |
+| `PRODUCTION_RUN_TREE_COLLAPSE` | Collapse | `mBtnRunTreeCollapseAll_Click` | Navigation | PRESENTED |
+
+The first six controls use surface `Operations > Production > Production Run - List`;
+the last three use `Operations > Production > Production Run - Tree`. Expand and
+Collapse follow the existing optional Navigation policy, default off. Both Apply
+controls allocate inventory locally; their palette is an inventory chooser, not
+an appearance preference. Check In, Complete Run, Next Batch, Print Recall and
+the remaining nonbutton handlers require their own owner facts and tests.
+
+Preserve the existing boundaries and limitations:
+
+- Load Recipe requires a selection and valid batch scale. Its released reusable
+  loader clears prior run state before validating the graph and Process versions.
+  A false load result is FAILED and may leave cleared or partial local state.
+  STAGED requires the owner to load successfully and finish its local control
+  refresh; it proves neither allocation, check-in nor inventory application.
+- Apply Scale keeps the 0.001%-1000% validation and refusal after any completed
+  reusable Process. Successful reusable scaling resets allocations, output keys,
+  actual outputs, check-in/completion, batch note and frozen-note state. Its
+  existing non-reusable branch reloads the selected worksheet recipe and prepares
+  output staging. Preserve that branch without introducing legacy fallback when
+  DesignsEnabled=True. No output rows prepared remains the existing local staging
+  outcome, not proof of a valid or completable run.
+- Clear Run preserves reusable reset and the five existing list clears. Its
+  non-reusable branch retains explicit chooser/generated-table cleanup and local
+  refresh. It does not acquire authority to clear inventory or unrelated data.
+  D14 unknown-column rules still govern refresh/resize/rebuild; this refinement
+  grants no exception. Missing owner surfaces cannot be reported as a completed
+  clear merely because a helper returned quietly. Existing Tree/selection state
+  is not silently repaired as part of observation work.
+- Loader Refresh retains cache reset and recipe-list refresh; Manager Refresh
+  retains its different current sequence. For a loaded reusable run, REFRESHED
+  means only that the existing local refresh finished: fail-soft source reads
+  cannot establish availability, freshness, completeness or authoritative emptiness.
+  In the non-reusable branch the declared LOCAL read-model owner must also return
+  success; a false result is FAILED even though subsequent local refresh occurs.
+  Preserve existing status/error presentation, read paths and branch differences.
+- List Apply may refresh an empty palette and select its sole row before calling
+  the allocation helper. Tree Apply directly calls that helper. Reusable allocation
+  retains quantity precedence, location validation, UOM/conversion rules and exact
+  System_Key expansion across the selected stock bucket; its successful local
+  change invalidates check-in/completion. Non-reusable allocation retains active
+  List/Tree inputs, input-source precedence, normalized-header writes, overrides
+  and synchronization. A location refusal can clear the row's existing allocation;
+  other refusals can follow mirrored input changes. Do not claim rollback or no
+  local effects. STAGED requires reaching the actual successful local boundary,
+  not merely returning from the Sub or parsing its displayed status.
+- Expand/Collapse retain their dictionary and tree-rebuild operations, including
+  current process-group behavior. PRESENTED means that local presentation routine
+  finished, including an empty tree; it does not certify inventory or allocation.
+  No additional reads, writes, navigation or workflow execution are introduced.
+
+EventCode is ControlId + `_` + OutcomeCode. REQUESTED is Info/Unknown. The declared
+positive outcomes are Info/Unchanged with respect to canonical saved authority;
+local staging and read-model effects described above remain possible. Established
+selection/input/allocation refusals are REJECTED/Warning/Unchanged. Current
+capability refusal is DENIED/Blocked/Unchanged before owner reads or mutation.
+False owner load/read results, unavailable required owner surfaces and exceptions
+are FAILED/Error/Unknown; no partial-state rollback is asserted. All source-event
+references are empty: these nine controls do not submit inventory or Designs events.
+
+Each deliberate handler entry creates one attempt/result pair with its own
+ActivityId. Helpers, loading, programmatic selection/mirroring, nested callbacks
+and per-keystroke quantity changes are not extra actions. Require the original live
+captured workbook, warehouse and session plus current capability before reads or
+mutation, and recheck after yielding boundaries before further work. Invalidation
+must not retarget or record under a replacement context. Optional disabled,
+older-policy-excluded or unavailable tracking cannot block an authorized action.
+Keep existing operator messages and fixed tracking-unavailable guidance; persist
+only fixed redacted facts, never input values, design identities, item codes,
+System_Keys, quantities, locations, UOMs, paths, raw errors or status text.
+
+Only the exact control's declared positive outcome establishes CommandCompleted.
+REQUESTED/REJECTED/DENIED/FAILED cannot conclude; CONFIRMED, VALIDATED, COMPLETED
+and APPLIED are unsupported. Empty references cannot establish SourceEventsApplied.
+D13 requires actual packaged-handler RED/GREEN for all nine controls, retained
+branch/partial effects, exact-key planning, unknown columns, loading/nested
+suppression, binding and yield guards, optional policy, redaction and immutable
+older records. Separate recording, publication, Event Detail and independent
+How-To/Diagnostic/Compare tests must distinguish local completion from inventory
+application. Compile/layout/static/live-role/full-chain/reusable gates remain
+required. Discovery does not authorize changing a preserved algorithm: any
+contradiction must be resolved under architectural precedence before implementation.
+
 **4be.1 Ingredients Assignment observations (discovered-control refinement; acceptance pending):**
 Under the approved D18 semantic-inheritance, comprehensive-coverage and owner-fact
 rules, catalog23 adds the following nine existing controls, preserving catalogs1-22
