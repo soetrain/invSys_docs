@@ -517,7 +517,7 @@ workbook columns. Publication, original recording order and How-To/Diagnostic/
 Compare both require separate evidence. This records discovered controls within
 the approved contract; it does not amend authority, permissions or saved semantics.
 
-**4be.1 Check In observation (discovered-control refinement,2026-10-01; implementation and acceptance pending):**
+**4be.1 Check In observation (discovered-control refinement,2026-10-01; catalog and handler integrated, broader acceptance pending):**
 Under approved D18 semantic inheritance, catalog25 shall add the existing
 `PRODUCTION_RUN_CHECK_IN` Command, caption `Check In`, actual handler
 `frmProduction.mBtnManagerCheckIn_Click`, owner `PRODUCTION_RUN_LOCAL`, role

@@ -1,6 +1,34 @@
 # invSys Form Controls v1
 
-**Version:** 1.415 (Check In observation specified; packaged RED77/42)
+**Version:** 1.416 (Check In catalog/handler focused GREEN; broader acceptance pending)
+
+Unpromoted activity02 implements catalog25 `PRODUCTION_RUN_CHECK_IN` and its actual
+click-handler observation. The owner returns this attempt's explicit local outcome;
+previous checked state and status text do not supply success. Reusable/worksheet
+success, refusal after success, missing selection, nesting/loading and missing
+columns pass the focused193-check gate after RED127/60 and warning RED192/1. All127 prior catalog
+definitions remain identical; only STAGED is a positive terminal, and nonempty
+source references are rejected. Button wiring is64/68; this is not release acceptance.
+The five changed compiled components preserve278 others. Cold startup/five compiles,
+shared42, owner/data preservation and normal cleanup/delayed zero audit pass.
+Smoke86 and layout18 requested page/size pairs pass; six empty-surface captures
+were individually reviewed. Static290/6175/135519,9/45 calls,190 duplicates and28
+non-growing caps pass, with three schemas/374 parses. The new behavior adds five
+net runtime lines and removes the superseded single-caller validation-only method.
+Broader interruption/permission/policy/fault and recording/publication/reader gates,
+populated/long-value and human acceptance remain open. RUN-SCALE-01/RUN-UI-01 remain
+pending approval. Pre-observation owner baselines must retain their owner and
+no-redirection protections while replacing obsolete no-record expectations explicitly.
+
+A real full-chain regression exposed a tracking warning replacing the owner status.
+The focused fault test proves the correction preserves both success and warning,
+without changing typed outcomes or writing false records. RED/GREEN captures were
+reviewed; activity02 layout captures are byte-identical to the six reviewed images.
+Activity02 restores full chain32/32, live-role48/48 and Create Warehouse15/15;
+fresh smoke86/layout18 and preservation/unassisted cleanup/delayed zero audits pass.
+The first candidate's chain failure remains recorded. Broader acceptance is pending.
+
+Pre-implementation RED record:
 
 Architecture v4.11 D18 specifies catalog25 `PRODUCTION_RUN_CHECK_IN`, caption
 `Check In`, handler `frmProduction.mBtnManagerCheckIn_Click`, Production Run - List,

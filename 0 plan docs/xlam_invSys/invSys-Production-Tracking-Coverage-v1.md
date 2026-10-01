@@ -1,7 +1,28 @@
 # Production form tracking coverage audit
 
-Version 1.155. Last reviewed:2026-10-01 UTC, Check In observation specified, RED77/42;
+Version 1.156. Last reviewed:2026-10-01 UTC, Check In catalog/handler focused GREEN;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Current unpromoted activity02: catalog25,64/68 buttons wired. Check In's focused193
+checks pass after RED127/60 and warning RED192/1; all prior127 catalog definitions are preserved, while
+only STAGED establishes local CommandCompleted and source references remain empty.
+Typed owner facts distinguish this attempt from prior checked state. Cold startup,
+five compiles/shared42, preservation, smoke86 and layout18 page/size pairs pass;
+six empty-surface captures were reviewed. Static290/6175/135519,9/45 calls,190
+duplicates,28 non-growing caps, three schemas and374 parses pass. Interruption,
+policy/fault, publication/independent readers and broader acceptance remain pending.
+Pre-observation no-record assertions must evolve with the specified observation;
+owner/no-redirection protections cannot be weakened or claimed rerun unchanged.
+The detailed List/Tree Apply rows below correct stale Pending labels against their
+existing typed action calls and previously recorded catalog24 evidence. This is a
+documentation-status correction, not new runtime behavior or a new D13 claim;
+their wider acceptance gaps remain open.
+Activity02 restores chain32/32, live-role48/48 and Create Warehouse15/15 after the
+tracking-warning regression, with fresh smoke86/layout18, preserved state and
+normal cleanup/delayed zero audits. Six layout captures match their reviewed
+predecessors byte-for-byte; visible fault RED/GREEN proves both messages are kept.
+
+Pre-implementation record:
 
 Architecture D18 specifies catalog25 PRODUCTION_RUN_CHECK_IN under approved
 semantic inheritance. Runtime remains catalog24 with63/68 integrated buttons.
@@ -1579,17 +1600,17 @@ from permission to stage or export a catalog worksheet.
 | `btnLoaderLoad` | Load Recipe | `mBtnLoaderLoad_Click` | `PRODUCTION_RUN_LOAD`: catalog24 focused checks and independent paths87 GREEN; full acceptance pending |
 | `btnLoaderRefresh` | Refresh | `mBtnLoaderRefresh_Click` | `PRODUCTION_RUN_LOADER_REFRESH`: catalog24 focused checks and independent paths167 GREEN; full acceptance pending |
 | `btnManagerApplyOutput` | Complete Run | `mBtnManagerApplyOutput_Click` | Pending |
-| `btnManagerCheckIn` | Check In | `mBtnManagerCheckIn_Click` | Pending |
+| `btnManagerCheckIn` | Check In | `mBtnManagerCheckIn_Click` | `PRODUCTION_RUN_CHECK_IN`: catalog25, focused193 GREEN; interruption/policy/reader and full acceptance pending |
 | `btnManagerNext` | Next Batch | `mBtnManagerNext_Click` | Pending |
 | `btnManagerPrint` | Print Recall | `mBtnManagerPrint_Click` | Pending |
 | `btnManagerRefresh` | Refresh | `mBtnManagerRefresh_Click` | `PRODUCTION_RUN_MANAGER_REFRESH`: catalog24 focused checks and independent paths167 GREEN; full acceptance pending |
-| `btnRunApplyPalette` | Apply | `mBtnRunApplyPalette_Click` | Pending |
+| `btnRunApplyPalette` | Apply | `mBtnRunApplyPalette_Click` | `PRODUCTION_RUN_ALLOCATE`: catalog24 handler integrated; prior worksheet-owner257 GREEN; RUN-UI-01 and broader acceptance pending |
 
 ### Production Run - Tree (3)
 
 | UI control | Caption | Actual handler | Tracking ID/status |
 |---|---|---|---|
-| `btnRunTreeApplyPalette` | Apply | `mBtnRunTreeApplyPalette_Click` | Pending |
+| `btnRunTreeApplyPalette` | Apply | `mBtnRunTreeApplyPalette_Click` | `PRODUCTION_RUN_TREE_ALLOCATE`: catalog24 handler integrated; prior worksheet-owner257 GREEN; RUN-UI-01/Run Tree and broader acceptance pending |
 | `btnRunTreeCollapseAll` | Collapse | `mBtnRunTreeCollapseAll_Click` | Catalog24; focused GREEN; broader acceptance pending |
 | `btnRunTreeExpandAll` | Expand | `mBtnRunTreeExpandAll_Click` | Catalog24; focused GREEN; broader acceptance pending |
 

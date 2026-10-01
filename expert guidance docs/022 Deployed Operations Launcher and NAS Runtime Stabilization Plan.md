@@ -2,6 +2,33 @@
 
 **Status:** Current corrective implementation plan
 
+Check In observation integration,2026-10-01 UTC: unpromoted activity02 implements
+catalog25 and current-attempt owner outcomes through the actual click handler.
+Expanded RED127/60 and tracking-warning RED192/1 become193/193 GREEN, preserving shared42 and all127 prior
+catalog definitions. Only STAGED is positive; unsupported outcomes/nonempty source
+references are rejected. Prior checked state cannot turn a new refusal into success.
+Cold startup/five compiles, five intended compiled changes/278 preserved components,
+settings/authority/package preservation, normal cleanup and delayed zero audits pass.
+Smoke86 and layout18 requested page/size pairs pass; six empty-surface captures
+were reviewed. Static290/6175/135519,9/45 calls,190 duplicates and28 non-growing caps,
+three schemas/374 parses pass. Controls1.416/coverage1.156 record64/68 button wiring.
+This is an integration checkpoint, not completed Slice4be or user acceptance.
+Next retain the149/108/278 owner protections while explicitly replacing obsolete
+no-observation assertions with the specified captured-context journal expectations;
+add permission/policy/fault and broader refusal cases through actual handlers.
+Recording/publication/independent Action Path readers and remaining wider gates
+remain required. RUN-SCALE-01/RUN-UI-01 remain unapproved.
+
+The first full chain failed because optional tracking failure replaced successful
+Check In status. The one-line correction retains owner wording before appending
+the warning, without using status for outcome classification. The focused fault
+case, preservation and visible RED/GREEN proof pass. Activity02 restores the full
+chain32/32, live-role48/48 and Create Warehouse15/15, retaining exact prior ordered
+PASS identities. Fresh smoke86/layout18 also pass; all six layout captures match
+the reviewed originals byte-for-byte. Settings/packages/tracked reports, normal
+cleanup and delayed zero audits pass. The initial chain failure remains recorded;
+it is not hidden by the successful retry. Broader Slice4be acceptance remains open.
+
 Check In observation refinement,2026-10-01 UTC: Architecture v4.11 D18 now
 specifies catalog25 `PRODUCTION_RUN_CHECK_IN` under approved semantic inheritance.
 Its sole positive STAGED means this attempt's local validation/staging and refresh,
