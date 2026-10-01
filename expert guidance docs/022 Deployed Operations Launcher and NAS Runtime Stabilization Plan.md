@@ -2,6 +2,39 @@
 
 **Status:** Current corrective implementation plan
 
+Check In guard integration,2026-10-01 UTC: unpromoted guards02 passes278/278 after
+RED219/59, preserving every ordered check/PASS and shared42. The existing action
+context class now supports binding for validation without starting an observation.
+The operator wrapper requires current Production/Admin permission and carries
+continuation through the nine tested external-allocation/worksheet read returns.
+All18 sign-out and same-session permission-loss cases stop further reads/mutations,
+retain state from the interruption boundary, show refusal and restore guards.
+Five instrumented compiles, authority/operator/package/settings preservation,
+normal unassisted closure and delayed zero native audit pass. Cold startup/five
+compiles pass;279 of283 compiled components are unchanged from the pre-guard baseline.
+Guards02 restores the original allocation-total read order after live reads and
+retains281 of283 compiled components from guards01. Static evidence is
+290 components/6175 procedures/135506 lines,9 literal/45 unresolved calls,
+190 duplicate candidates and28 non-growing caps; three schemas/370 parses pass.
+Three principal captures retain selection guidance/heading alignment; clipping,
+refusal-specific captures, routed-input and closed-book cases remain open. The
+routed requirements loop itself is unchanged. Check In observation/catalog,
+human acceptance and full reusable native acceptance remain unresolved. See
+`tests/integration/plan022_slice4be_production_check_in_results.md` in the code repo
+for exact candidates, gate results and remaining requirements.
+Guards02 additionally retains chain32/32, live roles48/48, Create Warehouse15/15,
+smoke86/86 and six-page geometry/native transitions. Ordered prior checks,
+settings/packages/reports, normal closure and delayed zero native audits pass.
+Six geometry captures are reviewed; only two actual sizes are demonstrated because
+minimum/default clamp together. These gates do not replace full populated layout
+or the separate full reusable171/replay37 and ordinary run-only67 native evidence.
+Guards02 retains all503 ordered Run-local results445 PASS/58 known Scale failures,
+shared42,33 owner cases and seven native closed-workbook handlers. Five compiles,
+preservation, normal cleanup and delayed zero audit pass; no new regression is
+observed. The58 Scale failures remain open under their pending contract decision.
+Guards02 worksheet-owner257 retains all ordered passes with five compiles,
+preservation, normal unassisted cleanup and delayed zero native audit.
+
 Check In guard baseline,2026-10-01 UTC: frozen correctness03 retains103 prior
 passes but expanded permission115 returns108 PASS/7 FAIL. The same operator Click
 handler enters reusable and worksheet owners without current Production/Admin
@@ -14,8 +47,8 @@ state changed before an interruption. Tests do not register Check In observation
 Capability loss within the same session is separately proved at all nine reads:
 final278 checks return219 PASS/59 FAIL, preserving prior ordered results/passes.
 All18 interruption effects and authorization restoration pass, with five compiles,
-normal closure, preservation and delayed zero audit. Implement current permission
-and continuation guards against this RED; keep routed upstream-input/closed-book
+normal closure, preservation and delayed zero audit. The integration above resolves
+the59 failures from this RED; keep routed upstream-input/closed-book
 coverage and observation outcomes explicitly open. Architecture v4.11 remains
 the normative contract; no exception is proposed.
 Guard RED static evidence retains290 components/6174 procedures/135482 lines,

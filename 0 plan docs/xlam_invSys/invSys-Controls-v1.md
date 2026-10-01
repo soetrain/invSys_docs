@@ -1,6 +1,31 @@
 # invSys Form Controls v1
 
-**Version:** 1.410 (Check In permission/read-return RED; acceptance pending)
+**Version:** 1.411 (Check In entry/read guards GREEN; acceptance pending)
+
+Unpromoted guards02 passes278/278 packaged Check In checks after RED219/59,
+retaining every prior ordered check/PASS and shared42. Current Production/Admin
+permission is required before owner entry; sign-out and same-session capability
+loss at the nine protected read returns stop further reads/changes and visibly
+refuse continuation. Guards restore, while earlier completed local changes are
+retained. No Check In observation is registered. Five compiles, preserved authority,
+operator/package bytes and settings, normal closure and delayed zero native audit
+pass. Three reviewed principal captures retain selection guidance and heading
+alignment; long values still clip and refusal-specific captures remain pending.
+Routed upstream-input and closed-workbook interruptions, observation outcomes,
+full populated layout and human acceptance remain open. Architecture D18 is
+unchanged; this implements its existing rule for the tested boundaries.
+The allocation total is read after live inventory reads, preserving the original
+validation order. Guards01 and the corrected guards02 each pass278/278; their
+exact build/regression evidence remains distinguished in the integration record.
+Guards02 also retains chain32/32, live roles48/48, Create Warehouse15/15,
+smoke86/86 and six-page geometry/native transitions with preservation, normal
+closure and delayed zero native audits. Six geometry captures were reviewed;
+minimum/default are clamped to the same actual size. Populated acceptance remains open.
+Guards02 retains all503 ordered Run-local results:445 PASS/58 unchanged known Scale
+failures,33 owner cases and seven native closed-workbook handler receipts, with
+preservation, normal cleanup and delayed zero audit. The Scale failures remain open.
+Its worksheet-owner regression retains257/257 ordered checks with five compiles,
+preservation, normal cleanup and delayed zero audit.
 
 Packaged Check In remains unobserved. On unchanged correctness03, the115-check
 baseline preserves all103 prior passes but exposes seven permission failures:
@@ -12,7 +37,7 @@ these tests enforce that contract rather than establish a new capability or
 activity catalog entry. The final278-check expansion is219 PASS/59 FAIL: all18
 real read-return interruptions (sign-out and capability loss with the same signed-in
 context) are proved, with authorization bytes restored and prior passes retained.
-Guard implementation and GREEN remain pending; routed-input and closed-workbook
+The integration above resolves those59 failures; routed-input and closed-workbook
 interruption cases and observation acceptance are not established by this fixture.
 
 Unpromoted correctness01 passes94/94 after expanded RED73/21, retaining prior

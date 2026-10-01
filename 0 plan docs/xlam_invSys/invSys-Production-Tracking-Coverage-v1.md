@@ -1,15 +1,36 @@
 # Production form tracking coverage audit
 
-Version 1.150. Last reviewed:2026-10-01 UTC, Check In permission/read-return RED;
+Version 1.151. Last reviewed:2026-10-01 UTC, Check In entry/read guards GREEN;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Guards02 retains the278/278 GREEN established by guards01 after RED219/59, with ordered
+checks/PASS and shared42. Typed validation-only context binding checks current
+Production/Admin permission before owner entry and carries continuation through
+the nine protected reads. All18 sign-out/same-session permission interruptions
+stop later reads and owner/projection changes, preserve boundary state, show
+refusal and restore guards. Five compiles, preservation, normal closure and delayed
+zero native audit pass. Catalog24 and63/68 button wiring remain unchanged. Routed
+upstream-input and closed-workbook interruption coverage and Check In observations
+remain open; the routed requirements loop itself is not changed by this correction.
+Guards02 restores the original allocation-total read order after the live inventory
+reads. Its five compiles, preservation, normal closure and delayed audit also pass.
+Guards02 retains chain32/live48/Create15/smoke86 and six-page geometry/native
+transitions, with exact prior ordered checks, preservation, normal closure and
+delayed zero native audits. Geometry captures are reviewed; populated acceptance
+and the separate reusable native failures remain open.
+Guards02 also retains all503 ordered Run-local results445/58,33 owner cases,
+shared42 and seven native closure handlers, with preservation/normal cleanup and
+delayed zero audit. The58 known Scale failures remain unresolved and unapproved.
+Guards02 worksheet-owner257 also retains every ordered PASS, with five compiles,
+preservation, normal cleanup and delayed zero audit.
 
 Unchanged correctness03 preserves prior103 GREEN while expanded115 yields108
 PASS/7 permission failures. Nine actual inventory/default-location/ingredient
 read-return sign-outs then yield154 PASS/33 FAIL/187, with prior order/PASS,
 five compiles, preservation, normal closure and delayed zero audits. Post-read
 snapshots protect state at the interruption boundary; they do not require rolling
-back changes that completed before it. Current-permission and continuation guard
-implementation remains pending under the existing D18 rule, with no new catalog.
+back changes that completed before it. These failures protect the guard integration
+above under the existing D18 rule, with no new catalog.
 The final278 checks return219 PASS/59 FAIL after adding isolated capability loss
 at all nine read returns. All18 interruptions take effect, including unchanged
 signed-in context with fresh Production/Admin denial; authorization bytes restore.
@@ -32,7 +53,7 @@ Correctness02 retains257/257 worksheet owner/interruption checks. Correctness03
 corrects only the two-batch test fixture's blank identity by selecting one real
 Domain entity; chain32/32, live roles48/48 and Create Warehouse15/15 pass in exact
 prior order with preservation and delayed zero audit. The separate native reusable
-failures and current-permission/post-yield Check In guards remain unresolved.
+failures and comprehensive Check In interruption coverage remain unresolved.
 Correctness03 smoke86/86 and six-page layout18 requested pairs/six maximized pages
 pass, with six reviewed empty-form captures and delayed zero audits; no populated
 long-value or human acceptance is inferred.
