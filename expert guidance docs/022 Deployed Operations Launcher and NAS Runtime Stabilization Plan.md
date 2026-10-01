@@ -81,6 +81,19 @@ unchanged;365 repository scripts parse. Preserve138 with the earlier baselines;
 continue worksheet branches, remaining read failures and paired paths before
 claiming the nine-control GREEN gate or broader Release1 acceptance.
 
+Worksheet allocation RED now yields156 PASS/116 expected FAIL/272 checks through
+the actual List/Tree handlers on their respective pages with an active decoy.
+Twelve ordinary cases retain input precedence, header-based writes, mirrored
+inputs, partial refusal effects and synchronized overrides. All16 cases preserve
+unknown columns/formula, exact identity and canonical inventory. Four missing-table/
+QUANTITY cases falsely display success; the other112 failures are missing tracking.
+Forty-two shared GREEN checks, five compiles, frozen pins/preservation, unassisted
+closure and delayed zero Excel audit pass. Runtime/static metrics remain unchanged;
+366 repository scripts parse. Preserve272 with earlier baselines. Worksheet load/
+clear/refresh and remaining source-failure/path evidence stay open. The protected
+headless Core catalog/outcome/reference/terminal implementation can proceed before
+the remaining form-owner changes; that alone will not complete the nine-control gate.
+
 Active Slice4be continuation,2026-10-01 UTC: Ingredients Assignment implements
 Architecture v4.11 D18's approved discovered-control refinement in unpromoted
 `deploy/validation-production-assignment-01`. Catalog23 preserves1-22 and adds
