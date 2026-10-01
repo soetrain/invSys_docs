@@ -2,7 +2,37 @@
 
 **Status:** Current corrective implementation plan
 
-Latest implementation checkpoint,2026-10-01 UTC: unpromoted
+Latest checkpoint,2026-10-01 UTC: unpromoted
+`deploy/validation-production-run-binding-02` also guards worksheet Apply Scale
+before its load owner. With Designs explicitly enabled through Admin Settings,
+nine actual-handler cases move120 PASS/65 FAIL to122 PASS/63 FAIL over185 checks.
+Both owner-retargeting checks become GREEN; all120 prior PASS checks survive,
+including existing partial scaling after a real unavailable Design/BOM read.
+Validation, no legacy fallback, unknown columns/exact identity and canonical source
+preservation pass. Five compiles, preservation, normal cleanup and delayed zero
+Excel audit pass. Positive Design/BOM rebuild and Designs-disabled coverage remain
+open; do not silently substitute the reusable loader for this owner. The63 absent
+observations keep the full gate RED and coverage at55/68. RUN-UI-01 is still pending.
+Build/cold compile and source comparison show only one form changed; all274 other
+components and all string literals are preserved. Static metrics and28 caps do
+not grow; three schemas and368 repository PowerShell parses pass.
+
+The same candidate retains all136 Clear/Refresh identities/order/results,
+94 PASS/42 missing-observation FAIL, including five prior binding GREEN checks.
+Five compiles, preservation, unassisted closure and delayed zero Excel audit pass.
+
+Binding02's reusable regression retains all503 identities/order/results:
+178 PASS/325 known FAIL, all33 owner cases and seven native-close receipts.
+Five compiles, preservation, normal cleanup and delayed zero Excel audit pass.
+The worksheet Scale evidence establishes an authority mismatch: its owner reads
+Design/BOM `tblDesigns`, while D15 requires released Process/Recipe projections
+when Designs is enabled. D18's branch-preservation wording cannot waive D15.
+Before owner-routing changes, explicitly reconcile the normative wording and
+any required architecture decision with the controls catalog. Do not manufacture
+a matching legacy Design fixture or count the failed read as successful staging.
+The current binding guard changes neither routing nor observed partial effects.
+
+Preceding implementation checkpoint,2026-10-01 UTC: unpromoted
 `deploy/validation-production-run-binding-01` guards worksheet Clear's captured
 owner. Its136-check owner gate moves89 PASS/47 FAIL to94 PASS/42 FAIL: five binding
 and decoy-preservation checks become GREEN, all prior PASS checks remain GREEN,

@@ -1,8 +1,32 @@
 # invSys Form Controls v1
 
-**Version:** 1.395 (Clear binding guard GREEN; Run observations remain incomplete)
+**Version:** 1.396 (Scale binding guard GREEN; Run observations remain incomplete)
 
-Latest unpromoted candidate `validation-production-run-binding-01` prevents
+Latest unpromoted candidate `validation-production-run-binding-02` also guards the
+worksheet Apply Scale owner. Nine actual-handler cases move120 PASS/65 FAIL to
+122 PASS/63 FAIL across185 identical checks: two retargeting checks become GREEN,
+all120 prior PASS checks survive. Admin Settings explicitly enables Designs for
+the fixture. Validation, existing partial scaling after an unavailable Design/BOM,
+custom columns/formulas/exact identity and canonical-source preservation pass.
+Positive Design/BOM rebuild and Designs-disabled behavior remain unverified.
+Five compiles, preservation, normal cleanup and delayed zero Excel audits pass.
+The63 missing observations keep the overall suite RED; coverage stays55/68.
+This enforces existing captured binding/D18; no routing/algorithm change or
+RUN-UI-01 approval is inferred. See the Run integration evidence in code.
+
+Binding02 also retains all136 ordered Clear/Refresh results:94 PASS/42 known
+observation FAIL, including five prior binding GREEN checks. Five compiles,
+preservation, unassisted closure and delayed zero Excel audit pass.
+
+Binding02 also preserves all503 ordered reusable results,178 PASS/325 known FAIL,
+all33 owner cases and seven native-close receipts; five compiles, preservation,
+normal closure and delayed zero Excel audit pass. Worksheet Scale's Design/BOM
+read conflicts with D15's Process/Recipe-only authority when Designs is enabled.
+D18 branch preservation is not an exception to D15. Reconcile that authority
+explicitly before routing changes; no positive legacy fixture or approval is
+inferred from this baseline.
+
+The preceding candidate `validation-production-run-binding-01` prevents
 worksheet Clear from entering another workbook/add-in owner when the captured
 workbook lacks Production. Seven actual-handler cases expand the owner baseline
 to136 checks:89 PASS/47 FAIL before the guard,94 PASS/42 FAIL after. The five binding/

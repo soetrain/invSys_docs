@@ -1,7 +1,26 @@
 # Production form tracking coverage audit
 
-Version 1.135. Last reviewed:2026-10-01 UTC, Clear binding guard verified;
+Version 1.136. Last reviewed:2026-10-01 UTC, Scale binding guard verified;
 form observation integration, RUN-UI-01 and reusable acceptance unresolved.
+
+Latest candidate `validation-production-run-binding-02` adds the same captured
+owner guard to worksheet Apply Scale. Its185 checks move120 PASS/65 FAIL to
+122 PASS/63 FAIL; two retargeting checks become GREEN and all120 earlier PASS checks
+survive. Real Admin-enabled Designs, validation, unavailable Design/BOM partial
+effects, unknown columns/formulas/exact key and canonical preservation are covered.
+Positive rebuild and Designs-disabled paths are not accepted by this evidence.
+Five compiles, preservation, normal closure and delayed zero audit pass. The63
+remaining observation failures leave coverage55/68 and the overall suite RED.
+
+Binding02's Clear/Refresh regression preserves all136 ordered results,94 PASS/
+42 existing observation FAIL, including five binding GREEN checks. Five compiles,
+preservation, normal closure and delayed zero Excel audit pass.
+
+Binding02's reusable regression retains all503 ordered results,178 PASS/325 known
+FAIL, all33 owner cases and seven native-close receipts. Five compiles, normal
+cleanup, preservation and delayed zero Excel audit pass. The observed worksheet
+Scale Design/BOM read does not satisfy D15's Process/Recipe-only authority with
+Designs enabled. D18 does not waive D15; resolve that conflict before routing work.
 
 Unpromoted `validation-production-run-binding-01` protects worksheet Clear's
 captured owner before cleanup. The seven-case owner gate changes89 PASS/47 FAIL
@@ -42,7 +61,7 @@ the new candidate, with five compiles, preservation, normal cleanup and delayed
 zero Excel audit. Broader/expanded/path gates remain open on this candidate.
 
 D18 now normatively refines the nine controls in owner audit8 as catalog24,
-PRODUCTION_RUN_LOCAL. Controls1.395 lists their exact mappings. No new form
+PRODUCTION_RUN_LOCAL. Controls1.396 lists their exact mappings. No new form
 integration or acceptance is claimed. Actual-handler RED begins with Tree
 Expand/Collapse; seven remaining local/read/allocation controls and the full
 context/policy/failure matrix remain required before this group can pass.
