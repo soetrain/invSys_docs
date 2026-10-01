@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.368 (Ingredients Assignment path evidence; broader acceptance pending)
+**Version:** 1.369 (Assignment candidate worksheet regression; broader acceptance pending)
 
 Architecture v4.11 D18's Ingredients Assignment refinement is implemented in
 unpromoted `validation-production-assignment-01`: catalog23 adds seven buttons
@@ -19,8 +19,12 @@ Excel audit pass in both runs. Invalid fixture and assisted-cleanup attempts rem
 explicitly excluded; VBA automation80010007 is not desktop error5.
 Independent Operations cold start and five-package compile also pass with normal
 closure, both candidate sets preserved and a clean delayed Excel audit.
-Existing worksheet Core188 also passes with exact prior order, five compiles,
-normal cleanup, preservation and delayed audit; full worksheet595 remains open.
+Existing worksheet Core188 and full workflow595 pass with exact prior order,
+five compiles, unassisted cleanup, preservation and delayed Excel audits.
+The full gate's initial582 PASS/13 FAIL identified obsolete catalog22 expectations
+and a malformed catalog21 fixture. Test-only correction requires catalog23 and
+exact historical controls; all595 then pass on the unchanged candidate. Fourteen
+current-catalog expectations are aligned to23/118 IDs; unrun gates remain pending.
 
 Static:280 components,6150 procedures,135006 lines, unchanged9/45 dynamic calls,
 190 duplicate bodies and28 non-growing caps; the form shrinks35 lines. Three schemas
@@ -38,11 +42,16 @@ submission, and concluded exact applied Designs evidence. REQUESTED alone fails
 completion. Five compiles, preservation, unassisted closure and delayed audit pass.
 Existing worksheet paths139 retain exact prior order with five compiles,
 preservation, unassisted closure, delayed audit and six reviewed captures,
-including the visible four-step command conclusion. Full worksheet595,
-layout, shared/live-role/
+including the visible four-step command conclusion. Layout, shared/live-role/
 full-chain/reusable regressions and human acceptance remain required. Earlier
 worksheet-candidate passes are historical, not proof for this candidate.
 Evidence: `tests/integration/plan022_slice4be_production_assignment_results.md`.
+
+Settings202 retains all prior ordered checks on the Assignment candidate,
+including the118-control editor, policy validation/authorization, cancelled saves,
+Event Detail, Action Path preferences and Admin/Operations Settings reachability.
+Five compiles, unassisted closure, preservation and delayed Excel audit pass.
+The separate Settings activity gate remains pending; no new human acceptance.
 
 Architecture v4.11 D18's catalog22 controls PRODUCTION_PROCESS_WORKSHEET_SEND,
 PRODUCTION_PROCESS_WORKSHEET_ADD_ITEM and PRODUCTION_PROCESS_WORKSHEET_RETRIEVE

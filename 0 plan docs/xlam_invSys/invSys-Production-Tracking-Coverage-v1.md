@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.108. Last reviewed:2026-10-01 UTC, Ingredients Assignment path evidence;
+Version 1.109. Last reviewed:2026-10-01 UTC, Assignment candidate worksheet regression;
 broader acceptance pending.
 
 Catalog23 now defines118 global controls and observes55/68 constructed Production
@@ -18,8 +18,12 @@ and captured continuation through processing/refresh. Each GREEN has five compil
 normal cleanup, settings/package preservation and clean delayed Excel audit.
 Independent Operations cold start and five-package compile pass, preserving both
 candidate sets with normal closure and a clean delayed Excel audit.
-Existing worksheet Core188 retains exact prior order and passes with five compiles,
-normal cleanup, preservation and delayed audit; full worksheet595 remains open.
+Existing worksheet Core188 and full workflow595 retain exact prior order and pass
+with five compiles, unassisted cleanup, preservation and delayed Excel audits.
+Full595 first exposed outdated catalog22 expectations and an invalid historical
+catalog21 fixture (582 PASS/13 FAIL). Correcting those test fixtures produces
+595/595 on the unchanged candidate. Fourteen current-catalog expectations now
+require23, with118 Admin editor controls; other unrun gates remain pending.
 Invalid fixtures/assisted cleanup remain excluded; native form dismissal is never
 counted as an invoked handler. Static is280 components/6150 procedures/135006 lines,
 with unchanged9/45 dynamic calls,190 duplicates and28 non-growing caps. The form
@@ -40,11 +44,16 @@ evidence. REQUESTED alone cannot conclude. Five compiles, preservation, unassist
 closure and delayed audit also pass.
 Existing worksheet paths139 retain exact prior order with five compiles,
 preservation, unassisted closure, delayed audit and six reviewed captures,
-including the visible four-step command conclusion. Full worksheet595,
-layout, current shared-observation/live-role/full-chain/reusable
+including the visible four-step command conclusion. Layout, current
+shared-observation/live-role/full-chain/reusable
 regressions and human acceptance are still required on this candidate. The prior
 worksheet candidate's passes below do not establish those new-candidate gates.
 Exact evidence: `tests/integration/plan022_slice4be_production_assignment_results.md`.
+
+Settings202 retains exact prior order on this candidate, including the118-control
+tracking editor and existing Production UOM routing/staging checks. Five compiles,
+unassisted closure, preservation and delayed Excel audit pass. The separate
+Settings activity gate remains pending; no new control registration is claimed.
 
 Prior worksheet checkpoint, `validation-process-worksheet-activity-03`: catalog22
 had109 IDs and48/68 observed buttons. Its three worksheet handlers passed595/595;

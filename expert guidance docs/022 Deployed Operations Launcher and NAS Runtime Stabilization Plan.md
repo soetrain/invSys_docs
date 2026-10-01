@@ -21,8 +21,13 @@ Both GREEN runs compile all five packages, close normally without intervention,
 preserve settings/packages and pass delayed Excel Application1000/1001/1002 audit.
 Independent Operations cold start and five-package compile also pass, with normal
 closure, preservation of both candidate sets and a clean delayed Excel audit.
-Existing worksheet Core188 retains exact prior order and passes with five compiles,
-normal cleanup, preservation and delayed audit; its full595 workflow remains open.
+Existing worksheet Core188 and full workflow595 retain exact prior order and pass
+with five compiles, unassisted cleanup, preservation and delayed Excel audits.
+The full gate first exposed obsolete catalog22 expectations and a catalog21
+fixture retaining later controls (582 PASS/13 FAIL). Test-only correction now
+requires catalog23 and an exact historical fixture; all595 pass without runtime
+changes or removed assertions. Fourteen current-catalog expectations are aligned
+to23, including the118-control Admin editor; their remaining gates stay pending.
 
 Static:280 components,6150 procedures,135006 lines; unchanged9/45 dynamic calls,
 190 duplicate bodies and28 non-growing caps. The form shrinks35 lines. Three schemas
@@ -50,7 +55,13 @@ Existing worksheet paths139 also retain every prior ordered check on the Assignm
 candidate, with five compiles, preservation, unassisted closure, delayed audit and
 six reviewed captures including the visible four-step command conclusion.
 
-Next verify full worksheet595 and layout,
+Settings202 also retains every prior ordered check on this candidate: the118-control
+editor, validation/authorization, cancellation/version checks, Event Detail,
+Action Path preferences, Admin close/reopen and Operations Viewer Settings pass.
+Five compiles, unassisted closure, preservation and delayed Excel audit pass.
+The separate Settings activity gate remains pending.
+
+Next verify layout,
 current shared-observation regressions, live roles, the full Release1 chain
 and reusable Production on this candidate; earlier worksheet-candidate passes do
 not prove the new candidate. Preserve349/789 and all prior accepted behavior.
