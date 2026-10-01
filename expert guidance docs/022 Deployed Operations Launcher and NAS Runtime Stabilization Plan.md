@@ -72,6 +72,12 @@ closure, preservation and clean delayed Excel audits. Layout covers pages0-4:
 the900x700 request clamps to1110x800; expanded is1350x980. Three empty Run List
 captures do not establish populated workflow, Settings page5 or human acceptance.
 
+Process/Recipe lifecycle615 also retains every prior ordered check, including
+five compiles, real Save/Release/Obsolete actions, exact references, owner faults,
+optional tracking and captured-context guards. Cleanup finishes without
+intervention; settings/packages and the delayed Excel audit pass. This adds no
+new screenshot or human-acceptance claim. Exact records are in Assignment evidence.
+
 Full reusable remains open: the original edit/export callback fails with
 RPC800706BE and native ntdll/c00000ff; an empty recovery instance requires explicit
 Quit, excluding that attempt from acceptance. A narrower edit/export diagnostic

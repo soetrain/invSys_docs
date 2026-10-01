@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.111. Last reviewed:2026-10-01 UTC, Assignment release-chain regression;
+Version 1.112. Last reviewed:2026-10-01 UTC, Assignment release-chain and lifecycle regressions;
 reusable acceptance unresolved.
 
 Catalog23 now defines118 global controls and observes55/68 constructed Production
@@ -64,6 +64,12 @@ retain exact prior checks/geometry on this candidate, with normal closure,
 preservation and clean delayed Excel audits. Layout covers pages0-4, two actual
 sizes1110x800/1350x980; the900x700 request clamps. Three empty Run List captures
 do not prove populated workflow or Settings page5 acceptance.
+
+Process/Recipe lifecycle615 retains all prior ordered checks with five compiles.
+Actual Save/Release/Obsolete actions, exact owning references, faults, optional
+tracking and captured-context guards pass. Cleanup finishes without intervention;
+settings/packages and delayed Excel audit pass. No additional screenshot or human
+acceptance is claimed. Remaining shared gates stay open; coverage counts do not change.
 
 Full reusable171/replay37 remain open. The original edit/export callback fails
 with RPC800706BE/ntdll c00000ff; explicitly quitting an empty recovery instance

@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.371 (Assignment release-chain regression; reusable acceptance unresolved)
+**Version:** 1.372 (Assignment release-chain and lifecycle regressions; reusable acceptance unresolved)
 
 Architecture v4.11 D18's Ingredients Assignment refinement is implemented in
 unpromoted `validation-production-assignment-01`: catalog23 adds seven buttons
@@ -63,6 +63,12 @@ creation15 now retain exact prior checks/geometry on this candidate, with normal
 closure, preservation and clean delayed Excel audits. Layout covers pages0-4 at
 1110x800 and1350x980; the900x700 request clamps to the default. Three empty Run List
 captures do not establish populated workflow or Settings page5 acceptance.
+
+Process/Recipe lifecycle615 retains all prior ordered checks, including five
+compiles, actual Save/Release/Obsolete actions, exact owning references, faults,
+optional tracking and captured-context guards. Unassisted closure, settings/package
+preservation and delayed Excel audit pass. No new screenshot or human acceptance
+is claimed; remaining shared gates are still open.
 
 Full reusable171/replay37 remain open after native Excel failures. The original
 edit/export callback fails with RPC800706BE/ntdll c00000ff and requires explicit
