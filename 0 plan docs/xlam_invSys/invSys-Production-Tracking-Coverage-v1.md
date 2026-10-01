@@ -1,39 +1,40 @@
 # Production form tracking coverage audit
 
-Version 1.106. Last reviewed: 2026-10-01 UTC, Ingredients Assignment policy and Save-guard RED; implementation pending.
+Version 1.107. Last reviewed:2026-10-01 UTC, Ingredients Assignment focused GREEN;
+broader acceptance pending.
 
-The next group is Architecture v4.11 D18's Ingredients Assignment refinement:
-seven constructed buttons plus two deliberate list Click handlers, catalog23.
-Controls8.3 records the exact nine mappings. Existing algorithms are preserved;
-the observation definition follows approved semantic inheritance. Initial packaged
-RED349 is103 PASS/246 FAIL: all42 shared and nine existing-action behavior checks
-pass; failures are catalog11, observations168 and context/re-entrancy67. Five compiles,
-normal cleanup, preservation and delayed audit pass. Two fixture failures are
-excluded. Save companion RED89 is59 PASS/30 FAIL: all42 shared checks and five
-real write/application boundaries pass; missing Assignment facts fail. Five compiles,
-normal cleanup, preservation and delayed audit pass. Its initial duplicate-probe
-compile failure required termination of the verified empty test process after Quit
-did not exit, and remains excluded. Corrected-run closure needed no intervention.
-Expanded companion RED245 is158 PASS/87 FAIL, retaining all89 prior results/order
-and42 shared GREENs. The156 additions pass99/fail57: denial25, unavailable notices9,
-navigation defaults2 and Save observations/guards21. Actual nested Save and
-post-append sign-out are reached. Native closure dismisses the form; no handler
-call is claimed and all six closure assertions pass. Five compiles, normal cleanup,
-preservation and delayed audit pass. The earlier automation80010007 attempt needed
-assisted cleanup and remains excluded. Static retains all metrics and352 parses.
-Finish the explicit Core outcome/source contract matrix before runtime edits;
-preserve349 baseline and245 expanded companion checks.
-Exact evidence:
-`tests/integration/plan022_slice4be_production_assignment_results.md`.
-Runtime counts below therefore stay unchanged;
-do not count specification or source audit as observed controls. The two selection
-handlers remain in the pending nonbutton count until verified implementation.
+Catalog23 now defines118 global controls and observes55/68 constructed Production
+buttons. Seven Ingredients Assignment buttons and two deliberate list Click
+handlers implement D18's approved refinement while preserving existing algorithms.
+Thirteen buttons and28 nonbutton handlers retain coverage work. Controls8.3 records
+the nine exact mappings; no layout or constructed-control wording changes.
 
-Catalog22 now defines109 global controls and observes48/68 constructed Production
-buttons. The three Process worksheet handlers are implemented and pass595/595
-focused packaged checks on `validation-process-worksheet-activity-03`. Twenty
-buttons and30 nonbutton handlers still need coverage review. The remaining gates
-below keep this implementation short of full Slice4be acceptance.
+Unpromoted `validation-production-assignment-01` passes349/349 actual-handler
+baseline and789/789 expanded companion, retaining all ordered RED identities.
+Baseline RED was103/246; final companion RED546/243 includes the Core contract
+matrix and sign-out at real read/append boundaries. The implementation protects
+exact owning Save facts, optional policy, denials, nested input, partial preparation
+and captured continuation through processing/refresh. Each GREEN has five compiles,
+normal cleanup, settings/package preservation and clean delayed Excel audit.
+Independent Operations cold start and five-package compile pass, preserving both
+candidate sets with normal closure and a clean delayed Excel audit.
+Existing worksheet Core188 retains exact prior order and passes with five compiles,
+normal cleanup, preservation and delayed audit; full worksheet595 remains open.
+Invalid fixtures/assisted cleanup remain excluded; native form dismissal is never
+counted as an invoked handler. Static is280 components/6150 procedures/135006 lines,
+with unchanged9/45 dynamic calls,190 duplicates and28 non-growing caps. The form
+shrinks35 lines; three schemas validate and353 scripts parse.
+
+Separate guide/observed recordings, publication, Event Detail, authored intent,
+How-To/Diagnostic/Compare and exact Designs application distinctions remain open.
+Layout, current shared-observation/live-role/full-chain/reusable
+regressions and human acceptance are still required on this candidate. The prior
+worksheet candidate's passes below do not establish those new-candidate gates.
+Exact evidence: `tests/integration/plan022_slice4be_production_assignment_results.md`.
+
+Prior worksheet checkpoint, `validation-process-worksheet-activity-03`: catalog22
+had109 IDs and48/68 observed buttons. Its three worksheet handlers passed595/595;
+twenty buttons and30 nonbutton handlers were pending at that checkpoint.
 
 Architecture v4.11 D18 retains local Send/Add STAGED, all-selected Retrieve
 CONFIRMED and partial/uncertain FAILED with exact Designs submission states.
@@ -104,9 +105,9 @@ audits. Two staging, three public-Close and six path captures are reviewed. Reop
 retains the saved owner/custom draft; OPENED/REUSED match with zero extras and an
 explicit local-only conclusion. An incompatible initial path invocation stopped
 before behavioral testing and is excluded. The enumerated shared-observation
-regressions on this frozen candidate are complete. Next specify pending Ingredients
-Assignment observations from the owner-boundary audit under D18, then establish
-packaged actual-handler RED. No new control registration is claimed by this checkpoint.
+regressions on that frozen candidate are complete. The current Assignment
+implementation and remaining gates are recorded above. That worksheet checkpoint
+did not register Assignment controls.
 No promotion or human acceptance.
 Exact evidence: `tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.
 The prerequisite history below retains its own frozen-candidate counts.
@@ -890,13 +891,13 @@ from permission to stage or export a catalog worksheet.
 
 | UI control | Caption | Actual handler | Tracking ID/status |
 |---|---|---|---|
-| `btnAssignAdd` | Add Acceptable | `mBtnAssignAdd_Click` | Pending |
-| `btnAssignClear` | Clear | `mBtnAssignClear_Click` | Pending |
-| `btnAssignIngredient` | Select Requirement | `mBtnAssignIngredient_Click` | Pending |
-| `btnAssignRecipe` | Select Process | `mBtnAssignRecipe_Click` | Pending |
-| `btnAssignRefresh` | Refresh | `mBtnAssignRefresh_Click` | Pending |
-| `btnAssignRemove` | Remove Row | `mBtnAssignRemove_Click` | Pending |
-| `btnAssignSave` | Save Alternatives | `mBtnAssignSave_Click` | Pending |
+| `btnAssignAdd` | Add Acceptable | `mBtnAssignAdd_Click` | `PRODUCTION_ASSIGNMENT_ADD`: catalog23 focused GREEN; paths/regressions/acceptance pending |
+| `btnAssignClear` | Clear | `mBtnAssignClear_Click` | `PRODUCTION_ASSIGNMENT_CLEAR`: catalog23 focused GREEN; paths/regressions/acceptance pending |
+| `btnAssignIngredient` | Select Requirement | `mBtnAssignIngredient_Click` | `PRODUCTION_ASSIGNMENT_REQUIREMENT`: catalog23 focused GREEN; paths/regressions/acceptance pending |
+| `btnAssignRecipe` | Select Process | `mBtnAssignRecipe_Click` | `PRODUCTION_ASSIGNMENT_PROCESS`: catalog23 focused GREEN; paths/regressions/acceptance pending |
+| `btnAssignRefresh` | Refresh | `mBtnAssignRefresh_Click` | `PRODUCTION_ASSIGNMENT_REFRESH`: catalog23 focused GREEN; paths/regressions/acceptance pending |
+| `btnAssignRemove` | Remove Row | `mBtnAssignRemove_Click` | `PRODUCTION_ASSIGNMENT_REMOVE`: catalog23 focused GREEN; paths/regressions/acceptance pending |
+| `btnAssignSave` | Save Alternatives | `mBtnAssignSave_Click` | `PRODUCTION_ASSIGNMENT_SAVE`: catalog23 focused GREEN; paths/regressions/acceptance pending |
 
 ### Production Run - List (10)
 
@@ -955,9 +956,9 @@ BuildRecipeBuilderPage has no invocation in source; BuildLayout constructs the n
 
 The source contains 34 non-button Click/Change handlers. Three belong to the
 unconstructed Recipe Builder and one to the hidden internal connection list.
-The remaining30 are reviewed below against their current helpers. These are source
-facts and required test distinctions, not new IDs, approved terminal outcomes or
-runtime acceptance. Deliberate selections still need observation contracts; text
+Of the30 applicable handlers, the two Assignment selections now have focused
+observations;28 retain coverage work. The table records current helper effects
+and required test distinctions. Other deliberate selections still need contracts; text
 changes and mirrored programmatic events must not become keystroke surveillance
 or duplicate actions under D18.
 
@@ -980,8 +981,8 @@ or duplicate actions under D18.
 | `mLstBuilderRecipes_Click` | Unconstructed Recipe Builder |
 | `mLstBuilderLines_Click` | Unconstructed Recipe Builder |
 | `mCmbLineIo_Change` | Unconstructed Recipe Builder |
-| `mLstAssignRecipes_Click` | Reads selected Process, replaces local requirements/alternatives and refreshes allowed items; same owner helper is used by Select Process button |
-| `mLstAssignIngredients_Click` | Refreshes allowed items for selected requirement; same owner helper is used by Select Requirement button |
+| `mLstAssignRecipes_Click` | `PRODUCTION_ASSIGNMENT_PROCESS_SELECT`: optional Navigation/PRESENTED, focused GREEN. Reads selected Process and replaces local requirements/alternatives; shared helper calls do not duplicate observations |
+| `mLstAssignIngredients_Click` | `PRODUCTION_ASSIGNMENT_REQUIREMENT_SELECT`: optional Navigation/SELECTED, focused GREEN. Refreshes allowed items; shared helper calls do not duplicate observations |
 | `mTxtInventorySearch_Change` | Filters inventory through RefreshInventoryList; no entered search text or per-keystroke observations |
 | `mCmbRunLocation_Change` | Mirrors Tree selection under mLoading; reusable branch refreshes controls, non-reusable branch can clear incompatible staging allocations |
 | `mCmbTreeRunLocation_Change` | Mirrors List selection under mLoading with the same two branches; test one deliberate action, not two observations |
@@ -1070,7 +1071,7 @@ not silently excluded because Run - List is the Release 1 proving path.
 6. Close and public/repeated launcher behavior must preserve captured-workbook
    reuse and invalidate observation/recording context correctly. A visible control
    or an enabled legacy helper does not authorize a different session/warehouse.
-7. Ingredients Assignment source review (last verified2026-09-30) distinguishes
+7. Ingredients Assignment source review (last verified2026-10-01) distinguishes
    all seven constructed buttons. Refresh resets the inventory cache, refreshes
    the shared Design lists, clears visible requirements/allowed items and reloads
    inventory; it does not itself replace mProcessAlternatives. Select Process
@@ -1085,12 +1086,13 @@ not silently excluded because Run - List is the Release 1 proving path.
    Save Alternatives clones the collection, calls LoadProcessDefinitionIntoDesigner
    with reuseAsNewVersion=True, restores alternatives, validates the draft and
    calls SubmitDesignerAction(PROCESS_SAVE). A failure can therefore follow local
-   designer replacement; it does not prove rollback. This caller currently omits
-   the optional cProductionLifecycleFacts argument, so its Boolean/status cannot
-   supply exact owning submission evidence. The Process/Requirement list Click
-   handlers share their respective selection helpers with buttons; future tests
-   must distinguish deliberate entry from cascades. These are source facts in
-   frmProduction, not new IDs, terminal outcomes, a contract amendment or acceptance.
+   designer replacement; it does not prove rollback. This caller now passes
+   cProductionLifecycleFacts with exact owning submission evidence and a bound
+   continuation through processing/refresh. The Process/Requirement list Click
+   handlers share their respective selection helpers with buttons; focused tests
+   distinguish deliberate entry from cascades. Local alternative-list helpers now
+   live in modProductionAssignmentDraft. Catalog23 outcomes follow D18; the GREEN
+   observations at the top do not establish full path/regression/human acceptance.
 
 ## Validation and next implementation grouping
 
@@ -1099,8 +1101,7 @@ page calls, every bound button's actual Click procedure and the sole uncalled
 Recipe Builder constructor. The original thirteen registered mappings were cross-checked
 against DesignerDraftAction/ExecuteDesignerLifecycle and modProductionUomAction;
 all34 non-button handlers and the relevant mutation/mirroring helpers are reviewed.
-No runtime
-tracking or catalog mutation occurs. Private source-only census/verification
+The census itself does not mutate runtime tracking or the catalog. Private source-only census/verification
 artifacts are ignored; this reviewed record contains no operational values.
 
 The frozen worksheet candidate's enumerated regression gates are complete; do not

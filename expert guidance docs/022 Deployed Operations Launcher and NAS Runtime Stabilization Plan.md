@@ -2,55 +2,43 @@
 
 **Status:** Current corrective implementation plan
 
-Active Slice4be continuation,2026-10-01 UTC: Architecture v4.11 D18,
-"Ingredients Assignment observations," specifies catalog23's seven existing
-buttons and two deliberate list selections under the approved semantic-inheritance
-rule. No editing/read/save algorithm change or repeat approval is implied.
-Implementation and acceptance are pending; the frozen runtime remains catalog22
-with109 IDs and48/68 observed Production buttons. Do not report the proposed nine
-entries as runtime coverage. Their exact IDs, handlers, local outcomes and classes
-are maintained in the specification and controls8.3.
+Active Slice4be continuation,2026-10-01 UTC: Ingredients Assignment implements
+Architecture v4.11 D18's approved discovered-control refinement in unpromoted
+`deploy/validation-production-assignment-01`. Catalog23 preserves1-22 and adds
+seven buttons plus two deliberate list selections. Runtime now has118 IDs and
+55/68 observed constructed Production buttons;13 buttons and28 nonbutton handlers
+retain coverage work. No editing/read/save algorithm or authority change is made.
 
-The initial packaged actual-handler baseline is349 checks:103 PASS/246 FAIL,
-with all42 shared and all nine existing-action behavior checks passing. Failures
-are11 catalog,168 missing-observation and67 context/re-entrancy checks. Five compiles,
-normal cleanup, package/settings preservation and clean delayed audit pass. Two
-fixture failures remain excluded; runtime is unchanged. Static retains all metrics
-and350 valid script parses. Exact evidence:
-`tests/integration/plan022_slice4be_production_assignment_results.md`.
+D13 evidence: initial actual-handler RED103/246/349 becomes349/349 GREEN; expanded
+companion RED546/243/789 becomes789/789 GREEN with every prior ordered identity.
+The companion includes exact writer/application facts, Core outcome/source rules,
+denial, optional/navigation policy, nested Save, partial preparation and sign-out
+after actual reads/append. Typed continuation stops later reads, draft mutation,
+processing and refresh without recording under a replacement session. Save uses
+exact owning Designs submission facts; status text/counts never prove application.
+Known invalid fixture/assisted-cleanup attempts remain excluded in the evidence.
+Both GREEN runs compile all five packages, close normally without intervention,
+preserve settings/packages and pass delayed Excel Application1000/1001/1002 audit.
+Independent Operations cold start and five-package compile also pass, with normal
+closure, preservation of both candidate sets and a clean delayed Excel audit.
+Existing worksheet Core188 retains exact prior order and passes with five compiles,
+normal cleanup, preservation and delayed audit; its full595 workflow remains open.
 
-Complete the protecting suite before runtime edits: exact owning submission/failure
-facts now have companion RED89 (59 PASS/30 FAIL). All42 shared checks and five
-real write/application boundaries pass; failures are missing Assignment facts.
-Five compiles, normal cleanup, preservation and delayed audit pass. A duplicate
-fault-probe installation failed compile and required termination of the verified
-empty fixture after Quit did not exit; that attempt remains excluded. The corrected
-run needed no intervention. Static metrics remain unchanged;351 scripts parse.
-Expanded companion RED245 is158 PASS/87 FAIL, retaining all89 prior results/order
-and42 shared GREENs. Its156 additions pass99/fail57: denial25, unavailable notices9,
-navigation defaults2 and Save observations/guards21. Actual nested Save and
-post-append sign-out boundaries are reached. Native workbook closure dismisses
-the form: no handler invocation is claimed; all six measured closure assertions
-pass. Five compiles, normal cleanup, preservation and delayed audit pass. An earlier
-automation80010007/assisted-cleanup attempt is excluded, not desktop error5.
-Static metrics remain unchanged;352 scripts parse. Preserve all349 baseline and245
-expanded companion checks. Finish the explicit Core outcome/source contract matrix
-before runtime edits; do not repeat or discard established handler/guard RED.
-Protect shared alternatives, exact Process/version selection, unchanged
-read/parse/next-version behavior, missing/duplicate/no-match refusals, empty Clear,
-pre-save local replacement, captured context/current capability, re-entrancy and
-optional tracking. Save must carry typed owning Designs submission facts through
-CONFIRMED/PENDING/FAILED; never infer application from a Boolean, status or count.
-Navigation policy applies to deliberate list selections while internal callbacks
-produce no additional actions. This is not permission to log search keystrokes.
-Then implement typed Operations coordination and explicit Core catalog/outcome/
-source/terminal mappings, preserving catalogs1-22, headless ownership, D12 packages,
-System_Key and unknown columns. Require focused GREEN, independent guide/recording
-publication and three-view evidence, exact Designs applied/awaiting/incomplete
-cases, build/five compiles, layout/static/live-role/full-chain/reusable regressions
-and visible review before claiming this group's acceptance. Commit/push checkpoints.
+Static:280 components,6150 procedures,135006 lines; unchanged9/45 dynamic calls,
+190 duplicate bodies and28 non-growing caps. The form shrinks35 lines. Three schemas
+validate and353 scripts parse. No layout or control wording is changed. This is
+focused implementation evidence, not human acceptance or package promotion.
+Exact records: `tests/integration/plan022_slice4be_production_assignment_results.md`.
 
-Active Slice4be: catalog22's three Process worksheet observations are implemented
+Next require separate guide/observed recordings, publication, exact Event Detail,
+authored intent and independent-reader How-To/Diagnostic/Compare with Save's exact
+Designs applied/awaiting/incomplete distinctions. Verify layout,
+current shared-observation regressions, live roles, the full Release1 chain
+and reusable Production on this candidate; earlier worksheet-candidate passes do
+not prove the new candidate. Preserve349/789 and all prior accepted behavior.
+Commit/push checkpoints; full Slice4be and Release1 acceptance remain open.
+
+Prior worksheet checkpoint: catalog22's three Process worksheet observations are implemented
 under Architecture v4.11 D18 and pass the focused packaged gate595/595 on
 `deploy/validation-process-worksheet-activity-03`. Send/Add conclude STAGED after
 local saves; Retrieve concludes CONFIRMED only after every selected owning import
@@ -71,7 +59,7 @@ The17 branch-dependent closure checks map explicitly to18 stable assertions;
 native dismissal is never represented as a handler invocation. A compile failure
 and a payload-transfer regression were corrected and remain failed evidence.
 
-Catalog22 defines109 controls;48/68 constructed Production buttons now have
+At the worksheet checkpoint, catalog22 defined109 controls;48/68 constructed Production buttons had
 observations, with20 buttons and30 nonbutton handlers still requiring coverage
 review. Worksheet107 and picker115 pass their exact prior checks, five compiles,
 preservation, normal cleanup and delayed audits. Focused GREEN is not full

@@ -1,33 +1,34 @@
 # invSys Form Controls v1
 
-**Version:** 1.366 (Ingredients Assignment policy and Save-guard RED; implementation pending)
+**Version:** 1.367 (Ingredients Assignment focused GREEN; broader acceptance pending)
 
-Next Slice4be group: Architecture v4.11 D18's Ingredients Assignment refinement
-specifies catalog23's seven buttons and two deliberate list selections (section8.3).
-This inherits the approved observation rules and preserves existing algorithms;
-packaged RED must precede implementation. Runtime remains catalog22/109 IDs with
-48/68 observed Production buttons. The nine specified entries are not yet
-registered or accepted and do not increase those coverage counts.
+Architecture v4.11 D18's Ingredients Assignment refinement is implemented in
+unpromoted `validation-production-assignment-01`: catalog23 adds seven buttons
+and two deliberate list selections, preserving all earlier definitions and the
+existing algorithms. Runtime has118 IDs,55/68 observed constructed Production
+buttons, and two newly observed nonbutton handlers. Thirteen buttons and28
+nonbutton handlers remain. Exact mappings and unchanged placement are in8.3.
 
-Initial packaged Assignment RED is103 PASS/246 FAIL/349, with all42 shared checks
-and all nine existing-action behavior checks passing. Failures are catalog11,
-missing observations168 and context/re-entrancy67. Five compiles, normal cleanup,
-preservation and delayed audit pass; two failed fixtures are excluded.
-Save companion RED89 passes59/fails30: all42
-shared checks and five actual write/application boundaries pass; missing Assignment
-facts fail. Five compiles, normal cleanup, preservation and delayed audit pass.
-An earlier duplicate-probe compile failure and its forced empty-fixture cleanup
-remain excluded; corrected-run closure needed no intervention. Runtime is unchanged.
-Expanded companion RED245 passes158/fails87, retaining all89 prior results/order.
-The156 additions pass99/fail57 across denial, optional/navigation policy, partial
-local effects, nested Save, post-append sign-out and captured binding. Native
-closure dismisses the form; no handler call is claimed and six closure checks pass.
-Five compiles, normal cleanup, preservation and delayed audit pass. The earlier
-automation80010007 attempt required assisted cleanup and remains excluded. Static
-metrics are unchanged;352 scripts parse. Finish the explicit Core outcome/source
-contract matrix before implementation, retaining349 baseline and245 companion checks.
-Evidence:
-`tests/integration/plan022_slice4be_production_assignment_results.md`.
+Packaged actual-handler baseline349 and companion789 are GREEN, retaining exact
+RED order. The companion's RED was546 PASS/243 FAIL; Core outcomes/references,
+actual owning Save boundaries, denied/optional policy, nested entry, partial local
+effects and post-read/post-append sign-out now pass. The349 baseline preserves all
+nine existing owner behaviors, refusals, binding and saved/local state. Five
+instrumented compiles, normal cleanup, package/settings preservation and delayed
+Excel audit pass in both runs. Invalid fixture and assisted-cleanup attempts remain
+explicitly excluded; VBA automation80010007 is not desktop error5.
+Independent Operations cold start and five-package compile also pass with normal
+closure, both candidate sets preserved and a clean delayed Excel audit.
+Existing worksheet Core188 also passes with exact prior order, five compiles,
+normal cleanup, preservation and delayed audit; full worksheet595 remains open.
+
+Static:280 components,6150 procedures,135006 lines, unchanged9/45 dynamic calls,
+190 duplicate bodies and28 non-growing caps; the form shrinks35 lines. Three schemas
+validate;353 scripts parse. Separate recordings/publication, exact Event Detail,
+three-view and source-application proof, layout, shared/live-role/
+full-chain/reusable regressions and human acceptance remain required. Earlier
+worksheet-candidate passes are historical, not proof for this candidate.
+Evidence: `tests/integration/plan022_slice4be_production_assignment_results.md`.
 
 Architecture v4.11 D18's catalog22 controls PRODUCTION_PROCESS_WORKSHEET_SEND,
 PRODUCTION_PROCESS_WORKSHEET_ADD_ITEM and PRODUCTION_PROCESS_WORKSHEET_RETRIEVE
@@ -53,7 +54,7 @@ worksheet service to1325. Static keeps190 duplicate bodies,9/45 dynamic calls,
 28 non-growing caps and three valid schemas. Earlier compile/payload failures
 remain failed evidence, not acceptance or a native-crash repair.
 
-Current catalog has109 IDs and observed Production buttons are48/68. Twenty
+At the prior worksheet checkpoint, catalog22 had109 IDs and48/68 observed Production buttons. Twenty
 buttons and30 nonbutton handlers retain coverage review. Worksheet107 and picker115
 pass their exact prior checks, five compiles, preservation, normal cleanup and
 delayed audits. Separate paths139 pass original four-action recordings, publication,
@@ -112,8 +113,8 @@ an explicit local-only conclusion. An incompatible initial path invocation stopp
 before behavioral testing and remains excluded.
 Regenerated static evidence retains all metrics and347 valid PowerShell parses.
 The enumerated shared-observation regressions on this frozen candidate are complete.
-Next specify pending Ingredients Assignment observations under D18 and establish
-packaged actual-handler RED. Comprehensive coverage and human acceptance remain
+That worksheet checkpoint preceded the Ingredients Assignment implementation above.
+Comprehensive coverage and human acceptance remain
 outstanding. No deployment
 promotion or human acceptance is claimed. Code evidence:
 `tests/integration/plan022_slice4be_process_worksheet_activity_results.md`.
@@ -5823,7 +5824,7 @@ current Process/Recipe designer lists use the exact IDs recorded in section
 
 ### 8.3 Ingredients Assignment page
 
-**D18 observation contract, specified2026-10-01; implementation pending.** Catalog23
+**D18 observation contract, implemented2026-10-01; acceptance pending.** Catalog23
 preserves1-22 and adds the nine entries below, owner `PRODUCTION_ASSIGNMENT`, role
 Production, surface Operations > Production > Ingredients Assignment, capability
 PROD_POST with the existing ADMIN_MAINT alternative. Caption/label and placement
@@ -5872,8 +5873,7 @@ actions or optional-tracking blockage. For each exact control only its declared
 positive fact establishes CommandCompleted. Save SourceEventsApplied requires
 every exact owning published Designs event; none of the eight local actions can
 establish it. Follow the normative subsection for full outcome/source validation.
-Initial actual-handler RED is recorded above; complete the protecting suite before
-implementation. GREEN, separate guide and observed runs, published
+Focused349/349 and789/789 GREEN are recorded above. Separate guide and observed runs, published
 Event Detail, three-view diagnostic proof, preservation and all regression gates
 remain pending. The table below describes the existing UI, not new acceptance.
 

@@ -517,7 +517,7 @@ workbook columns. Publication, original recording order and How-To/Diagnostic/
 Compare both require separate evidence. This records discovered controls within
 the approved contract; it does not amend authority, permissions or saved semantics.
 
-**4be.1 Ingredients Assignment observations (discovered-control refinement; implementation pending):**
+**4be.1 Ingredients Assignment observations (discovered-control refinement; acceptance pending):**
 Under the approved D18 semantic-inheritance, comprehensive-coverage and owner-fact
 rules, catalog23 adds the following nine existing controls, preserving catalogs1-22
 exactly. OwnerId is `PRODUCTION_ASSIGNMENT`, role Production, surface Operations >
