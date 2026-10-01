@@ -112,6 +112,17 @@ four matches and zero additional actions. Long Event Detail text exceeds the
 viewport. These existing-contract regressions add no runtime change, all-size
 layout or human acceptance. Exact paths and limits are in Assignment evidence.
 
+Design-reading621 and separate Action Paths114 retain every prior ordered check
+and five compiles each. The five actual Process/Recipe Refresh/Load/Reuse handlers
+retain behavior, faults, guards and optional tracking. Independent recordings,
+publication, Event Detail, authored expectations and all three views pass without
+equating local completion to validation, source availability or version reservation.
+Both gates close unassisted, preserve settings/packages and pass delayed Excel
+audits; path cleanup takes additional time after the functional result. Seven
+reviewed path captures show five authored steps and a scrolled five-match conclusion
+with no extra actions. Initial observed views and long Event Detail text have
+viewport limits. No runtime change or human acceptance is claimed.
+
 Full reusable remains open: the original edit/export callback fails with
 RPC800706BE and native ntdll/c00000ff; an empty recovery instance requires explicit
 Quit, excluding that attempt from acceptance. A narrower edit/export diagnostic

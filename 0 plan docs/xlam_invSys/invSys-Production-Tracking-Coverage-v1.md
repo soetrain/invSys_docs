@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.115. Last reviewed:2026-10-01 UTC, Assignment regulation and path regressions;
+Version 1.116. Last reviewed:2026-10-01 UTC, Assignment design-reading regressions;
 reusable acceptance unresolved.
 
 Catalog23 now defines118 global controls and observes55/68 constructed Production
@@ -104,6 +104,17 @@ seven path captures are reviewed; the scrolled conclusion shows all four matches
 and zero additional actions. Long Event Detail text has viewport limits. No new
 control registration, runtime change, all-size layout or human acceptance is
 claimed. Exact records remain in the Assignment evidence file.
+
+Design-reading621 and separate Action Paths114 retain exact prior ordered checks
+and five compiles each. The five actual Refresh/Load/Reuse controls retain owner
+behavior, faults, guards and optional tracking, with independent recordings,
+publication, Event Detail, authored expectations and all three views. Local
+completion does not establish validation, source availability or version reservation.
+Both gates close unassisted, preserve settings/packages and pass delayed Excel
+audits; path cleanup takes additional time after the functional result. Seven
+reviewed path captures show all five authored steps and the scrolled five-match
+conclusion with zero extra actions. Initial observed views and long Event Detail
+text have viewport limits. Runtime/control coverage and human acceptance are unchanged.
 
 Full reusable171/replay37 remain open. The original edit/export callback fails
 with RPC800706BE/ntdll c00000ff; explicitly quitting an empty recovery instance

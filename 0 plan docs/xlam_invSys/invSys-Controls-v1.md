@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.375 (Assignment regulation and path regressions; reusable acceptance unresolved)
+**Version:** 1.376 (Assignment design-reading regressions; reusable acceptance unresolved)
 
 Architecture v4.11 D18's Ingredients Assignment refinement is implemented in
 unpromoted `validation-production-assignment-01`: catalog23 adds seven buttons
@@ -104,6 +104,17 @@ conclusion shows four matches and zero additional actions. Long Event Detail tex
 extends beyond its viewport. No all-size or human acceptance is claimed; runtime,
 static metrics and coverage counts remain unchanged. Exact Assignment evidence
 records the limits and controller/result paths.
+
+Design-reading621 and its separate Action Paths114 retain exact prior ordered
+checks and five compiles each. Process/Recipe Refresh/Load and Process Reuse retain
+owner behavior, faults, guards and optional tracking. Independent five-command
+recordings retain publication, Event Detail, authored expectations and all three
+views without implying validation, source availability or version reservation.
+Normal unassisted closure, preservation and delayed Excel audits pass; path cleanup
+takes additional time after the functional result. Seven reviewed path captures
+show all five authored steps and the scrolled five-match conclusion with no extra
+actions. Initial observed views and long Event Detail text have viewport limits.
+No runtime change, new control coverage or human acceptance is claimed.
 
 Full reusable171/replay37 remain open after native Excel failures. The original
 edit/export callback fails with RPC800706BE/ntdll c00000ff and requires explicit
