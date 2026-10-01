@@ -1,7 +1,24 @@
 # Production form tracking coverage audit
 
-Version 1.139. Last reviewed:2026-10-01 UTC, Clear worksheet/boundary checks GREEN;
+Version 1.140. Last reviewed:2026-10-01 UTC, Clear independent Action Paths GREEN;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Clear paths102/102 pass on unchanged clear01. Presentation01 supplies meaningful
+RED47 PASS/1 missing original Clear pair; every prior ordered identity/PASS is
+retained. Separate source/observed recordings each clear the reusable run and
+then the pre-existing worksheet staging through the actual handler. Publication,
+selected Event Detail, explicit expectation, independent reader and all three
+views pass. Two STAGED matches conclude command completion only; source
+application stays incomplete and observations cannot distinguish owner branches.
+Six principal captures are reviewed, including visible prerequisite/limitations.
+Five compiles, preservation, normal closure and delayed zero audit pass. Static
+and runtime metrics remain284/6159/135228,9/45 calls,190 duplicates and28
+non-growing caps; three schemas and368 tooling parses pass. Coverage remains
+58/68; this evidence adds no runtime behavior or human acceptance.
+
+The shared-harness Tree path regression also passes94/94 in exact prior order on
+clear01. Five compiles, preservation, normal cleanup and delayed zero Excel audit
+pass. RUN-TREE-LAYOUT-01 and human acceptance remain open.
 
 Clear Run is now wired in `validation-production-run-clear-01`, bringing
 constructed-button coverage to58/68. The worksheet-owner gate retains all169
@@ -11,7 +28,7 @@ notification/picker/default-location boundaries. Five compiles, preservation,
 normal closure and delayed zero Excel audit pass. Existing owner effects and
 captured binding remain; missing surfaces are FAILED, successful local cleanup
 is STAGED, and context invalidation cannot record under a replacement session.
-Full reusable, independent Clear Action Paths and broad release/
+Full reusable, remaining Action Paths and broad release/
 layout/human gates remain open. No pending contract decision is approved here.
 
 Clear's permission/optional tracking and fault/nesting companions retain all prior

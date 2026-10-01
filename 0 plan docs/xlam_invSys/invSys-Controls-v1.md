@@ -1,6 +1,25 @@
 # invSys Form Controls v1
 
-**Version:** 1.399 (Clear worksheet observations and continuation checks GREEN)
+**Version:** 1.400 (Clear independent Action Paths GREEN)
+
+Clear Action Paths now pass102/102 on the same unpromoted clear01 packages.
+The preceding presentation01 negative control passes47 checks and fails only
+the missing original Clear observation pair. Independent source and observed
+recordings each invoke Clear twice: first the prepared reusable run, then the
+already prepared worksheet staging, without setup between clicks. Publication,
+selected Event Detail, explicit expectations and an independent reader's How-To,
+Diagnostic and Compare both pass. Two matched STAGED actions conclude local
+command completion; SourceEventsApplied remains incomplete. These observations
+do not distinguish the two branches. Six principal captures were reviewed; the
+authored prerequisite and diagnostic limitation are visible. Existing input and
+selection retention and long Event Detail coverage viewport limits remain.
+Five compiles, preservation, normal cleanup and delayed zero Excel audit pass.
+Static/runtime metrics and coverage58/68 are unchanged. This test/evidence
+checkpoint changes no D18 contract and does not establish human acceptance.
+
+The modified shared harness also retains94/94 Tree Action Path checks in exact
+prior order on clear01, with five compiles, preservation, normal cleanup and
+delayed zero Excel audit. RUN-TREE-LAYOUT-01 remains unresolved.
 
 Unpromoted `validation-production-run-clear-01` observes Clear Run through its
 actual handler and retains its existing reusable/worksheet owners and messages.
@@ -11,7 +30,7 @@ Missing surfaces cannot complete or retarget Clear; authorized cleanup retains
 its local effects, unknown inventory columns/formulas and exact System_Key.
 Five compiles, preservation, normal cleanup and delayed zero Excel audit pass.
 Wiring is58/68; remaining Run integration, full reusable acceptance,
-independent Action Paths and broad release/layout/human acceptance remain open.
+remaining Action Paths and broad release/layout/human acceptance remain open.
 The build changes only the form and a typed coordinator, preserving275 existing
 compiled components. RUN-SCALE-01 and RUN-UI-01 remain unapproved.
 

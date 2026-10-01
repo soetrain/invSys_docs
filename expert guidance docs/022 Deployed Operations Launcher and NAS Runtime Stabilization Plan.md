@@ -2,6 +2,27 @@
 
 **Status:** Current corrective implementation plan
 
+Clear Action Path checkpoint,2026-10-01 UTC: unchanged clear01 passes102/102.
+The presentation01 negative control is47 PASS/1 behavioral FAIL: the original
+Clear observation pair is absent. All48 ordered identities and prior PASS checks
+survive in GREEN. Two separate recordings exercise the actual Clear handler twice,
+with reusable and worksheet staging prepared before recording and no setup between
+clicks. Publication/Event Detail, authored intent, separate reader and all three
+views pass. Two matched STAGED actions establish local completion only; source
+application remains incomplete and events do not identify the owner branch.
+Six reviewed captures show the initial-state prerequisite and this limitation.
+Five compiles, preserved packages/settings/authority/operator bytes/recordings,
+normal closure and delayed zero Excel audit pass. Static remains284/6159/135228,
+9/45 calls,190 duplicates and28 non-growing caps; three schemas and368 tooling
+parses pass. No runtime or normative contract change is introduced. Exact
+controllers/results/captures are in the Run integration evidence. Remaining Run
+handlers, full reusable, layout/live-role/release/human acceptance remain open.
+
+Shared-harness regression also retains94/94 Tree Action Path checks in exact
+prior order on clear01, including five compiles, canonical pins, preservation,
+normal cleanup and delayed zero Excel audit. This does not close the populated
+Tree layout issue or human acceptance.
+
 Clear implementation checkpoint,2026-10-01 UTC: unpromoted
 `validation-production-run-clear-01` integrates the existing Clear Run handler
 under D18, with scoped continuation checks after notification, picker and default
@@ -13,7 +34,7 @@ custom values/formulas and canonical authority remain protected. Five compiles,
 pins, settings preservation, normal closure and delayed zero Excel audit pass.
 The build changes only the form plus a typed Clear coordinator;275 compiled
 components remain unchanged. Wiring is58/68. Full reusable and broader
-release, layout, independent Clear Action Paths and visible acceptance gates
+release, layout, remaining Action Paths and visible acceptance gates
 remain pending; do not promote this worksheet checkpoint to full acceptance.
 No normative behavior changes or pending RUN-SCALE-01/RUN-UI-01 approvals result.
 
