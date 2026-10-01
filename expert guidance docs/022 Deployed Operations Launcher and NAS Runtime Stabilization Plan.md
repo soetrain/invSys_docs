@@ -168,6 +168,18 @@ exceeds the viewport. Synthetic instruction-only editor evidence is not full
 Process workflow/layout or human acceptance. Exact records are in Assignment
 evidence; runtime/static metrics and control coverage are unchanged.
 
+UOM staging/activity264, public close/reopen61 and separate Action Paths84 retain
+exact prior ordered checks and five compiles each. Approved draft/custom-column/
+formula/extent preservation, captured-owner disposal/reuse, optional tracking and
+original OPENED/REUSED facts pass. Independent recordings, publication, Event
+Detail, authored expectations and all three views retain two matches/zero extras
+without asserting catalog publication or Domain application. Each gate closes
+unassisted, preserves settings/packages and passes delayed Excel audits. Three
+staging, four closure and seven path captures are reviewed. Fixed viewports and
+truncated worksheet/detail text do not establish complete cell/formula evidence,
+all-size layout or human acceptance. Exact records are in Assignment evidence;
+runtime/static metrics and control coverage are unchanged.
+
 Full reusable remains open: the original edit/export callback fails with
 RPC800706BE and native ntdll/c00000ff; an empty recovery instance requires explicit
 Quit, excluding that attempt from acceptance. A narrower edit/export diagnostic
