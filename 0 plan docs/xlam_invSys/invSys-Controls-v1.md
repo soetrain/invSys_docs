@@ -1,13 +1,26 @@
 # invSys Form Controls v1
 
-**Version:** 1.393 (Run Core catalog GREEN; form integration and RUN-UI-01 pending)
+**Version:** 1.394 (worksheet owner RED; Clear captured-owner defect confirmed)
+
+Worksheet owner baseline on catalog24:84 PASS/38 FAIL/122 checks across Loader
+Refresh, Manager Refresh and Clear with present/missing local surfaces. Thirty-six
+failures are missing observations; two expose Clear resolving an add-in worksheet
+when the captured workbook's Production sheet is missing. The ordinary Clear
+owner is correctly captured. D18 already requires missing-surface failure and
+captured binding; preserve this RED for the guard fix. Both real LOCAL Refresh
+results, ordinary cleanup, custom columns/formulas/exact identity and canonical
+source preservation pass. Five compiles,42 prior shared GREEN checks, package/
+settings preservation, normal closure and delayed zero Excel audit pass. These
+are automated owner facts; intercepted notifications do not establish visible
+acceptance. No runtime change or new architecture is introduced. Evidence:
+`tests/integration/plan022_slice4be_production_run_local_results.md` in code.
 
 Current unpromoted candidate `validation-production-run-catalog-01` implements
 headless Core catalog24 with127 definitions, exact outcomes/defaults, empty-reference
 rules and command-completion matching. Core RED492/272 becomes764/764 GREEN with
 all prior identities retained; older worksheet catalog regression retains188/188.
 The nine Run form handlers are not integrated. Constructed-button observation
-coverage remains55/68; worksheet loading/clearing/refresh, remaining read failures,
+coverage remains55/68; worksheet Scale, Clear binding repair, remaining read failures,
 paired paths and broader acceptance gates stay open. RUN-UI-01 below is a separate
 pending message proposal. The following RED records refer to the frozen catalog23
 baseline and do not describe the latest headless Core state.

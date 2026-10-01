@@ -2,6 +2,24 @@
 
 **Status:** Current corrective implementation plan
 
+Latest bounded evidence,2026-10-01 UTC: worksheet Clear/Refresh owner baseline on
+the catalog24 candidate is84 PASS/38 FAIL/122 checks. Both Refresh buttons retain
+the actual LOCAL read-model Boolean result, including False for missing invSys;
+ordinary Clear cleanup and custom columns/formulas/exact identity pass. Thirty-six
+failures are missing observations. Two additional checks prove that Clear selects
+an add-in worksheet when the captured operator's Production sheet is missing;
+ordinary Clear selects the captured workbook. Prevent that fallback under the
+existing captured-workbook invariant and D18 missing-owner rule. This diagnosis
+does not authorize a general resolver rewrite or any new message exception.
+Retain all122 checks plus the earlier baselines before Run handler integration.
+Five compiles,42 shared GREEN identities/order, canonical pins, saved authority,
+settings, normal cleanup and delayed zero Excel audit pass. Runtime/static metrics
+are unchanged;367 repository PowerShell scripts parse. Exact evidence and excluded
+fixture attempts are in the code repository's
+`tests/integration/plan022_slice4be_production_run_local_results.md`.
+Worksheet Apply Scale's reload path still needs focused protection; Load Recipe
+itself always enters the released reusable loader. RUN-UI-01 is still pending.
+
 Current Slice4be state,2026-10-01 UTC: unpromoted
 `deploy/validation-production-run-catalog-01` implements headless Core catalog24
 and127 control definitions. Exact outcomes/defaults, empty-reference restrictions
