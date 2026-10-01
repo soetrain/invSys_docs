@@ -68,15 +68,31 @@ shutdown repair is claimed. Human acceptance and broader gates remain open.
 
 Existing packaged layout, smoke86, full chain32, live roles48 and warehouse
 creation15 now pass on this candidate with exact prior checks/geometry, normal
-closure, preservation and clean delayed Excel audits. Layout covers pages0-4:
+closure, preservation and clean delayed Excel audits. Initial layout activates pages0-4:
 the900x700 request clamps to1110x800; expanded is1350x980. Three empty Run List
-captures do not establish populated workflow, Settings page5 or human acceptance.
+captures do not establish populated workflow or show Settings page5. The geometry
+helper already checks bounds on all pages; activation/capture was the gap.
+
+The extended layout validator passes18 requested-size/page pairs and all six
+maximized pages with page identity checked, prior representative geometry and
+native transitions preserved. Six captures (four distinct) show Run List and
+Settings; regulation/UOM controls and guidance are readable in empty forms.
+Minimum still clamps; no populated interaction or human acceptance is implied.
+Normal cleanup, preservation and delayed audit pass. Static metrics remain
+280/6150/135006,9/45 calls,190 duplicates and28 caps; three schemas and354 parses pass.
 
 Process/Recipe lifecycle615 also retains every prior ordered check, including
 five compiles, real Save/Release/Obsolete actions, exact references, owner faults,
 optional tracking and captured-context guards. Cleanup finishes without
 intervention; settings/packages and the delayed Excel audit pass. This adds no
 new screenshot or human-acceptance claim. Exact records are in Assignment evidence.
+
+Draft designer/Action Path390 retains exact prior order with five compiles,
+unassisted closure, preservation and delayed audit. New/Clear/Validate, guards,
+optional policy, the eight-action recording, publication, Event Detail and authored
+diagnostic expectations pass. Local completion remains distinct from Domain
+application; REQUESTED alone does not conclude. No new screenshot or human
+acceptance is claimed by that gate. Exact records are in Assignment evidence.
 
 Full reusable remains open: the original edit/export callback fails with
 RPC800706BE and native ntdll/c00000ff; an empty recovery instance requires explicit
@@ -99,6 +115,11 @@ Next investigate the native failures and verify current shared-observation
 regressions, full reusable171 and independent replay37. Do not repeat full runs
 merely to obtain a pass. Earlier worksheet-candidate passes do not prove this
 candidate. Preserve349/789 and all prior accepted behavior.
+Before defining Run controls, use the corrected Production coverage audit item5:
+Check In has local validation/staging effects, Complete Run owns inventory
+submissions, and Print Recall requests preview rather than proving printing.
+This source clarification implements D18's zero-or-more source-reference rule;
+it defines no new control contract or behavior.
 Commit/push checkpoints; full Slice4be and Release1 acceptance remain open.
 
 Prior worksheet checkpoint: catalog22's three Process worksheet observations are implemented

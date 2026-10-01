@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.372 (Assignment release-chain and lifecycle regressions; reusable acceptance unresolved)
+**Version:** 1.373 (Assignment draft and six-page layout regressions; reusable acceptance unresolved)
 
 Architecture v4.11 D18's Ingredients Assignment refinement is implemented in
 unpromoted `validation-production-assignment-01`: catalog23 adds seven buttons
@@ -60,15 +60,31 @@ without intervention; no repair or new human acceptance is claimed.
 
 Existing packaged layout, smoke86, full chain32, live roles48 and warehouse
 creation15 now retain exact prior checks/geometry on this candidate, with normal
-closure, preservation and clean delayed Excel audits. Layout covers pages0-4 at
+closure, preservation and clean delayed Excel audits. Initial layout activates pages0-4 at
 1110x800 and1350x980; the900x700 request clamps to the default. Three empty Run List
-captures do not establish populated workflow or Settings page5 acceptance.
+captures do not establish populated workflow or show Settings page5. The geometry
+helper already aggregates bounds across all pages; activation/capture was the gap.
+
+The extended validator now passes18 requested-size/page pairs and all six maximized
+pages, retaining prior representative geometry and native transitions. It verifies
+page identity and captures Run List plus Settings. Six captures (four distinct)
+show readable Settings regulation/UOM controls and guidance in empty forms.
+Minimum remains clamped; populated workflow, interaction and human acceptance are
+not implied. Normal closure, preservation and delayed audit pass. Static metrics
+remain280/6150/135006,9/45 calls,190 duplicates,28 caps; three schemas and354 parses pass.
 
 Process/Recipe lifecycle615 retains all prior ordered checks, including five
 compiles, actual Save/Release/Obsolete actions, exact owning references, faults,
 optional tracking and captured-context guards. Unassisted closure, settings/package
 preservation and delayed Excel audit pass. No new screenshot or human acceptance
 is claimed; remaining shared gates are still open.
+
+Draft designer/Action Path390 retains exact prior order with five compiles,
+unassisted closure, preservation and delayed audit. New/Clear/Validate, guards,
+optional tracking, the eight-action recording, publication, Event Detail and
+authored diagnostic expectations pass. Local completion and Domain application
+remain distinct; REQUESTED alone does not conclude. No new screenshots or human
+acceptance are supplied by that gate. Exact records are in Assignment evidence.
 
 Full reusable171/replay37 remain open after native Excel failures. The original
 edit/export callback fails with RPC800706BE/ntdll c00000ff and requires explicit
@@ -85,6 +101,12 @@ stages return; the compilation-only run injects no VBA. Normal cleanup, preserve
 settings/packages and delayed audits pass. These do not establish a repair, cold
 uninstrumented acceptance or a compile-before-use operator requirement. The
 existing control contract and unresolved full reusable status remain unchanged.
+
+Pending Run-control source review is clarified in Production coverage audit item5:
+Check In validates/stages locally, Complete Run owns inventory submissions, and
+Print Recall requests preview then rebuilds its diagnostic report. D18 permits
+zero source references; local staging/handler return must not prove Domain writes
+or printing. This introduces no new control ID, outcome or runtime contract.
 
 Architecture v4.11 D18's catalog22 controls PRODUCTION_PROCESS_WORKSHEET_SEND,
 PRODUCTION_PROCESS_WORKSHEET_ADD_ITEM and PRODUCTION_PROCESS_WORKSHEET_RETRIEVE

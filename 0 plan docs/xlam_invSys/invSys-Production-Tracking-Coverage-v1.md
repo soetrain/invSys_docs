@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.112. Last reviewed:2026-10-01 UTC, Assignment release-chain and lifecycle regressions;
+Version 1.113. Last reviewed:2026-10-01 UTC, Assignment draft and six-page layout regressions;
 reusable acceptance unresolved.
 
 Catalog23 now defines118 global controls and observes55/68 constructed Production
@@ -61,15 +61,31 @@ new control registration or human acceptance is claimed.
 
 Existing packaged layout, smoke86, chain32, live roles48 and warehouse creation15
 retain exact prior checks/geometry on this candidate, with normal closure,
-preservation and clean delayed Excel audits. Layout covers pages0-4, two actual
+preservation and clean delayed Excel audits. Initial layout activates pages0-4, two actual
 sizes1110x800/1350x980; the900x700 request clamps. Three empty Run List captures
-do not prove populated workflow or Settings page5 acceptance.
+do not prove populated workflow or show Settings page5. The geometry helper
+already checks bounds on all pages; activation/capture was the remaining gap.
+
+The extended validator passes18 requested-size/page pairs and all six maximized
+pages, with page identity checked, prior representative geometry/native transitions
+preserved, and Settings/Run List captures reviewed (six files, four distinct
+images). Settings regulation/UOM controls and guidance are readable in empty
+forms. Minimum remains clamped; no populated workflow, interaction or human
+acceptance is implied. Normal cleanup, preservation and delayed audit pass.
+Static remains280/6150/135006,9/45 calls,190 duplicates and28 caps; three schemas
+validate and354 scripts parse. Runtime source/packages remain unchanged.
 
 Process/Recipe lifecycle615 retains all prior ordered checks with five compiles.
 Actual Save/Release/Obsolete actions, exact owning references, faults, optional
 tracking and captured-context guards pass. Cleanup finishes without intervention;
 settings/packages and delayed Excel audit pass. No additional screenshot or human
 acceptance is claimed. Remaining shared gates stay open; coverage counts do not change.
+
+Draft designer/Action Path390 also retains exact prior order with five compiles,
+unassisted closure, preservation and delayed audit. Actual New/Clear/Validate,
+guards, optional tracking, eight-action recording, publication, Event Detail and
+authored expectations pass without equating local completion to Domain application.
+REQUESTED alone does not conclude. That gate adds no screenshot/human acceptance.
 
 Full reusable171/replay37 remain open. The original edit/export callback fails
 with RPC800706BE/ntdll c00000ff; explicitly quitting an empty recovery instance
@@ -1122,9 +1138,22 @@ not silently excluded because Run - List is the Release 1 proving path.
    still does not waive preservation, Core publication or full release acceptance.
 5. Run selection, allocation, scale, actual-output and note helpers can react to
    programmatic changes and synchronize List/Tree controls. Observe deliberate
-   operator actions once. Check In and Complete Run need exact inventory-event
-   correlation from their owner. Next Batch and Print Recall require their own
-   supported results; generic handler return must not assert persistence.
+   operator actions once. Last verified2026-10-01: CheckInReusableRun and
+   CheckInReusableProcess validate current allocations and set in-memory check-in/
+   frozen-note state; they do not queue inventory events. The non-reusable form
+   branch writes local Production Check staging rows. D18 permits zero source
+   references; do not invent inventory events for these Check In outcomes.
+   CompleteReusableRun/CompleteReusableProcess own consumption/output submissions
+   and need exact writer facts, including partial submission, separately from
+   later exact application evidence. Aggregate processor counts are insufficient.
+   BeginNextReusableBatch resets local batch state and allocations. Print Recall's
+   BtnPrintRecallCodes builds a workbook report and calls PrintOut Preview:=True;
+   the form then calls GetRecallPrintDiagnostic, which builds the report again.
+   Neither the generic handler return nor that second report proves printing or
+   successful presentation. Future contracts must preserve these algorithms and
+   distinguish their actual owner facts. This clarifies D18's activity/business
+   distinction and the normative selected-Process Check In rule; no new control
+   IDs, outcomes, commit boundary or implementation is approved by this audit.
 6. Close and public/repeated launcher behavior must preserve captured-workbook
    reuse and invalidate observation/recording context correctly. A visible control
    or an enabled legacy helper does not authorize a different session/warehouse.
