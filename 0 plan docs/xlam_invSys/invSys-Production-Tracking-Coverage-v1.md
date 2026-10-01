@@ -1,7 +1,19 @@
 # Production form tracking coverage audit
 
-Version 1.141. Last reviewed:2026-10-01 UTC, Load and captured Run entry guards GREEN;
+Version 1.142. Last reviewed:2026-10-01 UTC, independent Load Action Paths GREEN;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Load paths87/87 pass on unchanged load03 after clear01 RED47 PASS/one missing
+original observation pair. Prior48 ordered identities/47 PASS and shared42 survive.
+Each separate recording invokes actual Load after released selection/scale and
+prior local staging are prepared. Publication, selected Event Detail, exact guide
+provenance/intent, independent reader and How-To/Diagnostic/Compare both pass.
+One STAGED match concludes local completion only; source application is incomplete.
+Six captures reviewed; five compiles, preservation, normal closure, delayed zero
+audit and unchanged static metrics pass. No new runtime or architectural behavior.
+
+Shared Clear paths retain102/102 in exact prior order on load03, with five compiles,
+preservation, normal closure and a delayed zero Excel audit. Full acceptance remains open.
 
 Load Recipe is wired in unpromoted `validation-production-run-load-03`, so
 constructed-button wiring is59/68. All36 Load read-return checks pass:146 checks
@@ -13,7 +25,7 @@ protect the other five catalog24 Run buttons, but do not integrate their observe
 or change their algorithms. Permission218 is193/25 and fault245 is180/65; every
 prior identity/order/PASS remains and all19 improvements are Load checks.
 Five compiles, preservation, normal cleanup and delayed zero Excel audits pass.
-Independent Load paths, remaining observations and broad acceptance remain open.
+Remaining observations and broad acceptance remain open.
 
 Final load03 regressions preserve exact prior ordered results: Clear169 is145
 PASS/24 known FAIL, Tree232 is232/232 GREEN, and stock138 is82 PASS/56 known FAIL.

@@ -2,6 +2,26 @@
 
 **Status:** Current corrective implementation plan
 
+Independent Load path checkpoint,2026-10-01 UTC: unchanged load03 passes87/87.
+Preserved clear01 supplies RED47 PASS/one missing original Load pair, with every
+prior ordered identity/PASS retained in GREEN. Separate source/observed recordings
+start with released selection, valid scale and prior local staging already prepared;
+each invokes actual Load once. Publication/Event Detail, authored instructions and
+expectation, independent reader and all three views pass. One STAGED match with
+zero extras concludes local completion only; SourceEventsApplied is incomplete.
+The guide explains that loading replaces prior local preparation and that these
+control observations do not identify the selected Recipe or prove inventory
+application. Six captures reviewed. Five compiles, canonical pins, preservation,
+normal cleanup and delayed zero audits pass. Static remains286/6165/135319,
+9/45 calls,190 duplicates and28 non-growing caps; three schemas and368 tooling
+parses pass. No runtime or normative contract change. See the Run integration
+record for exact evidence and the superseded numeric-format fixture attempt.
+
+Shared Clear path regression on load03 retains102/102 in exact prior order, with
+five compiles, canonical pins, settings/authority/operator/evidence preservation,
+normal unassisted closure and a delayed zero Excel audit. Remaining Run controls,
+populated-layout, live-role/full-release/full-reusable and human acceptance remain open.
+
 Load continuation checkpoint,2026-10-01 UTC: unpromoted
 `validation-production-run-load-03` integrates the fourth catalog24 form handler
 under unchanged D18. Explicit captured-action parameters guard released validation,
@@ -38,7 +58,7 @@ The build preserves274 compiled components, changes the form/reusable owner/bind
 helper and adds a typed coordinator plus extracted Process-definition loader.
 Static is286/6165/135319,9/45 calls,190 duplicates and28 non-growing caps; the form
 shrinks five lines and reusable owner38. Three schemas and368 tooling parses pass.
-Require independent Load Action Paths and broad release/layout/live-role/reusable/
+Require remaining independent Action Paths and broad release/layout/live-role/reusable/
 human acceptance before an acceptance claim. RUN-SCALE-01 and RUN-UI-01 remain
 unapproved.
 

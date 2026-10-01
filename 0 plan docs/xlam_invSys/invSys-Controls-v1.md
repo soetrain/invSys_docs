@@ -1,6 +1,21 @@
 # invSys Form Controls v1
 
-**Version:** 1.401 (Load observations and captured Run entry guards GREEN; acceptance pending)
+**Version:** 1.402 (independent Load Action Paths GREEN; acceptance pending)
+
+Independent Load Action Paths pass87/87 on unchanged load03. The preserved clear01
+negative control passes47 checks and fails only the missing original Load pair.
+Separate recordings each perform the actual Load with released selection/scale
+and prior local preparation established before recording. Publication, selected
+Event Detail, explicit guide expectation, independent reader and all three views
+pass. One STAGED match concludes local command completion; source application
+remains incomplete. Six reviewed captures show the prerequisite, replacement effect
+and local-only conclusion. Five compiles, preservation, normal cleanup and delayed
+zero Excel audits pass; static metrics remain unchanged. Populated-layout and
+human acceptance remain open. Exact evidence is in the Run integration record.
+
+The shared Clear path regression also passes102/102 on load03 in exact prior
+order, including five compiles, preserved evidence/settings/packages, normal
+closure and a delayed zero Excel audit. No runtime behavior changes in this checkpoint.
 
 Unpromoted `validation-production-run-load-03` integrates Load Recipe under the
 existing D18 contract, bringing constructed-button wiring to59/68. All36 Load
@@ -29,8 +44,8 @@ zero Excel audits. These results do not close populated-layout or human acceptan
 The build changes three existing components and adds two typed helpers while274
 compiled components remain unchanged. Static is286/6165/135319,9/45 calls,190
 duplicates and28 non-growing caps; three schemas and368 tooling parses pass.
-The form shrinks five lines and reusable-run module38 lines. Independent Load
-Action Paths, remaining Run observation integration and broad release/layout/
+The form shrinks five lines and reusable-run module38 lines. Remaining Run
+observation integration and broad release/layout/
 live-role/full reusable/human acceptance remain open. Scale/UI proposals remain
 unapproved; no new normative behavior is introduced.
 
