@@ -2,6 +2,27 @@
 
 **Status:** Current corrective implementation plan
 
+Check In recovery/refusal checkpoint,2026-10-01 UTC: unchanged activity03 passes
+629/629, retaining all525 prior ordered checks and adding104. Four more owner
+refusals preserve staging and typed non-success observations. Unreadable policy
+after REQUESTED preserves successful owner work and the unfinished journal; actual
+Viewer Refresh shows unavailability. After recovery in the same live session,
+actual Stop and ordinary-reader Evaluate retain incomplete evidence with no
+invented terminal/source. Ten new captures, shared42/five compiles, preservation,
+unassisted shutdown/delayed zero audit and unchanged static metrics/three schemas/
+376 parses pass. Controls1.422/coverage1.162 record test-only verification; no new
+runtime behavior or product RED is claimed. Remaining controls and full release
+acceptance remain open.
+
+Next D13 boundary: Complete Run's actual `mBtnManagerApplyOutput_Click` handler.
+Source review finds `CompleteProductionRun` falls back to `CompleteReusableRun`
+when `ActiveRunProcess()` is empty, whereas Architecture v4.11 D15 requires one
+selected Process at a time. Protect the selected positive owner path and the
+unselected refusal through the packaged handler before tracking integration.
+Follow D15; do not preserve or authorize this fallback as a hybrid contract.
+Its actual runtime effect remains unverified. Exact writer event IDs and partial
+submissions, separately from later application evidence, also require coverage.
+
 Check In post-REQUESTED checkpoint,2026-10-01 UTC: unchanged activity03 passes
 525/525, preserving all434 prior ordered checks and adding91. Both reusable and
 worksheet modes complete their owner work despite a valid external policy change
@@ -11,8 +32,8 @@ reader evaluation reject completion of all four interrupted runs. Eight new
 captures, shared42/five compiles, preservation, unassisted cleanup/delayed zero
 audit and unchanged static metrics/three schemas/376 parses pass. Controls1.421
 and coverage1.161 record test-only evidence under existing D18; no new runtime
-behavior or product RED is claimed. Unreadable policy after REQUESTED, further
-owner refusals, remaining controls and full human/NAS release acceptance stay open.
+behavior or product RED is claimed. Recovery/refusal evidence was added at the
+newer checkpoint above; remaining controls and full release acceptance stay open.
 
 Check In optional-policy checkpoint,2026-10-01 UTC: unchanged activity03 passes
 434/434, retaining all229 earlier checks and adding205. Disabled collection,

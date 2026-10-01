@@ -1,7 +1,18 @@
 # Production form tracking coverage audit
 
-Version 1.161. Last reviewed:2026-10-01 UTC, Check In post-REQUESTED interruptions verified;
+Version 1.162. Last reviewed:2026-10-01 UTC, Check In recovery and additional refusals verified;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Unchanged activity03 passes629/629, retaining525 prior ordered checks and adding
+104. Four more owner refusals preserve typed non-success results, staging and
+authority. Unreadable policy after REQUESTED leaves an unfinished journal; actual
+Viewer Refresh reports unavailability, and actual Stop after same-session recovery
+closes it Incomplete/UNFINISHED_ACTIONS. Ordinary-reader diagnostics cannot infer
+STAGED or Domain application. Ten new captures, shared42/five compiles, preservation,
+unassisted shutdown/delayed zero audit and static three schemas/376 parses pass
+without runtime growth. No new contract or product RED is claimed. Next is the
+Complete Run D15 owner boundary described in source-review item5 below. Remaining
+Run controls, multiline/layout and full human/NAS acceptance remain open.
 
 Unchanged activity03 passes525/525, retaining434 prior ordered checks and adding91.
 Real recording/Check In in both staging modes survives a valid external policy
@@ -12,8 +23,8 @@ expectation/Evaluate handlers report Incomplete for all four runs with no invent
 completion or Domain sources. Eight new captures, shared42/five compiles,
 preservation, unassisted closure/delayed zero audit and static three schemas/376
 parses pass without runtime growth. This is test-only verification under D18;
-unreadable policy after REQUESTED, additional refusals, remaining Run controls,
-multiline/layout and full human/NAS acceptance stay open.
+recovery/refusal coverage was added at the newer checkpoint above. Remaining Run
+controls, multiline/layout and full human/NAS acceptance stay open.
 
 Unchanged activity03 passes434/434, preserving229 prior checks and adding205 for
 collection off, valid older24 policy, malformed policy and a real unavailable-store
@@ -1829,8 +1840,15 @@ not silently excluded because Run - List is the Release 1 proving path.
    BtnPrintRecallCodes builds a workbook report and calls PrintOut Preview:=True;
    the form then calls GetRecallPrintDiagnostic, which builds the report again.
    Neither the generic handler return nor that second report proves printing or
-   successful presentation. Future contracts must preserve these algorithms and
-   distinguish their actual owner facts. This clarifies D18's activity/business
+   successful presentation. Future contracts must preserve conforming algorithms
+   and distinguish their actual owner facts. Source review also finds
+   `frmProduction.CompleteProductionRun` falls back to `CompleteReusableRun`
+   when `ActiveRunProcess()` is empty. This conflicts with D15's selected-Process
+   rule; it is not authorized by this audit's preservation wording. Its runtime
+   effect remains unverified. The next D13 gate must protect the actual
+   `mBtnManagerApplyOutput_Click` selected positive path and unselected refusal
+   before adding observations, following D15 without a whole-run exception.
+   This clarifies D18's activity/business
    distinction and the normative selected-Process Check In rule; no new control
    IDs, outcomes, commit boundary or implementation is approved by this audit.
 6. Close and public/repeated launcher behavior must preserve captured-workbook

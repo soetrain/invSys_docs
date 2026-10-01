@@ -575,8 +575,17 @@ publication and ordinary-reader expectation/Evaluate handlers cannot conclude
 Check In/STAGED from any of the four interrupted runs. Eight new captures, five
 compiles, static ratchets, preservation and normal shutdown/delayed zero audit
 pass. This is verification only, with no new contract or runtime correction.
-Unreadable policy after REQUESTED, further owner refusals, remaining controls,
-multiline/layout and full human/NAS Release1 acceptance remain open.
+Recovery/refusal verification,2026-10-01: unchanged activity03 passes629/629,
+retaining525 prior checks. Missing/unknown keys are REJECTED; unavailable identity
+headers and ambiguous false reusable owner results are FAILED, without successful
+terminals or invented sources. Unreadable policy after REQUESTED preserves owner
+success and the unfinished journal; actual Viewer Refresh reports unavailability.
+After availability recovers in the same live session, actual Stop closes it as
+Incomplete/UNFINISHED_ACTIONS. Ordinary-reader diagnostics cannot infer the missing
+STAGED result. Ten new captures, five compiles, unchanged static ratchets,
+preservation and unassisted shutdown/delayed zero audit pass. This adds evidence
+under existing D18, not a new immediate-closure or restart contract. Remaining Run
+controls, multiline/layout and full human/NAS Release1 acceptance remain open.
 
 - One deliberate handler entry produces a REQUESTED/result pair when collection
   is enabled and the existing context/policy gates allow both writes. Loading,

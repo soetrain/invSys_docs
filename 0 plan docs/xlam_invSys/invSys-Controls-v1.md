@@ -1,6 +1,18 @@
 # invSys Form Controls v1
 
-**Version:** 1.421 (Check In post-REQUESTED interruption diagnostics verified; broader acceptance pending)
+**Version:** 1.422 (Check In unreadable-policy recovery and owner refusals verified; broader acceptance pending)
+
+Unchanged activity03 passes629/629, preserving525 prior ordered checks and adding
+104 for four more owner refusals and unreadable-policy recovery in both staging
+modes. Actual Viewer Refresh displays policy unavailability; after recovery in
+the same live session, actual Stop and ordinary-reader Evaluate retain incomplete
+evidence without inventing the missing STAGED result. Existing owner messages,
+identity/custom staging, guards and authority are preserved. Ten new captures,
+shared42/five compiles, unassisted closure/delayed zero audit and unchanged static
+metrics/three schemas/376 parses pass. This is verification only. Remaining Run
+controls, multiline/layout and full human/NAS acceptance remain open. Complete
+Run's unselected whole-run fallback is a source-level D15 conflict awaiting the
+next packaged owner-boundary test; it is not an accepted alternative workflow.
 
 Unchanged activity03 passes525/525, retaining all434 prior checks and adding91.
 After actual Check In/REQUESTED, a valid external policy change or blocked terminal
@@ -11,8 +23,8 @@ for all four runs to an ordinary reader, without invented completion or Domain
 sources. Eight new captures, shared42/five compiles, preservation, normal cleanup
 and delayed zero audit pass. Static metrics stay unchanged; three schemas/376
 parses pass. This adds verification under existing D18, with no new runtime
-behavior or product RED. Unreadable policy after REQUESTED, further refusals,
-remaining controls, multiline/layout and full human/NAS acceptance remain open.
+behavior or product RED. The newer checkpoint above adds recovery and refusal
+evidence; remaining controls, layout and full release acceptance remain open.
 
 Test-only policy expansion on unchanged activity03 passes434/434, retaining229
 earlier checks and adding205. Collection off, valid older catalog24 policy,
