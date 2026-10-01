@@ -2,6 +2,22 @@
 
 **Status:** Current corrective implementation plan
 
+Complete Run D15 prerequisite,2026-10-01 UTC: the actual packaged
+`mBtnManagerApplyOutput_Click` confirms that empty selection reaches the whole-run
+owner and consumes inventory (55 PASS/4 FAIL). The form now refuses before note
+or Actual Output staging and calls only the selected-Process owner. Unpromoted
+complete-selection01 passes59/59 with all prior identities/PASS results retained;
+shared42, five instrumented compiles, both visible captures, normal cleanup and
+delayed zero native audit pass. Cold startup/five compiles preserve282 of283
+components; only frmProduction changes. This is a D15 implementation correction,
+not a new contract or Complete Run tracking integration. Controls1.423/coverage1.163
+record the boundary. Next: new-candidate Check In629 regression, packaged smoke,
+layout, live-role/full-chain and focused multi-Process owner evidence before
+tracking integration. Exact writer IDs and partial submissions still need coverage.
+Static evidence retains290 components/6175 procedures,9 literal/45 unresolved
+calls and190 duplicate candidates;135521 lines is one fewer. Three schemas/
+377 parses and28 non-growing module caps pass.
+
 Check In recovery/refusal checkpoint,2026-10-01 UTC: unchanged activity03 passes
 629/629, retaining all525 prior ordered checks and adding104. Four more owner
 refusals preserve staging and typed non-success observations. Unreadable policy
@@ -14,13 +30,13 @@ unassisted shutdown/delayed zero audit and unchanged static metrics/three schema
 runtime behavior or product RED is claimed. Remaining controls and full release
 acceptance remain open.
 
-Next D13 boundary: Complete Run's actual `mBtnManagerApplyOutput_Click` handler.
+The next boundary identified at that checkpoint was Complete Run's actual `mBtnManagerApplyOutput_Click` handler.
 Source review finds `CompleteProductionRun` falls back to `CompleteReusableRun`
 when `ActiveRunProcess()` is empty, whereas Architecture v4.11 D15 requires one
 selected Process at a time. Protect the selected positive owner path and the
 unselected refusal through the packaged handler before tracking integration.
 Follow D15; do not preserve or authorize this fallback as a hybrid contract.
-Its actual runtime effect remains unverified. Exact writer event IDs and partial
+Its runtime defect and correction are now verified at the newer checkpoint above. Exact writer event IDs and partial
 submissions, separately from later application evidence, also require coverage.
 
 Check In post-REQUESTED checkpoint,2026-10-01 UTC: unchanged activity03 passes

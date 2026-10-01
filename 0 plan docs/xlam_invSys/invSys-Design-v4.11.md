@@ -4751,6 +4751,19 @@ Each Recipe version declares:
   block the selected Process. A Process with an incoming Recipe connection is
   runnable only after the producing upstream Process has completed and its
   exact output key retains enough quantity for the routed commitment.
+  D13 verification,2026-10-01: the Complete Run handler's empty-selection
+  whole-run fallback produced55 PASS/4 FAIL, including actual inventory consumption.
+  The D15 correction refuses before note/output staging and removes that fallback;
+  the packaged one-Process positive/unselected-refusal gate then passes59/59.
+  The existing owner wording is `Choose one Process before Complete Run.`
+  The new unpromoted complete-selection01 candidate passes cold startup/five
+  compiles with only frmProduction changed among283 packaged components. Both
+  RED/GREEN captures and normal shutdown/delayed zero native audits are verified.
+  Static metrics retain procedures/dynamic calls with one fewer runtime line;
+  three schemas/377 PowerShell parses and all28 non-growing module caps pass.
+  This corrects implementation to D15; it introduces no whole-run alternative or
+  Complete Run activity contract. Broader regressions, multi-Process completion
+  and full Release1 acceptance on the new candidate remain pending.
 - The selected Process's ordered instructions are visible on Production Run -
   List during allocation, Check In, and completion. The acceptable-inventory
   list shows at least eight ordinary rows at the default form size.

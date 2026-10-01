@@ -1,7 +1,19 @@
 # Production form tracking coverage audit
 
-Version 1.162. Last reviewed:2026-10-01 UTC, Check In recovery and additional refusals verified;
+Version 1.163. Last reviewed:2026-10-01 UTC, Complete Run selected-Process prerequisite corrected;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+The Complete Run D15 baseline proves actual empty-selection consumption on
+activity03 (55 PASS/4 FAIL). The form now refuses before note/output staging and
+removes whole-run fallback. New complete-selection01 passes59/59 with the selected
+positive owner preserved. Shared42/five instrumented compiles, two reviewed
+captures, package/settings preservation and normal closure/delayed zero audit
+pass. Separate cold startup/five compiles show only frmProduction changed among283
+components. Complete Run remains untracked; this is an implementation correction
+under D15. The new candidate still needs Check In629 and other regressions,
+multi-Process owner coverage and full Release1 evidence.
+Static evidence decreases runtime lines by one; procedure/dynamic-call counts
+remain unchanged and three schemas/377 parses/28 non-growing caps pass.
 
 Unchanged activity03 passes629/629, retaining525 prior ordered checks and adding
 104. Four more owner refusals preserve typed non-success results, staging and
@@ -1844,10 +1856,12 @@ not silently excluded because Run - List is the Release 1 proving path.
    and distinguish their actual owner facts. Source review also finds
    `frmProduction.CompleteProductionRun` falls back to `CompleteReusableRun`
    when `ActiveRunProcess()` is empty. This conflicts with D15's selected-Process
-   rule; it is not authorized by this audit's preservation wording. Its runtime
-   effect remains unverified. The next D13 gate must protect the actual
-   `mBtnManagerApplyOutput_Click` selected positive path and unselected refusal
-   before adding observations, following D15 without a whole-run exception.
+   rule; it is not authorized by this audit's preservation wording. The actual
+   `mBtnManagerApplyOutput_Click` baseline subsequently proves this defect
+   (55 PASS/4 FAIL) and the D15 form correction passes59/59 on complete-selection01.
+   Selected positive completion and unselected refusal are protected; broader
+   multi-Process/interruption and regression evidence remains pending before
+   observations are added. No whole-run exception is authorized.
    This clarifies D18's activity/business
    distinction and the normative selected-Process Check In rule; no new control
    IDs, outcomes, commit boundary or implementation is approved by this audit.

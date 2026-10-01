@@ -1,6 +1,18 @@
 # invSys Form Controls v1
 
-**Version:** 1.422 (Check In unreadable-policy recovery and owner refusals verified; broader acceptance pending)
+**Version:** 1.423 (Complete Run selected-Process prerequisite corrected; broader acceptance pending)
+
+Complete Run's actual packaged handler on activity03 consumed inventory with no
+Process selected (55 PASS/4 FAIL). Under existing D15, complete-selection01 now
+refuses before note/output staging with `Choose one Process before Complete Run.`
+and removes the whole-run fallback. Selected completion and unselected preservation
+pass59/59; both captures, shared42/five instrumented compiles, new-candidate pins,
+normal closure/delayed zero audit and separate cold startup/five compiles pass.
+Only frmProduction changes among283 packaged components. No tracking control is
+added and multi-Process/full-regression acceptance on this new candidate remains
+pending. Existing activity03 evidence does not establish new-candidate acceptance.
+Static evidence has one fewer runtime line and unchanged procedure/dynamic-call
+counts; three schemas/377 parses and28 non-growing module caps pass.
 
 Unchanged activity03 passes629/629, preserving525 prior ordered checks and adding
 104 for four more owner refusals and unreadable-policy recovery in both staging
@@ -11,8 +23,8 @@ identity/custom staging, guards and authority are preserved. Ten new captures,
 shared42/five compiles, unassisted closure/delayed zero audit and unchanged static
 metrics/three schemas/376 parses pass. This is verification only. Remaining Run
 controls, multiline/layout and full human/NAS acceptance remain open. Complete
-Run's unselected whole-run fallback is a source-level D15 conflict awaiting the
-next packaged owner-boundary test; it is not an accepted alternative workflow.
+Run's unselected whole-run fallback was subsequently proven and corrected above;
+it is not an accepted alternative workflow.
 
 Unchanged activity03 passes525/525, retaining all434 prior checks and adding91.
 After actual Check In/REQUESTED, a valid external policy change or blocked terminal
