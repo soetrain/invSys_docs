@@ -1,6 +1,38 @@
 # invSys Form Controls v1
 
-**Version:** 1.400 (Clear independent Action Paths GREEN)
+**Version:** 1.401 (Load observations and captured Run entry guards GREEN; acceptance pending)
+
+Unpromoted `validation-production-run-load-03` integrates Load Recipe under the
+existing D18 contract, bringing constructed-button wiring to59/68. All36 Load
+read-return interruption checks pass:146 checks retain116 PASS/30 known FAIL on
+the final candidate. The reusable503 gate is269 PASS/234 known FAIL, retaining
+all prior identities/order/PASS and adding73 Load/binding checks. All58 Load
+checks and all33 owning cases pass. Seven native forms survive workbook closure;
+all seven actual handlers refuse the stale binding without owner mutation or
+redirected activity. A shared entry guard also protects Scale, both Refresh and
+both Apply controls; their observations remain unintegrated. This fixes an exposed
+Scale gap previously hidden when Excel dismissed its form, without changing its
+algorithm or the pending worksheet Scale decision.
+
+Permission218 is193 PASS/25 known FAIL; fault245 is180 PASS/65 known FAIL. All
+previous identities/order/PASS survive; five and14 Load checks become GREEN.
+Five compiles, preservation, normal cleanup and delayed zero audits pass for
+these accepted gates. One earlier permission fixture attempt is excluded after
+a native ntdll c0000028 crash during Admin Seed; settings/packages were preserved
+and the owned restart closed. The native cause remains unresolved.
+
+Final load03 regressions retain Clear169 at145 PASS/24 known FAIL, Tree232 at
+232/232 GREEN, and stock138 at82 PASS/56 known FAIL. Every prior ordered identity
+and result survives, with five compiles, preservation, normal cleanup and delayed
+zero Excel audits. These results do not close populated-layout or human acceptance.
+
+The build changes three existing components and adds two typed helpers while274
+compiled components remain unchanged. Static is286/6165/135319,9/45 calls,190
+duplicates and28 non-growing caps; three schemas and368 tooling parses pass.
+The form shrinks five lines and reusable-run module38 lines. Independent Load
+Action Paths, remaining Run observation integration and broad release/layout/
+live-role/full reusable/human acceptance remain open. Scale/UI proposals remain
+unapproved; no new normative behavior is introduced.
 
 Clear Action Paths now pass102/102 on the same unpromoted clear01 packages.
 The preceding presentation01 negative control passes47 checks and fails only

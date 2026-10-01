@@ -1,7 +1,34 @@
 # Production form tracking coverage audit
 
-Version 1.140. Last reviewed:2026-10-01 UTC, Clear independent Action Paths GREEN;
+Version 1.141. Last reviewed:2026-10-01 UTC, Load and captured Run entry guards GREEN;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Load Recipe is wired in unpromoted `validation-production-run-load-03`, so
+constructed-button wiring is59/68. All36 Load read-return checks pass:146 checks
+retain116 PASS/30 known FAIL with prior identities/order/results exact. Reusable503
+is269 PASS/234 known FAIL: all prior GREEN survives, with73 newly GREEN Load/binding
+checks, all58 Load checks and all33 owner cases. All seven native forms survive
+closure and their actual handlers refuse the stale binding. Shared entry guards
+protect the other five catalog24 Run buttons, but do not integrate their observers
+or change their algorithms. Permission218 is193/25 and fault245 is180/65; every
+prior identity/order/PASS remains and all19 improvements are Load checks.
+Five compiles, preservation, normal cleanup and delayed zero Excel audits pass.
+Independent Load paths, remaining observations and broad acceptance remain open.
+
+Final load03 regressions preserve exact prior ordered results: Clear169 is145
+PASS/24 known FAIL, Tree232 is232/232 GREEN, and stock138 is82 PASS/56 known FAIL.
+Five compiles, preservation, normal cleanup and delayed zero Excel audits pass;
+populated-layout and human acceptance remain open.
+
+Static286/6165/135319 adds2 components/6 procedures/91 lines, with9/45 calls,
+190 duplicates and28 non-growing caps. The form and reusable-run module shrink
+five and38 lines respectively; three schemas and368 tooling parses pass. Core and
+Domain authority and the normative Load contract are unchanged.
+
+One permission attempt is excluded after native ntdll c0000028 during Admin Seed,
+before Run-specific checks. The owned restart closed, settings/package pins were
+preserved and the post-recovery audit passed. A fresh gate passes normally; native
+cause and the separate full reusable acceptance remain unresolved.
 
 Clear paths102/102 pass on unchanged clear01. Presentation01 supplies meaningful
 RED47 PASS/1 missing original Clear pair; every prior ordered identity/PASS is
