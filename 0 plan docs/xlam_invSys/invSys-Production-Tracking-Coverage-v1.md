@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.124. Last reviewed:2026-10-01 UTC, bounded reusable timing diagnosis;
+Version 1.125. Last reviewed:2026-10-01 UTC, bounded late-observer diagnosis;
 reusable acceptance unresolved.
 
 Catalog23 now defines118 global controls and observes55/68 constructed Production
@@ -205,9 +205,18 @@ same ntdll/c0000028 signature. All 14 readiness reads report Ready immediately;
 polling does not expose or fix the observed failure. These are diagnostic
 comparisons, not full reusable acceptance, product RED or a justified runtime
 delay/compile requirement. Exact evidence is in the Assignment record.
-The next bounded diagnosis will attach the existing metadata-only observer at
-the later failure boundary; observer effects remain explicit. No runtime or
-normative change, package promotion or human acceptance is claimed.
+No runtime or normative change, package promotion or human acceptance is claimed.
+
+Later observer attachment before output regulation is not reached because batch
+scale crashes first with the same c0000028 signature. Attachment before batch
+scale, after both original launcher calls, takes about258 ms and passes the
+bounded prefix with normal closure, preservation and delayed audit. It records
+one first-chance000006BA and produces no terminating-fault stack; this is still
+observed diagnostic evidence, not repair or full reusable acceptance. Read-only
+Windows tracing checks have not established a suitable exception-only capture;
+no trace or system-setting change is made. Exact roots/times/exclusions are in
+Assignment evidence. The remaining Run-control contract audit can proceed
+independently while the reusable defect stays open.
 
 Full reusable171/replay37 remain open. The original edit/export callback fails
 with RPC800706BE/ntdll c00000ff; explicitly quitting an empty recovery instance
@@ -1301,6 +1310,38 @@ not silently excluded because Run - List is the Release 1 proving path.
    distinguish deliberate entry from cascades. Local alternative-list helpers now
    live in modProductionAssignmentDraft. Catalog23 outcomes follow D18; the GREEN
    observations at the top do not establish full path/regression/human acceptance.
+
+8. Run preparation/allocation audit (last verified2026-10-01) distinguishes the
+   nine pending local/read controls from Check In, Complete Run, Next Batch and
+   Print Recall. This is source evidence, not a new approved observation contract.
+   Load Recipe parses scale first, then LoadReleasedReusableRecipe clears the
+   prior in-memory run before validating identifiers, released graph and Process
+   definitions. A subsequent refusal can therefore follow replacement/reset;
+   observation must not invent rollback. Apply Scale on a loaded reusable run
+   refuses after any Process completion; success resets allocations, output keys,
+   actual quantities, check-in/completion state, batch note and frozen-note state.
+   Its non-reusable branch instead reloads the selected worksheet recipe and
+   prepares output staging. Clear Run resets reusable state and five visible
+   lists, or invokes the existing worksheet chooser/table cleanup when no reusable
+   run is loaded; do not silently replace either branch during observation work.
+   Loader Refresh resets cache and refreshes recipe choices in the reusable branch;
+   Manager Refresh uses the existing run-control refresh without that recipe-list
+   step. Their non-reusable branches invoke the declared LOCAL read-model refresh,
+   then refresh local controls even when that owner reports failure. A generic
+   handler return cannot prove successful source availability.
+   List Apply can refresh an empty palette and auto-select its sole row before
+   the shared allocation helper; Tree Apply directly enters that helper. Reusable
+   allocation prefers entered quantity, requires the run location and expands the
+   selected stock bucket over exact System_Key entities through the owning service;
+   successful local allocation invalidates check-in/completion. It does not itself
+   submit inventory events. The non-reusable branch uses the active List/Tree
+   palette, input-source precedence, header-based staging writes and local override
+   synchronization. A location refusal can clear that row's existing allocation;
+   another refusal can follow mirrored input changes. Do not infer no local effect
+   from rejection. Expand/Collapse change only the collapsed-group dictionary and
+   rebuild the tree projection. Focused actual-handler tests must retain these
+   branch differences, partial effects, exact-key planning, unknown-column behavior
+   and programmatic-cascade suppression before any new mappings are implemented.
 
 ## Validation and next implementation grouping
 

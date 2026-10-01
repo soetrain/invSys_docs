@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.384 (bounded reusable timing diagnosis; acceptance unresolved)
+**Version:** 1.385 (bounded late-observer diagnosis; acceptance unresolved)
 
 Architecture v4.11 D18's Ingredients Assignment refinement is implemented in
 unpromoted `validation-production-assignment-01`: catalog23 adds seven buttons
@@ -207,9 +207,24 @@ same ntdll/c0000028 signature. All 14 readiness reads report Ready immediately;
 polling does not expose or fix the observed failure. These are diagnostic
 comparisons, not full reusable acceptance, product RED or a justified runtime
 delay/compile requirement. Exact evidence is in the Assignment record.
-The next bounded diagnosis will attach the existing metadata-only observer at
-the later failure boundary; observer effects remain explicit. No runtime or
-normative change, package promotion or human acceptance is claimed.
+No runtime or normative change, package promotion or human acceptance is claimed.
+
+Later observer attachment before output regulation is not reached because batch
+scale crashes first with the same c0000028 signature. Attachment before batch
+scale, after both original launcher calls, takes about258 ms and passes the
+bounded prefix with normal closure, preservation and delayed audit. It records
+one first-chance000006BA and produces no terminating-fault stack; this is still
+observed diagnostic evidence, not repair or full reusable acceptance. Read-only
+Windows tracing checks have not established a suitable exception-only capture;
+no trace or system-setting change is made. Exact roots/times/exclusions are in
+Assignment evidence. The remaining Run-control contract audit can proceed
+independently while the reusable defect stays open.
+
+The Production coverage audit now records the nine remaining preparation/read/
+allocation controls' distinct branches and partial local effects. Recipe loading
+can clear prior state before validation; scale resets allocations/notes, and a
+rejected worksheet allocation can clear staging. These source facts constrain
+future D18 mappings and focused tests; they approve no new contract or behavior.
 
 Full reusable171/replay37 remain open after native Excel failures. The original
 edit/export callback fails with RPC800706BE/ntdll c00000ff and requires explicit
