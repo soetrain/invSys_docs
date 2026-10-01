@@ -2,6 +2,39 @@
 
 **Status:** Current corrective implementation plan
 
+Apply integration checkpoint,2026-10-01 UTC: unchanged D18 now has eight handlers
+integrated in unpromoted allocate01,63/68 constructed buttons. List/Tree Apply
+uses captured action guards and actual owner results; worksheet precedence,
+mirroring, header-based writes and partial effects are preserved. Reusable stock
+algorithms retain their existing reads with captured continuation checks. No
+message/branch proposal is implemented. Worksheet RED156/112 approved failures
+becomes268/268 approved GREEN, retaining exact identities/order and all prior
+passes. Four RUN-UI-01 wording assertions remain failed/unapproved. Frozen yield
+baseline retains132/14/146. Build/cold startup/five compiles, preservation, normal
+closure and delayed zero audits pass. Stock138/138, read-interruption142/146,
+policy213/218 and fault232/245 retain every prior ordered identity/pass; the
+remaining failures concern Scale. Empty-palette refill invokes no allocation
+owner and correctly refuses, so the old STAGED test expectation was wrong under
+D18. Corrected narrow RED54/8 becomes GREEN62/62 without changing runtime or
+claiming no local effects. Static289/6171/135434,9/45 calls,190 duplicates and28
+non-growing caps pass, with three schemas and368 parses. Run-local503 retains all
+prior ordered identities/passes at445 PASS/58 known Scale FAIL, improving156 Apply
+checks. All33 owner cases,42 shared checks and seven actual native workbook-close
+handlers pass; five compiles, preservation, normal closure and delayed zero audit
+pass. Independent paths, layout, broad release and human acceptance remain open;
+the separate full reusable171/replay37 gate is unresolved.
+RUN-SCALE-01 and RUN-UI-01 require approval before their proposed behavior changes.
+
+Supplemental actual-return proof on the same candidate expands146 checks to236:
+refresh01 RED172/64 retains all prior relative-order results, and allocate01
+GREEN232/4 retains all ordered identities/prior passes. All108 Apply checks pass;
+four known Scale failures remain. Real differing-UOM definitions are saved and
+released before measuring both conversion returns and later entity reads. No
+further guard edit is needed. Five compiles, preservation, normal closure and
+delayed zero audit pass; static03 keeps the same runtime metrics and passes368
+tooling parses. This closes the suspected conversion continuation concern without
+claiming independent path, layout or full-release acceptance.
+
 Shared Assignment regression checkpoint, 2026-10-01 UTC: unchanged refresh01
 retains 789/789 safety checks in exact prior order. Initial788/1 was a malformed
 catalog22 test fixture that retained catalog24 Run rows; the strict reader's

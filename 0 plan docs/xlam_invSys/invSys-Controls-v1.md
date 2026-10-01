@@ -1,6 +1,32 @@
 # invSys Form Controls v1
 
-**Version:** 1.405 (Assignment regressions on Refresh candidate GREEN; acceptance pending)
+**Version:** 1.406 (List/Tree Apply focused observations GREEN; broader gates pending)
+
+Unpromoted allocate01 integrates the two existing Apply handlers under unchanged
+D18: eight Run handlers,63/68 constructed buttons. Worksheet checks retain all
+prior identities/order/passes and improve112 missing observations:268/268 approved
+checks pass. Four proposed RUN-UI-01 message assertions remain failed/unapproved;
+the existing wording and partial local effects are preserved. Cold startup,
+five compiles, preservation, normal closure and delayed zero audit pass. Stock
+passes138/138; read-interruption142/146, policy213/218 and fault232/245 retain only
+known Scale failures, with every prior ordered identity/pass preserved. Refill
+diagnosis proves the empty palette invokes no allocation owner and correctly
+records REQUESTED then REJECTED. Correcting the former STAGED test expectation
+yields focused RED54/8 to GREEN62/62; no runtime change or no-local-effect claim.
+Static289/6171/135434 retains9/45 dynamic calls,190 duplicate candidates and28
+non-growing caps; three schemas and368 parses pass. Run-local503 passes445 with58
+known Scale failures, preserving every prior ordered identity/pass and improving
+156 Apply checks. All33 owner cases,42 shared checks and seven actual native
+workbook-close handlers pass; five compiles, preservation, unassisted closure and
+delayed zero audit pass. Independent paths/layout and broader acceptance remain
+pending. RUN-SCALE-01 is unapproved; this is not full reusable171/replay37 acceptance.
+
+Expanded conversion/later-inventory interruption coverage moves172 PASS/64 FAIL
+to232 PASS/4 known Scale FAIL on unchanged allocate01. All146 original relative-
+order results survive the expanded RED; all236 identities/order and prior passes
+survive GREEN. All108 Apply checks pass across12 actual-return cases, with real
+differing-UOM definitions saved/released through their owners. Five compiles,
+preservation, normal closure and delayed zero audit pass. No further runtime edit.
 
 Shared Ingredients Assignment safety retains 789/789 in exact prior order on
 refresh01 after a test-fixture correction. The original older-policy fixture left

@@ -1,7 +1,33 @@
 # Production form tracking coverage audit
 
-Version 1.145. Last reviewed:2026-10-01 UTC, shared Assignment regressions GREEN;
+Version 1.146. Last reviewed:2026-10-01 UTC, List/Tree Apply focused GREEN;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Unpromoted allocate01 integrates List/Tree Apply under the existing D18 contract,
+bringing wiring to63/68 and eight of nine catalog24 handlers. The worksheet gate
+retains all prior identities/order/passes and improves112 approved checks to
+268/268 GREEN; four proposed message assertions remain failed and unapproved.
+The actual handlers preserve local effects, exact keys, custom columns and
+formulas. No source submission/application claim. Cold startup, five compiles,
+preservation, normal closure and delayed zero audit pass. Stock138/138,
+read-interruption142/146, policy213/218 and fault232/245 preserve prior ordered
+identities/passes; remaining failures concern Scale. The refill case invokes no
+allocation owner and retains the existing no-choices refusal. Its corrected
+REJECTED expectation moves narrow RED54/8 to GREEN62/62 with no runtime change.
+Static289/6171/135434 retains9/45 calls,190 duplicate candidates and28 non-growing
+caps; three schemas and368 parses pass. Run-local503 is445 PASS/58 known Scale
+FAIL, retaining prior ordered identities/passes and improving156 Apply checks.
+All33 owner cases,42 shared checks and seven actual native workbook-close handlers
+pass; five compiles, preservation, normal closure and delayed zero audit pass.
+Independent paths, layout and broader acceptance remain pending; full reusable171/
+replay37 is a separate unresolved gate.
+
+Expanded read-return gate:172/64 RED becomes232/4 on unchanged allocate01;
+the remaining four failures concern Scale. All146 previous relative-order results
+survive RED and all236 ordered identities/prior passes survive GREEN. All108 Apply
+checks pass, including actual stock/direct UOM conversions and later entity reads
+using a legitimately saved/released differing-UOM definition. Five compiles,
+preservation, normal closure and delayed zero audit pass. No new runtime change.
 
 Assignment safety retains 789/789 on refresh01 with exact prior order after fixing
 its malformed catalog22 fixture; the runtime reader correctly rejected retained
