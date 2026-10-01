@@ -2,6 +2,29 @@
 
 **Status:** Current corrective implementation plan
 
+Latest verification checkpoint,2026-10-01 UTC: presentation01 passes94/94
+independent Tree Action Path checks, including two actual-handler recordings,
+publication, selected Event Detail, authored intent and a separate reader's
+How-To/Diagnostic/Compare both. Two matches/zero extras prove local presentation;
+source-event application stays incomplete. Five compiles, preserved packages/
+settings/authority/recordings, normal closure and delayed zero Excel audit pass.
+Six principal captures are reviewed, with readable guide steps and conclusion.
+RUN-TREE-LAYOUT-01 is newly observed: populated experimental Tree headings for
+System_Key and Inventory Item overlap; long synthetic values truncate. Require
+an actual-form geometry test/diagnosis before repair or layout acceptance.
+Event Detail's long coverage text has viewport limits. Runtime/static metrics and
+coverage57/68 are unchanged. RUN-SCALE-01/RUN-UI-01 remain unapproved; human and
+broader release acceptance remain open. Exact records are in the Run integration
+evidence, including the94-check controller/result and six capture filenames.
+
+The modified shared path harness also retains90/90 Close checks in exact prior
+order on the same candidate: both closing gestures, separate recordings,
+publication/reader views, five compiles, preservation, unassisted closure and
+delayed zero Excel audit. Two reviewed captures show both authored steps and the
+two-match/zero-extra local-only conclusion, with a final identity-line viewport
+limit. Static remains283/6156/135163,9/45 calls,190 duplicates and28 non-growing
+caps; three schemas and367 tooling parses pass. No runtime behavior changed.
+
 Latest implementation checkpoint,2026-10-01 UTC:
 `deploy/validation-production-run-presentation-01` integrates the approved Tree
 Expand/Collapse pair. Actual packaged-handler RED100/132 becomes232/232 GREEN,

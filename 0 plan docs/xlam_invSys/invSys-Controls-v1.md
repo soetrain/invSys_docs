@@ -1,6 +1,24 @@
 # invSys Form Controls v1
 
-**Version:** 1.397 (Tree observation pair GREEN; RUN-SCALE-01 proposed)
+**Version:** 1.398 (Tree Action Paths GREEN; populated Tree layout remains open)
+
+The same presentation01 candidate passes94/94 independent Tree Action Path checks:
+two actual-handler recordings, exact publication/Event Detail, authored intent,
+reader evaluation and How-To/Diagnostic/Compare both. Both actions match with
+zero extras; local completion concludes while source-event application remains
+incomplete. Five compiles, preservation, normal cleanup and delayed zero Excel
+audit pass. Six reviewed captures show the two steps and local-only conclusion.
+RUN-TREE-LAYOUT-01 remains open: System_Key/Inventory Item headings visibly overlap
+in the populated experimental Tree, and long synthetic row text truncates. Require
+an actual-form geometry test before a repair/acceptance claim. Event Detail's long
+coverage text also exceeds its initial viewport. No runtime/layout change or
+human acceptance is implied; coverage stays57/68.
+
+The shared path harness also retains90/90 existing Close checks in exact order
+on presentation01, including both closing gestures, separate recordings and
+reader views. Five compiles, preservation, normal closure and delayed zero audit
+pass. Two reviewed Close path captures show both steps/two matches/zero extras;
+the last long identity line has a viewport limit. No runtime change is introduced.
 
 Latest unpromoted `validation-production-run-presentation-01` integrates Expand/
 Collapse under the approved D18 contract. The focused actual-handler gate moves
@@ -19,7 +37,7 @@ workflow or Scale/message proposal is approved by these tests.
 The candidate also preserves all503 reusable baseline results (178 PASS/325 known
 FAIL), all33 owner cases and seven native-close receipts. Five compiles, package/
 settings preservation, normal cleanup and delayed zero Excel audit pass. Separate
-full reusable acceptance and independent paths remain open.
+full reusable acceptance and paths for the remaining Run controls remain open.
 
 Pending RUN-SCALE-01, not approved: for Apply Scale with Designs enabled and no
 loaded reusable run, show "Load a released recipe before applying scale." and

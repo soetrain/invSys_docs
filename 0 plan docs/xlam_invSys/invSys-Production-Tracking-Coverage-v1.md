@@ -1,7 +1,24 @@
 # Production form tracking coverage audit
 
-Version 1.137. Last reviewed:2026-10-01 UTC, Tree presentation pair GREEN;
+Version 1.138. Last reviewed:2026-10-01 UTC, Tree Action Paths94 GREEN;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Independent Tree paths94/94 now pass on presentation01: original separate
+recordings, publication/Event Detail, authored intent, independent reader and all
+three views retain exact provenance. Two matches/zero extras establish local
+completion only; SourceEventsApplied remains incomplete. Five compiles, pins,
+preservation, normal cleanup and delayed zero Excel audit pass. Six principal
+captures were reviewed. RUN-TREE-LAYOUT-01 records overlapping System_Key/Inventory
+Item headings and truncated synthetic row text in the populated experimental Tree;
+geometry diagnosis and layout acceptance remain open. Long Event Detail coverage
+also has viewport limits. Runtime/static metrics and coverage57/68 are unchanged;
+these are automated/agent-reviewed facts, not human acceptance.
+
+Shared path-harness regression retains90/90 Close checks in exact prior order,
+with both gestures, independent recordings/publication/reader views, five compiles,
+preservation, normal cleanup and delayed zero Excel audit. Two reviewed captures
+show the two-step local-only conclusion; a long final identity line exceeds its
+viewport. No coverage or runtime change results from this regression.
 
 Latest candidate `validation-production-run-presentation-01` integrates Expand/
 Collapse, moving the232-check actual-handler baseline from100 PASS/132 FAIL to
@@ -13,7 +30,7 @@ acceptance. Policy218 is183 PASS/35 known FAIL and fault245 is153 PASS/92 known
 FAIL, retaining all prior ordered checks and passes; all36 new Tree checks pass.
 Five compiles, candidate pins, preservation, normal closure and delayed zero audits
 pass. The remaining failures concern the seven unintegrated handlers. Independent
-Action Path evidence remains required for this pair.
+Action Path evidence for this pair is supplied by the separate94-check gate above.
 
 The same candidate preserves all503 reusable baseline identities/order/results,
 178 PASS/325 known FAIL, all33 owner cases and seven native-close receipts. Five
@@ -78,7 +95,7 @@ the new candidate, with five compiles, preservation, normal cleanup and delayed
 zero Excel audit. Broader/expanded/path gates remain open on this candidate.
 
 D18 now normatively refines the nine controls in owner audit8 as catalog24,
-PRODUCTION_RUN_LOCAL. Controls1.397 lists their exact mappings. The preceding Core
+PRODUCTION_RUN_LOCAL. Controls1.398 lists their exact mappings. The preceding Core
 checkpoint did not establish form integration or acceptance. Expand/Collapse now
 has focused GREEN evidence above; seven remaining local/read/allocation controls
 and the full context/policy/failure matrix are required before this group can pass.
