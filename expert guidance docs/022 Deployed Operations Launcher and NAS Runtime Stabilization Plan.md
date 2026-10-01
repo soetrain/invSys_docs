@@ -94,6 +94,13 @@ diagnostic expectations pass. Local completion remains distinct from Domain
 application; REQUESTED alone does not conclude. No new screenshot or human
 acceptance is claimed by that gate. Exact records are in Assignment evidence.
 
+Native lifecycle cancellation94 retains exact prior order and five compiles:
+actual Process/Recipe Release/Obsolete questions default to No; declining preserves
+captured context, drafts/source authority and unknown columns with exact cancelled
+facts. Normal cleanup, preservation and delayed audit pass. Four native-dialog
+captures are readable; the separate Settings capture has a partly obscured
+lower-right edge. This adds no full-layout or human-acceptance claim.
+
 Full reusable remains open: the original edit/export callback fails with
 RPC800706BE and native ntdll/c00000ff; an empty recovery instance requires explicit
 Quit, excluding that attempt from acceptance. A narrower edit/export diagnostic

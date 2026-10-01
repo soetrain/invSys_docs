@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.113. Last reviewed:2026-10-01 UTC, Assignment draft and six-page layout regressions;
+Version 1.114. Last reviewed:2026-10-01 UTC, Assignment native cancellation regression;
 reusable acceptance unresolved.
 
 Catalog23 now defines118 global controls and observes55/68 constructed Production
@@ -86,6 +86,13 @@ unassisted closure, preservation and delayed audit. Actual New/Clear/Validate,
 guards, optional tracking, eight-action recording, publication, Event Detail and
 authored expectations pass without equating local completion to Domain application.
 REQUESTED alone does not conclude. That gate adds no screenshot/human acceptance.
+
+Native lifecycle cancellation94 retains exact prior order and five compiles.
+Process/Recipe Release/Obsolete present exact questions with default No; declining
+preserves captured context, drafts/source authority and unknown columns with exact
+cancelled facts. Unassisted closure, preservation and delayed audit pass. Four
+native-dialog captures are readable; the separate Settings viewport has an
+obscured lower-right edge/Close area. No full-layout or human acceptance is claimed.
 
 Full reusable171/replay37 remain open. The original edit/export callback fails
 with RPC800706BE/ntdll c00000ff; explicitly quitting an empty recovery instance

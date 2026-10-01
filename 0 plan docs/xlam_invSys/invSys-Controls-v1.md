@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.373 (Assignment draft and six-page layout regressions; reusable acceptance unresolved)
+**Version:** 1.374 (Assignment native cancellation regression; reusable acceptance unresolved)
 
 Architecture v4.11 D18's Ingredients Assignment refinement is implemented in
 unpromoted `validation-production-assignment-01`: catalog23 adds seven buttons
@@ -85,6 +85,13 @@ optional tracking, the eight-action recording, publication, Event Detail and
 authored diagnostic expectations pass. Local completion and Domain application
 remain distinct; REQUESTED alone does not conclude. No new screenshots or human
 acceptance are supplied by that gate. Exact records are in Assignment evidence.
+
+Native lifecycle cancellation94 retains exact prior order and five compiles.
+Actual Process/Recipe Release/Obsolete questions default to No; declining preserves
+captured context, drafts/source authority and unknown columns with exact cancelled
+facts. Unassisted closure, preservation and delayed audit pass. Four native-dialog
+captures are readable; the additional Settings viewport has a partly obscured
+lower-right edge/Close area. No full-layout or human acceptance is implied.
 
 Full reusable171/replay37 remain open after native Excel failures. The original
 edit/export callback fails with RPC800706BE/ntdll c00000ff and requires explicit
