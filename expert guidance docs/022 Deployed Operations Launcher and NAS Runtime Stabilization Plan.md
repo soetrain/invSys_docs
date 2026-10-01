@@ -135,6 +135,15 @@ Add status while Event Detail records STAGED; viewport/editor limits do not prov
 every stored field, full layout or human acceptance. Runtime/static metrics and
 control coverage are unchanged; exact records are in the Assignment evidence.
 
+Recipe ordering463 and separate Action Paths93 retain every prior ordered check
+and five compiles each, with unassisted closure, preservation and delayed Excel
+audits. Existing movement/normalization and rejected-graph effects remain intact;
+independent three-action recordings, publication, Event Detail and all views pass.
+Three focused and seven path captures are reviewed, including the scrolled
+three-match/zero-extra conclusion. Successful Up/Down retain prior status text,
+so the focused Down capture retains an earlier injected failure message. Viewport
+and synthetic-graph limits remain; no runtime, coverage or human-acceptance change.
+
 Full reusable remains open: the original edit/export callback fails with
 RPC800706BE and native ntdll/c00000ff; an empty recovery instance requires explicit
 Quit, excluding that attempt from acceptance. A narrower edit/export diagnostic

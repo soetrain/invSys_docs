@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.117. Last reviewed:2026-10-01 UTC, Assignment Recipe structure regressions;
+Version 1.118. Last reviewed:2026-10-01 UTC, Assignment Recipe ordering regressions;
 reusable acceptance unresolved.
 
 Catalog23 now defines118 global controls and observes55/68 constructed Production
@@ -126,6 +126,15 @@ path captures are reviewed. The scrolled conclusion shows five matches and zero
 extras. Recipe Remove retains the earlier Add status while Event Detail records
 STAGED; viewport/editor limits do not prove all stored fields or full layout.
 Runtime/static metrics, control coverage and human acceptance are unchanged.
+
+Recipe ordering463 and Action Paths93 retain exact prior ordered checks and five
+compiles each, with normal unassisted closure, preservation and delayed Excel
+audits. Movement, normalization, rejected-graph effects, guards and independent
+three-action recordings/publication/views pass. Three focused and seven path
+captures are reviewed, including the scrolled three-match/zero-extra conclusion.
+Up/Down preserve prior status text; the focused Down capture retains an earlier
+injected failure message. Viewport and synthetic-graph limits remain. Runtime,
+static metrics, control coverage and human acceptance are unchanged.
 
 Full reusable171/replay37 remain open. The original edit/export callback fails
 with RPC800706BE/ntdll c00000ff; explicitly quitting an empty recovery instance
