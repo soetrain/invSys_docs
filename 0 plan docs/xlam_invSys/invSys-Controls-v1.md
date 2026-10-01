@@ -1,8 +1,38 @@
 # invSys Form Controls v1
 
-**Version:** 1.398 (Tree Action Paths GREEN; populated Tree layout remains open)
+**Version:** 1.399 (Clear worksheet observations and continuation checks GREEN)
 
-The same presentation01 candidate passes94/94 independent Tree Action Path checks:
+Unpromoted `validation-production-run-clear-01` observes Clear Run through its
+actual handler and retains its existing reusable/worksheet owners and messages.
+The169-check worksheet-owner gate moves115 PASS/54 FAIL to145 PASS/24 known
+Refresh observation FAIL, preserving every prior identity/order/PASS. All73 Clear
+checks pass, including33 notification/picker/default-location interruption checks.
+Missing surfaces cannot complete or retarget Clear; authorized cleanup retains
+its local effects, unknown inventory columns/formulas and exact System_Key.
+Five compiles, preservation, normal cleanup and delayed zero Excel audit pass.
+Wiring is58/68; remaining Run integration, full reusable acceptance,
+independent Action Paths and broad release/layout/human acceptance remain open.
+The build changes only the form and a typed coordinator, preserving275 existing
+compiled components. RUN-SCALE-01 and RUN-UI-01 remain unapproved.
+
+Clear also passes denied/optional/unavailable tracking and exception/nested-click
+checks: policy218 is188 PASS/30 known FAIL and fault245 is166 PASS/79 known FAIL.
+All previous identities/order/PASS survive; all18 improvements are Clear checks.
+Five compiles, preservation, normal cleanup and delayed zero Excel audit pass.
+Static has no dynamic-call, duplicate or oversized-cap regression; feature growth
+is1 component/3 procedures/65 lines, with the form three lines smaller.
+
+Reusable503 retains every prior identity/order/PASS, adding18 Clear GREEN checks:
+196 PASS/307 known FAIL. All33 owner cases,42 shared GREEN checks and seven native
+close receipts survive, with five compiles, preservation, normal cleanup and a
+delayed zero Excel audit. This bounded regression does not close the separate
+full reusable native-failure or broad acceptance gates.
+
+Clear01 additionally retains232/232 Tree presentation checks in exact order;
+five compiles, preservation, normal cleanup and delayed zero audit pass. This
+does not resolve RUN-TREE-LAYOUT-01 or establish new human acceptance.
+
+The preceding presentation01 candidate passes94/94 independent Tree Action Path checks:
 two actual-handler recordings, exact publication/Event Detail, authored intent,
 reader evaluation and How-To/Diagnostic/Compare both. Both actions match with
 zero extras; local completion concludes while source-event application remains

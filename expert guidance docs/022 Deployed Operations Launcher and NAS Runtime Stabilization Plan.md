@@ -2,6 +2,41 @@
 
 **Status:** Current corrective implementation plan
 
+Clear implementation checkpoint,2026-10-01 UTC: unpromoted
+`validation-production-run-clear-01` integrates the existing Clear Run handler
+under D18, with scoped continuation checks after notification, picker and default
+location returns. The expanded worksheet-owner gate moves115 PASS/54 FAIL to
+145 PASS/24 known Refresh observation FAIL; all169 identities/order and prior
+PASS checks survive. All73 Clear-specific checks pass, including33 new boundary
+checks and missing-owner/decoy protection. Existing cleanup effects, exact key,
+custom values/formulas and canonical authority remain protected. Five compiles,
+pins, settings preservation, normal closure and delayed zero Excel audit pass.
+The build changes only the form plus a typed Clear coordinator;275 compiled
+components remain unchanged. Wiring is58/68. Full reusable and broader
+release, layout, independent Clear Action Paths and visible acceptance gates
+remain pending; do not promote this worksheet checkpoint to full acceptance.
+No normative behavior changes or pending RUN-SCALE-01/RUN-UI-01 approvals result.
+
+Clear permission/optional-tracking and fault/nesting companions also preserve
+every prior identity/order/PASS: policy218 is188 PASS/30 known FAIL; fault245 is
+166 PASS/79 known FAIL. All18 improvements belong to Clear. Denied owner entry,
+tracking-unavailable guidance, original exception/partial-state behavior and one
+nested action pair pass. Both gates have five compiles, candidate preservation,
+normal cleanup and delayed zero Excel audit. Remaining failures concern the six
+unintegrated Run controls. Static is284/6159/135228,9/45 calls,190 duplicates and
+28 non-growing caps; three schemas and368 tooling parses pass.
+
+The503-check reusable companion also preserves all prior identities/order/PASS,
+improving178/325 to196 PASS/307 known FAIL through18 Clear checks. All33 owner
+cases,42 shared GREEN checks and seven native-close receipts remain valid. Five
+compiles, pins, preservation, normal cleanup and delayed zero Excel audit pass.
+This does not resolve the separate full reusable171/two aggregates/replay37
+native-failure investigation or full-release acceptance.
+
+The same clear01 candidate also preserves232/232 Tree presentation checks in
+exact prior order, with five compiles, preservation, normal cleanup and delayed
+zero Excel audit. No new populated-layout or human acceptance is claimed.
+
 Latest verification checkpoint,2026-10-01 UTC: presentation01 passes94/94
 independent Tree Action Path checks, including two actual-handler recordings,
 publication, selected Event Detail, authored intent and a separate reader's

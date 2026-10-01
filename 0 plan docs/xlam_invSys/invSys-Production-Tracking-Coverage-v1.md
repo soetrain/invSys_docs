@@ -1,7 +1,35 @@
 # Production form tracking coverage audit
 
-Version 1.138. Last reviewed:2026-10-01 UTC, Tree Action Paths94 GREEN;
+Version 1.139. Last reviewed:2026-10-01 UTC, Clear worksheet/boundary checks GREEN;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Clear Run is now wired in `validation-production-run-clear-01`, bringing
+constructed-button coverage to58/68. The worksheet-owner gate retains all169
+ordered identities and prior PASS checks:115/54 becomes145 PASS/24 known Refresh
+observation FAIL. All73 Clear-specific checks pass, including33 newly protected
+notification/picker/default-location boundaries. Five compiles, preservation,
+normal closure and delayed zero Excel audit pass. Existing owner effects and
+captured binding remain; missing surfaces are FAILED, successful local cleanup
+is STAGED, and context invalidation cannot record under a replacement session.
+Full reusable, independent Clear Action Paths and broad release/
+layout/human gates remain open. No pending contract decision is approved here.
+
+Clear's permission/optional tracking and fault/nesting companions retain all prior
+ordered identities/PASS, with188/30 across218 and166/79 across245 respectively.
+All18 newly GREEN checks belong to Clear; other failures are unintegrated Run
+controls. Five compiles, preservation, normal cleanup and delayed zero Excel
+audits pass. Static284/6159/135228 adds1/3/65 with9/45 calls,190 duplicates and28
+non-growing caps; three schemas and368 tooling parses pass.
+
+Reusable503 now has196 PASS/307 known FAIL, preserving all prior ordered checks
+and PASS results while18 Clear assertions become GREEN. All33 owner cases and
+seven native-close receipts pass, with42 shared GREEN checks, five compiles,
+preservation, normal cleanup and delayed zero audit. The separate full reusable
+native-failure and acceptance gates remain unresolved.
+
+Tree presentation remains232/232 on clear01 with exact prior identities/order,
+five compiles, preservation, normal cleanup and delayed zero audit. Populated
+Tree layout and human acceptance remain open.
 
 Independent Tree paths94/94 now pass on presentation01: original separate
 recordings, publication/Event Detail, authored intent, independent reader and all
@@ -20,7 +48,7 @@ preservation, normal cleanup and delayed zero Excel audit. Two reviewed captures
 show the two-step local-only conclusion; a long final identity line exceeds its
 viewport. No coverage or runtime change results from this regression.
 
-Latest candidate `validation-production-run-presentation-01` integrates Expand/
+Preceding candidate `validation-production-run-presentation-01` integrates Expand/
 Collapse, moving the232-check actual-handler baseline from100 PASS/132 FAIL to
 232/232 GREEN. All identities/order and prior PASS checks survive. Existing local
 presentation, exact messages, context/suppression guards and redacted pairs pass.
@@ -1270,7 +1298,7 @@ from permission to stage or export a catalog worksheet.
 | UI control | Caption | Actual handler | Tracking ID/status |
 |---|---|---|---|
 | `btnApplyBatchScale` | Apply Scale | `mBtnApplyBatchScale_Click` | Pending |
-| `btnLoaderClear` | Clear Run | `mBtnLoaderClear_Click` | Pending |
+| `btnLoaderClear` | Clear Run | `mBtnLoaderClear_Click` | `PRODUCTION_RUN_CLEAR`: catalog24 worksheet/boundary, permission/fault and reusable503 checks GREEN; paths and full acceptance pending |
 | `btnLoaderLoad` | Load Recipe | `mBtnLoaderLoad_Click` | Pending |
 | `btnLoaderRefresh` | Refresh | `mBtnLoaderRefresh_Click` | Pending |
 | `btnManagerApplyOutput` | Complete Run | `mBtnManagerApplyOutput_Click` | Pending |
