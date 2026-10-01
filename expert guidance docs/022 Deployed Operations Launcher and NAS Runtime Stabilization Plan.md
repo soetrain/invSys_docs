@@ -2,6 +2,24 @@
 
 **Status:** Current corrective implementation plan
 
+Independent Refresh path checkpoint, 2026-10-01 UTC: unchanged refresh01 passes
+167/167 after frozen load03 supplies 49 passes and one missing original Refresh
+pair. All prior RED identities/order/passes and 42 shared GREEN checks survive.
+Separate recordings each perform reusable Loader/Manager Refresh, Clear, then
+worksheet Loader/Manager Refresh; both branches are staged before recording with
+no hidden staging between clicks. Actual owner/message checks, cumulative LOCAL
+read receipts, exact original publication and selected Event Detail pass. An
+explicitly authored guide applies to the other recording through an independent
+reader; all three views retain provenance and five ordered matches with no extras.
+Local command completion concludes; source application stays incomplete. Six
+captures reviewed; five compiles, preservation, normal closure and delayed zero
+audit pass. Static metrics are unchanged at 287/6166/135351, 9/45 calls, 190
+duplicates and 28 non-growing caps; three schemas and 368 parses pass. Shared
+Load/Clear paths retain 87/87 and 102/102 on the same candidate with exact prior
+order, five compiles, preservation, normal closure and delayed zero audits.
+No runtime or contract change;
+remaining coverage, layout, broad release and human acceptance remain open.
+
 Refresh worksheet checkpoint,2026-10-01 UTC: unpromoted refresh01 integrates both
 existing Refresh controls under unchanged D18; wiring is61/68. A typed coordinator
 preserves distinct reusable and worksheet Loader/Manager sequences and messages,

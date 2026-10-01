@@ -1,7 +1,20 @@
 # Production form tracking coverage audit
 
-Version 1.143. Last reviewed:2026-10-01 UTC, worksheet Refresh GREEN;
+Version 1.144. Last reviewed:2026-10-01 UTC, independent Refresh paths GREEN;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Independent Refresh paths pass 167/167 on unchanged refresh01 after load03's
+49-pass/one-missing-pair RED. Two independent five-action recordings cover both
+reusable Refresh commands, Clear, then both worksheet Refresh commands with no
+staging between clicks. Owner/cumulative-read receipts, exact publication, selected
+Detail, explicit guide intent and independent-reader How-To/Diagnostic/Compare
+pass. Five ordered matches with zero extras establish local completion only;
+source application remains incomplete. Six captures reviewed, five compiles,
+preservation, normal closure and delayed zero audit pass. Static metrics remain
+287/6166/135351, 9/45 calls, 190 duplicate candidates, 28 non-growing caps, three
+schemas and 368 parses. Shared Load/Clear paths retain 87/87 and 102/102 on the same
+candidate with exact prior order, five compiles, preservation, normal closure and
+delayed zero audits. Full release, populated layout and human acceptance remain open.
 
 Both Refresh buttons are wired in unpromoted refresh01: constructed-button coverage
 is61/68. The expanded worksheet gate moves201/56 to257/257 GREEN, retaining every
@@ -19,8 +32,8 @@ PASS retained. Five compiles, preservation, normal closure and delayed zero audi
 pass. Reusable503 retains289 PASS/214 known FAIL with20 Refresh improvements and
 every prior ordered identity/PASS preserved. All33 owner cases,42 shared checks
 and seven actual native workbook-close handlers pass; five compiles, preservation,
-normal closure and delayed zero audit pass. Independent Refresh paths and broader
-acceptance remain pending.
+normal closure and delayed zero audit pass. Independent Refresh paths are recorded
+above; broader acceptance remains pending.
 No new contract.
 
 Load paths87/87 pass on unchanged load03 after clear01 RED47 PASS/one missing
@@ -1376,12 +1389,12 @@ from permission to stage or export a catalog worksheet.
 | `btnApplyBatchScale` | Apply Scale | `mBtnApplyBatchScale_Click` | Pending |
 | `btnLoaderClear` | Clear Run | `mBtnLoaderClear_Click` | `PRODUCTION_RUN_CLEAR`: catalog24 focused checks and independent paths102 GREEN; full acceptance pending |
 | `btnLoaderLoad` | Load Recipe | `mBtnLoaderLoad_Click` | `PRODUCTION_RUN_LOAD`: catalog24 focused checks and independent paths87 GREEN; full acceptance pending |
-| `btnLoaderRefresh` | Refresh | `mBtnLoaderRefresh_Click` | `PRODUCTION_RUN_LOADER_REFRESH`: catalog24 worksheet/boundary, read-return, policy/fault and reusable503 Refresh checks GREEN; paths and full acceptance pending |
+| `btnLoaderRefresh` | Refresh | `mBtnLoaderRefresh_Click` | `PRODUCTION_RUN_LOADER_REFRESH`: catalog24 focused checks and independent paths167 GREEN; full acceptance pending |
 | `btnManagerApplyOutput` | Complete Run | `mBtnManagerApplyOutput_Click` | Pending |
 | `btnManagerCheckIn` | Check In | `mBtnManagerCheckIn_Click` | Pending |
 | `btnManagerNext` | Next Batch | `mBtnManagerNext_Click` | Pending |
 | `btnManagerPrint` | Print Recall | `mBtnManagerPrint_Click` | Pending |
-| `btnManagerRefresh` | Refresh | `mBtnManagerRefresh_Click` | `PRODUCTION_RUN_MANAGER_REFRESH`: catalog24 worksheet/boundary, read-return, policy/fault and reusable503 Refresh checks GREEN; paths and full acceptance pending |
+| `btnManagerRefresh` | Refresh | `mBtnManagerRefresh_Click` | `PRODUCTION_RUN_MANAGER_REFRESH`: catalog24 focused checks and independent paths167 GREEN; full acceptance pending |
 | `btnRunApplyPalette` | Apply | `mBtnRunApplyPalette_Click` | Pending |
 
 ### Production Run - Tree (3)

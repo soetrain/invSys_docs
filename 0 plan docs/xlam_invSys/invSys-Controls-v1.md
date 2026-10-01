@@ -1,6 +1,20 @@
 # invSys Form Controls v1
 
-**Version:** 1.403 (worksheet Refresh observations and continuation GREEN; acceptance pending)
+**Version:** 1.404 (independent Refresh Action Paths GREEN; acceptance pending)
+
+Independent Refresh paths pass 167/167 on unchanged refresh01, following frozen
+load03 RED of 49 passes and one missing original Refresh pair. Separate recordings
+each perform both reusable Refresh commands, Clear Run, then both worksheet
+Refresh commands without hidden staging between clicks. Actual owner results,
+cumulative captured reads, original records and selected Event Detail pass.
+Explicit guide intent and the independent reader's How-To/Diagnostic/Compare views
+retain exact provenance and order. Five matches with no extras prove local command
+completion only; source application remains incomplete. Six captures reviewed;
+five compiles, preservation, normal closure, delayed zero audit and unchanged
+static metrics pass. Shared Load and Clear paths retain 87/87 and 102/102 on the
+same candidate, including exact prior order, five compiles, preservation, normal
+closure and delayed zero audits. Broader acceptance remains required. This
+introduces no runtime or architectural change.
 
 Unpromoted `validation-production-run-refresh-01` integrates Loader Refresh and
 Manager Refresh under unchanged D18, bringing constructed-button wiring to61/68.
@@ -20,8 +34,8 @@ improvements and five compiles/preservation/normal cleanup/delayed zero audits.
 Reusable503 retains289 PASS/214 known FAIL, with20 Refresh improvements and every
 prior ordered identity/PASS preserved. All33 owner cases,42 shared checks and all
 seven actual native workbook-close handlers pass. Five compiles, preservation,
-normal closure and delayed zero audit pass. Independent Refresh paths and broader
-acceptance remain pending.
+normal closure and delayed zero audit pass. The independent Refresh path result is
+recorded above; broader acceptance remains pending.
 
 Independent Load Action Paths pass87/87 on unchanged load03. The preserved clear01
 negative control passes47 checks and fails only the missing original Load pair.
