@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.379 (Assignment component regressions; reusable acceptance unresolved)
+**Version:** 1.380 (Assignment instruction regressions; reusable acceptance unresolved)
 
 Architecture v4.11 D18's Ingredients Assignment refinement is implemented in
 unpromoted `validation-production-assignment-01`: catalog23 adds seven buttons
@@ -149,6 +149,18 @@ the bottom observed viewport shows matches4-10 and all ten identity pairs, with
 the conclusion heading and matches1-3 above it. Long names/coverage text truncate.
 Exact evidence and limits are in the Assignment record; runtime/static metrics,
 control coverage and human acceptance are unchanged.
+
+Process Instructions retain411 focused and105 separate Action Path checks in
+exact prior order, with five compiles per gate. Existing edit/rejection/guard
+semantics, optional tracking, independent five-action recordings, publication,
+Event Detail and authored expectations pass. Both gates close unassisted,
+preserve settings/packages and pass delayed Excel audits. Seven path captures
+are reviewed: all five authored steps fit, and the scrolled diagnostic shows
+five STAGED matches, zero extras and local completion without Domain application.
+Event Detail selects REQUESTED, with STAGED also listed; its long coverage text
+exceeds the viewport. Synthetic instruction-only editor evidence is not full
+Process workflow/layout or human acceptance. Exact records are in Assignment
+evidence; runtime/static metrics and control coverage are unchanged.
 
 Full reusable171/replay37 remain open after native Excel failures. The original
 edit/export callback fails with RPC800706BE/ntdll c00000ff and requires explicit

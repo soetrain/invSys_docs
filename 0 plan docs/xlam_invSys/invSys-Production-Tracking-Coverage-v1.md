@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.119. Last reviewed:2026-10-01 UTC, Assignment component regressions;
+Version 1.120. Last reviewed:2026-10-01 UTC, Assignment instruction regressions;
 reusable acceptance unresolved.
 
 Catalog23 now defines118 global controls and observes55/68 constructed Production
@@ -147,6 +147,18 @@ the bottom observed viewport shows matches4-10 and all ten identity pairs, with
 the conclusion heading and matches1-3 above it. Long names/coverage text truncate.
 Exact evidence and limits are in the Assignment record; runtime/static metrics,
 control coverage and human acceptance are unchanged.
+
+Process Instructions retain411 focused and105 separate Action Path checks in
+exact prior order, with five compiles per gate. Existing edit/rejection/guard
+semantics, optional tracking, independent five-action recordings, publication,
+Event Detail and authored expectations pass. Both gates close unassisted,
+preserve settings/packages and pass delayed Excel audits. Seven path captures
+are reviewed: all five authored steps fit, and the scrolled diagnostic shows
+five STAGED matches, zero extras and local completion without Domain application.
+Event Detail selects REQUESTED, with STAGED also listed; its long coverage text
+exceeds the viewport. Synthetic instruction-only editor evidence is not full
+Process workflow/layout or human acceptance. Exact records are in Assignment
+evidence; runtime/static metrics and control coverage are unchanged.
 
 Full reusable171/replay37 remain open. The original edit/export callback fails
 with RPC800706BE/ntdll c00000ff; explicitly quitting an empty recovery instance

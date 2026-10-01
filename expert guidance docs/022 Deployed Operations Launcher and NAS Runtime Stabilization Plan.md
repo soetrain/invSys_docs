@@ -156,6 +156,18 @@ the conclusion heading and matches1-3 above it. Long names/coverage text truncat
 Exact evidence and limits are in the Assignment record; runtime/static metrics,
 control coverage and human acceptance are unchanged.
 
+Process Instructions retain411 focused and105 separate Action Path checks in
+exact prior order, with five compiles per gate. Existing edit/rejection/guard
+semantics, optional tracking, independent five-action recordings, publication,
+Event Detail and authored expectations pass. Both gates close unassisted,
+preserve settings/packages and pass delayed Excel audits. Seven path captures
+are reviewed: all five authored steps fit, and the scrolled diagnostic shows
+five STAGED matches, zero extras and local completion without Domain application.
+Event Detail selects REQUESTED, with STAGED also listed; its long coverage text
+exceeds the viewport. Synthetic instruction-only editor evidence is not full
+Process workflow/layout or human acceptance. Exact records are in Assignment
+evidence; runtime/static metrics and control coverage are unchanged.
+
 Full reusable remains open: the original edit/export callback fails with
 RPC800706BE and native ntdll/c00000ff; an empty recovery instance requires explicit
 Quit, excluding that attempt from acceptance. A narrower edit/export diagnostic
