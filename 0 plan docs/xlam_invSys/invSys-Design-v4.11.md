@@ -654,6 +654,38 @@ application. Compile/layout/static/live-role/full-chain/reusable gates remain
 required. Discovery does not authorize changing a preserved algorithm: any
 contradiction must be resolved under architectural precedence before implementation.
 
+**4be.1 Check In correctness prerequisites (D14/D15/D18 clarification; acceptance pending):**
+Before accepting Check In observations, its actual operator handler must satisfy
+the existing identity, local-column, selected-Process and action-entry rules.
+The Run preparation subsection's algorithm-preservation instructions govern its
+nine listed controls; they grant no exception to these higher-level requirements.
+An implementation or coverage audit cannot authorize a conflicting Check In path.
+
+- In a loaded reusable run, the operator selects one Process. No selected Process
+  must not silently invoke whole-run Check In, set checked-in state or freeze the
+  batch note. The handler must visibly request Process selection. The selected
+  Process retains D15's external exact-key, location and upstream readiness
+  validation; insufficiency in another Process does not reject it.
+- Worksheet Inventory Check staging must retain the exact selected `System_Key`.
+  A matching SKU, item name or location is not a replacement identity. Missing,
+  unresolved or ambiguous entity identity cannot be repaired by choosing the first
+  matching inventory entity. D14 also governs the Inventory Check table itself:
+  refreshing its managed values must preserve unknown columns, values, formulas
+  and positions. Keeping only their headers is insufficient.
+- Loading and nested action entry must not run Check In or alter its local state.
+  D18's original captured workbook, warehouse, session and current permission
+  requirements apply before owner reads or mutation and after yielding boundaries.
+
+Successful Check In is local validation/staging and batch-note freezing under D15;
+it does not submit or apply inventory events. A returned Sub, status message or
+pre-existing checked-in state is insufficient evidence of this attempt's success.
+Protect these prerequisites through the actual packaged `mBtnManagerCheckIn_Click`
+handler before adding its observation contract. This clarification enforces the
+existing D14/D15/D18 rules; it creates no new control catalog entry, permission,
+inventory authority or exception for an incompatible legacy path. Separate owner
+facts, observation RED/GREEN, independent Action Paths and broader Release1 gates
+remain required before acceptance.
+
 **4be.1 Ingredients Assignment observations (discovered-control refinement; acceptance pending):**
 Under the approved D18 semantic-inheritance, comprehensive-coverage and owner-fact
 rules, catalog23 adds the following nine existing controls, preserving catalogs1-22

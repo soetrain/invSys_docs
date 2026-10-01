@@ -1,7 +1,24 @@
 # Production form tracking coverage audit
 
-Version 1.147. Last reviewed:2026-10-01 UTC, independent Apply paths GREEN;
+Version 1.148. Last reviewed:2026-10-01 UTC, Check In correctness baseline RED;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Check In owner-boundary work now follows the normative D18 "Check In correctness
+prerequisites" clarification of D14/D15/D18. Earlier audit wording to preserve
+existing algorithms does not authorize whole-run operator fallback without a
+selected Process, replacement identity by matching SKU, clearing unknown Check
+columns or running during loading/nested entry. Those prerequisites need packaged
+actual-handler proof before observation acceptance. Catalog24 and63/68 constructed
+button wiring remain unchanged; no new Check In control registration is claimed.
+
+Frozen allocate01 actual-handler baseline is58 PASS/6 FAIL/64 unique, retaining
+all42 prior shared checks in exact order. It confirms failure to preserve selected
+identity and unknown Check values/formulas after the real write, plus reusable
+no-selection/loading/busy suppression failures. Five compiles, preservation,
+normal closure, delayed zero audit and unchanged static metrics pass; three
+schemas and369 tooling parses pass. Earlier selector/lookup fixture failures are
+excluded as detailed in `plan022_slice4be_production_check_in_results.md` in code.
+Observation registration and all subsequent acceptance gates remain outstanding.
 
 Independent reusable Apply paths pass104/104 on unchanged allocate01 after
 refresh01 RED47/one missing pair. Two separate recordings invoke List Apply,

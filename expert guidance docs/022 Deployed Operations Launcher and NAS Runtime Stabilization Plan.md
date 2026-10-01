@@ -2,6 +2,25 @@
 
 **Status:** Current corrective implementation plan
 
+Check In prerequisite work,2026-10-01 UTC: Architecture v4.11 D18's new
+"Check In correctness prerequisites" clarification applies existing D14/D15/D18
+requirements before this control's observation contract. The actual packaged
+handler must preserve exact selected identity and Inventory Check custom values,
+require a selected reusable Process, and suppress loading/nested entry. The
+catalog24 algorithm-preservation instruction cannot authorize exceptions to those
+rules. This remains Slice4be owner-boundary work; no new catalog entry or runtime
+change is made by the clarification. Establish the focused baseline first, then
+correct proven violations under the governing rules and require packaged GREEN,
+regressions and all remaining observation/Action Path/release gates. Final frozen
+allocate01 baseline is58 PASS/6 FAIL/64 unique, retaining all42 prior shared checks
+in exact order. The real worksheet write fails exact-key/custom-value/formula
+preservation; reusable no-selection/loading/busy suppression also fails. Five
+compiles, settings/package/authority/operator preservation, normal closure and
+delayed zero Excel audit pass. Static remains289/6171/135434,9/45 calls,190 duplicates
+and28 caps; three schemas and369 tooling parses pass. See code integration record
+`plan022_slice4be_production_check_in_results.md` for fixture exclusions and exact
+evidence. This is pre-implementation RED, not accepted Check In behavior.
+
 Independent Apply path checkpoint,2026-10-01 UTC: under unchanged D18, frozen
 refresh01 RED47/one missing pair becomes104/104 on unchanged allocate01. Separate
 guide-source and observed recordings each invoke List Apply, explicitly reselect

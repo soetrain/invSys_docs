@@ -1,6 +1,23 @@
 # invSys Form Controls v1
 
-**Version:** 1.407 (List/Tree Apply independent paths GREEN; broader gates pending)
+**Version:** 1.408 (Check In correctness baseline RED; acceptance pending)
+
+Check In remains unobserved and unaccepted. Architecture v4.11 D18 now explicitly
+applies its existing D14/D15/D18 prerequisites: require one selected reusable
+Process, suppress loading/nested entry, retain exact selected System_Key and
+preserve Inventory Check unknown values/formulas as well as headers. The catalog24
+algorithm-preservation wording grants no conflicting exception. Test the actual
+packaged Check In handler before implementation; no new catalog entry, runtime
+behavior or visible wording is implemented by this clarification.
+
+Focused packaged baseline:58 PASS/6 FAIL/64 unique, with all42 prior shared checks
+retained in exact order. Check In reaches the real worksheet write but fails to
+retain the selected exact key, unknown value and formula. Reusable no-selection,
+loading and busy cases also fail. Five compiles, canonical inventory/settings/
+package/operator preservation, normal closure and delayed zero audit pass. Static
+metrics remain unchanged; three schemas and369 tooling parses pass. The code
+integration record `plan022_slice4be_production_check_in_results.md` distinguishes
+the final RED from earlier fixture failures. No Check In acceptance is claimed.
 
 Independent reusable Apply paths pass104/104 on unchanged allocate01 after
 refresh01 RED47 PASS/one missing original pair. Separate guide-source and observed
