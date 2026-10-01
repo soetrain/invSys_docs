@@ -1,6 +1,16 @@
 # invSys Form Controls v1
 
-**Version:** 1.419 (Check In recording/publication/reader paths verified; broader acceptance pending)
+**Version:** 1.420 (Check In initial policy/store-fault cases verified; broader acceptance pending)
+
+Test-only policy expansion on unchanged activity03 passes434/434, retaining229
+earlier checks and adding205. Collection off, valid older catalog24 policy,
+malformed policy and an unavailable Activity store preserve permitted owner
+results and permission denial in reusable/worksheet staging. Exact notices,
+identity/custom columns, no false/fallback/redirected records, policy non-repair,
+guards and byte preservation pass. Six new captures were reviewed; shared42/five
+compiles, normal cleanup/delayed zero audit, unchanged static runtime metrics and
+three schemas/375 parses pass. No new runtime correction or new RED is claimed.
+Mid-action policy changes, terminal append failures and wider acceptance stay open.
 
 Unchanged activity03 passes reusable91/91 and worksheet101/101 Check In path checks
 after respective missing-pair RED49/1 and54/1 on routed01. Each prepares prerequisites

@@ -557,6 +557,16 @@ The shared Load Recipe path regression retains87/87 with preserved prior order,
 five compiles, preservation, unassisted closure and delayed zero Excel audit.
 Wider policy/store-fault, multiline/layout, human/NAS and Release1 acceptance remain open.
 
+Optional-policy verification,2026-10-01: unchanged activity03 passes434/434,
+retaining229 earlier checks and adding205 for disabled collection, a valid older
+policy, malformed policy and an unavailable Activity store. Reusable/worksheet
+owner success remains independent of tracking; permission denial still prevents
+owner entry. Exact notices, identity/custom columns, no false/fallback/redirected
+records, policy non-repair and preservation pass. Six new captures were reviewed;
+five compiles, static ratchets and unassisted shutdown/delayed zero audit pass.
+This verifies the existing rule; no new runtime behavior or new RED is claimed.
+Mid-action policy changes, terminal append faults and broader acceptance remain open.
+
 - One deliberate handler entry produces a REQUESTED/result pair when collection
   is enabled and the existing context/policy gates allow both writes. Loading,
   nested entry and invalid captured binding do not start

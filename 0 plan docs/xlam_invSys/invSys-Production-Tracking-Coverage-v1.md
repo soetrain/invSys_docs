@@ -1,7 +1,17 @@
 # Production form tracking coverage audit
 
-Version 1.159. Last reviewed:2026-10-01 UTC, Check In recording/publication/readers verified;
+Version 1.160. Last reviewed:2026-10-01 UTC, Check In initial policy/store-fault cases verified;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Unchanged activity03 passes434/434, preserving229 prior checks and adding205 for
+collection off, valid older24 policy, malformed policy and a real unavailable-store
+fixture. Both staging modes retain allowed owner behavior and denied-owner non-entry,
+messages/notices, identity/custom columns, guards and no false/fallback/redirected
+evidence. No policy repair occurs; fixture Config bytes and prior evidence are
+restored/preserved. Six new captures, shared42/five compiles, unassisted closure,
+delayed zero audit and static three schemas/375 parses pass without runtime growth.
+This is test-only coverage; mid-action policy/terminal-append faults, further
+refusals, remaining controls and full human/NAS acceptance remain open.
 
 Test-only Check In paths on unchanged activity03 pass reusable91/91 and
 worksheet101/101 after routed01 missing-pair RED49/1 and54/1. Prerequisites are
@@ -1638,7 +1648,7 @@ from permission to stage or export a catalog worksheet.
 | `btnLoaderLoad` | Load Recipe | `mBtnLoaderLoad_Click` | `PRODUCTION_RUN_LOAD`: earlier catalog24 focused checks; independent paths87 freshly retained on activity03/catalog25; full acceptance pending |
 | `btnLoaderRefresh` | Refresh | `mBtnLoaderRefresh_Click` | `PRODUCTION_RUN_LOADER_REFRESH`: catalog24 focused checks and independent paths167 GREEN; full acceptance pending |
 | `btnManagerApplyOutput` | Complete Run | `mBtnManagerApplyOutput_Click` | Pending |
-| `btnManagerCheckIn` | Check In | `mBtnManagerCheckIn_Click` | `PRODUCTION_RUN_CHECK_IN`: catalog25; activity03 focused229, owner/interruption404, reusable paths91 and worksheet paths101 GREEN; earlier activity02 native-closure212/routed157; wider policy/store-fault and full acceptance pending |
+| `btnManagerCheckIn` | Check In | `mBtnManagerCheckIn_Click` | `PRODUCTION_RUN_CHECK_IN`: catalog25; activity03 focused434 including initial policy/store faults, owner/interruption404, reusable paths91 and worksheet paths101 GREEN; earlier activity02 native-closure212/routed157; mid-action policy/terminal-append faults and full acceptance pending |
 | `btnManagerNext` | Next Batch | `mBtnManagerNext_Click` | Pending |
 | `btnManagerPrint` | Print Recall | `mBtnManagerPrint_Click` | Pending |
 | `btnManagerRefresh` | Refresh | `mBtnManagerRefresh_Click` | `PRODUCTION_RUN_MANAGER_REFRESH`: catalog24 focused checks and independent paths167 GREEN; full acceptance pending |

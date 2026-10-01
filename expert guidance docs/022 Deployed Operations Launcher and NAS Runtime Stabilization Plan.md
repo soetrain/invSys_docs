@@ -2,6 +2,18 @@
 
 **Status:** Current corrective implementation plan
 
+Check In optional-policy checkpoint,2026-10-01 UTC: unchanged activity03 passes
+434/434, retaining all229 earlier checks and adding205. Disabled collection,
+valid older catalog24 policy, invalid policy and an unavailable real Activity
+directory are exercised in both staging modes for allowed and denied users.
+Owner results/messages, permission denial, exact identity/custom columns, guards,
+no false/fallback/redirected records and no policy repair pass. Six new captures,
+shared42/five compiles, preservation and normal shutdown/delayed zero audit pass.
+Static runtime metrics are unchanged; three schemas/375 parses pass. This is
+test-only acceptance expansion under existing D18, with no invented new RED or
+runtime change. Controls1.420/coverage1.160 retain mid-action policy/terminal-append
+faults, remaining controls and full human/NAS release acceptance as open.
+
 Check In path checkpoint,2026-10-01 UTC: test-only expansion on unchanged activity03
 passes reusable91/91 and worksheet101/101 after missing-pair RED49/1 and54/1 on
 pre-observation routed01. Each fixture is prepared before separate guide-source
