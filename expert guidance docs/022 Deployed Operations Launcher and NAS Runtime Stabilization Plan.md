@@ -2,6 +2,44 @@
 
 **Status:** Current corrective implementation plan
 
+Check In correctness integration,2026-10-01 UTC: unpromoted
+`validation-production-check-in-correctness-01` moves the expanded packaged
+baseline73 PASS/21 FAIL to94/94 GREEN, preserving all prior ordered identities and
+passes. Typed guarded entry rejects stale captured context and loading/nested
+calls; exact-key resolution and managed-only Check clearing protect worksheet
+identity/custom values and reject missing keys/required headers. One selected
+Process is required. Cold startup/five compiles, preservation, normal closure and
+delayed zero audits pass. This is prerequisite correctness, not new observations.
+Visible evidence exposes a separate worksheet projection mismatch: six values
+fill the leftmost columns beneath nine reusable headings. The normative D18
+clarification maps those six values to their matching existing headings and leaves
+the three unavailable context fields blank. Actual-handler RED101 PASS/2 FAIL on
+unchanged correctness01 becomes103/103 on correctness02, retaining all94 earlier
+passes and adding local inventory projection identity/preservation proof. Three
+new reviewed captures confirm the alignment and selected-Process guidance; long
+values still clip. Correctness01 separately retains503 ordered Run results
+445 PASS/58 known Scale failures; do not attribute that gate to correctness02.
+Both candidates pass cold startup/five compiles and source comparisons. Final
+static metrics290/6174/135482 retain9 literal/45 unresolved calls,190 duplicate
+candidates and28 non-growing oversized caps. Broader gates remain open, including
+native reusable execution failures, observation integration and human acceptance.
+
+Full-chain fixture finding: correctness02 returns27/32 chain and47/48 live-role
+passes because `PrepareRunChoiceForActionTest` explicitly supplied a blank
+System_Key. The two-batch fixture relied on the prohibited identity substitution
+now rejected by Check In. Preserve those failure reports; they are not product RED.
+Correctness03 selects one real, unambiguous Domain entity before the same packaged
+form actions. It changes only that test helper, retaining exact-key rejection in
+the operator path. Its fresh chain passes32/32, live roles48/48 and Create
+Warehouse15/15 in exact prior order, with restored settings/reports, preserved
+packages, closed Excel and delayed zero audit. Correctness02 separately retains
+257/257 shared worksheet owner/interruption checks. Keep candidate provenance
+explicit; these gates do not resolve the separate full reusable171/replay37 failures.
+Correctness03 also passes smoke86/86 with both unassisted shutdown receipts and
+layout18 requested size/page pairs/six maximized pages. Six empty-form captures
+are individually reviewed; geometry, settings/packages and delayed zero audits
+pass. Populated long-value clipping and human acceptance remain open.
+
 Check In prerequisite work,2026-10-01 UTC: Architecture v4.11 D18's new
 "Check In correctness prerequisites" clarification applies existing D14/D15/D18
 requirements before this control's observation contract. The actual packaged

@@ -1,7 +1,27 @@
 # Production form tracking coverage audit
 
-Version 1.148. Last reviewed:2026-10-01 UTC, Check In correctness baseline RED;
+Version 1.149. Last reviewed:2026-10-01 UTC, Check In correctness/display103 GREEN;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Correctness01 protects selected-Process, loading/nested/stale-context entry,
+exact-key worksheet identity and unknown Check values/formulas: expanded RED73/21
+becomes94/94 GREEN with prior ordered checks/passes preserved. Three reviewed
+captures expose six worksheet fields under the wrong positions in the existing
+nine-column Check display. Expanded actual-handler RED101/2 becomes103/103 on
+correctness02: the six fields match their headings, unavailable context stays
+blank, and a local inventory projection preserves exact selected identity and
+unknown values/formulas. All94 prior passes survive. Three new captures confirm
+alignment/guidance; long values still clip and full layout remains unaccepted.
+Correctness01 retains503 ordered Run results445/58, not full reusable acceptance.
+This does not add observation wiring: catalog24 and63/68 buttons remain unchanged.
+Correctness02 retains257/257 worksheet owner/interruption checks. Correctness03
+corrects only the two-batch test fixture's blank identity by selecting one real
+Domain entity; chain32/32, live roles48/48 and Create Warehouse15/15 pass in exact
+prior order with preservation and delayed zero audit. The separate native reusable
+failures and current-permission/post-yield Check In guards remain unresolved.
+Correctness03 smoke86/86 and six-page layout18 requested pairs/six maximized pages
+pass, with six reviewed empty-form captures and delayed zero audits; no populated
+long-value or human acceptance is inferred.
 
 Check In owner-boundary work now follows the normative D18 "Check In correctness
 prerequisites" clarification of D14/D15/D18. Earlier audit wording to preserve

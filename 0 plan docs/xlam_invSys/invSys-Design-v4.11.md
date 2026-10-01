@@ -672,6 +672,14 @@ An implementation or coverage audit cannot authorize a conflicting Check In path
   matching inventory entity. D14 also governs the Inventory Check table itself:
   refreshing its managed values must preserve unknown columns, values, formulas
   and positions. Keeping only their headers is insufficient.
+- The existing nine Inventory Check headings must label their actual values.
+  Worksheet staging supplies `System_Key`, `ITEM_CODE`, `ITEM`, `UOM`, `USED` and
+  `TOTAL INV` to the displayed System_Key, Code, Item, UOM, Committed / Used and
+  Remaining Balance columns, respectively. Type, Process / Requirement and Source
+  Process / Output remain blank because that staging table supplies no such
+  context. Do not display an identity as a Type or a SKU as a Process. This is a
+  projection alignment rule, not a new staging schema, inferred routing fact,
+  inventory movement or change to the reusable nine-column projection.
 - Loading and nested action entry must not run Check In or alter its local state.
   D18's original captured workbook, warehouse, session and current permission
   requirements apply before owner reads or mutation and after yielding boundaries.

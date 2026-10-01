@@ -1,6 +1,31 @@
 # invSys Form Controls v1
 
-**Version:** 1.408 (Check In correctness baseline RED; acceptance pending)
+**Version:** 1.409 (Check In correctness and worksheet display GREEN; acceptance pending)
+
+Unpromoted correctness01 passes94/94 after expanded RED73/21, retaining prior
+ordered checks and passes. Existing Check In now requires a selected reusable
+Process, refuses stale context, suppresses loading/nested entry, preserves exact
+worksheet identity/custom values and rejects missing keys/required Check headers.
+The selection guidance is "Choose one Process before Check In." Cold startup,
+five compiles, preservation, normal closure and delayed zero audits pass. Three
+principal captures exposed worksheet values beneath the wrong headings. Expanded
+actual-handler RED101 PASS/2 FAIL becomes103/103 on unpromoted correctness02,
+retaining all94 earlier passes and protecting exact identity from both the Domain
+read and a local inventory projection. The six managed values now match their
+nine-column headings; unavailable Type/Process/source context stays blank. Three
+new captures confirm that alignment and Process guidance; long values still clip.
+No new catalog registration, observation, full populated-layout, native reusable
+or human acceptance is claimed. Correctness01 also retains503 ordered Run results
+(445 PASS/58 known Scale failures); that gate is not attributed to correctness02.
+Correctness02 retains257/257 shared worksheet checks. Correctness03 changes only
+the two-batch test helper to select a real exact key instead of supplying a blank
+identity; fresh chain32/32, live roles48/48 and Create Warehouse15/15 pass in prior
+order with preservation and delayed zero audit. Full reusable171/replay37 remains
+separate and unresolved.
+Correctness03 also passes packaged smoke86/86 and six-page layout checks (18
+requested size/page pairs and six maximized pages), with six individually reviewed
+empty-form captures and delayed zero audits. Populated long-value clipping remains
+open; these records do not grant human acceptance.
 
 Check In remains unobserved and unaccepted. Architecture v4.11 D18 now explicitly
 applies its existing D14/D15/D18 prerequisites: require one selected reusable
