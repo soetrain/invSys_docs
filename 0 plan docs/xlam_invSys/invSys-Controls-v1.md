@@ -1,6 +1,17 @@
 # invSys Form Controls v1
 
-**Version:** 1.404 (independent Refresh Action Paths GREEN; acceptance pending)
+**Version:** 1.405 (Assignment regressions on Refresh candidate GREEN; acceptance pending)
+
+Shared Ingredients Assignment safety retains 789/789 in exact prior order on
+refresh01 after a test-fixture correction. The original older-policy fixture left
+catalog24 Run rows in a declared catalog22 policy, which the strict reader correctly
+rejected. The corrected fixture retains exactly 109 registered controls; every
+assertion remains unchanged. Five compiles, preservation, normal closure, delayed
+zero audit and static checks pass. The native form dismisses at workbook closure;
+no closed-form Save click is claimed. The focused companion retains 349/349 with
+exact prior order, five compiles, preservation, normal closure and delayed zero
+audit. Broader acceptance remains pending. Runtime behavior, wording, layout and
+architecture are unchanged.
 
 Independent Refresh paths pass 167/167 on unchanged refresh01, following frozen
 load03 RED of 49 passes and one missing original Refresh pair. Separate recordings

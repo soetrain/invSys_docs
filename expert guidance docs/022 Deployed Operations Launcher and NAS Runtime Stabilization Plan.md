@@ -2,6 +2,20 @@
 
 **Status:** Current corrective implementation plan
 
+Shared Assignment regression checkpoint, 2026-10-01 UTC: unchanged refresh01
+retains 789/789 safety checks in exact prior order. Initial788/1 was a malformed
+catalog22 test fixture that retained catalog24 Run rows; the strict reader's
+rejection was correct, not product RED. The fixture now retains the exact 109
+registered controls per policy version. All 47 assertion source lines and all789
+check identities remain unchanged. Five compiles, canonical pins, preservation,
+unassisted closure and delayed zero audit pass. The native form dismisses with its
+captured workbook, so no closed-form Save click is claimed. Static remains
+287/6166/135351, 9/45 calls, 190 duplicates and 28 non-growing caps; three schemas
+and 368 parses pass. Focused Assignment retains349/349 with exact prior order,
+five compiles, preservation, normal closure and delayed zero audit.
+No runtime or architectural change;
+remaining coverage, broad release and human acceptance remain open.
+
 Independent Refresh path checkpoint, 2026-10-01 UTC: unchanged refresh01 passes
 167/167 after frozen load03 supplies 49 passes and one missing original Refresh
 pair. All prior RED identities/order/passes and 42 shared GREEN checks survive.

@@ -1,7 +1,17 @@
 # Production form tracking coverage audit
 
-Version 1.144. Last reviewed:2026-10-01 UTC, independent Refresh paths GREEN;
+Version 1.145. Last reviewed:2026-10-01 UTC, shared Assignment regressions GREEN;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Assignment safety retains 789/789 on refresh01 with exact prior order after fixing
+its malformed catalog22 fixture; the runtime reader correctly rejected retained
+catalog24 rows. Registered-ID filtering restores the intended historical policy
+without changing any assertion or runtime code. Five compiles, preservation,
+normal closure, delayed zero audit and unchanged static metrics pass. Native
+workbook closure dismisses the form, with no closed-form Save invocation claimed.
+Focused Assignment also retains 349/349 in exact prior order, with five compiles,
+preservation, normal closure and delayed zero audit. Broader acceptance remains
+pending; wiring stays61/68.
 
 Independent Refresh paths pass 167/167 on unchanged refresh01 after load03's
 49-pass/one-missing-pair RED. Two independent five-action recordings cover both
