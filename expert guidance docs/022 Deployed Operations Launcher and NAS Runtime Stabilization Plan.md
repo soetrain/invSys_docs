@@ -2,7 +2,31 @@
 
 **Status:** Current corrective implementation plan
 
-Latest bounded evidence,2026-10-01 UTC: worksheet Clear/Refresh owner baseline on
+Latest implementation checkpoint,2026-10-01 UTC: unpromoted
+`deploy/validation-production-run-binding-01` guards worksheet Clear's captured
+owner. Its136-check owner gate moves89 PASS/47 FAIL to94 PASS/42 FAIL: five binding
+and decoy-preservation checks become GREEN, all prior PASS checks remain GREEN,
+and42 missing observations leave the overall suite RED. The guard requires the
+original workbook object to remain open, be an operator workbook and contain
+Production before binding the existing owner. Reusable Clear and the general
+fallback resolver are unchanged. This implements existing captured binding/D18,
+not a new architecture or approval of RUN-UI-01. Five-package build/cold compile,
+focused compiles, source comparison, preservation and delayed zero audits pass;
+the build audit was performed after the next gate began. No coverage increase or
+full release acceptance is claimed. Preserve all136 checks through Run integration.
+
+Regenerated static maintenance records282 components/6155 procedures/135128 lines,
+growth1/1/25. Calls remain9/45 and duplicates190; all28 oversized caps are non-growing.
+Three schemas and367 repository PowerShell parses pass. The form does not grow.
+
+Seven-control reusable regression on the binding candidate is178 PASS/325 FAIL/
+503 checks, preserving every prior identity/order and all171 prior PASS checks.
+Only seven FixedMetadata checks change to GREEN due to catalog24. All33 owner
+cases, seven native-close receipts, five compiles, pins/settings/saved authority,
+normal cleanup and delayed zero Excel audit pass. The325 existing tracking/context
+failures and separate full reusable acceptance remain open.
+
+Preceding bounded evidence,2026-10-01 UTC: worksheet Clear/Refresh owner baseline on
 the catalog24 candidate is84 PASS/38 FAIL/122 checks. Both Refresh buttons retain
 the actual LOCAL read-model Boolean result, including False for missing invSys;
 ordinary Clear cleanup and custom columns/formulas/exact identity pass. Thirty-six
@@ -20,7 +44,7 @@ fixture attempts are in the code repository's
 Worksheet Apply Scale's reload path still needs focused protection; Load Recipe
 itself always enters the released reusable loader. RUN-UI-01 is still pending.
 
-Current Slice4be state,2026-10-01 UTC: unpromoted
+Preceding Core-only checkpoint,2026-10-01 UTC: unpromoted
 `deploy/validation-production-run-catalog-01` implements headless Core catalog24
 and127 control definitions. Exact outcomes/defaults, empty-reference restrictions
 and positive-only completion matching pass764/764, preserving all prior RED

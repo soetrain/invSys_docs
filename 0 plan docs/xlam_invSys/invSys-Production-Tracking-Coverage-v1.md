@@ -1,7 +1,22 @@
 # Production form tracking coverage audit
 
-Version 1.134. Last reviewed:2026-10-01 UTC, worksheet owner RED verified;
-Clear binding, form integration, RUN-UI-01 and reusable acceptance unresolved.
+Version 1.135. Last reviewed:2026-10-01 UTC, Clear binding guard verified;
+form observation integration, RUN-UI-01 and reusable acceptance unresolved.
+
+Unpromoted `validation-production-run-binding-01` protects worksheet Clear's
+captured owner before cleanup. The seven-case owner gate changes89 PASS/47 FAIL
+to94 PASS/42 FAIL across the same136 checks. Five binding/decoy-preservation checks
+become GREEN; all89 prior PASS checks remain GREEN. Missing surfaces no longer
+enter either an add-in or active decoy owner. Ordinary Clear stays captured and
+reusable behavior is unchanged in source. Forty-two absent observations leave the
+overall gate RED and coverage at55/68. Five compiles, preservation, normal closure
+and delayed zero audit pass. Broader reusable/release/visible gates remain open.
+
+The binding candidate's seven-control reusable regression retains all503 ordered
+identities and all171 prior PASS checks:178 PASS/325 FAIL, with only seven catalog
+metadata checks newly GREEN. All33 owner cases and seven native-close receipts
+pass, as do five compiles, preservation, cleanup and delayed zero Excel audit.
+Observation/context failures and the separate full reusable acceptance remain open.
 
 Catalog24 worksheet owner baseline:84 PASS/38 FAIL/122 checks. Six actual-handler
 cases protect both LOCAL Refresh buttons and Clear with present/missing surfaces.
@@ -15,7 +30,7 @@ coverage increase occurs; the intercepted notices are not visible acceptance.
 Preserve122 through the guard fix and remaining Run integration. Evidence is in
 `tests/integration/plan022_slice4be_production_run_local_results.md` in code.
 
-The unpromoted `validation-production-run-catalog-01` candidate now defines127
+The preceding `validation-production-run-catalog-01` candidate defines127
 controls in Core catalog24. Focused764/764 GREEN preserves the RED identities;
 older worksheet catalog regression retains188/188. Form observation coverage stays
 55/68 constructed buttons. Core rules alone do not prove the nine handlers emit
@@ -27,7 +42,7 @@ the new candidate, with five compiles, preservation, normal cleanup and delayed
 zero Excel audit. Broader/expanded/path gates remain open on this candidate.
 
 D18 now normatively refines the nine controls in owner audit8 as catalog24,
-PRODUCTION_RUN_LOCAL. Controls1.394 lists their exact mappings. No new form
+PRODUCTION_RUN_LOCAL. Controls1.395 lists their exact mappings. No new form
 integration or acceptance is claimed. Actual-handler RED begins with Tree
 Expand/Collapse; seven remaining local/read/allocation controls and the full
 context/policy/failure matrix remain required before this group can pass.

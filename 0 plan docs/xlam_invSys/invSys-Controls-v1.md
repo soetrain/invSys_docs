@@ -1,6 +1,23 @@
 # invSys Form Controls v1
 
-**Version:** 1.394 (worksheet owner RED; Clear captured-owner defect confirmed)
+**Version:** 1.395 (Clear binding guard GREEN; Run observations remain incomplete)
+
+Latest unpromoted candidate `validation-production-run-binding-01` prevents
+worksheet Clear from entering another workbook/add-in owner when the captured
+workbook lacks Production. Seven actual-handler cases expand the owner baseline
+to136 checks:89 PASS/47 FAIL before the guard,94 PASS/42 FAIL after. The five binding/
+decoy-preservation checks are GREEN and all earlier PASS checks survive;42 missing
+observations keep the overall suite RED. Core catalog24/127 definitions and55/68
+observed buttons are unchanged. Reusable Clear and ordinary owner cleanup are
+unchanged. Five compiles, pins/settings/saved authority, normal closure and delayed
+zero Excel audit pass. Broader reusable and release/visible gates remain required.
+This enforces existing captured binding/D18; RUN-UI-01 is still unapproved.
+
+The binding candidate preserves the seven-control reusable baseline:178 PASS/
+325 FAIL/503 checks, all171 prior PASS checks and exact order retained. Seven
+metadata checks now pass due to catalog24; all33 owner cases and seven native-close
+receipts pass. Five compiles, preservation, unassisted cleanup and delayed zero
+Excel audit pass. The325 existing observation/context failures remain open.
 
 Worksheet owner baseline on catalog24:84 PASS/38 FAIL/122 checks across Loader
 Refresh, Manager Refresh and Clear with present/missing local surfaces. Thirty-six
@@ -15,12 +32,12 @@ are automated owner facts; intercepted notifications do not establish visible
 acceptance. No runtime change or new architecture is introduced. Evidence:
 `tests/integration/plan022_slice4be_production_run_local_results.md` in code.
 
-Current unpromoted candidate `validation-production-run-catalog-01` implements
+The preceding Core-only candidate `validation-production-run-catalog-01` implements
 headless Core catalog24 with127 definitions, exact outcomes/defaults, empty-reference
 rules and command-completion matching. Core RED492/272 becomes764/764 GREEN with
 all prior identities retained; older worksheet catalog regression retains188/188.
 The nine Run form handlers are not integrated. Constructed-button observation
-coverage remains55/68; worksheet Scale, Clear binding repair, remaining read failures,
+coverage remains55/68; worksheet Scale, Run tracking integration, remaining read failures,
 paired paths and broader acceptance gates stay open. RUN-UI-01 below is a separate
 pending message proposal. The following RED records refer to the frozen catalog23
 baseline and do not describe the latest headless Core state.
