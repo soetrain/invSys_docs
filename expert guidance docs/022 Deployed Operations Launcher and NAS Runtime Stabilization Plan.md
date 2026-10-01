@@ -26,13 +26,31 @@ normal cleanup, preservation and delayed audit; its full595 workflow remains ope
 
 Static:280 components,6150 procedures,135006 lines; unchanged9/45 dynamic calls,
 190 duplicate bodies and28 non-growing caps. The form shrinks35 lines. Three schemas
-validate and353 scripts parse. No layout or control wording is changed. This is
+validate and354 scripts parse. No layout or control wording is changed. This is
 focused implementation evidence, not human acceptance or package promotion.
 Exact records: `tests/integration/plan022_slice4be_production_assignment_results.md`.
 
-Next require separate guide/observed recordings, publication, exact Event Detail,
-authored intent and independent-reader How-To/Diagnostic/Compare with Save's exact
-Designs applied/awaiting/incomplete distinctions. Verify layout,
+Separate guide/observed twelve-action recordings now pass219/219 on this same
+candidate, including exact publication/Event Detail, authored intent, independent
+reader and all three views. Each local control completes without asserting source
+application; the full sequence separately proves the exact applied Designs event.
+Five compiles, preservation, unassisted closure and delayed Excel audit pass.
+Shutdown retained an exited Excel entry temporarily; it resolved without
+intervention and is not claimed repaired. Six reviewed captures show usable
+viewports, not every line or the full conclusion heading. Static runtime metrics
+remain unchanged; three schemas validate and354 scripts parse.
+
+The separate Save source-failure paths pass150/150, retaining exact original
+records, owning references, authored intent and visible diagnostic status. Failure
+before append and uncertain submission remain Incomplete; submitted pending work
+is Awaiting; the exact published applied event concludes. REQUESTED alone cannot
+conclude. Five compiles, preservation, unassisted closure and delayed audit pass.
+
+Existing worksheet paths139 also retain every prior ordered check on the Assignment
+candidate, with five compiles, preservation, unassisted closure, delayed audit and
+six reviewed captures including the visible four-step command conclusion.
+
+Next verify full worksheet595 and layout,
 current shared-observation regressions, live roles, the full Release1 chain
 and reusable Production on this candidate; earlier worksheet-candidate passes do
 not prove the new candidate. Preserve349/789 and all prior accepted behavior.

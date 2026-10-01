@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.367 (Ingredients Assignment focused GREEN; broader acceptance pending)
+**Version:** 1.368 (Ingredients Assignment path evidence; broader acceptance pending)
 
 Architecture v4.11 D18's Ingredients Assignment refinement is implemented in
 unpromoted `validation-production-assignment-01`: catalog23 adds seven buttons
@@ -24,8 +24,22 @@ normal cleanup, preservation and delayed audit; full worksheet595 remains open.
 
 Static:280 components,6150 procedures,135006 lines, unchanged9/45 dynamic calls,
 190 duplicate bodies and28 non-growing caps; the form shrinks35 lines. Three schemas
-validate;353 scripts parse. Separate recordings/publication, exact Event Detail,
-three-view and source-application proof, layout, shared/live-role/
+validate;354 scripts parse in the refreshed path baseline. Separate twelve-action
+guide/observed recordings pass219/219, with exact publication/Event Detail, authored
+intent, an independent reader and all three views. Both command completion and
+exact Designs application are tested separately; local controls cannot assert
+application. Five compiles, preservation, unassisted closure and delayed audit pass.
+An exited Excel entry delayed shutdown, then disappeared without intervention;
+no repair is claimed. Six reviewed captures show usable viewports, with long text
+and the full conclusion heading outside the captured areas; human acceptance is
+not implied. Separate Save source-failure paths pass150/150 with actual editor/
+Evaluate handlers: incomplete before/after append uncertainty, awaiting confirmed
+submission, and concluded exact applied Designs evidence. REQUESTED alone fails
+completion. Five compiles, preservation, unassisted closure and delayed audit pass.
+Existing worksheet paths139 retain exact prior order with five compiles,
+preservation, unassisted closure, delayed audit and six reviewed captures,
+including the visible four-step command conclusion. Full worksheet595,
+layout, shared/live-role/
 full-chain/reusable regressions and human acceptance remain required. Earlier
 worksheet-candidate passes are historical, not proof for this candidate.
 Evidence: `tests/integration/plan022_slice4be_production_assignment_results.md`.
@@ -5873,9 +5887,12 @@ actions or optional-tracking blockage. For each exact control only its declared
 positive fact establishes CommandCompleted. Save SourceEventsApplied requires
 every exact owning published Designs event; none of the eight local actions can
 establish it. Follow the normative subsection for full outcome/source validation.
-Focused349/349 and789/789 GREEN are recorded above. Separate guide and observed runs, published
-Event Detail, three-view diagnostic proof, preservation and all regression gates
-remain pending. The table below describes the existing UI, not new acceptance.
+Focused349/349 and789/789 GREEN are recorded above. Separate guide/observed runs,
+publication, Event Detail, explicit intent, independent-reader three-view checks
+and preservation now pass219/219. Viewport limits and delayed unassisted shutdown
+are recorded above. Separate Save source-failure paths also pass150/150, including
+applied/awaiting/incomplete distinctions and REQUESTED refusal. Broader regressions
+and human acceptance remain pending. The table below describes the existing UI.
 
 | Control group | Controls | Purpose |
 |---|---|---|

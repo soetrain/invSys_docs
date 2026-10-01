@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.107. Last reviewed:2026-10-01 UTC, Ingredients Assignment focused GREEN;
+Version 1.108. Last reviewed:2026-10-01 UTC, Ingredients Assignment path evidence;
 broader acceptance pending.
 
 Catalog23 now defines118 global controls and observes55/68 constructed Production
@@ -23,11 +23,25 @@ normal cleanup, preservation and delayed audit; full worksheet595 remains open.
 Invalid fixtures/assisted cleanup remain excluded; native form dismissal is never
 counted as an invoked handler. Static is280 components/6150 procedures/135006 lines,
 with unchanged9/45 dynamic calls,190 duplicates and28 non-growing caps. The form
-shrinks35 lines; three schemas validate and353 scripts parse.
+shrinks35 lines; three schemas validate and354 scripts parse.
 
-Separate guide/observed recordings, publication, Event Detail, authored intent,
-How-To/Diagnostic/Compare and exact Designs application distinctions remain open.
-Layout, current shared-observation/live-role/full-chain/reusable
+Separate twelve-action guide/observed recordings now pass219/219, including
+publication, Event Detail, authored intent, independent reader and all three views.
+The full sequence proves command completion and exact Designs application
+separately; each local control lacks source-application evidence. Five compiles,
+preservation, unassisted closure and delayed audit pass. An exited Excel entry
+delayed cleanup but disappeared without intervention; no repair is claimed.
+Six reviewed captures show usable viewports rather than every line or the full
+conclusion heading. Static runtime metrics are unchanged;354 scripts parse.
+Separate Save source-failure paths pass150/150 with exact original facts and
+actual expectation-editor/Evaluate handlers: incomplete evidence before/after
+append uncertainty, awaiting submitted work, and concluded exact applied Designs
+evidence. REQUESTED alone cannot conclude. Five compiles, preservation, unassisted
+closure and delayed audit also pass.
+Existing worksheet paths139 retain exact prior order with five compiles,
+preservation, unassisted closure, delayed audit and six reviewed captures,
+including the visible four-step command conclusion. Full worksheet595,
+layout, current shared-observation/live-role/full-chain/reusable
 regressions and human acceptance are still required on this candidate. The prior
 worksheet candidate's passes below do not establish those new-candidate gates.
 Exact evidence: `tests/integration/plan022_slice4be_production_assignment_results.md`.
@@ -891,13 +905,13 @@ from permission to stage or export a catalog worksheet.
 
 | UI control | Caption | Actual handler | Tracking ID/status |
 |---|---|---|---|
-| `btnAssignAdd` | Add Acceptable | `mBtnAssignAdd_Click` | `PRODUCTION_ASSIGNMENT_ADD`: catalog23 focused GREEN; paths/regressions/acceptance pending |
-| `btnAssignClear` | Clear | `mBtnAssignClear_Click` | `PRODUCTION_ASSIGNMENT_CLEAR`: catalog23 focused GREEN; paths/regressions/acceptance pending |
-| `btnAssignIngredient` | Select Requirement | `mBtnAssignIngredient_Click` | `PRODUCTION_ASSIGNMENT_REQUIREMENT`: catalog23 focused GREEN; paths/regressions/acceptance pending |
-| `btnAssignRecipe` | Select Process | `mBtnAssignRecipe_Click` | `PRODUCTION_ASSIGNMENT_PROCESS`: catalog23 focused GREEN; paths/regressions/acceptance pending |
-| `btnAssignRefresh` | Refresh | `mBtnAssignRefresh_Click` | `PRODUCTION_ASSIGNMENT_REFRESH`: catalog23 focused GREEN; paths/regressions/acceptance pending |
-| `btnAssignRemove` | Remove Row | `mBtnAssignRemove_Click` | `PRODUCTION_ASSIGNMENT_REMOVE`: catalog23 focused GREEN; paths/regressions/acceptance pending |
-| `btnAssignSave` | Save Alternatives | `mBtnAssignSave_Click` | `PRODUCTION_ASSIGNMENT_SAVE`: catalog23 focused GREEN; paths/regressions/acceptance pending |
+| `btnAssignAdd` | Add Acceptable | `mBtnAssignAdd_Click` | `PRODUCTION_ASSIGNMENT_ADD`: catalog23 focused GREEN and paired paths219; regressions/acceptance pending |
+| `btnAssignClear` | Clear | `mBtnAssignClear_Click` | `PRODUCTION_ASSIGNMENT_CLEAR`: catalog23 focused GREEN and paired paths219; regressions/acceptance pending |
+| `btnAssignIngredient` | Select Requirement | `mBtnAssignIngredient_Click` | `PRODUCTION_ASSIGNMENT_REQUIREMENT`: catalog23 focused GREEN and paired paths219; regressions/acceptance pending |
+| `btnAssignRecipe` | Select Process | `mBtnAssignRecipe_Click` | `PRODUCTION_ASSIGNMENT_PROCESS`: catalog23 focused GREEN and paired paths219; regressions/acceptance pending |
+| `btnAssignRefresh` | Refresh | `mBtnAssignRefresh_Click` | `PRODUCTION_ASSIGNMENT_REFRESH`: catalog23 focused GREEN and paired paths219; regressions/acceptance pending |
+| `btnAssignRemove` | Remove Row | `mBtnAssignRemove_Click` | `PRODUCTION_ASSIGNMENT_REMOVE`: catalog23 focused GREEN and paired paths219; regressions/acceptance pending |
+| `btnAssignSave` | Save Alternatives | `mBtnAssignSave_Click` | `PRODUCTION_ASSIGNMENT_SAVE`: catalog23 focused GREEN, paired paths219 and source paths150; regressions/acceptance pending |
 
 ### Production Run - List (10)
 
@@ -956,7 +970,7 @@ BuildRecipeBuilderPage has no invocation in source; BuildLayout constructs the n
 
 The source contains 34 non-button Click/Change handlers. Three belong to the
 unconstructed Recipe Builder and one to the hidden internal connection list.
-Of the30 applicable handlers, the two Assignment selections now have focused
+Of the30 applicable handlers, the two Assignment selections now have focused and paired-path
 observations;28 retain coverage work. The table records current helper effects
 and required test distinctions. Other deliberate selections still need contracts; text
 changes and mirrored programmatic events must not become keystroke surveillance
@@ -981,8 +995,8 @@ or duplicate actions under D18.
 | `mLstBuilderRecipes_Click` | Unconstructed Recipe Builder |
 | `mLstBuilderLines_Click` | Unconstructed Recipe Builder |
 | `mCmbLineIo_Change` | Unconstructed Recipe Builder |
-| `mLstAssignRecipes_Click` | `PRODUCTION_ASSIGNMENT_PROCESS_SELECT`: optional Navigation/PRESENTED, focused GREEN. Reads selected Process and replaces local requirements/alternatives; shared helper calls do not duplicate observations |
-| `mLstAssignIngredients_Click` | `PRODUCTION_ASSIGNMENT_REQUIREMENT_SELECT`: optional Navigation/SELECTED, focused GREEN. Refreshes allowed items; shared helper calls do not duplicate observations |
+| `mLstAssignRecipes_Click` | `PRODUCTION_ASSIGNMENT_PROCESS_SELECT`: optional Navigation/PRESENTED, focused GREEN and paired paths219. Reads selected Process and replaces local requirements/alternatives; shared helper calls do not duplicate observations |
+| `mLstAssignIngredients_Click` | `PRODUCTION_ASSIGNMENT_REQUIREMENT_SELECT`: optional Navigation/SELECTED, focused GREEN and paired paths219. Refreshes allowed items; shared helper calls do not duplicate observations |
 | `mTxtInventorySearch_Change` | Filters inventory through RefreshInventoryList; no entered search text or per-keystroke observations |
 | `mCmbRunLocation_Change` | Mirrors Tree selection under mLoading; reusable branch refreshes controls, non-reusable branch can clear incompatible staging allocations |
 | `mCmbTreeRunLocation_Change` | Mirrors List selection under mLoading with the same two branches; test one deliberate action, not two observations |
