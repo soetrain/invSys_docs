@@ -517,7 +517,7 @@ workbook columns. Publication, original recording order and How-To/Diagnostic/
 Compare both require separate evidence. This records discovered controls within
 the approved contract; it does not amend authority, permissions or saved semantics.
 
-**4be.1 Run preparation and allocation observations (discovered-control refinement; Core catalog implemented, form integration pending):**
+**4be.1 Run preparation and allocation observations (discovered-control refinement; Core catalog implemented, two form handlers integrated; acceptance pending):**
 Under approved D18 semantic inheritance, catalog24 shall add these nine existing
 controls, preserving catalogs1-23 exactly. OwnerId is `PRODUCTION_RUN_LOCAL`, role
 Production, capability PROD_POST with its existing ADMIN_MAINT alternative.
@@ -594,6 +594,29 @@ capability refusal is DENIED/Blocked/Unchanged before owner reads or mutation.
 False owner load/read results, unavailable required owner surfaces and exceptions
 are FAILED/Error/Unknown; no partial-state rollback is asserted. All source-event
 references are empty: these nine controls do not submit inventory or Designs events.
+
+**Pending decision RUN-SCALE-01 (not approved; do not implement yet):** Actual
+worksheet Apply Scale reads the older Design/BOM projection (`tblDesigns`) for an
+entry selected from released reusable Recipes, then can scale prior local values
+after that read fails. D15 requires released Process/Recipe authority when
+`DesignsEnabled=True`; the branch-preservation wording above grants no exception.
+Proposed resolution: with Designs enabled and no reusable run loaded, Apply Scale
+refuses before invoking the worksheet recipe owner or changing local staging,
+displaying "Load a released recipe before applying scale." Record REJECTED under
+the existing Run observation contract after the normal captured-context and
+capability checks. The operator uses the existing Load Recipe action to load and
+validate the selected released Recipe and its pinned Processes, then uses Apply
+Scale on that run. Do not auto-load, query Design/BOM as a substitute, or create a
+legacy Design with a matching Recipe identity. Loaded reusable scaling keeps its
+existing limits, completed-Process refusal and reset behavior. With Designs
+disabled, the existing non-reusable branch remains subject to D14 and the existing
+failure-observation rules. If approved, this decision explicitly qualifies D18's
+non-reusable branch-preservation and message-preservation instructions; it does
+not weaken D15 authority. Required D13 evidence: actual packaged Apply Scale
+refusal with a real released selection, unchanged local/custom values and exact
+identity, no Design/BOM read, correct observation, and the existing Load Recipe
+then Apply Scale sequence reaching STAGED through released Process/Recipe reads.
+Until approval, retain the guarded implementation and keep this conflict open.
 
 **Pending decision RUN-UI-01 (not approved; do not implement yet):** Packaged
 worksheet allocation tests show that List/Tree Apply can display "Acceptable

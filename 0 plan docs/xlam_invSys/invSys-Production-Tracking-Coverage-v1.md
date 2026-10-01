@@ -1,7 +1,24 @@
 # Production form tracking coverage audit
 
-Version 1.136. Last reviewed:2026-10-01 UTC, Scale binding guard verified;
-form observation integration, RUN-UI-01 and reusable acceptance unresolved.
+Version 1.137. Last reviewed:2026-10-01 UTC, Tree presentation pair GREEN;
+remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Latest candidate `validation-production-run-presentation-01` integrates Expand/
+Collapse, moving the232-check actual-handler baseline from100 PASS/132 FAIL to
+232/232 GREEN. All identities/order and prior PASS checks survive. Existing local
+presentation, exact messages, context/suppression guards and redacted pairs pass.
+Five compiles, preservation, normal closure and delayed zero Excel audit pass.
+Constructed-button wiring is57/68; this is not Action Path, full-release or human
+acceptance. Policy218 is183 PASS/35 known FAIL and fault245 is153 PASS/92 known
+FAIL, retaining all prior ordered checks and passes; all36 new Tree checks pass.
+Five compiles, candidate pins, preservation, normal closure and delayed zero audits
+pass. The remaining failures concern the seven unintegrated handlers. Independent
+Action Path evidence remains required for this pair.
+
+The same candidate preserves all503 reusable baseline identities/order/results,
+178 PASS/325 known FAIL, all33 owner cases and seven native-close receipts. Five
+compiles, preservation, normal cleanup and delayed zero Excel audit pass. This
+does not resolve the separate full reusable native-crash/acceptance gates.
 
 Latest candidate `validation-production-run-binding-02` adds the same captured
 owner guard to worksheet Apply Scale. Its185 checks move120 PASS/65 FAIL to
@@ -61,10 +78,10 @@ the new candidate, with five compiles, preservation, normal cleanup and delayed
 zero Excel audit. Broader/expanded/path gates remain open on this candidate.
 
 D18 now normatively refines the nine controls in owner audit8 as catalog24,
-PRODUCTION_RUN_LOCAL. Controls1.396 lists their exact mappings. No new form
-integration or acceptance is claimed. Actual-handler RED begins with Tree
-Expand/Collapse; seven remaining local/read/allocation controls and the full
-context/policy/failure matrix remain required before this group can pass.
+PRODUCTION_RUN_LOCAL. Controls1.397 lists their exact mappings. The preceding Core
+checkpoint did not establish form integration or acceptance. Expand/Collapse now
+has focused GREEN evidence above; seven remaining local/read/allocation controls
+and the full context/policy/failure matrix are required before this group can pass.
 
 Presentation-pair baseline:98 PASS/134 expected FAIL/232 unique checks. All existing
 tree shapes, palette values and statuses pass, with42 prior shared checks GREEN
@@ -1251,8 +1268,8 @@ from permission to stage or export a catalog worksheet.
 | UI control | Caption | Actual handler | Tracking ID/status |
 |---|---|---|---|
 | `btnRunTreeApplyPalette` | Apply | `mBtnRunTreeApplyPalette_Click` | Pending |
-| `btnRunTreeCollapseAll` | Collapse | `mBtnRunTreeCollapseAll_Click` | Pending |
-| `btnRunTreeExpandAll` | Expand | `mBtnRunTreeExpandAll_Click` | Pending |
+| `btnRunTreeCollapseAll` | Collapse | `mBtnRunTreeCollapseAll_Click` | Catalog24; focused GREEN; broader acceptance pending |
+| `btnRunTreeExpandAll` | Expand | `mBtnRunTreeExpandAll_Click` | Catalog24; focused GREEN; broader acceptance pending |
 
 ### Production Settings (4)
 

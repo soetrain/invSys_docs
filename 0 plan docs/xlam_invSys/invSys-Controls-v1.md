@@ -1,8 +1,36 @@
 # invSys Form Controls v1
 
-**Version:** 1.396 (Scale binding guard GREEN; Run observations remain incomplete)
+**Version:** 1.397 (Tree observation pair GREEN; RUN-SCALE-01 proposed)
 
-Latest unpromoted candidate `validation-production-run-binding-02` also guards the
+Latest unpromoted `validation-production-run-presentation-01` integrates Expand/
+Collapse under the approved D18 contract. The focused actual-handler gate moves
+100 PASS/132 FAIL to232/232 GREEN with all identities/order and prior PASS retained.
+Existing tree shapes/messages, guards, paired redacted events and preservation
+pass; five compiles, normal closure and delayed zero Excel audit pass. Constructed
+button wiring is57/68; seven other catalog24 Run buttons remain unintegrated.
+Policy218 now has183 PASS/35 known FAIL and fault245 has153 PASS/92 known FAIL;
+all prior identities/order/PASS survive, with ten and26 Tree checks newly GREEN.
+Denied/optional/unavailable tracking and owner exceptions/nesting pass for this
+pair, with five compiles, preservation, normal cleanup and delayed zero audits.
+Independent Action Paths, broader regression and visible acceptance remain
+separate gates. Tree stays experimental under D15. No new
+workflow or Scale/message proposal is approved by these tests.
+
+The candidate also preserves all503 reusable baseline results (178 PASS/325 known
+FAIL), all33 owner cases and seven native-close receipts. Five compiles, package/
+settings preservation, normal cleanup and delayed zero Excel audit pass. Separate
+full reusable acceptance and independent paths remain open.
+
+Pending RUN-SCALE-01, not approved: for Apply Scale with Designs enabled and no
+loaded reusable run, show "Load a released recipe before applying scale." and
+record REJECTED after normal context/capability checks, with no worksheet-owner
+read or local staging change. Existing Load Recipe then Apply Scale provides the
+released Process/Recipe path. Loaded reusable scaling and Designs-disabled
+behavior retain existing rules. Architecture v4.11 D18 contains the exact proposed
+exception to branch/message preservation and the required packaged-handler tests.
+No runtime implementation or acceptance is implied by this proposal.
+
+Preceding unpromoted candidate `validation-production-run-binding-02` guards the
 worksheet Apply Scale owner. Nine actual-handler cases move120 PASS/65 FAIL to
 122 PASS/63 FAIL across185 identical checks: two retargeting checks become GREEN,
 all120 prior PASS checks survive. Admin Settings explicitly enables Designs for

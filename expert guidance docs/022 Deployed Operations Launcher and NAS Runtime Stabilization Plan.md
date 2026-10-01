@@ -2,6 +2,37 @@
 
 **Status:** Current corrective implementation plan
 
+Latest implementation checkpoint,2026-10-01 UTC:
+`deploy/validation-production-run-presentation-01` integrates the approved Tree
+Expand/Collapse pair. Actual packaged-handler RED100/132 becomes232/232 GREEN,
+preserving every prior identity/order/PASS and the existing tree/messages. Five
+compiles, captured/suppression guards, redaction/preservation, normal closure and
+delayed zero Excel audit pass. Wiring is57/68; seven Run buttons, independent
+paths and broad release/visible acceptance remain open. Build/cold compile passes;
+274 compiled components are preserved, one form changes and one coordinator is
+added. Static growth is1 component/1 procedure/35 lines;9/45 calls,190 duplicates
+and28 oversized caps do not regress. Policy218 retains every prior PASS with
+183 PASS/35 known FAIL; fault245 retains every prior PASS with153 PASS/92 known
+FAIL. Exactly36 additional Tree assertions become GREEN across these companions,
+covering permission refusal, optional/unavailable tracking and owner exceptions/
+nested callbacks. Five compiles, preservation, normal cleanup and delayed zero
+Excel audits pass. These partial companion gates do not establish all-nine GREEN.
+
+Reusable503 also retains every prior identity/order/result,178 PASS/325 known
+FAIL, all33 owner cases and seven native-close receipts. Five compiles, canonical
+pins, preservation, normal cleanup and delayed zero Excel audit pass. Independent
+paths and the separate full reusable171/two-aggregate/replay37 gates remain open.
+
+Pending RUN-SCALE-01 is now concrete in Architecture v4.11 D18: with Designs
+enabled and no reusable run loaded, refuse Apply Scale before worksheet-owner
+reads or staging changes and direct the operator to Load Recipe first. Preserve
+loaded reusable scaling and the Designs-disabled branch under existing rules.
+This would explicitly qualify D18 branch/message preservation while enforcing
+D15; it is not approved and must not be implemented yet. Protect the real selected
+Recipe refusal and subsequent Load/Scale sequence through packaged handlers,
+including owner-read authority, unknown columns, exact identity and observations.
+Unrelated approved Run observation work may continue while this decision is open.
+
 Latest checkpoint,2026-10-01 UTC: unpromoted
 `deploy/validation-production-run-binding-02` also guards worksheet Apply Scale
 before its load owner. With Designs explicitly enabled through Admin Settings,
