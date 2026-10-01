@@ -1,6 +1,16 @@
 # invSys Form Controls v1
 
-**Version:** 1.423 (Complete Run selected-Process prerequisite corrected; broader acceptance pending)
+**Version:** 1.424 (Complete Run multi-Process boundary and Check In regression verified; broader acceptance pending)
+
+Unchanged complete-selection01 preserves all629 Check In checks and expands the
+completion gate to68/68, retaining its59 prior checks. The selected Process alone
+completes and creates output while the second remains unallocated and the batch
+incomplete. Shared42/five compiles, preservation, normal closure/delayed zero
+audits and static three schemas/377 parses pass. Three completion captures were
+reviewed; the second output row is only partly visible in the populated capture.
+Scrolling/usability and full populated layout remain unverified. This test-only
+checkpoint adds no tracking control or new runtime behavior. Packaged smoke,
+layout, live-role/full-chain and remaining completion observations stay open.
 
 Complete Run's actual packaged handler on activity03 consumed inventory with no
 Process selected (55 PASS/4 FAIL). Under existing D15, complete-selection01 now
@@ -9,8 +19,8 @@ and removes the whole-run fallback. Selected completion and unselected preservat
 pass59/59; both captures, shared42/five instrumented compiles, new-candidate pins,
 normal closure/delayed zero audit and separate cold startup/five compiles pass.
 Only frmProduction changes among283 packaged components. No tracking control is
-added and multi-Process/full-regression acceptance on this new candidate remains
-pending. Existing activity03 evidence does not establish new-candidate acceptance.
+added. The newer checkpoint adds a multi-Process case and Check In regression;
+other gates remain pending. Historical activity03 evidence alone does not establish new-candidate acceptance.
 Static evidence has one fewer runtime line and unchanged procedure/dynamic-call
 counts; three schemas/377 parses and28 non-growing module caps pass.
 

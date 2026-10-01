@@ -2,6 +2,18 @@
 
 **Status:** Current corrective implementation plan
 
+Complete Run follow-up,2026-10-01 UTC: unchanged complete-selection01 preserves
+all629 Check In checks and passes68/68 completion checks, retaining all59 prior
+identities/PASS results. The two-Process fixture proves selected-only completion
+and exact inventory effects while the second Process stays visibly unallocated
+and the batch incomplete. Shared42/five compiles, pins/settings preservation,
+normal closure/delayed zero audits, three reviewed completion captures and static
+three schemas/377 parses pass without runtime growth. Controls1.424/coverage1.164
+record test-only verification. The partly visible second output row needs a
+populated-list scrolling/usability check. Next: packaged smoke, layout, live-role/
+full-chain on the new hashes, then remaining owner interruption/partial-submission
+and tracking work. No new runtime behavior or product RED is claimed here.
+
 Complete Run D15 prerequisite,2026-10-01 UTC: the actual packaged
 `mBtnManagerApplyOutput_Click` confirms that empty selection reaches the whole-run
 owner and consumes inventory (55 PASS/4 FAIL). The form now refuses before note
@@ -11,8 +23,8 @@ shared42, five instrumented compiles, both visible captures, normal cleanup and
 delayed zero native audit pass. Cold startup/five compiles preserve282 of283
 components; only frmProduction changes. This is a D15 implementation correction,
 not a new contract or Complete Run tracking integration. Controls1.423/coverage1.163
-record the boundary. Next: new-candidate Check In629 regression, packaged smoke,
-layout, live-role/full-chain and focused multi-Process owner evidence before
+record the boundary. Check In629 and a focused multi-Process case were subsequently
+verified above. Packaged smoke, layout and live-role/full-chain remain required before
 tracking integration. Exact writer IDs and partial submissions still need coverage.
 Static evidence retains290 components/6175 procedures,9 literal/45 unresolved
 calls and190 duplicate candidates;135521 lines is one fewer. Three schemas/

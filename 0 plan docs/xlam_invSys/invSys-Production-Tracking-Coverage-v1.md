@@ -1,7 +1,17 @@
 # Production form tracking coverage audit
 
-Version 1.163. Last reviewed:2026-10-01 UTC, Complete Run selected-Process prerequisite corrected;
+Version 1.164. Last reviewed:2026-10-01 UTC, Complete Run multi-Process and Check In regressions verified;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Unchanged complete-selection01 retains629/629 Check In checks and expands the
+completion baseline59 to68/68. Only the selected Process completes, consuming
+its exact allocations and creating its output; the other remains unallocated
+and the batch incomplete. Shared42/five compiles, preservation, unassisted closure/
+delayed zero audits and static three schemas/377 parses pass. Three completion
+captures were reviewed. The partly visible second output row needs scrolling/
+populated-list usability evidence. No runtime change or product RED is claimed.
+Smoke/layout/live-role/full-chain and owner interruption/partial-submission
+evidence remain pending. Complete Run still has no observation integration.
 
 The Complete Run D15 baseline proves actual empty-selection consumption on
 activity03 (55 PASS/4 FAIL). The form now refuses before note/output staging and
@@ -10,8 +20,8 @@ positive owner preserved. Shared42/five instrumented compiles, two reviewed
 captures, package/settings preservation and normal closure/delayed zero audit
 pass. Separate cold startup/five compiles show only frmProduction changed among283
 components. Complete Run remains untracked; this is an implementation correction
-under D15. The new candidate still needs Check In629 and other regressions,
-multi-Process owner coverage and full Release1 evidence.
+under D15. The newer checkpoint supplies Check In629 and a multi-Process case;
+other regressions and full Release1 evidence remain pending.
 Static evidence decreases runtime lines by one; procedure/dynamic-call counts
 remain unchanged and three schemas/377 parses/28 non-growing caps pass.
 
@@ -1859,8 +1869,9 @@ not silently excluded because Run - List is the Release 1 proving path.
    rule; it is not authorized by this audit's preservation wording. The actual
    `mBtnManagerApplyOutput_Click` baseline subsequently proves this defect
    (55 PASS/4 FAIL) and the D15 form correction passes59/59 on complete-selection01.
-   Selected positive completion and unselected refusal are protected; broader
-   multi-Process/interruption and regression evidence remains pending before
+   The later68-check gate adds selected-only completion with another unallocated
+   Process; all59 earlier checks and the separate Check In629 regression pass.
+   Interruption/partial-submission and remaining regression evidence are pending before
    observations are added. No whole-run exception is authorized.
    This clarifies D18's activity/business
    distinction and the normative selected-Process Check In rule; no new control
