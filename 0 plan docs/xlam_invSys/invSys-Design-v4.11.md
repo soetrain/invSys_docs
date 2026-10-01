@@ -517,7 +517,7 @@ workbook columns. Publication, original recording order and How-To/Diagnostic/
 Compare both require separate evidence. This records discovered controls within
 the approved contract; it does not amend authority, permissions or saved semantics.
 
-**4be.1 Run preparation and allocation observations (discovered-control refinement; Core catalog implemented, four form handlers integrated; acceptance pending):**
+**4be.1 Run preparation and allocation observations (discovered-control refinement; Core catalog implemented, six form handlers integrated; acceptance pending):**
 Under approved D18 semantic inheritance, catalog24 shall add these nine existing
 controls, preserving catalogs1-23 exactly. OwnerId is `PRODUCTION_RUN_LOCAL`, role
 Production, capability PROD_POST with its existing ADMIN_MAINT alternative.

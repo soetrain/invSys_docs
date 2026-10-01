@@ -1,6 +1,27 @@
 # invSys Form Controls v1
 
-**Version:** 1.402 (independent Load Action Paths GREEN; acceptance pending)
+**Version:** 1.403 (worksheet Refresh observations and continuation GREEN; acceptance pending)
+
+Unpromoted `validation-production-run-refresh-01` integrates Loader Refresh and
+Manager Refresh under unchanged D18, bringing constructed-button wiring to61/68.
+The expanded worksheet-owner gate moves201 PASS/56 FAIL to257/257 GREEN, retaining
+all prior identities/order/PASS. Eight new real-return interruption cases cover
+the local read-model, recipe lists, inventory picker and default location. Current
+messages and the distinct Loader/Manager sequences remain; a false local owner
+records FAILED, and a completed local refresh does not assert source freshness.
+Cold startup, five compiles, preservation, normal cleanup and delayed zero audits
+pass. Static is287/6166/135351 with9/45 calls,190 duplicates,28 non-growing caps,
+three schemas and368 tooling parses; the form shrinks34 lines. Reusable read-return
+checks are132 PASS/14 known FAIL: all36 Refresh and36 Load checks pass, with prior
+ordered identities/PASS preserved and16 Refresh improvements. Five compiles,
+preservation, normal cleanup and delayed zero audit pass. Permission218 is203/15
+and fault245 is206/39: prior ordered identities/PASS survive, with36 Refresh
+improvements and five compiles/preservation/normal cleanup/delayed zero audits.
+Reusable503 retains289 PASS/214 known FAIL, with20 Refresh improvements and every
+prior ordered identity/PASS preserved. All33 owner cases,42 shared checks and all
+seven actual native workbook-close handlers pass. Five compiles, preservation,
+normal closure and delayed zero audit pass. Independent Refresh paths and broader
+acceptance remain pending.
 
 Independent Load Action Paths pass87/87 on unchanged load03. The preserved clear01
 negative control passes47 checks and fails only the missing original Load pair.

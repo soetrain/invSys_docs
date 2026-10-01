@@ -2,6 +2,31 @@
 
 **Status:** Current corrective implementation plan
 
+Refresh worksheet checkpoint,2026-10-01 UTC: unpromoted refresh01 integrates both
+existing Refresh controls under unchanged D18; wiring is61/68. A typed coordinator
+preserves distinct reusable and worksheet Loader/Manager sequences and messages,
+observes the actual local owner result, and scopes captured continuation through
+existing refresh reads. No new Domain authority, read path or dynamic call.
+The169-check baseline remains145 PASS/24 known FAIL before implementation. Eight
+new real-return interruption cases add88 checks, yielding expanded RED201 PASS/
+56 FAIL; all previous results are retained. GREEN is257/257, preserving every
+ordered identity/PASS. False local owner is FAILED; REFRESHED remains local-only
+and cannot prove fail-soft source freshness. Reusable read RED retains116 PASS/
+30 known FAIL, including16 Refresh-specific gaps; GREEN is132 PASS/14 known FAIL,
+preserving every prior ordered identity/PASS. All36 Refresh and36 Load checks pass.
+Permission218 is203/15 and fault245 is206/39, retaining every prior ordered identity/
+PASS and adding36 Refresh improvements. Reusable503 is289 PASS/214 known FAIL,
+with20 Refresh improvements and every prior ordered identity/PASS retained. All33
+owner cases,42 shared checks and seven actual native workbook-close handlers pass.
+Independent Refresh paths remain pending.
+Cold Operations startup, five compiles, canonical pins, preservation,
+normal cleanup and delayed zero audits pass for completed gates. The build changes
+only the form and adds one helper, preserving278 compiled components. Static is
+287/6166/135351,9/45 calls,190 duplicates and28 non-growing caps; three schemas and
+368 tooling parses pass. Form shrinkage is34 lines, with net feature growth1
+component/1 procedure/32 lines. Independent Refresh paths and broad acceptance
+remain required; pending Scale/UI decisions are unchanged and unapproved.
+
 Independent Load path checkpoint,2026-10-01 UTC: unchanged load03 passes87/87.
 Preserved clear01 supplies RED47 PASS/one missing original Load pair, with every
 prior ordered identity/PASS retained in GREEN. Separate source/observed recordings

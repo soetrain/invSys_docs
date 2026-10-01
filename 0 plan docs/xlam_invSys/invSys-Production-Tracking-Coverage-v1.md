@@ -1,7 +1,27 @@
 # Production form tracking coverage audit
 
-Version 1.142. Last reviewed:2026-10-01 UTC, independent Load Action Paths GREEN;
+Version 1.143. Last reviewed:2026-10-01 UTC, worksheet Refresh GREEN;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Both Refresh buttons are wired in unpromoted refresh01: constructed-button coverage
+is61/68. The expanded worksheet gate moves201/56 to257/257 GREEN, retaining every
+prior ordered identity/PASS. Eight added interruption cases execute real local
+read-model, recipe-list, inventory-picker and default-location returns. False-owner
+FAILED versus local REFRESHED and existing messages/sequences are preserved.
+Five compiles, preservation, normal cleanup and delayed zero audits pass. Static
+is287/6166/135351,9/45 calls,190 duplicates,28 non-growing caps, three schemas and
+368 tooling parses; form shrinkage is34 lines. The reusable read companion is
+132 PASS/14 known FAIL, preserving all prior ordered identities/PASS and improving
+16 Refresh checks. All36 Refresh and36 Load checks pass, with five compiles,
+preservation, normal cleanup and delayed zero audit. Permission218 is203/15 and
+fault245 is206/39, with36 Refresh improvements and every prior ordered identity/
+PASS retained. Five compiles, preservation, normal closure and delayed zero audits
+pass. Reusable503 retains289 PASS/214 known FAIL with20 Refresh improvements and
+every prior ordered identity/PASS preserved. All33 owner cases,42 shared checks
+and seven actual native workbook-close handlers pass; five compiles, preservation,
+normal closure and delayed zero audit pass. Independent Refresh paths and broader
+acceptance remain pending.
+No new contract.
 
 Load paths87/87 pass on unchanged load03 after clear01 RED47 PASS/one missing
 original observation pair. Prior48 ordered identities/47 PASS and shared42 survive.
@@ -1354,14 +1374,14 @@ from permission to stage or export a catalog worksheet.
 | UI control | Caption | Actual handler | Tracking ID/status |
 |---|---|---|---|
 | `btnApplyBatchScale` | Apply Scale | `mBtnApplyBatchScale_Click` | Pending |
-| `btnLoaderClear` | Clear Run | `mBtnLoaderClear_Click` | `PRODUCTION_RUN_CLEAR`: catalog24 worksheet/boundary, permission/fault and reusable503 checks GREEN; paths and full acceptance pending |
-| `btnLoaderLoad` | Load Recipe | `mBtnLoaderLoad_Click` | Pending |
-| `btnLoaderRefresh` | Refresh | `mBtnLoaderRefresh_Click` | Pending |
+| `btnLoaderClear` | Clear Run | `mBtnLoaderClear_Click` | `PRODUCTION_RUN_CLEAR`: catalog24 focused checks and independent paths102 GREEN; full acceptance pending |
+| `btnLoaderLoad` | Load Recipe | `mBtnLoaderLoad_Click` | `PRODUCTION_RUN_LOAD`: catalog24 focused checks and independent paths87 GREEN; full acceptance pending |
+| `btnLoaderRefresh` | Refresh | `mBtnLoaderRefresh_Click` | `PRODUCTION_RUN_LOADER_REFRESH`: catalog24 worksheet/boundary, read-return, policy/fault and reusable503 Refresh checks GREEN; paths and full acceptance pending |
 | `btnManagerApplyOutput` | Complete Run | `mBtnManagerApplyOutput_Click` | Pending |
 | `btnManagerCheckIn` | Check In | `mBtnManagerCheckIn_Click` | Pending |
 | `btnManagerNext` | Next Batch | `mBtnManagerNext_Click` | Pending |
 | `btnManagerPrint` | Print Recall | `mBtnManagerPrint_Click` | Pending |
-| `btnManagerRefresh` | Refresh | `mBtnManagerRefresh_Click` | Pending |
+| `btnManagerRefresh` | Refresh | `mBtnManagerRefresh_Click` | `PRODUCTION_RUN_MANAGER_REFRESH`: catalog24 worksheet/boundary, read-return, policy/fault and reusable503 Refresh checks GREEN; paths and full acceptance pending |
 | `btnRunApplyPalette` | Apply | `mBtnRunApplyPalette_Click` | Pending |
 
 ### Production Run - Tree (3)
