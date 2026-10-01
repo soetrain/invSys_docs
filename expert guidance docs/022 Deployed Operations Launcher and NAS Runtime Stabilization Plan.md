@@ -59,7 +59,12 @@ Settings202 also retains every prior ordered check on this candidate: the118-con
 editor, validation/authorization, cancellation/version checks, Event Detail,
 Action Path preferences, Admin close/reopen and Operations Viewer Settings pass.
 Five compiles, unassisted closure, preservation and delayed Excel audit pass.
-The separate Settings activity gate remains pending.
+Settings activity passes506/506: all497 prior checks remain in relative order,
+with exactly nine Assignment older-policy exclusions added. Five compiles,
+preservation, unassisted closure and delayed audit pass. Seven reviewed captures
+show usable Settings controls/status; full lists/preview text extend beyond the
+viewports. A temporary exited Excel entry cleared without intervention; no
+shutdown repair is claimed. Human acceptance and broader gates remain open.
 
 Next verify layout,
 current shared-observation regressions, live roles, the full Release1 chain

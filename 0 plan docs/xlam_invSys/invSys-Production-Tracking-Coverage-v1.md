@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.109. Last reviewed:2026-10-01 UTC, Assignment candidate worksheet regression;
+Version 1.110. Last reviewed:2026-10-01 UTC, Assignment worksheet and Settings regressions;
 broader acceptance pending.
 
 Catalog23 now defines118 global controls and observes55/68 constructed Production
@@ -52,8 +52,12 @@ Exact evidence: `tests/integration/plan022_slice4be_production_assignment_result
 
 Settings202 retains exact prior order on this candidate, including the118-control
 tracking editor and existing Production UOM routing/staging checks. Five compiles,
-unassisted closure, preservation and delayed Excel audit pass. The separate
-Settings activity gate remains pending; no new control registration is claimed.
+unassisted closure, preservation and delayed Excel audit pass. Settings activity
+also passes506/506:497 prior checks retained in relative order plus nine exact
+Assignment older-policy exclusions. Five compiles, preservation, unassisted
+closure and delayed audit pass. Seven reviewed Settings captures have viewport
+limits; an exited Excel entry cleared without intervention. No shutdown repair,
+new control registration or human acceptance is claimed.
 
 Prior worksheet checkpoint, `validation-process-worksheet-activity-03`: catalog22
 had109 IDs and48/68 observed buttons. Its three worksheet handlers passed595/595;

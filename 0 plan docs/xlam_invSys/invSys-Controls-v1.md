@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.369 (Assignment candidate worksheet regression; broader acceptance pending)
+**Version:** 1.370 (Assignment worksheet and Settings regressions; broader acceptance pending)
 
 Architecture v4.11 D18's Ingredients Assignment refinement is implemented in
 unpromoted `validation-production-assignment-01`: catalog23 adds seven buttons
@@ -51,7 +51,12 @@ Settings202 retains all prior ordered checks on the Assignment candidate,
 including the118-control editor, policy validation/authorization, cancelled saves,
 Event Detail, Action Path preferences and Admin/Operations Settings reachability.
 Five compiles, unassisted closure, preservation and delayed Excel audit pass.
-The separate Settings activity gate remains pending; no new human acceptance.
+Settings activity also passes506/506, retaining497 prior checks in relative order
+and adding exactly nine Assignment older-policy exclusions. Five compiles,
+preservation, unassisted closure and delayed audit pass. Seven reviewed Settings
+captures show controls/status and staged versus effective preferences; full lists
+and preview text extend beyond their viewports. An exited Excel entry cleared
+without intervention; no repair or new human acceptance is claimed.
 
 Architecture v4.11 D18's catalog22 controls PRODUCTION_PROCESS_WORKSHEET_SEND,
 PRODUCTION_PROCESS_WORKSHEET_ADD_ITEM and PRODUCTION_PROCESS_WORKSHEET_RETRIEVE
