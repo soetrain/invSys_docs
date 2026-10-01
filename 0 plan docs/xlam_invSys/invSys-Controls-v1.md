@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.387 (Run reusable-handler RED; implementation pending)
+**Version:** 1.388 (Run Core/policy RED; implementation pending)
 
 Architecture D18's Run preparation/allocation refinement specifies catalog24's
 nine existing controls, with no runtime registration or layout change yet:
@@ -45,6 +45,17 @@ native-lifetime fixture attempt is excluded; the corrected narrow diagnostic is
 separate from this full baseline. Static metrics are unchanged; three schemas and
 359 parses pass. Worksheet branches, complete policy/fault/yield coverage, paired
 paths and GREEN remain open. No runtime, layout or human-acceptance change.
+
+Supplemental nine-control Core RED is492 PASS/272 expected FAIL/764 checks,
+covering catalog/defaults/outcomes/references/terminal rules. Separate packaged
+policy RED is173 PASS/45 expected FAIL/218 checks, retaining its initial209
+identities/results exactly and adding nine denied owner-entry checks. All29
+authorized optional-policy action cases pass. Each gate retains42 shared GREEN
+checks, five compiles, frozen pins, preservation, unassisted closure and delayed
+zero Excel audit. Runtime/static metrics stay unchanged;361 scripts parse.
+Owner faults, yields/nesting, worksheet branches, multi-key allocation and paired
+paths remain open. Catalog24 remains specified only; evidence is in the same
+Run-local integration record.
 
 Architecture v4.11 D18's Ingredients Assignment refinement is implemented in
 unpromoted `validation-production-assignment-01`: catalog23 adds seven buttons

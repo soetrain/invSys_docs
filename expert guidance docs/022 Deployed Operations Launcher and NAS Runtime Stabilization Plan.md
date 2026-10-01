@@ -40,6 +40,17 @@ not acceptance. Static runtime metrics remain unchanged, with three schemas and
 worksheet, complete policy/fault/yield, paired-path and GREEN gates remain open.
 Catalog24 remains specified only; no runtime repair or package promotion.
 
+Further RED,2026-10-01 UTC: the separate Core matrix yields492 PASS/272 expected
+FAIL/764 checks for all nine mappings, defaults, outcomes, references and terminal
+semantics. Packaged optional-policy/denial coverage yields173 PASS/45 expected
+FAIL/218 checks, retaining209 earlier identities/results and adding nine explicit
+owner-entry checks. All29 authorized optional-policy action cases pass. Both
+gates retain42 exact shared GREEN checks, five compiles, frozen pins, preservation,
+normal closure and delayed zero Excel audit. Runtime/static metrics are unchanged;
+361 scripts parse. Preserve these baselines alongside503/232. Owner faults,
+yield/nested entry, worksheet branches, exact multi-key allocation and paired paths
+remain required; catalog24 and full Release1 acceptance are still incomplete.
+
 Active Slice4be continuation,2026-10-01 UTC: Ingredients Assignment implements
 Architecture v4.11 D18's approved discovered-control refinement in unpromoted
 `deploy/validation-production-assignment-01`. Catalog23 preserves1-22 and adds
