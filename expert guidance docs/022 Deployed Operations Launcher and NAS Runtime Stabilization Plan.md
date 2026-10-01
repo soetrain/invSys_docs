@@ -180,6 +180,19 @@ truncated worksheet/detail text do not establish complete cell/formula evidence,
 all-size layout or human acceptance. Exact records are in Assignment evidence;
 runtime/static metrics and control coverage are unchanged.
 
+Worksheet headers107 and picker115 retain exact prior ordered checks, five
+compiles each, unassisted closure, settings/package preservation and delayed
+Excel audits. D14 managed-header/custom-column preservation and exact normalized
+numbered item/SKU commits remain protected. A test-only capture correction uses
+the verified owning workbook window: the initial blank normalized worksheet
+image is excluded, as is an intermediate79 PASS/1 harness FAIL capture attempt.
+The final107 rerun provides five reviewed captures; the picker provides two.
+Long text/off-screen columns and a pre-commit picker image limit visual proof.
+No runtime/contract change or new product RED is claimed. Static remains
+280/6150/135006,9/45 calls,190 duplicates and28 non-growing caps; three schemas
+validate and354 scripts parse. Exact roots, times and exclusions are in the
+Assignment evidence record. Coverage counts and human acceptance are unchanged.
+
 Full reusable remains open: the original edit/export callback fails with
 RPC800706BE and native ntdll/c00000ff; an empty recovery instance requires explicit
 Quit, excluding that attempt from acceptance. A narrower edit/export diagnostic
