@@ -66,10 +66,25 @@ show usable Settings controls/status; full lists/preview text extend beyond the
 viewports. A temporary exited Excel entry cleared without intervention; no
 shutdown repair is claimed. Human acceptance and broader gates remain open.
 
-Next verify layout,
-current shared-observation regressions, live roles, the full Release1 chain
-and reusable Production on this candidate; earlier worksheet-candidate passes do
-not prove the new candidate. Preserve349/789 and all prior accepted behavior.
+Existing packaged layout, smoke86, full chain32, live roles48 and warehouse
+creation15 now pass on this candidate with exact prior checks/geometry, normal
+closure, preservation and clean delayed Excel audits. Layout covers pages0-4:
+the900x700 request clamps to1110x800; expanded is1350x980. Three empty Run List
+captures do not establish populated workflow, Settings page5 or human acceptance.
+
+Full reusable remains open: the original edit/export callback fails with
+RPC800706BE and native ntdll/c00000ff; an empty recovery instance requires explicit
+Quit, excluding that attempt from acceptance. A narrower edit/export diagnostic
+passes. A bounded full prefix passes with a native observer attached, while the
+unobserved prefix fails earlier at batch scale with ntdll/c0000028, also seen on
+the prior worksheet candidate. No root cause or repair is established. Diagnostic
+exit0 is not success when the inner report fails. Exact records and exclusions
+are in the Assignment evidence file above; neither failure is desktop error5.
+
+Next investigate the native failures and verify current shared-observation
+regressions, full reusable171 and independent replay37. Do not repeat full runs
+merely to obtain a pass. Earlier worksheet-candidate passes do not prove this
+candidate. Preserve349/789 and all prior accepted behavior.
 Commit/push checkpoints; full Slice4be and Release1 acceptance remain open.
 
 Prior worksheet checkpoint: catalog22's three Process worksheet observations are implemented

@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.370 (Assignment worksheet and Settings regressions; broader acceptance pending)
+**Version:** 1.371 (Assignment release-chain regression; reusable acceptance unresolved)
 
 Architecture v4.11 D18's Ingredients Assignment refinement is implemented in
 unpromoted `validation-production-assignment-01`: catalog23 adds seven buttons
@@ -42,8 +42,8 @@ submission, and concluded exact applied Designs evidence. REQUESTED alone fails
 completion. Five compiles, preservation, unassisted closure and delayed audit pass.
 Existing worksheet paths139 retain exact prior order with five compiles,
 preservation, unassisted closure, delayed audit and six reviewed captures,
-including the visible four-step command conclusion. Layout, shared/live-role/
-full-chain/reusable regressions and human acceptance remain required. Earlier
+including the visible four-step command conclusion. Remaining shared-observation/
+reusable regressions and human acceptance remain required. Earlier
 worksheet-candidate passes are historical, not proof for this candidate.
 Evidence: `tests/integration/plan022_slice4be_production_assignment_results.md`.
 
@@ -57,6 +57,21 @@ preservation, unassisted closure and delayed audit pass. Seven reviewed Settings
 captures show controls/status and staged versus effective preferences; full lists
 and preview text extend beyond their viewports. An exited Excel entry cleared
 without intervention; no repair or new human acceptance is claimed.
+
+Existing packaged layout, smoke86, full chain32, live roles48 and warehouse
+creation15 now retain exact prior checks/geometry on this candidate, with normal
+closure, preservation and clean delayed Excel audits. Layout covers pages0-4 at
+1110x800 and1350x980; the900x700 request clamps to the default. Three empty Run List
+captures do not establish populated workflow or Settings page5 acceptance.
+
+Full reusable171/replay37 remain open after native Excel failures. The original
+edit/export callback fails with RPC800706BE/ntdll c00000ff and requires explicit
+Quit of an empty recovery instance. A narrower diagnostic passes; a bounded full
+prefix passes with a native observer but fails unobserved at batch scale with
+c0000028, previously seen on the worksheet candidate. These are excluded or
+diagnostic evidence, not product RED, desktop error5, repaired behavior or full
+reusable acceptance. No control contract or runtime package changes in this
+checkpoint. Exact records and limitations are in the Assignment evidence file.
 
 Architecture v4.11 D18's catalog22 controls PRODUCTION_PROCESS_WORKSHEET_SEND,
 PRODUCTION_PROCESS_WORKSHEET_ADD_ITEM and PRODUCTION_PROCESS_WORKSHEET_RETRIEVE

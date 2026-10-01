@@ -1,7 +1,7 @@
 # Production form tracking coverage audit
 
-Version 1.110. Last reviewed:2026-10-01 UTC, Assignment worksheet and Settings regressions;
-broader acceptance pending.
+Version 1.111. Last reviewed:2026-10-01 UTC, Assignment release-chain regression;
+reusable acceptance unresolved.
 
 Catalog23 now defines118 global controls and observes55/68 constructed Production
 buttons. Seven Ingredients Assignment buttons and two deliberate list Click
@@ -44,8 +44,8 @@ evidence. REQUESTED alone cannot conclude. Five compiles, preservation, unassist
 closure and delayed audit also pass.
 Existing worksheet paths139 retain exact prior order with five compiles,
 preservation, unassisted closure, delayed audit and six reviewed captures,
-including the visible four-step command conclusion. Layout, current
-shared-observation/live-role/full-chain/reusable
+including the visible four-step command conclusion. Remaining
+shared-observation/reusable
 regressions and human acceptance are still required on this candidate. The prior
 worksheet candidate's passes below do not establish those new-candidate gates.
 Exact evidence: `tests/integration/plan022_slice4be_production_assignment_results.md`.
@@ -58,6 +58,22 @@ Assignment older-policy exclusions. Five compiles, preservation, unassisted
 closure and delayed audit pass. Seven reviewed Settings captures have viewport
 limits; an exited Excel entry cleared without intervention. No shutdown repair,
 new control registration or human acceptance is claimed.
+
+Existing packaged layout, smoke86, chain32, live roles48 and warehouse creation15
+retain exact prior checks/geometry on this candidate, with normal closure,
+preservation and clean delayed Excel audits. Layout covers pages0-4, two actual
+sizes1110x800/1350x980; the900x700 request clamps. Three empty Run List captures
+do not prove populated workflow or Settings page5 acceptance.
+
+Full reusable171/replay37 remain open. The original edit/export callback fails
+with RPC800706BE/ntdll c00000ff; explicitly quitting an empty recovery instance
+makes cleanup assisted. A narrower diagnostic passes. A bounded full prefix
+passes with a native observer but fails without it at batch scale with c0000028,
+previously seen on the worksheet candidate. No shared root cause or repair is
+established. Failed/observed diagnostic runs do not establish full acceptance;
+exit0 alone is insufficient. These failures are not desktop error5. Runtime and
+coverage counts remain unchanged. See the Assignment evidence file for exact
+records and exclusions; do not repeat full runs merely to obtain a pass.
 
 Prior worksheet checkpoint, `validation-process-worksheet-activity-03`: catalog22
 had109 IDs and48/68 observed buttons. Its three worksheet handlers passed595/595;
