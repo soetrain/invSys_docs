@@ -1,9 +1,24 @@
 # invSys Form Controls v1
 
-**Version:** 1.392 (Run worksheet allocation RED; implementation pending)
+**Version:** 1.393 (Run Core catalog GREEN; form integration and RUN-UI-01 pending)
+
+Current unpromoted candidate `validation-production-run-catalog-01` implements
+headless Core catalog24 with127 definitions, exact outcomes/defaults, empty-reference
+rules and command-completion matching. Core RED492/272 becomes764/764 GREEN with
+all prior identities retained; older worksheet catalog regression retains188/188.
+The nine Run form handlers are not integrated. Constructed-button observation
+coverage remains55/68; worksheet loading/clearing/refresh, remaining read failures,
+paired paths and broader acceptance gates stay open. RUN-UI-01 below is a separate
+pending message proposal. The following RED records refer to the frozen catalog23
+baseline and do not describe the latest headless Core state.
+
+The new candidate also retains202/202 Settings and349/349 Ingredients Assignment
+checks in exact prior order, including five compiles, captured-context guards,
+preservation and delayed zero Excel audit. Broader gates and expanded/path evidence
+remain open on this candidate; prior catalog23 acceptance is preserved separately.
 
 Architecture D18's Run preparation/allocation refinement specifies catalog24's
-nine existing controls, with no runtime registration or layout change yet:
+nine existing controls, with Core registration but no form integration or layout change yet:
 
 | ControlId suffix (`PRODUCTION_RUN_`) | Caption | Surface | Class | Local positive |
 |---|---|---|---|---|
@@ -92,6 +107,14 @@ cases falsely display success; the other112 failures are missing tracking facts.
 Forty-two shared GREEN checks, five compiles, preservation, normal closure and
 delayed zero Excel audit pass. Runtime/static metrics stay unchanged;366 repository
 scripts parse. Worksheet load/clear/refresh and remaining read/path gates stay open.
+
+Pending RUN-UI-01: the four worksheet unavailable-surface message checks exceed
+the current "keep existing operator messages" instruction. They are proposed,
+not approved, acceptance checks; the112 tracking failures remain approved RED.
+Proposed List/Tree Apply text when a required local staging table/column is missing:
+"Allocation could not finish: the required local staging table or columns are
+unavailable." Keep FAILED observation semantics, no repair and no rollback claim.
+Architecture D18 records the exact exception; implementation awaits approval.
 
 Architecture v4.11 D18's Ingredients Assignment refinement is implemented in
 unpromoted `validation-production-assignment-01`: catalog23 adds seven buttons

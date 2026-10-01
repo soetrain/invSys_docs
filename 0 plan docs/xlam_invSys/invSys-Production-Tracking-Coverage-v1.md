@@ -1,11 +1,22 @@
 # Production form tracking coverage audit
 
-Version 1.132. Last reviewed:2026-10-01 UTC, Run worksheet allocation RED verified;
-runtime registration and reusable acceptance unresolved.
+Version 1.133. Last reviewed:2026-10-01 UTC, Run Core catalog GREEN verified;
+form integration, RUN-UI-01 and reusable acceptance unresolved.
+
+The unpromoted `validation-production-run-catalog-01` candidate now defines127
+controls in Core catalog24. Focused764/764 GREEN preserves the RED identities;
+older worksheet catalog regression retains188/188. Form observation coverage stays
+55/68 constructed buttons. Core rules alone do not prove the nine handlers emit
+correct observations or supply independent paths. The RED history below describes
+the frozen catalog23 baseline. RUN-UI-01 remains a pending presentation exception.
+
+Settings202/202 and Ingredients Assignment349/349 also retain exact prior order on
+the new candidate, with five compiles, preservation, normal cleanup and delayed
+zero Excel audit. Broader/expanded/path gates remain open on this candidate.
 
 D18 now normatively refines the nine controls in owner audit8 as catalog24,
-PRODUCTION_RUN_LOCAL. Controls1.392 lists their exact mappings. No new runtime
-registration or acceptance is claimed. Actual-handler RED begins with Tree
+PRODUCTION_RUN_LOCAL. Controls1.393 lists their exact mappings. No new form
+integration or acceptance is claimed. Actual-handler RED begins with Tree
 Expand/Collapse; seven remaining local/read/allocation controls and the full
 context/policy/failure matrix remain required before this group can pass.
 
@@ -69,7 +80,10 @@ columns/formula and exact identity. Four unavailable-surface cases falsely displ
 success;112 tracking facts are missing. Forty-two shared GREEN checks, five
 compiles, preservation, normal closure and delayed zero Excel audit pass. Runtime
 metrics are unchanged;366 scripts parse. Worksheet load/clear/refresh and remaining
-read/path gates stay open; preserve272 through GREEN.
+read/path gates stay open. Preserve268 approved checks through GREEN; the four
+unavailable-surface presentation assertions propose RUN-UI-01, pending approval
+under Architecture D18's existing-message preservation rule. They are distinct
+from the112 missing observation facts required by the approved contract.
 
 Catalog23 now defines118 global controls and observes55/68 constructed Production
 buttons. Seven Ingredients Assignment buttons and two deliberate list Click

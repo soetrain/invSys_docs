@@ -517,7 +517,7 @@ workbook columns. Publication, original recording order and How-To/Diagnostic/
 Compare both require separate evidence. This records discovered controls within
 the approved contract; it does not amend authority, permissions or saved semantics.
 
-**4be.1 Run preparation and allocation observations (discovered-control refinement; implementation pending):**
+**4be.1 Run preparation and allocation observations (discovered-control refinement; Core catalog implemented, form integration pending):**
 Under approved D18 semantic inheritance, catalog24 shall add these nine existing
 controls, preserving catalogs1-23 exactly. OwnerId is `PRODUCTION_RUN_LOCAL`, role
 Production, capability PROD_POST with its existing ADMIN_MAINT alternative.
@@ -594,6 +594,19 @@ capability refusal is DENIED/Blocked/Unchanged before owner reads or mutation.
 False owner load/read results, unavailable required owner surfaces and exceptions
 are FAILED/Error/Unknown; no partial-state rollback is asserted. All source-event
 references are empty: these nine controls do not submit inventory or Designs events.
+
+**Pending decision RUN-UI-01 (not approved; do not implement yet):** Packaged
+worksheet allocation tests show that List/Tree Apply can display "Acceptable
+inventory allocation updated" when its required local table or QUANTITY column
+is unavailable. The FAILED observation requirement above does not itself waive
+the instruction below to keep existing operator messages. Proposed narrow
+exception: in the non-reusable Apply branch, missing required local staging
+tables/columns display "Allocation could not finish: the required local staging
+table or columns are unavailable." Record FAILED under the existing observation
+rules; do not repair surfaces or claim rollback. All other current messages and
+ordinary branch semantics remain governed by the existing contract. Approval of
+this decision is required before changing that operator message. Four worksheet
+test assertions currently express this proposed exception, not an approved gate.
 
 Each deliberate handler entry creates one attempt/result pair with its own
 ActivityId. Helpers, loading, programmatic selection/mirroring, nested callbacks

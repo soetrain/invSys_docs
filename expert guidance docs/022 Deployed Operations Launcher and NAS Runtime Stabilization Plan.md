@@ -2,6 +2,26 @@
 
 **Status:** Current corrective implementation plan
 
+Current Slice4be state,2026-10-01 UTC: unpromoted
+`deploy/validation-production-run-catalog-01` implements headless Core catalog24
+and127 control definitions. Exact outcomes/defaults, empty-reference restrictions
+and positive-only completion matching pass764/764, preserving all prior RED
+identities; older worksheet catalog regression retains188/188. The five-package
+build and independent cold-start compile pass with prebuild settings capture,
+restoration and preservation of the frozen catalog23 candidate. Static growth is
+one module/four procedures/97 lines; dynamic calls and duplicates stay9/45/190,
+all28 oversized caps do not grow, and all three schemas validate. The Run form
+handlers remain unintegrated;55/68 constructed buttons are observed. Keep all
+actual-handler baselines, remaining owner-branch tests, independent paths and full
+release/visible acceptance gates open. RUN-UI-01 below is pending approval and is
+independent of Core. The following entries retain the frozen catalog23 RED history.
+
+The Core candidate also preserves202/202 Settings and349/349 Ingredients Assignment
+checks in exact prior order. Five compiles, captured-context guards, candidate
+pins, saved/local/settings preservation, unassisted closure and delayed zero Excel
+audit pass for each. Expanded/path and remaining shared/full-release gates stay
+open on this candidate; do not carry forward catalog23 results as new-run evidence.
+
 Next Slice4be bounded group,2026-10-01: Architecture v4.11 D18 now specifies nine
 Run preparation/allocation observations under its approved semantic-inheritance
 rule. Catalog24 is specified, not implemented: Scale/Clear/Load, the two Refresh
@@ -93,6 +113,13 @@ closure and delayed zero Excel audit pass. Runtime/static metrics remain unchang
 clear/refresh and remaining source-failure/path evidence stay open. The protected
 headless Core catalog/outcome/reference/terminal implementation can proceed before
 the remaining form-owner changes; that alone will not complete the nine-control gate.
+
+RUN-UI-01 is pending approval in Architecture D18. Correction to the worksheet
+failure classification above:112 missing tracking assertions protect the approved
+contract; four unavailable-surface message assertions propose an exception to
+"keep existing operator messages." They are not approved behavior yet. The exact
+proposed failure text is in Architecture D18 and Controls; do not change those
+messages without approval. Core catalog work is independent and may continue.
 
 Active Slice4be continuation,2026-10-01 UTC: Ingredients Assignment implements
 Architecture v4.11 D18's approved discovered-control refinement in unpromoted
