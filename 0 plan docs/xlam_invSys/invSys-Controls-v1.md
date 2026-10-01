@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.376 (Assignment design-reading regressions; reusable acceptance unresolved)
+**Version:** 1.377 (Assignment Recipe structure regressions; reusable acceptance unresolved)
 
 Architecture v4.11 D18's Ingredients Assignment refinement is implemented in
 unpromoted `validation-production-assignment-01`: catalog23 adds seven buttons
@@ -115,6 +115,19 @@ takes additional time after the functional result. Seven reviewed path captures
 show all five authored steps and the scrolled five-match conclusion with no extra
 actions. Initial observed views and long Event Detail text have viewport limits.
 No runtime change, new control coverage or human acceptance is claimed.
+
+Recipe structure786, released-data55 and Action Paths109 retain exact prior
+ordered checks and five compiles each. The approved seven-field connection-write
+behavior, repeated unchanged Update, guards, optional tracking and saved authority
+pass. Separate five-action recordings retain publication, Event Detail, authored
+expectations and all three views. Each gate closes unassisted, preserves settings/
+packages and passes delayed Excel audits; path cleanup takes additional time.
+Three synthetic, two released-data and seven path captures were reviewed. The
+scrolled conclusion shows five matches and zero extras. Recipe Remove retains the
+preceding Add status; Event Detail records its exact STAGED fact. Viewport/default
+editor limits do not establish every stored field, full layout or human acceptance.
+Runtime, static metrics and control coverage are unchanged; exact evidence is in
+the Assignment record.
 
 Full reusable171/replay37 remain open after native Excel failures. The original
 edit/export callback fails with RPC800706BE/ntdll c00000ff and requires explicit
