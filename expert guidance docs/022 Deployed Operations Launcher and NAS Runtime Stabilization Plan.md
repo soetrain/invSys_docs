@@ -2,6 +2,20 @@
 
 **Status:** Current corrective implementation plan
 
+Permission wording correction,2026-10-01 UTC: unpromoted activity03 restores the
+earlier initial Check In denial text at the typed DENIED boundary, preserving
+the observation contract and optional notice. Actual-handler RED226/3 becomes
+229/229 GREEN, retaining all193 earlier checks and testing both staging modes plus
+denial during tracking failure. Two RED/three GREEN captures were reviewed. Cold
+startup/five compiles, one changed component/282 preserved, static ratchets with
+three added runtime lines, smoke86 and layout18 pass; six layout images exactly
+match reviewed activity02 captures. Full chain32/live-role48/Create Warehouse15
+and owner/interruption404 also pass in exact prior order with preservation,
+unassisted shutdown and delayed zero audits. Three further owner captures were
+reviewed. Earlier native-closure212/routed157 evidence remains activity02; the
+correction changes only initial-DENIED presentation. Controls1.418/coverage1.158
+keep wider policy/store-fault, Action Path and human/NAS acceptance explicitly open.
+
 Check In interruption checkpoint,2026-10-01 UTC: tests on unchanged activity02
 pass native closure212/212 after RED149/63 and owner/interruption404/404. Exact
 journal assertions replace only9/18 obsolete no-record assertions; all140/260
@@ -14,12 +28,11 @@ native closures pass. Static02 preserves all
 runtime counts and passes three schemas/374 parses. Controls1.417/coverage1.157
 remain acceptance records, not release approval.
 
-Newly discovered CHECK-IN-PERMISSION-WORDING-01 follows D18's existing requirement
-to preserve operator wording: initial permission denial changed when Check In
-began using shared Begin. Existing substring checks miss the difference. Next add
-actual-handler exact-message RED and retain DENIED/journal facts, then restore
-`Production permission changed. Reopen Production before continuing.` without
-weakening the action/context guards. No architecture exception is approved.
+CHECK-IN-PERMISSION-WORDING-01 followed D18's existing wording-preservation rule:
+shared Begin changed the initial message, which substring checks missed. The
+newer checkpoint above records exact-message RED/GREEN and restoration of
+`Production permission changed. Reopen Production before continuing.` while
+retaining DENIED/journal facts and action/context guards. No exception is introduced.
 
 Check In observation integration,2026-10-01 UTC: unpromoted activity02 implements
 catalog25 and current-attempt owner outcomes through the actual click handler.

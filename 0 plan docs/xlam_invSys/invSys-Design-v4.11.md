@@ -531,13 +531,19 @@ All prior non-observation checks remain ordered and passing. Sign-out leaves onl
 REQUESTED; same-context permission/workbook loss records REQUESTED/FAILED. Routed
 observation verification passes157 checks, retaining101 prior non-observation
 checks, including two more native closures. This changes no normative behavior.
-Source review identifies CHECK-IN-PERMISSION-WORDING-01: replacing the temporary
-validation binding with the shared Begin changed initial denial wording from
-`Production permission changed. Reopen Production before continuing.` to
-`Production permission is required; the draft was not changed.` Existing substring
-tests do not protect the required wording preservation. Add exact-message
-actual-handler RED, then restore the earlier wording while retaining DENIED and
-the observation guards. This is an open defect, not an approved wording exception.
+CHECK-IN-PERMISSION-WORDING-01 is corrected in unpromoted activity03. Replacing
+the temporary validation binding with shared Begin had changed initial denial
+wording; exact-message actual-handler RED226/3 becomes229/229 GREEN. The wrapper
+restores `Production permission changed. Reopen Production before continuing.`
+only after typed DENIED, retaining denied records, owner non-entry, state/guards
+and optional tracking notices. No outcome is inferred from text. Cold startup/five
+compiles, one changed compiled component/282 preserved, static ratchets, smoke86
+and layout18 pass. Full chain32, live-role48, Create Warehouse15 and owner/
+interruption404 also pass on activity03 with exact prior results, preservation,
+unassisted shutdown and delayed zero audits. The earlier212 native-closure/157
+routed gates remain activity02 evidence; this correction changes only initial
+DENIED presentation. Wider policy/fault and Action Path acceptance remain open.
+This restores the established contract; no wording exception is introduced.
 Recording/publication/independent reader and wider acceptance remain pending.
 
 - One deliberate handler entry produces a REQUESTED/result pair when collection

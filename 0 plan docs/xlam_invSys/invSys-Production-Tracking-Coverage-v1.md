@@ -1,7 +1,20 @@
 # Production form tracking coverage audit
 
-Version 1.157. Last reviewed:2026-10-01 UTC, Check In interruption observations;
+Version 1.158. Last reviewed:2026-10-01 UTC, Check In permission wording restored;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Unpromoted activity03 corrects CHECK-IN-PERMISSION-WORDING-01: exact-message
+actual-handler RED226/3 becomes229/229 GREEN with all193 earlier checks retained.
+Reusable/worksheet denial records use the captured reader actor; optional tracking
+failure retains refusal plus notice, owner non-entry and unchanged state. Five
+RED/GREEN captures were reviewed. Cold startup/five compiles, one changed compiled
+component/282 preserved, static290/6175/135522 with three added lines, smoke86 and
+layout18 pass; six layout PNGs match reviewed activity02 images. Full chain32,
+live-role48, Create Warehouse15 and owner/interruption404 pass on activity03 with
+exact prior results, preservation, unassisted shutdown and delayed zero audits.
+Three further owner captures were reviewed. The next native-closure212/routed157
+record remains explicitly activity02 evidence; broader policy/store-fault,
+recording/publication/independent readers and human/NAS acceptance remain open.
 
 Native closure212/212 after RED149/63 and owner/interruption404/404 now verify
 captured-context records on unchanged activity02, preserving140/260 respective
@@ -11,12 +24,11 @@ Routed157/157 retains101 prior non-observation checks, replacing seven obsolete
 observations; it adds two sign-out, two permission-loss and two native-closure
 boundaries plus positive staging. Seven captures were reviewed; long-value
 acceptance remains open. Static02 retains all runtime metrics with3 schemas/374
-parses. Source review exposes CHECK-IN-PERMISSION-WORDING-01: initial denial uses
-shared Begin's wording, while D18 requires preserving the earlier Check In text.
-The current substring assertion is insufficient. Exact-message actual-handler
-RED and a preserving correction remain required; no exception is approved.
+parses. Its initial denial substring assertion did not protect exact wording;
+the newer actual-handler tests above verify the required restoration. No wording
+exception is introduced.
 
-Current unpromoted activity02: catalog25,64/68 buttons wired. Check In's focused193
+Earlier unpromoted activity02: catalog25,64/68 buttons wired. Check In's focused193
 checks pass after RED127/60 and warning RED192/1; all prior127 catalog definitions are preserved, while
 only STAGED establishes local CommandCompleted and source references remain empty.
 Typed owner facts distinguish this attempt from prior checked state. Cold startup,

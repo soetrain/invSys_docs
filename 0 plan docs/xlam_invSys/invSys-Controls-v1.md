@@ -1,6 +1,20 @@
 # invSys Form Controls v1
 
-**Version:** 1.417 (Check In interruption observations; broader acceptance pending)
+**Version:** 1.418 (Check In permission wording restored; broader acceptance pending)
+
+Current unpromoted activity03 corrects CHECK-IN-PERMISSION-WORDING-01 through the
+actual Check In handler: RED226/3 becomes229/229 GREEN, retaining all193 earlier
+checks. Both staging modes preserve the original permission message and record
+REQUESTED/DENIED under the captured reader actor. Tracking unavailability retains
+denial plus notice with no owner entry or false records. Two RED and three GREEN
+captures were reviewed, including the prior successful Check In plus warning.
+Cold startup/five compiles, one changed component/282 preserved, static
+290/6175/135522 with only three added lines, smoke86 and layout18 pass. The six
+layout PNGs match reviewed activity02 images exactly. Full chain32, live-role48,
+Create Warehouse15 and owner/interruption404 also pass with exact prior results,
+preservation, unassisted shutdown and delayed zero audits. Three further owner
+captures were reviewed. Earlier212 native-closure/157 routed evidence below is
+activity02; broader policy/store-fault, Action Path and human acceptance stay open.
 
 Current test expansion: native closure212/212 after RED149/63 and owner/interruption
 baseline404/404, retaining all140/260 respective prior non-observation checks.
@@ -11,12 +25,8 @@ and delayed zero audits pass. Routed157/157 retains101 prior non-observation che
 while replacing seven obsolete observations. It covers successful routed staging,
 both source-read interruptions and two additional native closures. Seven total
 captures were reviewed; long-value layout and human acceptance remain open.
-CHECK-IN-PERMISSION-WORDING-01 remains open: initial denial switched from the
-earlier `Production permission changed. Reopen Production before continuing.` to
-the shared Begin's `Production permission is required; the draft was not changed.`
-Existing substring tests miss this difference. Protect the exact earlier text
-through the actual handler, then restore it without changing DENIED semantics.
-This is required preservation, not an approved wording change.
+The former substring permission assertion missed the changed wording. The newer
+exact-message tests above protect its restoration without changing DENIED semantics.
 
 Unpromoted activity02 implements catalog25 `PRODUCTION_RUN_CHECK_IN` and its actual
 click-handler observation. The owner returns this attempt's explicit local outcome;
@@ -31,7 +41,7 @@ Smoke86 and layout18 requested page/size pairs pass; six empty-surface captures
 were individually reviewed. Static290/6175/135519,9/45 calls,190 duplicates and28
 non-growing caps pass, with three schemas/374 parses. The new behavior adds five
 net runtime lines and removes the superseded single-caller validation-only method.
-Remaining permission wording/policy/fault and recording/publication/reader gates,
+Remaining policy/fault and recording/publication/reader gates,
 populated/long-value and human acceptance remain open. RUN-SCALE-01/RUN-UI-01 remain
 pending approval. Expanded owner baselines retain owner/no-redirection protections
 while replacing obsolete no-record expectations explicitly.
