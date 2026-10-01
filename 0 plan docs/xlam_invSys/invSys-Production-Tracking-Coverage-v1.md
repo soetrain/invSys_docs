@@ -1,7 +1,21 @@
 # Production form tracking coverage audit
 
-Version 1.146. Last reviewed:2026-10-01 UTC, List/Tree Apply focused GREEN;
+Version 1.147. Last reviewed:2026-10-01 UTC, independent Apply paths GREEN;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Independent reusable Apply paths pass104/104 on unchanged allocate01 after
+refresh01 RED47/one missing pair. Two separate recordings invoke List Apply,
+explicit List stock reselection and Tree Apply without hidden owner restaging.
+Owners, original publication, selected Detail, explicit guide intent and independent
+reader How-To/Diagnostic/Compare pass. Two ordered matches/no extras conclude
+local commands; inventory application stays incomplete. All48 RED relative-order
+identities/47 passes and42 shared GREEN checks survive. Seven captures reviewed,
+five compiles, preservation, normal closure and delayed zero audits pass; static
+metrics remain unchanged. The empty reusable Tree and overlapping headers remain
+visible limitations, not acceptance. Shared Refresh paths retain167/167 in exact
+prior order, with five compiles, preservation, normal closure and delayed zero
+audit. Reviewed comparison/scroll captures retain five matches, no extras and the
+local-only conclusion. Remaining coverage and broader acceptance stay open.
 
 Unpromoted allocate01 integrates List/Tree Apply under the existing D18 contract,
 bringing wiring to63/68 and eight of nine catalog24 handlers. The worksheet gate
@@ -19,7 +33,7 @@ caps; three schemas and368 parses pass. Run-local503 is445 PASS/58 known Scale
 FAIL, retaining prior ordered identities/passes and improving156 Apply checks.
 All33 owner cases,42 shared checks and seven actual native workbook-close handlers
 pass; five compiles, preservation, normal closure and delayed zero audit pass.
-Independent paths, layout and broader acceptance remain pending; full reusable171/
+Independent Apply paths are recorded above; layout and broader acceptance remain pending; full reusable171/
 replay37 is a separate unresolved gate.
 
 Expanded read-return gate:172/64 RED becomes232/4 on unchanged allocate01;

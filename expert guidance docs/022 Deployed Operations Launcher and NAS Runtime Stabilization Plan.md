@@ -2,6 +2,25 @@
 
 **Status:** Current corrective implementation plan
 
+Independent Apply path checkpoint,2026-10-01 UTC: under unchanged D18, frozen
+refresh01 RED47/one missing pair becomes104/104 on unchanged allocate01. Separate
+guide-source and observed recordings each invoke List Apply, explicitly reselect
+the retained stock row in List and then invoke Tree Apply. The selection preserves
+owning allocation; no hidden owner restaging occurs between clicks. Original
+publication, selected Detail, explicit guide intent and independent-reader How-To/
+Diagnostic/Compare all pass. Two ordered matches with no extras conclude local
+commands only; SourceEventsApplied remains incomplete. Prior48 RED relative-order
+identities/47 passes and42 shared GREEN checks survive. Seven reviewed captures,
+five compiles, preservation, normal closure and delayed zero audits pass. Static
+retains289/6171/135434,9/45 calls,190 duplicates,28 non-growing caps, three schemas
+and368 parses. This tests reusable Apply observations, not populated Tree or human
+acceptance: the experimental Tree remains empty for this fixture with overlapping
+headers. Shared Refresh paths retain167/167 in exact prior order on this candidate,
+with five compiles, preservation, normal closure and delayed zero audit. Reviewed
+comparison/scroll captures retain five matches, zero extras and the local-only
+conclusion. Remaining coverage, layout, broader release and human acceptance stay
+open. No runtime or normative change.
+
 Apply integration checkpoint,2026-10-01 UTC: unchanged D18 now has eight handlers
 integrated in unpromoted allocate01,63/68 constructed buttons. List/Tree Apply
 uses captured action guards and actual owner results; worksheet precedence,
@@ -21,7 +40,7 @@ non-growing caps pass, with three schemas and368 parses. Run-local503 retains al
 prior ordered identities/passes at445 PASS/58 known Scale FAIL, improving156 Apply
 checks. All33 owner cases,42 shared checks and seven actual native workbook-close
 handlers pass; five compiles, preservation, normal closure and delayed zero audit
-pass. Independent paths, layout, broad release and human acceptance remain open;
+pass. Independent Apply paths are recorded above; layout, broad release and human acceptance remain open;
 the separate full reusable171/replay37 gate is unresolved.
 RUN-SCALE-01 and RUN-UI-01 require approval before their proposed behavior changes.
 

@@ -1,6 +1,22 @@
 # invSys Form Controls v1
 
-**Version:** 1.406 (List/Tree Apply focused observations GREEN; broader gates pending)
+**Version:** 1.407 (List/Tree Apply independent paths GREEN; broader gates pending)
+
+Independent reusable Apply paths pass104/104 on unchanged allocate01 after
+refresh01 RED47 PASS/one missing original pair. Separate guide-source and observed
+recordings each use List Apply, explicit List stock reselection, then Tree Apply;
+reselection preserves the owner and no hidden restaging occurs between buttons.
+Actual owners, publication, selected Event Detail, explicit guide intent and the
+independent reader's How-To/Diagnostic/Compare views pass. Two ordered matches
+with no extras conclude local commands only; inventory application is incomplete.
+All48 RED relative-order identities/47 passes and42 shared GREEN checks survive.
+Seven captures reviewed, five compiles, preservation, normal closure, delayed zero
+audits and unchanged static metrics pass. Tree is visibly empty for the reusable
+fixture and retains overlapping headers; this does not establish populated Tree,
+long-scroll or human acceptance. Shared Refresh paths retain167/167 in exact prior
+order on this candidate, with five compiles, preservation, normal closure and a
+delayed zero audit. Reviewed comparison/scroll captures retain five matches, no
+extras and the local-only conclusion. Remaining release acceptance stays open.
 
 Unpromoted allocate01 integrates the two existing Apply handlers under unchanged
 D18: eight Run handlers,63/68 constructed buttons. Worksheet checks retain all
@@ -18,8 +34,9 @@ non-growing caps; three schemas and368 parses pass. Run-local503 passes445 with5
 known Scale failures, preserving every prior ordered identity/pass and improving
 156 Apply checks. All33 owner cases,42 shared checks and seven actual native
 workbook-close handlers pass; five compiles, preservation, unassisted closure and
-delayed zero audit pass. Independent paths/layout and broader acceptance remain
-pending. RUN-SCALE-01 is unapproved; this is not full reusable171/replay37 acceptance.
+delayed zero audit pass. Independent Apply paths are recorded above; layout and
+broader acceptance remain pending. RUN-SCALE-01 is unapproved; this is not full
+reusable171/replay37 acceptance.
 
 Expanded conversion/later-inventory interruption coverage moves172 PASS/64 FAIL
 to232 PASS/4 known Scale FAIL on unchanged allocate01. All146 original relative-
