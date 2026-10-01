@@ -517,6 +517,119 @@ workbook columns. Publication, original recording order and How-To/Diagnostic/
 Compare both require separate evidence. This records discovered controls within
 the approved contract; it does not amend authority, permissions or saved semantics.
 
+**4be.1 Ingredients Assignment observations (discovered-control refinement; implementation pending):**
+Under the approved D18 semantic-inheritance, comprehensive-coverage and owner-fact
+rules, catalog23 adds the following nine existing controls, preserving catalogs1-22
+exactly. OwnerId is `PRODUCTION_ASSIGNMENT`, role Production, surface Operations >
+Production > Ingredients Assignment, with PROD_POST and its existing ADMIN_MAINT
+alternative. This refines observations of existing actions; it does not change
+their editing, read, validation, save or inventory-allocation algorithms.
+
+| ControlId | Existing caption/label | Actual handler | Class | Positive local outcome |
+|---|---|---|---|---|
+| `PRODUCTION_ASSIGNMENT_REFRESH` | Refresh | `mBtnAssignRefresh_Click` | Command | REFRESHED |
+| `PRODUCTION_ASSIGNMENT_PROCESS` | Select Process | `mBtnAssignRecipe_Click` | Command | PRESENTED |
+| `PRODUCTION_ASSIGNMENT_REQUIREMENT` | Select Requirement | `mBtnAssignIngredient_Click` | Command | SELECTED |
+| `PRODUCTION_ASSIGNMENT_ADD` | Add Acceptable | `mBtnAssignAdd_Click` | Command | STAGED |
+| `PRODUCTION_ASSIGNMENT_REMOVE` | Remove Row | `mBtnAssignRemove_Click` | Command | STAGED |
+| `PRODUCTION_ASSIGNMENT_CLEAR` | Clear | `mBtnAssignClear_Click` | Command | STAGED |
+| `PRODUCTION_ASSIGNMENT_SAVE` | Save Alternatives | `mBtnAssignSave_Click` | Command | CONFIRMED |
+| `PRODUCTION_ASSIGNMENT_PROCESS_SELECT` | Processes | `mLstAssignRecipes_Click` | Navigation | PRESENTED |
+| `PRODUCTION_ASSIGNMENT_REQUIREMENT_SELECT` | Ingredient Requirements | `mLstAssignIngredients_Click` | Navigation | SELECTED |
+
+The two Navigation entries identify deliberate list selections and follow the
+existing optional navigation policy/defaults. Navigation does not imply absence
+of local draft effects: Process selection replaces shared local assignment data.
+Each explicit button or list action receives its own ActivityId. Calling its
+shared helper, initialization, list rebuilding, mirrored/programmatic selections
+and nested callbacks are not additional user actions. Search typing creates no
+per-keystroke observations. Other selectable lists and page selection retain
+separate pending coverage; these nine entries do not establish comprehensive UAT.
+
+Preserve the existing local boundaries and limitations:
+
+- Refresh resets the inventory cache, refreshes the shared four Design reads/five
+  displayed lists, clears visible requirements/allowed items and reloads inventory.
+  It does not itself replace the alternatives collection. REFRESHED means that
+  local routine returned; bridge failure and valid empty results may both yield
+  Empty. It certifies neither source availability/freshness/completeness nor empty
+  authoritative inventory. Preserve existing read paths and status wording.
+- Select Process and Processes selection read the selected exact Process version.
+  Parse failure returns before clearing; a parsed array replaces the local
+  requirements/alternatives and refreshes allowed items, including the current
+  valid-empty-array behavior. PRESENTED means that local operation finished,
+  not that a complete, released or production-valid Process was established.
+- Select Requirement and its list selection refresh the allowed-item view for
+  the selected requirement. SELECTED describes that view operation only.
+- Add Acceptable requires the selected requirement, selected inventory entry and
+  its ITEM_CODE, and retains case-insensitive requirement/code duplicate rejection.
+  Alternatives identify acceptable item types, not allocated inventory entities;
+  no System_Key is generated, replaced or used as an alternative identity.
+- Remove Row removes one matching local requirement/code pair. Missing selection
+  or no matching alternative is REJECTED, with the existing quiet no-op retained;
+  recording rejection must not invent a new success or warning status on the form.
+- Clear empties both visible lists and replaces the shared alternatives collection;
+  completing that operation is STAGED even when already empty. Add/Remove/Clear
+  affect the shared Process draft, not an isolated worksheet or saved definition.
+- Save Alternatives retains its clone -> load selected Process as next editable
+  version -> restore alternatives -> validate -> PROCESS_SAVE sequence. Loading
+  may replace unsaved Process Designer contents before later validation or saving
+  fails. Preserve version calculation, normalization and payload construction.
+  Rejection/failure must not claim local restoration or rollback. Only the existing
+  Designs owner may submit/process the save; no inventory event is submitted.
+
+EventCode is ControlId + `_` + OutcomeCode. REQUESTED is Info/Unknown before
+permission and validation. The six local button outcomes and the two navigation
+outcomes above are Info/Unchanged with respect to saved authority. REJECTED is
+Warning/Unchanged for an established missing-selection, duplicate or validation
+refusal; local preparation before Save validation may remain. A false load result
+or exception is FAILED/Error/Unknown. DENIED is Blocked/Unchanged before reads or
+mutation. Keep existing operator status/error presentation; append fixed optional
+tracking-unavailable guidance without persisting raw errors, values or status text.
+
+Save uses the existing lifecycle distinctions: CONFIRMED/Info/Unknown requires
+the owning submission/processing/projection/refresh command to finish successfully;
+PENDING/Notice/Unknown means submission was confirmed but that command did not
+finish successfully; FAILED/Error/Unknown retains any actual uncertain write
+attempt. Neither CONFIRMED nor PENDING proves Domain application. Only Save accepts
+source references, using the existing four-field Designs envelope, exact owning
+EventId, captured warehouse and actual Submitted/Unknown state. CONFIRMED/PENDING
+require a nonempty Submitted reference. FAILED may retain Submitted or Unknown
+only after the owner reached the corresponding write boundary; never record an
+unused pre-write generated ID or parse an ID from report text. All other controls
+and Save REQUESTED/REJECTED/DENIED have empty references. Inventory references are
+invalid. Typed local owner facts supplement the existing return/status behavior.
+
+Before reads, draft replacement, validation or submission, require the original live
+captured workbook, unchanged warehouse/session and current capability. Recheck after
+yielding boundaries and before subsequent mutation/submission/refresh. Stale,
+signed-out or closed binding refuses without retargeting or recording under a
+replacement context. Loading/re-entrancy guards must preserve the existing action
+once while suppressing cascaded observations. Disabled, excluded older-policy or
+unavailable optional tracking cannot block otherwise authorized work. Store only
+fixed redacted observations: no entered text, selected IDs/rows, design/version or
+component identities, item codes, System_Keys, quantities, UOMs, paths or payloads;
+Save's permitted exact source references remain the sole identity exception.
+
+Only each exact control's declared positive outcome establishes CommandCompleted;
+the two navigation controls use the same explicit owner map, not a generic
+navigation-success inference. REQUESTED/REJECTED/DENIED/PENDING/FAILED do not
+conclude. SourceEventsApplied for Save requires every exact referenced event in
+complete available published Designs evidence under the lifecycle rules above;
+submission, matching current status or processor totals are insufficient. The other
+eight controls cannot establish SourceEventsApplied from empty references.
+
+D13 must exercise all nine packaged entry handlers, explicit versus cascaded input,
+real released definitions and saved new draft versions, valid-empty/malformed reads,
+duplicate/no-selection/no-match/empty-clear behavior, preserved shared draft effects,
+partial failure, confirmed/pending/uncertain submission facts, every binding guard,
+optional policy/failure behavior, redaction and immutable older records. Separate
+recordings, publication, exact Event Detail, authored intent and independent-reader
+How-To/Diagnostic/Compare evidence must distinguish local completion from exact
+Designs application. Compile/layout/static/live-role/full-chain/reusable regressions
+remain required. This is discovery within approved D18; changing the preserved
+algorithms requires a separate architecture decision before implementation.
+
 **4be.1 Production designer load/refresh observations (discovered-control refinement; acceptance pending):**
 Under approved D18 semantic inheritance, catalog19 adds these existing controls,
 preserving catalogs1-18 exactly. This specifies observations of existing local

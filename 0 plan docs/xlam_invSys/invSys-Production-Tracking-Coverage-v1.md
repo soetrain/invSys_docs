@@ -1,6 +1,21 @@
 # Production form tracking coverage audit
 
-Version 1.103. Last reviewed: 2026-10-01 UTC, worksheet UOM regressions GREEN; comprehensive coverage pending.
+Version 1.104. Last reviewed: 2026-10-01 UTC, Ingredients Assignment initial packaged RED; implementation pending.
+
+The next group is Architecture v4.11 D18's Ingredients Assignment refinement:
+seven constructed buttons plus two deliberate list Click handlers, catalog23.
+Controls8.3 records the exact nine mappings. Existing algorithms are preserved;
+the observation definition follows approved semantic inheritance. Initial packaged
+RED349 is103 PASS/246 FAIL: all42 shared and nine existing-action behavior checks
+pass; failures are catalog11, observations168 and context/re-entrancy67. Five compiles,
+normal cleanup, preservation and delayed audit pass. Two fixture failures are
+excluded. Complete owner-submission/failure, Save guard, denial, nested-entry and
+optional/navigation-policy tests before runtime implementation. Static retains
+all runtime metrics and350 valid script parses. Exact evidence:
+`tests/integration/plan022_slice4be_production_assignment_results.md`.
+Runtime counts below therefore stay unchanged;
+do not count specification or source audit as observed controls. The two selection
+handlers remain in the pending nonbutton count until verified implementation.
 
 Catalog22 now defines109 global controls and observes48/68 constructed Production
 buttons. The three Process worksheet handlers are implemented and pass595/595

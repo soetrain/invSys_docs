@@ -2,6 +2,40 @@
 
 **Status:** Current corrective implementation plan
 
+Active Slice4be continuation,2026-10-01 UTC: Architecture v4.11 D18,
+"Ingredients Assignment observations," specifies catalog23's seven existing
+buttons and two deliberate list selections under the approved semantic-inheritance
+rule. No editing/read/save algorithm change or repeat approval is implied.
+Implementation and acceptance are pending; the frozen runtime remains catalog22
+with109 IDs and48/68 observed Production buttons. Do not report the proposed nine
+entries as runtime coverage. Their exact IDs, handlers, local outcomes and classes
+are maintained in the specification and controls8.3.
+
+The initial packaged actual-handler baseline is349 checks:103 PASS/246 FAIL,
+with all42 shared and all nine existing-action behavior checks passing. Failures
+are11 catalog,168 missing-observation and67 context/re-entrancy checks. Five compiles,
+normal cleanup, package/settings preservation and clean delayed audit pass. Two
+fixture failures remain excluded; runtime is unchanged. Static retains all metrics
+and350 valid script parses. Exact evidence:
+`tests/integration/plan022_slice4be_production_assignment_results.md`.
+
+Complete the protecting suite before runtime edits: exact owning submission/failure
+facts, Save's guards and post-yield loss, denial, nested entry, optional tracking and
+navigation policy still need focused RED. Preserve all349 baseline checks.
+Protect shared alternatives, exact Process/version selection, unchanged
+read/parse/next-version behavior, missing/duplicate/no-match refusals, empty Clear,
+pre-save local replacement, captured context/current capability, re-entrancy and
+optional tracking. Save must carry typed owning Designs submission facts through
+CONFIRMED/PENDING/FAILED; never infer application from a Boolean, status or count.
+Navigation policy applies to deliberate list selections while internal callbacks
+produce no additional actions. This is not permission to log search keystrokes.
+Then implement typed Operations coordination and explicit Core catalog/outcome/
+source/terminal mappings, preserving catalogs1-22, headless ownership, D12 packages,
+System_Key and unknown columns. Require focused GREEN, independent guide/recording
+publication and three-view evidence, exact Designs applied/awaiting/incomplete
+cases, build/five compiles, layout/static/live-role/full-chain/reusable regressions
+and visible review before claiming this group's acceptance. Commit/push checkpoints.
+
 Active Slice4be: catalog22's three Process worksheet observations are implemented
 under Architecture v4.11 D18 and pass the focused packaged gate595/595 on
 `deploy/validation-process-worksheet-activity-03`. Send/Add conclude STAGED after

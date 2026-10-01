@@ -1,6 +1,21 @@
 # invSys Form Controls v1
 
-**Version:** 1.363 (Worksheet UOM regressions GREEN; comprehensive acceptance pending)
+**Version:** 1.364 (Ingredients Assignment initial packaged RED; implementation pending)
+
+Next Slice4be group: Architecture v4.11 D18's Ingredients Assignment refinement
+specifies catalog23's seven buttons and two deliberate list selections (section8.3).
+This inherits the approved observation rules and preserves existing algorithms;
+packaged RED must precede implementation. Runtime remains catalog22/109 IDs with
+48/68 observed Production buttons. The nine specified entries are not yet
+registered or accepted and do not increase those coverage counts.
+
+Initial packaged Assignment RED is103 PASS/246 FAIL/349, with all42 shared checks
+and all nine existing-action behavior checks passing. Failures are catalog11,
+missing observations168 and context/re-entrancy67. Five compiles, normal cleanup,
+preservation and delayed audit pass; two failed fixtures are excluded. Complete
+submission-failure, Save guard, denial, nesting and optional/navigation policy
+tests before implementation. Evidence:
+`tests/integration/plan022_slice4be_production_assignment_results.md`.
 
 Architecture v4.11 D18's catalog22 controls PRODUCTION_PROCESS_WORKSHEET_SEND,
 PRODUCTION_PROCESS_WORKSHEET_ADD_ITEM and PRODUCTION_PROCESS_WORKSHEET_RETRIEVE
@@ -5795,6 +5810,60 @@ current Process/Recipe designer lists use the exact IDs recorded in section
 8.2; their minimum/default/expanded and maximize/restore geometry is GREEN.
 
 ### 8.3 Ingredients Assignment page
+
+**D18 observation contract, specified2026-10-01; implementation pending.** Catalog23
+preserves1-22 and adds the nine entries below, owner `PRODUCTION_ASSIGNMENT`, role
+Production, surface Operations > Production > Ingredients Assignment, capability
+PROD_POST with the existing ADMIN_MAINT alternative. Caption/label and placement
+stay as constructed; no layout change is authorized by this registration.
+
+| ControlId | Existing caption/label | Packaged handler | Class | Positive outcome |
+|---|---|---|---|---|
+| `PRODUCTION_ASSIGNMENT_REFRESH` | Refresh | `mBtnAssignRefresh_Click` | Command | REFRESHED |
+| `PRODUCTION_ASSIGNMENT_PROCESS` | Select Process | `mBtnAssignRecipe_Click` | Command | PRESENTED |
+| `PRODUCTION_ASSIGNMENT_REQUIREMENT` | Select Requirement | `mBtnAssignIngredient_Click` | Command | SELECTED |
+| `PRODUCTION_ASSIGNMENT_ADD` | Add Acceptable | `mBtnAssignAdd_Click` | Command | STAGED |
+| `PRODUCTION_ASSIGNMENT_REMOVE` | Remove Row | `mBtnAssignRemove_Click` | Command | STAGED |
+| `PRODUCTION_ASSIGNMENT_CLEAR` | Clear | `mBtnAssignClear_Click` | Command | STAGED |
+| `PRODUCTION_ASSIGNMENT_SAVE` | Save Alternatives | `mBtnAssignSave_Click` | Command | CONFIRMED |
+| `PRODUCTION_ASSIGNMENT_PROCESS_SELECT` | Processes | `mLstAssignRecipes_Click` | Navigation | PRESENTED |
+| `PRODUCTION_ASSIGNMENT_REQUIREMENT_SELECT` | Ingredient Requirements | `mLstAssignIngredients_Click` | Navigation | SELECTED |
+
+Process selection replaces shared local requirements/alternatives after parsing;
+Navigation identifies the user gesture and does not assert a read-only local
+effect. Only deliberate selections are collected under optional Navigation policy.
+Button/helper/list cascades must not duplicate observations; search typing is not
+logged. Refresh reports only completion of the existing local routine, without
+certifying source availability or freshness. PRESENTED does not certify a valid
+released Process. Add/Remove/Clear affect the shared Process draft; alternatives
+use requirement/item-code identity and do not allocate or reidentify System_Keys.
+Missing selection, duplicate and missing removal match are REJECTED; empty Clear
+can finish STAGED. Existing quiet no-ops/status wording and parse/normalization/
+version rules remain. Only the existing saved-design owner can persist changes.
+
+REQUESTED is Info/Unknown; positive local outcomes are Info/Unchanged relative
+to saved authority; REJECTED is Warning/Unchanged, DENIED Blocked/Unchanged and
+FAILED Error/Unknown. Save may replace unsaved Process Designer data before a
+validation refusal; Unchanged does not promise rollback of that local preparation.
+Save retains the clone/load-new-version/restore/validate/PROCESS_SAVE sequence.
+CONFIRMED means the owning command finished and PENDING means submission was
+confirmed but subsequent work did not finish, both Unknown Domain effect. Save
+alone accepts exact typed Designs references: Submitted for CONFIRMED/PENDING,
+Submitted or Unknown after actual write attempt for FAILED; no unused generated
+IDs, report-text parsing, Inventory references or invented effects. Other controls
+and REQUESTED/REJECTED/DENIED have empty references. Activity text remains fixed
+and redacted; only Save's permitted source references carry owning event identity.
+
+Original live workbook/session/warehouse and current capability are required before
+reads/edits and rechecked across yields. No retargeting, programmatic duplicate
+actions or optional-tracking blockage. For each exact control only its declared
+positive fact establishes CommandCompleted. Save SourceEventsApplied requires
+every exact owning published Designs event; none of the eight local actions can
+establish it. Follow the normative subsection for full outcome/source validation.
+Initial actual-handler RED is recorded above; complete the protecting suite before
+implementation. GREEN, separate guide and observed runs, published
+Event Detail, three-view diagnostic proof, preservation and all regression gates
+remain pending. The table below describes the existing UI, not new acceptance.
 
 | Control group | Controls | Purpose |
 |---|---|---|
