@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.365 (Ingredients Assignment baseline and Save companion RED; implementation pending)
+**Version:** 1.366 (Ingredients Assignment policy and Save-guard RED; implementation pending)
 
 Next Slice4be group: Architecture v4.11 D18's Ingredients Assignment refinement
 specifies catalog23's seven buttons and two deliberate list selections (section8.3).
@@ -12,13 +12,20 @@ registered or accepted and do not increase those coverage counts.
 Initial packaged Assignment RED is103 PASS/246 FAIL/349, with all42 shared checks
 and all nine existing-action behavior checks passing. Failures are catalog11,
 missing observations168 and context/re-entrancy67. Five compiles, normal cleanup,
-preservation and delayed audit pass; two failed fixtures are excluded. Complete
-Save guard/post-yield loss, denial, nesting and optional/navigation policy
-tests before implementation. Save companion RED89 now passes59/fails30: all42
+preservation and delayed audit pass; two failed fixtures are excluded.
+Save companion RED89 passes59/fails30: all42
 shared checks and five actual write/application boundaries pass; missing Assignment
 facts fail. Five compiles, normal cleanup, preservation and delayed audit pass.
 An earlier duplicate-probe compile failure and its forced empty-fixture cleanup
 remain excluded; corrected-run closure needed no intervention. Runtime is unchanged.
+Expanded companion RED245 passes158/fails87, retaining all89 prior results/order.
+The156 additions pass99/fail57 across denial, optional/navigation policy, partial
+local effects, nested Save, post-append sign-out and captured binding. Native
+closure dismisses the form; no handler call is claimed and six closure checks pass.
+Five compiles, normal cleanup, preservation and delayed audit pass. The earlier
+automation80010007 attempt required assisted cleanup and remains excluded. Static
+metrics are unchanged;352 scripts parse. Finish the explicit Core outcome/source
+contract matrix before implementation, retaining349 baseline and245 companion checks.
 Evidence:
 `tests/integration/plan022_slice4be_production_assignment_results.md`.
 

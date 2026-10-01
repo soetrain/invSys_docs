@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.105. Last reviewed: 2026-10-01 UTC, Ingredients Assignment baseline and Save companion RED; implementation pending.
+Version 1.106. Last reviewed: 2026-10-01 UTC, Ingredients Assignment policy and Save-guard RED; implementation pending.
 
 The next group is Architecture v4.11 D18's Ingredients Assignment refinement:
 seven constructed buttons plus two deliberate list Click handlers, catalog23.
@@ -14,8 +14,15 @@ real write/application boundaries pass; missing Assignment facts fail. Five comp
 normal cleanup, preservation and delayed audit pass. Its initial duplicate-probe
 compile failure required termination of the verified empty test process after Quit
 did not exit, and remains excluded. Corrected-run closure needed no intervention.
-Complete Save guard/post-yield loss, denial, nested-entry and optional/navigation-policy
-tests before runtime implementation. Static retains all metrics and351 script parses.
+Expanded companion RED245 is158 PASS/87 FAIL, retaining all89 prior results/order
+and42 shared GREENs. The156 additions pass99/fail57: denial25, unavailable notices9,
+navigation defaults2 and Save observations/guards21. Actual nested Save and
+post-append sign-out are reached. Native closure dismisses the form; no handler
+call is claimed and all six closure assertions pass. Five compiles, normal cleanup,
+preservation and delayed audit pass. The earlier automation80010007 attempt needed
+assisted cleanup and remains excluded. Static retains all metrics and352 parses.
+Finish the explicit Core outcome/source contract matrix before runtime edits;
+preserve349 baseline and245 expanded companion checks.
 Exact evidence:
 `tests/integration/plan022_slice4be_production_assignment_results.md`.
 Runtime counts below therefore stay unchanged;

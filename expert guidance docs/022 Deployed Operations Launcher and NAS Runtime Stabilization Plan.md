@@ -26,8 +26,16 @@ Five compiles, normal cleanup, preservation and delayed audit pass. A duplicate
 fault-probe installation failed compile and required termination of the verified
 empty fixture after Quit did not exit; that attempt remains excluded. The corrected
 run needed no intervention. Static metrics remain unchanged;351 scripts parse.
-Save's guards/post-yield loss, denial, nested entry, optional tracking and navigation
-policy still need focused RED. Preserve all349 baseline and89 companion checks.
+Expanded companion RED245 is158 PASS/87 FAIL, retaining all89 prior results/order
+and42 shared GREENs. Its156 additions pass99/fail57: denial25, unavailable notices9,
+navigation defaults2 and Save observations/guards21. Actual nested Save and
+post-append sign-out boundaries are reached. Native workbook closure dismisses
+the form: no handler invocation is claimed; all six measured closure assertions
+pass. Five compiles, normal cleanup, preservation and delayed audit pass. An earlier
+automation80010007/assisted-cleanup attempt is excluded, not desktop error5.
+Static metrics remain unchanged;352 scripts parse. Preserve all349 baseline and245
+expanded companion checks. Finish the explicit Core outcome/source contract matrix
+before runtime edits; do not repeat or discard established handler/guard RED.
 Protect shared alternatives, exact Process/version selection, unchanged
 read/parse/next-version behavior, missing/duplicate/no-match refusals, empty Clear,
 pre-save local replacement, captured context/current capability, re-entrancy and
