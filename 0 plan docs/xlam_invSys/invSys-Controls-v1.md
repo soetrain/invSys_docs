@@ -1,6 +1,26 @@
 # invSys Form Controls v1
 
-**Version:** 1.414 (native Check In read-closure coverage GREEN; acceptance pending)
+**Version:** 1.415 (Check In observation specified; packaged RED77/42)
+
+Architecture v4.11 D18 specifies catalog25 `PRODUCTION_RUN_CHECK_IN`, caption
+`Check In`, handler `frmProduction.mBtnManagerCheckIn_Click`, Production Run - List,
+owner PRODUCTION_RUN_LOCAL and existing PROD_POST/ADMIN_MAINT permission. STAGED
+requires this attempt's owner success and completed local refresh; it is not an
+inventory submission or application. REQUESTED, REJECTED, DENIED and FAILED retain
+the declared canonical effects and fixed redacted text. Source references are empty.
+No runtime wiring or visible acceptance is claimed: runtime remains catalog24,
+63/68 buttons; exact-key/custom-column and native-closure baselines remain required.
+The new test must exercise actual handlers before implementation. Separate policy,
+fault, publication and Action Path reader evidence remains required. This is an
+approved-D18 discovered-control refinement, not approval of RUN-SCALE-01/RUN-UI-01.
+
+Focused119-check RED on unchanged routed01 passes77/fails42: only the six missing
+attempt/result pairs and their record assertions fail. All35 new independent owner
+checks and shared42 pass, including refusal after prior success and exact-key
+worksheet/custom-column preservation. Five compiles, package/settings preservation,
+normal cleanup and delayed zero native audit pass. No implementation/acceptance is
+claimed. The code integration record identifies the final RED and excluded setup run.
+Final static metrics/caps remain unchanged; three schemas/374 PowerShell parses pass.
 
 On unchanged runtime `2d49c97b`/frozen routed01, native149/149 retains the earlier59
 ordered checks and routed108/108 retains87. Eleven additional real read-return

@@ -2,6 +2,28 @@
 
 **Status:** Current corrective implementation plan
 
+Check In observation refinement,2026-10-01 UTC: Architecture v4.11 D18 now
+specifies catalog25 `PRODUCTION_RUN_CHECK_IN` under approved semantic inheritance.
+Its sole positive STAGED means this attempt's local validation/staging and refresh,
+with empty source references; existing checked state/status is insufficient.
+Runtime remains catalog24 with63/68 buttons integrated. First run the new packaged
+actual-handler observation test against frozen routed01 for meaningful missing-record
+RED, retaining independent owner, exact-key, custom-column and authority checks.
+Only then implement typed owner outcomes and tracking. Policy/fault/context,
+recording/publication/independent readers and all existing regressions remain gates.
+RUN-SCALE-01 and RUN-UI-01 remain pending explicit approval; this refinement changes
+neither proposal nor the Check In algorithm or operator wording.
+
+The focused gate now records RED77/42 across119 unique checks on unchanged routed01.
+Only six missing observation pairs and their record assertions fail; all35 new
+independent owner/preservation checks and shared42 pass. Five compiles, normal
+cleanup, settings/package preservation and delayed zero native audit pass. The
+earlier fixture-reopen failure is excluded, not behavioral RED. Implement the
+specified typed outcomes/tracking next; existing149/108/278 owner protections and
+all wider gates remain required. No runtime or visible acceptance is claimed.
+Final static02 preserves290/6176/135514,9/45 calls,190 duplicate candidates and28
+non-growing caps; three schemas/374 PowerShell parses pass, with zero runtime growth.
+
 Native Check In read-closure checkpoint,2026-10-01 UTC: unchanged code `2d49c97b`
 and frozen routed01 pass native149/149 and routed108/108, retaining all59/87 prior
 ordered checks and shared42. Eleven real read-return workbook closures exercise

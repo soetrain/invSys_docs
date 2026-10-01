@@ -1,7 +1,19 @@
 # Production form tracking coverage audit
 
-Version 1.154. Last reviewed:2026-10-01 UTC, native Check In read-closure coverage GREEN;
+Version 1.155. Last reviewed:2026-10-01 UTC, Check In observation specified, RED77/42;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Architecture D18 specifies catalog25 PRODUCTION_RUN_CHECK_IN under approved
+semantic inheritance. Runtime remains catalog24 with63/68 integrated buttons.
+The new actual-handler observation gate must demonstrate missing records while
+independently proving owner behavior, including refusal after previous success.
+No observation implementation, acceptance or new positive authority claim exists.
+
+Focused119-check RED passes77/fails42 solely for absent records in six cases.
+All35 independent owner checks plus shared42 pass; five compiles, preservation,
+normal cleanup and delayed zero audit pass. Prior-success refusal proves checked
+state is not current-attempt success. The setup-only failed run is excluded.
+Final static metrics/caps remain unchanged; three schemas/374 PowerShell parses pass.
 
 Native149/149 and routed108/108 on unchanged runtime/frozen routed01 retain the
 prior59/87 and shared42. Eleven actual-handler read-return workbook closures are

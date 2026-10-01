@@ -517,6 +517,54 @@ workbook columns. Publication, original recording order and How-To/Diagnostic/
 Compare both require separate evidence. This records discovered controls within
 the approved contract; it does not amend authority, permissions or saved semantics.
 
+**4be.1 Check In observation (discovered-control refinement,2026-10-01; implementation and acceptance pending):**
+Under approved D18 semantic inheritance, catalog25 shall add the existing
+`PRODUCTION_RUN_CHECK_IN` Command, caption `Check In`, actual handler
+`frmProduction.mBtnManagerCheckIn_Click`, owner `PRODUCTION_RUN_LOCAL`, role
+Production, surface `Operations > Production > Production Run - List`, capability
+PROD_POST with the existing ADMIN_MAINT alternative. Preserve catalogs1-24 exactly.
+This specifies observation of the existing D14/D15 owner, not new inventory authority.
+
+- One deliberate handler entry produces a REQUESTED/result pair when collection
+  is enabled and the existing context/policy gates allow both writes. Loading,
+  nested entry and invalid captured binding do not start
+  owner work or redirect recording. Permission denial before owner entry is
+  DENIED. Mid-action binding/permission loss is FAILED; preserve the current guard
+  after every yielding read and stop subsequent owner work. FAILED is the local
+  interrupted outcome, not permission to bypass Core's recording guards: after
+  sign-out or warehouse/session change the attempt may have no terminal record.
+  Never redirect that record into the new context or synthesize a successful pair.
+- STAGED requires this attempt's positive owner result and completed local
+  refresh under the still-current captured binding. For reusable runs, the owner
+  must validate the selected Process, mark it checked in and freeze its batch note;
+  for worksheet staging, exact-key Inventory Check writes and manager refresh
+  must finish. Neither a returned Sub, status text nor an already-checked state
+  proves this attempt. This outcome does not certify read freshness, inventory
+  reservation, consumption, submission, application or whole-run completion.
+- An explicit selection/input validation refusal is REJECTED. Failed writes,
+  unavailable required surfaces, ambiguous false owner results, caught exceptions
+  and interrupted refresh are FAILED. Record the outcome at the owning boundary;
+  never classify by parsing status/error text. Earlier local note, allocation or
+  staging changes may remain; no rollback is implied. Existing operator wording,
+  selected-Process rules, validation/read order and fail-soft behavior are preserved.
+- EventCode is ControlId plus `_` plus OutcomeCode. REQUESTED is Info/Unknown;
+  STAGED is Info/Unchanged, REJECTED Warning/Unchanged, DENIED Blocked/Unchanged,
+  FAILED Error/Unknown. DataEffect describes canonical authority, not local edits.
+  Only STAGED establishes CommandCompleted for this control. Other positive names
+  are unsupported. SourceEventRefs is empty and cannot establish SourceEventsApplied.
+- Persist only fixed catalog text and the existing redacted envelope; no entered
+  notes, Process/recipe names, inventory identities, quantities, paths, credentials,
+  raw status or exceptions. Optional tracking failure must not block Check In.
+  Admin policy and all three Action Path views use the shared event contract.
+
+D13 must first show absent records through the packaged actual handler while its
+owner result is independently verified, including refusal after prior success,
+loading/nested suppression, worksheet exact identity/custom-column preservation
+and unchanged canonical authority. Subsequent acceptance requires policy/fault,
+permission/context interruption, recording/publication and independent How-To/
+Diagnostic/Compare evidence, in addition to the existing packaged regression gates.
+Complete Run, Next Batch and Print Recall remain separate unintegrated controls.
+
 **4be.1 Run preparation and allocation observations (discovered-control refinement; Core catalog implemented, eight form handlers integrated; acceptance pending):**
 Under approved D18 semantic inheritance, catalog24 shall add these nine existing
 controls, preserving catalogs1-23 exactly. OwnerId is `PRODUCTION_RUN_LOCAL`, role
