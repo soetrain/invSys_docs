@@ -275,6 +275,22 @@ may still read an authored guide, whose provenance remains visible.
   its captured warehouse, invSys session and role workbook where applicable.
   Sign-out, target change or loss of that binding invalidates loaded content and
   terminates active recording as incomplete; no ActiveWorkbook redirection.
+  D13 verification,2026-10-02: Complete Run's initial binding gap is confirmed by
+  the real packaged handler (80 PASS/9 FAIL/89, with all68 prior checks retained).
+  Target/session/sign-out changes after Check In still reached the owner; a
+  replaced session actually consumed inventory. The existing shared binding guard
+  now runs before either completion branch. Unpromoted complete-binding01 passes
+  89/89, shared42/five compiles, three reviewed refusal captures and normal cleanup/
+  delayed zero native audits. Only frmProduction changes among283 packaged
+  components. Static metrics/28 caps are unchanged; three schemas/377 parses pass.
+  This enforces the existing rule, adds no observation contract and proves only
+  the tested initial reusable binding cases. New-hash smoke86 and layout18 requested
+  pairs/six activated pages/two actual sizes also pass; all six PNGs exactly match
+  the previously reviewed empty-form captures. Preservation/closure/delayed audits
+  pass. Later yields, closed-workbook entry, partial submissions, new-hash Check In/
+  live-role/full-chain regressions and full acceptance remain
+  open. Exact RED/GREEN/build evidence is in
+  `tests/integration/plan022_slice4be_production_complete_results.md`.
 - Preserve exact source identities and immutable System_Key, every contributing
   event line, and unknown user columns through normalized header lookup.
   ActivityId, SequenceId and ActionPathId identify only their own records.

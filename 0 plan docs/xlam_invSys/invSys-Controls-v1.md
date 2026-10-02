@@ -1,6 +1,23 @@
 # invSys Form Controls v1
 
-**Version:** 1.425 (Complete Run broader packaged gates verified; full acceptance pending)
+**Version:** 1.426 (Complete Run initial captured-binding RED/GREEN; full acceptance pending)
+
+Complete Run now uses the existing captured-binding guard before staging or owner
+entry in either branch. Its actual handler previously reached the owner after
+target/session/sign-out changes and consumed input after session replacement:
+RED80 PASS/9 FAIL/89 retains all68 prior checks. New unpromoted complete-binding01
+passes89/89 with unchanged staging/input balances for those three reusable cases.
+The existing message is `Session, warehouse, or captured workbook changed. Reopen
+Production before editing the draft.` Three new refusal captures, shared42/five
+compiles, preservation, unassisted closure and delayed zero audits pass. Cold
+startup/five compiles change only frmProduction among283 components. Static
+metrics/28 caps are unchanged; three schemas/377 parses pass. No control or tracking
+catalog entry is added. New-hash smoke86 and layout18 requested pairs/six activated
+pages/two actual sizes pass; all six PNGs exactly match reviewed empty-form captures.
+Preservation/closure/delayed audits pass. Later yields, closed-workbook entry,
+partial submissions, new-hash Check In/live-role/full-chain and full acceptance
+remain open. Exact evidence is in
+`tests/integration/plan022_slice4be_production_complete_results.md`.
 
 Unchanged complete-selection01 passes smoke86/86, full-chain32/32, live-role48/48
 and warehouse creation15/15, retaining prior ordered PASS results. Layout covers

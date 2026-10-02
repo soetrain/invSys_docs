@@ -1,7 +1,23 @@
 # Production form tracking coverage audit
 
-Version 1.165. Last reviewed:2026-10-01 UTC, Complete Run broader packaged regressions verified;
+Version 1.166. Last reviewed:2026-10-02 UTC, Complete Run initial binding RED/GREEN verified;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+The actual Complete Run handler now checks its captured binding before either
+completion branch using the existing shared guard. RED80 PASS/9 FAIL/89 on
+complete-selection01 retains all68 prior checks; replaced-session completion
+consumed input, while target/sign-out also reached the owner. New unpromoted
+complete-binding01 passes89/89 with all identities/prior passes retained and the
+three reusable invalid bindings refused before staging/owner effects. Three new
+refusal captures, shared42/five compiles, preservation and unassisted closure/
+delayed zero audits pass. Cold startup/five compiles change only frmProduction
+among283 components; static metrics/28 caps are unchanged, three schemas/377 parses
+pass. See `tests/integration/plan022_slice4be_production_complete_results.md`.
+New-hash smoke86/layout18 requested pairs/six activated pages/two actual sizes
+pass; six PNGs exactly match prior reviewed empty-form captures, with preservation/
+closure/delayed audits passing. Complete Run remains untracked. Closed-workbook
+entry, later yields, partial submissions, new-hash Check In/live-role/full-chain
+and full acceptance remain open.
 
 Unchanged complete-selection01 now passes smoke86/86, full-chain32/32, live-role48/48
 and warehouse creation15/15 with prior ordered PASS results retained. Layout18

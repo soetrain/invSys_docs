@@ -2,6 +2,23 @@
 
 **Status:** Current corrective implementation plan
 
+Complete Run initial binding,2026-10-02 UTC: D18's existing captured-binding rule
+exposes80 PASS/9 FAIL/89 through the actual handler, retaining all68 earlier checks.
+A replacement session allows stale-form completion and input consumption; target
+change/sign-out also reach the owner. The existing shared guard now runs before
+either completion branch. Unpromoted complete-binding01 passes89/89, shared42/five
+instrumented compiles, three reviewed refusal captures, settings/package preservation
+and unassisted closure/delayed zero audits. Cold startup/five compiles preserve282
+of283 components; only frmProduction changes. Static metrics/28 caps are unchanged;
+three schemas/377 parses pass. Controls1.426/coverage1.166 record the correction.
+Exact evidence: `tests/integration/plan022_slice4be_production_complete_results.md`.
+New-hash smoke86 and layout18 requested pairs/six activated pages/two actual sizes
+pass, with six PNGs exactly matching the previously reviewed empty-form captures;
+preservation/closure/delayed audits pass. Next: new-hash Check In/live-role/full-chain,
+closed-workbook/yield interruption and partial-owner submission tests before
+observations. This is existing-rule enforcement, not a
+new contract or acceptance of full Complete Run tracking.
+
 Complete Run broader gates,2026-10-01 UTC: unchanged complete-selection01 passes
 packaged smoke86/86, layout18 requested size/page pairs with six reviewed captures,
 full-chain32/32, live-role48/48 and warehouse creation15/15. Prior ordered PASS
