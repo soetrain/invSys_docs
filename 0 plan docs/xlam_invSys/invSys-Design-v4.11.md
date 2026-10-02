@@ -317,7 +317,14 @@ may still read an authored guide, whose provenance remains visible.
   all28 oversized module caps and dynamic-call counts remain unchanged. Three
   schemas/378 parses pass. This is accounted implementation growth under existing
   semantic inheritance, not a new contract or a maintenance-cap exception.
-  New-candidate broader regressions, closed-workbook entry, reentrancy, later
+  On this same candidate, Check In629, packaged smoke86 and layout18 requested
+  size/page pairs across six activated/maximized pages pass. Prior ordered PASS
+  results and geometry are retained; all six layout PNGs match previously reviewed
+  empty-form captures exactly. Pins/settings/reports are preserved with natural
+  closure and delayed zero native audits. Same-candidate full-chain32/live-role48/
+  warehouse creation15 also retain all prior ordered PASS results with restored
+  settings/reports, preserved pins, closed Excel and delayed zero native audit.
+  Closed-workbook entry, reentrancy, later
   partial submissions and tracking acceptance remain open; exact evidence is in
   the same integration record.
 - Preserve exact source identities and immutable System_Key, every contributing

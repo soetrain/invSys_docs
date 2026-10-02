@@ -1,6 +1,17 @@
 # invSys Form Controls v1
 
-**Version:** 1.428 (Complete Run interruption correction verified; full acceptance pending)
+**Version:** 1.429 (Complete Run correction regression gates verified; full acceptance pending)
+
+On unchanged complete-continuation01, Check In629/629 and packaged smoke86/86
+retain all prior ordered PASS results. Layout retains18 requested size/page pairs,
+six activated/maximized pages, five native transitions and two actual sizes.
+All six PNGs exactly match the prior reviewed empty-form captures. Pins/settings/
+tracked reports, normal shutdown and delayed zero native audits pass. Check In
+captures were regenerated but not additionally reviewed. Same-candidate full-chain32/
+live-role48/warehouse creation15 also retain all prior ordered PASS results, with
+restored settings/reports, preserved pins, closed Excel and delayed zero native
+audit. Populated scrolling/multiline and full acceptance remain open. This is
+evidence-only verification, with no new runtime or contract.
 
 Unpromoted complete-continuation01 passes150/150 through the actual Complete Run
 handler and true owner-entry probes. Existing captured-context/Core capability
@@ -12,7 +23,7 @@ captures. Shared42/five compiles, preservation, normal closure/delayed zero audi
 pass. Cold build changes three of283 components; static adds one method/nine lines
 in the small action class, with28 unchanged oversized caps, unchanged9/45 calls
 and three schemas/378 parses passing. No control, wording, catalog entry or
-observation is added. New-candidate regressions, closed-book/reentry/partial-write
+observation is added. Closed-book/reentry/partial-write
 evidence and full acceptance remain pending.
 
 On unchanged complete-binding01, the actual handler's six sign-out/capability-loss

@@ -1,7 +1,16 @@
 # Production form tracking coverage audit
 
-Version 1.168. Last reviewed:2026-10-02 UTC, Complete Run interruption correction verified;
+Version 1.169. Last reviewed:2026-10-02 UTC, Complete Run correction regression gates verified;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Same-candidate Check In629/smoke86 retain all prior ordered PASS results. Layout
+retains18 requested pairs across six pages, five native transitions and two actual
+sizes; six PNGs exactly match previously reviewed empty-form captures. Preservation,
+natural shutdown and delayed zero audits pass. Check In captures were regenerated
+but not additionally reviewed. Same-candidate full-chain32/live-role48/warehouse
+creation15 retain all prior ordered PASS results with settings/reports restored,
+pins preserved, closed Excel and delayed zero native audit.
+No runtime, catalog coverage or acceptance status changes in this evidence update.
 
 Unpromoted complete-continuation01 passes150/150 with true owner-entry probes and
 all prior identities/PASS results retained. The existing captured-context/Core
@@ -11,8 +20,8 @@ projection state and exact inputs; pending-yield cases never enter the owner.
 Six new refusal captures, shared42/five compiles, preservation and natural closure/
 delayed zero audit pass. Cold build changes three of283 components. Static adds
 one small-class method/nine lines;28 oversized caps and9/45 calls are unchanged;
-three schemas/378 parses pass. Complete Run remains untracked. New-candidate
-regressions, closed-book/reentry and partial-submission proofs remain open.
+three schemas/378 parses pass. Complete Run remains untracked. Closed-book/reentry
+and partial-submission proofs remain open.
 
 Test-only interruption expansion on complete-binding01 yields126 PASS/24 FAIL/150
 while preserving all89 prior checks. Sign-out/current Core capability loss after

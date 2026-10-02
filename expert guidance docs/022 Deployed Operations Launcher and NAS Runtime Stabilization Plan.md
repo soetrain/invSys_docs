@@ -13,7 +13,13 @@ normal closure/delayed zero audit pass. Cold build changes three of283 component
 Static adds one small-class method/nine lines; all28 oversized caps and9/45 dynamic
 calls remain unchanged, with three schemas/378 parses passing. Controls1.428 and
 coverage1.168 record existing D18/D-NAS enforcement, not new tracking acceptance.
-Next: new-candidate Check In and broader regressions, then closed-book/reentry and
+Same-candidate Check In629/smoke86/layout18 requested pairs across six pages pass,
+retaining prior ordered PASS results and geometry. Six layout PNGs exactly match
+the reviewed empty-form captures; pins/settings/reports, normal closure and delayed
+zero audits pass. Same-candidate full-chain32/live-role48/create15 retain all prior
+ordered PASS results with settings/reports restored, pins preserved, closed Excel
+and delayed zero native audit. Controls1.429/coverage1.169 record these additional
+gates. Next: closed-book/reentry and
 partial-submission evidence before observation integration. Exact evidence:
 `tests/integration/plan022_slice4be_production_complete_results.md`.
 
