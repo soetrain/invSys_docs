@@ -1,6 +1,19 @@
 # invSys Form Controls v1
 
-**Version:** 1.429 (Complete Run correction regression gates verified; full acceptance pending)
+**Version:** 1.430 (Complete Run action-entry RED verified; full acceptance pending)
+
+Architecture's D18 Complete Run clarification requires loading/busy/nested entry
+to leave owner staging, inventory and the active action's message untouched. A
+normal outer action retains its guard through yielding work, restores prior flags
+and reports its own result. Test the actual handler and recursive entry at the
+real pending UI yield before a runtime correction. Unchanged continuation01 yields
+169 PASS/16 FAIL/185, retaining all150 prior ordered PASS results. Loading/busy
+entry consumes inventory; nested entry reaches the owner twice and replaces the
+successful result with a Check In refusal, while consuming input once. Three
+new captures were reviewed. Shared42/five compiles, preservation, natural closure/
+delayed zero audit and unchanged static metrics/28 caps, three schemas/379 parses
+pass. Correction/GREEN and forced-error/closed-book/partial-write evidence remain
+pending; no observation/control/caption/catalog entry or acceptance is added here.
 
 On unchanged complete-continuation01, Check In629/629 and packaged smoke86/86
 retain all prior ordered PASS results. Layout retains18 requested size/page pairs,

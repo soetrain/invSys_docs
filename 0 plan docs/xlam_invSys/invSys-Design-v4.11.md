@@ -376,6 +376,29 @@ may still read an authored guide, whose provenance remains visible.
 
 **What is tracked and published:**
 
+**4be.1 Complete Run action-entry prerequisite (D18 clarification; correction pending):**
+Loading and entry nested within an active Production action are not independent
+operator completion attempts. The actual Complete Run handler must suppress them
+before staging, owner reads or inventory submission, preserving the state and
+message of the active action. A normal outer completion retains ownership until
+its yielding work finishes, restores the prior loading/busy flags on every exit
+and reports its own result. A later deliberate click remains a separate attempt.
+This constrains existing D18 action-entry semantics under semantic inheritance;
+it adds no observation/catalog entry, permission, automatic retry or inventory
+rollback. D13 must invoke the actual handler with loading/busy flags and from the
+real pending UI yield, proving owner-entry counts and exact inventory effects.
+D13 verification,2026-10-02: unchanged continuation01 yields169 PASS/16 FAIL/185,
+preserving all150 prior ordered PASS results. Loading and busy entry complete and
+consume inventory; loading also changes its flag. A recursive click reaches the
+completion owner twice and leaves completed output with a Check In refusal,
+although exact inputs are consumed only once. Three new captures, shared42/five
+compiles, preservation, natural closure/delayed zero audit and unchanged static
+metrics/28 caps with three schemas/379 parses pass. Correction/GREEN, forced-error
+restoration and broader completion acceptance remain pending. Existing completion
+validation, one selected Process and captured context/Core permission rules remain
+authoritative. Exact evidence is in
+`tests/integration/plan022_slice4be_production_complete_results.md`.
+
 **4be.1 Production lifecycle observations (implementation in progress):** Under the
 existing discovered-control and owner-evidence rules, catalog13 adds exactly
 `PRODUCTION_PROCESS_SAVE`, `PRODUCTION_PROCESS_RELEASE`,

@@ -1,7 +1,19 @@
 # Production form tracking coverage audit
 
-Version 1.169. Last reviewed:2026-10-02 UTC, Complete Run correction regression gates verified;
+Version 1.170. Last reviewed:2026-10-02 UTC, Complete Run action-entry RED verified;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+D13 expansion covers actual Complete Run loading/busy entry and recursive
+handler invocation at its real pending UI yield. Architecture's D18 clarification
+requires suppressed nested work and preserved active state/message, one normal
+outer completion and restored guards. RED169 PASS/16 FAIL/185 on unchanged
+continuation01 retains all150 prior ordered PASS results. Loading/busy consumes
+inventory; nested entry reaches the owner twice and overwrites success with a
+Check In refusal, consuming input once. Three new captures, shared42/five compiles,
+preservation, natural closure/delayed zero audit and unchanged static metrics/28
+caps, three schemas/379 parses pass. Correction/GREEN and forced-error restoration
+remain pending. No runtime or observation integration is claimed; Complete Run
+remains untracked. Exact evidence is in the Complete Run integration record.
 
 Same-candidate Check In629/smoke86 retain all prior ordered PASS results. Layout
 retains18 requested pairs across six pages, five native transitions and two actual

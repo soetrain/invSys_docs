@@ -2,6 +2,23 @@
 
 **Status:** Current corrective implementation plan
 
+Complete Run action-entry prerequisite,2026-10-02 UTC: apply D18's existing
+loading/nested-action suppression to the actual completion handler before adding
+observations. Test loading, busy entry and a recursive handler call at the real
+pending UI yield on unchanged continuation01; protect untouched nested staging/
+message, one outer owner completion, exact inventory effects and restored guards.
+RED is169 PASS/16 FAIL/185 with all150 prior ordered PASS results retained. Loading/
+busy entry consumes inventory; nested entry reaches the owner twice and overwrites
+completion success with a Check In refusal, consuming input once. Three reviewed
+captures, shared42/five compiles, preservation, normal closure/delayed zero audit
+and static three schemas/379 parses pass without runtime growth. Architecture's
+explicit Complete Run clarification constrains the existing rule under semantic
+inheritance, without a new catalog, permission, retry or rollback contract.
+Controls1.430/coverage1.170 record RED. Next: typed entry suppression and a guard
+held through the outer completion, then GREEN; error restoration/closed-book/
+partial-submission evidence and observation integration remain open. Exact evidence:
+`tests/integration/plan022_slice4be_production_complete_results.md`.
+
 Complete Run interruption correction,2026-10-02 UTC: unpromoted
 complete-continuation01 passes150/150 with true owner-entry probes, retaining all
 150 identities and126 prior RED passes. Existing captured context/Core capability
