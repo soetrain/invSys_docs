@@ -1,7 +1,18 @@
 # Production form tracking coverage audit
 
-Version 1.173. Last reviewed:2026-10-02 UTC, projection-crash diagnostic comparison;
+Version 1.174. Last reviewed:2026-10-02 UTC, chain stage-exit tooling RED/GREEN;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+The actual chain-prefix test proves Admin Excel remains before the next source
+stage: tooling RED3 PASS/1 expected FAIL, then GREEN4/4 after the existing cleanup
+wait is added at that boundary. Natural closure, preservation and delayed zero
+native audits pass. Diagnostic setup waits also retain Admin3/source15/live48.
+This changes verification tooling only; runtime/coverage/architectural contracts
+remain unchanged and native-crash causation is unproven. The changed harness now
+passes chain32/live-role48/warehouse15 with all prior ordered identities, normal
+unassisted closure, preservation and delayed zero native audit. The remaining
+Complete Run coverage and observations are still open; full acceptance is not claimed.
+Static metrics/28 caps remain unchanged; three schemas/380 parses pass.
 
 Two entry02 broad chains fail at the same native projection-rebuild call. The
 focused ordered-live control passes35/35 traced and35/35 untraced; its new Full

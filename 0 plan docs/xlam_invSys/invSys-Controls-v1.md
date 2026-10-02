@@ -1,6 +1,19 @@
 # invSys Form Controls v1
 
-**Version:** 1.433 (Projection-crash diagnostic comparison; full acceptance pending)
+**Version:** 1.434 (Chain stage-exit tooling RED/GREEN; full acceptance pending)
+
+The original chain advances after Admin Quit while that Excel process is still
+exiting. The focused actual-prefix test records tooling RED3 PASS/1 expected FAIL;
+waiting with the existing cleanup helper before source integration passes4/4 with
+identical checks. Settings/packages, natural closure and delayed zero native
+audits pass. Separate diagnostic waits around actual setup stages retain Admin3/
+source15/all48 live-role checks. No form control, wording, observation, runtime or
+architectural contract changes. The earlier native crash cause is unproven and
+the changed harness now passes chain32/live-role48/warehouse15 with exact prior
+ordered checks, natural unassisted closure, preservation and delayed zero native
+audit. This verifies that candidate gate, not full Slice4be acceptance or a native
+crash cause. Complete Run's remaining coverage and observation integration stay open.
+Static metrics/28 caps remain unchanged; three schemas/380 parses pass.
 
 Two entry02 full chains fail at the same native projection-rebuild boundary.
 The established same-session diagnostic passes35/35 with tracing and35/35 without;

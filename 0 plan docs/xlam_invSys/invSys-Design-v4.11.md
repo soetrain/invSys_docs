@@ -426,6 +426,18 @@ repair or full-chain acceptance; investigate the preceding Admin/source-creation
 context before another broad attempt. The hypothesis introduces no architectural
 exception or runtime change.
 Static verification retains all metrics/28 caps and passes three schemas/379 parses.
+Further verification-tooling evidence: an actual-chain-prefix test records
+3 PASS/1 expected exit-boundary FAIL because Admin Excel remains after Quit when
+the next source stage can start. Adding the existing cleanup wait at that boundary
+passes4/4, preserving the three Admin checks, package/settings bytes, natural
+closure and delayed zero native audits. Separate setup diagnostics with natural
+exit waits retain Admin3/source15/live48. This changes no architectural or product
+contract and makes no product RED/native-cause repair claim. The unchanged entry02
+packages subsequently pass the corrected chain32/live-role48/warehouse15, retaining
+all prior ordered checks, normal unassisted closure, package preservation, restored
+settings/reports and delayed zero native audit. Earlier failure evidence remains;
+full Slice4be acceptance and Complete Run's remaining coverage are not established.
+Static metrics/28 caps are unchanged, with three schemas/380 parses passing.
 Existing completion
 validation, one selected Process and captured context/Core permission rules remain
 authoritative. Exact evidence is in

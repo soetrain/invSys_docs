@@ -2,6 +2,27 @@
 
 **Status:** Current corrective implementation plan
 
+Chain stage-exit correction,2026-10-02 UTC: the setup diagnostic observes Admin
+Excel still alive after Quit, then exiting naturally about six seconds later.
+Waiting between actual Admin/source setup stages yields Admin3/source15/live48
+with normal closure, preservation and delayed zero native audit. This timing
+difference is evidence to investigate, not proof of the native crash's cause.
+The focused test executes the original canonical Admin prefix before source
+integration: tooling RED3 PASS/1 expected exit-boundary FAIL becomes GREEN4/4
+after adding the existing cleanup wait at that boundary. Both preserve settings/
+packages and close naturally with zero native events. Runtime, package and
+architectural contracts are unchanged; there is no new product RED or exception.
+Controls1.434/coverage1.174 record the tooling correction. The unchanged entry02
+packages now pass the corrected chain32/live-role48/warehouse15 with every prior
+ordered identity retained, normal unassisted closure, restored settings/reports,
+preserved pins and delayed zero native audit. Earlier failures remain recorded;
+this does not prove native-crash causation or full Slice4be acceptance. Resume
+Complete Run closure/interruption/submission and observation coverage; do not
+repeat the passing chain unchanged. Exact receipts are in the Complete Run
+integration record.
+Static metrics and28 caps are unchanged; three schemas/380 parses pass for the
+stage-exit test and diagnostic setup modes. No runtime package rebuild is needed.
+
 Projection-crash isolation,2026-10-02 UTC: entry02 repeats the same native failure
 in two broad chains, retaining each failed run and assisted recovery/restoration
 evidence. The existing same-session ordered-live control passes35/35 both traced
