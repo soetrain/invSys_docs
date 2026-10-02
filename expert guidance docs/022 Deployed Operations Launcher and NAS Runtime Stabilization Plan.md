@@ -2,6 +2,19 @@
 
 **Status:** Current corrective implementation plan
 
+Complete Run interruption RED,2026-10-02 UTC: unchanged complete-binding01 passes126/
+fails24 of150, preserving all89 prior ordered passes. Six real pending-UI/read-return
+interruptions apply sign-out or revoke current Core Production capability; owner
+staging/projection still changes before writer refusal, while exact input balances
+remain unchanged. D18 binding and D-NAS Core authorization govern this correction.
+Six reviewed captures, shared42/five compiles, restored fixture/settings, package
+preservation, unassisted closure/delayed zero audit and static three schemas/378
+parses pass. Controls1.427/coverage1.167 record RED, not a fix or tracking acceptance.
+Next: carry existing captured-context/Core capability continuation through the
+tested completion boundaries, then prove GREEN. No new activity contract is
+introduced. New-hash chain32/live-role48/create15 also passed below. Exact evidence:
+`tests/integration/plan022_slice4be_production_complete_results.md`.
+
 Complete Run initial binding,2026-10-02 UTC: D18's existing captured-binding rule
 exposes80 PASS/9 FAIL/89 through the actual handler, retaining all68 earlier checks.
 A replacement session allows stale-form completion and input consumption; target
@@ -14,7 +27,9 @@ three schemas/377 parses pass. Controls1.426/coverage1.166 record the correction
 Exact evidence: `tests/integration/plan022_slice4be_production_complete_results.md`.
 New-hash smoke86 and layout18 requested pairs/six activated pages/two actual sizes
 pass, with six PNGs exactly matching the previously reviewed empty-form captures;
-preservation/closure/delayed audits pass. Next: new-hash Check In/live-role/full-chain,
+preservation/closure/delayed audits pass. New-hash full-chain32/live-role48/warehouse
+creation15 preserve all prior ordered PASS results, with settings/reports restored,
+pins preserved, closed Excel and delayed zero audit. Next: new-hash Check In,
 closed-workbook/yield interruption and partial-owner submission tests before
 observations. This is existing-rule enforcement, not a
 new contract or acceptance of full Complete Run tracking.

@@ -287,10 +287,25 @@ may still read an authored guide, whose provenance remains visible.
   the tested initial reusable binding cases. New-hash smoke86 and layout18 requested
   pairs/six activated pages/two actual sizes also pass; all six PNGs exactly match
   the previously reviewed empty-form captures. Preservation/closure/delayed audits
-  pass. Later yields, closed-workbook entry, partial submissions, new-hash Check In/
-  live-role/full-chain regressions and full acceptance remain
+  pass. New-hash full-chain32/live-role48/warehouse creation15 also preserve every
+  prior ordered PASS result, with settings/reports restored, pins preserved,
+  closed Excel and delayed zero native audit. Later yields, closed-workbook entry,
+  partial submissions, new-hash Check In regression and full acceptance remain
   open. Exact RED/GREEN/build evidence is in
   `tests/integration/plan022_slice4be_production_complete_results.md`.
+  Further D13 test-only verification,2026-10-02: unchanged complete-binding01
+  produces126 PASS/24 FAIL/150, preserving all89 prior checks. Sign-out and loss
+  of the current Core Production capability after the real pending UI yield or
+  AvailableQuantity/EntityKind read return still alter owner staging/projection;
+  writer refusal arrives later. Exact input balances are preserved in these six
+  cases. D-NAS governs the Core capability boundary; D5's Config-command rules
+  are not substituted for it. Six new captures, shared42/five compiles, fixture/
+  settings/package preservation, unassisted closure/delayed zero audit and static
+  three schemas/378 parses pass. Carrying existing captured-context/Core capability
+  checks through these boundaries constrains this rule under semantic inheritance;
+  no new observation, authority, permission or rollback contract is introduced.
+  The correction/GREEN, closed-workbook entry, reentrancy and partial-submission
+  proof remain open; exact evidence is in the same integration record.
 - Preserve exact source identities and immutable System_Key, every contributing
   event line, and unknown user columns through normalized header lookup.
   ActivityId, SequenceId and ActionPathId identify only their own records.

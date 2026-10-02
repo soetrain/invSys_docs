@@ -1,7 +1,17 @@
 # Production form tracking coverage audit
 
-Version 1.166. Last reviewed:2026-10-02 UTC, Complete Run initial binding RED/GREEN verified;
+Version 1.167. Last reviewed:2026-10-02 UTC, Complete Run interruption RED verified;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Test-only interruption expansion on complete-binding01 yields126 PASS/24 FAIL/150
+while preserving all89 prior checks. Sign-out/current Core capability loss after
+the real pending UI yield or AvailableQuantity/EntityKind reads changes owner
+staging/projection before writer refusal; exact inputs remain unchanged. All six
+new captures were reviewed. Shared42/five compiles, fixture/settings/package
+preservation, normal closure/delayed zero audit and static three schemas/378 parses
+pass. No runtime or tracking integration changed. D18/D-NAS continuation correction
+and GREEN are next; closed-book/reentry/partial-submission proofs remain open.
+Exact evidence: `tests/integration/plan022_slice4be_production_complete_results.md`.
 
 The actual Complete Run handler now checks its captured binding before either
 completion branch using the existing shared guard. RED80 PASS/9 FAIL/89 on
@@ -16,8 +26,10 @@ pass. See `tests/integration/plan022_slice4be_production_complete_results.md`.
 New-hash smoke86/layout18 requested pairs/six activated pages/two actual sizes
 pass; six PNGs exactly match prior reviewed empty-form captures, with preservation/
 closure/delayed audits passing. Complete Run remains untracked. Closed-workbook
-entry, later yields, partial submissions, new-hash Check In/live-role/full-chain
+entry, later yields, partial submissions, new-hash Check In
 and full acceptance remain open.
+New-hash full-chain32/live-role48/warehouse creation15 now preserve all prior ordered
+PASS results, with restoration/pin preservation, closed Excel and delayed audit passing.
 
 Unchanged complete-selection01 now passes smoke86/86, full-chain32/32, live-role48/48
 and warehouse creation15/15 with prior ordered PASS results retained. Layout18

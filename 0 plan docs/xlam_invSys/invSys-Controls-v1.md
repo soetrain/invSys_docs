@@ -1,6 +1,18 @@
 # invSys Form Controls v1
 
-**Version:** 1.426 (Complete Run initial captured-binding RED/GREEN; full acceptance pending)
+**Version:** 1.427 (Complete Run later-interruption RED established; full acceptance pending)
+
+On unchanged complete-binding01, the actual handler's six sign-out/capability-loss
+interruptions yield126 PASS/24 FAIL/150 with all89 prior ordered checks preserved.
+After the real pending UI yield or AvailableQuantity/EntityKind reads, completion
+still changes owner staging and its displayed projection before writer refusal.
+Exact input balances remain unchanged. Six new captures, shared42/five compiles,
+fixture/settings/package preservation, unassisted closure/delayed zero audit and
+static three schemas/378 parses pass. D18/D-NAS require the captured context and
+existing Core capability checks to continue across those boundaries; no new
+control/catalog/permission or rollback contract is introduced. Correction/GREEN,
+closed-workbook entry, reentrancy and partial-submission evidence remain pending.
+See `tests/integration/plan022_slice4be_production_complete_results.md`.
 
 Complete Run now uses the existing captured-binding guard before staging or owner
 entry in either branch. Its actual handler previously reached the owner after
@@ -14,8 +26,10 @@ startup/five compiles change only frmProduction among283 components. Static
 metrics/28 caps are unchanged; three schemas/377 parses pass. No control or tracking
 catalog entry is added. New-hash smoke86 and layout18 requested pairs/six activated
 pages/two actual sizes pass; all six PNGs exactly match reviewed empty-form captures.
-Preservation/closure/delayed audits pass. Later yields, closed-workbook entry,
-partial submissions, new-hash Check In/live-role/full-chain and full acceptance
+Preservation/closure/delayed audits pass. New-hash full-chain32/live-role48/warehouse
+creation15 also preserve all prior ordered PASS results and pass restoration,
+pin preservation, closed Excel and delayed audit. Later yields, closed-workbook
+entry, partial submissions, new-hash Check In and full acceptance
 remain open. Exact evidence is in
 `tests/integration/plan022_slice4be_production_complete_results.md`.
 
