@@ -1,7 +1,19 @@
 # Production form tracking coverage audit
 
-Version 1.174. Last reviewed:2026-10-02 UTC, chain stage-exit tooling RED/GREEN;
+Version 1.175. Last reviewed:2026-10-02 UTC, Complete Run native closure verification;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Unchanged entry02 passes258/258, retaining206 prior ordered checks and adding52
+assertions for native closure at entry, pending yield and both inventory-read
+returns. The entry form survives and one actual Complete Run click visibly refuses
+the stale binding; its capture was reviewed. In-action closure dismisses the
+form; no dismissed controls are queried or recreated. Each handler returns once,
+with no later reads, reinitialization, inventory changes or redirected activity.
+Owner state, saved operator bytes and the decoy are preserved. Five compiles,
+settings/package preservation, natural closure/delayed zero native audit pass.
+Static metrics/28 caps stay unchanged; three schemas/381 parses pass. This is
+verification-only evidence, not tracking integration or full acceptance. Worksheet
+completion/interruption and partial-submission facts remain the next coverage gaps.
 
 The actual chain-prefix test proves Admin Excel remains before the next source
 stage: tooling RED3 PASS/1 expected FAIL, then GREEN4/4 after the existing cleanup

@@ -1,6 +1,18 @@
 # invSys Form Controls v1
 
-**Version:** 1.434 (Chain stage-exit tooling RED/GREEN; full acceptance pending)
+**Version:** 1.435 (Complete Run native closure verification; full acceptance pending)
+
+Reusable Complete Run native workbook closure now passes258/258 on unchanged
+entry02, retaining206 prior ordered checks. The52 added assertions cover entry,
+pending UI yield and both inventory-read returns. Entry retains a visible form
+and one actual click refuses stale binding; its capture was reviewed. In-action
+closure dismisses the form, without reinitialization or queries of dismissed
+controls. Every case preserves owner state, exact inputs, saved operator bytes
+and the decoy, with no later reads or redirected activity. Five compiles, package/
+settings preservation, natural closure and delayed zero native audit pass. Static
+metrics/28 caps remain unchanged; three schemas/381 parses pass. This adds test
+evidence only; Complete Run observations, worksheet/partial-submission coverage,
+populated/multiline usability and full Slice4be acceptance remain open.
 
 The original chain advances after Admin Quit while that Excel process is still
 exiting. The focused actual-prefix test records tooling RED3 PASS/1 expected FAIL;

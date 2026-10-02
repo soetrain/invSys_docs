@@ -438,6 +438,18 @@ all prior ordered checks, normal unassisted closure, package preservation, resto
 settings/reports and delayed zero native audit. Earlier failure evidence remains;
 full Slice4be acceptance and Complete Run's remaining coverage are not established.
 Static metrics/28 caps are unchanged, with three schemas/380 parses passing.
+Native closure verification,2026-10-02: unchanged entry02 passes258/258, preserving
+all206 prior ordered checks and adding52 assertions through the actual handler.
+At entry the form survives workbook closure and visibly refuses the stale binding
+on one delivered click. At the pending yield and two inventory-read returns,
+native closure dismisses the form; no dismissed controls are queried or recreated.
+Every case returns with zero later reads/reinitializations and preserves owner
+state, exact inputs, saved operator bytes and the unrelated workbook. No activity
+is redirected. One surviving-form refusal capture was reviewed. Five compiles,
+settings/package preservation, natural closure and delayed zero native audit pass;
+static metrics/28 caps are unchanged, with three schemas/381 parses passing.
+This adds evidence under the existing contract only; worksheet completion,
+partial-submission facts, observations and full acceptance remain open.
 Existing completion
 validation, one selected Process and captured context/Core permission rules remain
 authoritative. Exact evidence is in
