@@ -1,6 +1,17 @@
 # invSys Form Controls v1
 
-**Version:** 1.424 (Complete Run multi-Process boundary and Check In regression verified; broader acceptance pending)
+**Version:** 1.425 (Complete Run broader packaged gates verified; full acceptance pending)
+
+Unchanged complete-selection01 passes smoke86/86, full-chain32/32, live-role48/48
+and warehouse creation15/15, retaining prior ordered PASS results. Layout covers
+18 requested size/page pairs, six activated/maximized pages and two actual sizes;
+all six new captures were individually reviewed with representative geometry
+preserved. Settings/packages/tracked reports are preserved or restored, Excel
+closed and delayed native audits zero. These empty Run List/Settings views do not
+close populated scrolling or multiline acceptance. Exact controllers/times are in
+`tests/integration/plan022_slice4be_production_complete_results.md`. No tracking
+control or contract changes here; interruption/partial-submission tests, Complete
+Run observations and full human/NAS acceptance remain open.
 
 Unchanged complete-selection01 preserves all629 Check In checks and expands the
 completion gate to68/68, retaining its59 prior checks. The selected Process alone
@@ -9,8 +20,8 @@ incomplete. Shared42/five compiles, preservation, normal closure/delayed zero
 audits and static three schemas/377 parses pass. Three completion captures were
 reviewed; the second output row is only partly visible in the populated capture.
 Scrolling/usability and full populated layout remain unverified. This test-only
-checkpoint adds no tracking control or new runtime behavior. Packaged smoke,
-layout, live-role/full-chain and remaining completion observations stay open.
+checkpoint adds no tracking control or new runtime behavior. The broader gates
+subsequently passed above; remaining completion observations stay open.
 
 Complete Run's actual packaged handler on activity03 consumed inventory with no
 Process selected (55 PASS/4 FAIL). Under existing D15, complete-selection01 now
@@ -20,7 +31,7 @@ pass59/59; both captures, shared42/five instrumented compiles, new-candidate pin
 normal closure/delayed zero audit and separate cold startup/five compiles pass.
 Only frmProduction changes among283 packaged components. No tracking control is
 added. The newer checkpoint adds a multi-Process case and Check In regression;
-other gates remain pending. Historical activity03 evidence alone does not establish new-candidate acceptance.
+the broader gates subsequently passed above. Historical activity03 evidence alone does not establish new-candidate acceptance.
 Static evidence has one fewer runtime line and unchanged procedure/dynamic-call
 counts; three schemas/377 parses and28 non-growing module caps pass.
 

@@ -4762,8 +4762,8 @@ Each Recipe version declares:
   Static metrics retain procedures/dynamic calls with one fewer runtime line;
   three schemas/377 PowerShell parses and all28 non-growing module caps pass.
   This corrects implementation to D15; it introduces no whole-run alternative or
-  Complete Run activity contract. Broader regressions, multi-Process completion
-  and full Release1 acceptance on the new candidate remain pending.
+  Complete Run activity contract. Subsequent focused and broader verification is
+  recorded below; full Release1 acceptance on the new candidate remains pending.
   Follow-up verification on the unchanged candidate retains all629 Check In
   checks and expands the completion gate to68/68, preserving its59 earlier
   checks. A two-Process fixture proves only the selected, allocated Process
@@ -4771,8 +4771,15 @@ Each Recipe version declares:
   Exact selected inputs/output, custom workbook values, five compiles, static
   limits, three reviewed captures and normal closure/delayed zero audits pass.
   The second output row is only partly visible in the populated capture;
-  populated-list scrolling/usability remains unverified. Smoke/layout/live-role/
-  full-chain, interruption/partial-submission and tracking evidence remain open.
+  populated-list scrolling/usability remains unverified. Broader verification on
+  the same pins passes smoke86/86, full-chain32/32, live-role48/48 and warehouse
+  creation15/15, preserving prior ordered PASS results. Layout18 requested pairs/
+  six activated pages/two actual sizes preserves geometry; six new empty Run List/
+  Settings captures were reviewed. Settings/packages/tracked reports are preserved
+  or restored, Excel closed and delayed native audits zero. These captures do not
+  establish populated scrolling or multiline acceptance. Exact evidence is in
+  `tests/integration/plan022_slice4be_production_complete_results.md`.
+  Interruption/partial-submission, tracking and full human/NAS acceptance remain open.
 - The selected Process's ordered instructions are visible on Production Run -
   List during allocation, Check In, and completion. The acceptable-inventory
   list shows at least eight ordinary rows at the default form size.

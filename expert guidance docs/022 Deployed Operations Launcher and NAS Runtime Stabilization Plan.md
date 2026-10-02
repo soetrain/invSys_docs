@@ -2,6 +2,18 @@
 
 **Status:** Current corrective implementation plan
 
+Complete Run broader gates,2026-10-01 UTC: unchanged complete-selection01 passes
+packaged smoke86/86, layout18 requested size/page pairs with six reviewed captures,
+full-chain32/32, live-role48/48 and warehouse creation15/15. Prior ordered PASS
+results and representative geometry are preserved, with settings/packages/report
+restoration, closed Excel and delayed zero native audits. Controls1.425/coverage1.165
+record this evidence-only checkpoint; the exact controllers/times are in
+`tests/integration/plan022_slice4be_production_complete_results.md`. Empty Run List/
+Settings captures do not establish populated scrolling or multiline acceptance.
+Next: Complete Run owner interruption/partial-submission tests under D18's captured
+binding and truthful outcome rules, then observation integration. Full human/NAS
+acceptance remains open; no new contract or product RED is claimed.
+
 Complete Run follow-up,2026-10-01 UTC: unchanged complete-selection01 preserves
 all629 Check In checks and passes68/68 completion checks, retaining all59 prior
 identities/PASS results. The two-Process fixture proves selected-only completion
@@ -10,9 +22,9 @@ and the batch incomplete. Shared42/five compiles, pins/settings preservation,
 normal closure/delayed zero audits, three reviewed completion captures and static
 three schemas/377 parses pass without runtime growth. Controls1.424/coverage1.164
 record test-only verification. The partly visible second output row needs a
-populated-list scrolling/usability check. Next: packaged smoke, layout, live-role/
-full-chain on the new hashes, then remaining owner interruption/partial-submission
-and tracking work. No new runtime behavior or product RED is claimed here.
+populated-list scrolling/usability check. The broader gates subsequently passed
+above; owner interruption/partial-submission and tracking work remain open.
+No new runtime behavior or product RED is claimed here.
 
 Complete Run D15 prerequisite,2026-10-01 UTC: the actual packaged
 `mBtnManagerApplyOutput_Click` confirms that empty selection reaches the whole-run
@@ -24,8 +36,8 @@ delayed zero native audit pass. Cold startup/five compiles preserve282 of283
 components; only frmProduction changes. This is a D15 implementation correction,
 not a new contract or Complete Run tracking integration. Controls1.423/coverage1.163
 record the boundary. Check In629 and a focused multi-Process case were subsequently
-verified above. Packaged smoke, layout and live-role/full-chain remain required before
-tracking integration. Exact writer IDs and partial submissions still need coverage.
+verified above, followed by packaged smoke, layout and live-role/full-chain.
+Exact writer IDs and partial submissions still need coverage before tracking integration.
 Static evidence retains290 components/6175 procedures,9 literal/45 unresolved
 calls and190 duplicate candidates;135521 lines is one fewer. Three schemas/
 377 parses and28 non-growing module caps pass.

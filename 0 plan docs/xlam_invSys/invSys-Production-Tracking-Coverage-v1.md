@@ -1,7 +1,18 @@
 # Production form tracking coverage audit
 
-Version 1.164. Last reviewed:2026-10-01 UTC, Complete Run multi-Process and Check In regressions verified;
+Version 1.165. Last reviewed:2026-10-01 UTC, Complete Run broader packaged regressions verified;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Unchanged complete-selection01 now passes smoke86/86, full-chain32/32, live-role48/48
+and warehouse creation15/15 with prior ordered PASS results retained. Layout18
+requested size/page pairs/six activated pages/two actual sizes preserves geometry;
+all six new captures were reviewed. Settings/packages/tracked reports restored or
+preserved, Excel closed and delayed native audits zero. These empty Run List and
+Settings captures do not close populated-list scrolling or multiline acceptance.
+See `tests/integration/plan022_slice4be_production_complete_results.md` for exact
+controllers/times. This evidence-only checkpoint adds no instrumented control;
+Complete Run owner interruptions, partial submissions and observation integration
+remain open, together with full human/NAS acceptance.
 
 Unchanged complete-selection01 retains629/629 Check In checks and expands the
 completion baseline59 to68/68. Only the selected Process completes, consuming
@@ -10,8 +21,8 @@ and the batch incomplete. Shared42/five compiles, preservation, unassisted closu
 delayed zero audits and static three schemas/377 parses pass. Three completion
 captures were reviewed. The partly visible second output row needs scrolling/
 populated-list usability evidence. No runtime change or product RED is claimed.
-Smoke/layout/live-role/full-chain and owner interruption/partial-submission
-evidence remain pending. Complete Run still has no observation integration.
+Smoke/layout/live-role/full-chain subsequently passed above. Owner interruption/
+partial-submission evidence remains pending. Complete Run still has no observation integration.
 
 The Complete Run D15 baseline proves actual empty-selection consumption on
 activity03 (55 PASS/4 FAIL). The form now refuses before note/output staging and
@@ -21,7 +32,7 @@ captures, package/settings preservation and normal closure/delayed zero audit
 pass. Separate cold startup/five compiles show only frmProduction changed among283
 components. Complete Run remains untracked; this is an implementation correction
 under D15. The newer checkpoint supplies Check In629 and a multi-Process case;
-other regressions and full Release1 evidence remain pending.
+broader regressions subsequently passed above; full Release1 acceptance remains pending.
 Static evidence decreases runtime lines by one; procedure/dynamic-call counts
 remain unchanged and three schemas/377 parses/28 non-growing caps pass.
 
