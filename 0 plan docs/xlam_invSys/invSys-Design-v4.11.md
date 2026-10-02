@@ -416,6 +416,16 @@ preserves saved bytes; settings/reports/packages are restored. This is neither
 product RED nor desktop error5. The native failure requires investigation before
 chain acceptance. Closed-workbook, worksheet interruption, partial-submission and
 completion acceptance remain pending.
+Subsequent diagnostic comparison: a second broad chain repeats that native
+failure. Existing same-session controls pass35/35 both traced and untraced; a
+diagnostic-only Full option retains all ordered live-role checks and passes48/48
+untraced. All three preserve prior checks, close normally, restore settings and
+retain report/package bytes with zero delayed native events. Core/Inventory
+Domain compiled-source hashes are unchanged. These results do not prove a native
+repair or full-chain acceptance; investigate the preceding Admin/source-creation
+context before another broad attempt. The hypothesis introduces no architectural
+exception or runtime change.
+Static verification retains all metrics/28 caps and passes three schemas/379 parses.
 Existing completion
 validation, one selected Process and captured context/Core permission rules remain
 authoritative. Exact evidence is in

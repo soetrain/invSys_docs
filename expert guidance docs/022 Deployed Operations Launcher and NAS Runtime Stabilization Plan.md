@@ -2,6 +2,22 @@
 
 **Status:** Current corrective implementation plan
 
+Projection-crash isolation,2026-10-02 UTC: entry02 repeats the same native failure
+in two broad chains, retaining each failed run and assisted recovery/restoration
+evidence. The existing same-session ordered-live control passes35/35 both traced
+and untraced. Its diagnostic-only Full mode retains all48 assertions and passes
+48/48 untraced, with normal closure, preservation and delayed zero native audits.
+Core/Inventory Domain compiled-source hashes match the prior passing candidate.
+No runtime or contract change, new product RED or native-cause repair is claimed.
+Next isolate the preceding packaged Admin/source Create Warehouse context with
+actual helpers and process/lifecycle observations; do not repeat the broad chain
+unchanged or substitute standalone48 for chain acceptance. Controls1.433 and
+coverage1.173 record this evidence and its limits. Diagnostic fixture generation,
+logging and child-launch differences also remain; Admin setup is not isolated
+as a cause by these results.
+Static metrics and28 caps remain unchanged; three schemas/379 parses pass for
+the diagnostic-only Full option. No package rebuild or product fix is claimed.
+
 Complete Run entry correction,2026-10-02 UTC: the actual handler delegates to a
 typed guard helper, suppressing loading/busy entry and retaining the outer guard
 across completion. Unpromoted entry02 passes185/185 with all prior169 passes
@@ -9,7 +25,7 @@ preserved, three reviewed captures, shared42/five compiles and preservation/norm
 closure/delayed zero audit. Cold build changes only the form among283 old
 components and adds the helper. Static adds one small module/procedure and25 lines;
 all28 oversized caps and9/45 calls remain unchanged, three schemas/379 parses pass.
-Controls1.432/coverage1.172 add test-only error restoration/recovery evidence:
+Controls1.432/coverage1.172 added test-only error restoration/recovery evidence:
 unchanged entry02 passes206/206, preserving all185 prior ordered passes. All five
 error fields and restored guards reach the caller; a separate click completes
 once without reopening/resetting flags. Two new captures were reviewed; the fault

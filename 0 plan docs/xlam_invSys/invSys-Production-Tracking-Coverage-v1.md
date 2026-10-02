@@ -1,7 +1,17 @@
 # Production form tracking coverage audit
 
-Version 1.172. Last reviewed:2026-10-02 UTC, Complete Run error recovery evidence;
+Version 1.173. Last reviewed:2026-10-02 UTC, projection-crash diagnostic comparison;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Two entry02 broad chains fail at the same native projection-rebuild call. The
+focused ordered-live control passes35/35 traced and35/35 untraced; its new Full
+mode retains all48 ordered live-role assertions and passes48/48 without tracing.
+Prior checks, normal closure, settings/report/package preservation and delayed
+zero native audits pass in all three controls. This changes diagnostic tooling
+only; coverage and runtime contracts are unchanged. The preceding Admin/source
+creation context remains an unproven hypothesis. Investigate before another broad
+chain; standalone48 is not chain acceptance or a native-crash repair.
+Static metrics and28 caps remain unchanged; three schemas/379 parses pass.
 
 The actual handler's typed guard now passes185/185 on entry02, preserving all169
 prior passes. Loading/busy entry is suppressed and nested work preserves the outer

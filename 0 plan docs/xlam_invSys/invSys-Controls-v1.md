@@ -1,6 +1,18 @@
 # invSys Form Controls v1
 
-**Version:** 1.432 (Complete Run error recovery evidence; full acceptance pending)
+**Version:** 1.433 (Projection-crash diagnostic comparison; full acceptance pending)
+
+Two entry02 full chains fail at the same native projection-rebuild boundary.
+The established same-session diagnostic passes35/35 with tracing and35/35 without;
+its new Full option retains all ordered live-role assertions and passes48/48
+untraced. All three controls retain prior ordered checks, close normally, preserve
+settings/packages/reports and pass delayed zero native audits. They add no control,
+wording, observation or runtime change and do not explain the native crash.
+Investigate the preceding Admin/source-creation context before another broad chain;
+standalone48 does not establish chain acceptance. Exact receipts are in the
+Complete Run integration record.
+Static metrics and28 caps remain unchanged, with three schemas/379 parses passing
+for the diagnostic-only Full option; no runtime fix or rebuild is claimed.
 
 The typed Complete Run entry guard now suppresses loading/busy entry and retains
 the outer action across yields. Unpromoted entry02 passes185/185, preserving all
