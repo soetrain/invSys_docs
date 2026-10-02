@@ -400,8 +400,23 @@ captures, shared42/five compiles, preservation and normal closure/delayed zero
 audit pass. Cold build preserves282 old components, changes the form and adds one
 helper. Static growth is one small module/procedure and25 lines; oversized caps
 and dynamic calls are unchanged, with three schemas/379 parses passing.
-New-candidate regressions, forced-error restoration and broader completion
-acceptance remain pending. Existing completion
+Test-only expansion on unchanged entry02 passes206/206, retaining all185 prior
+ordered passes. A forced error at the real reusable pending yield reaches the
+caller with all five error fields unchanged and guards restored; boundary state
+and exact inputs are preserved. A separate click completes once without reopening
+or resetting flags. Two captures were reviewed; the fault still displays the
+pending message, not a new operator error presentation. Check In629 retains all
+prior ordered passes. Both gates preserve packages/settings and close normally
+with delayed zero native audits. Static metrics/caps are unchanged, with three
+schemas/379 parses passing. Same-candidate smoke86 and layout18 pairs pass; six
+images match previously reviewed captures. The chain fails with a native Excel
+crash during canonical inventory projection rebuild: warehouse15 passes, live-role
+32 PASS/1 harness failure, chain5 PASS/1 harness failure. Assisted fixture cleanup
+preserves saved bytes; settings/reports/packages are restored. This is neither
+product RED nor desktop error5. The native failure requires investigation before
+chain acceptance. Closed-workbook, worksheet interruption, partial-submission and
+completion acceptance remain pending.
+Existing completion
 validation, one selected Process and captured context/Core permission rules remain
 authoritative. Exact evidence is in
 `tests/integration/plan022_slice4be_production_complete_results.md`.

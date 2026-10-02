@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.171. Last reviewed:2026-10-02 UTC, Complete Run entry guard focused GREEN;
+Version 1.172. Last reviewed:2026-10-02 UTC, Complete Run error recovery evidence;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
 
 The actual handler's typed guard now passes185/185 on entry02, preserving all169
@@ -8,8 +8,21 @@ prior passes. Loading/busy entry is suppressed and nested work preserves the out
 action's successful result. Three captures, shared42/five compiles, preservation/
 normal closure/delayed zero audit pass. One helper is added and only the form
 changes among old compiled components. Static adds one module/procedure/25 lines,
-with unchanged28 caps/9/45 calls and three schemas/379 parses passing. New-hash
-regressions and forced-error/closed-book/partial-submission evidence remain pending.
+with unchanged28 caps/9/45 calls and three schemas/379 parses passing.
+Test-only expansion now passes206/206 on unchanged entry02, retaining all185
+prior ordered passes. The actual handler preserves all five error fields and
+restores guards after a forced pending-yield error; a separate click completes
+once without reopening/resetting flags. Two captures were reviewed; the fault
+retains the pending message, with no new operator error presentation claimed.
+Check In629 retains every prior ordered pass. Both gates preserve packages/settings
+and close normally with delayed zero native audits; static metrics/caps and three
+schemas/379 parses remain unchanged. Same-candidate smoke86/layout18 pairs pass;
+six images match prior reviewed captures byte for byte. The chain has native-crash
+failure evidence at canonical projection rebuild: warehouse15 PASS, live-role32
+PASS/1 harness failure, chain5 PASS/1 harness failure. Assisted fixture cleanup
+preserves saved bytes and restores settings/reports/packages; neither product RED
+nor desktop error5 is claimed. Investigate before another chain attempt.
+Closed-book, worksheet interruption and partial-submission evidence remain pending.
 Complete Run remains untracked; this is not full acceptance.
 
 D13 expansion covers actual Complete Run loading/busy entry and recursive

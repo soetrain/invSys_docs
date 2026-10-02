@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.431 (Complete Run entry guard focused GREEN; full acceptance pending)
+**Version:** 1.432 (Complete Run error recovery evidence; full acceptance pending)
 
 The typed Complete Run entry guard now suppresses loading/busy entry and retains
 the outer action across yields. Unpromoted entry02 passes185/185, preserving all
@@ -9,8 +9,24 @@ checked-in staging/message for suppressed entry and retained outer success for
 the nested case. Shared42/five compiles, preservation, normal closure/delayed zero
 audit pass. Cold build adds one helper and changes only the form; static accounts
 for one module/procedure and25 lines, with unchanged28 caps/9/45 calls and three
-schemas/379 parses passing. No caption, control or observation is added. New-hash
-regressions and forced-error/closed-book/partial-write evidence remain pending.
+schemas/379 parses passing. No caption, control or observation is added.
+
+Test-only error/recovery expansion passes206/206 on unchanged entry02, retaining
+all185 prior ordered passes. The actual handler propagates all five original
+error fields and restores guards; boundary state and exact inputs are preserved.
+A separate click completes once without reopening/resetting flags. Two new
+captures were reviewed: fault retains READY rows and the pending saving message;
+recovery shows COMPLETE rows and success. This is not new operator error
+presentation. Check In629 also retains every prior ordered pass. Both gates pass
+shared42/five compiles, preservation, natural shutdown and delayed zero native
+audits. Static metrics/caps remain unchanged, with three schemas/379 parses.
+Same-candidate smoke86/layout18 pairs pass; six images are byte-identical to prior
+reviewed captures. Chain acceptance fails after a native Excel crash during
+canonical projection rebuild: warehouse15 PASS, live-role32 PASS/1 harness failure,
+chain5 PASS/1 harness failure. Assisted fixture cleanup preserves saved bytes and
+restores settings/reports/packages. This is not product RED or desktop error5;
+investigate before a new chain attempt. Closed-book/worksheet interruption and
+partial-write evidence remain pending; Complete Run is still untracked.
 
 Architecture's D18 Complete Run clarification requires loading/busy/nested entry
 to leave owner staging, inventory and the active action's message untouched. A

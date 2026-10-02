@@ -9,8 +9,21 @@ preserved, three reviewed captures, shared42/five compiles and preservation/norm
 closure/delayed zero audit. Cold build changes only the form among283 old
 components and adds the helper. Static adds one small module/procedure and25 lines;
 all28 oversized caps and9/45 calls remain unchanged, three schemas/379 parses pass.
-Controls1.431/coverage1.171 record focused correction, with new-candidate regressions,
-forced-error restoration, closed-book/partial-write proofs and observations pending.
+Controls1.432/coverage1.172 add test-only error restoration/recovery evidence:
+unchanged entry02 passes206/206, preserving all185 prior ordered passes. All five
+error fields and restored guards reach the caller; a separate click completes
+once without reopening/resetting flags. Two new captures were reviewed; the fault
+retains its pending message rather than introducing operator error presentation.
+Check In629 also retains all prior ordered passes. Both gates preserve packages/
+settings, close normally and pass delayed zero native audits. Static metrics/caps
+remain unchanged with three schemas/379 parses. Same-candidate smoke86/layout18
+pairs pass, with six byte-identical previously reviewed images. Chain acceptance
+does not pass: native Excel failure during canonical projection rebuild leaves
+warehouse15 PASS, live-role32 PASS/1 harness failure and chain5 PASS/1 harness
+failure. Saved fixture bytes survive assisted cleanup; settings/reports/packages
+are restored. Preserve this failure and investigate before another chain attempt;
+it is neither product RED nor desktop error5. Closed-book/worksheet interruption,
+partial-write proofs and observations remain pending.
 Exact build failure/recovery and GREEN evidence is in the Complete Run integration record.
 
 Complete Run action-entry prerequisite,2026-10-02 UTC: apply D18's existing
