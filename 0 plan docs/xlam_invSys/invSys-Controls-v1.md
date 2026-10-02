@@ -1,6 +1,19 @@
 # invSys Form Controls v1
 
-**Version:** 1.427 (Complete Run later-interruption RED established; full acceptance pending)
+**Version:** 1.428 (Complete Run interruption correction verified; full acceptance pending)
+
+Unpromoted complete-continuation01 passes150/150 through the actual Complete Run
+handler and true owner-entry probes. Existing captured-context/Core capability
+checks now continue after the pending UI yield and through selected-Process Check
+In reads. All six sign-out/permission interruptions preserve boundary owner state,
+projection and exact input balances; the pending-yield cases never enter the owner.
+The existing context/permission refusal messages are legible in six reviewed
+captures. Shared42/five compiles, preservation, normal closure/delayed zero audit
+pass. Cold build changes three of283 components; static adds one method/nine lines
+in the small action class, with28 unchanged oversized caps, unchanged9/45 calls
+and three schemas/378 parses passing. No control, wording, catalog entry or
+observation is added. New-candidate regressions, closed-book/reentry/partial-write
+evidence and full acceptance remain pending.
 
 On unchanged complete-binding01, the actual handler's six sign-out/capability-loss
 interruptions yield126 PASS/24 FAIL/150 with all89 prior ordered checks preserved.
@@ -10,7 +23,8 @@ Exact input balances remain unchanged. Six new captures, shared42/five compiles,
 fixture/settings/package preservation, unassisted closure/delayed zero audit and
 static three schemas/378 parses pass. D18/D-NAS require the captured context and
 existing Core capability checks to continue across those boundaries; no new
-control/catalog/permission or rollback contract is introduced. Correction/GREEN,
+control/catalog/permission or rollback contract is introduced. Correction/GREEN is
+recorded above;
 closed-workbook entry, reentrancy and partial-submission evidence remain pending.
 See `tests/integration/plan022_slice4be_production_complete_results.md`.
 

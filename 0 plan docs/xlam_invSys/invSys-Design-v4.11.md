@@ -304,8 +304,22 @@ may still read an authored guide, whose provenance remains visible.
   three schemas/378 parses pass. Carrying existing captured-context/Core capability
   checks through these boundaries constrains this rule under semantic inheritance;
   no new observation, authority, permission or rollback contract is introduced.
-  The correction/GREEN, closed-workbook entry, reentrancy and partial-submission
-  proof remain open; exact evidence is in the same integration record.
+  Correction verification,2026-10-02: unpromoted complete-continuation01 passes
+  150/150 through the actual handler with owner counters before the first guard.
+  An owner-only binding on the existing action context rechecks captured context
+  and current Core capability at entry, after the pending UI yield and through
+  the existing selected-Process Check In read continuation. It creates no activity.
+  All six interruptions preserve owner/projection state at the boundary and exact
+  input balances; pending-yield interruption never enters the completion owner.
+  Six new refusal captures, shared42/five compiles, preservation, unassisted closure
+  and delayed zero native audit pass. Cold build changes exactly three of283
+  components. Static adds one small-class method/nine lines for owner-only binding;
+  all28 oversized module caps and dynamic-call counts remain unchanged. Three
+  schemas/378 parses pass. This is accounted implementation growth under existing
+  semantic inheritance, not a new contract or a maintenance-cap exception.
+  New-candidate broader regressions, closed-workbook entry, reentrancy, later
+  partial submissions and tracking acceptance remain open; exact evidence is in
+  the same integration record.
 - Preserve exact source identities and immutable System_Key, every contributing
   event line, and unknown user columns through normalized header lookup.
   ActivityId, SequenceId and ActionPathId identify only their own records.

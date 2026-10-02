@@ -2,6 +2,21 @@
 
 **Status:** Current corrective implementation plan
 
+Complete Run interruption correction,2026-10-02 UTC: unpromoted
+complete-continuation01 passes150/150 with true owner-entry probes, retaining all
+150 identities and126 prior RED passes. Existing captured context/Core capability
+checks now continue through the pending UI yield and selected-Process Check In
+reads. An owner-only action binding creates no observation. All six interruptions
+preserve boundary staging/projection and exact inputs; pending-yield interruptions
+never enter the owner. Six reviewed captures, shared42/five compiles, preservation,
+normal closure/delayed zero audit pass. Cold build changes three of283 components.
+Static adds one small-class method/nine lines; all28 oversized caps and9/45 dynamic
+calls remain unchanged, with three schemas/378 parses passing. Controls1.428 and
+coverage1.168 record existing D18/D-NAS enforcement, not new tracking acceptance.
+Next: new-candidate Check In and broader regressions, then closed-book/reentry and
+partial-submission evidence before observation integration. Exact evidence:
+`tests/integration/plan022_slice4be_production_complete_results.md`.
+
 Complete Run interruption RED,2026-10-02 UTC: unchanged complete-binding01 passes126/
 fails24 of150, preserving all89 prior ordered passes. Six real pending-UI/read-return
 interruptions apply sign-out or revoke current Core Production capability; owner
@@ -10,8 +25,7 @@ remain unchanged. D18 binding and D-NAS Core authorization govern this correctio
 Six reviewed captures, shared42/five compiles, restored fixture/settings, package
 preservation, unassisted closure/delayed zero audit and static three schemas/378
 parses pass. Controls1.427/coverage1.167 record RED, not a fix or tracking acceptance.
-Next: carry existing captured-context/Core capability continuation through the
-tested completion boundaries, then prove GREEN. No new activity contract is
+The continuation correction and GREEN are recorded above. No new activity contract is
 introduced. New-hash chain32/live-role48/create15 also passed below. Exact evidence:
 `tests/integration/plan022_slice4be_production_complete_results.md`.
 

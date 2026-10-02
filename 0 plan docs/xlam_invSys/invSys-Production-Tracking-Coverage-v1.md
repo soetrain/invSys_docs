@@ -1,7 +1,18 @@
 # Production form tracking coverage audit
 
-Version 1.167. Last reviewed:2026-10-02 UTC, Complete Run interruption RED verified;
+Version 1.168. Last reviewed:2026-10-02 UTC, Complete Run interruption correction verified;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Unpromoted complete-continuation01 passes150/150 with true owner-entry probes and
+all prior identities/PASS results retained. The existing captured-context/Core
+capability continuation now protects pending UI yield and selected-Process Check
+In reads, without creating activity. Six interruptions preserve boundary owner/
+projection state and exact inputs; pending-yield cases never enter the owner.
+Six new refusal captures, shared42/five compiles, preservation and natural closure/
+delayed zero audit pass. Cold build changes three of283 components. Static adds
+one small-class method/nine lines;28 oversized caps and9/45 calls are unchanged;
+three schemas/378 parses pass. Complete Run remains untracked. New-candidate
+regressions, closed-book/reentry and partial-submission proofs remain open.
 
 Test-only interruption expansion on complete-binding01 yields126 PASS/24 FAIL/150
 while preserving all89 prior checks. Sign-out/current Core capability loss after
@@ -9,8 +20,8 @@ the real pending UI yield or AvailableQuantity/EntityKind reads changes owner
 staging/projection before writer refusal; exact inputs remain unchanged. All six
 new captures were reviewed. Shared42/five compiles, fixture/settings/package
 preservation, normal closure/delayed zero audit and static three schemas/378 parses
-pass. No runtime or tracking integration changed. D18/D-NAS continuation correction
-and GREEN are next; closed-book/reentry/partial-submission proofs remain open.
+pass. That test-only expansion changed no runtime or tracking integration; the
+D18/D-NAS continuation correction and GREEN are recorded above.
 Exact evidence: `tests/integration/plan022_slice4be_production_complete_results.md`.
 
 The actual Complete Run handler now checks its captured binding before either
