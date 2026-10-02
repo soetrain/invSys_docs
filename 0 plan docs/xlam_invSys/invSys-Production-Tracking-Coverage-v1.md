@@ -1,7 +1,16 @@
 # Production form tracking coverage audit
 
-Version 1.170. Last reviewed:2026-10-02 UTC, Complete Run action-entry RED verified;
+Version 1.171. Last reviewed:2026-10-02 UTC, Complete Run entry guard focused GREEN;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+The actual handler's typed guard now passes185/185 on entry02, preserving all169
+prior passes. Loading/busy entry is suppressed and nested work preserves the outer
+action's successful result. Three captures, shared42/five compiles, preservation/
+normal closure/delayed zero audit pass. One helper is added and only the form
+changes among old compiled components. Static adds one module/procedure/25 lines,
+with unchanged28 caps/9/45 calls and three schemas/379 parses passing. New-hash
+regressions and forced-error/closed-book/partial-submission evidence remain pending.
+Complete Run remains untracked; this is not full acceptance.
 
 D13 expansion covers actual Complete Run loading/busy entry and recursive
 handler invocation at its real pending UI yield. Architecture's D18 clarification
@@ -11,11 +20,12 @@ continuation01 retains all150 prior ordered PASS results. Loading/busy consumes
 inventory; nested entry reaches the owner twice and overwrites success with a
 Check In refusal, consuming input once. Three new captures, shared42/five compiles,
 preservation, natural closure/delayed zero audit and unchanged static metrics/28
-caps, three schemas/379 parses pass. Correction/GREEN and forced-error restoration
-remain pending. No runtime or observation integration is claimed; Complete Run
-remains untracked. Exact evidence is in the Complete Run integration record.
+caps, three schemas/379 parses pass. Correction/GREEN is recorded above; forced-error
+restoration remains pending. This RED expansion itself changed no runtime or
+observation integration. Complete Run remains untracked. Exact evidence is in the
+Complete Run integration record.
 
-Same-candidate Check In629/smoke86 retain all prior ordered PASS results. Layout
+On complete-continuation01, Check In629/smoke86 retain all prior ordered PASS results. Layout
 retains18 requested pairs across six pages, five native transitions and two actual
 sizes; six PNGs exactly match previously reviewed empty-form captures. Preservation,
 natural shutdown and delayed zero audits pass. Check In captures were regenerated

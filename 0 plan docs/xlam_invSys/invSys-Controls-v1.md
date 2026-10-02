@@ -1,6 +1,16 @@
 # invSys Form Controls v1
 
-**Version:** 1.430 (Complete Run action-entry RED verified; full acceptance pending)
+**Version:** 1.431 (Complete Run entry guard focused GREEN; full acceptance pending)
+
+The typed Complete Run entry guard now suppresses loading/busy entry and retains
+the outer action across yields. Unpromoted entry02 passes185/185, preserving all
+169 prior passes and fixing16 failures. Three reviewed captures show unchanged
+checked-in staging/message for suppressed entry and retained outer success for
+the nested case. Shared42/five compiles, preservation, normal closure/delayed zero
+audit pass. Cold build adds one helper and changes only the form; static accounts
+for one module/procedure and25 lines, with unchanged28 caps/9/45 calls and three
+schemas/379 parses passing. No caption, control or observation is added. New-hash
+regressions and forced-error/closed-book/partial-write evidence remain pending.
 
 Architecture's D18 Complete Run clarification requires loading/busy/nested entry
 to leave owner staging, inventory and the active action's message untouched. A
@@ -12,8 +22,9 @@ entry consumes inventory; nested entry reaches the owner twice and replaces the
 successful result with a Check In refusal, while consuming input once. Three
 new captures were reviewed. Shared42/five compiles, preservation, natural closure/
 delayed zero audit and unchanged static metrics/28 caps, three schemas/379 parses
-pass. Correction/GREEN and forced-error/closed-book/partial-write evidence remain
-pending; no observation/control/caption/catalog entry or acceptance is added here.
+pass. Correction/GREEN is recorded above; forced-error/closed-book/partial-write
+evidence remains pending. No observation/control/caption/catalog entry or acceptance
+was added by the RED expansion.
 
 On unchanged complete-continuation01, Check In629/629 and packaged smoke86/86
 retain all prior ordered PASS results. Layout retains18 requested size/page pairs,

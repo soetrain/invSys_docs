@@ -2,6 +2,17 @@
 
 **Status:** Current corrective implementation plan
 
+Complete Run entry correction,2026-10-02 UTC: the actual handler delegates to a
+typed guard helper, suppressing loading/busy entry and retaining the outer guard
+across completion. Unpromoted entry02 passes185/185 with all prior169 passes
+preserved, three reviewed captures, shared42/five compiles and preservation/normal
+closure/delayed zero audit. Cold build changes only the form among283 old
+components and adds the helper. Static adds one small module/procedure and25 lines;
+all28 oversized caps and9/45 calls remain unchanged, three schemas/379 parses pass.
+Controls1.431/coverage1.171 record focused correction, with new-candidate regressions,
+forced-error restoration, closed-book/partial-write proofs and observations pending.
+Exact build failure/recovery and GREEN evidence is in the Complete Run integration record.
+
 Complete Run action-entry prerequisite,2026-10-02 UTC: apply D18's existing
 loading/nested-action suppression to the actual completion handler before adding
 observations. Test loading, busy entry and a recursive handler call at the real
@@ -14,8 +25,8 @@ captures, shared42/five compiles, preservation, normal closure/delayed zero audi
 and static three schemas/379 parses pass without runtime growth. Architecture's
 explicit Complete Run clarification constrains the existing rule under semantic
 inheritance, without a new catalog, permission, retry or rollback contract.
-Controls1.430/coverage1.170 record RED. Next: typed entry suppression and a guard
-held through the outer completion, then GREEN; error restoration/closed-book/
+Controls1.430/coverage1.170 record RED; the correction/GREEN is recorded above.
+Error restoration/closed-book/
 partial-submission evidence and observation integration remain open. Exact evidence:
 `tests/integration/plan022_slice4be_production_complete_results.md`.
 

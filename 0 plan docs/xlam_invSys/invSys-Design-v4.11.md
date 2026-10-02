@@ -376,7 +376,7 @@ may still read an authored guide, whose provenance remains visible.
 
 **What is tracked and published:**
 
-**4be.1 Complete Run action-entry prerequisite (D18 clarification; correction pending):**
+**4be.1 Complete Run action-entry prerequisite (D18 clarification; acceptance pending):**
 Loading and entry nested within an active Production action are not independent
 operator completion attempts. The actual Complete Run handler must suppress them
 before staging, owner reads or inventory submission, preserving the state and
@@ -393,8 +393,15 @@ consume inventory; loading also changes its flag. A recursive click reaches the
 completion owner twice and leaves completed output with a Check In refusal,
 although exact inputs are consumed only once. Three new captures, shared42/five
 compiles, preservation, natural closure/delayed zero audit and unchanged static
-metrics/28 caps with three schemas/379 parses pass. Correction/GREEN, forced-error
-restoration and broader completion acceptance remain pending. Existing completion
+metrics/28 caps with three schemas/379 parses pass. The typed completion entry
+helper now suppresses loading/busy calls and holds the outer guard across yields.
+Unpromoted entry02 passes185/185, retaining all169 prior passes; three reviewed
+captures, shared42/five compiles, preservation and normal closure/delayed zero
+audit pass. Cold build preserves282 old components, changes the form and adds one
+helper. Static growth is one small module/procedure and25 lines; oversized caps
+and dynamic calls are unchanged, with three schemas/379 parses passing.
+New-candidate regressions, forced-error restoration and broader completion
+acceptance remain pending. Existing completion
 validation, one selected Process and captured context/Core permission rules remain
 authoritative. Exact evidence is in
 `tests/integration/plan022_slice4be_production_complete_results.md`.
