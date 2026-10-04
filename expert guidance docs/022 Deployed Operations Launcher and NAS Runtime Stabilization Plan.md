@@ -6,7 +6,7 @@
 
 **Status, 2026-10-04:** The user explicitly approved D18-REPLAY-01, including its
 execution boundaries. Architecture's conflicting clauses are amended; Controls
-1.446 is synchronized. Both parts remain required for R1; implementation and
+1.447 is synchronized. Both parts remain required for R1; implementation and
 acceptance are not established by approval.
 
 | Milestone | Deliverable / exit |
@@ -48,17 +48,18 @@ RUN-UI-01 remain separate pending decisions; prior granted approvals stand.
 On actual desktop error 5, record time, stop work, preserve evidence and exit under
 the user's standing instruction. Stale probes/native crashes are different failures.
 
-**Next:** Protect the shared execution interface through B0's packaged Receiving
-record/author/replay/fresh-proof test before implementing its consumers.
+**Next:** Extend the real Receiving record/guide/profile fixture through Run setup,
+target-local entity input, Start Run and fresh exact proof before runner implementation.
 
-Architecture defines B0 profile/run wire v1. Packaged entry RED16 PASS/4 FAIL on
-purpose02 proves a real six-action Receiving recording, exact original application
-and saved guide with SourceEventsApplied conclusion; failures isolate absent
-Configure execution/editor/Run controls. Five disposable compiles pass and closure
-preserves settings/packages. Next extend the same test through inputs/profile save,
-Start Run and fresh exact proof before implementing consumers; empty UI is not B0.
-See `tests/integration/plan022_slice4be_receiving_replay_results.md`. Policy/transfer
-extensions still need their schemas before use; B0/A/B acceptance remains open.
+B0 profile checkpoint: expanded RED16 PASS/13 FAIL -> candidate
+`validation-execution-profile-03` 42 PASS/1 FAIL, retaining every prior GREEN.
+The remaining failure is absent Run How-To. Typed input editing, immutable versions,
+exact guide/conclusion binding, strict refusal, close, three layouts and role/context
+guards pass; published-guide regression58/0, five cold compiles and static ratchets
+pass. Invalid profiles are
+checked before form creation. See `tests/integration/plan022_slice4be_receiving_replay_results.md`.
+New editor observations, visible evidence, execution/verification, policy/transfer
+extensions and broader A gates remain open. No B0/A/B acceptance or deployment.
 
 B0 purpose prerequisite: actual packaged Create Warehouse RED15/8 -> GREEN23;
 layout RED31/4 -> GREEN35 retains all23 checks. Core persists creation-only purpose,

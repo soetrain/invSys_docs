@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.446 -- Shared execution wire and packaged B0 entry RED; replay still open.
+**Version:** 1.447 -- Execution profile authoring focused GREEN; B0 replay still open.
 
 ## Slice 4be acceptance and approved controls contract
 
@@ -18,16 +18,18 @@ B0 exercises Receiving recording -> authored guide/inputs -> real packaged repla
 -> fresh verification before A closes. B0 alone does not accept B. Keep historical
 4be.x identifiers; registration, implementation and acceptance are distinct.
 
-B0 entry on purpose02 is RED16 PASS/4 FAIL: the real six-action Receiving guide and
-its exact original application pass; Configure execution/editor/Run controls are
-missing. See `tests/integration/plan022_slice4be_receiving_replay_results.md`.
-No replay, fresh-run proof or new runtime surface is accepted by this checkpoint.
+B0 profile gate advances from RED16 PASS/13 FAIL to42 PASS/1 FAIL on
+`validation-execution-profile-03`; Run How-To remains absent. Profile save/reopen,
+strict invalid-record refusal, versions, role/context guards and three layouts pass.
+See `tests/integration/plan022_slice4be_receiving_replay_results.md`. New editor
+observations, visible operator evidence and replay/fresh proof remain open.
 
 | Approved surface contract | Operator wording | Protecting packaged behavior |
 |---|---|---|
 | Admin Generate Warehouse | Warehouse purpose: Operational / Training | Closed choice `cboWarehousePurpose`, default Operational; actual Create passes purpose to Core's creation-only Config command. Existing runtime cannot be relabelled; cancel creates nothing. Minimum 620 x 610 points keeps summary below inputs and footer below summary; anchors preserve that order when enlarged. Packaged RED15/8 -> GREEN23; layout RED31/4 -> GREEN35 retains prior23. Visible capture and B0 replay remain open. Generated Training target required for replay; designated Admin rights remain local. |
 | Admin Settings > Event Tracking | Record action / Record user | Actual authorized/versioned save; disabled user overrides capture; control defaults, required audit, history, unknown columns and current target preserved. |
-| Action Paths/profile editor | Configure execution / Training inputs / Expected conclusion | `btnConfigureExecution` opens `frmActionPathExecution` for the selected exact guide; `lblExecutionGuide` identifies its version/hash. `btnSaveExecutionProfile` saves reviewed wire v1 inputs with the guide's authored conclusion. Authoring permission, exact version, typed bindings and strict validation apply; missing inputs prevent dependent dispatch. B0 implementation pending. |
+| Action Paths/profile editor | Configure execution / Training inputs / Expected conclusion | `btnConfigureExecution` validates before opening `frmActionPathExecution`; `lblExecutionGuide` identifies the selected exact version/hash and `lblExecutionProfile` identifies the saved profile. `btnSaveExecutionProfile` saves reviewed wire v1 inputs with the guide's authored conclusion. Authoring permission, typed bindings and strict validation apply. Profile-focused checks pass; replay remains open. |
+| Execution input editor | Step / Input / Binding / Value / Apply input | `lstExecutionSteps` retains exact guide order/StepIds; `cboExecutionInput` lists the selected adapter's declared inputs. `cboExecutionBinding`, `txtExecutionValue` and `btnApplyExecutionInput` edit the typed binding. `btnCloseExecution` discards unsaved edits. B0 entity selection uses the registered target-local prompt; profile save/reopen retains reviewed dummy inputs without executing. Minimum760x620/default900x620; minimum/default/enlarged geometry passes. |
 | Runner setup | Run How-To / Training warehouse / Company | `btnRunHowTo` opens setup only for the exact selected guide/profile; show target/version/rights. Old guides show Execution not configured. `btnStartRun` is the separate execution boundary; B0 implementation pending. |
 | Runner | Start Run / Run all / Step through / Next Step / Stop | Same owner handlers, fresh evidence, one dispatch guard, preserved context and partial effects; stop prevents later dispatch without rollback. |
 | Runner status | Current step / Last result / Run state / Verification result | Distinguish dispatch from business proof; expose failed, partial, unknown and unavailable outcomes. |

@@ -227,7 +227,7 @@ authority non-mutation.
 **Approved, 2026-10-04:** The user explicitly approved D18-REPLAY-01, including
 the execution boundaries below. Both 4be-A and 4be-B are required for R1.
 This decision amends the earlier observation-only restrictions as listed below;
-Plan 022 and Controls 1.446 track the same contract. D19 is unchanged.
+Plan 022 and Controls 1.447 track the same contract. D19 is unchanged.
 Approval authorizes test-first implementation, not deployment or acceptance.
 
 **Delivery and finish line:**
@@ -368,6 +368,21 @@ guide/recording binding; it must select this run's fresh recording. A runner sto
 no independent success Boolean that could override evaluator evidence. Admin result
 index/transfer extensions remain B work; their future schemas must reference these
 identities without weakening source visibility or changing old guide/journal files.
+
+B0 adapter registry v1 uses each registered ControlId as its AdapterId, with
+AdapterVersion1. It covers Receiving Open/Refresh/Clear/Select item/Add selected/
+Confirm writes through their ordinary handlers. Select item takes `SourceEntity`
+(InventoryEntity), bound to the registered `RECEIVING_SOURCE_ENTITY` prompt: choose
+one exact currently available entity in the captured training runtime at setup;
+never serialize its original key into the profile or infer identity from SKU/row.
+Add selected takes `Reference` (RequiredText, 128 characters), `Quantity`
+(PositiveDecimalText, 32 characters, invariant dot, no exponent, at most 10^12),
+`Location` (RequiredText, 128), `LotNumber` (OptionalText, 128), and `Condition`
+(ReceivingCondition: ordinary Receiving choices). Text inputs exclude control
+characters. Decimal text preserves existing JSON
+wire support; validation precedes conversion to the owner's numeric input.
+These B0 inputs use Literal bindings except the entity Prompt; other registered
+bindings/controls remain required B coverage, never silently successful exclusions.
 
 Protect real packaged callbacks with focused RED/GREEN, including permissions,
 training isolation, inputs/identity, context loss, nested entry, partial effects,
