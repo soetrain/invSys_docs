@@ -1,12 +1,13 @@
 # invSys Form Controls v1
 
-**Version:** 1.441 -- Next Batch binding and corrected chain verified; execution approval pending.
+**Version:** 1.443 -- D18-REPLAY-01 approved; implementation and acceptance pending.
 
-## Slice 4be acceptance and proposed controls
+## Slice 4be acceptance and approved controls contract
 
 Architecture v4.11 D18-REPLAY-01 owns behavior; Plan 022 owns sequencing.
-Both 4be-A and 4be-B are required for R1. Existing acceptance below is retained;
-this revision approves no new implementation, control IDs or runtime acceptance.
+Both 4be-A and 4be-B are required for R1. Existing acceptance below is retained.
+The user approved D18-REPLAY-01 on 2026-10-04; this revision records its controls
+contract, not implementation, new control IDs or runtime acceptance.
 
 | Part | Scope / exit |
 |---|---|
@@ -17,7 +18,7 @@ B0 exercises Receiving recording -> authored guide/inputs -> real packaged repla
 -> fresh verification before A closes. B0 alone does not accept B. Keep historical
 4be.x identifiers; registration, implementation and acceptance are distinct.
 
-| Proposed surface | Operator wording | Protecting packaged behavior |
+| Approved surface contract | Operator wording | Protecting packaged behavior |
 |---|---|---|
 | Admin Generate Warehouse | Warehouse purpose: Operational / Training | Default Operational; generated Training target required for replay; designated Admin rights remain local. |
 | Admin Settings > Event Tracking | Record action / Record user | Actual authorized/versioned save; disabled user overrides capture; control defaults, required audit, history, unknown columns and current target preserved. |
@@ -38,6 +39,12 @@ action may disappear from the inventory; unresolved scope exceptions need approv
 Preserve packaged-handler RED/GREEN and actual visible comparison/layout evidence.
 
 ## Existing verified acceptance record
+
+Next Batch catalog26 refinement is specified under existing D18: actual handler
+`mBtnManagerNext_Click`, ID `PRODUCTION_RUN_NEXT_BATCH`, local STAGED only after
+positive owner acknowledgment and refresh. Both reusable and worksheet branches,
+refusal, suppression, policy and captured binding require packaged evidence.
+No observation implementation or acceptance is claimed by this revision.
 
 Next Batch captured-context guard, 2026-10-04: actual packaged handler RED58/12
 becomes GREEN70/70, retaining prior passes and preserving owner/projection on
@@ -4698,7 +4705,7 @@ remain pending. Existing D5 evidence above remains valid.
 | Viewer time/status | **Published**, **Loaded**, **Stale**, **Recorded time (zone unavailable)**, and missing/disabled/excluded source coverage. No false empty-success or invented UTC. |
 | Viewer Action Paths tab | Name, tags, instructions, selected-events summary, path search/results, version/origin/release status, observed-run selection and **How-To**, **Diagnostic**, **Compare both**. Switching preserves path/version/run selection. |
 | How-To editing | Add/remove/reorder selected steps and edit human instructions; **Create Guide from Recording**, **Save**, **Export**, **Import**. Save/export/import require ACTION_PATH_MAINT. **Authored instruction**, **Observed control**, **Business outcome** distinguish provenance; editing never changes observation history. |
-| Diagnostic recording | **Start Recording**, **Stop Recording**, **Cancel Recording**, recording status/counter, expected ordered steps and terminal outcome, **Evaluate**. User performs ordinary permitted role/Admin actions; controls are never replayed. One actor/warehouse sequence may span several forms/submissions. |
+| Diagnostic recording | **Start Recording**, **Stop Recording**, **Cancel Recording**, recording status/counter, expected ordered steps and terminal outcome, **Evaluate**. Recording and Evaluate never dispatch controls. Explicit Run is separately authorized under D18-REPLAY-01. One actor/warehouse sequence may span several forms/submissions. |
 | Diagnostic result | **Conclusion observed**, **Awaiting published result**, **Failed**, **Cancelled**, **Incomplete evidence**; **Interrupted** and **Partial: action limit reached** explain capture completeness. A command-only conclusion says **Command completed; Domain application not asserted**. |
 | Compare both | Same guide version and observed run, How-To instructions beside actual controls/results; matched/missing/extra/failed/unavailable steps. Imported observations say **Origin evidence** and cannot prove a local run. |
 | Admin Settings tabs | **General** retains existing settings/carrier/UOM/connection controls; dedicated **Event Tracking** tab contains Tracking, Event Detail and Action Paths sections. Warehouse policy/profile editing requires ADMIN_MAINT at open/save. |

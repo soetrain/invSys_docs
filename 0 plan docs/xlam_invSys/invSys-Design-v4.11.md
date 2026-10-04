@@ -222,14 +222,13 @@ authority non-mutation.
 
 ### D18 -- Shared Events and How-To/Diagnostic Action Paths (R1 Locked)
 
-**D18-REPLAY-01 -- R1 delivery decision and proposed execution contract**
+**D18-REPLAY-01 -- Approved R1 delivery and execution contract**
 
-**Status, 2026-10-04:** The user approved the 4be-A/4be-B split and requires both
-for R1. Recording by action/user, ordinary warehouse rights, explicit Run/Validate,
-saved results and Admin-only notifications (no email) are confirmed requirements.
-Detailed execution provisions below remain pending approval; existing D18 governs
-implementation until its conflicting clauses are explicitly amended. Plan 022 and
-Controls 1.441 use the same distinction. D19 retains its existing meaning.
+**Approved, 2026-10-04:** The user explicitly approved D18-REPLAY-01, including
+the execution boundaries below. Both 4be-A and 4be-B are required for R1.
+This decision amends the earlier observation-only restrictions as listed below;
+Plan 022 and Controls 1.443 track the same contract. D19 is unchanged.
+Approval authorizes test-first implementation, not deployment or acceptance.
 
 **Delivery and finish line:**
 
@@ -238,16 +237,16 @@ Controls 1.441 use the same distinction. D19 retains its existing meaning.
 | 4be-A -- Recording and guidance | Comprehensive Operations/Admin observations; usable Event Viewer/detail; Admin recording policy; versioned How-To authoring and guide export/import; How-To/Diagnostic/Compare and personal preferences. |
 | 4be-B -- Replay and proof | Run saved How-Tos through ordinary handlers in a training runtime; supply inputs and carry outputs; verify fresh business conclusions; preserve partial outcomes; transfer executable guides; save results and show Admin Needs attention. |
 
-Approve the replay contract/shared interface before closing A. After approval,
-the early B0 test records a Receiving workflow, authors its guide/inputs, replays
-it through packaged handlers and verifies fresh results. Establish meaningful RED
+Define the approved shared interface before closing A. The early B0 test records
+a Receiving workflow, authors its guide/inputs, replays it through packaged
+handlers and verifies fresh results. Establish meaningful RED
 before implementation, then GREEN before A acceptance. B0 is a small part of B
 performed early; broader B coverage follows A. Neither B0 nor A alone closes R1.
 Retain accepted work and evidence; do not restart or rename historical 4be.x tests.
 
-**Explicit changes proposed to existing D18:**
+**Explicit amendments to earlier D18 restrictions:**
 
-| Existing rule | Disposition on approval |
+| Earlier restriction | Approved replacement |
 |---|---|
 | Action Paths are observation/evaluation only; Diagnostic has no replay | Add explicit Run How-To. Diagnostic/Evaluate stays read-only; viewing, filtering, selecting, importing or refreshing never starts execution. |
 | Viewer/training operations do not invoke business mutation | Only explicit Run may dispatch ordinary owners and their normal writes/processing/publication in the bound training runtime. Viewer becomes no new Domain authority. |
@@ -256,12 +255,11 @@ Retain accepted work and evidence; do not restart or rename historical 4be.x tes
 | Optional tracking never blocks ordinary work | Preserve that rule. Replay needs eligible capture and stops subsequent dispatch if required evidence is lost. |
 | Policy has per-control flags; evaluations describe individual runs | Add per-user optional recording and a local Admin summary of saved validation results. |
 
-Apply these changes explicitly to D18's Shared foundation, observation-only
-acceptance wording and corresponding Plan 022 critique disposition on approval.
-Do not combine contradictory operative rules. Diagnostic/Compare stay read-only;
-ordinary publication and recorder controls retain their existing scopes.
+The Shared foundation, presentation, transfer and acceptance clauses below and
+Plan 022's critique disposition incorporate these amendments. Diagnostic/Compare
+stay read-only; ordinary publication and recorder controls retain their scopes.
 
-**Proposed execution boundaries:**
+**Execution boundaries:**
 
 1. **Target and rights.** Existing Generate Warehouse offers Operational (default)
    or Training; Core persists purpose through its owning Config command. Run accepts
@@ -319,7 +317,7 @@ ordinary publication and recorder controls retain their existing scopes.
    Publish/Refresh is explicit and separate. Append immutable results; show original
    observations, instructions, new attempts and verified outcomes distinctly.
 7. **Recording policy.** Admin Settings > Event Tracking controls optional actions
-   and authenticated invSys warehouse users. Proposed user default enabled preserves
+   and authenticated invSys warehouse users. User default enabled preserves
    control defaults; disabled user overrides capture requests. Enabled user grants
    neither disabled-control collection nor visibility/workflow rights. ADMIN_MAINT
    and the existing D5 versioned command govern saves. Changes affect future
@@ -352,9 +350,9 @@ multiline/long values and incomplete runs. Replay complements these gates; it pr
 the specified conclusion in the tested context, not the whole system universally.
 Commit/push completed slices. RUN-SCALE-01/RUN-UI-01 stay separate pending decisions.
 
-**Approval boundary:** The A/B split and R1 replay requirement are approved.
-Before implementing the proposed execution contract, record its approval and amend
-the conflicting clauses named above. No implementation or acceptance is claimed here.
+**Approval boundary:** The A/B split and this execution contract are approved.
+Further material changes require a new explicit decision. Implementation, B0
+proof and acceptance remain outstanding.
 
 **Approved 2026-09-07 -- Slice 4be synthesized contract.** The user approved the
 detailed shared Events contract, including comprehensive Operations/Admin
@@ -380,10 +378,12 @@ that decision. Tightening a test or recording a discovered control within the
 existing rules does not require repeat approval.
 
 **Considered critique, 2026-09-07:** Events remain observations, owners determine
-business effects, and How-To/Diagnostic do not execute recovery. The ownership,
-structured-evidence and re-entrancy details below clarify these existing
+business effects, and How-To/Diagnostic presentations do not execute recovery.
+The ownership, structured-evidence and re-entrancy details below clarify these existing
 boundaries. Suggested executable Navigate/Retry/Repair/Override Action Path
-types are not adopted: ordinary authorized workflow commands remain separate.
+types are not adopted. D18-REPLAY-01 now permits explicit Run to dispatch registered
+ordinary workflow commands in a generated Training runtime; arbitrary execution,
+generic repair/override and automatic retries remain prohibited.
 RetryAllowed describes matching an observed retry, never permission to retry.
 
 **Operator entry:** Operations > Viewer > Events retains the accepted inventory,
@@ -401,10 +401,12 @@ may still read an authored guide, whose provenance remains visible.
   Operations owns Viewer and its role handlers; Admin owns its handlers and
   policy/profile editor. D12's five packages remain; Core/Domain gain no UI.
 - Viewer reads published projections and the selected warehouse training library.
-  Open/Refresh/filter/detail/path/diagnostic actions never open canonical
+  Open/Refresh/filter/detail/path presentation/diagnostic actions never open canonical
   workbooks, process inboxes, repair data, or trigger publication. The ordinary
-  publisher uses existing owning read boundaries. Training saves write only the
-  training library; personal preferences write only local UI state.
+  publisher uses existing owning read boundaries. Guide/profile saves write only
+  the training library; personal preferences write only local UI state. Explicit
+  Run alone may dispatch ordinary owners and their normal business writes under
+  D18-REPLAY-01; the runner gains no canonical authority.
 - Repeated launch reuses Viewer and captured role workbooks. Every action checks
   its captured warehouse, invSys session and role workbook where applicable.
   Sign-out, target change or loss of that binding invalidates loaded content and
@@ -891,6 +893,20 @@ and unchanged canonical authority. Subsequent acceptance requires policy/fault,
 permission/context interruption, recording/publication and independent How-To/
 Diagnostic/Compare evidence, in addition to the existing packaged regression gates.
 Complete Run, Next Batch and Print Recall remain separate unintegrated controls.
+
+**Next Batch observation refinement (existing D18 rule; implementation pending):**
+Catalog26 adds `PRODUCTION_RUN_NEXT_BATCH`, caption Next Batch, actual handler
+`mBtnManagerNext_Click`, under the existing PRODUCTION_RUN_LOCAL owner, Production
+Run - List surface and PROD_POST/ADMIN_MAINT rights. Preserve catalogs1-25. STAGED
+requires positive owner acknowledgment and completed local refresh: advance a
+completed reusable batch, or finish existing worksheet output/palette preparation.
+An incomplete reusable batch is REJECTED without advancement; missing worksheet
+or failed owner/refresh is FAILED, never inferred successful from a Sub returning.
+Retain existing worksheet selection/keep rules, exact identities, custom columns
+and normal notifications. Apply the existing Run outcome/severity/effect rules,
+empty source references, optional nonblocking recording, captured-context checks
+and loading/busy/nested suppression. This adds observation and truthful owner
+acknowledgment, not inventory application, rollback or a new workflow.
 
 **4be.1 Run preparation and allocation observations (discovered-control refinement; Core catalog implemented, eight form handlers integrated; acceptance pending):**
 Under approved D18 semantic inheritance, catalog24 shall add these nine existing
@@ -1932,6 +1948,10 @@ complete bounded-group artifact; Activity/guide parsers retain their 1 MiB limit
   of eligible navigational controls during explicit recording only.
   AdminViewerEventLoggingEnabled remains default True and controls only eligible
   non-inventory Admin projection visibility, never required audit/business events.
+- D18-REPLAY-01 adds optional recording by authenticated warehouse user, default
+  enabled. A disabled user overrides optional action/capture requests without
+  changing workflow rights, visibility, history or required audit. Persist these
+  flags through the same versioned D5 policy command; affected recordings end partial.
 - Collection affects future activity only; disabling does not erase history.
   Visibility applies on each authorized read/Refresh, including saved-path
   rendering, so a hidden source cannot leak through a guide. Show **Hidden by
@@ -1955,8 +1975,9 @@ complete bounded-group artifact; Activity/guide parsers retain their 1 MiB limit
   invalid flags/order, missing required Config, capability/context mismatch,
   locked/read-only or unrelated dirty Config. Preserve unknown columns.
 - Policy metadata is PolicyVersion, SchemaVersion, CatalogVersion, CreatedAtUTC,
-  CreatedByUserId, DefaultView, capture flag, and per-control collection/
-  visibility/sequence flags. Legacy Admin projection and capture settings are
+  CreatedByUserId, DefaultView, capture flag, per-user optional recording flags,
+  and per-control collection/visibility/sequence flags. Legacy Admin projection
+  and capture settings are
   compatibility views of that same policy; reject conflicting writes and update
   them atomically, never maintain independent contradictory policies. Track a
   policy save by version/outcome only, without storing configuration values.
@@ -2922,7 +2943,8 @@ semantic inheritance and do not accept incomplete coverage or Action Paths.
   failures/cancellations, submissions and correlated outcomes in actual order.
   A guide may define an expected ordered set of registered actions/outcomes
   plus a terminal result; evaluation compares that expectation with one selected
-  observed run. It has no arbitrary predicates, VBA, SQL, macro or control replay.
+  observed run. Diagnostic/Evaluate never executes controls and accepts no arbitrary
+  predicates, VBA or SQL. Explicit Run is separate under D18-REPLAY-01.
   A click or saved instruction cannot establish business completion.
 - An expectation contains ordered StepId/ControlId/required outcome and
   RetryAllowed (default True), plus a terminal StepId with either command
@@ -3683,6 +3705,9 @@ the existing original-observation/owner-provenance rule, not a new build scheme.
   Import validates schema, hash, bounds and provenance, assigns a new local
   ActionPathId and treats embedded observations solely as origin evidence.
   It never imports inventory or claims the task occurred locally.
+  D18-REPLAY-01 adds a separate versioned execution profile and optional transfer
+  section with typed training inputs; logs remain redacted. Import never executes
+  or provisions. Old guide-only files remain supported and show Execution not configured.
 - Missing/corrupt/cross-warehouse evidence shows unavailable with a reason.
   Older release records retain original captions and show **Older release**;
   imported or stale instructions never claim controls still match. Saved paths
@@ -3715,6 +3740,9 @@ launcher/inventory-management/reusable Production regressions, packaged live-rol
 and full Release 1 chain, saved-workbook restart/binding proof, and visible
 operator comparison of How-To and Diagnostic for the same Operations task and
 an Admin task, including an incomplete run. Record human acceptance separately.
+For 4be-A, also require the approved shared interface and B0 Receiving replay GREEN
+under D18-REPLAY-01. Broader replay and Admin result management close in 4be-B;
+guide/source non-mutation does not prohibit the explicit runner's authorized owner writes.
 Commit/push each completed subslice; approve any further contract change before
 its implementation. No operational workbook modification or NAS rollout is
 authorized merely by approving this specification.

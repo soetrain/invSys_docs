@@ -4,14 +4,14 @@
 
 ## Slice 4be -- recording/guidance and replay/proof
 
-**Status, 2026-10-04:** The A/B split and both parts' R1 requirement are approved.
-The execution contract in Architecture v4.11 D18-REPLAY-01 remains pending approval;
-amend its named conflicting clauses before implementation. Controls 1.441 tracks
-the same scope. No acceptance is claimed by this plan revision.
+**Status, 2026-10-04:** The user explicitly approved D18-REPLAY-01, including its
+execution boundaries. Architecture's conflicting clauses are amended; Controls
+1.443 is synchronized. Both parts remain required for R1; implementation and
+acceptance are not established by approval.
 
 | Milestone | Deliverable / exit |
 |---|---|
-| Shared contract | Approve replay boundaries; define shared schemas; map every Operations/Admin control to owner/callback, observation status, replay support and evidence. |
+| Shared contract | Replay boundaries approved; define shared schemas; map every Operations/Admin control to owner/callback, observation status, replay support and evidence. |
 | A1 Recording and policy | Finish comprehensive observations and per-action/per-user Admin settings, preserving required audit, permissions and history. |
 | A2 Viewer and guidance | Finish Viewer/detail, authoring, guide-only transfer, How-To/Diagnostic/Compare and preferences; prove provenance, incomplete recordings and visible long/multiline content. |
 | B0 Early replay proof | After contract approval, record Receiving, author guide/inputs, replay via packaged handlers in a generated Training runtime and verify fresh exact applied-event results. RED precedes implementation; GREEN precedes A acceptance. |
@@ -48,10 +48,15 @@ RUN-UI-01 remain separate pending decisions; prior granted approvals stand.
 On actual desktop error 5, record time, stop work, preserve evidence and exit under
 the user's standing instruction. Stale probes/native crashes are different failures.
 
-**Next:** Resolve the pending execution amendment, then run B0's meaningful
-packaged RED as soon as its A recording/guide prerequisites are available.
+**Next:** Define the shared execution interface and run B0's meaningful packaged
+RED as soon as its A recording/guide prerequisites are available.
 
 ## Prior verified implementation checkpoints
+
+Active A1 work: Next Batch observation integration, using the D18 catalog26
+refinement and real handler tests for both owner branches. Protect existing
+binding70 and owner outcomes; establish missing-observation/suppression RED before
+implementation. Replay is separately approved under D18-REPLAY-01.
 
 Next Batch binding, 2026-10-04: packaged RED58/12 -> GREEN70/70 under the existing
 D18 rule; no observation integration yet. Five compiles/smoke86/layout geometry18
@@ -5997,7 +6002,7 @@ silently authorize it. No current implementation plan switch is made:
 | Structured payload, severity and effect | Adopt bounded fields: stable EventCode distinct from instance RecordId/ActivityId, Severity and Changed/Unchanged/Unknown DataEffect. Owner-supplied facts determine effects; unknown or partial commit never becomes rollback/success by inference. |
 | Explain severe errors clearly | Adopt fixed catalog UserMessage/NextStep and sanitized cause codes; preserve existing error/confirmation handling. Reject arbitrary TechnicalDetail/raw Err.Description, paths and secrets. |
 | How-To advisory; diagnostics bounded | Retain approved guide/evidence comparison. Broader runtime connectivity/lease inspection and local UI repair are not added by the critique. |
-| Guide/Navigate/Inspect/Retry/Repair/Override classification | Do not adopt executable Action Path types. D18 prohibits replay/mutation; ordinary authorized operations remain with workflow owners. RetryAllowed matches an observed retry and never executes one. |
+| Guide/Navigate/Inspect/Retry/Repair/Override classification | Amended by approved D18-REPLAY-01: explicit Run dispatches registered ordinary owners in generated Training runtimes. Presentations/evaluation remain read-only. No arbitrary execution, generic repair/override or automatic retry; RetryAllowed only matches observed retries. |
 | Recursion/deduplication/cancellation | Adopt observation re-entrancy guard, idempotent same-record retry, per-ActivityId tracking-notice coalescing, and no loss of distinct user attempts. Logging cannot generate recovery commands or reopen forms. |
 | Discovered safeguards feed the catalog | Adopt as required discovery metadata and protecting public-handler assertions. Further architectural changes require normative decisions, not hidden plan exceptions. |
 
