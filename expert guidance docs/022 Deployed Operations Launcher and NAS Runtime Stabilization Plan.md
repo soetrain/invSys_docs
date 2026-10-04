@@ -6,7 +6,7 @@
 
 **Status, 2026-10-04:** The user explicitly approved D18-REPLAY-01, including its
 execution boundaries. Architecture's conflicting clauses are amended; Controls
-1.447 is synchronized. Both parts remain required for R1; implementation and
+1.448 is synchronized. Both parts remain required for R1; implementation and
 acceptance are not established by approval.
 
 | Milestone | Deliverable / exit |
@@ -48,8 +48,10 @@ RUN-UI-01 remain separate pending decisions; prior granted approvals stand.
 On actual desktop error 5, record time, stop work, preserve evidence and exit under
 the user's standing instruction. Stale probes/native crashes are different failures.
 
-**Next:** Extend the real Receiving record/guide/profile fixture through Run setup,
-target-local entity input, Start Run and fresh exact proof before runner implementation.
+**Next:** Implement the B0 runner against the expanded packaged RED45/17:
+captured Training setup, target-local entity input, ordinary Receiving dispatch,
+fresh recording and exact owner proof, then read-only verification. Guide use must
+retain ordinary workflow rights without inheriting authoring permission.
 
 B0 profile checkpoint: expanded RED16 PASS/13 FAIL -> candidate
 `validation-execution-profile-03` 42 PASS/1 FAIL, retaining every prior GREEN.

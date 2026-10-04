@@ -227,7 +227,7 @@ authority non-mutation.
 **Approved, 2026-10-04:** The user explicitly approved D18-REPLAY-01, including
 the execution boundaries below. Both 4be-A and 4be-B are required for R1.
 This decision amends the earlier observation-only restrictions as listed below;
-Plan 022 and Controls 1.447 track the same contract. D19 is unchanged.
+Plan 022 and Controls 1.448 track the same contract. D19 is unchanged.
 Approval authorizes test-first implementation, not deployment or acceptance.
 
 **Delivery and finish line:**
