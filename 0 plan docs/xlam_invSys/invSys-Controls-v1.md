@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.439 -- approved A/B delivery split; execution contract pending.
+**Version:** 1.440 -- Next Batch binding verified; chain and execution approval pending.
 
 ## Slice 4be acceptance and proposed controls
 
@@ -38,6 +38,16 @@ action may disappear from the inventory; unresolved scope exceptions need approv
 Preserve packaged-handler RED/GREEN and actual visible comparison/layout evidence.
 
 ## Existing verified acceptance record
+
+Next Batch captured-context guard, 2026-10-04: actual packaged handler RED58/12
+becomes GREEN70/70, retaining prior passes and preserving owner/projection on
+target/session/sign-out changes. Normal advance, custom columns, saved bytes and
+decoy survive. Five compiles, smoke86 and layout geometry18 pass; static metrics
+and 28 caps do not grow. Two focused and six layout captures reviewed; empty-list
+layout does not prove populated/multiline acceptance. Full chain has a native Shipping crash;
+assisted fixture cleanup preserves saved bytes/settings/reports/packages.
+Next Batch observations and 4be-A acceptance remain open. Exact receipts and
+limitations: `tests/integration/plan022_slice4be_production_next_results.md`.
 
 Reusable Complete Run native workbook closure now passes258/258 on unchanged
 entry02, retaining206 prior ordered checks. The52 added assertions cover entry,

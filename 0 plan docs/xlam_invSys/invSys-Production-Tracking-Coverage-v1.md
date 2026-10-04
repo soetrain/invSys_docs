@@ -1,7 +1,14 @@
 # Production form tracking coverage audit
 
-Version 1.175. Last reviewed:2026-10-02 UTC, Complete Run native closure verification;
+Version 1.176. Last reviewed:2026-10-04 UTC, Next Batch captured-context guard;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Next Batch actual-handler RED58/12 -> GREEN70/70 proves normal advance and refusal
+after target/session/sign-out changes, preserving owner/projection/custom fields
+and saved bytes. Five compiles/smoke86/layout geometry18 and unchanged static caps
+pass. Full chain has a native Shipping failure; investigation remains open.
+This adds binding protection, not observations. Exact evidence and limitations:
+`tests/integration/plan022_slice4be_production_next_results.md`.
 
 Unchanged entry02 passes258/258, retaining206 prior ordered checks and adding52
 assertions for native closure at entry, pending yield and both inventory-read
@@ -1821,7 +1828,7 @@ from permission to stage or export a catalog worksheet.
 | `btnLoaderRefresh` | Refresh | `mBtnLoaderRefresh_Click` | `PRODUCTION_RUN_LOADER_REFRESH`: catalog24 focused checks and independent paths167 GREEN; full acceptance pending |
 | `btnManagerApplyOutput` | Complete Run | `mBtnManagerApplyOutput_Click` | Pending |
 | `btnManagerCheckIn` | Check In | `mBtnManagerCheckIn_Click` | `PRODUCTION_RUN_CHECK_IN`: catalog25; activity03 focused434 including initial policy/store faults, owner/interruption404, reusable paths91 and worksheet paths101 GREEN; earlier activity02 native-closure212/routed157; mid-action policy/terminal-append faults and full acceptance pending |
-| `btnManagerNext` | Next Batch | `mBtnManagerNext_Click` | Pending |
+| `btnManagerNext` | Next Batch | `mBtnManagerNext_Click` | Binding guard70/70; observations pending |
 | `btnManagerPrint` | Print Recall | `mBtnManagerPrint_Click` | Pending |
 | `btnManagerRefresh` | Refresh | `mBtnManagerRefresh_Click` | `PRODUCTION_RUN_MANAGER_REFRESH`: catalog24 focused checks and independent paths167 GREEN; full acceptance pending |
 | `btnRunApplyPalette` | Apply | `mBtnRunApplyPalette_Click` | `PRODUCTION_RUN_ALLOCATE`: catalog24 handler integrated; prior worksheet-owner257 GREEN; RUN-UI-01 and broader acceptance pending |
