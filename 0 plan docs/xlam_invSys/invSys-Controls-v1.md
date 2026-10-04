@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.436 (Pending D18-REPLAY-01 proposal; existing acceptance unchanged)
+**Version:** 1.437 (Pending D18-REPLAY-01 proposal; confirmed R1 requirements recorded)
 
 ## Proposed Action Path execution controls -- NOT APPROVED
 
@@ -9,9 +9,17 @@ matching Plan022 milestones. These are reviewable proposed surfaces, not impleme
 controls, registered activity IDs, approved behavior or acceptance evidence. The
 current approved no-replay contract remains operative pending explicit approval.
 
+User-confirmed2026-10-04: explicit Run/Validate, saved working/broken results and
+Needs attention in Admin, no R1 email notifications, optional recording controls
+by action and warehouse user, and guide use within each user's warehouse rights.
+Separate warehouse creation can provision its creator as Admin locally. Detailed
+surfaces/status rules below remain proposals under the pending amendment; no new
+runtime acceptance is claimed.
+
 | Surface / proposed control | Operator wording | Proposed behavior and protecting packaged test |
 |---|---|---|
-| Admin Generate Warehouse: purpose selector | Warehouse purpose: Operational / Training | Default Operational. Existing creation handler asks Core to provision purpose metadata; only an explicitly generated Training runtime is executable. Test ordinary defaults, canonical isolation and rejected operational/missing-purpose targets. |
+| Admin Generate Warehouse: purpose selector | Warehouse purpose: Operational / Training | Default Operational. Existing creation handler asks Core to provision purpose metadata; only an explicitly generated Training runtime is executable. Test ordinary defaults, canonical isolation, designated Admin rights local to the new warehouse and rejected operational/missing-purpose targets. |
+| Admin Settings > Event Tracking > Tracking: action/user choices | Record action / Record user | ADMIN_MAINT edits optional recording for registered controls and authenticated invSys warehouse users. Proposed user default enabled preserves control defaults; user disabled overrides capture requests. Test actual save, stale context/version, denied writes, future-only effect, required audit, unknown columns and policy changes during a run. |
 | Action Paths: execution-profile editor entry | Configure execution | ACTION_PATH_MAINT author binds the selected guide version to declared controls and typed dummy inputs, prompts or output references. Test allowed fields, permissions, fresh exact identities, version changes and rejected arbitrary code/credentials. |
 | Profile editor: per-step inputs and expectation | Training inputs / Expected conclusion | Displays unresolved bindings and the exact reviewed conclusion; saving creates an immutable profile version. Missing inputs prevent dependent dispatch; missing conclusion cannot verify success. |
 | Action Paths: runner entry | Run How-To | Opens setup for the selected guide/profile; does not execute on selection. Old guides show Execution not configured. Test no side effects before explicit start and stale selection refusal. |
@@ -23,6 +31,8 @@ current approved no-replay contract remains operative pending explicit approval.
 | Runner: status and evidence | Current step / Last result / Run state / Verification result | Keeps execution state separate from business proof. Test pending/partial/unknown outcomes, unsupported steps, context loss and evidence failure without fabricated success. |
 | Runner/library: evaluation | Verify run | Uses existing evaluation semantics on the fresh run and explicitly loaded owner projection. Does not publish/process or open authority workbooks. Test all exact source events, absent expectation, stale/incomplete evidence and later explicit Refresh/Verify. |
 | Guide transfer: optional execution profile | Include execution profile | New declared transfer version; old guide-only transfer remains valid. Import never executes, marks a runtime Training or silently substitutes local identities. Test input rebinding and incompatible-version refusal. |
+| Admin Action Paths: saved validation overview/filter | All / Working / Broken / Needs attention | Warehouse-scoped saved results with guide/profile version, last result/time and reason. Needs attention includes Broken, Needs validation and Incomplete/blocked. Test fresh pass/failure, interruption, version changes, destination validation after import, permissions and no stale pass masking later results. Opening/filtering never executes or emails. |
+| Admin Action Paths: result detail and explicit actions | View result / Edit How-To / Run / Validate | Shows immutable run provenance and permitted evidence; maintenance retains ACTION_PATH_MAINT, execution retains step capabilities, Validate retains read-only evaluation. Test saved/reopened results, hidden-source protection and actual handler dispatch only after explicit user action. No scheduled run, email configuration/delivery or automatic repair. |
 
 Use existing packaged Operations launcher/form ownership and declared Admin/Core
 bridges. Core/Domain stay headless. Ordinary underlying controls retain their
@@ -30,6 +40,12 @@ existing capability and activity contracts; running a readable profile does not
 inherit its author's privileges or require authoring rights. Runner/profile controls are excluded
 from their own business recording to prevent recursive capture; their saved
 artifacts retain separate provenance. No new event IDs are approved by this table.
+
+Ordinary authorized users retain guide reading/following and permitted run results
+without Admin access. Personal preferences do not alter warehouse policy. A user
+can create a separate warehouse through explicit provisioning and be its Admin;
+this grants nothing in another warehouse and does not change read-only Auth reload.
+R1 guidance-maintenance notifications are the in-Admin Needs attention list only.
 
 The user-facing workflow proposed for acceptance is Record -> Author -> Run in a
 training warehouse -> Verify, demonstrated for Receiving and Admin Seed on a new

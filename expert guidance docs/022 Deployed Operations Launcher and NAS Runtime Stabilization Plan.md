@@ -5,10 +5,19 @@
 ## Pending Action Path execution amendment -- D18-REPLAY-01
 
 **Drafted 2026-10-04; NOT APPROVED; no replay implementation authorized.**
-The normative proposal is Architecture v4.11, D18-REPLAY-01. Controls 1.436 records
+The normative proposal is Architecture v4.11, D18-REPLAY-01. Controls 1.437 records
 its proposed surfaces with the same status. Existing approved D18 remains operative
 until that proposal is approved and the conflicting no-replay wording is explicitly
 superseded. This section does not silently reconcile the two contracts.
+
+**User-confirmed requirements, 2026-10-04:** explicit Run/Validate and saved
+results; working/broken How-Tos and Needs attention in Admin; no R1 email
+notifications. Admin controls optional recording by action and warehouse user.
+Anyone may use Action Path within current warehouse rights, including creating a
+separate warehouse with their own Admin access through ordinary provisioning.
+These product choices are confirmed; the full execution/profile amendment remains
+pending approval. No scheduled validation or external notification delivery is
+included in the proposed R1 scope.
 
 The user's intended outcome is Record -> Author -> Run in a training warehouse ->
 Verify. Passive comparison of a prior run is useful evidence but does not satisfy
@@ -22,10 +31,10 @@ preference work; do not build another outcome-inference engine in place of repla
 | Milestone | Deliverable and protecting RED | Exit evidence |
 |---|---|---|
 | R0 Contract and inventory | Approve D18-REPLAY-01; replace exact conflicting clauses; classify all constructed Operations/Admin controls and reconcile existing pending rows | One acceptance matrix: owner, actual callback, replay classification, inputs/outputs, expected result, dependency and evidence. Registration, replay support and acceptance are distinct. |
-| R1 Training runtime | Existing Admin Generate Warehouse handler creates an explicitly designated training runtime; runner preflight refuses operational/unknown purposes and changed bindings | Packaged action RED/GREEN, Core Config ownership, no operational authority/workbook mutation, distinct exact warehouse/entity identities, ordinary capability checks |
+| R1 Training runtime | Existing Admin Generate Warehouse handler creates an explicitly designated training runtime; runner preflight refuses operational/unknown purposes and changed bindings | Packaged action RED/GREEN, Core Config ownership, no operational authority/workbook mutation, distinct exact warehouse/entity identities, designated Admin rights confined to the new warehouse, ordinary capability checks |
 | R2 Executable guide | Versioned execution profile binds an exact guide and declared typed inputs/prompts/output references; actual Run How-To dispatches the real Receiving workflow in the training runtime | RED is missing real execution/fresh evidence, not a missing test seam. GREEN includes ordinary-handler parity, real dummy inventory effect, exact applied-event verification, stable version binding and visible How-To/Diagnostic/Compare |
 | R3 Admin and interruption | Real Admin Seed Demo Inventory example on a newly generated training runtime; Step through/Next Step/Stop; refusal, context/permission loss, nested entry, partial submissions and recording failure | Same packaged Admin bridge, visible target/result, preserved partial-effect facts, no implicit retry/reset/rollback; stopped/incomplete runs cannot claim success |
-| R4 Coverage and transfer | Complete approved control classification/adapters, remaining observation contracts, prompts/manual prerequisites, profile-aware transfer and settings/preferences regressions | Unsupported deliberate actions remain explicit open items; old guides remain readable, imported profiles do not execute or provision targets; unknown/incompatible versions are rejected |
+| R4 Coverage, transfer and Admin maintenance | Complete approved control classification/adapters, remaining observations, prompts/manual prerequisites, profile-aware transfer, per-user/per-action recording policy and saved validation status in Admin | Packaged Settings/Run/Validate/result-handler RED/GREEN: user-disabled precedence, required audit retained, rights enforced, working/broken/incomplete results and Needs attention, version/import requires local validation; old guides remain readable, import never executes/provisions, no email or scheduled execution |
 | R5 Final candidate acceptance | Package/compile/layout/static/live-role/full Release 1 chain, current GREEN role/Viewer/launcher/inventory/reusable Production regressions and human/NAS comparison | User can execute and verify the agreed Operations and Admin examples, inspect an incomplete run, and use both presentations/Compare with visible long-value and multiline access |
 
 These milestones are proposed sequencing, not permission to omit existing D13
@@ -46,6 +55,22 @@ state and unresolved decisions instead of an unsupported completion percentage.
   dispatch completion separate from verified command completion/application.
 - Commands outside the bound training runtime require explicit operator handling;
   their steps cannot be silently skipped or represented as automatic success.
+- Optional user recording extends the versioned policy through the existing D5
+  save command; default enabled preserves existing control defaults. User disabled
+  cannot be bypassed by explicit recording. Policy changes preserve history and
+  required audit; ordinary manual work is not blocked. Define the new schema before
+  code and retain independent read visibility and workflow permissions.
+- Admin status derives from saved results for the exact local guide/profile/run
+  and compatible packages. Show Working, Broken, Needs validation and Incomplete/
+  blocked distinctly; the latter three populate Needs attention. Old passes cannot
+  hide later failures; imported results cannot certify a destination. Opening the
+  list or changing versions never runs a guide. No email configuration/delivery,
+  background validation or automatic repair belongs to this R1 slice.
+- Reading/following guides does not require Admin or ACTION_PATH_MAINT; execution
+  still requires each ordinary action's capability, and authoring keeps its own
+  gate. Explicit bootstrap may provision the creator as Admin in a new warehouse;
+  Auth reload never grants rights. Location-based training scenarios remain within
+  one runtime and introduce no cross-warehouse execution.
 - Preserve the current frozen entry02 package and its accepted evidence. Retain
   Complete Run258, Check In629, smoke86, chain32/live-role48/warehouse15 and layout
   evidence as the starting baseline; none proves the unimplemented runner.

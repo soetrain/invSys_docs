@@ -228,8 +228,17 @@ that its workflow reaches a conclusion, using dummy companies/warehouses for
 training. The following proposal replaces the observation-only scope for that
 explicit execution path. It is not operative until approved. The approved D18 text
 below remains the implementation contract in the meantime; no hybrid is authorized.
-Plan 022 and Controls 1.436 carry the same pending status. D19 retains its existing
+Plan 022 and Controls 1.437 carry the same pending status. D19 retains its existing
 projection/retention meaning and is not reused for this amendment.
+
+**User-confirmed product requirements, 2026-10-04:** R1 uses explicit Run/Validate,
+saved results, and working/broken How-To visibility with a Needs attention list in
+Admin. Guidance-maintenance notifications exist only inside invSys Admin; no email
+is sent. Admin can control optional recording by action and by warehouse user.
+Anyone may use Action Path within their current warehouse role and rights, and may
+create a separate warehouse with their own Admin access through normal provisioning.
+These choices are settled requirements for this draft; they do not constitute
+approval of every proposed execution/profile mechanism below.
 
 #### D18-REPLAY-01 proposed contract
 
@@ -250,6 +259,8 @@ recording and new execution remain distinct records; none certifies the others.
 | Events/expectations omit entered business values and backend procedure names | Preserve their schemas/redaction. Add a separately authored execution profile for allowlisted training inputs, prompts and symbolic output references; do not put inputs or callable procedure names in activity events or expectations. |
 | Existing guide/recording/export formats and provenance | Preserve old files. Introduce an explicitly versioned companion execution profile and optional transfer section; do not silently reinterpret old guides as executable. |
 | Optional activity collection cannot block ordinary work | Preserve ordinary manual work. Run How-To requires eligible recording at preflight; loss of required execution evidence stops subsequent automatic dispatch with an incomplete result, without cancelling or rolling back an owner action already in progress. |
+| Tracking policy currently specifies per-control flags | Extend optional recording policy with per-warehouse-user selection; preserve required audit, existing control defaults and independent visibility/access rules. Version the new policy schema explicitly. |
+| Saved diagnostic evaluations describe individual recordings | Retain immutable evaluations; add a warehouse-local Admin How-To status view derived from saved validation results and current version compatibility. No email or scheduled validation in R1. |
 
 This amendment would supersede the blanket no-replay sentence and the old
 observation-only acceptance target only for explicit Run How-To. The remaining
@@ -265,6 +276,14 @@ folder name or guide-supplied claim is not proof of training purpose. Existing
 operational warehouses cannot be relabelled by Run How-To. Creating/seeding a new
 training runtime uses existing Admin services and permissions, not imported live
 inventory or an automatic copy of operational authority.
+
+An operator can create their own separate warehouse and designate themselves as
+its Admin through the existing explicit creation/bootstrap path. Those rights are
+local to the new warehouse; creation does not grant rights in another warehouse.
+Ordinary sign-in/Auth reload remains read-only under D8-A and cannot provision
+permissions. R1 training scenarios may use Location to represent multiple areas
+or a collection of warehouses within one training runtime; this does not introduce
+cross-warehouse authority or a new multi-warehouse execution contract.
 
 The setup screen visibly identifies the selected company/warehouse and Training
 purpose. The user explicitly starts execution against that target. Capture its
@@ -334,6 +353,11 @@ the ordinary capabilities of its steps, not the author's identity or privileges.
 Profile authoring grants no additional execution capability. An unavailable Admin
 package or missing capability is an explicit preflight failure, never a skipped step.
 
+Reading/following a How-To is available through the ordinary authorized Action Path
+surface, without requiring Admin or authoring rights. Each manual or automatic
+action remains subject to the current user's permissions in the bound warehouse.
+Admin-only maintenance/status surfaces do not make ordinary guide use Admin-only.
+
 Run How-To opens setup and preflight; merely selecting a guide or view never runs
 anything. Start Run executes the frozen sequence. Step through executes one ready
 step per explicit Next Step click. Show the current step, required prompts, target,
@@ -376,6 +400,59 @@ How-To, Diagnostic and Compare both show the same selected guide/profile version
 and fresh run, distinguishing original observations, intended steps, actual new
 attempts, partial effects and verified result. Keep the personal view preference.
 
+**Admin recording controls:** The existing Settings > Event Tracking > Tracking
+section exposes optional collection choices for both registered actions and invSys
+users in the captured warehouse. Proposed per-user flag default is enabled, so
+existing per-control defaults remain effective. User disabled takes precedence over
+an enabled control or explicit recording request. User enabled does not turn on a
+disabled control or bypass capture/sequence eligibility. Resolve identity from the
+authenticated invSys warehouse user, not Windows user, display name or guide author.
+This policy governs optional user-side training activity only; required canonical,
+security and operational audit remain required under D19.
+
+ADMIN_MAINT is required to edit/save warehouse recording policy. Use the existing
+D5 Core command, captured target, expected-version and append-only save discipline;
+declare the additional policy schema and old-version defaults before implementation.
+Do not silently add fields to the current policy schema. Changes affect subsequent
+collection only and never delete history. Apply the existing partial-recording
+boundary when policy changes; a run losing required capture stops further dispatch
+and reports incomplete evidence. Ordinary authorized manual work remains available.
+Recording permission does not grant permission to view another user's records or
+hidden source data. Operations personal preferences remain separate from policy.
+
+**R1 validation results and Admin attention:** Validation is explicitly requested
+by a user. Run How-To executes the selected profile; Verify run evaluates saved
+fresh evidence as above. Neither opening Admin nor a package/version change runs a
+guide. No scheduled/background validation, email delivery, external notification
+service or automatic repair is part of this R1 feature.
+
+Save each validation result against the exact guide/profile version, run identity,
+training warehouse and compatible package/adapter versions, retaining prior results.
+Results contain the existing permitted provenance/status/reason codes, not raw
+inputs or credentials. Admin exposes working and broken How-Tos and a Needs
+attention list, with the last validation result, reason, version/context and time.
+Proposed status semantics are:
+
+- Working: the latest applicable local validation proves the saved conclusion.
+- Broken: an applicable validation establishes a workflow/conclusion failure;
+  show the failed step/reason rather than implying a known code defect.
+- Needs validation: no applicable result, a changed guide/profile or relevant
+  package/adapter version, or an imported guide awaiting local validation.
+- Incomplete/blocked: cancellation, missing inputs/evidence, denied permissions,
+  unavailable dependencies or lost context prevented a conclusive validation.
+
+Needs attention includes Broken, Needs validation and Incomplete/blocked, with
+distinct reasons. An older pass cannot hide a newer failure or interruption. Keep
+historical results labelled with their original context; imported/source-warehouse
+success does not certify the destination. Exact compatibility fields and persisted
+result schema must be reviewed before code. Status is evidence-derived, not a
+manual Working toggle. Admin can inspect results, open authorized guide maintenance
+and explicitly launch Run/Validate; all reads/writes retain warehouse permissions
+and source-visibility rules. This in-Admin list is R1's guidance-maintenance
+notification mechanism; no email addresses, mail configuration or email sends are
+needed. Ordinary authorized users can still read guides and inspect permitted run
+results through Action Path without gaining access to Admin.
+
 **Finite delivery and acceptance:** The feature's new completion criterion is a
 user-visible How-To that can actually execute and verify one Operations workflow
 and one Admin workflow in a generated training runtime, plus the complete approved
@@ -396,7 +473,11 @@ for an executable How-To before implementing the runner. Also protect training
 versus operational targets, isolation of canonical writes, real input/output
 binding and fresh identity, manual/action parity, permissions, context loss,
 loading/nested entry, stopping/partial submissions, policy/store failure, version
-compatibility, import-without-execution, and fresh verification. Preserve focused
+compatibility, import-without-execution, and fresh verification. Also protect
+per-user/per-action recording combinations, required-audit preservation, own-warehouse
+Admin isolation, working/broken/incomplete status, version invalidation, destination
+revalidation and explicit-only execution with no email delivery through the actual
+packaged Settings save, Action Path and Admin result handlers. Preserve focused
 RED/GREEN, packaged XLAM/compile/layout/static/live-role/full Release 1 chain,
 all current GREEN regressions, restart/binding and visible operator evidence.
 Reuse unchanged accepted evidence where valid; no gate is waived. Record human
