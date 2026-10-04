@@ -6,7 +6,7 @@
 
 **Status, 2026-10-04:** The user explicitly approved D18-REPLAY-01, including its
 execution boundaries. Architecture's conflicting clauses are amended; Controls
-1.445 is synchronized. Both parts remain required for R1; implementation and
+1.446 is synchronized. Both parts remain required for R1; implementation and
 acceptance are not established by approval.
 
 | Milestone | Deliverable / exit |
@@ -48,16 +48,25 @@ RUN-UI-01 remain separate pending decisions; prior granted approvals stand.
 On actual desktop error 5, record time, stop work, preserve evidence and exit under
 the user's standing instruction. Stale probes/native crashes are different failures.
 
-**Next:** Define the shared execution interface and run B0's meaningful packaged
-RED as soon as its A recording/guide prerequisites are available.
+**Next:** Protect the shared execution interface through B0's packaged Receiving
+record/author/replay/fresh-proof test before implementing its consumers.
+
+Architecture defines B0 profile/run wire v1. Packaged entry RED16 PASS/4 FAIL on
+purpose02 proves a real six-action Receiving recording, exact original application
+and saved guide with SourceEventsApplied conclusion; failures isolate absent
+Configure execution/editor/Run controls. Five disposable compiles pass and closure
+preserves settings/packages. Next extend the same test through inputs/profile save,
+Start Run and fresh exact proof before implementing consumers; empty UI is not B0.
+See `tests/integration/plan022_slice4be_receiving_replay_results.md`. Policy/transfer
+extensions still need their schemas before use; B0/A/B acceptance remains open.
 
 B0 purpose prerequisite: actual packaged Create Warehouse RED15/8 -> GREEN23;
 layout RED31/4 -> GREEN35 retains all23 checks. Core persists creation-only purpose,
 with Operational default, Training choice and existing-runtime refusal. Five cold
 compiles and applicable smoke86/source creation15 pass. Visible capture remains
 open; this is not B0 replay proof. Exact receipts/limits are in
-`tests/integration/plan022_slice4be_warehouse_purpose_results.md`. Next define shared
-execution schemas and prove actual Receiving replay; preserve the native full-chain
+`tests/integration/plan022_slice4be_warehouse_purpose_results.md`. Next prove actual
+Receiving replay; preserve the native full-chain
 failure as an open gate rather than repeating unchanged broad tests.
 
 ## Prior verified implementation checkpoints

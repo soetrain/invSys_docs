@@ -227,7 +227,7 @@ authority non-mutation.
 **Approved, 2026-10-04:** The user explicitly approved D18-REPLAY-01, including
 the execution boundaries below. Both 4be-A and 4be-B are required for R1.
 This decision amends the earlier observation-only restrictions as listed below;
-Plan 022 and Controls 1.445 track the same contract. D19 is unchanged.
+Plan 022 and Controls 1.446 track the same contract. D19 is unchanged.
 Approval authorizes test-first implementation, not deployment or acceptance.
 
 **Delivery and finish line:**
@@ -346,6 +346,28 @@ schemas before coding their consumers; strict validation and old-format compatib
 are required. Exact fields, adapter factoring and test cases are implementation work
 under D13, not additional product decisions unless they change these boundaries.
 Retain the existing evaluator and all accepted owner fixes.
+
+**Shared execution wire v1 (B0):** Reuse the training store's ASCII-escaped JSON,
+generated GUIDs, UTC timestamps, atomic immutable versions and trailing
+`ContentSha256` over the body. Reject duplicate/unknown fields, wrong types,
+unsupported versions, more than 256 steps or more than 1 MiB. This defines the first
+consumers; per-user policy and transfer extensions must likewise be defined before
+their consumers and before A closes.
+
+| Record | Fields and constraints |
+|---|---|
+| Execution profile v1 | `SchemaVersion=1`, `RecordKind=ExecutionProfile`, `ProfileId`, `Version`, `RecordId`, `PreviousRecordId`, `PreviousSha256`, `WarehouseId`, `CreatedByUserId`, `CreatedAtUTC`, `Guide`, `CatalogVersion`, `PackageSetVersion`, `AdapterSetVersion=1`, `Steps`, `ExpectedConclusion`, `ContentSha256`. Version/history/identity/hash rules match immutable guides. Store in `ExecutionProfiles/<ProfileId>.<Version>.json` under the current Action Paths root. |
+| Guide binding | `ActionPathId`, `Version`, `RecordId`, `ContentSha256` identify one exact local guide. `ExpectedConclusion` is that guide's existing schema1 definition, with a non-None terminal. Every required ordered expectation must correspond to the guide's action order; unchanged control IDs alone cannot rebind an edited guide. |
+| Execution step | `StepId`, `ControlId`, `AdapterId`, `AdapterVersion`, `Inputs`. Steps match the guide's stable StepIds/control IDs in its saved order, exactly once. Adapter IDs name registered typed adapters, never procedures. Registry metadata separately declares automatic/operator-required/excluded support and reason. An operator-required step needs explicit completion evidence; it cannot silently succeed. |
+| Typed input | `Name`, `Type`, `Binding`. Each adapter declares exact allowed names, semantic types and bounds. Binding is one strict variant: `{Kind:Literal,Value:<typed scalar>}`, `{Kind:Prompt,PromptId:<registered name>}`, `{Kind:Fixture,FixtureId:<local registered fixture>}`, or `{Kind:PriorOutput,StepId:<earlier step>,OutputName:<declared output>}`. No arbitrary expressions, paths, credentials or original inventory keys. Item/SKU references select a validated item type, never substitute for durable entity identity. |
+| Run record v1 | `SchemaVersion=1`, `RecordKind=ExecutionRun`, `RunId`, `Revision`, `RecordId`, `PreviousRecordId`, `PreviousSha256`, `WarehouseId`, `StationId`, `CreatedByUserId`, `CreatedAtUTC`, `ContextSha256`, `Guide`, `Profile`, `PackageSetVersion`, `PackageBuilds`, `Mode`, `State`, `ReasonCode`, `Recording`, `Steps`, `ContentSha256`. Profile binding uses `ProfileId`, `Version`, `RecordId`, `ContentSha256`; package rows use `PackageId`, `BuildIdentity`. Modes are RunAll/StepThrough. States are Ready/Running/Stopped/Completed/Blocked/Failed/Unknown; Completed describes dispatch, never verified business success. Store immutable revisions in `Runs/<RunId>.<Revision>.json`. |
+| Fresh run evidence | `Recording` is `{}` before capture, then contains fresh `ActionPathId`, `SequenceId`; finished step rows contain `StepId`, `ControlId`, `State`, `ReasonCode`, `ActivityId`, `SourceEventRefs`, `Outputs`. States are Completed/OperatorCompleted/Blocked/Failed/Unknown. Reuse the existing source-reference schema. `Outputs` is an array of `{Name,Type,Value}` using declared names/types and validated values only. Original observation IDs are provenance, never replay outputs. ContextSha256 binds the captured runtime/session without storing credential material or executable destinations. |
+
+Run verification retains the existing immutable evaluator result format and exact
+guide/recording binding; it must select this run's fresh recording. A runner stores
+no independent success Boolean that could override evaluator evidence. Admin result
+index/transfer extensions remain B work; their future schemas must reference these
+identities without weakening source visibility or changing old guide/journal files.
 
 Protect real packaged callbacks with focused RED/GREEN, including permissions,
 training isolation, inputs/identity, context loss, nested entry, partial effects,
