@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.437 (Pending D18-REPLAY-01 proposal; confirmed R1 requirements recorded)
+**Version:** 1.438 (Approved 4be-A/4be-B delivery split; replay mechanisms pending)
 
 ## Proposed Action Path execution controls -- NOT APPROVED
 
@@ -15,6 +15,27 @@ by action and warehouse user, and guide use within each user's warehouse rights.
 Separate warehouse creation can provision its creator as Admin locally. Detailed
 surfaces/status rules below remain proposals under the pending amendment; no new
 runtime acceptance is claimed.
+
+## Approved delivery split and separate acceptance
+
+User-approved2026-10-04: **4be-A -- Recording, Event Viewer and How-To authoring**;
+**4be-B -- Replay and proof**. Both are required for R1; neither is accepted by
+this documentation revision. Detailed replay behavior remains pending under
+D18-REPLAY-01. Existing verified control evidence remains valid within its scope.
+
+| Part | Controls and acceptance owned by this part | Completion boundary |
+|---|---|---|
+| 4be-A | Operations/Admin observation coverage; Viewer/Event Detail; Admin per-action/per-user tracking; guide creation/editing and guide-only transfer; How-To/Diagnostic/Compare and personal preference | Usable recorded and authored guidance, policy/rights/provenance and incomplete-recording cases, visible long-value/multiline access, applicable D13 gates; replay contract approved and early B0 proof GREEN before A closes |
+| 4be-B | Training-purpose creation; execution-profile/inputs; Run/Start/Next/Stop; fresh Verify; profile-aware transfer; saved results and Admin Working/Broken/Needs attention | Complete approved replay coverage, actual ordinary-handler effects and exact owner proof, interruption/partial outcomes, destination validation, saved/reopened Admin results and full R1 acceptance gates |
+
+The early B0 Receiving replay test links an A recording/guide to authored inputs,
+real packaged execution and fresh verification before A acceptance. It is B work
+performed early to validate the shared interface, not completion of all B controls.
+Record A/B status and evidence independently; a read-only Diagnostic pass, registered
+control or passing service test alone cannot accept replay. No existing controls
+or historical 4be.x evidence identifiers are renamed by this delivery grouping.
+
+## Proposed execution and recording extensions -- implementation pending
 
 | Surface / proposed control | Operator wording | Proposed behavior and protecting packaged test |
 |---|---|---|

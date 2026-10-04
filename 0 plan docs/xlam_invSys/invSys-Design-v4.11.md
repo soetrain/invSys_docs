@@ -228,7 +228,7 @@ that its workflow reaches a conclusion, using dummy companies/warehouses for
 training. The following proposal replaces the observation-only scope for that
 explicit execution path. It is not operative until approved. The approved D18 text
 below remains the implementation contract in the meantime; no hybrid is authorized.
-Plan 022 and Controls 1.437 carry the same pending status. D19 retains its existing
+Plan 022 and Controls 1.438 carry the same pending status. D19 retains its existing
 projection/retention meaning and is not reused for this amendment.
 
 **User-confirmed product requirements, 2026-10-04:** R1 uses explicit Run/Validate,
@@ -239,6 +239,38 @@ Anyone may use Action Path within their current warehouse role and rights, and m
 create a separate warehouse with their own Admin access through normal provisioning.
 These choices are settled requirements for this draft; they do not constitute
 approval of every proposed execution/profile mechanism below.
+
+**Approved delivery split, 2026-10-04:** The user approved dividing Slice 4be into
+**4be-A -- Recording, Event Viewer and How-To authoring** and **4be-B -- Replay
+and proof**. Both are required for R1 acceptance. Completion of A alone cannot
+close Slice 4be or the Release 1 Action Path requirement. This approves the delivery
+structure and replay's R1 requirement; the detailed execution mechanisms in this
+amendment still require approval before conflicting behavior is implemented.
+
+4be-A completes comprehensive Operations/Admin observations, Event Viewer/detail,
+per-action/per-user Admin tracking policy, versioned guide authoring and guide
+export/import, How-To/Diagnostic/Compare and personal preferences. Retain existing
+verified work and evidence. Its acceptance demonstrates usable recording and
+guidance, including permissions, provenance, incomplete recordings and visible
+long-value/multiline access; it does not certify that a guide has been replayed.
+
+4be-B provides the training-runtime execution profile and input/output binding,
+ordinary-handler replay, fresh owner-evidence verification, interruption/partial
+outcomes, profile-aware transfer, saved validation results and the Admin Needs
+attention list. Replay proves the specified workflow and conclusion for the tested
+versions/context; it complements, and does not replace, the Release 1 regression
+and acceptance gates. Comprehensive coverage remains required; the initial
+Operations/Admin examples do not define the entire supported replay inventory.
+
+Approve the replay contract and the shared recording/guide/profile interface before
+closing A. After that approval, perform the early B0 milestone before A acceptance:
+record a Receiving workflow, author its How-To and explicit training inputs, replay
+through the packaged handlers in a generated training runtime, and verify the fresh
+result. Establish focused behavioral RED before runner implementation, then GREEN.
+This checks the A-to-B interface early rather than finishing an incompatible
+recorder. Broad B coverage follows A acceptance; the early proof does not close B.
+Existing redacted events are not assumed to contain replay inputs. Plan 022 owns
+the milestone sequence; the controls catalog records A/B acceptance separately.
 
 #### D18-REPLAY-01 proposed contract
 
@@ -453,7 +485,9 @@ notification mechanism; no email addresses, mail configuration or email sends ar
 needed. Ordinary authorized users can still read guides and inspect permitted run
 results through Action Path without gaining access to Admin.
 
-**Finite delivery and acceptance:** The feature's new completion criterion is a
+**Finite delivery and acceptance:** Track 4be-A and 4be-B separately under the
+approved delivery split above; both must pass before Slice 4be/R1 acceptance. The
+feature's new completion criterion is a
 user-visible How-To that can actually execute and verify one Operations workflow
 and one Admin workflow in a generated training runtime, plus the complete approved
 control inventory and existing acceptance obligations. Initial vertical examples
@@ -498,7 +532,9 @@ training-only R1 execution, explicit authored/prompted inputs, the separate vers
 execution profile, ordinary-handler dispatch, stop-without-rollback semantics,
 and existing owner-evidence verification. On approval, record it here and update
 the conflicting blanket no-replay wording and dependent acceptance summaries
-explicitly before implementation. Until then this block is a proposal only.
+explicitly before implementation. Until then the execution mechanisms remain
+proposed; the A/B delivery split and replay's R1 requirement are approved as stated
+above. Approval of that split does not imply runtime acceptance of either part.
 
 **Approved 2026-09-07 -- Slice 4be synthesized contract.** The user approved the
 detailed shared Events contract, including comprehensive Operations/Admin
