@@ -6,7 +6,7 @@
 
 **Status, 2026-10-04:** The user explicitly approved D18-REPLAY-01, including its
 execution boundaries. Architecture's conflicting clauses are amended; Controls
-1.443 is synchronized. Both parts remain required for R1; implementation and
+1.444 is synchronized. Both parts remain required for R1; implementation and
 acceptance are not established by approval.
 
 | Milestone | Deliverable / exit |
@@ -53,10 +53,14 @@ RED as soon as its A recording/guide prerequisites are available.
 
 ## Prior verified implementation checkpoints
 
-Active A1 work: Next Batch observation integration, using the D18 catalog26
-refinement and real handler tests for both owner branches. Protect existing
-binding70 and owner outcomes; establish missing-observation/suppression RED before
-implementation. Replay is separately approved under D18-REPLAY-01.
+Next Batch catalog26 observation checkpoint: packaged RED110/57 -> GREEN167/167,
+retaining binding70. Real handlers cover both owners, suppression, missing-sheet
+failure, denial and tracking off. Five compiles/smoke86/layout18/static caps pass;
+full chain has a native Boxing crash with preserved recovered fixtures/settings/
+packages and unproved cause. Standalone ordered live48 passes with normal closure,
+preservation and zero delayed native events; it does not accept the full chain. See
+the Next Batch integration record and Controls1.444/coverage1.178. After this
+checkpoint, prioritize the approved B0 shared interface and packaged Receiving RED.
 
 Next Batch binding, 2026-10-04: packaged RED58/12 -> GREEN70/70 under the existing
 D18 rule; no observation integration yet. Five compiles/smoke86/layout geometry18

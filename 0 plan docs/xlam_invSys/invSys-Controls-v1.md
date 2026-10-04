@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.443 -- D18-REPLAY-01 approved; implementation and acceptance pending.
+**Version:** 1.444 -- Next Batch recording focused GREEN; D18-REPLAY-01 approved.
 
 ## Slice 4be acceptance and approved controls contract
 
@@ -40,11 +40,17 @@ Preserve packaged-handler RED/GREEN and actual visible comparison/layout evidenc
 
 ## Existing verified acceptance record
 
-Next Batch catalog26 refinement is specified under existing D18: actual handler
+Next Batch catalog26 is integrated under existing D18: actual handler
 `mBtnManagerNext_Click`, ID `PRODUCTION_RUN_NEXT_BATCH`, local STAGED only after
 positive owner acknowledgment and refresh. Both reusable and worksheet branches,
 refusal, suppression, policy and captured binding require packaged evidence.
-No observation implementation or acceptance is claimed by this revision.
+Packaged RED110/57 -> GREEN167/167 retains binding70; both owners, suppression,
+missing-sheet refusal, denial, tracking off and exact redacted records pass.
+Five compiles/smoke86/layout18/static caps pass, with two focused and six layout
+captures reviewed. Full chain has a native Boxing crash; recovered fixtures,
+settings and packages are preserved. Standalone ordered live48 passes with normal
+closure/preservation/zero delayed native events. Cause and full-chain/broader
+acceptance remain open. See `tests/integration/plan022_slice4be_production_next_results.md`.
 
 Next Batch captured-context guard, 2026-10-04: actual packaged handler RED58/12
 becomes GREEN70/70, retaining prior passes and preserving owner/projection on

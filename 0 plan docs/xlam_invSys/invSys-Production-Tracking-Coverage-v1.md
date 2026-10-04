@@ -1,7 +1,16 @@
 # Production form tracking coverage audit
 
-Version 1.177. Last reviewed:2026-10-04 UTC, Next Batch binding and corrected chain;
+Version 1.178. Last reviewed:2026-10-04 UTC, Next Batch observations;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Catalog26 Next Batch: actual-handler RED110/57 -> GREEN167/167 retains binding70.
+Both owner branches, suppression, missing-sheet refusal, denial, policy off and
+exact redacted attempt/outcome records pass. Five compiles/smoke86/layout18/static
+caps pass. Full chain has a native Boxing crash; recovery preserves fixture bytes,
+settings and packages. Standalone ordered live48 passes with normal closure and
+preservation; cause, full chain and wider tracking/guide acceptance remain open.
+See `tests/integration/plan022_slice4be_production_next_results.md`. Replay is now
+approved under D18-REPLAY-01; B0 is the next priority after this checkpoint.
 
 Next Batch actual-handler RED58/12 -> GREEN70/70 proves normal advance and refusal
 after target/session/sign-out changes, preserving owner/projection/custom fields
@@ -1832,7 +1841,7 @@ from permission to stage or export a catalog worksheet.
 | `btnLoaderRefresh` | Refresh | `mBtnLoaderRefresh_Click` | `PRODUCTION_RUN_LOADER_REFRESH`: catalog24 focused checks and independent paths167 GREEN; full acceptance pending |
 | `btnManagerApplyOutput` | Complete Run | `mBtnManagerApplyOutput_Click` | Pending |
 | `btnManagerCheckIn` | Check In | `mBtnManagerCheckIn_Click` | `PRODUCTION_RUN_CHECK_IN`: catalog25; activity03 focused434 including initial policy/store faults, owner/interruption404, reusable paths91 and worksheet paths101 GREEN; earlier activity02 native-closure212/routed157; mid-action policy/terminal-append faults and full acceptance pending |
-| `btnManagerNext` | Next Batch | `mBtnManagerNext_Click` | Binding guard70/70; observations pending |
+| `btnManagerNext` | Next Batch | `mBtnManagerNext_Click` | `PRODUCTION_RUN_NEXT_BATCH`: catalog26 focused167/167 retains binding70; broader tracking/guide acceptance pending |
 | `btnManagerPrint` | Print Recall | `mBtnManagerPrint_Click` | Pending |
 | `btnManagerRefresh` | Refresh | `mBtnManagerRefresh_Click` | `PRODUCTION_RUN_MANAGER_REFRESH`: catalog24 focused checks and independent paths167 GREEN; full acceptance pending |
 | `btnRunApplyPalette` | Apply | `mBtnRunApplyPalette_Click` | `PRODUCTION_RUN_ALLOCATE`: catalog24 handler integrated; prior worksheet-owner257 GREEN; RUN-UI-01 and broader acceptance pending |

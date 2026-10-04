@@ -227,7 +227,7 @@ authority non-mutation.
 **Approved, 2026-10-04:** The user explicitly approved D18-REPLAY-01, including
 the execution boundaries below. Both 4be-A and 4be-B are required for R1.
 This decision amends the earlier observation-only restrictions as listed below;
-Plan 022 and Controls 1.443 track the same contract. D19 is unchanged.
+Plan 022 and Controls 1.444 track the same contract. D19 is unchanged.
 Approval authorizes test-first implementation, not deployment or acceptance.
 
 **Delivery and finish line:**
@@ -892,9 +892,9 @@ loading/nested suppression, worksheet exact identity/custom-column preservation
 and unchanged canonical authority. Subsequent acceptance requires policy/fault,
 permission/context interruption, recording/publication and independent How-To/
 Diagnostic/Compare evidence, in addition to the existing packaged regression gates.
-Complete Run, Next Batch and Print Recall remain separate unintegrated controls.
+Complete Run and Print Recall remain separate unintegrated controls.
 
-**Next Batch observation refinement (existing D18 rule; implementation pending):**
+**Next Batch observation refinement (existing D18 rule; focused GREEN, acceptance pending):**
 Catalog26 adds `PRODUCTION_RUN_NEXT_BATCH`, caption Next Batch, actual handler
 `mBtnManagerNext_Click`, under the existing PRODUCTION_RUN_LOCAL owner, Production
 Run - List surface and PROD_POST/ADMIN_MAINT rights. Preserve catalogs1-25. STAGED
@@ -907,6 +907,13 @@ and normal notifications. Apply the existing Run outcome/severity/effect rules,
 empty source references, optional nonblocking recording, captured-context checks
 and loading/busy/nested suppression. This adds observation and truthful owner
 acknowledgment, not inventory application, rollback or a new workflow.
+Packaged RED110/57 -> GREEN167/167 retains all70 binding checks and proves both
+owner branches, suppression, missing-sheet refusal, permission and policy-off
+behavior. Five compiles/smoke86/layout18 and static caps pass. Full chain has a
+native Boxing crash; recovered fixture bytes/settings/packages are preserved,
+cause unproved. Standalone ordered live48 passes on the same candidate with normal
+closure/preservation. Chain and broader tracking/guide acceptance remain open. Evidence:
+`tests/integration/plan022_slice4be_production_next_results.md`.
 
 **4be.1 Run preparation and allocation observations (discovered-control refinement; Core catalog implemented, eight form handlers integrated; acceptance pending):**
 Under approved D18 semantic inheritance, catalog24 shall add these nine existing
