@@ -2,6 +2,75 @@
 
 **Status:** Current corrective implementation plan
 
+## Pending Action Path execution amendment -- D18-REPLAY-01
+
+**Drafted 2026-10-04; NOT APPROVED; no replay implementation authorized.**
+The normative proposal is Architecture v4.11, D18-REPLAY-01. Controls 1.436 records
+its proposed surfaces with the same status. Existing approved D18 remains operative
+until that proposal is approved and the conflicting no-replay wording is explicitly
+superseded. This section does not silently reconcile the two contracts.
+
+The user's intended outcome is Record -> Author -> Run in a training warehouse ->
+Verify. Passive comparison of a prior run is useful evidence but does not satisfy
+the newly clarified executable-How-To outcome. Recommendation: include execution
+in Slice 4be through the explicit amendment, rather than adopting guidance025's
+suggested deferral. Retain the existing evaluator, Viewer, recording, guide and
+preference work; do not build another outcome-inference engine in place of replay.
+
+### Proposed bounded sequence after approval
+
+| Milestone | Deliverable and protecting RED | Exit evidence |
+|---|---|---|
+| R0 Contract and inventory | Approve D18-REPLAY-01; replace exact conflicting clauses; classify all constructed Operations/Admin controls and reconcile existing pending rows | One acceptance matrix: owner, actual callback, replay classification, inputs/outputs, expected result, dependency and evidence. Registration, replay support and acceptance are distinct. |
+| R1 Training runtime | Existing Admin Generate Warehouse handler creates an explicitly designated training runtime; runner preflight refuses operational/unknown purposes and changed bindings | Packaged action RED/GREEN, Core Config ownership, no operational authority/workbook mutation, distinct exact warehouse/entity identities, ordinary capability checks |
+| R2 Executable guide | Versioned execution profile binds an exact guide and declared typed inputs/prompts/output references; actual Run How-To dispatches the real Receiving workflow in the training runtime | RED is missing real execution/fresh evidence, not a missing test seam. GREEN includes ordinary-handler parity, real dummy inventory effect, exact applied-event verification, stable version binding and visible How-To/Diagnostic/Compare |
+| R3 Admin and interruption | Real Admin Seed Demo Inventory example on a newly generated training runtime; Step through/Next Step/Stop; refusal, context/permission loss, nested entry, partial submissions and recording failure | Same packaged Admin bridge, visible target/result, preserved partial-effect facts, no implicit retry/reset/rollback; stopped/incomplete runs cannot claim success |
+| R4 Coverage and transfer | Complete approved control classification/adapters, remaining observation contracts, prompts/manual prerequisites, profile-aware transfer and settings/preferences regressions | Unsupported deliberate actions remain explicit open items; old guides remain readable, imported profiles do not execute or provision targets; unknown/incompatible versions are rejected |
+| R5 Final candidate acceptance | Package/compile/layout/static/live-role/full Release 1 chain, current GREEN role/Viewer/launcher/inventory/reusable Production regressions and human/NAS comparison | User can execute and verify the agreed Operations and Admin examples, inspect an incomplete run, and use both presentations/Compare with visible long-value and multiline access |
+
+These milestones are proposed sequencing, not permission to omit existing D13
+requirements or defer approved comprehensive coverage. R2/R3 are bounded vertical
+examples; final acceptance still requires the complete classified inventory.
+No estimate is derived from the number of passed assertions. Report milestone
+state and unresolved decisions instead of an unsupported completion percentage.
+
+### Contract dependencies and implementation discipline
+
+- Training means its own canonical runtime, not an operator-workbook copy. Only
+  explicit Run dispatch authorizes the ordinary owner effects; ordinary Viewer
+  reads and Verify remain read-only. No production execution is proposed for R1.
+- Existing observations lack business inputs. Add the separately versioned,
+  allowlisted execution profile specified by D18-REPLAY-01; do not change activity
+  events into keystroke/input capture or treat generated EventIds as submissions.
+- Require fresh run/ActivityId/source-event linkage and actual owner facts. Keep
+  dispatch completion separate from verified command completion/application.
+- Commands outside the bound training runtime require explicit operator handling;
+  their steps cannot be silently skipped or represented as automatic success.
+- Preserve the current frozen entry02 package and its accepted evidence. Retain
+  Complete Run258, Check In629, smoke86, chain32/live-role48/warehouse15 and layout
+  evidence as the starting baseline; none proves the unimplemented runner.
+- Map remaining Complete Run worksheet/partial-submission work to the owner facts
+  replay and existing diagnostics require. Do not continue an unbounded passive
+  diagnostic expansion in place of the agreed execution milestone. Fix actual
+  architectural blockers with focused RED/GREEN before depending on their owners.
+- RUN-SCALE-01/RUN-UI-01 remain unapproved and separate. Prior connection-write,
+  UOM and Auth/Event Detail approvals are not reopened by this proposal.
+- Do not rerun unchanged broad gates solely for documentation/test prose edits.
+  Changed runtime, package hashes, failures and dependencies determine relevant
+  reruns; every mandatory final gate remains. Preserve prior passing assertions.
+- On actual desktop error 5, stop work and retain evidence per the user's standing
+  instruction. An expired probe or a native Excel crash is not desktop error 5.
+
+### Approval disposition
+
+Await approval of the concrete normative proposal: training-only execution,
+reviewed typed inputs/profile, ordinary-handler dispatch, no automatic rollback or
+retry, and exact owner-evidence verification. On approval, record the decision in
+Architecture first, synchronize this plan and the catalog, and establish the first
+meaningful packaged execution RED. No runtime work is started by this draft.
+
+## Prior verified implementation checkpoints
+
 Complete Run native closure verification,2026-10-02: unchanged entry02 passes
 258/258 with all206 prior ordered checks retained. The52 new assertions cover
 entry, pending UI yield and AvailableQuantity/EntityKind return boundaries through

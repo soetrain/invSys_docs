@@ -222,6 +222,203 @@ authority non-mutation.
 
 ### D18 -- Shared Events and How-To/Diagnostic Action Paths (R1 Locked)
 
+**Pending amendment D18-REPLAY-01, drafted 2026-10-04 -- NOT APPROVED:**
+The user clarified that a How-To should be executable like a macro to demonstrate
+that its workflow reaches a conclusion, using dummy companies/warehouses for
+training. The following proposal replaces the observation-only scope for that
+explicit execution path. It is not operative until approved. The approved D18 text
+below remains the implementation contract in the meantime; no hybrid is authorized.
+Plan 022 and Controls 1.436 carry the same pending status. D19 retains its existing
+projection/retention meaning and is not reused for this amendment.
+
+#### D18-REPLAY-01 proposed contract
+
+**Outcome:** Record -> Author -> Run in a training warehouse -> Verify. Event
+Viewer supplies the observed control sequence from which an author creates a
+versioned How-To. A reviewed execution profile lets an operator run that How-To
+through the same owning actions used manually. A fresh recording and diagnostic
+result show what that particular execution actually did. An instruction, original
+recording and new execution remain distinct records; none certifies the others.
+
+**Explicit replacement of conflicting rules, effective only on approval:**
+
+| Existing D18 rule | Proposed disposition |
+|---|---|
+| Diagnostic has no macro/control replay; Action Paths are observation/evaluation only | Retain read-only Diagnostic/Evaluate; add a separate explicit Run How-To command within Slice 4be. The Action Path feature is no longer observation-only. |
+| Viewer open/refresh/filter/detail/path/diagnostic never processes inboxes or opens canonical workbooks | Preserve those commands. Run How-To may invoke ordinary authorized workflow owners, including their normal canonical reads, submissions, processing and publication in the bound training runtime. Viewer does not become a Domain writer. |
+| No executable Navigate/Retry/Repair/Override path types | Do not add generic repair/override execution or arbitrary code. Permit registered ordinary UI actions through the typed runner. Existing RetryAllowed remains diagnostic matching only; it never schedules another execution. |
+| Events/expectations omit entered business values and backend procedure names | Preserve their schemas/redaction. Add a separately authored execution profile for allowlisted training inputs, prompts and symbolic output references; do not put inputs or callable procedure names in activity events or expectations. |
+| Existing guide/recording/export formats and provenance | Preserve old files. Introduce an explicitly versioned companion execution profile and optional transfer section; do not silently reinterpret old guides as executable. |
+| Optional activity collection cannot block ordinary work | Preserve ordinary manual work. Run How-To requires eligible recording at preflight; loss of required execution evidence stops subsequent automatic dispatch with an incomplete result, without cancelling or rolling back an owner action already in progress. |
+
+This amendment would supersede the blanket no-replay sentence and the old
+observation-only acceptance target only for explicit Run How-To. The remaining
+ownership, identity, capability, read-only evaluation and immutable-evidence
+rules still apply. It does not adopt guidance025's suggested replay deferral.
+
+**Training environment and binding:** Admin's existing Generate Warehouse flow
+offers an explicit Training purpose at creation. Core records that purpose through
+its owning Config command; default is Operational. The runner accepts only a
+generated training runtime with its own WarehouseId, canonical workbooks,
+inbox/outbox, projections and training library. A workbook copy, display name,
+folder name or guide-supplied claim is not proof of training purpose. Existing
+operational warehouses cannot be relabelled by Run How-To. Creating/seeding a new
+training runtime uses existing Admin services and permissions, not imported live
+inventory or an automatic copy of operational authority.
+
+The setup screen visibly identifies the selected company/warehouse and Training
+purpose. The user explicitly starts execution against that target. Capture its
+resolved runtime identity, current invSys actor/session, compatible package set,
+guide/profile versions and role workbooks. Before every dispatch and after yielding
+boundaries, revalidate that binding and the ordinary action's current capability.
+Closing a captured workbook, signing out, changing target/session, or losing the
+training designation stops the run; never fall back to ActiveWorkbook or another
+warehouse. Unrelated operational workbooks and runtimes are not mutated.
+
+Training commands may make real canonical changes in that training runtime. They
+do not get weaker business validation or elevated permissions. Core/Domain remain
+headless and authoritative. Commands whose effects extend beyond the bound training
+runtime, such as deployment or Windows connection changes, are not automatically
+dispatched in R1. An explicitly labelled operator step can explain the prerequisite;
+it cannot masquerade as an executed or verified automatic step. This is a proposed
+execution boundary, not permission to hide unsupported steps or remove them from
+the comprehensive control census.
+
+**Authored inputs and stable identities:** Selecting tracked actions can create
+instruction steps and retain their original provenance. It cannot recover values
+that the logger deliberately did not record. The author reviews each execution
+step and supplies typed dummy values, an operator prompt, a training fixture
+reference, or a reference to an earlier step's declared output. This first version
+does not introduce raw keystroke recording or automatic capture of entered values.
+The input editor exposes only fields declared by that action's owning adapter.
+
+The companion `ExecutionProfile` SchemaVersion 1 binds an exact guide
+ActionPathId/version/hash, ordered stable StepIds and registered ControlIds, adapter
+contract versions, typed input bindings, and an exact saved expected-conclusion
+definition/hash. It is an immutable, versioned training artifact under the existing
+warehouse training namespace and ACTION_PATH_MAINT authoring capability. Apply the
+existing 256-step and 1 MiB bounds; reject unknown/duplicate fields and incompatible
+types/versions rather than silently truncating or skipping. No arbitrary VBA,
+SQL, macro names, procedure names, expressions, filesystem destinations or credentials
+are accepted as executable inputs. Training business values belong only to this
+explicitly authored artifact or transient prompted-input state, not general activity
+logs. Credential entry stays with the existing interactive owner and is never saved.
+
+Fixture/output references resolve only inside the bound training runtime. New
+entities obtain fresh exact `System_Key` values at their ordinary owning creation
+boundary; later steps carry those returned keys unchanged. Do not reuse the original
+recording's inventory keys, map old business inventory into new identity, or select
+an entity by ambiguous SKU/row position. Required prompts must be resolved and
+validated before their dependent step; missing or ambiguous bindings prevent that
+step's dispatch. Unknown user columns retain existing preservation guarantees.
+
+Old guides remain readable/editable and show Execution not configured. Editing a
+guide creates a new version and does not silently transfer execution approval to
+it; its profile must bind the selected new version. Import never executes a guide,
+provisions a target or imports training-runtime designation. A transferred profile
+requires compatibility checks and explicit local training-input binding before Run.
+The optional profile transfer uses a new declared versioned envelope; existing
+guide-only transfers remain compatible. Exact wire fields and validators must be
+reviewed in the first schema slice before code, without claiming current files
+already support this format.
+
+**Execution ownership and operator control:** Operations hosts the runner within
+the existing packaged launcher/form lifetime. It dispatches an allowlisted
+ControlId through that role's typed adapter to the same callback or action entry
+used by the operator. Adapters prepare supported UI inputs/selections and invoke
+the actual owner; they do not duplicate inventory, design or Admin business logic.
+Within one project, calls stay typed/direct. Cross-XLAM Admin/Core boundaries use
+declared primitive/serialized bridges; profiles cannot choose a procedure to call.
+Authoring requires ACTION_PATH_MAINT; executing a readable saved profile requires
+the ordinary capabilities of its steps, not the author's identity or privileges.
+Profile authoring grants no additional execution capability. An unavailable Admin
+package or missing capability is an explicit preflight failure, never a skipped step.
+
+Run How-To opens setup and preflight; merely selecting a guide or view never runs
+anything. Start Run executes the frozen sequence. Step through executes one ready
+step per explicit Next Step click. Show the current step, required prompts, target,
+and last confirmed result. One run owns dispatch at a time; loading, repeated clicks
+and nested callbacks cannot produce duplicate owner attempts. A form may be shown
+for training, but fixed pixel coordinates/SendKeys are not the execution contract.
+
+Stop prevents dispatch of further steps after the currently executing owner returns
+to a safe boundary. It cannot promise to undo an in-flight or already submitted
+operation. An explicit rejection, denied capability, unavailable input/adapter,
+owner failure, lost context or missing required recording stops automatic progress
+at that step. Preserve exact attempted/submitted/unknown outcomes and any partial
+effects. No automatic retries, rollback, repair, reseeding or restart-after-failure.
+RetryAllowed still applies only to evaluation of separately observed attempts.
+After stop/failure, a new run requires explicit setup/preflight; the operator chooses
+fresh fixtures or knowingly continues existing training state. Neither path may
+claim a reset occurred unless the ordinary owner actually performed one.
+
+**Fresh proof, not simulated success:** Every execution gets a new run identity
+and recording; each dispatched step links to its fresh ActivityId and any exact
+source events. Runner/setup/editor controls are excluded from their own business
+sequence to avoid recursive capture. Underlying role actions retain their ordinary
+observations and required audit. Manual/unrelated actions are not silently used
+to satisfy a planned step. An operator-required step has explicit provenance and
+must still have the specified actual owner evidence to satisfy its expectation.
+
+Execution reaching its last step is not a verified conclusion. Show dispatch
+state separately from diagnostic result. Verify run applies the existing evaluator
+to that new recording, frozen expectation and explicitly loaded owning published
+evidence. A missing expected conclusion shows Not configured; it cannot Pass.
+CommandCompleted requires the exact owner's positive result. SourceEventsApplied
+requires every exact emitted source event's applied evidence; an EventId, aggregate
+processor count, prior successful run or mere handler return is insufficient.
+
+If normal owner processing has not yet produced the required published evidence,
+show the existing awaiting/incomplete result. Explicit ordinary Publish/Refresh
+then Verify can obtain newer evidence; Verify itself does not process, publish,
+open authority workbooks or silently refresh. Each evaluation remains immutable.
+How-To, Diagnostic and Compare both show the same selected guide/profile version
+and fresh run, distinguishing original observations, intended steps, actual new
+attempts, partial effects and verified result. Keep the personal view preference.
+
+**Finite delivery and acceptance:** The feature's new completion criterion is a
+user-visible How-To that can actually execute and verify one Operations workflow
+and one Admin workflow in a generated training runtime, plus the complete approved
+control inventory and existing acceptance obligations. Initial vertical examples
+are Receiving a dummy inventory entity with exact applied-event verification and
+Admin Seed Demo Inventory in a newly generated training runtime with its declared
+owner outcome. These are milestones, not substitutes for comprehensive coverage
+or permission to reset a nonempty runtime.
+
+Before broadening adapters, classify every constructed Operations/Admin user
+control as automatic with a declared input/output contract, operator-required with
+a reason, or intentionally excluded helper/programmatic behavior. Unsupported
+deliberate actions remain visible open items. Classification does not authorize
+silently weakening D18 coverage; unresolved scope exceptions require approval.
+
+After amendment approval, D13 must establish meaningful packaged callback RED
+for an executable How-To before implementing the runner. Also protect training
+versus operational targets, isolation of canonical writes, real input/output
+binding and fresh identity, manual/action parity, permissions, context loss,
+loading/nested entry, stopping/partial submissions, policy/store failure, version
+compatibility, import-without-execution, and fresh verification. Preserve focused
+RED/GREEN, packaged XLAM/compile/layout/static/live-role/full Release 1 chain,
+all current GREEN regressions, restart/binding and visible operator evidence.
+Reuse unchanged accepted evidence where valid; no gate is waived. Record human
+comparison separately. Commit/push completed slices. This proposal authorizes no
+implementation, production replay, deployment or operational workbook overwrite.
+
+**Retain / replace / do not duplicate on approval:** Retain Event Viewer, Admin
+policy, recording integrity, guide authoring, How-To/Diagnostic/Compare, preferences,
+owner correctness fixes and existing exact evidence. Replace the idea that examining
+historical evidence alone satisfies the user's executable-How-To outcome. Reuse the
+existing evaluator; do not build a second owner-success inference engine or keep
+expanding passive diagnostics as a substitute for execution. D13 test instrumentation
+is evidence and a potential reusable fixture source, not automatically production
+runner code. RUN-SCALE-01/RUN-UI-01 remain separate pending decisions.
+
+**Approval requested:** Accept or revise D18-REPLAY-01 as a whole, specifically
+training-only R1 execution, explicit authored/prompted inputs, the separate versioned
+execution profile, ordinary-handler dispatch, stop-without-rollback semantics,
+and existing owner-evidence verification. On approval, record it here and update
+the conflicting blanket no-replay wording and dependent acceptance summaries
+explicitly before implementation. Until then this block is a proposal only.
+
 **Approved 2026-09-07 -- Slice 4be synthesized contract.** The user approved the
 detailed shared Events contract, including comprehensive Operations/Admin
 coverage, one versioned Action Path with How-To, Diagnostic and Compare both

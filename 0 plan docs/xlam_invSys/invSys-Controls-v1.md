@@ -1,6 +1,49 @@
 # invSys Form Controls v1
 
-**Version:** 1.435 (Complete Run native closure verification; full acceptance pending)
+**Version:** 1.436 (Pending D18-REPLAY-01 proposal; existing acceptance unchanged)
+
+## Proposed Action Path execution controls -- NOT APPROVED
+
+Drafted2026-10-04 under the pending Architecture v4.11 D18-REPLAY-01 amendment and
+matching Plan022 milestones. These are reviewable proposed surfaces, not implemented
+controls, registered activity IDs, approved behavior or acceptance evidence. The
+current approved no-replay contract remains operative pending explicit approval.
+
+| Surface / proposed control | Operator wording | Proposed behavior and protecting packaged test |
+|---|---|---|
+| Admin Generate Warehouse: purpose selector | Warehouse purpose: Operational / Training | Default Operational. Existing creation handler asks Core to provision purpose metadata; only an explicitly generated Training runtime is executable. Test ordinary defaults, canonical isolation and rejected operational/missing-purpose targets. |
+| Action Paths: execution-profile editor entry | Configure execution | ACTION_PATH_MAINT author binds the selected guide version to declared controls and typed dummy inputs, prompts or output references. Test allowed fields, permissions, fresh exact identities, version changes and rejected arbitrary code/credentials. |
+| Profile editor: per-step inputs and expectation | Training inputs / Expected conclusion | Displays unresolved bindings and the exact reviewed conclusion; saving creates an immutable profile version. Missing inputs prevent dependent dispatch; missing conclusion cannot verify success. |
+| Action Paths: runner entry | Run How-To | Opens setup for the selected guide/profile; does not execute on selection. Old guides show Execution not configured. Test no side effects before explicit start and stale selection refusal. |
+| Runner: target and preflight summary | Training warehouse / Company / Ready or reason unavailable | Shows resolved training target, guide/profile versions, required capabilities and unresolved inputs; binds current session and role workbooks. Test no ActiveWorkbook fallback or cross-warehouse redirection. |
+| Runner: execution mode | Run all / Step through | Run all dispatches the frozen sequence; Step through waits for Next Step. This is independent of the existing How-To/Diagnostic/Compare presentation preference. |
+| Runner: start | Start Run | Starts one fresh recording and invokes ordinary authorized owners through registered adapters. Test actual business effect and fresh evidence, loading/busy suppression and exact source correlation. |
+| Runner: manual step | Next Step | Runs exactly one ready step in Step through mode; repeated/nested clicks cannot dispatch twice. Required prompts/ordinary interactive prerequisites remain explicit. |
+| Runner: stop | Stop | Prevents subsequent dispatch after the in-flight owner reaches a safe return boundary. Test retained partial effects and recording; no rollback, reset or automatic retry is promised. |
+| Runner: status and evidence | Current step / Last result / Run state / Verification result | Keeps execution state separate from business proof. Test pending/partial/unknown outcomes, unsupported steps, context loss and evidence failure without fabricated success. |
+| Runner/library: evaluation | Verify run | Uses existing evaluation semantics on the fresh run and explicitly loaded owner projection. Does not publish/process or open authority workbooks. Test all exact source events, absent expectation, stale/incomplete evidence and later explicit Refresh/Verify. |
+| Guide transfer: optional execution profile | Include execution profile | New declared transfer version; old guide-only transfer remains valid. Import never executes, marks a runtime Training or silently substitutes local identities. Test input rebinding and incompatible-version refusal. |
+
+Use existing packaged Operations launcher/form ownership and declared Admin/Core
+bridges. Core/Domain stay headless. Ordinary underlying controls retain their
+existing capability and activity contracts; running a readable profile does not
+inherit its author's privileges or require authoring rights. Runner/profile controls are excluded
+from their own business recording to prevent recursive capture; their saved
+artifacts retain separate provenance. No new event IDs are approved by this table.
+
+The user-facing workflow proposed for acceptance is Record -> Author -> Run in a
+training warehouse -> Verify, demonstrated for Receiving and Admin Seed on a new
+training runtime, including an interrupted run. Existing How-To, Diagnostic,
+Compare both and personal preference remain. Visible target labels, long values,
+multiline content and default/minimum/maximize/restore behavior require actual
+operator evidence; UI geometry or assertion counts alone do not close acceptance.
+
+Remaining controls must be classified as automatic, operator-required, or excluded
+helper/programmatic behavior with a reason. Unimplemented deliberate actions remain
+visible pending entries; this proposal does not mark the Production census complete.
+RUN-SCALE-01/RUN-UI-01 still require their separate decisions.
+
+## Existing verified acceptance record
 
 Reusable Complete Run native workbook closure now passes258/258 on unchanged
 entry02, retaining206 prior ordered checks. The52 added assertions cover entry,
