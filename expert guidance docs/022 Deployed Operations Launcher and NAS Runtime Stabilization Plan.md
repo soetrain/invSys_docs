@@ -6,7 +6,7 @@
 
 **Status, 2026-10-04:** The A/B split and both parts' R1 requirement are approved.
 The execution contract in Architecture v4.11 D18-REPLAY-01 remains pending approval;
-amend its named conflicting clauses before implementation. Controls 1.440 tracks
+amend its named conflicting clauses before implementation. Controls 1.441 tracks
 the same scope. No acceptance is claimed by this plan revision.
 
 | Milestone | Deliverable / exit |
@@ -57,11 +57,13 @@ Next Batch binding, 2026-10-04: packaged RED58/12 -> GREEN70/70 under the existi
 D18 rule; no observation integration yet. Five compiles/smoke86/layout geometry18
 pass with unchanged static metrics. Full chain fails during Shipping with a native
 Excel crash; recovered fixture bytes and settings/reports/packages are preserved.
-The ordered live control passes48/48 without preceding setup, with normal closure
-and preservation. Test source-setup process exit before repeating the chain;
-neither this control nor earlier timing evidence proves native-crash causation.
-Controls1.440/coverage1.176 and the Next Batch integration record retain evidence;
-neither this scoped fix nor passing geometry accepts 4be-A.
+The ordered live control passes48/48 without preceding setup. Actual source-prefix
+tooling RED4/1 -> GREEN5/5 proves the missing process-exit wait; the corrected chain
+passes32/live-role48/warehouse15, with prior ordered checks, normal closure,
+preservation and delayed zero native audit. Static metrics/28 caps remain unchanged;
+three schemas/382 parses pass. Crash causation is unproven. Controls1.441/coverage1.177
+and the Next Batch integration record retain evidence. Continue observations and
+remaining A1/A2/B0; do not repeat unchanged passing gates or mark 4be-A accepted.
 
 Complete Run native closure verification,2026-10-02: unchanged entry02 passes
 258/258 with all206 prior ordered checks retained. The52 new assertions cover

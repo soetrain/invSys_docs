@@ -1,12 +1,16 @@
 # Production form tracking coverage audit
 
-Version 1.176. Last reviewed:2026-10-04 UTC, Next Batch captured-context guard;
+Version 1.177. Last reviewed:2026-10-04 UTC, Next Batch binding and corrected chain;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
 
 Next Batch actual-handler RED58/12 -> GREEN70/70 proves normal advance and refusal
 after target/session/sign-out changes, preserving owner/projection/custom fields
 and saved bytes. Five compiles/smoke86/layout geometry18 and unchanged static caps
-pass. Full chain has a native Shipping failure; investigation remains open.
+pass. After a native Shipping failure, source-prefix tooling RED4/1 -> GREEN5/5
+proves a missing process-exit wait. The corrected chain retains32/live-role48/
+warehouse15, normal closure, preservation and delayed zero native audit. Static
+metrics/28 caps remain unchanged; three schemas/382 parses pass. Crash causation
+is unproven; the original failure remains recorded.
 This adds binding protection, not observations. Exact evidence and limitations:
 `tests/integration/plan022_slice4be_production_next_results.md`.
 

@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.440 -- Next Batch binding verified; chain and execution approval pending.
+**Version:** 1.441 -- Next Batch binding and corrected chain verified; execution approval pending.
 
 ## Slice 4be acceptance and proposed controls
 
@@ -44,10 +44,18 @@ becomes GREEN70/70, retaining prior passes and preserving owner/projection on
 target/session/sign-out changes. Normal advance, custom columns, saved bytes and
 decoy survive. Five compiles, smoke86 and layout geometry18 pass; static metrics
 and 28 caps do not grow. Two focused and six layout captures reviewed; empty-list
-layout does not prove populated/multiline acceptance. Full chain has a native Shipping crash;
+layout does not prove populated/multiline acceptance. The first chain had a native Shipping crash;
 assisted fixture cleanup preserves saved bytes/settings/reports/packages.
 Next Batch observations and 4be-A acceptance remain open. Exact receipts and
 limitations: `tests/integration/plan022_slice4be_production_next_results.md`.
+
+Source-stage exit correction: actual-prefix tooling RED4/1 -> GREEN5/5. The
+existing cleanup wait now prevents ordered live work from starting while setup
+Excel is still exiting. Unchanged packages pass chain32/live-role48/warehouse15,
+retaining prior ordered checks, normal closure, settings/report/package preservation
+and delayed zero native audit. Static metrics/28 caps remain unchanged; three
+schemas/382 parses pass. Earlier crash causation remains unproven. No new control
+or recording behavior is accepted; continue A1/A2 and B0 after contract approval.
 
 Reusable Complete Run native workbook closure now passes258/258 on unchanged
 entry02, retaining206 prior ordered checks. The52 added assertions cover entry,

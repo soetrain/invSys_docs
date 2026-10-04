@@ -229,7 +229,7 @@ for R1. Recording by action/user, ordinary warehouse rights, explicit Run/Valida
 saved results and Admin-only notifications (no email) are confirmed requirements.
 Detailed execution provisions below remain pending approval; existing D18 governs
 implementation until its conflicting clauses are explicitly amended. Plan 022 and
-Controls 1.440 use the same distinction. D19 retains its existing meaning.
+Controls 1.441 use the same distinction. D19 retains its existing meaning.
 
 **Delivery and finish line:**
 
