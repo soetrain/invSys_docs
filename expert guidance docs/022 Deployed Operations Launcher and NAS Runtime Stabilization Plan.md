@@ -2,118 +2,54 @@
 
 **Status:** Current corrective implementation plan
 
-## Pending Action Path execution amendment -- D18-REPLAY-01
+## Slice 4be -- recording/guidance and replay/proof
 
-**Drafted 2026-10-04; NOT APPROVED; no replay implementation authorized.**
-The normative proposal is Architecture v4.11, D18-REPLAY-01. Controls 1.438 records
-its proposed surfaces with the same status. Existing approved D18 remains operative
-until that proposal is approved and the conflicting no-replay wording is explicitly
-superseded. This section does not silently reconcile the two contracts.
+**Status, 2026-10-04:** The A/B split and both parts' R1 requirement are approved.
+The execution contract in Architecture v4.11 D18-REPLAY-01 remains pending approval;
+amend its named conflicting clauses before implementation. Controls 1.439 tracks
+the same scope. No acceptance is claimed by this plan revision.
 
-**User-confirmed requirements, 2026-10-04:** explicit Run/Validate and saved
-results; working/broken How-Tos and Needs attention in Admin; no R1 email
-notifications. Admin controls optional recording by action and warehouse user.
-Anyone may use Action Path within current warehouse rights, including creating a
-separate warehouse with their own Admin access through ordinary provisioning.
-These product choices are confirmed; the full execution/profile amendment remains
-pending approval. No scheduled validation or external notification delivery is
-included in the proposed R1 scope.
+| Milestone | Deliverable / exit |
+|---|---|
+| Shared contract | Approve replay boundaries; define shared schemas; map every Operations/Admin control to owner/callback, observation status, replay support and evidence. |
+| A1 Recording and policy | Finish comprehensive observations and per-action/per-user Admin settings, preserving required audit, permissions and history. |
+| A2 Viewer and guidance | Finish Viewer/detail, authoring, guide-only transfer, How-To/Diagnostic/Compare and preferences; prove provenance, incomplete recordings and visible long/multiline content. |
+| B0 Early replay proof | After contract approval, record Receiving, author guide/inputs, replay via packaged handlers in a generated Training runtime and verify fresh exact applied-event results. RED precedes implementation; GREEN precedes A acceptance. |
+| A3 Accept 4be-A | A1/A2 and applicable D13 gates pass; shared contract approved and B0 GREEN. Recording/guidance is usable; 4be-B and R1 acceptance remain open. |
+| B1 Replay and Admin | Finish run/step/stop and adapters, including Admin Seed in a newly generated runtime, permissions/context loss, nested entry, interruption and partial outcomes. |
+| B2 Coverage and results | Complete approved replay coverage, profile-aware transfer, local revalidation and saved Admin Working/Broken/Needs validation/Incomplete results with Needs attention. |
+| B3 Accept 4be-B/R1 | Retain A; all required package/compile/layout/static/live-role/full-chain/regression/binding gates and visible Operations/Admin proof pass. Both parts are required. |
 
-The user's intended outcome is Record -> Author -> Run in a training warehouse ->
-Verify. Passive comparison of a prior run is useful evidence but does not satisfy
-the newly clarified executable-How-To outcome. The user approved including replay
-as 4be-B within R1, with recording/guidance delivered as 4be-A; guidance025's
-suggested deferral is not adopted. Retain the existing evaluator, Viewer, recording, guide and
-preference work; do not build another outcome-inference engine in place of replay.
+B0 is B work performed early to test the recording-to-replay interface; it does not
+accept B. Receiving and Admin Seed are initial examples, not a reduced coverage
+target. Existing 4be.x tests/evidence keep their identifiers. This sequence replaces
+the earlier proposed R0-R5 grouping without discarding its work.
 
-### Approved delivery split; detailed replay contract pending
+**Boundaries:** Architecture owns behavior; do not repeat or redefine it here.
+Run executes ordinary authorized handlers only in a designated training runtime.
+Validate/Verify evaluates evidence without executing, processing or publishing.
+Manual guide use follows ordinary warehouse rights. Runner controls remain in the
+coverage census even when excluded from their own replay sequence. Required audit,
+System_Key, unknown columns, captured binding and headless ownership remain intact.
+R1 notifications are inside Admin only; no email or scheduled validation.
 
-**Approved2026-10-04:** 4be-A -- Recording, Event Viewer and How-To authoring;
-4be-B -- Replay and proof. Both must pass for R1 acceptance. A can be accepted as
-a usable recording/guidance milestone, but A alone cannot close Slice 4be or R1.
-This groups delivery work without renaming existing 4be.x tests/evidence or
-restarting already verified implementation. Record each part's status separately.
+**D13 and completion:** Use the actual packaged callbacks/form handlers. B0 RED
+means missing execution or fresh business proof, never a compile/fixture/harness
+failure. Derive remaining tests from the normative boundaries; implement the
+smallest passing change. Keep all current GREEN regressions and mandatory final
+gates, including visible operator evidence. Do not rerun unchanged broad gates for
+document-only edits. Record A/B milestone evidence separately and commit/push slices.
 
-Review/approve the replay mechanisms and the shared recording/guide/profile
-interface before closing A. The early B0 proof below runs after that approval and
-before A acceptance. Broader B completion follows A. This is an explicit dependency,
-not a waterfall assumption that replay can be designed only after recording ships.
+Retain frozen entry02 evidence: Complete Run258, Check In629, smoke86,
+chain32/live-role48/warehouse15 and scoped layout/static results. It protects
+existing behavior, not the unimplemented runner. Fix remaining owner blockers
+test-first; do not expand passive diagnostics in place of replay. RUN-SCALE-01/
+RUN-UI-01 remain separate pending decisions; prior granted approvals stand.
+On actual desktop error 5, record time, stop work, preserve evidence and exit under
+the user's standing instruction. Stale probes/native crashes are different failures.
 
-### Bounded milestone sequence
-
-| Milestone | Deliverable and protecting RED | Exit evidence |
-|---|---|---|
-| Shared contract and inventory | Approve D18-REPLAY-01 mechanisms and shared schemas; replace exact conflicting clauses; classify all Operations/Admin controls and reconcile pending rows | One matrix: A observation/UI status, B replay classification, owner/callback, inputs/outputs, expected result, dependency and evidence. Registration, replay support and acceptance remain distinct. |
-| A1 Recording and tracking | Finish Operations/Admin observations and Admin per-action/per-user policy through actual handlers | Focused RED/GREEN for remaining gaps, user-disabled precedence, required audit retained, future-only changes, role/context boundaries and preserved history; keep existing GREEN evidence |
-| A2 Viewer and guidance | Finish Event Viewer/detail, guide authoring, guide-only export/import, How-To/Diagnostic/Compare and preferences | Packaged handler tests, permission/provenance/incomplete-recording cases, saved/reopened and transfer compatibility, visible long-value/multiline/layout evidence; shared guide interface supports B0 |
-| B0 Early replay proof, before A acceptance | Provision a generated Training runtime through the ordinary Admin handler; replay a How-To authored from an A Receiving recording with explicit inputs and output bindings | Behavioral RED: actual packaged path cannot execute the guide or prove its fresh result. GREEN: same owner handlers, new exact identities, real dummy inventory effect, every exact source event verified; operational/unknown target refusal, target/Admin isolation, ordinary permissions and guide/profile binding |
-| A3 Recording/guidance acceptance | Close A1/A2 with replay contract approved and B0 GREEN; retain existing approved work | Applicable packaged/compile/layout/static/live-role/full-chain/regression/binding gates and visible Operations/Admin guidance comparison. Report A accepted and B open; never report R1 accepted here. |
-| B1 Replay controls and Admin proof | Expand real owner adapters; Admin Seed on a newly generated training runtime; Run all/Step through/Next/Stop, interruptions and partial submissions | Packaged RED/GREEN; actual Admin bridge, exact owner outcome, visible target, context/permission loss, nested entry and recording failure; no implicit retry/reset/rollback or fabricated success |
-| B2 Coverage, transfer and saved results | Finish complete approved replay inventory, prompts/manual prerequisites, profile-aware transfer and saved validation results in Admin | Unsupported deliberate actions remain open; imported profiles never execute/provision and require local binding/validation; reject incompatible versions; saved/reopened Working/Broken/Needs validation/Incomplete results and Needs attention, no email or scheduled execution |
-| B3 Replay and combined R1 acceptance | Finish B while retaining A; package/compile/layout/static/live-role/full Release 1 chain, all current GREEN role/Viewer/launcher/inventory/reusable Production regressions and human/NAS comparison | User executes and verifies Operations and Admin guides, sees an incomplete run and Admin result history, compares both presentations; complete approved coverage and both A/B accepted before Slice 4be/R1 closes |
-
-The A/B split and R1 requirement are approved; execution details remain subject to
-the normative amendment approval. This table replaces the earlier proposed R0-R5
-sequence: their training/execution work maps to B0/B1, observation/settings work to
-A1/A2, transfer/results coverage to A2/B2, and final acceptance to B3. No scope or
-D13 requirement is dropped. B0 and the first Admin example are bounded proofs;
-final B acceptance still requires the complete approved replay inventory. Passing
-replay proves its specified conclusion in that context, not every system behavior.
-No estimate is derived from the number of passed assertions. Report milestone
-state and unresolved decisions instead of an unsupported completion percentage.
-
-### Contract dependencies and implementation discipline
-
-- Training means its own canonical runtime, not an operator-workbook copy. Only
-  explicit Run dispatch authorizes the ordinary owner effects; ordinary Viewer
-  reads and Verify remain read-only. No production execution is proposed for R1.
-- Existing observations lack business inputs. Add the separately versioned,
-  allowlisted execution profile specified by D18-REPLAY-01; do not change activity
-  events into keystroke/input capture or treat generated EventIds as submissions.
-- Require fresh run/ActivityId/source-event linkage and actual owner facts. Keep
-  dispatch completion separate from verified command completion/application.
-- Commands outside the bound training runtime require explicit operator handling;
-  their steps cannot be silently skipped or represented as automatic success.
-- Optional user recording extends the versioned policy through the existing D5
-  save command; default enabled preserves existing control defaults. User disabled
-  cannot be bypassed by explicit recording. Policy changes preserve history and
-  required audit; ordinary manual work is not blocked. Define the new schema before
-  code and retain independent read visibility and workflow permissions.
-- Admin status derives from saved results for the exact local guide/profile/run
-  and compatible packages. Show Working, Broken, Needs validation and Incomplete/
-  blocked distinctly; the latter three populate Needs attention. Old passes cannot
-  hide later failures; imported results cannot certify a destination. Opening the
-  list or changing versions never runs a guide. No email configuration/delivery,
-  background validation or automatic repair belongs to this R1 slice.
-- Reading/following guides does not require Admin or ACTION_PATH_MAINT; execution
-  still requires each ordinary action's capability, and authoring keeps its own
-  gate. Explicit bootstrap may provision the creator as Admin in a new warehouse;
-  Auth reload never grants rights. Location-based training scenarios remain within
-  one runtime and introduce no cross-warehouse execution.
-- Preserve the current frozen entry02 package and its accepted evidence. Retain
-  Complete Run258, Check In629, smoke86, chain32/live-role48/warehouse15 and layout
-  evidence as the starting baseline; none proves the unimplemented runner.
-- Map remaining Complete Run worksheet/partial-submission work to the owner facts
-  replay and existing diagnostics require. Do not continue an unbounded passive
-  diagnostic expansion in place of the agreed execution milestone. Fix actual
-  architectural blockers with focused RED/GREEN before depending on their owners.
-- RUN-SCALE-01/RUN-UI-01 remain unapproved and separate. Prior connection-write,
-  UOM and Auth/Event Detail approvals are not reopened by this proposal.
-- Do not rerun unchanged broad gates solely for documentation/test prose edits.
-  Changed runtime, package hashes, failures and dependencies determine relevant
-  reruns; every mandatory final gate remains. Preserve prior passing assertions.
-- On actual desktop error 5, stop work and retain evidence per the user's standing
-  instruction. An expired probe or a native Excel crash is not desktop error 5.
-
-### Approval disposition
-
-The user has approved the A/B delivery split and replay as a required R1 outcome.
-Await approval of the concrete normative proposal: training-only execution,
-reviewed typed inputs/profile, ordinary-handler dispatch, no automatic rollback or
-retry, and exact owner-evidence verification. On approval, record the decision in
-Architecture first, synchronize this plan and the catalog, and establish the first
-meaningful packaged execution RED for B0 before A acceptance. No runtime work is
-started by this document revision; implementation acceptance remains open for A/B.
+**Next:** Resolve the pending execution amendment, then run B0's meaningful
+packaged RED as soon as its A recording/guide prerequisites are available.
 
 ## Prior verified implementation checkpoints
 

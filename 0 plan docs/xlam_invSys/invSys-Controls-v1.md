@@ -1,84 +1,41 @@
 # invSys Form Controls v1
 
-**Version:** 1.438 (Approved 4be-A/4be-B delivery split; replay mechanisms pending)
+**Version:** 1.439 -- approved A/B delivery split; execution contract pending.
 
-## Proposed Action Path execution controls -- NOT APPROVED
+## Slice 4be acceptance and proposed controls
 
-Drafted2026-10-04 under the pending Architecture v4.11 D18-REPLAY-01 amendment and
-matching Plan022 milestones. These are reviewable proposed surfaces, not implemented
-controls, registered activity IDs, approved behavior or acceptance evidence. The
-current approved no-replay contract remains operative pending explicit approval.
+Architecture v4.11 D18-REPLAY-01 owns behavior; Plan 022 owns sequencing.
+Both 4be-A and 4be-B are required for R1. Existing acceptance below is retained;
+this revision approves no new implementation, control IDs or runtime acceptance.
 
-User-confirmed2026-10-04: explicit Run/Validate, saved working/broken results and
-Needs attention in Admin, no R1 email notifications, optional recording controls
-by action and warehouse user, and guide use within each user's warehouse rights.
-Separate warehouse creation can provision its creator as Admin locally. Detailed
-surfaces/status rules below remain proposals under the pending amendment; no new
-runtime acceptance is claimed.
+| Part | Scope / exit |
+|---|---|
+| 4be-A | Operations/Admin observations; Viewer/detail; tracking by action/user; How-To authoring and guide-only transfer; How-To/Diagnostic/Compare and preferences. Require usable, permission-correct guidance and visible long/multiline content, applicable D13 gates, replay-contract approval and early B0 GREEN. |
+| 4be-B | Training setup; profile/inputs; replay controls; fresh verification; executable-guide transfer; saved results and Admin Needs attention. Require complete approved replay coverage, exact owner proof, interruption/partial outcomes and combined R1 gates. |
 
-## Approved delivery split and separate acceptance
+B0 exercises Receiving recording -> authored guide/inputs -> real packaged replay
+-> fresh verification before A closes. B0 alone does not accept B. Keep historical
+4be.x identifiers; registration, implementation and acceptance are distinct.
 
-User-approved2026-10-04: **4be-A -- Recording, Event Viewer and How-To authoring**;
-**4be-B -- Replay and proof**. Both are required for R1; neither is accepted by
-this documentation revision. Detailed replay behavior remains pending under
-D18-REPLAY-01. Existing verified control evidence remains valid within its scope.
-
-| Part | Controls and acceptance owned by this part | Completion boundary |
+| Proposed surface | Operator wording | Protecting packaged behavior |
 |---|---|---|
-| 4be-A | Operations/Admin observation coverage; Viewer/Event Detail; Admin per-action/per-user tracking; guide creation/editing and guide-only transfer; How-To/Diagnostic/Compare and personal preference | Usable recorded and authored guidance, policy/rights/provenance and incomplete-recording cases, visible long-value/multiline access, applicable D13 gates; replay contract approved and early B0 proof GREEN before A closes |
-| 4be-B | Training-purpose creation; execution-profile/inputs; Run/Start/Next/Stop; fresh Verify; profile-aware transfer; saved results and Admin Working/Broken/Needs attention | Complete approved replay coverage, actual ordinary-handler effects and exact owner proof, interruption/partial outcomes, destination validation, saved/reopened Admin results and full R1 acceptance gates |
+| Admin Generate Warehouse | Warehouse purpose: Operational / Training | Default Operational; generated Training target required for replay; designated Admin rights remain local. |
+| Admin Settings > Event Tracking | Record action / Record user | Actual authorized/versioned save; disabled user overrides capture; control defaults, required audit, history, unknown columns and current target preserved. |
+| Action Paths/profile editor | Configure execution / Training inputs / Expected conclusion | Authoring permission, exact guide version, typed bindings, fresh identities and strict validation; missing inputs prevent dependent dispatch. |
+| Runner setup | Run How-To / Training warehouse / Company | Selection opens setup only; show exact target/version/rights; old guides show Execution not configured. |
+| Runner | Start Run / Run all / Step through / Next Step / Stop | Same owner handlers, fresh evidence, one dispatch guard, preserved context and partial effects; stop prevents later dispatch without rollback. |
+| Runner status | Current step / Last result / Run state / Verification result | Distinguish dispatch from business proof; expose failed, partial, unknown and unavailable outcomes. |
+| Runner/library | Verify run | Read-only evaluation of all required steps and exact owner evidence; missing conclusion/evidence cannot pass. Admin's Validate uses this same operation. |
+| Guide transfer | Include execution profile | Versioned compatibility/local input binding; import never executes/provisions or certifies destination success. |
+| Admin Action Paths | All / Working / Broken / Needs attention | Saved/reopened results, reason/time/version; changed/imported guides need local validation; older passes cannot mask later failures/interruption. |
+| Admin result actions | View result / Edit How-To / Run / Validate | Ordinary read/author/step permissions; Run executes only after setup/start, Validate only evaluates; protect hidden sources. |
 
-The early B0 Receiving replay test links an A recording/guide to authored inputs,
-real packaged execution and fresh verification before A acceptance. It is B work
-performed early to validate the shared interface, not completion of all B controls.
-Record A/B status and evidence independently; a read-only Diagnostic pass, registered
-control or passing service test alone cannot accept replay. No existing controls
-or historical 4be.x evidence identifiers are renamed by this delivery grouping.
-
-## Proposed execution and recording extensions -- implementation pending
-
-| Surface / proposed control | Operator wording | Proposed behavior and protecting packaged test |
-|---|---|---|
-| Admin Generate Warehouse: purpose selector | Warehouse purpose: Operational / Training | Default Operational. Existing creation handler asks Core to provision purpose metadata; only an explicitly generated Training runtime is executable. Test ordinary defaults, canonical isolation, designated Admin rights local to the new warehouse and rejected operational/missing-purpose targets. |
-| Admin Settings > Event Tracking > Tracking: action/user choices | Record action / Record user | ADMIN_MAINT edits optional recording for registered controls and authenticated invSys warehouse users. Proposed user default enabled preserves control defaults; user disabled overrides capture requests. Test actual save, stale context/version, denied writes, future-only effect, required audit, unknown columns and policy changes during a run. |
-| Action Paths: execution-profile editor entry | Configure execution | ACTION_PATH_MAINT author binds the selected guide version to declared controls and typed dummy inputs, prompts or output references. Test allowed fields, permissions, fresh exact identities, version changes and rejected arbitrary code/credentials. |
-| Profile editor: per-step inputs and expectation | Training inputs / Expected conclusion | Displays unresolved bindings and the exact reviewed conclusion; saving creates an immutable profile version. Missing inputs prevent dependent dispatch; missing conclusion cannot verify success. |
-| Action Paths: runner entry | Run How-To | Opens setup for the selected guide/profile; does not execute on selection. Old guides show Execution not configured. Test no side effects before explicit start and stale selection refusal. |
-| Runner: target and preflight summary | Training warehouse / Company / Ready or reason unavailable | Shows resolved training target, guide/profile versions, required capabilities and unresolved inputs; binds current session and role workbooks. Test no ActiveWorkbook fallback or cross-warehouse redirection. |
-| Runner: execution mode | Run all / Step through | Run all dispatches the frozen sequence; Step through waits for Next Step. This is independent of the existing How-To/Diagnostic/Compare presentation preference. |
-| Runner: start | Start Run | Starts one fresh recording and invokes ordinary authorized owners through registered adapters. Test actual business effect and fresh evidence, loading/busy suppression and exact source correlation. |
-| Runner: manual step | Next Step | Runs exactly one ready step in Step through mode; repeated/nested clicks cannot dispatch twice. Required prompts/ordinary interactive prerequisites remain explicit. |
-| Runner: stop | Stop | Prevents subsequent dispatch after the in-flight owner reaches a safe return boundary. Test retained partial effects and recording; no rollback, reset or automatic retry is promised. |
-| Runner: status and evidence | Current step / Last result / Run state / Verification result | Keeps execution state separate from business proof. Test pending/partial/unknown outcomes, unsupported steps, context loss and evidence failure without fabricated success. |
-| Runner/library: evaluation | Verify run | Uses existing evaluation semantics on the fresh run and explicitly loaded owner projection. Does not publish/process or open authority workbooks. Test all exact source events, absent expectation, stale/incomplete evidence and later explicit Refresh/Verify. |
-| Guide transfer: optional execution profile | Include execution profile | New declared transfer version; old guide-only transfer remains valid. Import never executes, marks a runtime Training or silently substitutes local identities. Test input rebinding and incompatible-version refusal. |
-| Admin Action Paths: saved validation overview/filter | All / Working / Broken / Needs attention | Warehouse-scoped saved results with guide/profile version, last result/time and reason. Needs attention includes Broken, Needs validation and Incomplete/blocked. Test fresh pass/failure, interruption, version changes, destination validation after import, permissions and no stale pass masking later results. Opening/filtering never executes or emails. |
-| Admin Action Paths: result detail and explicit actions | View result / Edit How-To / Run / Validate | Shows immutable run provenance and permitted evidence; maintenance retains ACTION_PATH_MAINT, execution retains step capabilities, Validate retains read-only evaluation. Test saved/reopened results, hidden-source protection and actual handler dispatch only after explicit user action. No scheduled run, email configuration/delivery or automatic repair. |
-
-Use existing packaged Operations launcher/form ownership and declared Admin/Core
-bridges. Core/Domain stay headless. Ordinary underlying controls retain their
-existing capability and activity contracts; running a readable profile does not
-inherit its author's privileges or require authoring rights. Runner/profile controls are excluded
-from their own business recording to prevent recursive capture; their saved
-artifacts retain separate provenance. No new event IDs are approved by this table.
-
-Ordinary authorized users retain guide reading/following and permitted run results
-without Admin access. Personal preferences do not alter warehouse policy. A user
-can create a separate warehouse through explicit provisioning and be its Admin;
-this grants nothing in another warehouse and does not change read-only Auth reload.
-R1 guidance-maintenance notifications are the in-Admin Needs attention list only.
-
-The user-facing workflow proposed for acceptance is Record -> Author -> Run in a
-training warehouse -> Verify, demonstrated for Receiving and Admin Seed on a new
-training runtime, including an interrupted run. Existing How-To, Diagnostic,
-Compare both and personal preference remain. Visible target labels, long values,
-multiline content and default/minimum/maximize/restore behavior require actual
-operator evidence; UI geometry or assertion counts alone do not close acceptance.
-
-Remaining controls must be classified as automatic, operator-required, or excluded
-helper/programmatic behavior with a reason. Unimplemented deliberate actions remain
-visible pending entries; this proposal does not mark the Production census complete.
-RUN-SCALE-01/RUN-UI-01 still require their separate decisions.
+Needs attention includes Broken, Needs validation and Incomplete/blocked.
+Notifications stay inside Admin; no email or scheduled execution. Ordinary users
+retain permitted guide use/results outside Admin. Count runner controls in coverage
+while excluding them from their own replay sequence. No unsupported deliberate
+action may disappear from the inventory; unresolved scope exceptions need approval.
+Preserve packaged-handler RED/GREEN and actual visible comparison/layout evidence.
 
 ## Existing verified acceptance record
 
