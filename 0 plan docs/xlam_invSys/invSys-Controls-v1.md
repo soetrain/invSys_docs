@@ -1,13 +1,13 @@
 # invSys Form Controls v1
 
-**Version:** 1.444 -- Next Batch recording focused GREEN; D18-REPLAY-01 approved.
+**Version:** 1.445 -- Warehouse purpose and geometry focused GREEN; replay still open.
 
 ## Slice 4be acceptance and approved controls contract
 
 Architecture v4.11 D18-REPLAY-01 owns behavior; Plan 022 owns sequencing.
 Both 4be-A and 4be-B are required for R1. Existing acceptance below is retained.
-The user approved D18-REPLAY-01 on 2026-10-04; this revision records its controls
-contract, not implementation, new control IDs or runtime acceptance.
+The user approved D18-REPLAY-01 on 2026-10-04. The table distinguishes approved
+surfaces from the scoped test results below; approval alone is not runtime acceptance.
 
 | Part | Scope / exit |
 |---|---|
@@ -20,7 +20,7 @@ B0 exercises Receiving recording -> authored guide/inputs -> real packaged repla
 
 | Approved surface contract | Operator wording | Protecting packaged behavior |
 |---|---|---|
-| Admin Generate Warehouse | Warehouse purpose: Operational / Training | Default Operational; generated Training target required for replay; designated Admin rights remain local. |
+| Admin Generate Warehouse | Warehouse purpose: Operational / Training | Closed choice `cboWarehousePurpose`, default Operational; actual Create passes purpose to Core's creation-only Config command. Existing runtime cannot be relabelled; cancel creates nothing. Minimum 620 x 610 points keeps summary below inputs and footer below summary; anchors preserve that order when enlarged. Packaged RED15/8 -> GREEN23; layout RED31/4 -> GREEN35 retains prior23. Visible capture and B0 replay remain open. Generated Training target required for replay; designated Admin rights remain local. |
 | Admin Settings > Event Tracking | Record action / Record user | Actual authorized/versioned save; disabled user overrides capture; control defaults, required audit, history, unknown columns and current target preserved. |
 | Action Paths/profile editor | Configure execution / Training inputs / Expected conclusion | Authoring permission, exact guide version, typed bindings, fresh identities and strict validation; missing inputs prevent dependent dispatch. |
 | Runner setup | Run How-To / Training warehouse / Company | Selection opens setup only; show exact target/version/rights; old guides show Execution not configured. |
@@ -39,6 +39,13 @@ action may disappear from the inventory; unresolved scope exceptions need approv
 Preserve packaged-handler RED/GREEN and actual visible comparison/layout evidence.
 
 ## Existing verified acceptance record
+
+Warehouse purpose prerequisite: `validation-warehouse-purpose-02` passes35 focused
+checks and five cold compiles. Purpose01 smoke86/source creation15 remain applicable
+to unchanged business sources; purpose02 changes only Create Warehouse layout.
+Regenerated static caps/dynamic-call/duplicate metrics hold;384 scripts parse.
+Visible capture and the prior native full-chain failure remain open; purpose alone
+does not prove replay. See `tests/integration/plan022_slice4be_warehouse_purpose_results.md`.
 
 Next Batch catalog26 is integrated under existing D18: actual handler
 `mBtnManagerNext_Click`, ID `PRODUCTION_RUN_NEXT_BATCH`, local STAGED only after

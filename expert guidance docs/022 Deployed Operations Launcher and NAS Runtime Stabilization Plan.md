@@ -6,7 +6,7 @@
 
 **Status, 2026-10-04:** The user explicitly approved D18-REPLAY-01, including its
 execution boundaries. Architecture's conflicting clauses are amended; Controls
-1.444 is synchronized. Both parts remain required for R1; implementation and
+1.445 is synchronized. Both parts remain required for R1; implementation and
 acceptance are not established by approval.
 
 | Milestone | Deliverable / exit |
@@ -50,6 +50,15 @@ the user's standing instruction. Stale probes/native crashes are different failu
 
 **Next:** Define the shared execution interface and run B0's meaningful packaged
 RED as soon as its A recording/guide prerequisites are available.
+
+B0 purpose prerequisite: actual packaged Create Warehouse RED15/8 -> GREEN23;
+layout RED31/4 -> GREEN35 retains all23 checks. Core persists creation-only purpose,
+with Operational default, Training choice and existing-runtime refusal. Five cold
+compiles and applicable smoke86/source creation15 pass. Visible capture remains
+open; this is not B0 replay proof. Exact receipts/limits are in
+`tests/integration/plan022_slice4be_warehouse_purpose_results.md`. Next define shared
+execution schemas and prove actual Receiving replay; preserve the native full-chain
+failure as an open gate rather than repeating unchanged broad tests.
 
 ## Prior verified implementation checkpoints
 

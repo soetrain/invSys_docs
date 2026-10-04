@@ -227,7 +227,7 @@ authority non-mutation.
 **Approved, 2026-10-04:** The user explicitly approved D18-REPLAY-01, including
 the execution boundaries below. Both 4be-A and 4be-B are required for R1.
 This decision amends the earlier observation-only restrictions as listed below;
-Plan 022 and Controls 1.444 track the same contract. D19 is unchanged.
+Plan 022 and Controls 1.445 track the same contract. D19 is unchanged.
 Approval authorizes test-first implementation, not deployment or acceptance.
 
 **Delivery and finish line:**
@@ -271,6 +271,14 @@ stay read-only; ordinary publication and recorder controls retain their scopes.
    Location may represent grouped training areas inside that runtime. Manual guide
    use remains available wherever current rights allow; automatic R1 replay is
    restricted to Training.
+   Creation schema: `WarehouseConfig/tblWarehouseConfig.WarehousePurpose` contains
+   exactly `Operational` or `Training`, defaulting to `Operational` for existing
+   callers that omit purpose. Core's bootstrap Config command validates the choice
+   before provisioning and writes it by header name, preserving other columns.
+   Purpose is creation-only, not an ordinary Settings update. Missing/unknown purpose
+   never qualifies a runtime for replay and reads do not add or repair it. A saved
+   Training value alone is insufficient: the runner must also verify the captured
+   generated runtime and its own authority paths under this boundary.
 2. **Binding and ownership.** Show and capture target, actor/session, role workbooks,
    guide/profile and package versions. Recheck context and ordinary capabilities
    before each dispatch and after yields; never fall back to ActiveWorkbook.
