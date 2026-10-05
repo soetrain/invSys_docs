@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.448 -- Packaged runner RED; execution profile authoring GREEN retained.
+**Version:** 1.449 -- Packaged Receiving replay72 GREEN; broader acceptance remains open.
 
 ## Slice 4be acceptance and approved controls contract
 
@@ -19,13 +19,17 @@ B0 exercises Receiving recording -> authored guide/inputs -> real packaged repla
 4be.x identifiers; registration, implementation and acceptance are distinct.
 
 B0 profile gate advances from RED16 PASS/13 FAIL to42 PASS/1 FAIL on
-`validation-execution-profile-03`; Run How-To remains absent. Profile save/reopen,
+`validation-execution-profile-03`; Run How-To was absent at that checkpoint. Profile save/reopen,
 strict invalid-record refusal, versions, role/context guards and three layouts pass.
 See `tests/integration/plan022_slice4be_receiving_replay_results.md`. New editor
 observations, visible operator evidence and replay/fresh proof remain open.
-The expanded runner test is RED45 PASS/17 FAIL: setup, dispatch, fresh recording,
-exact owner application and read-only verification are unimplemented. Existing
-profile checks remain GREEN; the RED is not a regression or B0 acceptance.
+The preimplementation runner test is RED45 PASS/17 FAIL. Core now owns captured
+setup and immutable run evidence; typed Operations adapters use ordinary Receiving
+handlers. Candidate03 reaches72 PASS/0 FAIL: fresh exact owner/evaluator proof,
+setup/context/input guards, Run all, Next/Stop, immutable attempts and three layouts.
+All prior profile checks remain GREEN. Broader permission/policy/nested-entry,
+binding/native regressions, observations and visible proof remain required;
+this focused checkpoint does not establish B0 or 4be-A acceptance.
 
 | Approved surface contract | Operator wording | Protecting packaged behavior |
 |---|---|---|
@@ -33,8 +37,8 @@ profile checks remain GREEN; the RED is not a regression or B0 acceptance.
 | Admin Settings > Event Tracking | Record action / Record user | Actual authorized/versioned save; disabled user overrides capture; control defaults, required audit, history, unknown columns and current target preserved. |
 | Action Paths/profile editor | Configure execution / Training inputs / Expected conclusion | `btnConfigureExecution` validates before opening `frmActionPathExecution`; `lblExecutionGuide` identifies the selected exact version/hash and `lblExecutionProfile` identifies the saved profile. `btnSaveExecutionProfile` saves reviewed wire v1 inputs with the guide's authored conclusion. Authoring permission, typed bindings and strict validation apply. Profile-focused checks pass; replay remains open. |
 | Execution input editor | Step / Input / Binding / Value / Apply input | `lstExecutionSteps` retains exact guide order/StepIds; `cboExecutionInput` lists the selected adapter's declared inputs. `cboExecutionBinding`, `txtExecutionValue` and `btnApplyExecutionInput` edit the typed binding. `btnCloseExecution` discards unsaved edits. B0 entity selection uses the registered target-local prompt; profile save/reopen retains reviewed dummy inputs without executing. Minimum760x620/default900x620; minimum/default/enlarged geometry passes. |
-| Runner setup | Run How-To / Training warehouse / Company | `btnRunHowTo` opens setup only for the exact selected guide/profile; show target/version/rights. Old guides show Execution not configured. `btnStartRun` is the separate execution boundary; B0 implementation pending. |
-| Planned B0 run form | Run How-To / Training item / Run all / Step through | `frmActionPathRun` shows `lblRunGuide`, `lblRunProfile`, `lblRunTarget`; `lstRunSourceEntities` selects an exact local entity without a default, and `cboRunMode` selects the execution mode. `btnVerifyRun` uses read-only evaluation of this run's fresh recording after separate ordinary publication/refresh. These controls remain unimplemented; the packaged runner test protects their contract. |
+| Runner setup | Run How-To / Training warehouse | `btnRunHowTo` opens setup only for the exact selected guide/profile; show target/version/rights. Old guides show Execution not configured. `btnStartRun` is the separate execution boundary. Implementation exists; packaged acceptance remains open. |
+| B0 run form | Run How-To / Training item / Run all / Step through | `frmActionPathRun` shows `lblRunGuide`, `lblRunProfile`, `lblRunTarget`, and `lblRunWorkbook`; `lstRunSourceEntities` selects an exact local entity without a default, and `cboRunMode` selects the execution mode. Default900x720/minimum760x720 points; minimum/default/enlarged layout checks pass after keeping Stop beside Next. `btnStartRun`, `btnNextRunStep`, `btnStopRun`, `btnVerifyRun`, `btnCloseRun` own explicit actions. `lblRunStatus` names the current guide action; `txtRunVerification` shows read-only evaluation of this run's fresh recording after separate ordinary publication/refresh. Observations and visible acceptance remain open. |
 | Runner | Start Run / Run all / Step through / Next Step / Stop | Same owner handlers, fresh evidence, one dispatch guard, preserved context and partial effects; stop prevents later dispatch without rollback. |
 | Runner status | Current step / Last result / Run state / Verification result | Distinguish dispatch from business proof; expose failed, partial, unknown and unavailable outcomes. |
 | Runner/library | Verify run | Read-only evaluation of all required steps and exact owner evidence; missing conclusion/evidence cannot pass. Admin's Validate uses this same operation. |

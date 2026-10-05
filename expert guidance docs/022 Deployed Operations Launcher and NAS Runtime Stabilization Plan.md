@@ -6,7 +6,7 @@
 
 **Status, 2026-10-04:** The user explicitly approved D18-REPLAY-01, including its
 execution boundaries. Architecture's conflicting clauses are amended; Controls
-1.448 is synchronized. Both parts remain required for R1; implementation and
+1.449 is synchronized. Both parts remain required for R1; implementation and
 acceptance are not established by approval.
 
 | Milestone | Deliverable / exit |
@@ -42,20 +42,29 @@ document-only edits. Record A/B milestone evidence separately and commit/push sl
 
 Retain frozen entry02 evidence: Complete Run258, Check In629, smoke86,
 chain32/live-role48/warehouse15 and scoped layout/static results. It protects
-existing behavior, not the unimplemented runner. Fix remaining owner blockers
+existing behavior; runner acceptance remains separate. Fix remaining owner blockers
 test-first; do not expand passive diagnostics in place of replay. RUN-SCALE-01/
 RUN-UI-01 remain separate pending decisions; prior granted approvals stand.
 On actual desktop error 5, record time, stop work, preserve evidence and exit under
 the user's standing instruction. Stale probes/native crashes are different failures.
 
-**Next:** Implement the B0 runner against the expanded packaged RED45/17:
-captured Training setup, target-local entity input, ordinary Receiving dispatch,
-fresh recording and exact owner proof, then read-only verification. Guide use must
-retain ordinary workflow rights without inheriting authoring permission.
+**Next:** Extend candidate`validation-receiving-run-03`'s packaged72/0 checkpoint
+with permission/policy/nested-entry and workbook-replacement guards, then the affected
+Receiving/native and published-guide regressions. Protect ordinary guide use without
+author privileges. Control observations, visible proof and the existing full-chain
+native failure remain open; B0/A/B/R1 acceptance is not yet established.
+
+Runner evidence: preimplementation RED45/17 -> candidate02 71/1 (minimum-width
+Stop overlap) -> candidate03 **72/0**. Core owns captured setup/immutable attempts;
+typed Operations adapters execute six ordinary Receiving handlers. Fresh exact
+event/entity/quantity2.5 and read-only evaluator proof pass, as do setup/context/input,
+Next/Stop, prior-attempt preservation and three layouts. All prior GREEN identities
+remain passing. Five cold compiles,393 script parses and static ratchets pass;
+no deployment. See the Receiving replay results record below for receipts and scope.
 
 B0 profile checkpoint: expanded RED16 PASS/13 FAIL -> candidate
 `validation-execution-profile-03` 42 PASS/1 FAIL, retaining every prior GREEN.
-The remaining failure is absent Run How-To. Typed input editing, immutable versions,
+Its remaining failure was absent Run How-To. Typed input editing, immutable versions,
 exact guide/conclusion binding, strict refusal, close, three layouts and role/context
 guards pass; published-guide regression58/0, five cold compiles and static ratchets
 pass. Invalid profiles are
