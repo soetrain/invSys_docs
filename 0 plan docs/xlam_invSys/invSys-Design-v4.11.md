@@ -981,6 +981,41 @@ permission/context interruption, recording/publication and independent How-To/
 Diagnostic/Compare evidence, in addition to the existing packaged regression gates.
 Complete Run and Print Recall remain separate unintegrated controls.
 
+**Complete Run observation refinement (discovered control; implementation pending):**
+Under approved D18 semantic inheritance, catalog28 adds `PRODUCTION_RUN_COMPLETE`,
+caption Complete Run, actual handler `frmProduction.mBtnManagerApplyOutput_Click`,
+owner `PRODUCTION_RUN_COMPLETION`, role Production, surface
+`Operations > Production > Production Run - List`. Keep existing owner capability
+checks and the form's PROD_POST/ADMIN_MAINT gate. Preserve catalogs1-27. This observes
+the existing selected reusable Process or worksheet output command; it does not
+complete other Processes.
+
+For eligible optional recording, one deliberate outer click records REQUESTED and
+its owning terminal outcome while the original recording context remains valid.
+Context loss may leave an incomplete attempt; never finish under a replacement.
+CONFIRMED requires positive owner acknowledgment and finished local refresh;
+it establishes CommandCompleted for this control, not whole-batch completion or
+Domain application. PENDING requires acknowledged submission with unfinished
+processing/refresh. Pre-submission selection/validation refusal is REJECTED;
+initial permission refusal is DENIED; exceptions, interrupted continuation and
+uncertain writes are FAILED. Preserve partial effects without rollback or retry.
+Use Info/Unknown for REQUESTED/CONFIRMED, Warning/Unknown for PENDING,
+Warning/Unchanged for REJECTED, Blocked/Unchanged for DENIED and Error/Unknown
+for FAILED. Other positive outcome names are unsupported.
+
+Use existing Inventory SourceEventRefs, captured warehouse and exact event IDs.
+CONFIRMED/PENDING require nonempty Submitted references; FAILED retains actual
+Submitted or Unknown write-attempt references. Never expose merely allocated,
+unattempted IDs. SourceEventsApplied independently requires every referenced exact
+event in the owning published evidence. Preserve redaction, live captured-context
+and capability checks, loading/busy/nested suppression, existing operator wording,
+unknown columns and nonblocking optional recording. Retain the standard activity
+envelope; omit quantities, business values, raw messages, business entity/definition
+identities and paths. Only the existing source-reference fields carry event identities.
+D13 must exercise both ordinary handler branches, refusals after prior success,
+partial submissions, policy/store failure, publication and all three guide views.
+This clarifies existing observation rules; it grants no new execution or authority.
+
 **Next Batch observation refinement (existing D18 rule; focused GREEN, acceptance pending):**
 Catalog26 adds `PRODUCTION_RUN_NEXT_BATCH`, caption Next Batch, actual handler
 `mBtnManagerNext_Click`, under the existing PRODUCTION_RUN_LOCAL owner, Production

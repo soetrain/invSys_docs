@@ -79,6 +79,15 @@ repeat unchanged broad gates in place of completing A1/A2. Exact receipts and ne
 work: `tests/integration/plan022_slice4be_user_tracking_policy_results.md`, plus
 the Receiving replay and native-target integration records.
 
+Immediate A1 work: D18's Complete Run discovered-control refinement defines
+catalog28 `PRODUCTION_RUN_COMPLETE` with separate command acknowledgment and exact
+Inventory-source proof. Establish missing-record RED through the ordinary handler,
+then integrate both reusable/worksheet owners, partial outcomes and optional-policy
+behavior. Reusable RED75/24 now passes owner effects and suppression while expected
+records are missing; worksheet/partial/policy coverage and runtime integration are
+next. Code test checkpoint: `57e80bba`. Preserve completion318; recording is not yet GREEN. Exact evidence:
+`tests/integration/plan022_slice4be_production_complete_activity_results.md`.
+
 Runner evidence: preimplementation RED45/17 -> candidate02 71/1 (minimum-width
 Stop overlap) -> candidate03 **72/0**. Core owns captured setup/immutable attempts;
 typed Operations adapters execute six ordinary Receiving handlers. Fresh exact

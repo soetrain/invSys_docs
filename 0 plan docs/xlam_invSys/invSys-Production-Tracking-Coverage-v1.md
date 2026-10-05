@@ -1,6 +1,12 @@
 # Production form tracking coverage audit
 
-Version 1.183. Last reviewed:2026-10-05 UTC, output-return continuation GREEN318/318.
+Version 1.184. Last reviewed:2026-10-05 UTC, Complete Run observation contract defined.
+
+Next: catalog28 `PRODUCTION_RUN_COMPLETE`, owner `PRODUCTION_RUN_COMPLETION`,
+under the D18 Complete Run discovered-control refinement. Actual-handler RED75/24
+proves missing expected records for reusable success/refusals; owner effects and
+suppression pass. Worksheet/partial/policy cases and implementation remain pending.
+See `tests/integration/plan022_slice4be_production_complete_activity_results.md`.
 
 Packaged RED122/8 proves sign-out/permission loss after output processing still
 allowed later reads, owner/projection changes and incorrect feedback. The existing
