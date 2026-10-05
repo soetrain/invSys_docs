@@ -1,13 +1,18 @@
 # invSys Form Controls v1
 
-**Version:** 1.455 -- Complete Run continuation under validation; acceptance open.
+**Version:** 1.456 -- Complete Run validation narrowed; acceptance open.
 
 Post-consume sign-out/permission interruption: four actual-handler REDs become
 23 focused passes on `validation-complete-submission-01`. Applied consumption
 remains applied; the next submission stops with existing reopen guidance. Both
 refusal captures are reviewed. The longer regression hits Excel's GDI limit;
 an assisted saved-probe run is diagnostic only. Five cold compiles/static caps pass;
-clean regression and Complete Run observations remain open. See
+clean regression and Complete Run observations remain open. Audit-inspector
+tooling RED52/2 -> GREEN126/0 preserves borrowed authority workbooks; the full
+gate still fails257/1 at GDI peak10001. Isolated entry guards pass155/0 with normal
+closure and peak852. A saved-decoy full control still fails259/1 at peak10001;
+window counts remain bounded, so saved-host retention does not fix this failure.
+Bulk audit reads also fail and are reverted; the full gate remains open. See
 `tests/integration/plan022_slice4be_production_complete_results.md`.
 
 A1 packaged Settings RED **52/18** becomes **104/0** on `validation-user-policy-02`,

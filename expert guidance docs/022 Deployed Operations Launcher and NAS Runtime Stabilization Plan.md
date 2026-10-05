@@ -6,7 +6,7 @@
 
 **Status, 2026-10-04:** The user explicitly approved D18-REPLAY-01, including its
 execution boundaries. Architecture's conflicting clauses are amended; Controls
-1.455 is synchronized. Both parts remain required for R1; implementation and
+1.456 is synchronized. Both parts remain required for R1; implementation and
 acceptance are not established by approval.
 
 | Milestone | Deliverable / exit |
@@ -64,13 +64,22 @@ behavioral REDs and23 new passes after the existing guard is added before the
 later submission. Five cold compiles/static caps pass. The extended regression
 hits Excel's GDI limit; saved disposable probes do not resolve it and assisted
 results do not accept the gate. Isolate resource growth during case preparation;
-client garbage collection also fails. Then retain all
-prior checks before completing this increment. Exact evidence is in the
+client garbage collection also fails. A separate audit-inspector lifetime defect
+has tooling RED52/2 -> GREEN126/0; its correction preserves borrowed authority
+workbooks but the full gate still fails257/1 at GDI peak10001. Cold/submission/entry
+diagnostics close normally at peaks842/935/852; interruption160/0 and initial
+completion/context143/0 also close normally. A saved-decoy full control still
+fails259/1 at peak10001 while native windows remain between nine and eleven. Saved decoy retention
+does not fix the failure; native cause remains unproved. Bulk audit reads also
+reach10001 (partial log257/1, stalled cleanup) and are reverted. Next isolate the
+prior combined sequence without the new post-consume cases under diagnostic bounds.
+Retain all prior checks before completing this increment. Exact evidence is in the
 Production Complete Run integration record.
-Code checkpoint `257c4444` remains unaccepted. Diagnostic cleanup restores settings
-and package hashes; Excel is closed. Candidate01 has five XLAMs but no templates;
-broader fixture gates will need unchanged `validation-user-policy-02/templates`
-copied into this generated candidate after confirming Excel is closed.
+Runtime guard `257c4444` remains unaccepted; tooling checkpoint `6edbc743` preserves
+audit-workbook lifetime and the diagnostic routes. Cleanup restores settings and
+package hashes. Candidate01 now contains five XLAMs and the unchanged template
+copied/hash-verified from `validation-user-policy-02/templates` while Excel was
+closed. Recheck Excel state before packaging or starting another test.
 
 **Next:** Finish comprehensive observations, Action Path visible proof and
 applicable broader gates. The existing full-chain native failure remains open;

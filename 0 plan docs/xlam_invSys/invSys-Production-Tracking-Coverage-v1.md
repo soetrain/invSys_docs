@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.179. Last reviewed:2026-10-05 UTC, Complete Run continuation;
+Version 1.180. Last reviewed:2026-10-05 UTC, Complete Run validation narrowed;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
 
 Post-consume interruption is under validation: four actual-handler REDs become23
@@ -8,7 +8,14 @@ new passes on complete-submission01. Exact applied consumption/audit are retaine
 and later submission stops on sign-out or lost permission. Longer regression
 reaches Excel's GDI limit; saved probes do not fix it. Assisted results are not
 acceptance. Five cold compiles/static caps pass; clean regression, worksheet/later
-submission coverage and Complete Run recording remain open. Receipts:
+submission coverage and Complete Run recording remain open. Audit-inspector
+tooling RED52/2 -> GREEN126/0 preserves borrowed authority workbooks; full gate
+still fails257/1 at GDI peak10001. Isolated entry guards pass155/0, peak852, with
+normal closure. A saved-decoy full control still fails259/1 at peak10001 with
+bounded native window counts; its retention is not a fix. These diagnostics
+narrow the cause without accepting the gate. Bulk audit reads also fail and are
+reverted; next isolate the prior combined sequence without the post-consume cases.
+Receipts:
 `tests/integration/plan022_slice4be_production_complete_results.md`.
 
 Catalog26 Next Batch: actual-handler RED110/57 -> GREEN167/167 retains binding70.
