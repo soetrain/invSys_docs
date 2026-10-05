@@ -7,8 +7,8 @@ retaining all83 prior checks; storage/history and roster/privacy guards pass.
 Disabled users cannot record, while ordinary work/history remain available.
 Catalog27 registers the selector/toggle without logging selected values.
 Settings202/202, observations535/535, five cold compiles and static ratchets pass;
-nineteen scoped captures are reviewed. New control pairs/redaction and older-policy
-exclusions pass. Remaining lifecycle/replay/business-audit guards
+nineteen scoped captures are reviewed. New control pairs/redaction, older-policy
+exclusions and replay94/94 with per-user capture-loss stopping pass. Remaining lifecycle/business-audit guards
 remain under validation; no A1/B0/A acceptance or deployment. See
 `tests/integration/plan022_slice4be_user_tracking_policy_results.md`.
 
@@ -28,18 +28,20 @@ B0 exercises Receiving recording -> authored guide/inputs -> real packaged repla
 -> fresh verification before A closes. B0 alone does not accept B. Keep historical
 4be.x identifiers; registration, implementation and acceptance are distinct.
 
-Current B0 focused gate: `validation-receiving-run-05` is **93/0 GREEN**, retaining
-all85 previous passes. It covers fresh exact owner/evaluator proof, target/input/
+Current B0 focused gate: `validation-user-policy-02` is **94/0 GREEN**, retaining
+all93 previous passes and adding per-user capture-loss stopping through actual
+Admin handlers. It covers fresh exact owner/evaluator proof, target/input/
 role/policy guards, nested entry, Next/Stop, immutable attempts and three layouts.
 Workbook closure skips disconnected child forms and uses the existing stop/release
 boundary: the saved run becomes terminal, preserves partial steps/business bytes,
 and cannot dispatch against a replacement workbook. Close-button/QueryClose requests
 at the owner-return boundary defer closure, finish the current step and stop before
-another dispatch. Published-guide regression58, five cold compiles and static
-ratchets pass. Receiving/native regression854/854 retains every prior check in
+another dispatch. Five cold compiles and static ratchets pass. Prior candidate05
+published-guide58 and Receiving/native854/854 retain every prior check in
 order after correcting stale catalog ceilings in two test helpers; actual Core
 reads and unsupported-version/control rejection pass. Fresh Receiving/Returns
-captures were inspected. No runtime change in this checkpoint. Per-user policy,
+captures were inspected at candidate05; affected regression on the new per-user
+runtime remains required. The94-check extension needs no further runtime fix. Per-user lifecycle,
 comprehensive observations, Action Path visible proof and broader acceptance
 remain open; no deployment or B0/A acceptance.
 

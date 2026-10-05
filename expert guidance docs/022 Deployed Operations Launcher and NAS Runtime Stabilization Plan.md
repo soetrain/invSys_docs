@@ -48,31 +48,23 @@ RUN-UI-01 remain separate pending decisions; prior granted approvals stand.
 On actual desktop error 5, record time, stop work, preserve evidence and exit under
 the user's standing instruction. Stale probes/native crashes are different failures.
 
-**Current:** `validation-receiving-run-05` passes **93/0**, retaining all85 prior
-checks. Close-button/QueryClose requests at the owner-return boundary defer closure,
-save the completed step and stop before another dispatch; no further runtime
-change was needed. The earlier nonterminal-closure RED83/2 became85/0 through the
-existing stop/release boundary. Published-guide58/0, five cold compiles and static
-ratchets hold. Receiving/native854/854 retains exact prior ordered checks after
-correcting two stale catalog assertions; runtime packages are unchanged. Fresh
-Receiving captures were inspected; no new native fault or desktop error5 was
-observed. Per-user policy, comprehensive observations, Action Path visible proof
-and the existing full-chain native failure remain open; B0/A/B/R1 acceptance
-is not established. Earlier assisted83/2 diagnostics are not acceptance.
+**Current:** `validation-user-policy-02` passes user-policy91/91 (from RED52/18),
+Settings202/202, observations535/535 and Receiving replay94/94. All93 prior replay
+checks remain; disabling the running user's recording through Admin stops later
+dispatch while preserving the completed step. Fresh exact owner/evaluator proof
+and both close boundaries remain GREEN. Five cold compiles, static ratchets,
+settings/package preservation and normal closure pass; nineteen scoped Settings
+captures are reviewed. Architecture's v2 policy retains v1 history, unknown columns,
+rights and visibility; roster/privacy and malformed-storage guards pass.
 
-**Next:** A1 per-user policy wire v2 is defined in Architecture under approved
-D18-REPLAY-01, retaining v1 history and preventing downlevel writes from removing
-v2 overrides. Compiled Settings RED **52/18** becomes **91/0** on candidate02,
-retaining all83 prior checks with storage/history and roster/privacy guards. Core owns
-actor-specific optional recording and versioned persistence; Admin stages user
-flags. Settings202/202, observations535/535, five cold compiles and static ratchets
-pass; nineteen scoped captures are reviewed. Complete lifecycle, replay-loss and business-audit
-guards before accepting A1. Preserve the current
-runner93/native854 GREEN and extend policy/role/layout/recording/replay guards.
-User-policy acceptance remains open. Receipts and exact next
-work: `tests/integration/plan022_slice4be_user_tracking_policy_results.md`. Do not widen
-replay scope or rerun unchanged broad gates in place of completing A1/A2. Exact
-Receiving receipts are in the replay and native-target integration records.
+**Next:** Finish removed/new-user lifecycle and disabled-user ordinary Receiving
+required-audit proof; retain prior candidate05 guide58/native854 on the changed
+runtime. Then finish comprehensive observations, Action Path visible proof and
+applicable broader gates. The existing full-chain native failure remains open;
+no A1/B0/A/B/R1 acceptance or deployment is claimed. Do not widen replay scope or
+repeat unchanged broad gates in place of completing A1/A2. Exact receipts and next
+work: `tests/integration/plan022_slice4be_user_tracking_policy_results.md`, plus
+the Receiving replay and native-target integration records.
 
 Runner evidence: preimplementation RED45/17 -> candidate02 71/1 (minimum-width
 Stop overlap) -> candidate03 **72/0**. Core owns captured setup/immutable attempts;
