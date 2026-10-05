@@ -87,13 +87,17 @@ denial/refusal, disabled recording and custom-column preservation pass.
 Preserve completion318 and finish partial/fault, publication and all three
 guide-view proofs before accepting this control. Exact receipts and regression status:
 `tests/integration/plan022_slice4be_production_complete_activity_results.md`.
-Code checkpoint `477b1db3` also passes smoke86, guide58 and static caps. Its full completion
-run stops273/1 at native CompletePending closure after prolonged lack of progress;
-45 prior checks are uncompleted. This was an assisted test stop, with preservation
-verified and no error5, not full GREEN or diagnosed product RED. Isolate that
-boundary before another full run; prior318 remains on the frozen earlier candidate.
-Saved traces prove fixture preparation and Ready dispatch before the stalled
-CompleteEntryAct call; trace wrapper accesses after native closure next.
+Activity02 corrects the native CompletePending closure regression: workbook close
+unloads the form, and the wrapper formerly looped on disconnected-form cleanup.
+Focused actual-handler RED58/1 -> GREEN59/59; observation180/180 retains all prior
+checks. Five compiles/static caps pass;302/303 components and all forms are unchanged.
+Full completion318/318 retains every prior ordered check and all four native
+closures, with normal shutdown/preservation. Smoke86 and delayed zero Excel-error
+audits pass; guide/layout evidence is reused from unchanged components.
+Code checkpoint `3b0501aa`; candidate remains unpromoted. Preserve the legacy no-observation
+closure checks with collection explicitly disabled; enabled-recording proof remains
+separate. Earlier activity01 smoke86/guide58 and incomplete273/1 receipts remain
+recorded, including the assisted stop; no error5 or acceptance is claimed.
 
 Runner evidence: preimplementation RED45/17 -> candidate02 71/1 (minimum-width
 Stop overlap) -> candidate03 **72/0**. Core owns captured setup/immutable attempts;

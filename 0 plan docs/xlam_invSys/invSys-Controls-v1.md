@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.461 -- Complete Run recording focused GREEN; acceptance pending.
+**Version:** 1.462 -- Complete Run native closure corrected; acceptance pending.
 
 Catalog28 `PRODUCTION_RUN_COMPLETE` observes the actual Complete Run handler
 for both existing owner branches under `PRODUCTION_RUN_COMPLETION`. D18's Complete
@@ -11,8 +11,13 @@ Both owner branches, exact references, denial/refusal, disabled recording and
 custom-column preservation pass. Partial/fault, publication and guide-view proof
 remain open. See `tests/integration/plan022_slice4be_production_complete_activity_results.md`
 for exact receipts and regression status; no comprehensive acceptance is claimed.
-Smoke86/guide58/static caps pass. Current full completion verification is incomplete273/1
-after an assisted native-closure test stop;45 prior checks remain uncompleted.
+Activity02 fixes post-close access to the unloaded form: focused RED58/1 ->
+GREEN59/59 and observation180/180 retain prior checks. Five compiles and static
+caps pass; all forms are unchanged. Full completion318/318 retains prior ordered
+checks, including all four native closures, with normal shutdown/preservation.
+Smoke86/86 and delayed zero Excel-error audits pass. Guide/layout evidence is
+reused from unchanged components; partial/fault and guide-view acceptance stay open.
+Prior activity01 smoke86/guide58 and incomplete273/1 evidence remain recorded.
 
 Post-output sign-out/permission loss has packaged RED122/8 -> full GREEN318/318
 on `validation-complete-output-return-02`, retaining all289 prior ordered checks.

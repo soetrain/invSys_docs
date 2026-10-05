@@ -1,14 +1,19 @@
 # Production form tracking coverage audit
 
-Version 1.185. Last reviewed:2026-10-05 UTC, Complete Run observation focused GREEN.
+Version 1.186. Last reviewed:2026-10-05 UTC, Complete Run native closure corrected.
 
 Catalog28 `PRODUCTION_RUN_COMPLETE`, owner `PRODUCTION_RUN_COMPLETION`, follows
 the D18 Complete Run refinement. Actual-handler RED120/60 -> GREEN180/180 covers
 both owners, exact references, refusal/denial, suppression, disabled recording and
 custom-column preservation. Partial/fault, publication and guide-view proof remain
 pending; this control is not yet accepted as comprehensive.
-Smoke86/guide58/static caps pass; the current full completion run is incomplete273/1 after
-an assisted native-closure stop, leaving45 prior checks uncompleted.
+Activity02 fixes the disconnected-form cleanup loop with focused RED58/1 ->
+GREEN59/59 and observation180/180. Five compiles/static caps pass; all forms are
+unchanged. Full completion318/318 retains prior ordered checks and all four native
+closures, with normal shutdown/preservation. Prior activity01 smoke86/
+guide58 and incomplete273/1 remain historical evidence, not acceptance. Activity02
+smoke86 and delayed zero Excel-error audits pass; unchanged guide/layout evidence
+is retained. No broader acceptance or deployment.
 See `tests/integration/plan022_slice4be_production_complete_activity_results.md`.
 
 Packaged RED122/8 proves sign-out/permission loss after output processing still

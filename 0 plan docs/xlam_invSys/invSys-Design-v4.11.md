@@ -1021,6 +1021,10 @@ Focused verification,2026-10-05: actual-handler RED120/60 becomes GREEN180/180 o
 exact source-linked observations; refusal after success, initial denial, loading/
 busy suppression, disabled recording and custom-column preservation pass. These
 results do not establish partial/fault, publication or guide-view acceptance.
+Activity02 retains180/180 and corrects native workbook-close cleanup under this
+same contract: focused RED58/1 -> GREEN59/59; never access the unloaded form while
+finishing observation and restoring action guards. Full completion318/318 retains
+the prior checks and all four native closures; broader acceptance remains open.
 Exact receipts and regression status are maintained in
 `tests/integration/plan022_slice4be_production_complete_activity_results.md`.
 
