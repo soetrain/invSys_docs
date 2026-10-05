@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.467 -- Complete Run recording-to-guide proof; worksheet visible acceptance pending.
+**Version:** 1.468 -- Complete Run guide views visibly proven; status scrolling pending.
 
 Catalog28 `PRODUCTION_RUN_COMPLETE` observes the actual Complete Run handler
 for both existing owner branches under `PRODUCTION_RUN_COMPLETION`. D18's Complete
@@ -24,8 +24,9 @@ gate covers twelve queued/uncertain-submission cases through both handlers, exac
 references/partial effects and native acknowledgments, with five compiles, static
 checks and normal closure/preservation. Recording-to-guide gates now pass95/95
 reusable and101/101 worksheet: publication, independent fresh exact evaluation,
-authoring, reader pairing and all three views. Reusable captures are readable;
-worksheet captures are obscured by the library, so visible acceptance remains open.
+authoring, reader pairing and all three views. Both guide capture sets are readable.
+The worksheet101 rerun retains every check after tooling RED/GREEN fixes capture
+of covered foreground windows; no application form changes.
 Both gates pass five compiles, static checks, preservation and delayed zero Excel
 errors. Long pending-status tails clip. The worksheet warning's full
 text passes; its initial viewport clips the tail, so scrolling evidence is pending.

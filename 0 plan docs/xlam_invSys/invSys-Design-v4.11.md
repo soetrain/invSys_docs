@@ -1038,9 +1038,10 @@ queued/uncertain-submission cases, exact Submitted/Unknown references and partia
 owner effects, with native acknowledgments and preservation. Recording-to-guide
 gates pass reusable95/95 and worksheet101/101: older loaded evidence cannot prove
 fresh sources; owning publication, independent exact evaluation, authoring and all
-three views pass. Reusable captures are readable; worksheet captures are obscured
-by the library, so their visible acceptance remains open. Long status/worksheet
-warning scrolling captures also remain required. No new runtime contract is introduced.
+three views pass. Both guide capture sets are readable after a focused tooling
+RED/GREEN correction for covered foreground windows; worksheet101 retains every
+prior check. Long status/worksheet warning scrolling captures remain required.
+No new runtime contract or application form behavior is introduced.
 Exact receipts and regression status are maintained in
 `tests/integration/plan022_slice4be_production_complete_activity_results.md`.
 

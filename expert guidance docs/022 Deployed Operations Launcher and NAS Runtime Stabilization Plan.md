@@ -122,9 +122,13 @@ runs, older loaded publication refusal, fresh exact owner/evaluator proof, expli
 authoring, reader pairing and all three views. Five compiles/static ratchets,
 normal closure, preservation and delayed zero Excel errors pass. Test checkpoint:
 `49b66194`; runtime is unchanged.
-Reusable captures are readable; worksheet captures remain obscured by the library
-despite guide focus. Next protect unobstructed capture with a focused test, then
-prove long status/worksheet warning scrolling. Keep A1/A2 acceptance open.
+Both guide capture sets are now readable. Focused tooling RED reproduced covered
+foreground capture; GREEN passes ten calibration cases with unchanged topmost
+settings, and worksheet101 retains every prior ordered check. Capture raises within
+the existing window band and rejects remaining obstruction; application forms and
+runtime are unchanged. Capture checkpoint: `58ad1abe`.
+Next prove long status/worksheet warning scrolling through
+the existing control. Keep A1/A2 acceptance open.
 
 Runner evidence: preimplementation RED45/17 -> candidate02 71/1 (minimum-width
 Stop overlap) -> candidate03 **72/0**. Core owns captured setup/immutable attempts;
