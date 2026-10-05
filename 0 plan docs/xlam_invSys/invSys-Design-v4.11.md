@@ -1081,7 +1081,12 @@ append failure. Terminal failure leaves REQUESTED only; prior history and canoni
 bytes remain unchanged. Five compiles/static checks and four reviewed warning
 captures pass. Excel exits unassisted after delayed cleanup; final restoration,
 package preservation and delayed zero Excel errors pass. No contract or runtime
-behavior changes. Mid-action interruptions and broader A1/A2 acceptance stay open.
+behavior changes. A separate231/231 gate retains70 ordered binding checks and proves
+sign-out/permission loss at both owner returns and actual inventory-read returns.
+Later reads stop; partial local state survives; REQUESTED-only/FAILED records cannot
+claim success. Four refusal captures, five compiles/static checks, normal closure,
+preservation and delayed zero Excel errors pass. Native dismissal, mid-action
+recording-policy change, incomplete-guide proof and broader A1/A2 acceptance stay open.
 
 **4be.1 Run preparation and allocation observations (discovered-control refinement; Core catalog implemented, eight form handlers integrated; acceptance pending):**
 Under approved D18 semantic inheritance, catalog24 shall add these nine existing

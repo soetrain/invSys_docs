@@ -148,7 +148,14 @@ correct; terminal recording failure leaves REQUESTED only. Five compiles/static
 checks and four warning captures pass. Delayed unassisted Excel shutdown, final
 settings/package preservation and delayed zero Excel-error audit pass.
 Test checkpoint: `a7e66409`; runtime remains unchanged.
-Next finish mid-action interruption and remaining controls; comprehensive
+Next Batch context/permission gate passes231/231, retaining70 ordered binding checks.
+Both owner-return and actual inventory-read interruptions stop later work, preserve
+partial local state and record REQUESTED-only/FAILED without false success. Four
+refusal captures, five compiles/static checks, unassisted closure, preservation and
+delayed zero Excel errors pass on unchanged activity04.
+Test checkpoint: `87da4c32`; runtime remains unchanged.
+Next prove native workbook dismissal, mid-action recording-policy change and
+incomplete-guide conclusions, then finish remaining controls; comprehensive
 A1/A2 and the existing full-chain native failure remain open. Exact receipts:
 `tests/integration/plan022_slice4be_production_next_results.md`.
 

@@ -1,20 +1,25 @@
 # invSys Form Controls v1
 
-**Version:** 1.471 -- Next Batch optional recording policy/store faults proven.
+**Version:** 1.472 -- Next Batch mid-action context/permission proof.
 
 Next Batch passes302/302 on unchanged activity04, retaining all167 ordered checks.
 Off/older/invalid policy and store/terminal-append faults preserve the ordinary owner
 result in both branches; a lost terminal append leaves REQUESTED only. Four warning
 captures, five compiles and static checks pass. Delayed unassisted Excel shutdown,
 settings/package preservation and delayed zero Excel-error audit pass.
-Mid-action interruptions and comprehensive A1/A2 acceptance remain open. Exact receipts
-are in `tests/integration/plan022_slice4be_production_next_results.md`.
+The separate231/231 gate retains all70 binding checks. Sign-out and permission loss
+at both owner returns and actual inventory-read returns stop later reads, preserve
+partial local work and record REQUESTED-only or FAILED without false success.
+Four refusal captures, five compiles/static checks, unassisted closure, preservation
+and delayed zero Excel errors pass. Native dismissal, recording-policy changes and
+incomplete-guide proof remain open. Exact receipts:
+`tests/integration/plan022_slice4be_production_next_results.md`.
 
 Next Batch guide gates pass reusable86/86 and worksheet94/94 on unchanged activity04
 packages. Separate recordings, exact publication/detail, explicit authoring, reader
 pairing and all three views pass with readable captures and local-only conclusions.
-Five compiles/static checks, normal closure and preservation pass. Mid-action
-interruption and comprehensive A1/A2 acceptance remain open. Receipts:
+Five compiles/static checks, normal closure and preservation pass. Comprehensive
+A1/A2 acceptance remains open. Receipts:
 `tests/integration/plan022_slice4be_production_next_results.md`.
 
 Catalog28 `PRODUCTION_RUN_COMPLETE` observes the actual Complete Run handler
