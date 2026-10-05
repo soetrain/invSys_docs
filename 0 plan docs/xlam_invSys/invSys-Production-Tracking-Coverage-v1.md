@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.203. Last reviewed:2026-10-05 UTC, Print Recall truthful feedback.
+Version 1.204. Last reviewed:2026-10-05 UTC, Print Recall saved-probe confirmation.
 
 Truthful feedback RED231/17 becomes GREEN248/248. The form displays the original
 owner's refusal/error or "Print preview closed." and does not rebuild through the
@@ -11,12 +11,15 @@ native checks, static ratchets and smoke86 pass with restoration and delayed
 zero Excel errors. Outcome01 failed three full-chain attempts at different steps;
 scoped recovery cleanup preserved fixtures/settings/packages. The preceding-package
 control passes. Source-identical rebuilt/compile-saved outcome02 passes
-chain32/live48/warehouse15, but its focused rerun stops at178 PASS/2 harness FAIL
-after a native Excel crash at the Admin Seed fixture boundary. Scoped cleanup
-preserves all23 fixture workbook hashes and restores settings/packages. No candidate
-has all gates green together; this checkpoint remains partial. Saved compilation
-did not eliminate instability; no packaging fix is claimed. This is
-feedback evidence, not native printing or observation acceptance.
+chain32/live48/warehouse15. Its first focused rerun failed at Admin Seed; narrower
+diagnostics also failed without Print actions or Production probes. Saving only
+disposable test packages before fixtures now yields250/250: exact prior248 plus
+two save checks, five instrumented compiles and four reviewed status captures.
+Fresh smoke86, normal closure, preservation/restoration and delayed zero Excel
+errors pass on the same unchanged outcome02. Source-identical layout evidence
+remains applicable; static metrics do not grow. Earlier native failures remain
+unresolved. This confirms scoped feedback, not a packaging cure, native printing
+or observation acceptance. Exact receipts are in the Print Recall results record.
 
 Inventory binding RED211/6 becomes GREEN217/217, retaining183 checks. The existing
 workbook-specific helper prevents foreign location reads when the captured sheet
