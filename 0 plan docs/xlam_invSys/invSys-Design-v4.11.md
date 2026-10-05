@@ -1028,6 +1028,9 @@ the prior checks and all four native closures; broader acceptance remains open.
 Activity03 RED190/8 -> GREEN198/198 retains180 prior checks and proves DENIED at
 the worksheet PROD_POST gate when form ADMIN_MAINT access succeeds, preserving
 both native refusals, input/custom columns and recovery. No permission is widened.
+Activity04 RED211/8 -> GREEN219/219 retains198 checks and corrects worksheet output
+projection/selection under D14: display stored keys, resolve nonempty keys exactly
+and uniquely, preserve unkeyed creation staging, history and canonical inventory.
 Exact receipts and regression status are maintained in
 `tests/integration/plan022_slice4be_production_complete_activity_results.md`.
 

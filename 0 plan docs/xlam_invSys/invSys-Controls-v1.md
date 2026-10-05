@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.463 -- Complete Run worksheet refusal classified; acceptance pending.
+**Version:** 1.464 -- Worksheet output identity projection corrected; acceptance pending.
 
 Catalog28 `PRODUCTION_RUN_COMPLETE` observes the actual Complete Run handler
 for both existing owner branches under `PRODUCTION_RUN_COMPLETION`. D18's Complete
@@ -12,9 +12,13 @@ gets DENIED, with both existing dialogs, no submission and unchanged input/custo
 columns; normal completion after permission restoration passes. Rights are unchanged.
 Five compiles, smoke86/static caps and preservation pass. Only that owner procedure
 changes; retain activity02's closure59/full318 and unchanged guide/layout evidence.
-The reviewed capture exposes a pre-existing worksheet System_Key display showing
-ITEM_CODE; protect/correct that projection test-first. Partial/fault, publication
-and guide-view proof remain open. Exact receipts and historical failures:
+Activity04 RED211/8 -> GREEN219/219 retains198 prior checks and corrects the
+worksheet output System_Key display/selection under D14. Existing exact keys,
+shared SKU, sorting, blank drafts and missing/ambiguous-key refusal pass without
+changing history or inventory; custom columns remain. Five compiles, layout18
+plus native-window checks, smoke86/static caps and delayed zero Excel-error audits
+pass with preservation. Partial/fault, publication and
+guide-view proof remain open. Exact receipts and historical failures:
 `tests/integration/plan022_slice4be_production_complete_activity_results.md`.
 
 Post-output sign-out/permission loss has packaged RED122/8 -> full GREEN318/318

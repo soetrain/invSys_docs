@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.187. Last reviewed:2026-10-05 UTC, Complete Run worksheet refusal classified.
+Version 1.188. Last reviewed:2026-10-05 UTC, worksheet output identity projection corrected.
 
 Catalog28 `PRODUCTION_RUN_COMPLETE`, owner `PRODUCTION_RUN_COMPLETION`, follows
 the D18 Complete Run refinement. Activity03 RED190/8 -> GREEN198/198 retains all180
@@ -9,8 +9,13 @@ access. DENIED, both native dialogs, no submission, exact input/custom columns a
 permission-restoration recovery pass. Five compiles, smoke86/static caps and normal
 closure/preservation pass. Only the worksheet owner procedure changes; activity02's
 closure59/full318 and unchanged guide/layout evidence remain valid for those paths.
-The pre-existing System_Key display substitutes ITEM_CODE and needs its own focused
-projection/selection test. Partial/fault, publication and guide-view proof remain
+Activity04 RED211/8 -> GREEN219/219 retains198 checks and fixes that pre-existing
+System_Key/SKU substitution and fallback selection. Actual Refresh/selection,
+sorting, blank drafts, missing/ambiguous keys, history and custom columns pass;
+canonical inventory is unchanged. Only two worksheet form methods change.
+Five compiles, layout18 plus native-window checks, smoke86/static caps and delayed
+zero Excel-error audits pass, with settings/package preservation.
+Partial/fault, publication and guide-view proof remain
 pending; no comprehensive acceptance or deployment.
 See `tests/integration/plan022_slice4be_production_complete_activity_results.md`.
 

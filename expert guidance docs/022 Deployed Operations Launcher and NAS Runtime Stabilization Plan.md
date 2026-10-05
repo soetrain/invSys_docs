@@ -102,9 +102,12 @@ Activity03 (`0bd9bb76`) adds actual worksheet Admin-only refusal RED190/8 -> GRE
 retaining180 prior checks. DENIED, native messages, no submission and recovery
 pass; five compiles, smoke86/static caps and preservation pass. Only that owner
 procedure changes, so retain activity02's reusable/native-closure318 evidence.
-Next protect the existing worksheet System_Key display/selection: its source
-prefers ITEM_CODE under the System_Key heading. Follow the normative exact-identity
-rule; then finish partial/fault and publication/guide-view acceptance. No new contract.
+Activity04 (`c7d97a9c`) corrects the existing worksheet System_Key projection under D14:
+RED211/8 -> GREEN219/219 retains198 prior checks. Shared-SKU exact display/selection,
+sorting, blank drafts, missing/ambiguous-key refusal, history and custom columns
+pass. Five compiles, layout18 plus native-window checks, smoke86/static caps and
+delayed zero Excel-error audits pass with preservation.
+Next finish partial/fault and publication/guide-view acceptance. No new contract.
 
 Runner evidence: preimplementation RED45/17 -> candidate02 71/1 (minimum-width
 Stop overlap) -> candidate03 **72/0**. Core owns captured setup/immutable attempts;
