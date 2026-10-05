@@ -6,7 +6,7 @@
 
 **Status, 2026-10-04:** The user explicitly approved D18-REPLAY-01, including its
 execution boundaries. Architecture's conflicting clauses are amended; Controls
-1.456 is synchronized. Both parts remain required for R1; implementation and
+1.457 is synchronized. Both parts remain required for R1; implementation and
 acceptance are not established by approval.
 
 | Milestone | Deliverable / exit |
@@ -71,11 +71,16 @@ diagnostics close normally at peaks842/935/852; interruption160/0 and initial
 completion/context143/0 also close normally. A saved-decoy full control still
 fails259/1 at peak10001 while native windows remain between nine and eleven. Saved decoy retention
 does not fix the failure; native cause remains unproved. Bulk audit reads also
-reach10001 (partial log257/1, stalled cleanup) and are reverted. Next isolate the
-prior combined sequence without the new post-consume cases under diagnostic bounds.
+reach10001 (partial log257/1, stalled cleanup) and are reverted. The prior combined
+sequence without post-consume cases fails204/1 under the diagnostic bound on both
+candidate01 and frozen user-policy02. Its first closure Check In raises GDI940->3760;
+the failure predates the continuation guard. Prior258 GREEN belongs to frozen
+complete-entry02, which also fails204/1 with saved writable probes and closes
+normally. Its original258 used read-only package loading. Next run the full current
+candidate in that original mode; saved-copy failures remain separate evidence.
 Retain all prior checks before completing this increment. Exact evidence is in the
 Production Complete Run integration record.
-Runtime guard `257c4444` remains unaccepted; tooling checkpoint `6edbc743` preserves
+Runtime guard `257c4444` remains unaccepted; tooling checkpoint `51f51d72` preserves
 audit-workbook lifetime and the diagnostic routes. Cleanup restores settings and
 package hashes. Candidate01 now contains five XLAMs and the unchanged template
 copied/hash-verified from `validation-user-policy-02/templates` while Excel was

@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.180. Last reviewed:2026-10-05 UTC, Complete Run validation narrowed;
+Version 1.181. Last reviewed:2026-10-05 UTC, failure predates the continuation guard;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
 
 Post-consume interruption is under validation: four actual-handler REDs become23
@@ -14,7 +14,9 @@ still fails257/1 at GDI peak10001. Isolated entry guards pass155/0, peak852, wit
 normal closure. A saved-decoy full control still fails259/1 at peak10001 with
 bounded native window counts; its retention is not a fix. These diagnostics
 narrow the cause without accepting the gate. Bulk audit reads also fail and are
-reverted; next isolate the prior combined sequence without the post-consume cases.
+reverted. That prior combined sequence fails204/1 under the diagnostic bound on
+both candidate01 and frozen user-policy02: first closure Check In GDI940->3760.
+The failure predates the continuation guard; prior258 GREEN is on complete-entry02.
 Receipts:
 `tests/integration/plan022_slice4be_production_complete_results.md`.
 
