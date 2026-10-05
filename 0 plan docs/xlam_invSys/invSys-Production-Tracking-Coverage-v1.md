@@ -7,6 +7,8 @@ the D18 Complete Run refinement. Actual-handler RED120/60 -> GREEN180/180 covers
 both owners, exact references, refusal/denial, suppression, disabled recording and
 custom-column preservation. Partial/fault, publication and guide-view proof remain
 pending; this control is not yet accepted as comprehensive.
+Smoke86/guide58/static caps pass; the current full completion run is incomplete273/1 after
+an assisted native-closure stop, leaving45 prior checks uncompleted.
 See `tests/integration/plan022_slice4be_production_complete_activity_results.md`.
 
 Packaged RED122/8 proves sign-out/permission loss after output processing still

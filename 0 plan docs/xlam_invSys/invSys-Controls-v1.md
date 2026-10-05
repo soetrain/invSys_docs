@@ -11,6 +11,8 @@ Both owner branches, exact references, denial/refusal, disabled recording and
 custom-column preservation pass. Partial/fault, publication and guide-view proof
 remain open. See `tests/integration/plan022_slice4be_production_complete_activity_results.md`
 for exact receipts and regression status; no comprehensive acceptance is claimed.
+Smoke86/guide58/static caps pass. Current full completion verification is incomplete273/1
+after an assisted native-closure test stop;45 prior checks remain uncompleted.
 
 Post-output sign-out/permission loss has packaged RED122/8 -> full GREEN318/318
 on `validation-complete-output-return-02`, retaining all289 prior ordered checks.
