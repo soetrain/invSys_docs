@@ -6,7 +6,7 @@
 
 **Status, 2026-10-04:** The user explicitly approved D18-REPLAY-01, including its
 execution boundaries. Architecture's conflicting clauses are amended; Controls
-1.449 is synchronized. Both parts remain required for R1; implementation and
+1.450 is synchronized. Both parts remain required for R1; implementation and
 acceptance are not established by approval.
 
 | Milestone | Deliverable / exit |
@@ -48,11 +48,13 @@ RUN-UI-01 remain separate pending decisions; prior granted approvals stand.
 On actual desktop error 5, record time, stop work, preserve evidence and exit under
 the user's standing instruction. Stale probes/native crashes are different failures.
 
-**Next:** Extend candidate`validation-receiving-run-03`'s packaged72/0 checkpoint
-with permission/policy/nested-entry and workbook-replacement guards, then the affected
-Receiving/native and published-guide regressions. Protect ordinary guide use without
-author privileges. Control observations, visible proof and the existing full-chain
-native failure remain open; B0/A/B/R1 acceptance is not yet established.
+**Next:** Protect active-owner closure and run affected Receiving/native regressions on
+`validation-receiving-run-05`. Exact-loaded-child cleanup removes the close-time
+modal; meaningful83/2 RED for nonterminal closure becomes **85/0 GREEN** using the
+existing stop/release boundary. All72 previous passes, published-guide58/0, five
+cold compiles and static ratchets hold. Control observations, visible
+proof and the existing full-chain native failure remain open; B0/A/B/R1 acceptance
+is not established. Earlier assisted83/2 diagnostics are not acceptance.
 
 Runner evidence: preimplementation RED45/17 -> candidate02 71/1 (minimum-width
 Stop overlap) -> candidate03 **72/0**. Core owns captured setup/immutable attempts;
