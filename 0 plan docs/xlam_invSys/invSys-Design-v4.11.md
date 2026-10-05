@@ -993,6 +993,15 @@ creating or clearing RecallCodesPrint. Preserve its existing tables, custom
 columns, formulas and unrelated cells when refusing. This does not exempt a
 successful report rebuild from D14 or approve a different report identity/schema.
 
+Successful report rebuilds likewise use normalized managed-header writes and
+preserve unknown columns, values, formulas and positions, other tables and
+unrelated worksheet cells. Reuse the existing named report table; refuse missing
+or ambiguous managed headers, conflicting tables or occupied managed destination
+cells before destructive writes. Existing custom-column cells in an expansion
+remain preserved and do not themselves cause refusal. New report tables require
+an unoccupied area. These are D14 preservation
+constraints, not a new report identity, printing-success or observation contract.
+
 **Complete Run observation refinement (discovered control; focused GREEN, acceptance pending):**
 Under approved D18 semantic inheritance, catalog28 adds `PRODUCTION_RUN_COMPLETE`,
 caption Complete Run, actual handler `frmProduction.mBtnManagerApplyOutput_Click`,

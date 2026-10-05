@@ -21,6 +21,17 @@ Earlier Boxing native failure does not reproduce; its cause remains unproved.
 Successful rebuild preservation and truthful preview/observation remain next.
 Code checkpoint: `03bdb3d6`; receipts are in the Print Recall results record above.
 
+Successful Print Recall rebuild RED138/40 becomes GREEN178/178 on rebuild02,
+retaining106 checks; five metadata checks add183/183 positive proof. D14 managed
+header writes preserve custom cells/columns/formulas and other tables through
+reuse/growth/shrink. Occupied managed growth cells and unsafe headers refuse;
+custom growth cells remain allowed. Five compiles, smoke86 and static ratchets
+pass. Fresh chain32/live48/warehouse15 retain all prior checks with normal closure,
+restoration and delayed zero Excel errors. The actual handler uses a declared
+native-preview test seam; real preview, report identity/provenance, remaining
+binding/permission guards, truthful outcomes and observation acceptance stay open.
+Code checkpoint: `d536e468`; receipts are in the Print Recall results record.
+
 **Status, 2026-10-04:** The user explicitly approved D18-REPLAY-01, including its
 execution boundaries. Architecture's conflicting clauses are amended; Controls
 1.458 is synchronized. Both parts remain required for R1; implementation and

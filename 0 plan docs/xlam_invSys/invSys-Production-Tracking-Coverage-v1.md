@@ -1,6 +1,15 @@
 # Production form tracking coverage audit
 
-Version 1.200. Last reviewed:2026-10-05 UTC, Print Recall refusal preservation.
+Version 1.201. Last reviewed:2026-10-05 UTC, Print Recall rebuild preservation.
+
+Successful rebuild RED138/40 becomes GREEN178/178 through the actual Print Recall
+handler, retaining106 checks; five metadata checks add183/183 positive proof.
+Managed-header writes preserve custom cells/formulas/columns and other tables.
+Unsafe managed headers or occupied managed growth cells refuse; custom growth
+cells remain allowed. Five compiles, smoke86 and static ratchets pass. Fresh
+chain32/live48/warehouse15 retain all prior checks with normal closure, restoration
+and delayed zero Excel errors. The native-preview seam cannot establish actual printing,
+report identity, truthful outcomes or recording acceptance.
 
 Refusal preservation RED99/7 becomes GREEN106/106, retaining80 ordered checks.
 Eligibility validation now precedes report creation/clearing under D14. Five
@@ -8,14 +17,14 @@ compiles, smoke86, static caps, four reviewed captures and preservation pass;
 forms are unchanged and prior layout applies. Fresh chain32/live48/warehouse15
 retain all ordered checks, normal cleanup, preservation and delayed zero Excel
 errors. Earlier Boxing native failure does not reproduce; its cause is unproved.
-Successful rebuild preservation, preview and observation integration remain open.
+The checkpoint above advances rebuild preservation; preview and observation remain open.
 
 Print Recall entry binding RED68/12 becomes GREEN80/80 on print-binding01,
 retaining all prior passes. Invalid captured context or missing Production sheet
 refuses before report reads. Five compiles, layout18 plus five native checks,
 smoke86, static caps, visible refusals and preservation pass. Preview and observation
-integration remain open. RecallCodesPrint is cleared before rebuilding; protect
-D14 unknown-column preservation before acceptance. Receipts:
+integration remain open. The checkpoint above replaces destructive clearing with
+D14 managed-header writes and custom-content preservation. Receipts:
 `tests/integration/plan022_slice4be_production_print_results.md`.
 
 Next Batch213/213 retains70 ordered binding checks on unchanged next-closed01.
@@ -1933,7 +1942,7 @@ from permission to stage or export a catalog worksheet.
 | `btnManagerApplyOutput` | Complete Run | `mBtnManagerApplyOutput_Click` | Catalog28; activity432 retained, status129, submission faults410, reusable paths95 and worksheet paths101 GREEN; guide/status captures reviewed; broader acceptance pending |
 | `btnManagerCheckIn` | Check In | `mBtnManagerCheckIn_Click` | `PRODUCTION_RUN_CHECK_IN`: catalog25; activity03 policy/store/recovery629, owner/interruption404, reusable paths91 and worksheet paths101 GREEN; earlier activity02 native-closure212/routed157; broader acceptance pending; see Check In results |
 | `btnManagerNext` | Next Batch | `mBtnManagerNext_Click` | `PRODUCTION_RUN_NEXT_BATCH`: catalog26; next-closed01 native closure156, policy/store302, context/permission231 and interrupted-recording213 GREEN; activity04 reusable guide86/worksheet guide94; broader acceptance pending; see Next Batch results |
-| `btnManagerPrint` | Print Recall | `mBtnManagerPrint_Click` | Binding/refusal preservation106 GREEN; successful rebuild preservation, preview and observation pending |
+| `btnManagerPrint` | Print Recall | `mBtnManagerPrint_Click` | Binding/refusal/rebuild preservation183 pass; report identity, native preview, truthful outcomes and observation pending |
 | `btnManagerRefresh` | Refresh | `mBtnManagerRefresh_Click` | `PRODUCTION_RUN_MANAGER_REFRESH`: catalog24 focused checks and independent paths167 GREEN; full acceptance pending |
 | `btnRunApplyPalette` | Apply | `mBtnRunApplyPalette_Click` | `PRODUCTION_RUN_ALLOCATE`: catalog24 handler integrated; prior worksheet-owner257 GREEN; RUN-UI-01 and broader acceptance pending |
 

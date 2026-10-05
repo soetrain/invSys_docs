@@ -1,6 +1,15 @@
 # invSys Form Controls v1
 
-**Version:** 1.476 -- Print Recall refusal preservation verified.
+**Version:** 1.477 -- Print Recall rebuild preservation.
+
+Successful report rebuild RED138/40 becomes GREEN178/178, retaining106 checks;
+five additional metadata checks pass for183/183. Managed-header writes preserve
+custom columns/cells/formulas and other tables through reuse, growth and shrink.
+Unsafe managed headers or occupied managed growth cells refuse; existing custom
+growth cells remain allowed. Five compiles, smoke86 and static ratchets pass.
+The packaged test observes the preview boundary; real preview, report identity,
+truthful outcomes and recording remain open. Fresh chain32/live48/warehouse15
+retain all prior checks; closure, restoration and delayed zero Excel errors pass.
 
 Print Recall refusal RED99/7 becomes GREEN106/106, retaining80 ordered checks.
 No recall data means no empty report creation or clearing of existing custom
@@ -9,7 +18,7 @@ four reviewed captures pass with preservation and delayed zero Excel errors.
 Forms are unchanged; prior layout applies. Fresh chain32/live48/warehouse15 pass
 with exact prior checks, normal cleanup, restoration and delayed zero Excel errors.
 Earlier Boxing native failure does not reproduce; its cause remains unproved.
-Successful rebuild preservation, truthful preview and recording remain open.
+The checkpoint above advances rebuild preservation; truthful preview and recording remain open.
 
 Print Recall (`btnManagerPrint`, `mBtnManagerPrint_Click`) RED68/12 becomes
 GREEN80/80, retaining all prior passes. Stale warehouse/session, sign-out and a
