@@ -1,6 +1,22 @@
 # invSys Form Controls v1
 
-**Version:** 1.478 -- Print Recall captured inventory lookup.
+**Version:** 1.479 -- Print Recall truthful owner feedback.
+
+Print Recall feedback RED231/17 becomes GREEN248/248. It displays the original
+owner's refusal/error or "Print preview closed." with one report build per click.
+The explicit diagnostic API remains covered separately. Prior217 coverage maps to
+the new contract; five two-read assertions are replaced and four diagnostic calls
+are explicit. Four status captures, five cold/instrumented compiles, layout18/
+five native checks, static ratchets and smoke86 pass with restoration and delayed
+zero Excel errors. Outcome01 failed three full-chain attempts at different steps;
+scoped recovery cleanup preserved fixtures/settings/packages. The preceding-package
+control passes. Source-identical rebuilt/compile-saved outcome02 passes
+chain32/live48/warehouse15, but its focused rerun stops at178 PASS/2 harness FAIL
+after a native Excel crash at the Admin Seed fixture boundary. Scoped cleanup
+preserves all23 fixture workbook hashes and restores settings/packages. No candidate
+has all gates green together; this checkpoint remains partial. Saved compilation
+did not eliminate instability; no packaging fix or control acceptance is claimed.
+A preview return does not prove printing; observation acceptance remains open.
 
 Print Recall inventory binding RED211/6 becomes GREEN217/217, retaining183 checks.
 Both preview-boundary and diagnostic lookups stay in the captured workbook across
@@ -1306,7 +1322,8 @@ existing control contract and unresolved full reusable status remain unchanged.
 
 Pending Run-control source review is clarified in Production coverage audit item5:
 Check In validates/stages locally, Complete Run owns inventory submissions, and
-Print Recall requests preview then rebuilds its diagnostic report. D18 permits
+Print Recall now builds once and reports the original preview/refusal/error result;
+its diagnostic API remains explicit-only. D18 permits
 zero source references; local staging/handler return must not prove Domain writes
 or printing. This introduces no new control ID, outcome or runtime contract.
 

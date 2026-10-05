@@ -43,6 +43,25 @@ zero Excel errors. Report identity, exact lookup/header edge cases, permission/
 yield/closure guards, truthful outcomes, native printing and observations remain open.
 Code checkpoint: `3bf28452`; candidate `validation-print-inventory-01`, unpromoted.
 
+Print Recall truthful feedback RED231/17 becomes GREEN248/248 under D18. One
+owner invocation supplies refusal/error or "Print preview closed."; the automatic
+diagnostic rebuild is removed. Five two-read assertions now require one build;
+four explicit diagnostic calls retain compatibility, mapping all217 prior checks.
+Four reviewed status captures, five cold/instrumented compiles, layout18/five
+native checks, static ratchets and smoke86 pass with restoration and delayed
+zero Excel errors. Outcome01 failed three full-chain attempts at different steps;
+scoped recovery cleanup preserved fixtures/settings/packages. The preceding-package
+control passes. Source-identical rebuilt/compile-saved outcome02 passes
+chain32/live48/warehouse15, but its focused rerun stops at178 PASS/2 harness FAIL
+after a native Excel crash at the Admin Seed fixture boundary. Scoped cleanup
+preserves all23 fixture workbook hashes and restores settings/packages. No candidate
+has all gates green together; this checkpoint remains partial. Saved compilation
+did not eliminate instability. Next isolate the post-form Seed boundary; do not
+repeat broad gates or claim a packaging fix without narrower evidence. Native
+printing, permissions/interruptions and observation acceptance remain open.
+Partial code checkpoint: `862a3322`; exact failures, cleanup and next isolation
+boundary are in `tests/integration/plan022_slice4be_production_print_results.md`.
+
 **Status, 2026-10-04:** The user explicitly approved D18-REPLAY-01, including its
 execution boundaries. Architecture's conflicting clauses are amended; Controls
 1.458 is synchronized. Both parts remain required for R1; implementation and

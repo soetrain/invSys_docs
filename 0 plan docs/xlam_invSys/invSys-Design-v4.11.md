@@ -1008,6 +1008,18 @@ remain preserved and do not themselves cause refusal. New report tables require
 an unoccupied area. These are D14 preservation
 constraints, not a new report identity, printing-success or observation contract.
 
+Print Recall feedback inherits D18's owner-evidence rule: each click prepares its
+report once and displays that invocation's result. Missing eligible data or unsafe
+layout is REJECTED; a report/preview exception is FAILED; normal return from native
+preview is PREVIEW_RETURNED and displays "Print preview closed." It is not proof
+of a printed page. Refusal/failure after earlier success must replace the prior
+status. The compatibility command may expose these primitive results to its typed
+form caller while retaining its existing native refusal/error dialogs. The form
+must not rebuild the report through GetRecallPrintDiagnostic to infer success;
+that existing diagnostic API remains available for explicit compatibility callers.
+This clarifies truthful feedback and single-invocation ownership; observation
+catalog integration, native preview and interruption acceptance remain separate.
+
 **Complete Run observation refinement (discovered control; focused GREEN, acceptance pending):**
 Under approved D18 semantic inheritance, catalog28 adds `PRODUCTION_RUN_COMPLETE`,
 caption Complete Run, actual handler `frmProduction.mBtnManagerApplyOutput_Click`,
