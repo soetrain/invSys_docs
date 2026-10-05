@@ -162,8 +162,14 @@ compiles, static caps, smoke86, unassisted closure and preservation pass. Affect
 302/302 and231/231 regressions pass on next-closed01, retaining every prior ordered
 check. Fresh captures, restoration and delayed zero Excel-error audits pass.
 Code checkpoint: `b3c6402e`; candidate `validation-next-closed-01`, not promoted.
-Next prove mid-action recording-policy change and
-incomplete-guide conclusions, then finish remaining controls; comprehensive
+Interrupted Next Batch recording now passes213/213 on unchanged next-closed01,
+retaining70 ordered binding checks. Policy/store interruptions, exact incomplete
+journals, real publication and reader refusal to conclude pass in both branches.
+Fourteen captures, five compiles/static checks, unassisted closure, restoration and
+delayed zero Excel errors pass. The shared helper retains all629 ordered Check In
+checks on its original frozen activity03 packages, with normal closure/restoration
+and zero delayed errors. Test checkpoint: `e1966c60`; runtime remains unchanged.
+Finish remaining controls; comprehensive
 A1/A2 and the existing full-chain native failure remain open. Exact receipts:
 `tests/integration/plan022_slice4be_production_next_results.md`.
 

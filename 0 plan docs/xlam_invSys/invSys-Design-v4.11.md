@@ -1071,8 +1071,8 @@ Scoped guide proof,2026-10-05: reusable86/86 and worksheet94/94 pass on unchange
 activity04 packages. Separate source/observed recordings, canonical-byte preservation,
 exact publication/detail, explicit authoring, reader pairing and all three views
 pass with readable captures. Five compiles/static checks, normal closure and
-preservation pass. This adds evidence, not behavior; mid-action interruptions,
-remaining controls and comprehensive A1/A2 acceptance remain open.
+preservation pass. This adds evidence, not behavior; later interruption gates are
+recorded below. Remaining controls and comprehensive A1/A2 acceptance remain open.
 
 Optional-recording verification,2026-10-05: unchanged activity04 passes302/302,
 retaining all167 observation checks in order. Both owner branches preserve ordinary
@@ -1095,8 +1095,15 @@ only in RED. Five cold compiles, static caps, smoke86 and preservation pass;301/
 compiled components and all forms are unchanged. Affected302/302 and231/231
 regressions pass on this candidate, retaining every prior ordered check. Fresh
 captures, unassisted closure, restoration and delayed zero Excel errors pass.
-Mid-action recording-policy change, incomplete-guide proof and broader
-A1/A2/full-chain acceptance stay open; no new contract or candidate promotion.
+Interrupted-recording proof now passes213/213 on unchanged next-closed01, retaining
+70 ordered binding checks. Both owner branches preserve ordinary work under
+terminal policy/store faults. Exact incomplete journals survive publication;
+reader expectation/Evaluate returns Incomplete without invented completion or
+Domain sources. Fourteen captures, five compiles/static checks, unassisted closure,
+restoration and delayed zero Excel errors pass. Original Check In helper regression
+retains629/629 ordered checks on frozen activity03 with closure/restoration and zero
+delayed errors. Broader A1/A2/full-chain acceptance stays open; no new contract or
+candidate promotion.
 
 **4be.1 Run preparation and allocation observations (discovered-control refinement; Core catalog implemented, eight form handlers integrated; acceptance pending):**
 Under approved D18 semantic inheritance, catalog24 shall add these nine existing

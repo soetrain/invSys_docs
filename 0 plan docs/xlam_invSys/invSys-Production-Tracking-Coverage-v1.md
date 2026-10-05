@@ -1,6 +1,15 @@
 # Production form tracking coverage audit
 
-Version 1.197. Last reviewed:2026-10-05 UTC, Next Batch native dismissal correction.
+Version 1.198. Last reviewed:2026-10-05 UTC, Next Batch interrupted-recording proof.
+
+Next Batch213/213 retains70 ordered binding checks on unchanged next-closed01.
+Policy/store interruptions preserve ordinary work and incomplete journals; real
+publication and reader evaluation refuse success for all six recordings. Fourteen
+captures, five compiles/static checks, normal closure, restoration and delayed zero
+Excel errors pass. The shared helper retains629/629 ordered Check In checks on its
+original frozen activity03 packages with normal closure/restoration and zero delayed
+errors. Comprehensive coverage and A1/A2/full-chain acceptance remain open.
+See the Next Batch results record.
 
 Native closure RED123/33 -> GREEN156/156 on next-closed01 retains all prior ordered
 checks. Loaded-form guards prevent repeated cleanup and a later worksheet read;
@@ -19,8 +28,8 @@ errors pass. A separate231/231 gate retains70 ordered binding checks: sign-out/
 permission loss at both owner returns and inventory-read returns stops later reads,
 preserves partial work and emits REQUESTED-only/FAILED without false success.
 Four refusal captures, five compiles/static checks, normal closure, preservation
-and delayed zero Excel errors pass. Mid-action recording-policy
-change and incomplete-guide proof remain open for this control.
+and delayed zero Excel errors pass. The213 gate above adds policy/store interruption
+and incomplete-recording evaluation proof for this control.
 
 Next Batch reusable86/86 and worksheet94/94 guide gates pass on unchanged activity04
 packages. Actual handler/owner state, canonical-byte preservation, separate recordings,

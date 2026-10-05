@@ -1,6 +1,16 @@
 # invSys Form Controls v1
 
-**Version:** 1.473 -- Next Batch native dismissal correction verified.
+**Version:** 1.474 -- Next Batch interrupted-recording proof.
+
+Next Batch213/213 retains70 ordered binding checks on unchanged next-closed01.
+Both branches preserve ordinary work through terminal policy/store faults while
+recording incomplete evidence. Real publication and reader evaluation prove all
+six interrupted recordings cannot conclude success. Fourteen captures, five compiles,
+static caps, unassisted closure, preservation and delayed zero Excel errors pass.
+The shared helper retains all629 ordered Check In checks on its original frozen
+activity03 packages, with restoration and zero delayed errors. This adds scoped
+evidence; comprehensive A1/A2/full-chain acceptance remains open. Receipts:
+`tests/integration/plan022_slice4be_production_next_results.md`.
 
 Native Next Batch closure RED123/33 becomes GREEN156/156 on next-closed01. The
 handler returns cleanly after form dismissal, records FAILED and makes no later
@@ -19,8 +29,8 @@ The separate231/231 gate retains all70 binding checks. Sign-out and permission l
 at both owner returns and actual inventory-read returns stop later reads, preserve
 partial local work and record REQUESTED-only or FAILED without false success.
 Four refusal captures, five compiles/static checks, unassisted closure, preservation
-and delayed zero Excel errors pass. Recording-policy changes and
-incomplete-guide proof remain open. Exact receipts:
+and delayed zero Excel errors pass. The213 gate above adds policy/store interruption
+and incomplete-recording evaluation proof. Exact receipts:
 `tests/integration/plan022_slice4be_production_next_results.md`.
 
 Next Batch guide gates pass reusable86/86 and worksheet94/94 on unchanged activity04
