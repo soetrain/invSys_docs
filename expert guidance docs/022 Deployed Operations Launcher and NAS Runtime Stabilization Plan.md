@@ -6,7 +6,7 @@
 
 **Status, 2026-10-04:** The user explicitly approved D18-REPLAY-01, including its
 execution boundaries. Architecture's conflicting clauses are amended; Controls
-1.457 is synchronized. Both parts remain required for R1; implementation and
+1.458 is synchronized. Both parts remain required for R1; implementation and
 acceptance are not established by approval.
 
 | Milestone | Deliverable / exit |
@@ -61,26 +61,23 @@ retains v1 history, unknown columns, rights and visibility.
 
 **In validation:** Complete Run's post-consume continuation has four packaged
 behavioral REDs and23 new passes after the existing guard is added before the
-later submission. Five cold compiles/static caps pass. The extended regression
-hits Excel's GDI limit; saved disposable probes do not resolve it and assisted
-results do not accept the gate. Isolate resource growth during case preparation;
-client garbage collection also fails. A separate audit-inspector lifetime defect
-has tooling RED52/2 -> GREEN126/0; its correction preserves borrowed authority
-workbooks but the full gate still fails257/1 at GDI peak10001. Cold/submission/entry
-diagnostics close normally at peaks842/935/852; interruption160/0 and initial
-completion/context143/0 also close normally. A saved-decoy full control still
-fails259/1 at peak10001 while native windows remain between nine and eleven. Saved decoy retention
-does not fix the failure; native cause remains unproved. Bulk audit reads also
-reach10001 (partial log257/1, stalled cleanup) and are reverted. The prior combined
-sequence without post-consume cases fails204/1 under the diagnostic bound on both
-candidate01 and frozen user-policy02. Its first closure Check In raises GDI940->3760;
-the failure predates the continuation guard. Prior258 GREEN belongs to frozen
-complete-entry02, which also fails204/1 with saved writable probes and closes
-normally. Its original258 used read-only package loading. Next run the full current
-candidate in that original mode; saved-copy failures remain separate evidence.
-Retain all prior checks before completing this increment. Exact evidence is in the
-Production Complete Run integration record.
-Runtime guard `257c4444` remains unaccepted; tooling checkpoint `51f51d72` preserves
+later submission. Five cold compiles/static caps pass. Hidden-host full runs exhaust
+GDI in either package-loading mode; saved decoys, bulk reads and client collection
+do not fix it. Tracing locates about65 retained per Config/Auth read/close after
+the workbook transition, without proving native cause. Visible-host diagnosis
+passes262/262, retaining all258 prior checks in order at peak873 with normal closure
+and settings/package preservation. Its form is dismissed at entry; same-candidate
+155/155 separately proves one actual stale-binding refusal click on a surviving
+form. Keep both outcomes. Full289, including27 post-consume/audit and four visibility
+checks, passes with prior258 in order, peak869, five compiles, unassisted closure,
+preservation and delayed zero Excel errors. Affected guide58 and packaged smoke86
+retain all prior ordered checks with normal closure, preservation and delayed
+zero Excel errors. Broader gates remain pending. Live permissions and runtime
+packages remain unchanged by
+diagnosis. The audit-inspector lifetime fix has tooling RED52/2 -> GREEN126/0.
+Detailed failed controls and exact receipts remain in the Production Complete Run
+integration record; no assisted result accepts a gate.
+Runtime guard `257c4444` has focused full GREEN; tooling checkpoint `97b9758d` preserves
 audit-workbook lifetime and the diagnostic routes. Cleanup restores settings and
 package hashes. Candidate01 now contains five XLAMs and the unchanged template
 copied/hash-verified from `validation-user-policy-02/templates` while Excel was

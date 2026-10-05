@@ -1,22 +1,24 @@
 # invSys Form Controls v1
 
-**Version:** 1.457 -- Completion resource failure predates the guard; acceptance open.
+**Version:** 1.458 -- Full visible-host completion gate289/289 GREEN; acceptance remains scoped.
 
 Post-consume sign-out/permission interruption: four actual-handler REDs become
 23 focused passes on `validation-complete-submission-01`. Applied consumption
 remains applied; the next submission stops with existing reopen guidance. Both
-refusal captures are reviewed. The longer regression hits Excel's GDI limit;
-an assisted saved-probe run is diagnostic only. Five cold compiles/static caps pass;
-clean regression and Complete Run observations remain open. Audit-inspector
-tooling RED52/2 -> GREEN126/0 preserves borrowed authority workbooks; the full
-gate still fails257/1 at GDI peak10001. Isolated entry guards pass155/0 with normal
-closure and peak852. A saved-decoy full control still fails259/1 at peak10001;
-window counts remain bounded, so saved-host retention does not fix this failure.
-Bulk audit reads also fail and are reverted. The bounded prior combined sequence
-without post-consume cases fails204/1 on both candidate01 and frozen user-policy02:
-the first closure case's Check In increases GDI940->3760. The failure predates the
-continuation guard. Prior258 GREEN belongs to frozen complete-entry02; the current
-full gate remains open. See
+refusal captures are reviewed. Five cold compiles/static caps pass. Hidden-host
+full runs reach GDI peak10001; neither package-loading mode nor saved decoy fixes
+that failure. Core tracing locates retention after Config/Auth read/close, without
+proving native cause. The visible-host diagnostic passes262/262, retaining prior258
+in order at peak873 with normal closure and settings/package preservation. It
+dismisses the form at entry; same-candidate155/155 separately retains the surviving
+form and one actual refusal click. Keep both outcomes. The full289 gate, including
+post-consume/audit and visible-host checks, passes with prior258 in order, peak869,
+five compiles, unassisted closure, preservation and delayed zero Excel errors.
+Affected guide58 and packaged smoke86 retain all prior ordered checks with normal
+closure, preservation and delayed zero Excel errors; broader gates remain pending.
+The inspector lifetime
+fix has tooling RED52/2 -> GREEN126/0. No permission bypass or package promotion;
+Complete Run recording and broader acceptance remain open. Exact history:
 `tests/integration/plan022_slice4be_production_complete_results.md`.
 
 A1 packaged Settings RED **52/18** becomes **104/0** on `validation-user-policy-02`,
