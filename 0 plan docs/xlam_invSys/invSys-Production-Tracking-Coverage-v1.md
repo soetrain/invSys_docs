@@ -1,25 +1,16 @@
 # Production form tracking coverage audit
 
-Version 1.182. Last reviewed:2026-10-05 UTC, full visible-host gate passes289/289;
-remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+Version 1.183. Last reviewed:2026-10-05 UTC, output-return continuation GREEN318/318.
 
-Post-consume interruption is under validation: four actual-handler REDs become23
-new passes on complete-submission01. Exact applied consumption/audit are retained
-and later submission stops on sign-out or lost permission. Hidden-host full runs
-exhaust GDI in both package-loading modes. Tracing shows about65 retained per
-Config/Auth read/close; native cause is unproved. Visible-host diagnosis passes262/262
-with prior258 retained in order, peak873, normal closure and settings/packages
-preserved. Entry closure dismisses the form there; same-candidate155/155 separately
-proves the surviving form's actual refusal click. Keep both outcomes. Full289,
-including post-consume/audit and visibility checks, passes with prior258 in order,
-peak869, five compiles, unassisted closure, preservation and delayed zero Excel
-errors. Affected guide58 and packaged smoke86 retain all prior ordered checks,
-normal closure, preservation and delayed zero Excel errors. Broader gates remain
-pending. Five cold compiles
-and static caps pass; worksheet/later submissions, recording and broader acceptance
-remain open. The audit-inspector lifetime correction has tooling RED52/2 -> GREEN126/0.
-No permission bypass or runtime package change is introduced by these diagnostics.
-Exact receipts and earlier failed controls:
+Packaged RED122/8 proves sign-out/permission loss after output processing still
+allowed later reads, owner/projection changes and incorrect feedback. The existing
+continuation check now stops those actions, preserving exact applied consumption,
+output and audit records. Full318 retains all289 prior ordered checks; both refusal
+captures, smoke86, five cold/instrumented compiles, static caps, normal closure, preservation
+and delayed zero Excel errors pass. A slow visible-host transition recovers
+unassisted. Prior surviving-form entry-click evidence remains separately retained.
+Complete Run recording, worksheet/later boundaries, RUN-SCALE-01/RUN-UI-01 and
+broader acceptance remain open. Exact receipts and failed harness/build attempts:
 `tests/integration/plan022_slice4be_production_complete_results.md`.
 
 Catalog26 Next Batch: actual-handler RED110/57 -> GREEN167/167 retains binding70.

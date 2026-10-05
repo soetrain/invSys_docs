@@ -1,24 +1,18 @@
 # invSys Form Controls v1
 
-**Version:** 1.458 -- Full visible-host completion gate289/289 GREEN; acceptance remains scoped.
+**Version:** 1.459 -- Complete Run output-return continuation GREEN318/318.
 
-Post-consume sign-out/permission interruption: four actual-handler REDs become
-23 focused passes on `validation-complete-submission-01`. Applied consumption
-remains applied; the next submission stops with existing reopen guidance. Both
-refusal captures are reviewed. Five cold compiles/static caps pass. Hidden-host
-full runs reach GDI peak10001; neither package-loading mode nor saved decoy fixes
-that failure. Core tracing locates retention after Config/Auth read/close, without
-proving native cause. The visible-host diagnostic passes262/262, retaining prior258
-in order at peak873 with normal closure and settings/package preservation. It
-dismisses the form at entry; same-candidate155/155 separately retains the surviving
-form and one actual refusal click. Keep both outcomes. The full289 gate, including
-post-consume/audit and visible-host checks, passes with prior258 in order, peak869,
-five compiles, unassisted closure, preservation and delayed zero Excel errors.
-Affected guide58 and packaged smoke86 retain all prior ordered checks with normal
-closure, preservation and delayed zero Excel errors; broader gates remain pending.
-The inspector lifetime
-fix has tooling RED52/2 -> GREEN126/0. No permission bypass or package promotion;
-Complete Run recording and broader acceptance remain open. Exact history:
+Post-output sign-out/permission loss has packaged RED122/8 -> full GREEN318/318
+on `validation-complete-output-return-02`, retaining all289 prior ordered checks.
+The existing continuation guard stops later reads and local completion changes;
+exact consume/output quantities and audit records remain applied. Both visible
+refusal captures are reviewed. Smoke86, five cold/instrumented compiles, static ratchets,
+normal closure, settings/package preservation and delayed zero Excel errors pass.
+Only two Production modules change; prior layout/guide evidence is retained.
+The visible-host transition recovers without intervention. Prior surviving-form
+entry-click evidence remains separate from native dismissal. Complete Run
+recording, worksheet/later boundaries and broader acceptance remain open;
+no permission bypass or package promotion. Exact current and historical receipts:
 `tests/integration/plan022_slice4be_production_complete_results.md`.
 
 A1 packaged Settings RED **52/18** becomes **104/0** on `validation-user-policy-02`,

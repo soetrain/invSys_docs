@@ -59,29 +59,18 @@ guide58/58 and full Receiving854/854 retain exact prior ordered checks on this
 candidate, with two fresh Receiving/Returns captures reviewed. The v2 policy
 retains v1 history, unknown columns, rights and visibility.
 
-**In validation:** Complete Run's post-consume continuation has four packaged
-behavioral REDs and23 new passes after the existing guard is added before the
-later submission. Five cold compiles/static caps pass. Hidden-host full runs exhaust
-GDI in either package-loading mode; saved decoys, bulk reads and client collection
-do not fix it. Tracing locates about65 retained per Config/Auth read/close after
-the workbook transition, without proving native cause. Visible-host diagnosis
-passes262/262, retaining all258 prior checks in order at peak873 with normal closure
-and settings/package preservation. Its form is dismissed at entry; same-candidate
-155/155 separately proves one actual stale-binding refusal click on a surviving
-form. Keep both outcomes. Full289, including27 post-consume/audit and four visibility
-checks, passes with prior258 in order, peak869, five compiles, unassisted closure,
-preservation and delayed zero Excel errors. Affected guide58 and packaged smoke86
-retain all prior ordered checks with normal closure, preservation and delayed
-zero Excel errors. Broader gates remain pending. Live permissions and runtime
-packages remain unchanged by
-diagnosis. The audit-inspector lifetime fix has tooling RED52/2 -> GREEN126/0.
-Detailed failed controls and exact receipts remain in the Production Complete Run
-integration record; no assisted result accepts a gate.
-Runtime guard `257c4444` has focused full GREEN; tooling checkpoint `97b9758d` preserves
-audit-workbook lifetime and the diagnostic routes. Cleanup restores settings and
-package hashes. Candidate01 now contains five XLAMs and the unchanged template
-copied/hash-verified from `validation-user-policy-02/templates` while Excel was
-closed. Recheck Excel state before packaging or starting another test.
+**In validation:** Complete Run output-return continuation has packaged RED122/8
+and full GREEN318/318 on `validation-complete-output-return-02`, retaining all289
+prior checks in order. Existing D18/D-NAS guards stop later reads and local state
+changes after sign-out/permission loss; exact applied consume/output and audit
+records remain intact. Two refusal captures, smoke86, five cold/instrumented compiles,
+static ratchets, normal closure, settings/package preservation and delayed zero
+Excel errors pass. Only two Production modules change. The visible-host transition
+recovers unassisted; prior surviving-form entry-click evidence remains separate
+from native dismissal. Keep earlier failed controls in the integration record.
+Complete Run recording and worksheet/later boundaries remain open. No candidate
+promotion or broader acceptance is claimed. Code checkpoint: `e615196c`.
+Recheck Excel before packaging/tests.
 
 **Next:** Finish comprehensive observations, Action Path visible proof and
 applicable broader gates. The existing full-chain native failure remains open;
