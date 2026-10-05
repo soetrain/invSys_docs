@@ -1,6 +1,12 @@
 # invSys Form Controls v1
 
-**Version:** 1.451 -- Receiving runner93/native854 GREEN; broader acceptance remains open.
+**Version:** 1.452 -- A1 user-policy wire defined; implementation/acceptance pending.
+
+A1 packaged Settings RED: **52 PASS/18 FAIL**, isolating missing user controls,
+saved flags and actor-specific recording suppression. No runtime change. Ordinary
+Settings work, history visibility and policy-change interruption pass; these do
+not establish user-policy acceptance. See
+`tests/integration/plan022_slice4be_user_tracking_policy_results.md`.
 
 ## Slice 4be acceptance and approved controls contract
 
@@ -44,7 +50,7 @@ Receiving/native receipts and limits:
 | Approved surface contract | Operator wording | Protecting packaged behavior |
 |---|---|---|
 | Admin Generate Warehouse | Warehouse purpose: Operational / Training | Closed choice `cboWarehousePurpose`, default Operational; actual Create passes purpose to Core's creation-only Config command. Existing runtime cannot be relabelled; cancel creates nothing. Minimum 620 x 610 points keeps summary below inputs and footer below summary; anchors preserve that order when enlarged. Packaged RED15/8 -> GREEN23; layout RED31/4 -> GREEN35 retains prior23. Visible capture and B0 replay remain open. Generated Training target required for replay; designated Admin rights remain local. |
-| Admin Settings > Event Tracking | Record action / Record user | Actual authorized/versioned save; disabled user overrides capture; control defaults, required audit, history, unknown columns and current target preserved. |
+| Admin Settings > Event Tracking | Record action / Record user | Approved v2 policy adds sparse user overrides; absent user defaults enabled. `lstTrackingUsers` selects a captured warehouse Auth identity; `chkUserRecord` stages its flag. Save Tracking Policy appends a complete version, Reload discards edits, Reset stages all users enabled, Close discards. Required audit, history, visibility, rights, unknown columns and target remain independent. Missing roster is unavailable; unchanged removed-user overrides are retained. Controls/observations and behavioral acceptance are pending. |
 | Action Paths/profile editor | Configure execution / Training inputs / Expected conclusion | `btnConfigureExecution` validates before opening `frmActionPathExecution`; `lblExecutionGuide` identifies the selected exact version/hash and `lblExecutionProfile` identifies the saved profile. `btnSaveExecutionProfile` saves reviewed wire v1 inputs with the guide's authored conclusion. Authoring permission, typed bindings and strict validation apply. Profile-focused checks pass; replay remains open. |
 | Execution input editor | Step / Input / Binding / Value / Apply input | `lstExecutionSteps` retains exact guide order/StepIds; `cboExecutionInput` lists the selected adapter's declared inputs. `cboExecutionBinding`, `txtExecutionValue` and `btnApplyExecutionInput` edit the typed binding. `btnCloseExecution` discards unsaved edits. B0 entity selection uses the registered target-local prompt; profile save/reopen retains reviewed dummy inputs without executing. Minimum760x620/default900x620; minimum/default/enlarged geometry passes. |
 | Runner setup | Run How-To / Training warehouse | `btnRunHowTo` opens setup only for the exact selected guide/profile; show target/version/rights. Old guides show Execution not configured. `btnStartRun` is the separate execution boundary. Implementation exists; packaged acceptance remains open. |

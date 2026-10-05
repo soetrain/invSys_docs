@@ -227,7 +227,7 @@ authority non-mutation.
 **Approved, 2026-10-04:** The user explicitly approved D18-REPLAY-01, including
 the execution boundaries below. Both 4be-A and 4be-B are required for R1.
 This decision amends the earlier observation-only restrictions as listed below;
-Plan 022 and Controls 1.451 track the same contract. D19 is unchanged.
+Plan 022 and Controls 1.452 track the same contract. D19 is unchanged.
 Approval authorizes test-first implementation, not deployment or acceptance.
 
 **Delivery and finish line:**
@@ -346,6 +346,43 @@ schemas before coding their consumers; strict validation and old-format compatib
 are required. Exact fields, adapter factoring and test cases are implementation work
 under D13, not additional product decisions unless they change these boundaries.
 Retain the existing evaluator and all accepted owner fixes.
+
+**Per-user tracking policy wire v2 (A1):** This implements approved boundary7;
+it adds no authority or permission. The existing six-field policy request gains
+`Users`, an array of exact `{UserId, Record}` objects, with integer `SchemaVersion=2`.
+UserId is a nonempty, trimmed string matched case-insensitively like Auth; Record
+is a JSON Boolean. Reject duplicate identities, unknown fields and wrong types;
+retain the existing 1 MiB request limit and complete control-catalog validation.
+Users are sparse overrides: an absent identity is enabled, including newly created
+users. Enabled never overrides disabled controls or grants visibility/capabilities.
+
+Config appends v2 policy metadata with `UserCount` and rows in
+`tblEventTrackingUsers(PolicyVersion, UserId, Record)`. Count must exactly match the
+selected version's unique rows, including zero; missing/partial/orphan/invalid
+data fails closed for optional tracking, without falling back or repairing.
+Keep v1 policy history readable with every user enabled. A v1 request may save
+only while the current policy is v1/defaults; it cannot replace a v2 policy and
+silently remove its user flags. Editors project v1/defaults as v2 in memory;
+reads never upgrade storage. Explicit Save adds the metadata column/table as
+needed, appends one complete version in one save, and preserves old rows and
+unknown columns. The existing D5 target/version/dirty/locked/cancelled-save rules
+apply to all three tables together.
+
+Admin's Tracking section lists warehouse Auth identities and **Record user**;
+selection/toggle stage only, Save/Reload/Reset/Close retain their existing scopes.
+Read the captured target's existing Auth source without ensure/save or credential
+fields; missing/dirty/unreadable roster cannot silently become an empty list.
+Validate new/changed user overrides against that roster at Save. Retain unchanged
+overrides for removed users, label them unavailable, and do not silently erase them.
+Reset stages the empty override list. Operations shows the caller's effective
+recording availability without gaining Admin's roster/editor authority.
+
+At Begin/Finish and recording/replay boundaries, apply the current actor's flag
+to optional collection/capture only. Keep visibility, history, required audit and
+ordinary work authorization independent. Policy loss/change ends an affected
+recording partial and stops replay before another owner dispatch. Record policy
+action/version/outcome only; exclude user-policy values from activity payloads.
+The selector/toggle join the control census and ordinary observation tests.
 
 **Shared execution wire v1 (B0):** Reuse the training store's ASCII-escaped JSON,
 generated GUIDs, UTC timestamps, atomic immutable versions and trailing
@@ -2085,8 +2122,9 @@ scope under semantic inheritance; full restart/role/UI acceptance remains requir
 
 **4be.1 implementation clarification:** Persisted policy metadata uses
 `tblEventTrackingPolicies` and per-control rows use `tblEventTrackingControls`
-in authoritative Config. Both tables absent means built-in PolicyVersion 0;
-saved versions are positive integers. A partial pair, duplicate version/control,
+in authoritative Config. Both absent, with no user-policy table, means built-in
+PolicyVersion 0; saved versions are positive integers. V1 needs only this pair;
+v2 also requires the user table/count defined above. A partial set, duplicate version/control,
 unknown catalog entry or malformed latest version is an error, never fallback
 to an older permissive policy. Header lookup is normalized and unknown columns
 are preserved. Activity SchemaVersion/CatalogVersion begin at 1; RecordId and
