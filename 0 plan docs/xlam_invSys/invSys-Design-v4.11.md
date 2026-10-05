@@ -981,6 +981,12 @@ permission/context interruption, recording/publication and independent How-To/
 Diagnostic/Compare evidence, in addition to the existing packaged regression gates.
 Complete Run is specified below; Print Recall remains unintegrated.
 
+Print Recall's entry inherits D18 captured binding: before its existing report
+owner or diagnostic runs, require the original open workbook, warehouse/session
+and that workbook's Production sheet. A missing captured sheet must not fall
+through to another open workbook. This clarifies the existing rule; it does not
+accept preview/printing, report preservation, or Print Recall observations.
+
 **Complete Run observation refinement (discovered control; focused GREEN, acceptance pending):**
 Under approved D18 semantic inheritance, catalog28 adds `PRODUCTION_RUN_COMPLETE`,
 caption Complete Run, actual handler `frmProduction.mBtnManagerApplyOutput_Click`,

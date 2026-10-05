@@ -4,6 +4,14 @@
 
 ## Slice 4be -- recording/guidance and replay/proof
 
+Print Recall entry binding RED68/12 becomes GREEN80/80 on unpromoted
+`validation-print-binding-01`, retaining all prior passes. Five compiles, layout18
+plus five native checks, smoke86, static caps, visible refusals and preservation
+pass. Next protect D14 report preservation before preview/observation integration;
+do not infer printing success from the existing diagnostic or returned Sub.
+Code checkpoint: `7b1d8b5c`.
+Receipts: `tests/integration/plan022_slice4be_production_print_results.md`.
+
 **Status, 2026-10-04:** The user explicitly approved D18-REPLAY-01, including its
 execution boundaries. Architecture's conflicting clauses are amended; Controls
 1.458 is synchronized. Both parts remain required for R1; implementation and

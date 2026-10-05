@@ -1,6 +1,13 @@
 # invSys Form Controls v1
 
-**Version:** 1.474 -- Next Batch interrupted-recording proof.
+**Version:** 1.475 -- Print Recall entry binding verified.
+
+Print Recall (`btnManagerPrint`, `mBtnManagerPrint_Click`) RED68/12 becomes
+GREEN80/80, retaining all prior passes. Stale warehouse/session, sign-out and a
+missing captured Production sheet refuse before either report call. Five compiles,
+layout18 plus five native checks, smoke86, static caps, reviewed refusals and
+preservation pass. Preview/printing, report preservation and observation integration
+remain open. Receipts: `tests/integration/plan022_slice4be_production_print_results.md`.
 
 Next Batch213/213 retains70 ordered binding checks on unchanged next-closed01.
 Both branches preserve ordinary work through terminal policy/store faults while
