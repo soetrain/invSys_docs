@@ -127,8 +127,13 @@ foreground capture; GREEN passes ten calibration cases with unchanged topmost
 settings, and worksheet101 retains every prior ordered check. Capture raises within
 the existing window band and rejects remaining obstruction; application forms and
 runtime are unchanged. Capture checkpoint: `58ad1abe`.
-Next prove long status/worksheet warning scrolling through
-the existing control. Keep A1/A2 acceptance open.
+Scoped status scrolling now passes129/129 for unavailable tracking and410/410 for
+submission faults, retaining404 prior fault checks. Reviewed captures show both
+branches' final warning/diagnostic lines. Test-only corrections account for CRLF
+caret positions and capture without reactivating/resetting the viewport; runtime
+remains unchanged. Test checkpoint: `4ababb7b`.
+Keep A1/A2 acceptance open and advance remaining observation/
+guide coverage, including Next Batch, rather than repeat unchanged Complete Run gates.
 
 Runner evidence: preimplementation RED45/17 -> candidate02 71/1 (minimum-width
 Stop overlap) -> candidate03 **72/0**. Core owns captured setup/immutable attempts;

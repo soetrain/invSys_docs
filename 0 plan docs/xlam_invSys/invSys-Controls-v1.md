@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.468 -- Complete Run guide views visibly proven; status scrolling pending.
+**Version:** 1.469 -- Complete Run guide views and scoped status scrolling visibly proven.
 
 Catalog28 `PRODUCTION_RUN_COMPLETE` observes the actual Complete Run handler
 for both existing owner branches under `PRODUCTION_RUN_COMPLETION`. D18's Complete
@@ -28,8 +28,10 @@ authoring, reader pairing and all three views. Both guide capture sets are reada
 The worksheet101 rerun retains every check after tooling RED/GREEN fixes capture
 of covered foreground windows; no application form changes.
 Both gates pass five compiles, static checks, preservation and delayed zero Excel
-errors. Long pending-status tails clip. The worksheet warning's full
-text passes; its initial viewport clips the tail, so scrolling evidence is pending.
+errors. Status scrolling passes129/129 for unavailable tracking and410/410 for
+submission faults, retaining404 fault checks. Keyboard Home/End preserves the full
+text; reviewed captures show the final warning/diagnostic lines. Application forms
+are unchanged; comprehensive A1/A2 acceptance remains open.
 Exact receipts and historical failures:
 `tests/integration/plan022_slice4be_production_complete_activity_results.md`.
 

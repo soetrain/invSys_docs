@@ -1040,7 +1040,9 @@ gates pass reusable95/95 and worksheet101/101: older loaded evidence cannot prov
 fresh sources; owning publication, independent exact evaluation, authoring and all
 three views pass. Both guide capture sets are readable after a focused tooling
 RED/GREEN correction for covered foreground windows; worksheet101 retains every
-prior check. Long status/worksheet warning scrolling captures remain required.
+prior check. Scoped status scrolling passes129/129 for unavailable tracking and
+410/410 for submission faults, retaining404 fault checks; reviewed captures reach
+the final warning/diagnostic lines through the existing locked multiline control.
 No new runtime contract or application form behavior is introduced.
 Exact receipts and regression status are maintained in
 `tests/integration/plan022_slice4be_production_complete_activity_results.md`.
