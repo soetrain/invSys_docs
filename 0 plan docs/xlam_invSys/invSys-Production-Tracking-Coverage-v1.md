@@ -1,18 +1,16 @@
 # Production form tracking coverage audit
 
-Version 1.206. Last reviewed:2026-10-05 UTC, Print Recall continuation.
+Version 1.207. Last reviewed:2026-10-05 UTC, Print Recall native preview/dismissal.
 
-Print continuation RED355/4 becomes GREEN359/359, retaining309 ordered checks.
-The preview seam proves refusal after sign-out, target loss, permission revocation
-and real captured-workbook closure. The form survives that closure; dismissed-form
-behavior and actual native Print Preview remain unproved. Each owner runs once;
-guards, saved bytes, exact source keys and warehouse files are preserved. Four
-reviewed captures, five cold/instrumented compiles, static limits and smoke86 pass
-with restoration and delayed zero Excel errors. One helper line changes; the
-identical form retains entry01 layout evidence. Report identity/provenance and
-observations remain open. Same-candidate chain32/live48/warehouse15 retain every
-prior ordered check with normal closure, restoration and delayed zero Excel
-errors; see the Print Recall results record.
+Print native-preview/dismissed-form GREEN384/384 retains all359 ordered checks.
+Native preview is visibly captured and closed through its own control; the form
+reports "Print preview closed." Actual Close at the preview seam leaves the form
+unloaded without reinitialization. Source keys, saved bytes and authority workbooks
+are preserved. Five instrumented compiles, static ratchets/428 parses, normal
+closure, restoration and delayed zero Excel errors pass. Runtime is unchanged;
+yield01 cold compiles, smoke86, chain32/live48/warehouse15 and identical-form
+entry01 layout remain valid. Report identity/provenance and Print observations
+remain open; see the Print Recall results record for exact receipts.
 
 Print entry RED290/19 becomes GREEN309/309, retaining all250 ordered checks.
 Loading/busy/nested callbacks preserve active status without extra report work;
@@ -1993,7 +1991,7 @@ from permission to stage or export a catalog worksheet.
 | `btnManagerApplyOutput` | Complete Run | `mBtnManagerApplyOutput_Click` | Catalog28; activity432 retained, status129, submission faults410, reusable paths95 and worksheet paths101 GREEN; guide/status captures reviewed; broader acceptance pending |
 | `btnManagerCheckIn` | Check In | `mBtnManagerCheckIn_Click` | `PRODUCTION_RUN_CHECK_IN`: catalog25; activity03 policy/store/recovery629, owner/interruption404, reusable paths91 and worksheet paths101 GREEN; earlier activity02 native-closure212/routed157; broader acceptance pending; see Check In results |
 | `btnManagerNext` | Next Batch | `mBtnManagerNext_Click` | `PRODUCTION_RUN_NEXT_BATCH`: catalog26; next-closed01 native closure156, policy/store302, context/permission231 and interrupted-recording213 GREEN; activity04 reusable guide86/worksheet guide94; broader acceptance pending; see Next Batch results |
-| `btnManagerPrint` | Print Recall | `mBtnManagerPrint_Click` | Continuation359 GREEN, retaining309 ordered checks; four context/permission/native workbook-close cases at preview seam; actual native preview/dismissed-form behavior, report identity and observation pending |
+| `btnManagerPrint` | Print Recall | `mBtnManagerPrint_Click` | Native preview/dismissal384 GREEN, retaining359 ordered checks; visible native preview/Close and no dismissed-form reinitialization; report identity/provenance and observation pending |
 | `btnManagerRefresh` | Refresh | `mBtnManagerRefresh_Click` | `PRODUCTION_RUN_MANAGER_REFRESH`: catalog24 focused checks and independent paths167 GREEN; full acceptance pending |
 | `btnRunApplyPalette` | Apply | `mBtnRunApplyPalette_Click` | `PRODUCTION_RUN_ALLOCATE`: catalog24 handler integrated; prior worksheet-owner257 GREEN; RUN-UI-01 and broader acceptance pending |
 

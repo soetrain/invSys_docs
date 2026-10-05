@@ -1,19 +1,17 @@
 # invSys Form Controls v1
 
-**Version:** 1.482 -- Print Recall preview-return continuation.
+**Version:** 1.483 -- Print Recall native preview and dismissed-form evidence.
 
-Print continuation RED355/4 becomes GREEN359/359, retaining309 ordered checks.
-Sign-out, target loss, permission revocation and real captured-workbook closure
-at the preview seam now produce the existing refusal instead of stale completion.
-Each owner runs once; guards, saved operator bytes, exact source keys and warehouse
-files are preserved. The form survives native workbook closure in this fixture;
-dismissed-form behavior and actual Print Preview remain unproved. Four captures,
-five cold/instrumented compiles, static limits and smoke86 pass with normal closure,
-restoration and delayed zero Excel errors. One helper line changes; the identical
-form retains entry01 layout evidence. Report identity/provenance and observations
-remain open. Same-candidate chain32/live48/warehouse15 retain every prior ordered
-check with normal closure, restoration and delayed zero Excel errors. Receipts
-are in the Print Recall results record below.
+Print native-preview/dismissed-form GREEN384/384 retains all359 ordered checks.
+The original native preview renders visibly; only Close Print Preview is invoked,
+and the form reports "Print preview closed." Actual Close at the preview seam
+leaves the form unloaded without reinitialization. Source keys, saved bytes and
+authority workbooks are preserved. Five instrumented compiles, static ratchets/
+428 parses, normal closure, restoration and delayed zero Excel errors pass.
+Runtime is unchanged: yield01 cold compiles, smoke86, chain32/live48/warehouse15
+and identical-form entry01 layout remain applicable. Report identity/provenance,
+Print observations and comprehensive 4be-A acceptance remain open. See the Print
+Recall results record for receipts and the two retained harness-only failures.
 
 Print entry RED290/19 becomes GREEN309/309, retaining all250 ordered checks.
 Loading/busy/nested callbacks preserve active status without extra report work;
