@@ -1,15 +1,18 @@
 # invSys Form Controls v1
 
-**Version:** 1.453 -- A1 user-policy implementation under validation; acceptance open.
+**Version:** 1.454 -- A1 user-policy lifecycle/audit GREEN; acceptance open.
 
-A1 packaged Settings RED **52/18** becomes **91/0** on `validation-user-policy-02`,
-retaining all83 prior checks; storage/history and roster/privacy guards pass.
+A1 packaged Settings RED **52/18** becomes **104/0** on `validation-user-policy-02`,
+retaining all91 prior checks; storage/history, roster/privacy and removed/new-user
+lifecycle guards pass, including exact numeric-looking text identities and Reset.
 Disabled users cannot record, while ordinary work/history remain available.
 Catalog27 registers the selector/toggle without logging selected values.
 Settings202/202, observations535/535, five cold compiles and static ratchets pass;
 nineteen scoped captures are reviewed. New control pairs/redaction, older-policy
-exclusions and replay94/94 with per-user capture-loss stopping pass. Remaining lifecycle/business-audit guards
-remain under validation; no A1/B0/A acceptance or deployment. See
+exclusions and replay101/101 with per-user capture-loss stopping pass. Ordinary
+Receiving retains exact required audit with optional recording disabled. Affected
+guide58 and native/full Receiving854 retain exact prior ordered checks with normal
+closure and preservation; no A1/B0/A acceptance or deployment. See
 `tests/integration/plan022_slice4be_user_tracking_policy_results.md`.
 
 ## Slice 4be acceptance and approved controls contract
@@ -28,21 +31,21 @@ B0 exercises Receiving recording -> authored guide/inputs -> real packaged repla
 -> fresh verification before A closes. B0 alone does not accept B. Keep historical
 4be.x identifiers; registration, implementation and acceptance are distinct.
 
-Current B0 focused gate: `validation-user-policy-02` is **94/0 GREEN**, retaining
-all93 previous passes and adding per-user capture-loss stopping through actual
-Admin handlers. It covers fresh exact owner/evaluator proof, target/input/
+Current B0 focused gate: `validation-user-policy-02` is **101/0 GREEN**, retaining
+all94 previous passes and adding disabled-user ordinary Receiving/audit proof.
+Actual Admin handlers protect per-user capture-loss stopping. It covers fresh exact
+owner/evaluator proof, target/input/
 role/policy guards, nested entry, Next/Stop, immutable attempts and three layouts.
 Workbook closure skips disconnected child forms and uses the existing stop/release
 boundary: the saved run becomes terminal, preserves partial steps/business bytes,
 and cannot dispatch against a replacement workbook. Close-button/QueryClose requests
 at the owner-return boundary defer closure, finish the current step and stop before
-another dispatch. Five cold compiles and static ratchets pass. Prior candidate05
-published-guide58 and Receiving/native854/854 retain every prior check in
-order after correcting stale catalog ceilings in two test helpers; actual Core
-reads and unsupported-version/control rejection pass. Fresh Receiving/Returns
-captures were inspected at candidate05; affected regression on the new per-user
-runtime remains required. The94-check extension needs no further runtime fix. Per-user lifecycle,
-comprehensive observations, Action Path visible proof and broader acceptance
+another dispatch. Five cold compiles and static ratchets pass. Published-guide58
+and Receiving/native854/854 retain every prior check in order on candidate02;
+actual Core reads and unsupported-version/control rejection pass. Fresh
+Receiving/Returns captures are inspected, with normal closure and preservation.
+Lifecycle104 and replay101 need no further runtime fix.
+Comprehensive observations, Action Path visible proof and broader acceptance
 remain open; no deployment or B0/A acceptance.
 
 Preserved progression: profile RED16/13 ->42/1 (Run absent); runner RED45/17 ->72/0;

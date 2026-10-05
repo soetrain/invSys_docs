@@ -6,7 +6,7 @@
 
 **Status, 2026-10-04:** The user explicitly approved D18-REPLAY-01, including its
 execution boundaries. Architecture's conflicting clauses are amended; Controls
-1.453 is synchronized. Both parts remain required for R1; implementation and
+1.454 is synchronized. Both parts remain required for R1; implementation and
 acceptance are not established by approval.
 
 | Milestone | Deliverable / exit |
@@ -48,18 +48,18 @@ RUN-UI-01 remain separate pending decisions; prior granted approvals stand.
 On actual desktop error 5, record time, stop work, preserve evidence and exit under
 the user's standing instruction. Stale probes/native crashes are different failures.
 
-**Current:** `validation-user-policy-02` passes user-policy91/91 (from RED52/18),
-Settings202/202, observations535/535 and Receiving replay94/94. All93 prior replay
-checks remain; disabling the running user's recording through Admin stops later
-dispatch while preserving the completed step. Fresh exact owner/evaluator proof
-and both close boundaries remain GREEN. Five cold compiles, static ratchets,
-settings/package preservation and normal closure pass; nineteen scoped Settings
-captures are reviewed. Architecture's v2 policy retains v1 history, unknown columns,
-rights and visibility; roster/privacy and malformed-storage guards pass.
+**Current:** `validation-user-policy-02` passes user-policy104/104 (from RED52/18),
+Settings202/202, observations535/535 and Receiving replay101/101. Prior checks
+remain. Removed/new-user lifecycle and exact text identities pass; disabling the
+running user's recording stops replay while ordinary Receiving retains required
+audit without optional activity. Fresh exact owner/evaluator proof and both close
+boundaries pass. Five cold compiles, static ratchets, settings/package preservation
+and normal closure pass; nineteen scoped Settings captures are reviewed. Affected
+guide58/58 and full Receiving854/854 retain exact prior ordered checks on this
+candidate, with two fresh Receiving/Returns captures reviewed. The v2 policy
+retains v1 history, unknown columns, rights and visibility.
 
-**Next:** Finish removed/new-user lifecycle and disabled-user ordinary Receiving
-required-audit proof; retain prior candidate05 guide58/native854 on the changed
-runtime. Then finish comprehensive observations, Action Path visible proof and
+**Next:** Finish comprehensive observations, Action Path visible proof and
 applicable broader gates. The existing full-chain native failure remains open;
 no A1/B0/A/B/R1 acceptance or deployment is claimed. Do not widen replay scope or
 repeat unchanged broad gates in place of completing A1/A2. Exact receipts and next
