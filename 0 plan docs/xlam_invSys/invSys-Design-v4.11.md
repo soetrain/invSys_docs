@@ -227,7 +227,7 @@ authority non-mutation.
 **Approved, 2026-10-04:** The user explicitly approved D18-REPLAY-01, including
 the execution boundaries below. Both 4be-A and 4be-B are required for R1.
 This decision amends the earlier observation-only restrictions as listed below;
-Plan 022 and Controls 1.452 track the same contract. D19 is unchanged.
+Plan 022 and Controls 1.453 track the same contract. D19 is unchanged.
 Approval authorizes test-first implementation, not deployment or acceptance.
 
 **Delivery and finish line:**
@@ -383,6 +383,11 @@ ordinary work authorization independent. Policy loss/change ends an affected
 recording partial and stops replay before another owner dispatch. Record policy
 action/version/outcome only; exclude user-policy values from activity payloads.
 The selector/toggle join the control census and ordinary observation tests.
+Catalog27 registers `ADMIN_TRACKING_SELECT_USER` and `ADMIN_TRACKING_USER_RECORD`
+as Admin Settings navigation/staging actions, with fixed Warehouse user/Record user
+captions and SELECTED/STAGED outcomes. Older catalogs do not admit them. They
+follow existing navigation-off/capture rules and never log the selected identity
+or flag value; Save retains its existing Core policy/version boundary.
 
 **Shared execution wire v1 (B0):** Reuse the training store's ASCII-escaped JSON,
 generated GUIDs, UTC timestamps, atomic immutable versions and trailing

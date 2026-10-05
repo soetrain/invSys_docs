@@ -6,7 +6,7 @@
 
 **Status, 2026-10-04:** The user explicitly approved D18-REPLAY-01, including its
 execution boundaries. Architecture's conflicting clauses are amended; Controls
-1.452 is synchronized. Both parts remain required for R1; implementation and
+1.453 is synchronized. Both parts remain required for R1; implementation and
 acceptance are not established by approval.
 
 | Milestone | Deliverable / exit |
@@ -62,12 +62,14 @@ is not established. Earlier assisted83/2 diagnostics are not acceptance.
 
 **Next:** A1 per-user policy wire v2 is defined in Architecture under approved
 D18-REPLAY-01, retaining v1 history and preventing downlevel writes from removing
-v2 overrides. Compiled Settings RED is **52 PASS/18 FAIL**: user controls, persisted
-flags and actor-specific recording suppression are absent; all existing-route
-checks pass. Implement against this RED, then extend malformed-store, v1-history,
-role, unknown-column and replay-loss guards. Preserve the current
+v2 overrides. Compiled Settings RED **52/18** becomes **91/0** on candidate02,
+retaining all83 prior checks with storage/history and roster/privacy guards. Core owns
+actor-specific optional recording and versioned persistence; Admin stages user
+flags. Settings202/202, observations535/535, five cold compiles and static ratchets
+pass; nineteen scoped captures are reviewed. Complete lifecycle, replay-loss and business-audit
+guards before accepting A1. Preserve the current
 runner93/native854 GREEN and extend policy/role/layout/recording/replay guards.
-No user-policy consumer is implemented or accepted yet. Receipts and exact next
+User-policy acceptance remains open. Receipts and exact next
 work: `tests/integration/plan022_slice4be_user_tracking_policy_results.md`. Do not widen
 replay scope or rerun unchanged broad gates in place of completing A1/A2. Exact
 Receiving receipts are in the replay and native-target integration records.
