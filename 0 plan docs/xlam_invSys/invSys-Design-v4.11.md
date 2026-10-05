@@ -1020,6 +1020,16 @@ that existing diagnostic API remains available for explicit compatibility caller
 This clarifies truthful feedback and single-invocation ownership; observation
 catalog integration, native preview and interruption acceptance remain separate.
 
+Print Recall also inherits D18's Production action-entry rules: loading or busy/
+nested callbacks do not enter the report owner or replace the active status.
+One deliberate outer click holds the existing busy guard across preview and
+restores both guards on exit. Before report preparation, require the current
+PROD_POST capability or its existing ADMIN_MAINT alternative as well as captured
+binding; denial uses the existing Production permission-change message. This is
+a clarification of existing role and entry boundaries, not a new capability or
+observation contract. Post-yield context/closure and native preview acceptance
+still require their own proof.
+
 **Complete Run observation refinement (discovered control; focused GREEN, acceptance pending):**
 Under approved D18 semantic inheritance, catalog28 adds `PRODUCTION_RUN_COMPLETE`,
 caption Complete Run, actual handler `frmProduction.mBtnManagerApplyOutput_Click`,

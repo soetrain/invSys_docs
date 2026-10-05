@@ -1,6 +1,19 @@
 # invSys Form Controls v1
 
-**Version:** 1.480 -- Print Recall saved-probe confirmation.
+**Version:** 1.481 -- Print Recall current permission and entry guards.
+
+Print entry RED290/19 becomes GREEN309/309, retaining all250 ordered checks.
+Loading/busy/nested callbacks preserve active status without extra report work;
+Reader entry refuses, while Producer/Admin clicks reach the owner/preview once.
+The typed helper checks current PROD_POST/ADMIN_MAINT, preserves captured binding
+and restores guards under D18. Six captures, five cold/instrumented compiles,
+smoke86, layout18/five native checks and static ratchets pass. Twenty helper lines
+add no components/procedures/dynamic calls or oversized growth. Normal closure,
+restoration and delayed zero Excel errors pass. Native preview, post-yield
+interruption, report identity/provenance and observation acceptance remain open.
+Same-candidate chain32/live48/warehouse15 retain every prior ordered check with
+normal closure, restoration and delayed zero Excel errors. Receipts:
+`tests/integration/plan022_slice4be_production_print_results.md`.
 
 Print Recall feedback RED231/17 becomes GREEN248/248. It displays the original
 owner's refusal/error or "Print preview closed." with one report build per click.

@@ -4,6 +4,20 @@
 
 ## Slice 4be -- recording/guidance and replay/proof
 
+Print entry RED290/19 becomes GREEN309/309, retaining all250 ordered checks.
+Loading/busy/nested callbacks preserve active status without extra report work;
+Reader entry refuses, while Producer/Admin clicks reach the owner/preview once.
+The typed helper checks current PROD_POST/ADMIN_MAINT, preserves captured binding
+and restores guards under D18. Six captures, five cold/instrumented compiles,
+smoke86, layout18/five native checks and static ratchets pass. Twenty helper lines
+add no components/procedures/dynamic calls or oversized growth. Normal closure,
+restoration and delayed zero Excel errors pass. Next protect post-yield binding/
+permission loss and native closure through the actual Print handler; native
+preview, report identity/provenance and observations remain open. Same-candidate
+chain32/live48/warehouse15 retain every prior ordered check with normal closure,
+restoration and delayed zero Excel errors. Code checkpoint: `88f36ff5`. Exact receipts:
+`tests/integration/plan022_slice4be_production_print_results.md`.
+
 Print Recall entry binding RED68/12 becomes GREEN80/80 on unpromoted
 `validation-print-binding-01`, retaining all prior passes. Five compiles, layout18
 plus five native checks, smoke86, static caps, visible refusals and preservation

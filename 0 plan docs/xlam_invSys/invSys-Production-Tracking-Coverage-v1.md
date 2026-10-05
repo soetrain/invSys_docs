@@ -1,6 +1,18 @@
 # Production form tracking coverage audit
 
-Version 1.204. Last reviewed:2026-10-05 UTC, Print Recall saved-probe confirmation.
+Version 1.205. Last reviewed:2026-10-05 UTC, Print Recall entry guards.
+
+Print entry RED290/19 becomes GREEN309/309, retaining all250 ordered checks.
+Loading/busy/nested callbacks preserve active status without extra report work;
+Reader entry refuses, while Producer/Admin clicks reach the owner/preview once.
+Current capability and captured binding precede report work; guards are restored.
+Six reviewed captures, five cold/instrumented compiles, smoke86, layout18/five
+native checks and static ratchets pass with restoration and delayed zero Excel
+errors. Twenty helper lines add no components/procedures/dynamic calls or oversized
+growth. Native preview, post-yield interruption, report identity/provenance and
+observation acceptance remain open. Same-candidate chain32/live48/warehouse15
+retain every prior ordered check with normal closure, restoration and delayed
+zero Excel errors; see the Print Recall results record.
 
 Truthful feedback RED231/17 becomes GREEN248/248. The form displays the original
 owner's refusal/error or "Print preview closed." and does not rebuild through the
@@ -1969,7 +1981,7 @@ from permission to stage or export a catalog worksheet.
 | `btnManagerApplyOutput` | Complete Run | `mBtnManagerApplyOutput_Click` | Catalog28; activity432 retained, status129, submission faults410, reusable paths95 and worksheet paths101 GREEN; guide/status captures reviewed; broader acceptance pending |
 | `btnManagerCheckIn` | Check In | `mBtnManagerCheckIn_Click` | `PRODUCTION_RUN_CHECK_IN`: catalog25; activity03 policy/store/recovery629, owner/interruption404, reusable paths91 and worksheet paths101 GREEN; earlier activity02 native-closure212/routed157; broader acceptance pending; see Check In results |
 | `btnManagerNext` | Next Batch | `mBtnManagerNext_Click` | `PRODUCTION_RUN_NEXT_BATCH`: catalog26; next-closed01 native closure156, policy/store302, context/permission231 and interrupted-recording213 GREEN; activity04 reusable guide86/worksheet guide94; broader acceptance pending; see Next Batch results |
-| `btnManagerPrint` | Print Recall | `mBtnManagerPrint_Click` | Truthful feedback248 GREEN with prior217 coverage mapped; report identity, native preview, permissions/interruptions and observation pending |
+| `btnManagerPrint` | Print Recall | `mBtnManagerPrint_Click` | Entry/current-permission309 GREEN, retaining250 ordered checks and prior feedback coverage; report identity, native preview, post-yield interruptions and observation pending |
 | `btnManagerRefresh` | Refresh | `mBtnManagerRefresh_Click` | `PRODUCTION_RUN_MANAGER_REFRESH`: catalog24 focused checks and independent paths167 GREEN; full acceptance pending |
 | `btnRunApplyPalette` | Apply | `mBtnRunApplyPalette_Click` | `PRODUCTION_RUN_ALLOCATE`: catalog24 handler integrated; prior worksheet-owner257 GREEN; RUN-UI-01 and broader acceptance pending |
 
