@@ -987,6 +987,12 @@ and that workbook's Production sheet. A missing captured sheet must not fall
 through to another open workbook. This clarifies the existing rule; it does not
 accept preview/printing, report preservation, or Print Recall observations.
 
+Print Recall's refusal also inherits D14 preservation: an empty output table,
+missing recall column or absence of recall-coded rows must be detected before
+creating or clearing RecallCodesPrint. Preserve its existing tables, custom
+columns, formulas and unrelated cells when refusing. This does not exempt a
+successful report rebuild from D14 or approve a different report identity/schema.
+
 **Complete Run observation refinement (discovered control; focused GREEN, acceptance pending):**
 Under approved D18 semantic inheritance, catalog28 adds `PRODUCTION_RUN_COMPLETE`,
 caption Complete Run, actual handler `frmProduction.mBtnManagerApplyOutput_Click`,

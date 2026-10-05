@@ -1,6 +1,15 @@
 # invSys Form Controls v1
 
-**Version:** 1.475 -- Print Recall entry binding verified.
+**Version:** 1.476 -- Print Recall refusal preservation verified.
+
+Print Recall refusal RED99/7 becomes GREEN106/106, retaining80 ordered checks.
+No recall data means no empty report creation or clearing of existing custom
+columns, formulas, other tables or cells. Five compiles, smoke86, static caps and
+four reviewed captures pass with preservation and delayed zero Excel errors.
+Forms are unchanged; prior layout applies. Fresh chain32/live48/warehouse15 pass
+with exact prior checks, normal cleanup, restoration and delayed zero Excel errors.
+Earlier Boxing native failure does not reproduce; its cause remains unproved.
+Successful rebuild preservation, truthful preview and recording remain open.
 
 Print Recall (`btnManagerPrint`, `mBtnManagerPrint_Click`) RED68/12 becomes
 GREEN80/80, retaining all prior passes. Stale warehouse/session, sign-out and a
