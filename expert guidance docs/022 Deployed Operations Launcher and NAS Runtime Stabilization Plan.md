@@ -107,7 +107,13 @@ RED211/8 -> GREEN219/219 retains198 prior checks. Shared-SKU exact display/selec
 sorting, blank drafts, missing/ambiguous-key refusal, history and custom columns
 pass. Five compiles, layout18 plus native-window checks, smoke86/static caps and
 delayed zero Excel-error audits pass with preservation.
-Next finish partial/fault and publication/guide-view acceptance. No new contract.
+The unchanged activity04 package now passes432/432, retaining219 checks. Actual
+consume/output interruptions and optional logging policy/store faults pass, with
+five compiles, static checks, preservation and unassisted closure. No new contract.
+Test checkpoint: `6bd16465`; runtime remains `c7d97a9c`.
+Next cover queued/unacknowledged submissions, publication/guide views and the
+worksheet warning's scrolling capture; its full text passes but the initial
+viewport clips the tail. Keep A1/A2 acceptance open.
 
 Runner evidence: preimplementation RED45/17 -> candidate02 71/1 (minimum-width
 Stop overlap) -> candidate03 **72/0**. Core owns captured setup/immutable attempts;

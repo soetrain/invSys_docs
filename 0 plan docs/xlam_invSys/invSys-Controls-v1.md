@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.464 -- Worksheet output identity projection corrected; acceptance pending.
+**Version:** 1.465 -- Complete Run interruption/logging-fault proof expanded; acceptance pending.
 
 Catalog28 `PRODUCTION_RUN_COMPLETE` observes the actual Complete Run handler
 for both existing owner branches under `PRODUCTION_RUN_COMPLETION`. D18's Complete
@@ -17,8 +17,12 @@ worksheet output System_Key display/selection under D14. Existing exact keys,
 shared SKU, sorting, blank drafts and missing/ambiguous-key refusal pass without
 changing history or inventory; custom columns remain. Five compiles, layout18
 plus native-window checks, smoke86/static caps and delayed zero Excel-error audits
-pass with preservation. Partial/fault, publication and
-guide-view proof remain open. Exact receipts and historical failures:
+pass with preservation. The unchanged package now passes432/432, retaining219
+checks: reusable consume/output interruptions and optional logging policy/store faults
+pass, with five compiles, static checks and unassisted closure. Queued/unacknowledged
+submission, publication and guide views remain open. The worksheet warning's full
+text passes; its initial viewport clips the tail, so scrolling evidence is pending.
+Exact receipts and historical failures:
 `tests/integration/plan022_slice4be_production_complete_activity_results.md`.
 
 Post-output sign-out/permission loss has packaged RED122/8 -> full GREEN318/318

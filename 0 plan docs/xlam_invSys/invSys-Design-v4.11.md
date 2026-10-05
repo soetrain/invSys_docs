@@ -1031,6 +1031,10 @@ both native refusals, input/custom columns and recovery. No permission is widene
 Activity04 RED211/8 -> GREEN219/219 retains198 checks and corrects worksheet output
 projection/selection under D14: display stored keys, resolve nonempty keys exactly
 and uniquely, preserve unkeyed creation staging, history and canonical inventory.
+The unchanged activity04 package's expanded GREEN432/432 retains219 checks and
+proves reusable consume/output interruptions and optional logging policy/store
+faults through both completion branches. Queued/unacknowledged submission and guide-view
+acceptance remain open; the worksheet warning still needs a scrolling capture.
 Exact receipts and regression status are maintained in
 `tests/integration/plan022_slice4be_production_complete_activity_results.md`.
 
