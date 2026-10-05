@@ -1035,9 +1035,12 @@ The unchanged activity04 package's expanded GREEN432/432 retains219 checks and
 proves reusable consume/output interruptions and optional logging policy/store
 faults through both completion branches. A separate GREEN404/404 proves twelve
 queued/uncertain-submission cases, exact Submitted/Unknown references and partial
-owner effects, with native acknowledgments and preservation. Publication, fresh
-source evaluation and guide-view acceptance remain open; long status and worksheet
-warning scrolling captures remain required. No new runtime contract is introduced.
+owner effects, with native acknowledgments and preservation. Recording-to-guide
+gates pass reusable95/95 and worksheet101/101: older loaded evidence cannot prove
+fresh sources; owning publication, independent exact evaluation, authoring and all
+three views pass. Reusable captures are readable; worksheet captures are obscured
+by the library, so their visible acceptance remains open. Long status/worksheet
+warning scrolling captures also remain required. No new runtime contract is introduced.
 Exact receipts and regression status are maintained in
 `tests/integration/plan022_slice4be_production_complete_activity_results.md`.
 

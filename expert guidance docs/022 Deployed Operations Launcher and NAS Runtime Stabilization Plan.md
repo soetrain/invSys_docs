@@ -117,9 +117,14 @@ native acknowledgments. All380 trial checks remain ordered; five compiles, stati
 ratchets, settings/package preservation, normal closure and delayed zero Excel
 errors pass. Test checkpoint: `82fc2d33`. Runtime remains unchanged; this is
 additional D13 proof.
-Next cover publication, fresh source evaluation, all three guide views and
-scrolling captures. Long pending status and the worksheet warning clip in their
-initial viewport. Keep A1/A2 acceptance open.
+Recording-to-guide gates now pass reusable95/95 and worksheet101/101: distinct real
+runs, older loaded publication refusal, fresh exact owner/evaluator proof, explicit
+authoring, reader pairing and all three views. Five compiles/static ratchets,
+normal closure, preservation and delayed zero Excel errors pass. Test checkpoint:
+`49b66194`; runtime is unchanged.
+Reusable captures are readable; worksheet captures remain obscured by the library
+despite guide focus. Next protect unobstructed capture with a focused test, then
+prove long status/worksheet warning scrolling. Keep A1/A2 acceptance open.
 
 Runner evidence: preimplementation RED45/17 -> candidate02 71/1 (minimum-width
 Stop overlap) -> candidate03 **72/0**. Core owns captured setup/immutable attempts;

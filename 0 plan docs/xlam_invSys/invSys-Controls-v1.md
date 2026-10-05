@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.466 -- Complete Run queued/uncertain-submission proof expanded; acceptance pending.
+**Version:** 1.467 -- Complete Run recording-to-guide proof; worksheet visible acceptance pending.
 
 Catalog28 `PRODUCTION_RUN_COMPLETE` observes the actual Complete Run handler
 for both existing owner branches under `PRODUCTION_RUN_COMPLETION`. D18's Complete
@@ -22,8 +22,12 @@ checks: reusable consume/output interruptions and optional logging policy/store 
 pass, with five compiles, static checks and unassisted closure. A separate404/404
 gate covers twelve queued/uncertain-submission cases through both handlers, exact
 references/partial effects and native acknowledgments, with five compiles, static
-checks and normal closure/preservation. Publication, fresh source evaluation and
-guide views remain open. Long pending-status tails clip. The worksheet warning's full
+checks and normal closure/preservation. Recording-to-guide gates now pass95/95
+reusable and101/101 worksheet: publication, independent fresh exact evaluation,
+authoring, reader pairing and all three views. Reusable captures are readable;
+worksheet captures are obscured by the library, so visible acceptance remains open.
+Both gates pass five compiles, static checks, preservation and delayed zero Excel
+errors. Long pending-status tails clip. The worksheet warning's full
 text passes; its initial viewport clips the tail, so scrolling evidence is pending.
 Exact receipts and historical failures:
 `tests/integration/plan022_slice4be_production_complete_activity_results.md`.
