@@ -1,23 +1,21 @@
 # invSys Form Controls v1
 
-**Version:** 1.462 -- Complete Run native closure corrected; acceptance pending.
+**Version:** 1.463 -- Complete Run worksheet refusal classified; acceptance pending.
 
 Catalog28 `PRODUCTION_RUN_COMPLETE` observes the actual Complete Run handler
 for both existing owner branches under `PRODUCTION_RUN_COMPLETION`. D18's Complete
 Run refinement defines CONFIRMED/PENDING/REJECTED/DENIED/FAILED and exact Inventory
 references. Command acknowledgment and independent application proof stay separate.
-Actual-handler RED120/60 becomes GREEN180/180 on `validation-complete-activity-01`.
-Both owner branches, exact references, denial/refusal, disabled recording and
-custom-column preservation pass. Partial/fault, publication and guide-view proof
-remain open. See `tests/integration/plan022_slice4be_production_complete_activity_results.md`
-for exact receipts and regression status; no comprehensive acceptance is claimed.
-Activity02 fixes post-close access to the unloaded form: focused RED58/1 ->
-GREEN59/59 and observation180/180 retain prior checks. Five compiles and static
-caps pass; all forms are unchanged. Full completion318/318 retains prior ordered
-checks, including all four native closures, with normal shutdown/preservation.
-Smoke86/86 and delayed zero Excel-error audits pass. Guide/layout evidence is
-reused from unchanged components; partial/fault and guide-view acceptance stay open.
-Prior activity01 smoke86/guide58 and incomplete273/1 evidence remain recorded.
+Activity03 RED190/8 -> GREEN198/198 retains all180 prior checks. A user allowed
+through the form by ADMIN_MAINT but refused by the worksheet's PROD_POST check
+gets DENIED, with both existing dialogs, no submission and unchanged input/custom
+columns; normal completion after permission restoration passes. Rights are unchanged.
+Five compiles, smoke86/static caps and preservation pass. Only that owner procedure
+changes; retain activity02's closure59/full318 and unchanged guide/layout evidence.
+The reviewed capture exposes a pre-existing worksheet System_Key display showing
+ITEM_CODE; protect/correct that projection test-first. Partial/fault, publication
+and guide-view proof remain open. Exact receipts and historical failures:
+`tests/integration/plan022_slice4be_production_complete_activity_results.md`.
 
 Post-output sign-out/permission loss has packaged RED122/8 -> full GREEN318/318
 on `validation-complete-output-return-02`, retaining all289 prior ordered checks.

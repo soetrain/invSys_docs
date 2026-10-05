@@ -98,6 +98,13 @@ Code checkpoint `3b0501aa`; candidate remains unpromoted. Preserve the legacy no
 closure checks with collection explicitly disabled; enabled-recording proof remains
 separate. Earlier activity01 smoke86/guide58 and incomplete273/1 receipts remain
 recorded, including the assisted stop; no error5 or acceptance is claimed.
+Activity03 (`0bd9bb76`) adds actual worksheet Admin-only refusal RED190/8 -> GREEN198/198,
+retaining180 prior checks. DENIED, native messages, no submission and recovery
+pass; five compiles, smoke86/static caps and preservation pass. Only that owner
+procedure changes, so retain activity02's reusable/native-closure318 evidence.
+Next protect the existing worksheet System_Key display/selection: its source
+prefers ITEM_CODE under the System_Key heading. Follow the normative exact-identity
+rule; then finish partial/fault and publication/guide-view acceptance. No new contract.
 
 Runner evidence: preimplementation RED45/17 -> candidate02 71/1 (minimum-width
 Stop overlap) -> candidate03 **72/0**. Core owns captured setup/immutable attempts;

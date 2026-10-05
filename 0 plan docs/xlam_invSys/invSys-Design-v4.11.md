@@ -1025,6 +1025,9 @@ Activity02 retains180/180 and corrects native workbook-close cleanup under this
 same contract: focused RED58/1 -> GREEN59/59; never access the unloaded form while
 finishing observation and restoring action guards. Full completion318/318 retains
 the prior checks and all four native closures; broader acceptance remains open.
+Activity03 RED190/8 -> GREEN198/198 retains180 prior checks and proves DENIED at
+the worksheet PROD_POST gate when form ADMIN_MAINT access succeeds, preserving
+both native refusals, input/custom columns and recovery. No permission is widened.
 Exact receipts and regression status are maintained in
 `tests/integration/plan022_slice4be_production_complete_activity_results.md`.
 

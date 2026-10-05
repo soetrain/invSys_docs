@@ -1,19 +1,17 @@
 # Production form tracking coverage audit
 
-Version 1.186. Last reviewed:2026-10-05 UTC, Complete Run native closure corrected.
+Version 1.187. Last reviewed:2026-10-05 UTC, Complete Run worksheet refusal classified.
 
 Catalog28 `PRODUCTION_RUN_COMPLETE`, owner `PRODUCTION_RUN_COMPLETION`, follows
-the D18 Complete Run refinement. Actual-handler RED120/60 -> GREEN180/180 covers
-both owners, exact references, refusal/denial, suppression, disabled recording and
-custom-column preservation. Partial/fault, publication and guide-view proof remain
-pending; this control is not yet accepted as comprehensive.
-Activity02 fixes the disconnected-form cleanup loop with focused RED58/1 ->
-GREEN59/59 and observation180/180. Five compiles/static caps pass; all forms are
-unchanged. Full completion318/318 retains prior ordered checks and all four native
-closures, with normal shutdown/preservation. Prior activity01 smoke86/
-guide58 and incomplete273/1 remain historical evidence, not acceptance. Activity02
-smoke86 and delayed zero Excel-error audits pass; unchanged guide/layout evidence
-is retained. No broader acceptance or deployment.
+the D18 Complete Run refinement. Activity03 RED190/8 -> GREEN198/198 retains all180
+prior checks and distinguishes worksheet PROD_POST refusal from form ADMIN_MAINT
+access. DENIED, both native dialogs, no submission, exact input/custom columns and
+permission-restoration recovery pass. Five compiles, smoke86/static caps and normal
+closure/preservation pass. Only the worksheet owner procedure changes; activity02's
+closure59/full318 and unchanged guide/layout evidence remain valid for those paths.
+The pre-existing System_Key display substitutes ITEM_CODE and needs its own focused
+projection/selection test. Partial/fault, publication and guide-view proof remain
+pending; no comprehensive acceptance or deployment.
 See `tests/integration/plan022_slice4be_production_complete_activity_results.md`.
 
 Packaged RED122/8 proves sign-out/permission loss after output processing still
