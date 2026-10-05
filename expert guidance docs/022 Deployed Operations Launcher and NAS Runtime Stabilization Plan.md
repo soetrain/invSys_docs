@@ -4,6 +4,20 @@
 
 ## Slice 4be -- recording/guidance and replay/proof
 
+Print continuation RED355/4 becomes GREEN359/359, retaining309 ordered checks.
+Sign-out, target loss, permission revocation and real captured-workbook closure
+at the preview seam now produce the existing refusal instead of stale completion.
+Each owner runs once; guards, saved operator bytes, exact source keys and warehouse
+files are preserved. The form survives native workbook closure in this fixture;
+dismissed-form behavior and actual Print Preview remain unproved. Four captures,
+five cold/instrumented compiles, static limits and smoke86 pass with normal closure,
+restoration and delayed zero Excel errors. One helper line changes; the identical
+form retains entry01 layout evidence. Actual native preview/dismissed-form coverage,
+report identity/provenance and Print observations remain next. Same-candidate
+chain32/live48/warehouse15 retain every prior ordered check with normal closure,
+restoration and delayed zero Excel errors. Code checkpoint: `2eff70dd`. Receipts:
+`tests/integration/plan022_slice4be_production_print_results.md`.
+
 Print entry RED290/19 becomes GREEN309/309, retaining all250 ordered checks.
 Loading/busy/nested callbacks preserve active status without extra report work;
 Reader entry refuses, while Producer/Admin clicks reach the owner/preview once.

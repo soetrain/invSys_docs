@@ -1030,6 +1030,13 @@ a clarification of existing role and entry boundaries, not a new capability or
 observation contract. Post-yield context/closure and native preview acceptance
 still require their own proof.
 
+On return from Print preview, recheck the original binding and current capability
+before presenting completion or doing further owner work. Context or permission
+loss uses the existing refusal on a surviving form; a dismissed form stays
+dismissed and must not be queried or recreated. Preserve already prepared report
+effects without retry or rollback. This applies D18's existing post-yield rule;
+the preview-return result alone cannot prove a current authorized conclusion.
+
 **Complete Run observation refinement (discovered control; focused GREEN, acceptance pending):**
 Under approved D18 semantic inheritance, catalog28 adds `PRODUCTION_RUN_COMPLETE`,
 caption Complete Run, actual handler `frmProduction.mBtnManagerApplyOutput_Click`,
