@@ -1,6 +1,6 @@
 # Production form tracking coverage audit
 
-Version 1.189. Last reviewed:2026-10-05 UTC, Complete Run interruption/logging-fault proof expanded.
+Version 1.190. Last reviewed:2026-10-05 UTC, Complete Run queued/uncertain-submission proof expanded.
 
 Catalog28 `PRODUCTION_RUN_COMPLETE`, owner `PRODUCTION_RUN_COMPLETION`, follows
 the D18 Complete Run refinement. Activity03 RED190/8 -> GREEN198/198 retains all180
@@ -17,8 +17,11 @@ Five compiles, layout18 plus native-window checks, smoke86/static caps and delay
 zero Excel-error audits pass, with settings/package preservation.
 The unchanged package passes432/432, retaining219 checks: reusable consume/output
 interruptions and optional logging policy/store faults pass with five compiles,
-static checks and unassisted closure. Queued/unacknowledged submission, publication,
-guide views and the worksheet warning's scrolling capture remain pending.
+static checks and unassisted closure. A separate404/404 gate covers twelve queued/
+uncertain-submission cases through both handlers, exact references/partial effects
+and native acknowledgments, with five compiles, static checks and normal closure/
+preservation. Publication, fresh source evaluation, guide views and scrolling
+captures for long status/worksheet warning text remain pending.
 No comprehensive acceptance or deployment.
 See `tests/integration/plan022_slice4be_production_complete_activity_results.md`.
 

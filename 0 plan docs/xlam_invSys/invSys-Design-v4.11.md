@@ -1033,8 +1033,11 @@ projection/selection under D14: display stored keys, resolve nonempty keys exact
 and uniquely, preserve unkeyed creation staging, history and canonical inventory.
 The unchanged activity04 package's expanded GREEN432/432 retains219 checks and
 proves reusable consume/output interruptions and optional logging policy/store
-faults through both completion branches. Queued/unacknowledged submission and guide-view
-acceptance remain open; the worksheet warning still needs a scrolling capture.
+faults through both completion branches. A separate GREEN404/404 proves twelve
+queued/uncertain-submission cases, exact Submitted/Unknown references and partial
+owner effects, with native acknowledgments and preservation. Publication, fresh
+source evaluation and guide-view acceptance remain open; long status and worksheet
+warning scrolling captures remain required. No new runtime contract is introduced.
 Exact receipts and regression status are maintained in
 `tests/integration/plan022_slice4be_production_complete_activity_results.md`.
 

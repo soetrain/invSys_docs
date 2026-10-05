@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.465 -- Complete Run interruption/logging-fault proof expanded; acceptance pending.
+**Version:** 1.466 -- Complete Run queued/uncertain-submission proof expanded; acceptance pending.
 
 Catalog28 `PRODUCTION_RUN_COMPLETE` observes the actual Complete Run handler
 for both existing owner branches under `PRODUCTION_RUN_COMPLETION`. D18's Complete
@@ -19,8 +19,11 @@ changing history or inventory; custom columns remain. Five compiles, layout18
 plus native-window checks, smoke86/static caps and delayed zero Excel-error audits
 pass with preservation. The unchanged package now passes432/432, retaining219
 checks: reusable consume/output interruptions and optional logging policy/store faults
-pass, with five compiles, static checks and unassisted closure. Queued/unacknowledged
-submission, publication and guide views remain open. The worksheet warning's full
+pass, with five compiles, static checks and unassisted closure. A separate404/404
+gate covers twelve queued/uncertain-submission cases through both handlers, exact
+references/partial effects and native acknowledgments, with five compiles, static
+checks and normal closure/preservation. Publication, fresh source evaluation and
+guide views remain open. Long pending-status tails clip. The worksheet warning's full
 text passes; its initial viewport clips the tail, so scrolling evidence is pending.
 Exact receipts and historical failures:
 `tests/integration/plan022_slice4be_production_complete_activity_results.md`.

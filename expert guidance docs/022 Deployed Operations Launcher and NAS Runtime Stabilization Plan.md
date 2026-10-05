@@ -111,9 +111,15 @@ The unchanged activity04 package now passes432/432, retaining219 checks. Actual
 consume/output interruptions and optional logging policy/store faults pass, with
 five compiles, static checks, preservation and unassisted closure. No new contract.
 Test checkpoint: `6bd16465`; runtime remains `c7d97a9c`.
-Next cover queued/unacknowledged submissions, publication/guide views and the
-worksheet warning's scrolling capture; its full text passes but the initial
-viewport clips the tail. Keep A1/A2 acceptance open.
+A separate404/404 gate now covers twelve queued/uncertain-submission cases through
+both handlers, exact Submitted/Unknown references, real partial owner effects and
+native acknowledgments. All380 trial checks remain ordered; five compiles, static
+ratchets, settings/package preservation, normal closure and delayed zero Excel
+errors pass. Test checkpoint: `82fc2d33`. Runtime remains unchanged; this is
+additional D13 proof.
+Next cover publication, fresh source evaluation, all three guide views and
+scrolling captures. Long pending status and the worksheet warning clip in their
+initial viewport. Keep A1/A2 acceptance open.
 
 Runner evidence: preimplementation RED45/17 -> candidate02 71/1 (minimum-width
 Stop overlap) -> candidate03 **72/0**. Core owns captured setup/immutable attempts;
