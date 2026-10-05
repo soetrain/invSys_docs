@@ -1,6 +1,14 @@
 # Production form tracking coverage audit
 
-Version 1.201. Last reviewed:2026-10-05 UTC, Print Recall rebuild preservation.
+Version 1.202. Last reviewed:2026-10-05 UTC, Print Recall inventory binding.
+
+Inventory binding RED211/6 becomes GREEN217/217, retaining183 checks. The existing
+workbook-specific helper prevents foreign location reads when the captured sheet
+is absent or uses a supported alias; missing local lookup retains blank location.
+Exact keys, projections, warehouse files and saved operator bytes remain intact.
+Five cold/instrumented compiles, static ratchets, smoke86 and chain32/live48/
+warehouse15 pass with exact prior checks, normal closure/restoration and delayed
+zero Excel errors. One typed owner call changes; forms and layout remain identical.
 
 Successful rebuild RED138/40 becomes GREEN178/178 through the actual Print Recall
 handler, retaining106 checks; five metadata checks add183/183 positive proof.
@@ -1942,7 +1950,7 @@ from permission to stage or export a catalog worksheet.
 | `btnManagerApplyOutput` | Complete Run | `mBtnManagerApplyOutput_Click` | Catalog28; activity432 retained, status129, submission faults410, reusable paths95 and worksheet paths101 GREEN; guide/status captures reviewed; broader acceptance pending |
 | `btnManagerCheckIn` | Check In | `mBtnManagerCheckIn_Click` | `PRODUCTION_RUN_CHECK_IN`: catalog25; activity03 policy/store/recovery629, owner/interruption404, reusable paths91 and worksheet paths101 GREEN; earlier activity02 native-closure212/routed157; broader acceptance pending; see Check In results |
 | `btnManagerNext` | Next Batch | `mBtnManagerNext_Click` | `PRODUCTION_RUN_NEXT_BATCH`: catalog26; next-closed01 native closure156, policy/store302, context/permission231 and interrupted-recording213 GREEN; activity04 reusable guide86/worksheet guide94; broader acceptance pending; see Next Batch results |
-| `btnManagerPrint` | Print Recall | `mBtnManagerPrint_Click` | Binding/refusal/rebuild preservation183 pass; report identity, native preview, truthful outcomes and observation pending |
+| `btnManagerPrint` | Print Recall | `mBtnManagerPrint_Click` | Binding/refusal/rebuild and captured inventory217 GREEN; report identity, native preview, truthful outcomes and observation pending |
 | `btnManagerRefresh` | Refresh | `mBtnManagerRefresh_Click` | `PRODUCTION_RUN_MANAGER_REFRESH`: catalog24 focused checks and independent paths167 GREEN; full acceptance pending |
 | `btnRunApplyPalette` | Apply | `mBtnRunApplyPalette_Click` | `PRODUCTION_RUN_ALLOCATE`: catalog24 handler integrated; prior worksheet-owner257 GREEN; RUN-UI-01 and broader acceptance pending |
 

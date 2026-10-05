@@ -1,6 +1,15 @@
 # invSys Form Controls v1
 
-**Version:** 1.477 -- Print Recall rebuild preservation.
+**Version:** 1.478 -- Print Recall captured inventory lookup.
+
+Print Recall inventory binding RED211/6 becomes GREEN217/217, retaining183 checks.
+Both preview-boundary and diagnostic lookups stay in the captured workbook across
+sheet aliases and missing sheet/table cases with a decoy active. Missing local
+lookup retains blank location. Exact source keys, projections, warehouse files and
+saved operator bytes remain intact. Five cold/instrumented compiles, static
+ratchets, smoke86 and chain32/live48/warehouse15 pass with exact prior checks,
+normal closure/restoration and delayed zero Excel errors. Native printing and
+observation acceptance remain open. Only one typed owner call changes.
 
 Successful report rebuild RED138/40 becomes GREEN178/178, retaining106 checks;
 five additional metadata checks pass for183/183. Managed-header writes preserve

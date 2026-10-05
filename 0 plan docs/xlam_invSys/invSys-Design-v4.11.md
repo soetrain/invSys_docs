@@ -987,6 +987,12 @@ and that workbook's Production sheet. A missing captured sheet must not fall
 through to another open workbook. This clarifies the existing rule; it does not
 accept preview/printing, report preservation, or Print Recall observations.
 
+The same captured binding governs Print Recall's inventory-location lookup,
+including supported inventory-sheet aliases. A missing captured inventory sheet
+or table leaves that optional lookup unavailable; it must not read another open
+workbook. This preserves the existing blank-location behavior when no local
+lookup is available and adds no inventory authority or report identity contract.
+
 Print Recall's refusal also inherits D14 preservation: an empty output table,
 missing recall column or absence of recall-coded rows must be detected before
 creating or clearing RecallCodesPrint. Preserve its existing tables, custom

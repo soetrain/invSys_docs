@@ -32,6 +32,17 @@ native-preview test seam; real preview, report identity/provenance, remaining
 binding/permission guards, truthful outcomes and observation acceptance stay open.
 Code checkpoint: `d536e468`; receipts are in the Print Recall results record.
 
+Print Recall inventory binding RED211/6 becomes GREEN217/217, retaining183 checks.
+One typed owner call now uses the workbook-specific helper under D18. Captured
+table, sheet alias and missing local sheet/table cases with a decoy active prove
+both preview-boundary and diagnostic binding. Missing lookup retains blank location;
+source keys, projections, warehouse files and saved operator bytes are preserved.
+Five cold/instrumented compiles, static ratchets, smoke86 and chain32/live48/
+warehouse15 pass with exact prior checks, normal closure/restoration and delayed
+zero Excel errors. Report identity, exact lookup/header edge cases, permission/
+yield/closure guards, truthful outcomes, native printing and observations remain open.
+Code checkpoint: `3bf28452`; candidate `validation-print-inventory-01`, unpromoted.
+
 **Status, 2026-10-04:** The user explicitly approved D18-REPLAY-01, including its
 execution boundaries. Architecture's conflicting clauses are amended; Controls
 1.458 is synchronized. Both parts remain required for R1; implementation and
@@ -101,8 +112,9 @@ promotion or broader acceptance is claimed. Code checkpoint: `e615196c`.
 Recheck Excel before packaging/tests.
 
 **Next:** Finish comprehensive observations, Action Path visible proof and
-applicable broader gates. The existing full-chain native failure remains open;
-no A1/B0/A/B/R1 acceptance or deployment is claimed. Do not widen replay scope or
+applicable broader gates. Earlier intermittent Boxing failure has not reproduced
+on the latest verified candidates; its cause remains unproved.
+No A1/B0/A/B/R1 acceptance or deployment is claimed. Do not widen replay scope or
 repeat unchanged broad gates in place of completing A1/A2. Exact receipts and next
 work: `tests/integration/plan022_slice4be_user_tracking_policy_results.md`, plus
 the Receiving replay and native-target integration records.
