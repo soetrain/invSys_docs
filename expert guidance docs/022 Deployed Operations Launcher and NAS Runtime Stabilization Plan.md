@@ -141,7 +141,14 @@ preservation, publication/detail, authoring, reader pairing and all three views 
 Corrected fixture headings and all eight final guide captures are reviewed. Five
 compiles/static checks, normal closure/preservation and delayed zero Excel errors pass.
 Test checkpoint: `61412e09`; runtime remains unchanged.
-Next finish tracking-fault/interruption and remaining control coverage; comprehensive
+Next Batch optional-recording checks now pass302/302, retaining all167 ordered checks
+on the same candidate. Both owner branches pass Off/older/invalid policy and store/
+terminal-append faults. Ordinary preparation, history and canonical bytes remain
+correct; terminal recording failure leaves REQUESTED only. Five compiles/static
+checks and four warning captures pass. Delayed unassisted Excel shutdown, final
+settings/package preservation and delayed zero Excel-error audit pass.
+Test checkpoint: `a7e66409`; runtime remains unchanged.
+Next finish mid-action interruption and remaining controls; comprehensive
 A1/A2 and the existing full-chain native failure remain open. Exact receipts:
 `tests/integration/plan022_slice4be_production_next_results.md`.
 

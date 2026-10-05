@@ -1,11 +1,18 @@
 # Production form tracking coverage audit
 
-Version 1.194. Last reviewed:2026-10-05 UTC, Next Batch guide views proven.
+Version 1.195. Last reviewed:2026-10-05 UTC, Next Batch recording faults checked.
+
+Next Batch302/302 retains all167 ordered observation checks on unchanged activity04.
+Both branches pass Off/older/invalid policy, unavailable store and terminal-append
+failure checks, preserving owner results/history and leaving failed completion
+recording REQUESTED-only. Four warning captures, five compiles/static checks pass.
+Delayed unassisted shutdown, settings/package preservation and delayed zero Excel
+errors pass. Mid-action interruptions and broader A1/A2 proof remain open.
 
 Next Batch reusable86/86 and worksheet94/94 guide gates pass on unchanged activity04
 packages. Actual handler/owner state, canonical-byte preservation, separate recordings,
 publication/detail, authoring, reader pairing and three readable views pass. Five
-compiles/static checks, normal closure and preservation pass. Tracking-fault/
+compiles/static checks, normal closure and preservation pass. Mid-action
 interruption and broader acceptance remain open; see the Next Batch results record.
 
 Catalog28 `PRODUCTION_RUN_COMPLETE`, owner `PRODUCTION_RUN_COMPLETION`, follows

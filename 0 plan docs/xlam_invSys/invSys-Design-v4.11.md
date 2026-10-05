@@ -1071,8 +1071,17 @@ Scoped guide proof,2026-10-05: reusable86/86 and worksheet94/94 pass on unchange
 activity04 packages. Separate source/observed recordings, canonical-byte preservation,
 exact publication/detail, explicit authoring, reader pairing and all three views
 pass with readable captures. Five compiles/static checks, normal closure and
-preservation pass. This adds evidence, not behavior; tracking-fault/interruption,
+preservation pass. This adds evidence, not behavior; mid-action interruptions,
 remaining controls and comprehensive A1/A2 acceptance remain open.
+
+Optional-recording verification,2026-10-05: unchanged activity04 passes302/302,
+retaining all167 observation checks in order. Both owner branches preserve ordinary
+Next Batch behavior with Off/older/invalid policy, unavailable store and terminal
+append failure. Terminal failure leaves REQUESTED only; prior history and canonical
+bytes remain unchanged. Five compiles/static checks and four reviewed warning
+captures pass. Excel exits unassisted after delayed cleanup; final restoration,
+package preservation and delayed zero Excel errors pass. No contract or runtime
+behavior changes. Mid-action interruptions and broader A1/A2 acceptance stay open.
 
 **4be.1 Run preparation and allocation observations (discovered-control refinement; Core catalog implemented, eight form handlers integrated; acceptance pending):**
 Under approved D18 semantic inheritance, catalog24 shall add these nine existing

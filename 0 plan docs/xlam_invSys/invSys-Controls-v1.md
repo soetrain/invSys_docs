@@ -1,11 +1,19 @@
 # invSys Form Controls v1
 
-**Version:** 1.470 -- Next Batch guide views proven for both owner branches.
+**Version:** 1.471 -- Next Batch optional recording policy/store faults proven.
+
+Next Batch passes302/302 on unchanged activity04, retaining all167 ordered checks.
+Off/older/invalid policy and store/terminal-append faults preserve the ordinary owner
+result in both branches; a lost terminal append leaves REQUESTED only. Four warning
+captures, five compiles and static checks pass. Delayed unassisted Excel shutdown,
+settings/package preservation and delayed zero Excel-error audit pass.
+Mid-action interruptions and comprehensive A1/A2 acceptance remain open. Exact receipts
+are in `tests/integration/plan022_slice4be_production_next_results.md`.
 
 Next Batch guide gates pass reusable86/86 and worksheet94/94 on unchanged activity04
 packages. Separate recordings, exact publication/detail, explicit authoring, reader
 pairing and all three views pass with readable captures and local-only conclusions.
-Five compiles/static checks, normal closure and preservation pass. Tracking-fault/
+Five compiles/static checks, normal closure and preservation pass. Mid-action
 interruption and comprehensive A1/A2 acceptance remain open. Receipts:
 `tests/integration/plan022_slice4be_production_next_results.md`.
 
