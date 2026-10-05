@@ -1,6 +1,14 @@
 # invSys Form Controls v1
 
-**Version:** 1.472 -- Next Batch mid-action context/permission proof.
+**Version:** 1.473 -- Next Batch native dismissal correction verified.
+
+Native Next Batch closure RED123/33 becomes GREEN156/156 on next-closed01. The
+handler returns cleanly after form dismissal, records FAILED and makes no later
+reads or form reinitializations. Exact loaded-form checks change two modules;
+all forms remain identical. Five cold compiles, static caps, smoke86, unassisted
+closure and preservation pass. Affected302/302 and231/231 regressions pass on this
+candidate with every prior ordered check, reviewed captures, restored settings,
+preserved packages and delayed zero Excel errors. Broader acceptance remains open.
 
 Next Batch passes302/302 on unchanged activity04, retaining all167 ordered checks.
 Off/older/invalid policy and store/terminal-append faults preserve the ordinary owner
@@ -11,7 +19,7 @@ The separate231/231 gate retains all70 binding checks. Sign-out and permission l
 at both owner returns and actual inventory-read returns stop later reads, preserve
 partial local work and record REQUESTED-only or FAILED without false success.
 Four refusal captures, five compiles/static checks, unassisted closure, preservation
-and delayed zero Excel errors pass. Native dismissal, recording-policy changes and
+and delayed zero Excel errors pass. Recording-policy changes and
 incomplete-guide proof remain open. Exact receipts:
 `tests/integration/plan022_slice4be_production_next_results.md`.
 

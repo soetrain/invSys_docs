@@ -1085,8 +1085,18 @@ behavior changes. A separate231/231 gate retains70 ordered binding checks and pr
 sign-out/permission loss at both owner returns and actual inventory-read returns.
 Later reads stop; partial local state survives; REQUESTED-only/FAILED records cannot
 claim success. Four refusal captures, five compiles/static checks, normal closure,
-preservation and delayed zero Excel errors pass. Native dismissal, mid-action
-recording-policy change, incomplete-guide proof and broader A1/A2 acceptance stay open.
+preservation and delayed zero Excel errors pass.
+Native dismissal correction,2026-10-05: RED123/33 becomes GREEN156/156 on
+`validation-next-closed-01`, preserving identical checks and all123 prior GREENs.
+Exact loaded-form guards prevent repeated cleanup and the worksheet's one later
+read after native closure. Both owner/read-return branches finish FAILED without
+sources, reinitialization or saved-byte changes. Diagnostic loop escape is used
+only in RED. Five cold compiles, static caps, smoke86 and preservation pass;301/303
+compiled components and all forms are unchanged. Affected302/302 and231/231
+regressions pass on this candidate, retaining every prior ordered check. Fresh
+captures, unassisted closure, restoration and delayed zero Excel errors pass.
+Mid-action recording-policy change, incomplete-guide proof and broader
+A1/A2/full-chain acceptance stay open; no new contract or candidate promotion.
 
 **4be.1 Run preparation and allocation observations (discovered-control refinement; Core catalog implemented, eight form handlers integrated; acceptance pending):**
 Under approved D18 semantic inheritance, catalog24 shall add these nine existing

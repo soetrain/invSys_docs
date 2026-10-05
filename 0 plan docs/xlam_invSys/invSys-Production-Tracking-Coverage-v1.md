@@ -1,6 +1,14 @@
 # Production form tracking coverage audit
 
-Version 1.196. Last reviewed:2026-10-05 UTC, Next Batch context/permission proof.
+Version 1.197. Last reviewed:2026-10-05 UTC, Next Batch native dismissal correction.
+
+Native closure RED123/33 -> GREEN156/156 on next-closed01 retains all prior ordered
+checks. Loaded-form guards prevent repeated cleanup and a later worksheet read;
+FAILED outcomes, no reinitialization and saved bytes are proven. Two modules change,
+all forms remain identical. Five compiles, static caps, smoke86 and preservation
+pass. Affected302/302 and231/231 regressions retain every prior ordered check on
+this candidate. Reviewed captures, restoration and delayed zero Excel errors pass;
+broader acceptance remains open.
 
 Next Batch302/302 retains all167 ordered observation checks on unchanged activity04.
 Both branches pass Off/older/invalid policy, unavailable store and terminal-append
@@ -11,7 +19,7 @@ errors pass. A separate231/231 gate retains70 ordered binding checks: sign-out/
 permission loss at both owner returns and inventory-read returns stops later reads,
 preserves partial work and emits REQUESTED-only/FAILED without false success.
 Four refusal captures, five compiles/static checks, normal closure, preservation
-and delayed zero Excel errors pass. Native dismissal, mid-action recording-policy
+and delayed zero Excel errors pass. Mid-action recording-policy
 change and incomplete-guide proof remain open for this control.
 
 Next Batch reusable86/86 and worksheet94/94 guide gates pass on unchanged activity04

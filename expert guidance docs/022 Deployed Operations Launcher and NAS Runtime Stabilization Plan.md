@@ -154,7 +154,15 @@ partial local state and record REQUESTED-only/FAILED without false success. Four
 refusal captures, five compiles/static checks, unassisted closure, preservation and
 delayed zero Excel errors pass on unchanged activity04.
 Test checkpoint: `87da4c32`; runtime remains unchanged.
-Next prove native workbook dismissal, mid-action recording-policy change and
+Native Next Batch closure RED123/33 -> GREEN156/156 now proves clean return and
+FAILED recording at four dismissal boundaries, with zero later reads or form
+reinitializations and preserved partial work/saved bytes. Existing loaded-form
+guards fix two modules;301/303 components and every form are unchanged. Five cold
+compiles, static caps, smoke86, unassisted closure and preservation pass. Affected
+302/302 and231/231 regressions pass on next-closed01, retaining every prior ordered
+check. Fresh captures, restoration and delayed zero Excel-error audits pass.
+Code checkpoint: `b3c6402e`; candidate `validation-next-closed-01`, not promoted.
+Next prove mid-action recording-policy change and
 incomplete-guide conclusions, then finish remaining controls; comprehensive
 A1/A2 and the existing full-chain native failure remain open. Exact receipts:
 `tests/integration/plan022_slice4be_production_next_results.md`.
