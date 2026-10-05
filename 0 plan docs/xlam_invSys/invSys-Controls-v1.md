@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.450 -- Receiving guards85 GREEN; broader acceptance remains open.
+**Version:** 1.451 -- Receiving runner93/native854 GREEN; broader acceptance remains open.
 
 ## Slice 4be acceptance and approved controls contract
 
@@ -18,20 +18,28 @@ B0 exercises Receiving recording -> authored guide/inputs -> real packaged repla
 -> fresh verification before A closes. B0 alone does not accept B. Keep historical
 4be.x identifiers; registration, implementation and acceptance are distinct.
 
-Current B0 focused gate: `validation-receiving-run-05` is **85/0 GREEN**, retaining
-all72 previous passes. It covers fresh exact owner/evaluator proof, target/input/
+Current B0 focused gate: `validation-receiving-run-05` is **93/0 GREEN**, retaining
+all85 previous passes. It covers fresh exact owner/evaluator proof, target/input/
 role/policy guards, nested entry, Next/Stop, immutable attempts and three layouts.
 Workbook closure skips disconnected child forms and uses the existing stop/release
 boundary: the saved run becomes terminal, preserves partial steps/business bytes,
-and cannot dispatch against a replacement workbook. Published-guide regression58,
-five cold compiles and static ratchets pass. Receiving/native regressions,
-active-owner close coverage, observations,
-visible proof and broader acceptance remain open; no deployment or B0/A acceptance.
+and cannot dispatch against a replacement workbook. Close-button/QueryClose requests
+at the owner-return boundary defer closure, finish the current step and stop before
+another dispatch. Published-guide regression58, five cold compiles and static
+ratchets pass. Receiving/native regression854/854 retains every prior check in
+order after correcting stale catalog ceilings in two test helpers; actual Core
+reads and unsupported-version/control rejection pass. Fresh Receiving/Returns
+captures were inspected. No runtime change in this checkpoint. Per-user policy,
+comprehensive observations, Action Path visible proof and broader acceptance
+remain open; no deployment or B0/A acceptance.
 
 Preserved progression: profile RED16/13 ->42/1 (Run absent); runner RED45/17 ->72/0;
-close-time VBA fault -> unassisted terminal-state RED83/2 ->85/0. Earlier assisted
+close-time VBA fault -> unassisted terminal-state RED83/2 ->85/0; supplemental
+close coverage93/0 needs no further runtime change. Earlier assisted
 diagnostics are not acceptance. Exact receipts and limits:
 `tests/integration/plan022_slice4be_receiving_replay_results.md`.
+Receiving/native receipts and limits:
+`tests/integration/plan022_slice4be_receiving_native_target_results.md`.
 
 | Approved surface contract | Operator wording | Protecting packaged behavior |
 |---|---|---|

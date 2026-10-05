@@ -6,7 +6,7 @@
 
 **Status, 2026-10-04:** The user explicitly approved D18-REPLAY-01, including its
 execution boundaries. Architecture's conflicting clauses are amended; Controls
-1.450 is synchronized. Both parts remain required for R1; implementation and
+1.451 is synchronized. Both parts remain required for R1; implementation and
 acceptance are not established by approval.
 
 | Milestone | Deliverable / exit |
@@ -48,13 +48,23 @@ RUN-UI-01 remain separate pending decisions; prior granted approvals stand.
 On actual desktop error 5, record time, stop work, preserve evidence and exit under
 the user's standing instruction. Stale probes/native crashes are different failures.
 
-**Next:** Protect active-owner closure and run affected Receiving/native regressions on
-`validation-receiving-run-05`. Exact-loaded-child cleanup removes the close-time
-modal; meaningful83/2 RED for nonterminal closure becomes **85/0 GREEN** using the
-existing stop/release boundary. All72 previous passes, published-guide58/0, five
-cold compiles and static ratchets hold. Control observations, visible
-proof and the existing full-chain native failure remain open; B0/A/B/R1 acceptance
+**Current:** `validation-receiving-run-05` passes **93/0**, retaining all85 prior
+checks. Close-button/QueryClose requests at the owner-return boundary defer closure,
+save the completed step and stop before another dispatch; no further runtime
+change was needed. The earlier nonterminal-closure RED83/2 became85/0 through the
+existing stop/release boundary. Published-guide58/0, five cold compiles and static
+ratchets hold. Receiving/native854/854 retains exact prior ordered checks after
+correcting two stale catalog assertions; runtime packages are unchanged. Fresh
+Receiving captures were inspected; no new native fault or desktop error5 was
+observed. Per-user policy, comprehensive observations, Action Path visible proof
+and the existing full-chain native failure remain open; B0/A/B/R1 acceptance
 is not established. Earlier assisted83/2 diagnostics are not acceptance.
+
+**Next:** Define the per-user policy wire under approved D18-REPLAY-01, preserving
+old-format compatibility, then run focused RED through actual Admin user-selection/
+Save handlers and affected recording behavior before implementation. Do not widen
+replay scope or rerun unchanged broad gates in place of completing A1/A2. Exact
+Receiving receipts are in the replay and native-target integration records.
 
 Runner evidence: preimplementation RED45/17 -> candidate02 71/1 (minimum-width
 Stop overlap) -> candidate03 **72/0**. Core owns captured setup/immutable attempts;
