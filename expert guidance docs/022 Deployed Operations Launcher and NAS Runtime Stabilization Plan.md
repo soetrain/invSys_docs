@@ -6,7 +6,7 @@
 
 **Status, 2026-10-04:** The user explicitly approved D18-REPLAY-01, including its
 execution boundaries. Architecture's conflicting clauses are amended; Controls
-1.454 is synchronized. Both parts remain required for R1; implementation and
+1.455 is synchronized. Both parts remain required for R1; implementation and
 acceptance are not established by approval.
 
 | Milestone | Deliverable / exit |
@@ -58,6 +58,19 @@ and normal closure pass; nineteen scoped Settings captures are reviewed. Affecte
 guide58/58 and full Receiving854/854 retain exact prior ordered checks on this
 candidate, with two fresh Receiving/Returns captures reviewed. The v2 policy
 retains v1 history, unknown columns, rights and visibility.
+
+**In validation:** Complete Run's post-consume continuation has four packaged
+behavioral REDs and23 new passes after the existing guard is added before the
+later submission. Five cold compiles/static caps pass. The extended regression
+hits Excel's GDI limit; saved disposable probes do not resolve it and assisted
+results do not accept the gate. Isolate resource growth during case preparation;
+client garbage collection also fails. Then retain all
+prior checks before completing this increment. Exact evidence is in the
+Production Complete Run integration record.
+Code checkpoint `257c4444` remains unaccepted. Diagnostic cleanup restores settings
+and package hashes; Excel is closed. Candidate01 has five XLAMs but no templates;
+broader fixture gates will need unchanged `validation-user-policy-02/templates`
+copied into this generated candidate after confirming Excel is closed.
 
 **Next:** Finish comprehensive observations, Action Path visible proof and
 applicable broader gates. The existing full-chain native failure remains open;

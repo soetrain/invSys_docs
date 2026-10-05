@@ -1,6 +1,14 @@
 # invSys Form Controls v1
 
-**Version:** 1.454 -- A1 user-policy lifecycle/audit GREEN; acceptance open.
+**Version:** 1.455 -- Complete Run continuation under validation; acceptance open.
+
+Post-consume sign-out/permission interruption: four actual-handler REDs become
+23 focused passes on `validation-complete-submission-01`. Applied consumption
+remains applied; the next submission stops with existing reopen guidance. Both
+refusal captures are reviewed. The longer regression hits Excel's GDI limit;
+an assisted saved-probe run is diagnostic only. Five cold compiles/static caps pass;
+clean regression and Complete Run observations remain open. See
+`tests/integration/plan022_slice4be_production_complete_results.md`.
 
 A1 packaged Settings RED **52/18** becomes **104/0** on `validation-user-policy-02`,
 retaining all91 prior checks; storage/history, roster/privacy and removed/new-user

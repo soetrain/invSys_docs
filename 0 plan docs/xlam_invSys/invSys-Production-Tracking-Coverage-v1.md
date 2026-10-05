@@ -1,7 +1,15 @@
 # Production form tracking coverage audit
 
-Version 1.178. Last reviewed:2026-10-04 UTC, Next Batch observations;
+Version 1.179. Last reviewed:2026-10-05 UTC, Complete Run continuation;
 remaining Run integration, RUN-SCALE-01/RUN-UI-01 and reusable acceptance unresolved.
+
+Post-consume interruption is under validation: four actual-handler REDs become23
+new passes on complete-submission01. Exact applied consumption/audit are retained
+and later submission stops on sign-out or lost permission. Longer regression
+reaches Excel's GDI limit; saved probes do not fix it. Assisted results are not
+acceptance. Five cold compiles/static caps pass; clean regression, worksheet/later
+submission coverage and Complete Run recording remain open. Receipts:
+`tests/integration/plan022_slice4be_production_complete_results.md`.
 
 Catalog26 Next Batch: actual-handler RED110/57 -> GREEN167/167 retains binding70.
 Both owner branches, suppression, missing-sheet refusal, denial, policy off and
