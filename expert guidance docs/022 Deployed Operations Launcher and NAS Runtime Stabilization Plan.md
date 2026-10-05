@@ -135,6 +135,16 @@ remains unchanged. Test checkpoint: `4ababb7b`.
 Keep A1/A2 acceptance open and advance remaining observation/
 guide coverage, including Next Batch, rather than repeat unchanged Complete Run gates.
 
+Next Batch guide proof now passes reusable86/86 and worksheet94/94 on unchanged
+activity04 packages. Separate recordings, independent local owner facts, canonical
+preservation, publication/detail, authoring, reader pairing and all three views pass.
+Corrected fixture headings and all eight final guide captures are reviewed. Five
+compiles/static checks, normal closure/preservation and delayed zero Excel errors pass.
+Test checkpoint: `61412e09`; runtime remains unchanged.
+Next finish tracking-fault/interruption and remaining control coverage; comprehensive
+A1/A2 and the existing full-chain native failure remain open. Exact receipts:
+`tests/integration/plan022_slice4be_production_next_results.md`.
+
 Runner evidence: preimplementation RED45/17 -> candidate02 71/1 (minimum-width
 Stop overlap) -> candidate03 **72/0**. Core owns captured setup/immutable attempts;
 typed Operations adapters execute six ordinary Receiving handlers. Fresh exact

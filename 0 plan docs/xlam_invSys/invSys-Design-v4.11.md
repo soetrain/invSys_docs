@@ -1067,6 +1067,12 @@ native Boxing crash; recovered fixture bytes/settings/packages are preserved,
 cause unproved. Standalone ordered live48 passes on the same candidate with normal
 closure/preservation. Chain and broader tracking/guide acceptance remain open. Evidence:
 `tests/integration/plan022_slice4be_production_next_results.md`.
+Scoped guide proof,2026-10-05: reusable86/86 and worksheet94/94 pass on unchanged
+activity04 packages. Separate source/observed recordings, canonical-byte preservation,
+exact publication/detail, explicit authoring, reader pairing and all three views
+pass with readable captures. Five compiles/static checks, normal closure and
+preservation pass. This adds evidence, not behavior; tracking-fault/interruption,
+remaining controls and comprehensive A1/A2 acceptance remain open.
 
 **4be.1 Run preparation and allocation observations (discovered-control refinement; Core catalog implemented, eight form handlers integrated; acceptance pending):**
 Under approved D18 semantic inheritance, catalog24 shall add these nine existing

@@ -1,6 +1,13 @@
 # invSys Form Controls v1
 
-**Version:** 1.469 -- Complete Run guide views and scoped status scrolling visibly proven.
+**Version:** 1.470 -- Next Batch guide views proven for both owner branches.
+
+Next Batch guide gates pass reusable86/86 and worksheet94/94 on unchanged activity04
+packages. Separate recordings, exact publication/detail, explicit authoring, reader
+pairing and all three views pass with readable captures and local-only conclusions.
+Five compiles/static checks, normal closure and preservation pass. Tracking-fault/
+interruption and comprehensive A1/A2 acceptance remain open. Receipts:
+`tests/integration/plan022_slice4be_production_next_results.md`.
 
 Catalog28 `PRODUCTION_RUN_COMPLETE` observes the actual Complete Run handler
 for both existing owner branches under `PRODUCTION_RUN_COMPLETION`. D18's Complete
