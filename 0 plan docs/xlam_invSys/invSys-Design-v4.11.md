@@ -979,9 +979,9 @@ loading/nested suppression, worksheet exact identity/custom-column preservation
 and unchanged canonical authority. Subsequent acceptance requires policy/fault,
 permission/context interruption, recording/publication and independent How-To/
 Diagnostic/Compare evidence, in addition to the existing packaged regression gates.
-Complete Run and Print Recall remain separate unintegrated controls.
+Complete Run is specified below; Print Recall remains unintegrated.
 
-**Complete Run observation refinement (discovered control; implementation pending):**
+**Complete Run observation refinement (discovered control; focused GREEN, acceptance pending):**
 Under approved D18 semantic inheritance, catalog28 adds `PRODUCTION_RUN_COMPLETE`,
 caption Complete Run, actual handler `frmProduction.mBtnManagerApplyOutput_Click`,
 owner `PRODUCTION_RUN_COMPLETION`, role Production, surface
@@ -1015,6 +1015,14 @@ identities and paths. Only the existing source-reference fields carry event iden
 D13 must exercise both ordinary handler branches, refusals after prior success,
 partial submissions, policy/store failure, publication and all three guide views.
 This clarifies existing observation rules; it grants no new execution or authority.
+
+Focused verification,2026-10-05: actual-handler RED120/60 becomes GREEN180/180 on
+`validation-complete-activity-01`. Both reusable and worksheet completion produce
+exact source-linked observations; refusal after success, initial denial, loading/
+busy suppression, disabled recording and custom-column preservation pass. These
+results do not establish partial/fault, publication or guide-view acceptance.
+Exact receipts and regression status are maintained in
+`tests/integration/plan022_slice4be_production_complete_activity_results.md`.
 
 **Next Batch observation refinement (existing D18 rule; focused GREEN, acceptance pending):**
 Catalog26 adds `PRODUCTION_RUN_NEXT_BATCH`, caption Next Batch, actual handler

@@ -1,11 +1,12 @@
 # Production form tracking coverage audit
 
-Version 1.184. Last reviewed:2026-10-05 UTC, Complete Run observation contract defined.
+Version 1.185. Last reviewed:2026-10-05 UTC, Complete Run observation focused GREEN.
 
-Next: catalog28 `PRODUCTION_RUN_COMPLETE`, owner `PRODUCTION_RUN_COMPLETION`,
-under the D18 Complete Run discovered-control refinement. Actual-handler RED75/24
-proves missing expected records for reusable success/refusals; owner effects and
-suppression pass. Worksheet/partial/policy cases and implementation remain pending.
+Catalog28 `PRODUCTION_RUN_COMPLETE`, owner `PRODUCTION_RUN_COMPLETION`, follows
+the D18 Complete Run refinement. Actual-handler RED120/60 -> GREEN180/180 covers
+both owners, exact references, refusal/denial, suppression, disabled recording and
+custom-column preservation. Partial/fault, publication and guide-view proof remain
+pending; this control is not yet accepted as comprehensive.
 See `tests/integration/plan022_slice4be_production_complete_activity_results.md`.
 
 Packaged RED122/8 proves sign-out/permission loss after output processing still
@@ -1855,7 +1856,7 @@ from permission to stage or export a catalog worksheet.
 | `btnLoaderClear` | Clear Run | `mBtnLoaderClear_Click` | `PRODUCTION_RUN_CLEAR`: catalog24 focused checks and independent paths102 GREEN; full acceptance pending |
 | `btnLoaderLoad` | Load Recipe | `mBtnLoaderLoad_Click` | `PRODUCTION_RUN_LOAD`: earlier catalog24 focused checks; independent paths87 freshly retained on activity03/catalog25; full acceptance pending |
 | `btnLoaderRefresh` | Refresh | `mBtnLoaderRefresh_Click` | `PRODUCTION_RUN_LOADER_REFRESH`: catalog24 focused checks and independent paths167 GREEN; full acceptance pending |
-| `btnManagerApplyOutput` | Complete Run | `mBtnManagerApplyOutput_Click` | Pending |
+| `btnManagerApplyOutput` | Complete Run | `mBtnManagerApplyOutput_Click` | Focused GREEN180; acceptance pending |
 | `btnManagerCheckIn` | Check In | `mBtnManagerCheckIn_Click` | `PRODUCTION_RUN_CHECK_IN`: catalog25; activity03 focused434 including initial policy/store faults, owner/interruption404, reusable paths91 and worksheet paths101 GREEN; earlier activity02 native-closure212/routed157; mid-action policy/terminal-append faults and full acceptance pending |
 | `btnManagerNext` | Next Batch | `mBtnManagerNext_Click` | `PRODUCTION_RUN_NEXT_BATCH`: catalog26 focused167/167 retains binding70; broader tracking/guide acceptance pending |
 | `btnManagerPrint` | Print Recall | `mBtnManagerPrint_Click` | Pending |

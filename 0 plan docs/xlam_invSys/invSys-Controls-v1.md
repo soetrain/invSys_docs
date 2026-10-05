@@ -1,14 +1,16 @@
 # invSys Form Controls v1
 
-**Version:** 1.460 -- Complete Run recording contract defined; implementation pending.
+**Version:** 1.461 -- Complete Run recording focused GREEN; acceptance pending.
 
-Catalog28 `PRODUCTION_RUN_COMPLETE` will observe the actual Complete Run handler
+Catalog28 `PRODUCTION_RUN_COMPLETE` observes the actual Complete Run handler
 for both existing owner branches under `PRODUCTION_RUN_COMPLETION`. D18's Complete
 Run refinement defines CONFIRMED/PENDING/REJECTED/DENIED/FAILED and exact Inventory
 references. Command acknowledgment and independent application proof stay separate.
-Reusable actual-handler RED75/24 establishes missing expected records while owner
-effects and suppression pass; worksheet/partial/policy coverage and implementation
-remain pending. No observation GREEN or comprehensive acceptance is claimed yet.
+Actual-handler RED120/60 becomes GREEN180/180 on `validation-complete-activity-01`.
+Both owner branches, exact references, denial/refusal, disabled recording and
+custom-column preservation pass. Partial/fault, publication and guide-view proof
+remain open. See `tests/integration/plan022_slice4be_production_complete_activity_results.md`
+for exact receipts and regression status; no comprehensive acceptance is claimed.
 
 Post-output sign-out/permission loss has packaged RED122/8 -> full GREEN318/318
 on `validation-complete-output-return-02`, retaining all289 prior ordered checks.

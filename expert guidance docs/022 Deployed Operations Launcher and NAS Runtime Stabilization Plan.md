@@ -81,11 +81,11 @@ the Receiving replay and native-target integration records.
 
 Immediate A1 work: D18's Complete Run discovered-control refinement defines
 catalog28 `PRODUCTION_RUN_COMPLETE` with separate command acknowledgment and exact
-Inventory-source proof. Establish missing-record RED through the ordinary handler,
-then integrate both reusable/worksheet owners, partial outcomes and optional-policy
-behavior. Reusable RED75/24 now passes owner effects and suppression while expected
-records are missing; worksheet/partial/policy coverage and runtime integration are
-next. Code test checkpoint: `57e80bba`. Preserve completion318; recording is not yet GREEN. Exact evidence:
+Inventory-source proof. Actual-handler RED120/60 becomes GREEN180/180 on
+`validation-complete-activity-01`: both owner branches, exact references,
+denial/refusal, disabled recording and custom-column preservation pass.
+Preserve completion318 and finish partial/fault, publication and all three
+guide-view proofs before accepting this control. Exact receipts and regression status:
 `tests/integration/plan022_slice4be_production_complete_activity_results.md`.
 
 Runner evidence: preimplementation RED45/17 -> candidate02 71/1 (minimum-width
