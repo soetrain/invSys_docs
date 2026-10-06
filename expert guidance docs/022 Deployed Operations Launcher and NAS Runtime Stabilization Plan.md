@@ -4,7 +4,14 @@
 
 ## Slice 4be -- recording/guidance and replay/proof
 
-Current A1: catalog29 Print observations RED620/75 -> GREEN695/695 retain474 prior
+Current A1: Print entry policy/storage986/986 retains695 ordered checks and adds291
+for disabled action/user recording, older/invalid policy, unavailable storage and
+recovery across preview return, preview failure and permission denial. Six reviewed
+captures, five instrumented compiles, clean lifecycle and unchanged static metrics
+pass;431 PowerShell files parse. This is verification of existing D18 behavior,
+with no runtime/architecture change or additional product RED claim.
+
+Catalog29 Print observations RED620/75 -> GREEN695/695 retain474 prior
 checks. PREVIEW_RETURNED proves command completion only. A newly exposed Seed
 setup defect deleted saved recording policy/history when an optional Config
 header was absent: actual Seed callback RED51/2 -> GREEN53/53 protects additional
@@ -15,11 +22,12 @@ cold/instrumented compiles, two reviewed status captures and static ratchets pas
 forms are unchanged. Earlier assisted Check In trials and activity02 native-chain
 failures remain unexplained. Activity03 has identical source to activity02;
 passing the rebuilt artifact does not establish a general native/exit fix.
-Policy/fault, recorded interruptions, publication and independent How-To/Diagnostic/
+Terminal-write faults, recorded interruptions, publication and independent How-To/Diagnostic/
 Compare proof remain next. Print control acceptance and comprehensive A1/A2 remain
 open. Exact receipts: `tests/integration/plan022_slice4be_production_print_results.md`.
-Code checkpoint: `5c80c71c`. Next: protect Print's policy/store-failure behavior
-through its actual packaged handler, then recorded interruptions and guide views.
+Runtime checkpoint: `5c80c71c`; policy verification: `f7132f95`.
+Next: prove terminal-write failures and interrupted
+recording through Print's actual handler, then publication and independent guide views.
 
 Print lookup RED464/10 becomes GREEN474/474, retaining384 ordered checks. D14 exact
 keys and table-relative, normalized-header location lookup now protect Print and

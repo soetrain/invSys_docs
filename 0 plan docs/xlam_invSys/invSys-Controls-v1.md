@@ -1,6 +1,14 @@
 # invSys Form Controls v1
 
-**Version:** 1.486 -- Print Recall observation baseline; broader acceptance pending.
+**Version:** 1.487 -- Print Recall entry policy/storage proof; acceptance pending.
+
+Print986/986 retains695 ordered checks and adds291 for disabled action/user
+recording, older/invalid policy, unavailable storage and recovery. Each state
+preserves preview-return/failure and permission-denial behavior. Six operator
+captures, five instrumented compiles and clean lifecycle pass; runtime/forms are
+unchanged. Static metrics/caps remain unchanged;431 PowerShell files parse.
+Terminal-write faults, recorded interruptions, publication and independent guide
+views remain open. See the Print results record for exact receipts.
 
 D18 defines catalog29 `PRODUCTION_RUN_PRINT` / `PRODUCTION_RECALL_REPORT` for
 `mBtnManagerPrint_Click`. REQUESTED pairs with PREVIEW_RETURNED, REJECTED, DENIED
@@ -12,7 +20,7 @@ and static ratchets pass; forms are unchanged. Activity03 passes Print695, Seed5
 saved-probe Check In631 (retaining629), smoke86 and chain32/live48/warehouse15
 with clean lifecycle on the same packages. Earlier assisted/native failures
 remain unexplained; no general lifecycle fix is claimed.
-Policy/fault, recorded interruption, publication and all three guide-view gates
+Beyond the entry cases above, terminal faults, recorded interruption, publication and all three guide-view gates
 remain open; this does not accept the control or broader 4be-A.
 
 Print lookup RED464/10 becomes GREEN474/474, retaining384 ordered checks. Both

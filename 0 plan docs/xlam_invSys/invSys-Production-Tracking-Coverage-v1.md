@@ -1,6 +1,13 @@
 # Production form tracking coverage audit
 
-Version 1.209. Last reviewed:2026-10-06 UTC, Print Recall observation baseline.
+Version 1.210. Last reviewed:2026-10-06 UTC, Print Recall entry policy/storage proof.
+
+Print986/986 retains695 and adds291 actual-handler checks for disabled action/user
+recording, older/invalid policy, unavailable storage and recovery. Preview return,
+preview failure and permission denial retain their owner result. Six reviewed
+captures, five instrumented compiles, clean lifecycle and unchanged static metrics
+pass. Runtime/forms are unchanged. Terminal faults, recorded interruptions and
+independent published guide views remain open; no broader acceptance is claimed.
 
 Catalog29 Print observation RED620/75 -> GREEN695/695 retains474 prior checks.
 Seed callback preservation RED51/2 -> GREEN53/53 protects policy/history and
@@ -9,7 +16,7 @@ two reviewed captures and static ratchets pass; forms are unchanged. Activity03
 passes Print695, Seed53, saved-probe Check In631 (retaining629), smoke86 and
 chain32/live48/warehouse15 with clean lifecycle on the same packages. Earlier
 assisted/native failures remain unexplained; no general lifecycle fix is claimed.
-Policy/fault, recorded interruptions, publication and
+Beyond the entry cases above, terminal faults, recorded interruptions, publication and
 independent guide presentations remain required before control acceptance;
 comprehensive A1/A2 and 4be-A remain open. See the Print results record for receipts.
 
@@ -2012,7 +2019,7 @@ from permission to stage or export a catalog worksheet.
 | `btnManagerApplyOutput` | Complete Run | `mBtnManagerApplyOutput_Click` | Catalog28; activity432 retained, status129, submission faults410, reusable paths95 and worksheet paths101 GREEN; guide/status captures reviewed; broader acceptance pending |
 | `btnManagerCheckIn` | Check In | `mBtnManagerCheckIn_Click` | `PRODUCTION_RUN_CHECK_IN`: catalog25; activity03 policy/store/recovery629, owner/interruption404, reusable paths91 and worksheet paths101 GREEN; earlier activity02 native-closure212/routed157; broader acceptance pending; see Check In results |
 | `btnManagerNext` | Next Batch | `mBtnManagerNext_Click` | `PRODUCTION_RUN_NEXT_BATCH`: catalog26; next-closed01 native closure156, policy/store302, context/permission231 and interrupted-recording213 GREEN; activity04 reusable guide86/worksheet guide94; broader acceptance pending; see Next Batch results |
-| `btnManagerPrint` | Print Recall | `mBtnManagerPrint_Click` | Catalog29 observation baseline695 GREEN retains lookup474/native384; Seed policy/history preservation53 GREEN; policy/fault, recorded interruption, publication and independent guide evidence pending; no broader acceptance |
+| `btnManagerPrint` | Print Recall | `mBtnManagerPrint_Click` | Catalog29 entry policy/storage986 GREEN retains observation695/lookup474/native384; Seed preservation53 GREEN; terminal faults, recorded interruption, publication and independent guide evidence pending; no broader acceptance |
 | `btnManagerRefresh` | Refresh | `mBtnManagerRefresh_Click` | `PRODUCTION_RUN_MANAGER_REFRESH`: catalog24 focused checks and independent paths167 GREEN; full acceptance pending |
 | `btnRunApplyPalette` | Apply | `mBtnRunApplyPalette_Click` | `PRODUCTION_RUN_ALLOCATE`: catalog24 handler integrated; prior worksheet-owner257 GREEN; RUN-UI-01 and broader acceptance pending |
 
