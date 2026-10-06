@@ -993,6 +993,14 @@ or table leaves that optional lookup unavailable; it must not read another open
 workbook. This preserves the existing blank-location behavior when no local
 lookup is available and adds no inventory authority or report identity contract.
 
+D14 also governs that optional location relationship: compare opaque System_Key
+values exactly, without trimming or case folding, and resolve the location within
+the matched table row by its normalized header. Moving a table or reordering its
+columns must not change the lookup. A near-miss key is not an entity match and
+retains the existing unavailable/blank location behavior. The shared recall-log
+lookup inherits the same rule. This fixes existing identity/header semantics;
+it introduces no report column, identity conversion or inventory write.
+
 Print Recall's refusal also inherits D14 preservation: an empty output table,
 missing recall column or absence of recall-coded rows must be detected before
 creating or clearing RecallCodesPrint. Preserve its existing tables, custom

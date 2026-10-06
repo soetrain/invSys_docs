@@ -1,6 +1,16 @@
 # invSys Form Controls v1
 
-**Version:** 1.483 -- Print Recall native preview and dismissed-form evidence.
+**Version:** 1.484 -- Print Recall exact-key location lookup.
+
+Print lookup RED464/10 becomes GREEN474/474, retaining384 ordered checks. Both
+Print and the shared recall-log writer match System_Key exactly and resolve location
+by normalized headers within the table row. Near-miss keys retain blank location;
+table movement/reordering preserves the correct location. Source/custom values,
+canonical authority and saved bytes remain intact. Five cold/instrumented compiles,
+two reviewed captures and static ratchets/429 parses pass. Same-candidate Check In629,
+smoke86 and chain32/live48/warehouse15 retain every prior ordered check, with normal
+closure, restoration and delayed zero Excel errors. No control or report schema is
+added; Print observations and broader 4be-A acceptance remain open.
 
 Print native-preview/dismissed-form GREEN384/384 retains all359 ordered checks.
 The original native preview renders visibly; only Close Print Preview is invoked,

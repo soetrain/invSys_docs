@@ -4,6 +4,18 @@
 
 ## Slice 4be -- recording/guidance and replay/proof
 
+Print lookup RED464/10 becomes GREEN474/474, retaining384 ordered checks. D14 exact
+keys and table-relative, normalized-header location lookup now protect Print and
+its shared recall-log writer. Canonical keys, source/custom values, projections,
+saved bytes and warehouse files are preserved. Five cold/instrumented compiles,
+two reviewed captures and static ratchets/429 parses pass; only mProduction changes,
+shrinking one line. Same-candidate Check In629, smoke86 and chain32/live48/warehouse15
+retain every prior ordered check. Normal closure, restoration and delayed zero Excel
+errors pass. No new report schema or broader acceptance is adopted; exact receipts are
+in `tests/integration/plan022_slice4be_production_print_results.md`.
+Code checkpoint: `30dec1cb`. Next: Print observations and remaining report
+identity/provenance; comprehensive A1/A2 and 4be-A remain open.
+
 Print native-preview/dismissed-form GREEN384/384 retains all359 ordered checks
 from continuation RED355/4 -> GREEN359. Native preview is visibly captured and
 closed through its own Close control; the form reports "Print preview closed."
