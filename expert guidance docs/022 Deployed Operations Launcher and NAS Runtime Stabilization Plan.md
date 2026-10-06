@@ -4,7 +4,18 @@
 
 ## Slice 4be -- recording/guidance and replay/proof
 
-Active transfer work: Architecture D18 now defines the approved boundary's exact
+Guide transfer passes RED24/32 -> GREEN69 -> GREEN71 on the unpromoted
+`validation-guide-transfer-01` candidate. The final gate retains all69 checks and
+adds minimum-size multiline scrolling proof. Native guide editing retains58/58.
+Five cold/instrumented compiles, nine reviewed layouts plus one scrolled capture,
+saved-host/package/settings preservation, normal closure and delayed zero Excel
+failures pass. Static dynamic/duplicate/size ratchets are unchanged;439 scripts
+parse. Transfer observation accounting, remaining affected regressions and final
+acceptance remain open.
+Exact receipts: `tests/integration/plan022_slice4be_guide_transfer_results.md`.
+Implementation/test checkpoint: `fe60f926`.
+
+Earlier transfer entry checkpoint: Architecture D18 defines the approved boundary's exact
 guide-transfer-v1/imported-guide-v2 wire and reserves executable-transfer-v2 for B.
 Native guide files stay unchanged; imported observations remain foreign origin
 evidence. Packaged entry RED18/6 has exactly six missing-control/handler assertions,
@@ -12,7 +23,7 @@ five compiles, preserved saved host/settings/package pins, one reviewed capture
 and normal exit with zero delayed Excel failures. The fixture's publisher now uses
 an explicit disposable Admin workbook; prior harness/native trials remain qualified.
 Runtime is unchanged; all436 scripts parse and existing static/broad GREENs apply.
-Next extend round-trip/guard tests before implementation. Transfer remains open.
+Round-trip/guard implementation and scoped GREEN are recorded above.
 Exact receipts: `tests/integration/plan022_slice4be_guide_transfer_results.md`.
 Test checkpoint: `506e2cfe`.
 No new permission, authority or execution behavior is authorized by transfer.

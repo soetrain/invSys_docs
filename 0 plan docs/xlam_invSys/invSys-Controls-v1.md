@@ -1,6 +1,25 @@
 # invSys Form Controls v1
 
-**Version:** 1.491 -- Guide transfer wire and packaged entry RED; implementation pending.
+**Version:** 1.492 -- Guide transfer packaged GREEN; acceptance open.
+
+Transfer RED24/32 -> GREEN69 -> GREEN71 preserves exact versions, original evidence
+and long/multiline text through actual handlers and file/rights/context guards.
+The final gate retains69 checks and adds two minimum-size scrolling assertions;
+native guide editing retains58/58. Candidate `validation-guide-transfer-01` passes
+five cold/instrumented compiles, nine reviewed layouts plus one scrolled capture,
+saved-host/package/settings preservation, normal closure and delayed zero Excel
+failures. Static ratchets are unchanged;439 scripts parse. Observation accounting,
+remaining affected regressions and final acceptance are open; the candidate is not promoted.
+Implementation/test checkpoint: `fe60f926`; exact receipts are in the guide-transfer
+results record referenced by Plan022.
+
+Published guides adds Export/Import beside Search and expands source provenance
+to108 points; the guide editor source area grows to96 points. Scrollable content
+areas retain the900x650 default and760x600 minimum. Imported readers/editors display
+**Imported origin evidence; not locally observed** and exact transfer provenance.
+Minimum/default/larger/restored layouts and foreign-origin labels are reviewed.
+End-of-text scrolling is now visibly verified at minimum size. Native maximize
+and human acceptance remain open.
 
 Architecture D18's transfer refinement specifies Published guides **Export**
 (`btnExportGuide`) and **Import** (`btnImportGuide`), both ACTION_PATH_MAINT-gated.
@@ -9,10 +28,10 @@ a new local identity with visible foreign provenance; it does not execute or pro
 Cancellation/context loss preserves guide, source and authority files; eligible
 attempt/cancel activity follows D18. Native schema1 guides remain readable;
 imported schema2 and guide-transfer-v1 require packaged RED/GREEN before acceptance.
-Executable transfer remains B work. These controls are specified, not implemented
-or accepted; observation accounting remains required.
+Executable transfer remains B work. The controls are implemented in the unaccepted
+candidate above; observation accounting remains required.
 
-Packaged entry RED18/6 identifies exactly six absent-control/handler assertions.
+Earlier packaged entry RED18/6 identifies exactly six absent-control/handler assertions.
 Five compiles, saved-host/settings/package preservation, normal exit, delayed zero
 Excel failures and one reviewed Published guides capture pass. Runtime is unchanged;
 436 scripts parse and existing static/broad gates remain applicable. Prior fixture
