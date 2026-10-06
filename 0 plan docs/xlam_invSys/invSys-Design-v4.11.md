@@ -1045,6 +1045,37 @@ dismissed and must not be queried or recreated. Preserve already prepared report
 effects without retry or rollback. This applies D18's existing post-yield rule;
 the preview-return result alone cannot prove a current authorized conclusion.
 
+**Print Recall observation refinement (discovered control; acceptance pending):**
+Catalog29 adds `PRODUCTION_RUN_PRINT`, caption Print Recall, handler
+`frmProduction.mBtnManagerPrint_Click`, owner `PRODUCTION_RECALL_REPORT`, role
+Production, class Command, surface `Operations > Production > Production Run - List`.
+Preserve catalogs1-28 and the existing PROD_POST/ADMIN_MAINT gate. This observes
+the existing report/preview command; it changes no report schema or business owner.
+
+For eligible optional recording, one outer click records REQUESTED and the owner's
+terminal result while the captured recording context remains valid. Loading/busy
+and nested entry produce no additional attempt. Entry permission refusal is DENIED;
+existing report validation refusal is REJECTED; report/preview exceptions, a missing
+captured Production worksheet and interrupted continuation are FAILED. After preview, require
+the original binding, permission and still-loaded form before accepting
+PREVIEW_RETURNED. A dismissed form stays unloaded. Context loss follows the shared
+incomplete-recording rules; never write a terminal result into another session.
+
+EventCode is ControlId plus `_` plus OutcomeCode. REQUESTED is Info/Unknown;
+PREVIEW_RETURNED is Info/Unchanged, REJECTED Warning/Unchanged, DENIED
+Blocked/Unchanged and FAILED Error/Unknown. Only PREVIEW_RETURNED establishes
+CommandCompleted, meaning report preparation and preview return, never physical
+printing, report freshness/completeness or inventory application. SourceEventRefs
+is empty. Preserve existing owner wording and local report effects without rollback.
+Record fixed catalog text and the shared redacted envelope only: no report cells,
+recall codes, inventory identities, paths, entered values or exception text.
+Optional tracking failure must not block the ordinary Print command.
+
+D13 begins with absent-record RED through the packaged actual handler while
+independently proving owner results. Acceptance also requires policy/fault,
+permission/context/closure, recording/publication and How-To/Diagnostic/Compare
+proof. Existing Print preservation/native-preview regressions remain required.
+
 **Complete Run observation refinement (discovered control; focused GREEN, acceptance pending):**
 Under approved D18 semantic inheritance, catalog28 adds `PRODUCTION_RUN_COMPLETE`,
 caption Complete Run, actual handler `frmProduction.mBtnManagerApplyOutput_Click`,
@@ -2235,6 +2266,12 @@ complete bounded-group artifact; Activity/guide parsers retain their 1 MiB limit
   request before one save. Reject stale versions, unknown fields/controls,
   invalid flags/order, missing required Config, capability/context mismatch,
   locked/read-only or unrelated dirty Config. Preserve unknown columns.
+- Existing runtime workbook setup must preserve saved policy/profile versions
+  and additional sheets, including user content, when completing managed schema.
+  A missing optional header does not authorize sheet deletion or a return to
+  built-in recording defaults. Initial sheet normalization belongs only to new
+  workbook creation. This applies the existing preservation/history contract;
+  ordinary reads remain non-mutating under D5.
 - Policy metadata is PolicyVersion, SchemaVersion, CatalogVersion, CreatedAtUTC,
   CreatedByUserId, DefaultView, capture flag, per-user optional recording flags,
   and per-control collection/visibility/sequence flags. Legacy Admin projection

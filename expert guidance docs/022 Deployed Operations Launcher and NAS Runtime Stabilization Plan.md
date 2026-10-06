@@ -4,6 +4,23 @@
 
 ## Slice 4be -- recording/guidance and replay/proof
 
+Current A1: catalog29 Print observations RED620/75 -> GREEN695/695 retain474 prior
+checks. PREVIEW_RETURNED proves command completion only. A newly exposed Seed
+setup defect deleted saved recording policy/history when an optional Config
+header was absent: actual Seed callback RED51/2 -> GREEN53/53 protects additional
+sheets and effective policy; initial normalization now applies only to new files.
+Activity03 passes Print695, Seed53, saved-probe Check In631 (retaining629), smoke86
+and chain32/live48/warehouse15 with clean lifecycle on the same packages. Five
+cold/instrumented compiles, two reviewed status captures and static ratchets pass;
+forms are unchanged. Earlier assisted Check In trials and activity02 native-chain
+failures remain unexplained. Activity03 has identical source to activity02;
+passing the rebuilt artifact does not establish a general native/exit fix.
+Policy/fault, recorded interruptions, publication and independent How-To/Diagnostic/
+Compare proof remain next. Print control acceptance and comprehensive A1/A2 remain
+open. Exact receipts: `tests/integration/plan022_slice4be_production_print_results.md`.
+Code checkpoint: `5c80c71c`. Next: protect Print's policy/store-failure behavior
+through its actual packaged handler, then recorded interruptions and guide views.
+
 Print lookup RED464/10 becomes GREEN474/474, retaining384 ordered checks. D14 exact
 keys and table-relative, normalized-header location lookup now protect Print and
 its shared recall-log writer. Canonical keys, source/custom values, projections,

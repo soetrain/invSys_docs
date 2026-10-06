@@ -1,6 +1,19 @@
 # invSys Form Controls v1
 
-**Version:** 1.484 -- Print Recall exact-key location lookup.
+**Version:** 1.486 -- Print Recall observation baseline; broader acceptance pending.
+
+D18 defines catalog29 `PRODUCTION_RUN_PRINT` / `PRODUCTION_RECALL_REPORT` for
+`mBtnManagerPrint_Click`. REQUESTED pairs with PREVIEW_RETURNED, REJECTED, DENIED
+or FAILED under captured-context rules; preview return never proves printing.
+Packaged RED620/75 -> GREEN695/695 retains474 prior checks. Seed setup preservation
+RED51/2 -> GREEN53/53 prevents saved policy/history and custom-sheet loss during
+schema completion. Five cold/instrumented compiles, two reviewed status captures
+and static ratchets pass; forms are unchanged. Activity03 passes Print695, Seed53,
+saved-probe Check In631 (retaining629), smoke86 and chain32/live48/warehouse15
+with clean lifecycle on the same packages. Earlier assisted/native failures
+remain unexplained; no general lifecycle fix is claimed.
+Policy/fault, recorded interruption, publication and all three guide-view gates
+remain open; this does not accept the control or broader 4be-A.
 
 Print lookup RED464/10 becomes GREEN474/474, retaining384 ordered checks. Both
 Print and the shared recall-log writer match System_Key exactly and resolve location
