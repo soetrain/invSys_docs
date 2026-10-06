@@ -4,6 +4,22 @@
 
 ## Slice 4be -- recording/guidance and replay/proof
 
+Active next group: General Settings observations under D18 catalog31 refinement
+(nine discovered controls; no runtime implementation yet). Packaged RED105/86
+across191 checks proves11 catalog assertions,64 missing-observation assertions,
+one incomplete expected journal and10 stale-form safety failures. All16 ordinary
+owner checks pass. Five compiles, native Reset Yes/No, two reviewed captures,
+preservation, normal closure and delayed zero Excel failures pass; static ratchets
+are unchanged and447 scripts parse. Test checkpoint: `4bca0938`.
+Exact receipts: `tests/integration/plan022_slice4be_general_settings_results.md`.
+Implement actual config
+Reload/selection, carrier Add/Remove/Reset/selection, UOM selection and connection
+choice/save. Retain per-Windows-user carrier/connection storage and captured
+warehouse context; no inputs or credential information enter observations.
+Retain all191 checks in GREEN; add policy/storage, permission-loss, recorded
+conclusions and affected regressions. Launcher/Close/page navigation
+and broader Operations/Admin coverage remain open.
+
 Recorded transfers and independent guide comparisons pass **499/499** on unchanged
 `validation-guide-transfer-notice-01`, retaining all79 ordered observation checks.
 Twenty actual recordings/evaluations cover terminal faults, interruption,

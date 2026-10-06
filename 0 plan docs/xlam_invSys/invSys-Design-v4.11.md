@@ -2663,6 +2663,62 @@ configuration schema, authority or permission change. Define and run the package
 geometry criterion on the current candidate before correcting the layout, then
 verify the same criterion and visible screenshots on the corrected candidate.
 
+**General Settings observation refinement (catalog31):** Register the nine
+existing General controls below under D18's comprehensive recording rule. This
+clarifies observation and existing captured-context/access requirements; it does
+not move storage, grant permissions or authorize replay. Catalogs1-30 retain
+their definitions. Launcher, Close and page navigation remain separate coverage.
+
+| ControlId | Existing control / handler | Class / owner |
+| --- | --- | --- |
+| ADMIN_SETTINGS_RELOAD | btnReloadConfig / mBtnReloadConfig_Click | Command / CORE_CONFIGURATION |
+| ADMIN_SETTINGS_SELECT_CONFIG | lstConfig / mLstConfig_Click | Navigation / ADMIN_SETTINGS_UI |
+| ADMIN_CARRIER_ADD | btnAdd / mBtnAdd_Click | Command / CORE_LOCAL_SETTINGS |
+| ADMIN_CARRIER_REMOVE | btnRemove / mBtnRemove_Click | Command / CORE_LOCAL_SETTINGS |
+| ADMIN_CARRIER_RESET | btnReset / mBtnReset_Click | Command / CORE_LOCAL_SETTINGS |
+| ADMIN_CARRIER_SELECT | lstCarriers / mLstCarriers_Click | Navigation / ADMIN_SETTINGS_UI |
+| ADMIN_UOM_SELECT | lstUoms / mLstUoms_Click | Navigation / ADMIN_SETTINGS_UI |
+| ADMIN_CONNECTION_SELECT | chkManualServerCredentials / deliberate choice | Navigation / ADMIN_SETTINGS_UI |
+| ADMIN_CONNECTION_SAVE | btnSaveConnectionPolicy / mBtnSaveConnectionPolicy_Click | Command / CORE_LOCAL_SETTINGS |
+
+Role is Admin; surfaces are `Admin > Settings > General`, with Shipping Carriers,
+Recipe UOM Catalog or Server Connection appended for their controls. Captions
+are fixed existing labels; uncaptioned lists use Selected config key, Carrier
+and UOM. Use fixed Connection option for the checkbox. Command eligibility is
+ADMIN_MAINT; navigation retains Admin form access without granting a write.
+Current action/user policy, navigation defaults and explicit recording rules apply.
+
+Validate the form's captured context before staging, reading or writing. Begin
+eligible REQUESTED before input validation and the owning permission recheck;
+stale context cannot revive or retarget an editor. Automatic list population,
+post-save reload, initialization and direct services do not create clicks.
+One deliberate selection invokes one observation boundary; absent selections
+produce no invented selected item. Entered/selected values, carrier names,
+config keys, paths, credential information and checkbox values stay out of logs.
+
+The carrier list and connection option retain their existing per-Windows-user
+storage; Changed means only that local setting. UOM/config storage remains
+unchanged. Owners return explicit primitive outcomes, not inferred Boolean or
+message classifications: COMPLETED/Changed for a verified changed local save,
+UNCHANGED/Unchanged for an already-matching carrier/connection result,
+REJECTED/Unchanged for invalid input or missing selection, DENIED/Unchanged for
+lost write capability, CANCELLED/Unchanged for Reset No, and FAILED/Unknown for
+an uncertain write. Reset retains its ordinary confirmation and rechecks context
+and permission after it. No retry, rollback or new persistent fallback is added.
+Reload returns REFRESHED/Unchanged only after a successful captured config read;
+list selection returns SELECTED/Unchanged; connection choice returns
+STAGED/Unchanged and is not saved until Save Connection Option. Failed read or
+staging uses FAILED/Unchanged. Owner status and optional tracking notices remain
+separate. SourceEventRefs are empty; no Domain application is asserted.
+
+EventCode is ControlId plus underscore and outcome. Positive CommandCompleted
+facts are exact control/owner mappings: local save commands accept COMPLETED or
+UNCHANGED, Reload accepts REFRESHED, the three lists accept SELECTED, and the
+connection choice accepts STAGED. None proves inventory mutation or substitutes
+for another Save. Required D13 evidence includes actual handlers, native Reset
+Yes/No, duplicate/no-selection cases, policy/storage faults, stale context,
+permission loss, immutable prior evidence and independent recorded conclusions.
+
 **4be.1 Settings editor observation refinement (isolated observation checkpoint; completion pending):**
 The diagnostic candidate passes 780/780 after 27 expected failures, retaining
 all 450 observation checks. That run has an unresolved shutdown limitation.
