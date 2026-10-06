@@ -1,6 +1,17 @@
 # invSys Form Controls v1
 
-**Version:** 1.493 -- Transfer observation contract; packaged RED45/34 verified.
+**Version:** 1.494 -- Transfer observation GREEN79; transfer71/native-edit58 retained.
+
+Eligible Export/Import handlers now record fixed, redacted owner outcomes under
+catalog30. RED45/34 -> GREEN79/79 retains all79 ordered checks; the same unpromoted
+`validation-guide-transfer-activity-01` candidate retains transfer71/71 and native
+guide editing58/58. Five
+cold/instrumented compiles, saved-host/package/settings preservation, normal closure,
+delayed zero Excel failures, static ratchets and440 script parses pass. Two fresh
+captures show readable entry status and minimum-size imported multiline content.
+Policy/storage, recorded/evaluated transfer, visible fault notices and remaining
+acceptance gates remain open. Exact receipts are in the guide-transfer results.
+Implementation checkpoint: `0f419117`.
 
 `btnExportGuide`/`btnImportGuide` map to `VIEWER_GUIDE_EXPORT`/
 `VIEWER_GUIDE_IMPORT` under Core owner `CORE_GUIDE_TRANSFER`, catalog30.
@@ -11,10 +22,8 @@ exclude file paths and guide content. Automatic/disabled/loading/nested entry
 creates no user action; per-action/per-user policy and interruption rules apply.
 Tracking failure cannot block a permitted transfer or replace its result.
 This accounts for the controls under approved D18, without an observation exclusion
-or new execution right. Actual-handler RED45/34 retains all24 entry checks, five
-compiles and preserved saved host/packages/settings with normal closure and zero
-delayed Excel failures. Runtime implementation, GREEN and recording/evaluation
-proof remain pending; exact receipts are in the guide-transfer results record.
+or new execution right. The initial observation gate is implemented and GREEN
+above; recording/evaluation proof and the remaining acceptance gates are pending.
 
 Transfer RED24/32 -> GREEN69 -> GREEN71 preserves exact versions, original evidence
 and long/multiline text through actual handlers and file/rights/context guards.
@@ -60,7 +69,8 @@ unchanged Print candidate. Native maximize/restore and human acceptance remain o
 See `tests/integration/plan022_slice4be_receiving_replay_results.md` for receipts.
 The current acceptance index distinguishes133 catalog registrations from actual
 coverage: Scale/other deliberate controls and replay observation accounting remain
-open; guide export/import is unimplemented. Multiline Detail88/88 and its14 reviewed
+open. Guide export/import was unimplemented at that earlier checkpoint; the
+candidate above implements it. Multiline Detail88/88 and its14 reviewed
 images are existing scoped evidence. No new contract, runtime change or acceptance
 claim; RUN-SCALE-01/RUN-UI-01 remain pending.
 
