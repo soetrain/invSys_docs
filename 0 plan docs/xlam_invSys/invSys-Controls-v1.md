@@ -1,13 +1,24 @@
 # invSys Form Controls v1
 
-**Version:** 1.487 -- Print Recall entry policy/storage proof; acceptance pending.
+**Version:** 1.488 -- Recorded Print and expectation outcome correction; acceptance pending.
 
-Print986/986 retains695 ordered checks and adds291 for disabled action/user
+Recorded Print RED216/8 -> GREEN248/248 exposes the registered PREVIEW_RETURNED
+choice in the existing expectation editor. Eight actual-handler recordings cover
+terminal faults, interrupted context, permission/workbook loss and recovery through
+publication and diagnostics. Incomplete/Failed remain distinct from command
+completion. Ten reviewed captures, five cold/instrumented compiles and unchanged
+static metrics/caps pass;432 PowerShell files parse. Forms remain unchanged.
+Same-candidate Print986, Check In631, smoke86 and chain32/live48/warehouse15 retain
+prior checks with clean lifecycle, restoration and delayed audits. Independent
+guide presentations remain pending.
+This corrects existing D18 behavior; no new control, permission or contract.
+
+The prior policy checkpoint, Print986/986, retains695 ordered checks and adds291 for disabled action/user
 recording, older/invalid policy, unavailable storage and recovery. Each state
 preserves preview-return/failure and permission-denial behavior. Six operator
-captures, five instrumented compiles and clean lifecycle pass; runtime/forms are
-unchanged. Static metrics/caps remain unchanged;431 PowerShell files parse.
-Terminal-write faults, recorded interruptions, publication and independent guide
+captures, five instrumented compiles and clean lifecycle pass; that checkpoint
+changed no runtime/forms. Static metrics/caps remain unchanged;431 PowerShell files parse.
+Recorded terminal/interruption/publication proof advances above; independent guide
 views remain open. See the Print results record for exact receipts.
 
 D18 defines catalog29 `PRODUCTION_RUN_PRINT` / `PRODUCTION_RECALL_REPORT` for
@@ -20,8 +31,8 @@ and static ratchets pass; forms are unchanged. Activity03 passes Print695, Seed5
 saved-probe Check In631 (retaining629), smoke86 and chain32/live48/warehouse15
 with clean lifecycle on the same packages. Earlier assisted/native failures
 remain unexplained; no general lifecycle fix is claimed.
-Beyond the entry cases above, terminal faults, recorded interruption, publication and all three guide-view gates
-remain open; this does not accept the control or broader 4be-A.
+Independent guide-view gates remain open; this does not accept the control or
+broader 4be-A.
 
 Print lookup RED464/10 becomes GREEN474/474, retaining384 ordered checks. Both
 Print and the shared recall-log writer match System_Key exactly and resolve location
