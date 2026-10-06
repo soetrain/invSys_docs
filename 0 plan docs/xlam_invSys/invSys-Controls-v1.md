@@ -1,19 +1,25 @@
 # invSys Form Controls v1
 
-**Version:** 1.497 -- General Settings observation contract; packaged RED105/86.
+**Version:** 1.498 -- General Settings initial packaged GREEN191/191.
 
 D18 catalog31 specifies nine discovered General controls: ADMIN_SETTINGS_RELOAD,
 ADMIN_SETTINGS_SELECT_CONFIG, ADMIN_CARRIER_ADD/REMOVE/RESET/SELECT,
 ADMIN_UOM_SELECT and ADMIN_CONNECTION_SELECT/SAVE. The specification maps exact
 handlers, fixed captions, owners, local storage scope and outcomes. These are
-pending implementation and acceptance; runtime remains catalog30. No new control
+implemented in unpromoted catalog31; acceptance remains open. No new control
 surface, storage migration, permission or replay authority is introduced.
-The focused191-check run passes105 and fails86: missing catalog/observations and10
-stale-form safety assertions. All16 ordinary owner results and native Reset
-Yes/No pass; five compiles, two reviewed captures, preservation, normal closure,
-delayed zero Excel failures and unchanged static ratchets pass;447 scripts parse.
-Implement the protected contract next, retaining every check. Test checkpoint:
-`4bca0938`; exact receipts are in the General Settings results record.
+RED105/86 -> GREEN191/191 retains every ordered check on
+`validation-general-settings-02`:16 actions/32 observations and12 held-form cases.
+Native Reset Yes/No, cold/instrumented compiles, two reviewed captures,
+preservation, normal closure and delayed zero Excel failures pass;447 scripts parse.
+Dynamic/oversized limits are unchanged; two duplicate groups have bounded reviewed
+exceptions in the General Settings results record. Visible owner wording distinguishes
+duplicate/already-matching local settings, cancellation and staged connection choice;
+tracking notices remain separate. Policy/storage, permission-loss, independent
+guide conclusions and remaining regressions remain required. Same-candidate
+UOM228 retains all prior ordered checks with five compiles, two reviewed captures,
+preservation, normal closure and zero delayed Excel failures.
+Implementation/test checkpoint: `6f583238`; exact receipts: General Settings results.
 Launcher/Close/page navigation and broader coverage remain open.
 
 Published guides Export/Import now have scoped recording/evaluation proof:

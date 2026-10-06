@@ -4,20 +4,24 @@
 
 ## Slice 4be -- recording/guidance and replay/proof
 
-Active next group: General Settings observations under D18 catalog31 refinement
-(nine discovered controls; no runtime implementation yet). Packaged RED105/86
-across191 checks proves11 catalog assertions,64 missing-observation assertions,
-one incomplete expected journal and10 stale-form safety failures. All16 ordinary
-owner checks pass. Five compiles, native Reset Yes/No, two reviewed captures,
-preservation, normal closure and delayed zero Excel failures pass; static ratchets
-are unchanged and447 scripts parse. Test checkpoint: `4bca0938`.
+Active group: General Settings observations under D18 catalog31 refinement.
+Initial implementation passes RED105/86 -> GREEN191/191 on unpromoted
+`validation-general-settings-02`, retaining every ordered check. Sixteen actual
+actions produce32 observations; all12 stale-form cases preserve context/state.
+Cold/instrumented five-package compiles, native Reset Yes/No, two reviewed captures,
+preservation, normal closure and delayed zero Excel failures pass. Dynamic calls
+and28 oversized caps are unchanged;447 scripts parse. The results record explicitly
+reviews two additional duplicate groups (distinct enumerations/native callbacks)
+and bounded growth of two modules,12 procedures and205 lines.
+Same-candidate UOM228 retains all prior ordered checks, with five instrumented
+compiles, two reviewed captures, preservation and clean delayed closure.
 Exact receipts: `tests/integration/plan022_slice4be_general_settings_results.md`.
-Implement actual config
-Reload/selection, carrier Add/Remove/Reset/selection, UOM selection and connection
-choice/save. Retain per-Windows-user carrier/connection storage and captured
+Implementation/test checkpoint: `6f583238`.
+Implemented config Reload/selection, carrier Add/Remove/Reset/selection, UOM
+selection and connection choice/save retain per-Windows-user storage and captured
 warehouse context; no inputs or credential information enter observations.
-Retain all191 checks in GREEN; add policy/storage, permission-loss, recorded
-conclusions and affected regressions. Launcher/Close/page navigation
+Retain General191/UOM228; add policy/storage, permission-loss, recorded
+conclusions and remaining Settings regressions. Launcher/Close/page navigation
 and broader Operations/Admin coverage remain open.
 
 Recorded transfers and independent guide comparisons pass **499/499** on unchanged
