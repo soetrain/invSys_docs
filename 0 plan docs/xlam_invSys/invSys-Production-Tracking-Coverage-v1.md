@@ -1,6 +1,12 @@
 # Production form tracking coverage audit
 
-Version 1.212. Last reviewed:2026-10-06 UTC, independent Print guide comparison.
+Version 1.213. Last reviewed:2026-10-06 UTC, current source reconciliation.
+
+Source census remains68 constructed buttons,14 unconstructed legacy buttons and34
+non-button handlers. Catalog29 registers70 Production IDs, including Scale; Scale's
+actual handler still lacks observations and RUN-SCALE-01 remains pending. Registration
+does not accept a control. The current remaining-acceptance index distinguishes
+missing implementation, scoped evidence and final gates across all roles.
 
 Print guide320/320 retains248 and adds24 independent-run/48 guide checks through
 actual author/reader handlers. Successful, incomplete and failed runs retain exact
@@ -2030,7 +2036,7 @@ from permission to stage or export a catalog worksheet.
 
 | UI control | Caption | Actual handler | Tracking ID/status |
 |---|---|---|---|
-| `btnApplyBatchScale` | Apply Scale | `mBtnApplyBatchScale_Click` | Pending |
+| `btnApplyBatchScale` | Apply Scale | `mBtnApplyBatchScale_Click` | `PRODUCTION_RUN_SCALE` registered since catalog24; handler observations and RUN-SCALE-01 pending |
 | `btnLoaderClear` | Clear Run | `mBtnLoaderClear_Click` | `PRODUCTION_RUN_CLEAR`: catalog24 focused checks and independent paths102 GREEN; full acceptance pending |
 | `btnLoaderLoad` | Load Recipe | `mBtnLoaderLoad_Click` | `PRODUCTION_RUN_LOAD`: earlier catalog24 focused checks; independent paths87 freshly retained on activity03/catalog25; full acceptance pending |
 | `btnLoaderRefresh` | Refresh | `mBtnLoaderRefresh_Click` | `PRODUCTION_RUN_LOADER_REFRESH`: catalog24 focused checks and independent paths167 GREEN; full acceptance pending |

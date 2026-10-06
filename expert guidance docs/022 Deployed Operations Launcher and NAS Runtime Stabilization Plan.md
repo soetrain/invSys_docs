@@ -4,6 +4,17 @@
 
 ## Slice 4be -- recording/guidance and replay/proof
 
+Current B0 visible gate: Receiving103/103 retains101 and adds two display/evidence
+checks, with11 reviewed captures, five compiles, unchanged static ratchets/433 parses,
+normal exit and zero delayed Excel errors. Runtime/packages are unchanged. Exact
+receipts: `tests/integration/plan022_slice4be_receiving_replay_results.md`.
+Source reconciliation distinguishes133 registrations from complete coverage and
+confirms missing guide export/import. Existing multiline Detail88/88 is retained.
+Next define the approved transfer wire, then packaged Export/Import RED; continue
+the specific observation gaps and final acceptance mapping in the remaining index.
+No new contract or B0/A acceptance; pending Scale/UI decisions are unchanged.
+Test/audit checkpoint: `860f7b37`.
+
 Current A1/A2: independent Print guide comparison320/320 retains all248 recorded
 checks and adds24 separate-run/48 guide checks. One authored guide is paired with
 successful, incomplete and failed runs through actual controls. Five reviewed

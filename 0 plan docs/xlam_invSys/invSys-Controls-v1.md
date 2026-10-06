@@ -1,6 +1,18 @@
 # invSys Form Controls v1
 
-**Version:** 1.489 -- Independent Print guide comparison; broader acceptance pending.
+**Version:** 1.490 -- Visible Receiving replay and current coverage reconciliation.
+
+Receiving replay103/103 retains101 and adds two displayed-result checks. Eleven
+reviewed captures cover the profile editor, Training setup, fresh applied result,
+stopped verification and minimum/default/larger layouts. Five instrumented compiles,
+static ratchets/433 parses, normal exit and delayed zero Excel errors pass on the
+unchanged Print candidate. Native maximize/restore and human acceptance remain open.
+See `tests/integration/plan022_slice4be_receiving_replay_results.md` for receipts.
+The current acceptance index distinguishes133 catalog registrations from actual
+coverage: Scale/other deliberate controls and replay observation accounting remain
+open; guide export/import is unimplemented. Multiline Detail88/88 and its14 reviewed
+images are existing scoped evidence. No new contract, runtime change or acceptance
+claim; RUN-SCALE-01/RUN-UI-01 remain pending.
 
 Print guide320/320 retains248 recorded checks and adds24 independent-run/48 guide
 checks. Actual author/reader handlers pair one exact guide with successful,
