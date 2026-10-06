@@ -4,16 +4,24 @@
 
 ## Slice 4be -- recording/guidance and replay/proof
 
-Catalog30 transfer observation implementation passes RED45/34 -> GREEN79/79 on
-`validation-guide-transfer-activity-01`, retaining all79 ordered checks and the
-71-check transfer and58-check native-edit regressions. Five cold/instrumented compiles, saved-host/package/
-settings preservation, normal closure, delayed zero Excel failures and static
-ratchets pass;440 scripts parse. Two fresh transfer captures were reviewed.
-Next: extend actual-handler tests for action/user policy, storage/interruption and
-visible fault notices, then prove recorded/evaluated transfer conclusions.
-Broad live-role/Release1/restart reconciliation and acceptance stay open.
-Exact receipts: guide-transfer results record.
-Implementation checkpoint: `0f419117`.
+Transfer entry policy/storage coverage exposed an activation display defect:
+RED423/1 -> GREEN429/429 on `validation-guide-transfer-notice-01`, retaining all424
+ordered RED checks. The Operations library now preserves transfer feedback only
+after current selection/access revalidation; revoked permission still supersedes
+success. This corrects existing D18 feedback, without a new contract.
+Five cold/instrumented compiles, four reviewed minimum-size captures, saved-host/
+package/settings preservation, normal closure, delayed zero Excel failures and
+static ratchets pass;441 scripts parse. Same-candidate transfer71 retains all prior
+ordered checks with two fresh reviewed captures; native-edit58 also retains all
+ordered checks with normal closure/preservation and delayed zero Excel failures.
+Next: maintenance-denial observations, terminal/interruption and explicit
+recorded/evaluated transfer conclusions, remaining observation coverage and final
+live-role/Release1/restart reconciliation. 4be-A remains incomplete.
+Exact receipts: `tests/integration/plan022_slice4be_guide_transfer_results.md`.
+Implementation/test checkpoint: `5061a970`.
+
+Prior catalog30 observation checkpoint `0f419117` passes RED45/34 -> GREEN79/79
+on `validation-guide-transfer-activity-01`, retaining transfer71/native-edit58.
 
 Architecture D18 catalog30 registers these discovered controls under comprehensive
 recording without extending permissions or replay. Protecting test checkpoint:

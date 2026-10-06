@@ -1,16 +1,31 @@
 # invSys Form Controls v1
 
-**Version:** 1.494 -- Transfer observation GREEN79; transfer71/native-edit58 retained.
+**Version:** 1.495 -- Transfer policy/storage GREEN429; activation retains owner feedback.
 
-Eligible Export/Import handlers now record fixed, redacted owner outcomes under
+Published guides retains the last transfer result on activation only after current
+context, guide, permission and observed-run validation. Lost permission replaces
+the success message and disables Export. This fixes existing D18 feedback, without
+changing authority or controls. RED423/1 -> GREEN429/429 retains all424 ordered
+checks; four reviewed minimum-size captures show owner results and separate
+tracking notices through storage loss/recovery. Five cold/instrumented compiles,
+saved-host/package/settings preservation, normal closure, delayed zero Excel
+failures and static ratchets pass;441 scripts parse. Candidate
+`validation-guide-transfer-notice-01` is unpromoted; transfer71 is retained with
+two fresh reviewed captures and clean lifecycle; native-edit58 is also retained
+with normal closure/preservation and delayed zero Excel failures.
+Maintenance-denial observations, terminal/interruption, recorded/evaluated transfer and
+broader acceptance remain open. Exact receipts: guide-transfer results record.
+Implementation/test checkpoint: `5061a970`.
+
+Earlier observation checkpoint: eligible Export/Import handlers record fixed, redacted owner outcomes under
 catalog30. RED45/34 -> GREEN79/79 retains all79 ordered checks; the same unpromoted
 `validation-guide-transfer-activity-01` candidate retains transfer71/71 and native
 guide editing58/58. Five
 cold/instrumented compiles, saved-host/package/settings preservation, normal closure,
 delayed zero Excel failures, static ratchets and440 script parses pass. Two fresh
 captures show readable entry status and minimum-size imported multiline content.
-Policy/storage, recorded/evaluated transfer, visible fault notices and remaining
-acceptance gates remain open. Exact receipts are in the guide-transfer results.
+Entry policy/storage and visible fault notices advance above; recorded/evaluated
+transfer and remaining acceptance gates stay open. Exact receipts are in the guide-transfer results.
 Implementation checkpoint: `0f419117`.
 
 `btnExportGuide`/`btnImportGuide` map to `VIEWER_GUIDE_EXPORT`/
