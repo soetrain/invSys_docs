@@ -1,6 +1,20 @@
 # invSys Form Controls v1
 
-**Version:** 1.492 -- Guide transfer packaged GREEN; acceptance open.
+**Version:** 1.493 -- Transfer observation contract; packaged RED45/34 verified.
+
+`btnExportGuide`/`btnImportGuide` map to `VIEWER_GUIDE_EXPORT`/
+`VIEWER_GUIDE_IMPORT` under Core owner `CORE_GUIDE_TRANSFER`, catalog30.
+Both remain ACTION_PATH_MAINT-gated Viewer commands. Eligible actual clicks record
+REQUESTED followed by owner COMPLETED/CANCELLED/DENIED/REJECTED/FAILED; only
+COMPLETED proves command completion, never Domain application. Fixed messages
+exclude file paths and guide content. Automatic/disabled/loading/nested entry
+creates no user action; per-action/per-user policy and interruption rules apply.
+Tracking failure cannot block a permitted transfer or replace its result.
+This accounts for the controls under approved D18, without an observation exclusion
+or new execution right. Actual-handler RED45/34 retains all24 entry checks, five
+compiles and preserved saved host/packages/settings with normal closure and zero
+delayed Excel failures. Runtime implementation, GREEN and recording/evaluation
+proof remain pending; exact receipts are in the guide-transfer results record.
 
 Transfer RED24/32 -> GREEN69 -> GREEN71 preserves exact versions, original evidence
 and long/multiline text through actual handlers and file/rights/context guards.

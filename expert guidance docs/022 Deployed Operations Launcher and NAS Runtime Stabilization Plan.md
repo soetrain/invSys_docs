@@ -4,6 +4,16 @@
 
 ## Slice 4be -- recording/guidance and replay/proof
 
+Next transfer boundary: Architecture D18 catalog30 names eligible Export/Import
+observations, fixed owner outcomes and explicit command-completion semantics.
+This implements comprehensive recording without extending permissions or replay.
+Actual-handler RED45/34 is verified on unchanged packages, retaining all24 entry
+checks, five compiles and clean preservation/closure. Implement catalog/owner/
+observer changes next; preserve the71-check transfer and58-check native-guide
+baselines. Policy/storage, recording/
+evaluation, visible and applicable regression gates remain required.
+Test checkpoint: `6fe9c7cb`. Static metrics/ratchets are unchanged;440 scripts parse.
+
 Guide transfer passes RED24/32 -> GREEN69 -> GREEN71 on the unpromoted
 `validation-guide-transfer-01` candidate. The final gate retains all69 checks and
 adds minimum-size multiline scrolling proof. Native guide editing retains58/58.

@@ -4070,6 +4070,34 @@ loss, empty destination, native layout and visible foreign-origin labelling.
 The new controls also require observation-census accounting under D18; this
 refinement does not exempt them from comprehensive coverage.
 
+**Transfer observation refinement (catalog30):** The existing explicit Export and
+Import handlers are eligible Command controls `VIEWER_GUIDE_EXPORT` and
+`VIEWER_GUIDE_IMPORT`, captions Export/Import, role Viewer, owner
+`CORE_GUIDE_TRANSFER`, surface `Operations > Viewer > Published guides`, capability
+ACTION_PATH_MAINT. This registers discovered controls under the approved comprehensive
+recording rule; it grants no permission, replay adapter or automatic execution.
+Older catalog versions retain their original definitions and policy behavior.
+
+One eligible deliberate outer click records REQUESTED (Info/Unknown), then the
+owner's fixed outcome: COMPLETED (Info/Changed) only after a new export file or
+local guide is committed; CANCELLED (Notice/Unchanged) for file-picker cancellation;
+DENIED (Blocked/Unchanged) for lost capability; REJECTED (Warning/Unchanged) for
+pre-write validation refusal; FAILED (Error/Unknown) for an uncertain failure.
+EventCode is the ControlId plus `_` and the outcome. Only COMPLETED establishes
+CommandCompleted for these controls; it never establishes Domain application.
+SourceEventRefs are empty. Record no selected paths, package/guide text, entered
+values or arbitrary exception messages. Export's Changed effect refers only to
+its new package, and Import's only to its new local training record.
+
+Core returns primitive owner outcomes; Operations observes actual form actions.
+Direct services, disabled controls, loading, nested entry and automatic rendering
+do not invent user actions. Current per-action/per-user policy and explicit
+recording eligibility apply. Optional recording failure must preserve the owner's
+result and show tracking unavailability separately. Context/policy interruption
+cannot fabricate a terminal result or retarget evidence. Existing records remain
+immutable. D13 covers actual success/cancel/refusal, suppression, policy/storage
+loss, preserved files and explicit recorded/evaluated transfer conclusions.
+
 - Missing/corrupt/cross-warehouse evidence shows unavailable with a reason.
   Older release records retain original captions and show **Older release**;
   imported or stale instructions never claim controls still match. Saved paths
