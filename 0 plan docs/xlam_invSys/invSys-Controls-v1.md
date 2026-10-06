@@ -1,21 +1,22 @@
 # invSys Form Controls v1
 
-**Version:** 1.495 -- Transfer policy/storage GREEN429; activation retains owner feedback.
+**Version:** 1.496 -- Recorded transfers and independent guide comparisons GREEN499.
 
-Published guides retains the last transfer result on activation only after current
-context, guide, permission and observed-run validation. Lost permission replaces
-the success message and disables Export. This fixes existing D18 feedback, without
-changing authority or controls. RED423/1 -> GREEN429/429 retains all424 ordered
-checks; four reviewed minimum-size captures show owner results and separate
-tracking notices through storage loss/recovery. Five cold/instrumented compiles,
-saved-host/package/settings preservation, normal closure, delayed zero Excel
-failures and static ratchets pass;441 scripts parse. Candidate
-`validation-guide-transfer-notice-01` is unpromoted; transfer71 is retained with
-two fresh reviewed captures and clean lifecycle; native-edit58 is also retained
-with normal closure/preservation and delayed zero Excel failures.
-Maintenance-denial observations, terminal/interruption, recorded/evaluated transfer and
-broader acceptance remain open. Exact receipts: guide-transfer results record.
-Implementation/test checkpoint: `5061a970`.
+Published guides Export/Import now have scoped recording/evaluation proof:
+499/499 retains all79 ordered observation checks and adds420 checks covering20
+actual recordings/evaluations and independent guide comparisons. Successful,
+incomplete and denied observed runs remain distinct across How-To, Diagnostic
+and Compare; the authored source cannot supply missing success evidence.
+Twelve selected captures were reviewed, including readable owner/tracking faults,
+invalid-policy controls and separate guide/run provenance. Five instrumented
+compiles,497 saved-host observations, package/settings preservation, normal closure
+and delayed zero Excel failures pass. Static ratchets are unchanged;444 scripts parse.
+Runtime, controls and authority are unchanged; approved D18 catalog30 governs.
+The unpromoted notice candidate retains policy429, transfer71 and native-edit58,
+including the activation fix that preserves owner feedback after current access
+revalidation. Broader observation coverage and final/human acceptance remain open.
+Exact receipts: guide-transfer results record. Test checkpoint: `36b60f88`;
+runtime checkpoint: `5061a970`.
 
 Earlier observation checkpoint: eligible Export/Import handlers record fixed, redacted owner outcomes under
 catalog30. RED45/34 -> GREEN79/79 retains all79 ordered checks; the same unpromoted
@@ -24,8 +25,8 @@ guide editing58/58. Five
 cold/instrumented compiles, saved-host/package/settings preservation, normal closure,
 delayed zero Excel failures, static ratchets and440 script parses pass. Two fresh
 captures show readable entry status and minimum-size imported multiline content.
-Entry policy/storage and visible fault notices advance above; recorded/evaluated
-transfer and remaining acceptance gates stay open. Exact receipts are in the guide-transfer results.
+Entry policy/storage, visible faults and recorded/evaluated comparisons advance
+above; broader acceptance stays open. Exact receipts are in the guide-transfer results.
 Implementation checkpoint: `0f419117`.
 
 `btnExportGuide`/`btnImportGuide` map to `VIEWER_GUIDE_EXPORT`/
@@ -37,8 +38,8 @@ exclude file paths and guide content. Automatic/disabled/loading/nested entry
 creates no user action; per-action/per-user policy and interruption rules apply.
 Tracking failure cannot block a permitted transfer or replace its result.
 This accounts for the controls under approved D18, without an observation exclusion
-or new execution right. The initial observation gate is implemented and GREEN
-above; recording/evaluation proof and the remaining acceptance gates are pending.
+or new execution right. Observation and recorded/evaluated comparison proof are
+GREEN above; broader acceptance gates remain pending.
 
 Transfer RED24/32 -> GREEN69 -> GREEN71 preserves exact versions, original evidence
 and long/multiline text through actual handlers and file/rights/context guards.

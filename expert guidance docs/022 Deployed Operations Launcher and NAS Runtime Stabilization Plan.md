@@ -4,21 +4,21 @@
 
 ## Slice 4be -- recording/guidance and replay/proof
 
-Transfer entry policy/storage coverage exposed an activation display defect:
-RED423/1 -> GREEN429/429 on `validation-guide-transfer-notice-01`, retaining all424
-ordered RED checks. The Operations library now preserves transfer feedback only
-after current selection/access revalidation; revoked permission still supersedes
-success. This corrects existing D18 feedback, without a new contract.
-Five cold/instrumented compiles, four reviewed minimum-size captures, saved-host/
-package/settings preservation, normal closure, delayed zero Excel failures and
-static ratchets pass;441 scripts parse. Same-candidate transfer71 retains all prior
-ordered checks with two fresh reviewed captures; native-edit58 also retains all
-ordered checks with normal closure/preservation and delayed zero Excel failures.
-Next: maintenance-denial observations, terminal/interruption and explicit
-recorded/evaluated transfer conclusions, remaining observation coverage and final
-live-role/Release1/restart reconciliation. 4be-A remains incomplete.
+Recorded transfers and independent guide comparisons pass **499/499** on unchanged
+`validation-guide-transfer-notice-01`, retaining all79 ordered observation checks.
+Twenty actual recordings/evaluations cover terminal faults, interruption,
+maintenance denial and ordinary outcomes. Each Export/Import guide is compared
+with separate successful, incomplete and denied recordings in all three views.
+Five instrumented compiles,12 reviewed captures,497 saved-host observations,
+package/settings preservation, normal closure and delayed zero Excel failures
+pass. Static ratchets are unchanged;444 scripts parse. This is test-only evidence
+for approved D18 catalog30; no new contract or runtime change.
+Retain the candidate's prior policy RED423/1 -> GREEN429, transfer71 and native-edit58
+gates, including guarded activation feedback and cold build evidence.
+Next: remaining Operations/Admin observation coverage and final live-role,
+Release1, restart/binding and visible acceptance reconciliation. 4be-A remains incomplete.
 Exact receipts: `tests/integration/plan022_slice4be_guide_transfer_results.md`.
-Implementation/test checkpoint: `5061a970`.
+Test checkpoint: `36b60f88`; runtime checkpoint: `5061a970`.
 
 Prior catalog30 observation checkpoint `0f419117` passes RED45/34 -> GREEN79/79
 on `validation-guide-transfer-activity-01`, retaining transfer71/native-edit58.
