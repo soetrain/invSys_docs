@@ -4007,6 +4007,69 @@ the existing original-observation/owner-provenance rule, not a new build scheme.
   D18-REPLAY-01 adds a separate versioned execution profile and optional transfer
   section with typed training inputs; logs remain redacted. Import never executes
   or provisions. Old guide-only files remain supported and show Execution not configured.
+**Guide transfer wire v1 (4be-A implementation refinement):** This specifies the
+already approved transfer boundary; it grants no new authority or execution rights.
+The Published guides form adds **Export** (`btnExportGuide`) and **Import**
+(`btnImportGuide`). Both require ACTION_PATH_MAINT in the captured current context.
+Export additionally requires one exact selected, readable guide version. Core
+checks current visibility for every retained step, observation and expectation;
+restricted content is refused rather than silently removed from an exact version.
+Import applies the receiving warehouse's current visibility/capability rules.
+An empty destination library must still permit authorized Import.
+
+Operations owns ordinary JSON file selection; cancellation changes no guide,
+package or authority data. Eligible attempt/cancel activity retains D18 rules.
+Core receives only primitive context/key/path arguments, validates again after
+the dialog, and owns transfer validation and atomic writes. Export creates a new
+file and refuses an existing destination; it never overwrites a guide, source or
+authority file. Import reads the selected file without modifying it and appends
+one new local guide. No inventory import, provisioning, snapshot publication, execution,
+automatic profile installation or source-policy modification occurs.
+
+| Record | Exact fields / interpretation |
+|---|---|
+| Transfer v1 | `SchemaVersion=1`, `RecordKind=GuideTransfer`, generated `TransferId`, verified `ExportedAtUTC`, `ExportedByUserId`, `SourceWarehouseId`, `Guide`, final `ContentSha256`. `Guide` is one complete validated schema1/2 guide version including its own hash, not a library/history dump. SourceWarehouseId equals that guide's local WarehouseId. |
+| Imported guide v2 | Existing guide fields plus `TransferOrigin`. Assign new local ActionPathId/RecordId, Version1, empty predecessor fields, receiving WarehouseId, importing actor/current UTC and current policy version. Preserve authored content, StepIds, expectation, original observations/source-run provenance and OriginWarehouseId. Native guides continue to use schema1 unchanged. |
+| TransferOrigin | `TransferId`, `TransferSha256`, `SourceWarehouseId`, source guide `ActionPathId`, `Version`, `RecordId`, `ContentSha256`. This identifies the immediate imported artifact; original observation origin remains distinct on re-export. Retain this object unchanged in later local guide edits. |
+
+Use existing ASCII-escaped JSON, trailing SHA-256 over the body, atomic publication
+and 1 MiB limits for both transfer and resulting guide. Reject duplicate/unknown
+fields, wrong types, unsupported versions, malformed hashes/identities/provenance,
+more than 256 guide steps or 512 observations, and invalid nested guide content.
+One version is self-contained: the source predecessor is provenance, not a remote
+file dependency. Validate observation warehouse identities against retained origin,
+never by rewriting them to the importing warehouse. Preserve source captions and
+supported older catalog versions. Hashes prove content integrity, not external
+authorship or current local workflow success. Do not include raw authority rows,
+unknown inventory columns, credential fields, runtime paths or arbitrary files.
+
+Readers/editors support both guide schemas. Imported content is labelled
+**Imported origin evidence; not locally observed** with source warehouse and
+guide/version/hash. Native and imported authored steps remain separate from the
+selected local observed run. Imported observations cannot satisfy local application
+proof; use only a fresh permitted local run. Editing appends a local version while
+preserving foreign observations and transfer provenance. Repeated explicit imports
+create distinct local identities; they never merge or replace guides.
+
+**Reserved executable transfer v2 (shared interface; consumer is 4be-B):** Extend
+the transfer envelope with `Execution`, an object empty when absent or containing
+exactly `Profile`: one validated execution-profile-v1 record including its hash,
+bound to the exported guide's exact identity/version/hash and stable steps. Retain
+typed input/redaction/compatibility rules from D18-REPLAY-01. B's explicit import
+must rebind a new local profile to the newly imported guide and require local input
+compatibility before Run. A's v1 consumer refuses unsupported v2 clearly; it never
+silently discards executable content. Guide-only v1 remains supported and has no
+configured execution profile. This defines the shared wire before A closes without
+moving B's executable-transfer implementation into A.
+
+Protect actual Export/Import handlers with D13 RED/GREEN: exact-version round trip
+between generated warehouses, old native reads, imported edit/re-export, long and
+multiline authored text, malformed/oversize/unknown/duplicate content, source and
+authority non-mutation, cancellation/existing destination, rights/visibility/context
+loss, empty destination, native layout and visible foreign-origin labelling.
+The new controls also require observation-census accounting under D18; this
+refinement does not exempt them from comprehensive coverage.
+
 - Missing/corrupt/cross-warehouse evidence shows unavailable with a reason.
   Older release records retain original captions and show **Older release**;
   imported or stale instructions never claim controls still match. Saved paths

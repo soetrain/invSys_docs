@@ -4,14 +4,27 @@
 
 ## Slice 4be -- recording/guidance and replay/proof
 
+Active transfer work: Architecture D18 now defines the approved boundary's exact
+guide-transfer-v1/imported-guide-v2 wire and reserves executable-transfer-v2 for B.
+Native guide files stay unchanged; imported observations remain foreign origin
+evidence. Packaged entry RED18/6 has exactly six missing-control/handler assertions,
+five compiles, preserved saved host/settings/package pins, one reviewed capture
+and normal exit with zero delayed Excel failures. The fixture's publisher now uses
+an explicit disposable Admin workbook; prior harness/native trials remain qualified.
+Runtime is unchanged; all436 scripts parse and existing static/broad GREENs apply.
+Next extend round-trip/guard tests before implementation. Transfer remains open.
+Exact receipts: `tests/integration/plan022_slice4be_guide_transfer_results.md`.
+Test checkpoint: `506e2cfe`.
+No new permission, authority or execution behavior is authorized by transfer.
+
 Current B0 visible gate: Receiving103/103 retains101 and adds two display/evidence
 checks, with11 reviewed captures, five compiles, unchanged static ratchets/433 parses,
 normal exit and zero delayed Excel errors. Runtime/packages are unchanged. Exact
 receipts: `tests/integration/plan022_slice4be_receiving_replay_results.md`.
 Source reconciliation distinguishes133 registrations from complete coverage and
 confirms missing guide export/import. Existing multiline Detail88/88 is retained.
-Next define the approved transfer wire, then packaged Export/Import RED; continue
-the specific observation gaps and final acceptance mapping in the remaining index.
+The transfer checkpoint above advances that gap; remaining observation and final
+acceptance work is mapped in the remaining index.
 No new contract or B0/A acceptance; pending Scale/UI decisions are unchanged.
 Test/audit checkpoint: `860f7b37`.
 

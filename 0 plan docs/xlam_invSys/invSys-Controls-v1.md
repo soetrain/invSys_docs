@@ -1,6 +1,23 @@
 # invSys Form Controls v1
 
-**Version:** 1.490 -- Visible Receiving replay and current coverage reconciliation.
+**Version:** 1.491 -- Guide transfer wire and packaged entry RED; implementation pending.
+
+Architecture D18's transfer refinement specifies Published guides **Export**
+(`btnExportGuide`) and **Import** (`btnImportGuide`), both ACTION_PATH_MAINT-gated.
+Export uses an exact permitted version and a fresh JSON destination. Import appends
+a new local identity with visible foreign provenance; it does not execute or provision.
+Cancellation/context loss preserves guide, source and authority files; eligible
+attempt/cancel activity follows D18. Native schema1 guides remain readable;
+imported schema2 and guide-transfer-v1 require packaged RED/GREEN before acceptance.
+Executable transfer remains B work. These controls are specified, not implemented
+or accepted; observation accounting remains required.
+
+Packaged entry RED18/6 identifies exactly six absent-control/handler assertions.
+Five compiles, saved-host/settings/package preservation, normal exit, delayed zero
+Excel failures and one reviewed Published guides capture pass. Runtime is unchanged;
+436 scripts parse and existing static/broad gates remain applicable. Prior fixture
+and native failures are qualified in the guide-transfer results record. Round-trip,
+guard, cancellation and visible transfer GREEN remain required before acceptance.
 
 Receiving replay103/103 retains101 and adds two displayed-result checks. Eleven
 reviewed captures cover the profile editor, Training setup, fresh applied result,
