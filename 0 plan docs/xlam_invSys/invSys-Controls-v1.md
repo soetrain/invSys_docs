@@ -1,6 +1,16 @@
 # invSys Form Controls v1
 
-**Version:** 1.488 -- Recorded Print and expectation outcome correction; acceptance pending.
+**Version:** 1.489 -- Independent Print guide comparison; broader acceptance pending.
+
+Print guide320/320 retains248 recorded checks and adds24 independent-run/48 guide
+checks. Actual author/reader handlers pair one exact guide with successful,
+incomplete and failed runs; How-To/Diagnostic/Compare preserve their evidence.
+Five reviewed captures show multiline instructions and distinct source/run
+provenance. Five compiles, static ratchets/433 parses and clean lifecycle pass.
+Runtime/forms/packages remain unchanged, preserving prior broad gates. Earlier
+view-session failure remains unexplained; the diagnostic182 is scoped separately.
+See the Print results record and current remaining-acceptance audit. Comprehensive
+4be-A and the pending RUN-SCALE-01/RUN-UI-01 decisions remain open.
 
 Recorded Print RED216/8 -> GREEN248/248 exposes the registered PREVIEW_RETURNED
 choice in the existing expectation editor. Eight actual-handler recordings cover
@@ -10,7 +20,7 @@ completion. Ten reviewed captures, five cold/instrumented compiles and unchanged
 static metrics/caps pass;432 PowerShell files parse. Forms remain unchanged.
 Same-candidate Print986, Check In631, smoke86 and chain32/live48/warehouse15 retain
 prior checks with clean lifecycle, restoration and delayed audits. Independent
-guide presentations remain pending.
+guide proof advances above.
 This corrects existing D18 behavior; no new control, permission or contract.
 
 The prior policy checkpoint, Print986/986, retains695 ordered checks and adds291 for disabled action/user
@@ -19,7 +29,7 @@ preserves preview-return/failure and permission-denial behavior. Six operator
 captures, five instrumented compiles and clean lifecycle pass; that checkpoint
 changed no runtime/forms. Static metrics/caps remain unchanged;431 PowerShell files parse.
 Recorded terminal/interruption/publication proof advances above; independent guide
-views remain open. See the Print results record for exact receipts.
+views now have scoped proof above. See the Print results record for exact receipts.
 
 D18 defines catalog29 `PRODUCTION_RUN_PRINT` / `PRODUCTION_RECALL_REPORT` for
 `mBtnManagerPrint_Click`. REQUESTED pairs with PREVIEW_RETURNED, REJECTED, DENIED
@@ -31,8 +41,7 @@ and static ratchets pass; forms are unchanged. Activity03 passes Print695, Seed5
 saved-probe Check In631 (retaining629), smoke86 and chain32/live48/warehouse15
 with clean lifecycle on the same packages. Earlier assisted/native failures
 remain unexplained; no general lifecycle fix is claimed.
-Independent guide-view gates remain open; this does not accept the control or
-broader 4be-A.
+Independent guide-view evidence advances above; broader4be-A remains open.
 
 Print lookup RED464/10 becomes GREEN474/474, retaining384 ordered checks. Both
 Print and the shared recall-log writer match System_Key exactly and resolve location

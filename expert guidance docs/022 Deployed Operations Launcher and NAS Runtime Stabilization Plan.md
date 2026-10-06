@@ -4,7 +4,20 @@
 
 ## Slice 4be -- recording/guidance and replay/proof
 
-Current A1: recorded Print RED216/8 -> GREEN248/248 fixes the expectation picker's
+Current A1/A2: independent Print guide comparison320/320 retains all248 recorded
+checks and adds24 separate-run/48 guide checks. One authored guide is paired with
+successful, incomplete and failed runs through actual controls. Five reviewed
+captures, five instrumented compiles, static ratchets/433 parses and clean lifecycle
+pass. Runtime/packages/forms are unchanged; prior Print986, Check In631, smoke86,
+chain32/live48/warehouse15 and build/layout evidence remain applicable. An earlier
+view-session failure and the smaller182-check diagnostic remain qualified in the
+Print results record; no general native fix is claimed.
+Next: reconcile the current comprehensive control census and remaining A1/A2/B0
+acceptance against `tests/integration/plan022_slice4be_remaining_acceptance.md`.
+RUN-SCALE-01/RUN-UI-01 remain pending approval; full4be-A acceptance remains open.
+Test checkpoint: `14606d04`.
+
+Recorded Print RED216/8 -> GREEN248/248 fixes the expectation picker's
 missing registered PREVIEW_RETURNED choice. Eight actual-handler recordings prove
 terminal policy/storage faults, interrupted context, permission/workbook loss and
 recovery through publication and independent expected-conclusion diagnostics.
@@ -13,8 +26,7 @@ captures, five cold/instrumented compiles, unchanged forms and static ratchets p
 432 PowerShell files parse. Same-candidate Print986, Check In631, smoke86 and
 chain32/live48/warehouse15 retain prior checks with clean shutdown, restoration and
 delayed audits. This implements existing D18; no contract change.
-Next: independent How-To/Compare and guide-source/observed-run proof. Print and
-comprehensive A1/A2 acceptance remain open.
+Independent guide proof advances above; comprehensive A1/A2 acceptance remains open.
 Exact receipts: `tests/integration/plan022_slice4be_production_print_results.md`.
 Code checkpoint: `89674af1`.
 
@@ -40,7 +52,7 @@ Recorded terminal/interruption/publication proof advances above; independent gui
 presentations remain next. Print control acceptance and comprehensive A1/A2 remain
 open. Exact receipts: `tests/integration/plan022_slice4be_production_print_results.md`.
 Runtime checkpoint: `5c80c71c`; policy verification: `f7132f95`.
-Next: independent guide views.
+The independent guide gate is now recorded above.
 
 Print lookup RED464/10 becomes GREEN474/474, retaining384 ordered checks. D14 exact
 keys and table-relative, normalized-header location lookup now protect Print and
