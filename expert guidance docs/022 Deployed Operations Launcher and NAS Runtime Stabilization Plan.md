@@ -5,23 +5,24 @@
 ## Slice 4be -- recording/guidance and replay/proof
 
 Active group: General Settings observations under D18 catalog31 refinement.
-Initial implementation passes RED105/86 -> GREEN191/191 on unpromoted
-`validation-general-settings-02`, retaining every ordered check. Sixteen actual
-actions produce32 observations; all12 stale-form cases preserve context/state.
-Cold/instrumented five-package compiles, native Reset Yes/No, two reviewed captures,
-preservation, normal closure and delayed zero Excel failures pass. Dynamic calls
-and28 oversized caps are unchanged;447 scripts parse. The results record explicitly
-reviews two additional duplicate groups (distinct enumerations/native callbacks)
-and bounded growth of two modules,12 procedures and205 lines.
-Same-candidate UOM228 retains all prior ordered checks, with five instrumented
-compiles, two reviewed captures, preservation and clean delayed closure.
+Full policy/permission gate passes647/647 on unchanged, unpromoted
+`validation-general-settings-02`, retaining all191 ordered initial checks and
+adding456 checks. Six policy modes cover action/user exclusions, older/invalid
+policy, unavailable storage and recovery; same-session ADMIN_MAINT loss denies
+five commands without changing settings. Five instrumented compiles, five reviewed
+captures, preservation, unassisted closure and delayed zero Excel failures pass.
+Runtime/static metrics remain unchanged;449 scripts parse. Retain the initial
+RED105/86 -> GREEN191, cold build02 and bounded maintenance exceptions in the results.
+The repaired499-check diagnostic is separate evidence, not full acceptance GREEN.
+Fresh UOM228 retains every ordered prior check after the test-only native capture
+correction, with five compiles, two reviewed images, preservation and clean closure.
 Exact receipts: `tests/integration/plan022_slice4be_general_settings_results.md`.
-Implementation/test checkpoint: `6f583238`.
+Runtime checkpoint: `6f583238`; policy/permission test checkpoint: `48ae1cd4`.
 Implemented config Reload/selection, carrier Add/Remove/Reset/selection, UOM
 selection and connection choice/save retain per-Windows-user storage and captured
 warehouse context; no inputs or credential information enter observations.
-Retain General191/UOM228; add policy/storage, permission-loss, recorded
-conclusions and remaining Settings regressions. Launcher/Close/page navigation
+Retain General647/UOM228; add independent recorded conclusions and remaining
+Settings regressions. Launcher/Close/page navigation
 and broader Operations/Admin coverage remain open.
 
 Recorded transfers and independent guide comparisons pass **499/499** on unchanged

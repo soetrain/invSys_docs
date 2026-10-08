@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.498 -- General Settings initial packaged GREEN191/191.
+**Version:** 1.499 -- General Settings policy/permission GREEN647/647.
 
 D18 catalog31 specifies nine discovered General controls: ADMIN_SETTINGS_RELOAD,
 ADMIN_SETTINGS_SELECT_CONFIG, ADMIN_CARRIER_ADD/REMOVE/RESET/SELECT,
@@ -15,11 +15,19 @@ preservation, normal closure and delayed zero Excel failures pass;447 scripts pa
 Dynamic/oversized limits are unchanged; two duplicate groups have bounded reviewed
 exceptions in the General Settings results record. Visible owner wording distinguishes
 duplicate/already-matching local settings, cancellation and staged connection choice;
-tracking notices remain separate. Policy/storage, permission-loss, independent
-guide conclusions and remaining regressions remain required. Same-candidate
-UOM228 retains all prior ordered checks with five compiles, two reviewed captures,
+tracking notices remain separate. The unchanged candidate now passes647/647,
+retaining all191 ordered checks and adding456 for action/user exclusion,
+older/invalid policy, unavailable storage, recovery and same-session permission
+loss. Five instrumented compiles, five reviewed captures, preserved state/packages,
+unassisted closure and zero delayed Excel failures pass;449 scripts parse with
+unchanged runtime/static metrics. The499-check diagnostic and its fixture failures
+are separately qualified in the results. Independent guide conclusions and
+remaining regressions remain required. Same-candidate
+UOM228 was refreshed2026-10-08 after the test-only native capture correction; it
+retains all prior ordered checks with five compiles, two reviewed captures,
 preservation, normal closure and zero delayed Excel failures.
-Implementation/test checkpoint: `6f583238`; exact receipts: General Settings results.
+Runtime checkpoint: `6f583238`; policy/permission test checkpoint: `48ae1cd4`.
+Exact receipts: General Settings results.
 Launcher/Close/page navigation and broader coverage remain open.
 
 Published guides Export/Import now have scoped recording/evaluation proof:
