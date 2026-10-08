@@ -21,8 +21,12 @@ Runtime checkpoint: `6f583238`; policy/permission test checkpoint: `48ae1cd4`.
 Implemented config Reload/selection, carrier Add/Remove/Reset/selection, UOM
 selection and connection choice/save retain per-Windows-user storage and captured
 warehouse context; no inputs or credential information enter observations.
-Retain General647/UOM228; add independent recorded conclusions and remaining
-Settings regressions. Launcher/Close/page navigation
+Independent recording/guide tests are staged. The first trial stops at baseline
+native capture (17 passes/1 harness failure), before new cases; five compiles and
+preservation pass. Console desktop reads work but cursor positioning fails without
+error5. Restore native input, then run the recorded gate retaining General647/UOM228;
+no new product RED/GREEN or contract change is claimed. Remaining
+Settings regressions, Launcher/Close/page navigation
 and broader Operations/Admin coverage remain open.
 
 Recorded transfers and independent guide comparisons pass **499/499** on unchanged

@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.499 -- General Settings policy/permission GREEN647/647.
+**Version:** 1.500 -- General recording/guide proof staged; native input blocks validation.
 
 D18 catalog31 specifies nine discovered General controls: ADMIN_SETTINGS_RELOAD,
 ADMIN_SETTINGS_SELECT_CONFIG, ADMIN_CARRIER_ADD/REMOVE/RESET/SELECT,
@@ -28,6 +28,10 @@ retains all prior ordered checks with five compiles, two reviewed captures,
 preservation, normal closure and zero delayed Excel failures.
 Runtime checkpoint: `6f583238`; policy/permission test checkpoint: `48ae1cd4`.
 Exact receipts: General Settings results.
+The new recorded/guide gate has not reached its cases: baseline native capture
+stopped at17 passes/1 harness failure. Five compiles and preservation pass; cursor
+positioning fails despite readable console desktop. This is not error5 or product
+RED, and adds no accepted behavior. Retain647/UOM228 and restore input before retry.
 Launcher/Close/page navigation and broader coverage remain open.
 
 Published guides Export/Import now have scoped recording/evaluation proof:
