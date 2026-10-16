@@ -254,12 +254,16 @@ RED for current-server discovery, additional-server discovery, selection
 validation, duplicate/source rejection, read-only aggregation, and source
 authority non-mutation.
 
-### D8-AGG-01 — Interactive Aggregation authority and output ownership (PROPOSED; requires approval)
+### D8-AGG-01 — Interactive Aggregation authority and output ownership (APPROVED,2026-10-14)
 
 Proposed2026-10-13 Pacific, within4be-A's remaining Admin coverage. D17 defines
 the advisory source set but does not settle live authorization at the later write,
 stale-form binding or borrowed output ownership. D8's processor rules and the
-approved Users/Create/Tester decisions do not implicitly authorize this change.
+approved Users/Create/Tester decisions did not implicitly authorize this change.
+The user explicitly approved the tightened D8-AGG-01 contract on2026-10-14
+Pacific, clearing Handoff180's approval blocker and authorizing D13 implementation
+toward complete4be-A. This approves all four tightenings below, not implementation
+acceptance or package promotion. Do not request this approval again.
 
 The packaged diagnostic on tester-recording-02 has65 PASS/7 FAIL: switching the
 active workbook redirects the owner and changes the unrelated workbook; a saved
@@ -268,8 +272,25 @@ each reach Core aggregation. No persisted unauthorized output is proved: the
 callback reaches SaveAs then fails with Excel1004. A direct Core comparison using
 a normalized output path succeeds with exact selected entities/quantities and
 unchanged sources. See code `plan022_slice4be_admin_aggregation_results.md`.
+This is one normalized-path direct Core verification, not a full source/output
+matrix or packaged-action success. The doubled-interior-separator SaveAs hypothesis
+is unproved until a path-only packaged comparison isolates it.
 
-**Proposed contract:**
+**Tightened and approved2026-10-14 Pacific.** Source and
+trusted-feed validation now share the authority recheck boundaries below; output
+failure/retry state and the required packaged path comparison are explicit.
+
+Local entry evidence on unchanged product source,2026-10-14 Pacific: the complete
+path-only packaged drive/UNC comparison gives74 PASS/10 FAIL, retaining65/7.
+Normalization alone fixes the drive fixture's SaveAs failure; both UNC variants
+persist, but original dispatch is noncanonical. Expanded post-inspection,
+borrowed-output and failure/retry boundaries give88 PASS/35 FAIL without a harness
+exception, with preserved pins/settings, normal closure and delayed zero native
+events. This is protecting RED only; remaining refusal/phase/retry coverage and
+implementation are pending. The code Aggregation receipt records exact scope;
+the single earlier direct Core verification remains historical supplemental evidence.
+
+**Approved contract:**
 
 - Admin captures the original operator workbook and Core's live invSys user/session
   generation, warehouse/station and trusted source Config/output scope on opening
@@ -284,19 +305,56 @@ unchanged sources. See code `plan022_slice4be_admin_aggregation_results.md`.
   provisioned-user check or local user-ID hint cannot substitute for live sign-in.
   Ordinary checks do not repair or save Config/Auth; unrelated dirty authority refuses.
 - Core derives the output from the captured trusted source's existing configured
-  feed, using a valid joined path. Changed output configuration requires reopening;
+  feed, using a valid joined path. Capture the trusted Config identity, relevant
+  output-feed settings and exact normalized destination at form opening. At every
+  authority recheck boundary above, read that same trusted source's current saved
+  feed configuration without repair/save and compare it with the captured binding.
+  A feed change between capture and mutation, including during source inspection
+  or a yield, refuses the current attempt and requires reopening; do not follow the
+  changed feed or rely only on an entry-time check. Dirty or unreadable trusted
+  configuration refuses too. Changed output configuration requires reopening;
   a selected snapshot, typed path or active workbook cannot redirect the feed.
   Refuse a destination open in Excel (including unsaved edits), a read-only output,
   or a destination overlapping source authority/snapshots before mutation. Never
   close/save a borrowed workbook or replace another target to make the command work.
-  Existing output bytes remain unchanged on preflight/authority/source refusal.
+  Refusal before promotion leaves existing output bytes unchanged; after a write
+  attempt, report only verified effects under the failure/retry rule below.
 - Retain D17 source discovery/selection and read-only snapshot rules, exact
   WarehouseId/System_Key identity, rejection rules and advisory-only meaning.
-  Revalidate the selected sources before writing; an invalid selected set must not
-  become a successful partial aggregate. No source runtime is created or changed.
+  Revalidate the entire selected set at the same moments and on the same triggers
+  as authority: before work, immediately after source inspection, immediately on
+  return from every confirmation, connection/picker/result dialog, event-pumping
+  or external wait, and immediately before any output mutation. After a yield,
+  this joint recheck precedes further command work or the next write phase.
+  Check D17 identity, published-path binding, freshness, readability, schema and
+  duplicate/rejection rules; compare the source hashes/fingerprints with the exact
+  snapshots used to build the candidate. A changed or invalid selected source
+  refuses the attempt; refresh/reselection and a new authorized attempt are required.
+  No source is silently omitted and no partial source set reports success.
+  No source runtime is created or changed.
   Admin feedback/audit stays with the original operator workbook and preserves
-  unknown columns. Only successful persistence reports completion; a later failure
-  reports the known outcome without claiming unproved rollback.
+  unknown columns.
+- Core builds the complete selected-set result in command-owned staging and checks
+  the joint authority/source/feed boundaries before promotion to the captured feed.
+  Never promote a partial-source or incompletely written candidate. Authority,
+  source or feed refusal before promotion leaves the existing feed bytes unchanged;
+  if a write phase yields, refusal on return prevents further writes or promotion.
+  Only independently verified complete persistence reports completion. If a write
+  or promotion fails, or its effects cannot be confirmed, report failure or an
+  indeterminate/incomplete outcome with only the verified persistence facts; never
+  claim rollback, unchanged output or success from a returned call alone.
+  Retain surviving command-owned staging and a durable Core-owned retry record
+  until the output's actual state is verified and the attempt is explicitly resolved.
+  Persist pending state before the first feed mutation; an unresolved pending
+  attempt after interruption/restart is indeterminate until independently verified.
+  The record binds the captured destination, selected-source fingerprints, phase
+  and confirmed/unknown persistence state; it contains no credentials or operational
+  row values and is internal ownership/retry evidence, not activity, an export or
+  an authorization grant. Preserve the actual feed bytes when their state is
+  uncertain; never delete or overwrite them merely to manufacture a clean retry.
+  Retry requires a newly captured authorized context and complete source/feed/output
+  revalidation. No stale candidate is automatically promoted. Later context/source
+  changes do not erase already verified persistence or establish a rollback.
 - Use direct typed calls within each project and declared primitive/serialized
   cross-XLAM envelopes. Status, activity and logs use fixed outcomes/counts, excluding
   credentials, entered values, paths and raw error reports. The source-selection UI
@@ -304,15 +362,38 @@ unchanged sources. See code `plan022_slice4be_admin_aggregation_results.md`.
   headless aggregation authorization remains separate. No recording ID, Training
   designation or replay eligibility is added by this decision.
 
-Approval authorizes D13 implementation, not acceptance. Extend the actual packaged
-Ribbon/form test and direct Core denial tests before source edits: authorized exact
-output, switched/closed original workbook, stale session/hints, saved rights loss,
-post-yield changes, changed Config, borrowed/dirty/read-only output and source
-rejection/non-mutation. Require focused RED/GREEN, packaged compile/layout, relevant
+Approval authorizes D13 implementation, not acceptance. Extend and run the actual
+packaged Ribbon/form RED and direct Core denial tests before product source edits:
+authorized exact output, switched/closed original workbook, stale session/hints,
+saved rights loss, source changes and trusted-feed changes during inspection and
+at every reachable yield/write boundary, changed/dirty/unreadable Config,
+borrowed/dirty/read-only output, and source rejection/non-mutation. Protect
+pre-promotion refusal without feed mutation; injected staging/promotion failures
+and interrupted/reopened attempts must distinguish verified
+preservation, confirmed complete persistence and unknown/partial effects, retain
+retry evidence and refuse stale or unverified retry. Identify absent yield sites
+as inapplicable, not covered.
+
+The focused RED must also include a path-only packaged comparison through the same
+public Ribbon/form handler on the unchanged baseline. Keep the source set, captured
+feed, authority, workbook and package fixed; change only joined-path normalization
+in a disposable test copy and compare the dispatched path, failing phase and actual
+persistence. Test drive and UNC feeds, retaining the UNC prefix while normalizing
+interior/trailing separators; neither variant may redirect the captured destination.
+The contract assertion is the exact canonical destination and complete selected-set
+output with unchanged sources. Baseline failure of that assertion is meaningful
+RED; the normalized comparison establishes causality only if it isolates and removes
+the packaged failure. If it does not, leave the hypothesis unresolved and investigate
+the actual failing boundary. Direct Core success is supplemental and never replaces
+this comparison or packaged GREEN. Missing fixtures, compile or harness failures
+are not behavioral RED.
+
+Require focused GREEN, packaged compile/layout, relevant
 regressions/full chain/live roles, static limits, normal closure and visible evidence.
 The current diagnostic proves only the narrower failures stated above. D17 two-PC/
-two-NAS UAT and4be-A early B0 remain separate open gates. Until explicit approval,
-the preceding normative contract remains operative; do not implement this proposal.
+two-NAS UAT and4be-A early B0 remain separate open gates. Approval authorizes
+implementation within this contract; focused RED/GREEN and all applicable gates
+remain required before acceptance.
 
 ### D18 -- Shared Events and How-To/Diagnostic Action Paths (R1 Locked)
 
@@ -2354,6 +2435,54 @@ Verified2026-10-13: expanded RED96/15 -> GREEN120 on unpromoted root-feedback-01
 with reviewed native warnings, directory149, smoke86, chain32/live48/Create15,
 five cold compiles and static limits. The owner correction is scoped-qualified;
 catalog39/161 is unchanged at that owner checkpoint; recording is qualified below.
+
+**Aggregation recording (D18 discovered-control refinement,2026-10-15; acceptance pending):**
+
+Catalog43 adds seven existing controls under owner `ADMIN_HQ_AGGREGATION`,
+ADMIN_MAINT and surface **Admin > Aggregation**, preserving catalogs1-42.
+This inherits approved D18 observations and D8-AGG-01 ownership; it grants no
+Training purpose, replay adapter, Windows access or additional warehouse authority.
+
+| ControlId suffix after `ADMIN_AGGREGATION_` | Existing entry | Class | Positive owner fact |
+|---|---|---|---|
+| OPEN | Aggregate Global Snapshot callback / visible form | Navigation | OPENED |
+| REFRESH | Refresh Connected | Command | DISCOVERED; discovery returned, not complete warehouse coverage. |
+| ADD_SERVER | Add Server | Navigation | STAGED; connection entry focused, no connection asserted. |
+| CONNECT | Connect + Discover | Command | CONNECTED; the Windows connection returned success. |
+| SELECT_SOURCE | Deliberate source-list click | Navigation | SELECTED; session-only choice, not aggregation. |
+| AGGREGATE | Aggregate Selected Sources | Command | COMPLETED only after the owning command confirms complete advisory output. |
+| CLOSE | Close button or window close | Navigation | CLOSED once for actual dismissal. |
+
+Record an eligible deliberate action's correlated REQUESTED/result pair using
+the captured source workbook/session. Preserve policy/user/storage/context gates,
+the live form surface and ordinary authorized work. Initialization, programmatic
+load/smoke, source-list population, typing, rendering and progress are not separate
+actions. Optional notices are yields: jointly recheck the original source,
+trusted feed and captured selected paths before further owner work.
+
+Only the table's positive facts satisfy CommandCompleted for their own control.
+AGGREGATE also supports REJECTED, DENIED, FAILED, CANCELLED, INDETERMINATE and
+COMPLETED_STOPPED. A stopped complete output stays acknowledged; incomplete or
+unknown persistence stays nonpositive. Describe only confirmed output/receipt
+facts: neither failed connection nor a later workbook-audit failure establishes
+that a retry receipt exists. Preserve known Core results without inferring rollback
+or inventing artifacts. Offer the supported outcomes in the expectation editor.
+All source references are empty and DataEffect is Unknown; advisory aggregation
+never establishes canonical inventory application. REQUESTED/positive/CANCELLED
+are Info; REJECTED/DENIED/INDETERMINATE/COMPLETED_STOPPED Warning; FAILED Error.
+Logs exclude credentials, entered roots/paths/values, row values, receipt contents
+and raw reports. Windows connection remains operator-required for R1 replay;
+scheduled/headless aggregation retains its separate authorization.
+
+D13: actual callback/form absent-observation RED52/52 becomes scoped GREEN104 on
+recording01, with exact persisted output, source preservation, policy suppression
+and optional-store faults. A focused actual failed-connection/post-save-audit
+RED25/2 becomes focused GREEN27 on recording02, retaining all assertions/order and
+484 tooling pins. Complete source maintenance/static ratchets pass without an
+exception (194 duplicates,9/45 dynamic calls and size caps). Recording02's full
+104 passes too; same-package/tooling retention with27 proves125 distinct checks.
+Independent guides and relevant regressions remain pending. Earlier
+owner-09 joint matrices447 retain source45336d88 scope. Overall4be-A/B0 stays open.
 
 **Tester recording (D18 discovered-control refinement,2026-10-13; scoped-qualified):**
 Catalog42 adds seven existing Admin controls under owner `ADMIN_TESTER_SETUP`,
@@ -5611,6 +5740,160 @@ Retain authorized provisioning, Cancel and independent owner-result evidence;
 require focused GREEN and applicable regression gates before D18 recording coverage.
 Implementation is authorized within this contract. No new recording control ID or
 4be-A acceptance is implied; D18-REPLAY-01 and early B0 boundaries remain unchanged.
+
+---
+### D8-INV-01 — Add/Edit Inventory interactive authority and System_Key identity (APPROVED,2026-10-15)
+
+The user explicitly approved the tightened proposal in docs98f63d7 on2026-10-15
+Pacific, within Plan0224be-A. **This decision is operative and authorizes D13
+test-first implementation, not acceptance.** Approval includes modal replacement
+refusal, zero-quantity protecting tests without editing D14, and the required
+cohort-bound Config diagnosis artifact. D14 already prohibits runtime/display/
+payload `ROW`; retaining it is not an approved compatibility option.
+
+**Catalog implementation refinement approved,2026-10-16:** plan all catalog
+fields before mutation, perform one joint authority/input check, write the whole
+synchronous batch without intervening yields, recheck, save, then confirm. Refuse
+already-open workbooks with unsaved changes. Report saved-but-unconfirmed output
+as a partial result; do not claim success or unproved rollback. The user requires
+focused GREEN before any build or deployment. Packaged-action and remaining
+acceptance gates still apply. This refines the approved implementation sequence
+and changes no catalog business policy or identity rule.
+
+**Observed problem and limits:** on unchanged source1c9bff87, the actual
+`btnAdminAddInventoryItem` -> `RibbonOnActionAdmin` -> `Add_InventoryItem` ->
+modal `mBtnOK_Click` diagnostic completes35 PASS/10 FAIL, without a harness
+exception. Two authorized controls and the signed-out action each persist one
+new exact entity at the submitted quantity, independently cold-read without a
+diagnostic save. Two create payloads contain `ROW`; all five forms display it.
+The other-warehouse Admin case does not mutate inventory. A replacement-session
+case captures another workbook and persists a create; the rule expiring that
+session is now approved below, but was not assumed by the earlier diagnostic.
+Auth bytes remain unchanged; Config bytes change from the first authorized
+control onward, with cause and semantic significance unresolved. These45 checks
+are an Add-entry diagnostic, not an Edit/Delete/worksheet matrix or proof of
+unrelated worksheet mutation. Exact evidence and provenance are in code
+`tests/integration/plan022_slice4be_admin_inventory_entry_results.md`.
+
+**Approved contract:**
+
+1. **Captured interactive command.** Admin captures the original saved operator
+   workbook before Config/Auth/catalog/source inspection can activate another
+   workbook. Core captures an opaque transient interactive context bound to that
+   exact workbook, source warehouse/station, signed-in invSys user/session
+   generation and trusted Config/Auth/runtime identities. Source resolution and
+   ADMIN_MAINT refer to that captured source. No ActiveWorkbook, saved user-ID,
+   Windows/Office identity, selected destination or other warehouse's Admin can
+   substitute. Invalid/missing/closed bindings refuse; the form never retargets.
+   Ordinary inspection follows D5/D8-A and cannot provision or repair authority.
+   Diagnose the observed Config byte change before classifying or changing it;
+   a byte mismatch alone does not establish an unauthorized semantic mutation.
+2. **One recheck schedule.** Immediately before every mutation, and immediately
+   after each yield before further work, Core rechecks live ADMIN_MAINT, captured
+   session/source continuity and the selected catalog/entity/table inputs together.
+   The closed yield list is: form return; UOM, edit-reason or custom-field prompts;
+   file/folder/connection/source/table pickers or inspection dialogs; confirmation
+   and result dialogs; event pumping; and external/asynchronous waits. Map actual
+   reachable sites to tests; do not count absent sites as coverage. This applies
+   before catalog, inbox/event, quantity, retirement, staging/result or save writes,
+   including automatic provisioning side effects. Sign-out, replacement session,
+   user/station/warehouse change, lost capability or an observed invalid source
+   expires the context. Changed trusted-source feed/root/Config binding requires
+   reopening or refusal; restoring it cannot revive an expired context. Authorized
+   in-command writes do not themselves expire the command's own verified results.
+   For modal Add/Edit/Delete, this same schedule revalidates the captured catalog
+   source, the selected catalog record when applicable, and any resolved affected
+   entity set. An externally changed/deleted/replaced catalog source or selection,
+   or a changed/replaced affected entity, refuses the pending action. Never silently
+   reload and use a replacement, including a replacement under the same Item Code.
+   Modal Add checks the captured catalog source even before an existing entity is
+   selected or a new entity exists. Reopening with a fresh context is required to
+   use a changed/replaced source or selection; switching back cannot revive it.
+3. **Owning boundaries and separate headless path.** Admin retains controls,
+   input/confirmation and presentation; Core owns interactive authorization and
+   command coordination; Inventory Domain retains canonical application through
+   events and its processor. Keep Core/Domain headless, typed calls within each
+   project and declared primitive/serialized cross-XLAM envelopes. Preserve explicit
+   provisioned headless/fixture authorization separately. A headless-capable queue
+   helper's provisioned-user check cannot authorize a stale interactive form.
+   D8's existing processor-run cache/TTL rule remains; recheck the interactive
+   command on processor return before any later command phase or write.
+4. **Identity and existing business scope.** Remove `ROW` from this runtime path's
+   managed headers, display, payloads, validation and compatibility signatures;
+   update callers rather than translating legacy rows. Generate System_Key once
+   at the owning creation boundary and preserve it thereafter. Catalog selection
+   and worksheet EDIT remain exact Item Code/SKU choices; catalog identity is not
+   a physical entity key. Quantity/retirement events must resolve and revalidate
+   their exact affected System_Key set before queueing. Preserve the existing
+   all-active-entities retirement contract, required reasons, catalog history,
+   non-counted modes, Condition, shared custom values by key and unknown columns.
+   No new entity-allocation, conversion, catalog or bulk-delete policy is approved:
+   an ambiguous quantity target refuses rather than inventing allocation. Keep
+   greenfield Admin-created inventory; no migration or ROW-to-key mapping.
+   The D13 assertions below protect existing zero-quantity creation. This decision
+   authorizes no edit to D14's locked quantity wording.
+5. **Worksheet ownership and joint preflight.** Create/Upload operate only on the
+   captured saved operator workbook and exact selected invSys staging table.
+   Refuse trusted authority, canonical inventory, published snapshots or foreign
+   workbook overlap; never close/save a borrowed authority workbook or redirect
+   structure changes. Keep worksheet catalog staging free of physical System_Key
+   and ROW headers. Validate every pending row before the first authoritative
+   write, and revalidate selected rows, resolved exact entities and source/session
+   together on the schedule in item2. A changed/deleted/replaced table, invalid
+   pending row or changed source cannot become a successful partial selection.
+   Preserve unknown columns and skip only independently confirmed successful rows.
+6. **Honest partial result and retry.** Preauthorization failure persists no new
+   command output. Authority loss stops further writes, including cleanup and
+   worksheet status/save writes. A failure after a confirmed earlier write reports
+   the known partial outcome; it never claims atomic rollback or full success.
+   Retain exact command/event/entity identifiers and confirmed/pending results in
+   the existing authorized result/receipt boundary until reconciliation or confirmed
+   cleanup. If no result could be durably recorded before authority loss, explicitly
+   report that limitation; do not claim a durable receipt exists. Freshly authorized
+   retry must reconcile already queued/applied events by their exact identities
+   before resubmission, including when a worksheet result save failed, and must not
+   duplicate a create or adjustment. A batch count alone is not saved application
+   proof. Cancellation, queue success, exact saved application and publication
+   remain distinct outcomes. No new general receipt store or cross-package object
+   contract is implicitly authorized by this decision.
+
+**D13 implementation and acceptance gates:** retain the45 diagnostic check
+identities and expand RED before product edits through actual Ribbon/modal OK,
+Edit/Delete and worksheet Create/Upload handlers, plus direct Core refusal tests.
+Cover signed-out stale hints, other-warehouse Admin, replacement session, role/
+capability loss, every reachable yield and write phase, changed/restored source
+feed, workbook/table replacement and forbidden overlap. Modal Add/Edit/Delete
+must additionally cover changed/replaced catalog sources/selections and affected
+entities after each reachable yield, including same-Item-Code replacements; assert
+refusal without retargeting or mutation. Modal Add includes source replacement
+before its new entity exists. Authorized and denied controls require exact
+independent persisted results. Explicitly assert zero-quantity creation remains
+accepted through both the modal Add and worksheet ADD handlers, with its active
+entity and exact saved quantity preserved; do not narrow it to positive-only
+creation. This protects D14's existing explicit zero-quantity behavior and is not
+an instruction to edit the earlier workbench wording. Also cover non-counted
+creates, multi-entity same-SKU edits/retirement, unknown/custom-column preservation,
+read-only/dirty borrowed workbooks, cancellation, partial application and failed
+result saves/retry.
+
+**Required Config diagnosis artifact:** maintain a written `Config diagnosis`
+section in code `tests/integration/plan022_slice4be_admin_inventory_entry_results.md`
+for each RED cohort. It must name that RED's exact product-source and test commits,
+controller/worker IDs, observed Config/Auth preservation results, diagnostic evidence
+and either an established cause with supporting evidence or an explicit unresolved
+status with the remaining questions and next diagnostic. Keep values redacted and
+inspection read-only. Evidence from a different source commit must be identified
+as a separate comparison, never substituted for the RED cohort's diagnosis.
+The artifact is a required D13 review deliverable alongside focused GREEN; passing
+GREEN cannot silently close an unresolved Config finding or weaken inspection
+guards. Carry unresolved status forward explicitly until cause/required correction
+is independently established and verified.
+
+Keep headless authorization, accepted Create/Seed/Receiving and Release1 workflows.
+Require focused GREEN, relevant regression/layout/recording/guidance gates, five
+cold compiles, regenerated static evidence and nonregressing growth/call metrics.
+Approval authorizes this test-first implementation, not4be-A acceptance, new D18
+ControlIds/replay adapters, package promotion or historical inventory import.
 
 ---
 ### D9 -- Operator Read Models and Refresh Contract (R1 Locked)

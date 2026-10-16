@@ -1,22 +1,1030 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**Modal catalog-only completion GREEN193 qualified:** sourcee6b2809b retains
+all50 RED192 assertion IDs/order and passes50/50 (originaltesta5d7f222; owning
+boundary probe follows the internal module extraction ine6b2809b). The new entity
+and quantity independently persist once; unrelated pending work and existing
+entities remain unchanged. Authorized continuation and honest saved-partial
+reporting after sign-out pass. Controller008dc57d21f74bd9aaf0cae28d5ab44a /
+workere37602e4e0484dbdb87c33394d4086c2; normal preserved native audit
+23:07:45.1463559Z, five package/496 tooling/thirteen source/four harness pins,
+zero desktop/native failures. Existing private entry now delegates to a small
+internal Admin module; modAdmin shrinks to2247 lines. The seven maintained4ak
+source checks pass. No XLAM build/deploy or comprehensive acceptance; imported-row
+proof, EDIT retry, Create phases and final current-source gates remain open.
+
+**Modal catalog-only completion RED192 qualified:** unchangedproductb8efb0fc/
+testa5d7f222 completes44 PASS/6 FAIL over50 checks; all23 retained Edit checks pass.
+The positive completion consumes an unrelated pending adjustment and fails form
+continuation. Both completion cases change an unrelated entity/event count;
+post-processor sign-out lacks honest saved-partial reporting. The owning new key,
+submitted quantity and ACTIVE state independently persist. Controller
+74d153e223344669924d93791a114358 / workeree8590c61df44c19884cd3975a9544ff;
+normal preserved native audit22:53:07.2982199Z, five package/496 tooling/twelve
+source/four harness pins, zero desktop/native failures. The compatibility fixture
+uses the Domain catalog routine in an Admin-generated disposable warehouse and
+proves no entity/event/key was fabricated; it imports no business inventory.
+Apply the existing Core plan/save/confirmation checks and exact-event processing
+within D8-INV-01; no change to retired-entity or allocation policy. GREEN pending.
+
+**Provisioned catalog/no-op GREEN191 qualified:** sourceb8efb0fc/testa29daaff
+(with the explicit-authorized boundary fixture caller updated inb8efb0fc) retains
+all56 RED190 IDs/order and passes56/56. Headless catalog edits require an explicit
+provisioned actor/station; denied and missing actors preserve the persisted file.
+Quantity no-ops check that same authority before returning success. Signed-out
+provisioned Admin creation/edit/no-op controls pass. Controller
+83496307d251469191b784bb0ccf9f49 / workerec492b5db2a24418bf4cd85daf1ab9cb;
+normal preserved native audit22:41:44.4515244Z, five package/495 tooling/twelve
+source/four harness pins, zero desktop/native failures. Source/direct service
+scope; current integrated and packaged/recording gates remain open. No build/deploy.
+
+**Provisioned catalog/no-op RED190 qualified:** unchangedsourcec693ada6/testa29daaff
+completes50 PASS/6 FAIL over56 checks, retaining189's20 identities in order.
+Denied Reader EDIT and the no-actor catalog helper both report success and persist
+changed catalog content. Denied Reader/no-actor quantity no-ops report success
+without event/quantity mutation. Authorized Admin controls pass. Controller
+f671771284ba4d5fa603b45a139f5b78 / worker6c2c85dd517e4e959a0e55f6d50b6b7a;
+normal preserved native audit22:36:52.2742456Z, five package/495 tooling/twelve
+source/four harness pins, zero desktop/native failures. Direct service source
+scope only. Require explicit provisioned catalog actor/station and check quantity
+authority before no-op return under D8-INV-01; focused GREEN remains pending.
+
+**Provisioned-headless GREEN189 qualified:** sourcec693ada6/test05970ae5
+retains all20 RED188 IDs/order and passes20/20. Signed-out provisioned Admin
+creation completes without the interactive worksheet receipt callback; denied
+Reader refuses before Config setup saves. Controller358662faec6d4b3195e74c16eb22f421 /
+worker450c69e4142a4f1cb42f13056cd04e9f; normal preserved native audit
+22:29:49.5814477Z, five package/495 tooling/twelve source/four harness pins,
+zero desktop/native failures. This is a direct provisioned-service source probe,
+not built-package acceptance. Catalog EDIT/no-op, remaining worksheet/Create and
+current-source regression/static gates remain open; no build/deploy.
+
+**Readonly-owner GREEN187 qualified:** sourcee499afaa/test1452c0cf retains all31
+RED186 IDs/order and passes31/31. Readonly operators refuse before buffer changes;
+writable Create remains an actual-handler positive control. Controller
+2b784a5d22d7452d96e8631d3fa89db4 / worker2c9b896abc244eb0b625ce5a25c3834b;
+normal preserved native audit22:19:41.1189450Z, five packages/494 tooling/twelve
+source/four harness pins, zero desktop/native failures. These remain source
+probes, with the owned readonly-save seam; no build or comprehensive acceptance.
+
+**Provisioned-headless RED188 qualified:** unchangede499afaa/test05970ae5
+completes17 PASS/3 FAIL over20 direct service checks. A provisioned Admin with no
+interactive session fails to apply its create because the worksheet receipt
+callback is reached without a context; the denied Reader reaches three Config
+setup saves before queue authorization refuses. Controller
+0e52a7ee8e694585b7bd0ba9baba2fcf / workere96a3a28a62847bbb63d898144debcdc;
+normal preserved native audit22:21:59.2574580Z, five packages/495 tooling/twelve
+source/four harness pins, zero desktop/native failures. Correct these within the
+approved separate headless path; no interactive authority may come from a hint.
+
+
+**Worksheet exact-ID retry GREEN185 qualified,2026-10-16 Pacific:** source
+1b316e4b/test58a1c69d passes64/64 with corrected182 IDs/order retained. The actual
+Upload handler independently saves exact zero active entities and staging results,
+stops later writes after authority/input loss, reports known saved partials, and
+reconciles a failed-result-save fresh retry by the original Event ID/System_Key
+without another create. Controller82f8bf37e03144e0bb0b786bab1a33a5;
+worker0f226933241b400b9edc7e8539b402f8; five package/493 tooling/twelve source/four
+harness pins/settings/fixtures and normal native audit22:10:38.7535964Z qualify,
+zero desktop/native failures. Current-source regressions/static and remaining
+D13/Create/headless/EDIT/imported-row proof remain open; no build or acceptance.
+
+**Readonly-owner RED186 qualified:** unchanged1b316e4b/test1452c0cf records
+27/4 across31 checks. Core accepts readonly operator owners and both Create/Upload
+change their buffers before save refusal. No readonly OS save is attempted by the
+owned-fixture seam; operator files and canonical inventory remain unchanged.
+Controller1bcfa4dbd7cd4cad98f1e65ba697081f;
+workerce086f8319f64442887f64b966de0d0c; all five package/494 tooling/twelve source/
+four harness pins/settings/fixtures and normal audit22:14:10.8049648Z pass.
+This is in-memory refusal coverage, not unauthorized persisted-output proof.
+
+
+**Corrected worksheet comparison183 qualified:** productc486cfc4/testc03741c7
+retains182's64 IDs/order and narrows54/10 to62 PASS/2 FAIL. All tested authority,
+changed-row and actual partial-notice assertions pass. Only failed-save fresh
+retry duplication and retention of the original exact event/entity still fail.
+Controllerb9106d2bb2814d29991aa32a693acfb7; worker275160656d6a4826a44b897309e0dba8;
+normal preserved native audit21:52:43.9458665Z, five packages/493 tooling/eleven
+source/four harness pins and zero desktop/native failures. No whole-gate GREEN.
+
+Source1b316e4b implements durable event IDs and exact queue/canonical lookup in
+the existing Upload Result boundary, with independent staging-save confirmation.
+It introduces no new general store, object bridge, identity mapping or allocation
+policy. Comparison185 is pending;184 is a payload-observer setup failure before
+any behavioral checks, not RED. No XLAM build/deploy or4be-A acceptance.
+
+
+**Corrected worksheet RED182 qualified:** source8d486927 exported directly from
+Git/testc03741c7 retains all64 original IDs/order and reproduces54 PASS/10 FAIL,
+now observing the exact worksheet form MsgBox prompt. Thus all ten failures are
+reproduced with the corrected sensor. Controller0939af0217ca4f81ba7b2566e0541cca;
+worker815b9917d7bc4acaa4726df6cc5c73b5; five package/493 tooling/eleven immutable
+exported-source/four harness pins/settings/fixtures and normal native closure
+qualify through21:45:35.9201880Z, zero desktop/native failures. The working
+implementation was not reset. Currentc486cfc4 comparison183 is pending;181's
+three notice flags remain observation-limited. No build or overall GREEN.
+
+
+**Worksheet notice-observation correction:**180's54/10 and181's observed59/5
+include three partial-notice assertions that read modAdmin's notice buffer rather
+than the actual worksheet form's message. Do not treat those three flags as proven
+presentation failures or fixes. The independent source/operator write and exact
+retry assertions remain valid. Correct the worksheet MsgBox observer and replay
+unchanged original source8d486927, then currentc486cfc4, retaining all64 IDs/order.
+An explicit11-component Git export is prepared for the original-source replay;
+no product-source reset or mixed-source comparison is intended. Add/Delete's own
+modAdmin notice probes and their existing qualified scopes are unaffected.
+
+
+**Worksheet Upload RED180 qualified,2026-10-16 Pacific:** unchanged product
+8d486927/test2dcd0f9c completes54 PASS/10 FAIL over64 actual-handler checks with
+no harness exception. Signed-out preflight still creates/saves output; changed
+pending rows are accepted; post-apply sign-out permits the operator save; result
+save failures and post-save authority loss lack honest partial reporting. A fresh
+retry after failed result save creates a duplicate and does not retain the original
+exact event/entity identifiers. Authorized exact zero creation, active state and
+unknown staging-column controls pass. Controller6bac7d243c034ec291e6ebcf5d20ec1f;
+worker140aab41dc3b47dfa49d3598feb4e459; five package/493 tooling/eleven source/four
+harness pins/settings/fixtures and normal native closure qualify through
+21:32:34.0680181Z. Source changes remain within D8-INV-01; no build/deployment or
+new general receipt store is authorized.4be-A remains incomplete.
+
+
+**Delete continuation GREEN176 qualified,2026-10-16 Pacific:** source8d486927
+passes29/29, retaining RED174's exact names/order. Core coordinates and independently
+verifies the all-active System_Key retirement result; Admin checks authority/inputs
+before the later catalog batch/save/confirmation. Authorized deletion reopens,
+post-processor sign-out prevents catalog retirement and reports the exact saved
+partial, and unknown catalog/entity columns survive. Controller
+ed0124d1601f4c838223dbd3529e5e85; workerb1d6d98b6a8c4132a090d193b20967bb;
+five package/492 tooling/eleven source/four harness pins, settings/fixtures and
+normal native closure qualify through21:22:02.9568052Z, zero desktop/native errors.
+17529/29 qualifies the behavior before consistent phase constants in8d486927.
+Add17719/19, Edit17823/23 and catalog17927/27 all qualify on this source.
+Maintenance07 validates six reports/three schemas:375 components/6634 procedures/
+143534 lines,194 duplicate groups,9/45 dynamic calls, no oversized growth and
+passing new-size ratchets versusb936503e. No XLAM build/deploy or comprehensive4be-A acceptance. Worksheet
+joint writes/result-save retry, remaining Core/headless/D13, packaged/regression/
+recording/guidance and Release1 gates remain open. Config causality is unresolved.
+
+
+**Delete processor-return RED,2026-10-16 Pacific:** product47b50ef7/test0fbdfb99
+qualifies17326 PASS/3 FAIL over29 actual Delete checks; diagnostic174/testd1ef4360
+retains all names/order and26/3. Both generated same-SKU entities retire exactly
+and unknown columns survive, but authorized continuation fails and post-processor
+sign-out still permits the catalog retirement save without an honest partial notice.
+174's five package/492 tooling/nine source/four harness pins, settings/fixtures and
+normal native closure qualify through21:12:26.6508251Z. Source28d4306e now moves
+exact retirement coordination into Core and guards the later catalog batch;
+focused comparison175 is pending. No build/deploy or comprehensive acceptance.
+
+
+**Add continuation GREEN169 qualified,2026-10-16 Pacific:** source47b50ef7
+passes19/19, retaining RED167's exact names/order. Core plans the owning create's
+catalog/entity fields before queueing and independently verifies exact saved
+receipt/log/catalog/entities before adopting its own result. The authorized Add
+reopens; post-processor sign-out reports saved partial and stops continuation.
+Controllerbbe148228055406bb49e8e5cc081c07c; worker9f83528556b145efa0e9f478c4aa1ba4;
+five packages/491 tooling/nine source/four harness pins/settings/fixtures and
+normal native closure qualify through20:59:40.5041125Z, zero desktop/native errors.
+The incomplete168 comparison identifies a missing-key Dictionary lookup corrected
+by47b50ef7; it is not an additional RED or GREEN. Edit17023/23 and catalog17127/27 now qualify with
+retained names/order and normal native audits21:02:38.6318834Z and
+21:04:50.5011782Z. Static06 qualifies all six reports/three schemas with373 components/6624
+procedures/143367 lines,194 duplicate groups and9/45 dynamic calls. There is no
+oversized growth; three new components max282 lines and59 new procedures max63
+pass the size ratchets versusb936503e. These are unsaved real-handler source overlays,
+not built packages. Delete/worksheet/result-save retry and broader4be-A remain open.
+Config/Auth are unmeasured in169;166's unresolved diagnosis retains its own3d66ac92
+source scope. No build/deployment or new control IDs.
+
+
+**Full comparison166 qualified,2026-10-16 Pacific:** product3d66ac92/testeeec095c
+completes299 PASS/1 FAIL across300 unique checks, retaining135 names/order with no
+harness exception. Only InventoryEntry.SourceAuthAndConfigPreserved fails. All
+five package/490 tooling/eight source/four harness pins, settings and fixtures
+restore; normal native closure qualifies through20:42:43.7367441Z with zero Excel
+events. Controller050b2f01fc01419e81dbeed4b59010d7;
+worker6ba01fdf595f430f9e11359f71806572. Long normal shutdown finishes without force.
+This qualifies the comparison's observation, not whole-suite GREEN or built-package
+acceptance. Exact quantity, managed fields and bounded retry controls pass.
+
+**Add continuation RED167 qualified:** unchanged product3d66ac92/test9770b233
+reproduces17 PASS/2 FAIL across19 actual-handler checks. Authorized Add saves the
+owning generated zero-quantity entity but does not reopen; post-processor sign-out
+saves that entity without an honest saved-partial notice. Controller
+59b2f023689f4c2d82cebe60a73b26c0; worker0910ffdacbd34942b0592cbf1a88df8f.
+Five package/491 tooling/eight source/four harness pins, settings and fixtures
+restore with normal native audit20:45:45.3429007Z, zero Excel events. D8-INV-01
+requires exact own-result acknowledgement and refusal after authority loss.
+No XLAM build/deployment or comprehensive4be-A acceptance.
+
+
 **Status:** Current corrective implementation plan
 
 ## Slice 4be -- recording/guidance and replay/proof
+
+**Managed-field source regression,2026-10-16 Pacific:** unchanged product
+3d66ac92/testeeec095c qualifies GREEN16533/33 with all original124 names/order.
+Diagnostic164 proves the generated seed workbook is open and dirty; refusing it
+is correct. Test setup now independently verifies persisted entities/quantities
+and unchanged bytes, then closes only that owned copy without saving. No product
+guard is weakened. Pins/settings/fixtures and normal native closure qualify through
+20:09:55.6993159Z. Full166 is running; no built-package or comprehensive acceptance.
+
+**Cleanup163 resolved naturally,2026-10-16 Pacific:** the same worker/Excel/
+controller exit unforced; all pins/settings/fixtures and zero native failures
+qualify through19:58:45.3089330Z. The257/3 over260 observation is preserved as
+incomplete, not a300-check GREEN. No force exception is required. The earlier
+cleanup block and handoff192 are historical to this exit. Focused managed-field
+admission diagnosis is next; cause remains unproved and product guards stay intact.
+
+**Full comparison163 incomplete; cleanup blocked,2026-10-16 Pacific:** source
+3d66ac92/testb7be62d7 observes257/3 over260 checks including a harness exception,
+not completion of the300-check suite. Known Config byte failure remains; the
+first managed-field handler is unreached and its precondition cause is unresolved.
+The test-owned headless Excel process cannot be reached by normal COM/window
+close. No forced termination; the controller retains restoration state. Settings/
+fixture cleanup, final pins and native audit are pending. Keep tooling/packages
+frozen and launch no new Excel cohort until resolved. Qualified23/23 Edit and
+27/27 catalog source scopes stand; no build/deploy or comprehensive acceptance.
+
+**Catalog regression and final-source maintenance,2026-10-16 Pacific:** source
+3d66ac92 retains catalog GREEN16227/27 with clean preserved native closure through
+19:35:28.8443616Z. All six maintenance reports are complete, three schemas validate,
+and non-growth ratchets pass:194 duplicate groups,9 literal/45 unresolved dynamic
+calls and no oversized-module growth. Full retained Inventory comparison163 is
+running in unsaved source overlays. No XLAM build/deploy or comprehensive acceptance.
+
+**Exact Edit source checkpoint,2026-10-16 Pacific:** source3d66ac92/
+testb7be62d7 qualifies GREEN16123/23, retaining RED153 names/order. The timestamp
+precision correction first narrows14/9 to22/1; exact saved-event acknowledgement,
+numeric-date validation and owned-reader lifetime now allow successful Edit to
+continue while post-save sign-out stays partial. All pins/settings/fixtures and
+normal native closure pass through19:32:53.5398853Z. No XLAM build/deploy; these
+are unsaved operator-handler overlays. Current catalog/full Inventory regressions,
+Add/Delete own results, worksheet write/result retry and broader gates remain.
+Config remains a separate unresolved cohort-bound finding. Prior-sourcec5b82d52
+maintenance validates all schemas and restores194 duplicate groups with9/45 calls
+and no oversized-module growth; final-source maintenance is running.
+
+**Full-Edit continuation checkpoint,2026-10-16 Pacific:** current sourceb84093c5/
+test21556a44 qualifies RED15314/9 over23 actual Edit-handler checks. Even no-op
+quantity does not continue; changed-quantity cases never reach the processor.
+An earlier catalog/integration refusal requires fixed-stage diagnosis before any
+quantity acknowledgement correction. All source/tool/package/settings/fixture
+pins and normal native closure pass through19:06:04.0365010Z. This does not negate
+151's narrower108 input checks or establish built-package acceptance. Config/Auth
+remain unmeasured in153; the cohort-bound unresolved note is in the code receipt.
+
+**Catalog source checkpoint,2026-10-16 Pacific:** qualified component RED145
+16/16 becomes GREEN14632/32 on5e7b81b4. Real Core RED14724/3 becomes GREEN148
+27/27 onb84093c5, retaining exact names/order; independent saved-byte confirmation
+now rejects memory-only Saved flags. Post-save authority loss stays partial.
+The32-check component gate is retained GREEN149 on the same source. All cohorts
+preserve settings/fixtures/packages/tooling and close normally; latest native
+audit18:48:12.8617567Z. These are unsaved source probes, not built XLAMs or packaged
+acceptance. The retained108-handler input matrix also qualifies GREEN151 on this source,
+exact RED138 names/order, preserved seven source overlays/all489 tooling/five
+packages/four harness pins, normal native audit through19:00:06.4994974Z.
+Own-write acknowledgement and worksheet integration remain open. Config notes stay cohort-specific in the code receipt.
+Harness142–144 are not RED.
+
+**Catalog phase authorization,2026-10-16 Pacific:** the user approved the concrete
+write phase under D8-INV-01 after restructuring to plan every field, one joint
+check, write the whole synchronous batch, recheck, save and confirm. Refuse dirty
+already-open workbooks; saved-but-unconfirmed is partial. Focused GREEN is required
+before building or deploying. The old198-line interleaved patch remains unapplied
+and is superseded by this sequence. A source-component gate is prepared: exact
+catalog procedures run in an unsaved probe with deterministic guard outcomes and
+independent cold reads of Admin-generated fixtures. It builds/saves no XLAM and
+does not substitute for the packaged callback/input gates. The scoped RED/GREEN results above implement this approval. Excel was closed
+with user authorization; no XLAM build/deploy or comprehensive acceptance is claimed.
+
+**GitHub workflow clarified,2026-10-16 Pacific:** pull from soetrain's matching
+main branches, publish feature branches to the authenticated justinwj repositories,
+and create/update PRs targeting soetrain/main for his review/merge. Both origin/main
+branches were pulled and already contained in the working branches. Draft
+[code PR3](https://github.com/soetrain/invSys_fork/pull/3) and
+[docs PR2](https://github.com/soetrain/invSys_docs/pull/2) now exist. Git/CLI defaults
+and both root AGENTS.md files preserve this across chats; local main branches match
+origin/main, with the old divergent docs main preserved on an archive branch.
+The earlier fork-push authorization block is resolved. The separate rejected
+catalog implementation edit remains unapplied, and all runtime acceptance gates
+remain unchanged. This is repository housekeeping, not a D13 contract change.
+
+**Config diagnosis140 qualified,2026-10-16 Pacific:** unchanged validated
+product68949ab0/testfb59319c retains49/1 over the exact50 baseline identities/order.
+The byte difference affects core.xml and only Excel runtime-metadata record3073
+(`brtRevisionPtr`) in workbook.bin. All40 record headers/order, other payloads,
+table cells/shapes and observed properties/bindings remain unchanged; denied cases
+make no saves/part changes. One Workbook property is unavailable. The same-cohort
+cause-or-unresolved artifact is recorded in the code Inventory receipt; all workbook
+semantics remain unproved and the raw byte-preservation assertion remains FAIL.
+Five packages/all486 tooling/settings/fixtures and normal owned/native closure
+qualify through07:52:35.9468342Z with zero desktop stops/Excel failures. The read-only
+test diagnostic changes no runtime/architectural contract. No rejected catalog edit,
+prototype build or promotion occurred in that cohort; the later catalog phase
+authorization and its conditions are recorded above.
+
+**Inventory continuation boundary,2026-10-16 Pacific:** source68949ab0 turns all
+seven retained ROW assertions GREEN in baseline137's49/1; Config remains unresolved.
+Focused input138 qualifies88/20 with preserved packages/all486 tooling/settings/
+fixtures and normal owned/native closure through07:03:14.2959637Z. A partially wired,
+unbuilt Core input prototype is staged. Automatic approval review rejected the
+guarded live catalog mutation/save patch twice as too broad for automatic approval.
+The unapplied198-line diff/review note are under code tests/proposals. The user has
+now authorized the batch restructuring above; GitHub publication is also authorized;
+D8-INV-01's architectural approval remains operative. Do not build/promote the
+prototype before completing event/result acknowledgement and catalog/staging/write
+phases, then obtaining focused GREEN and applicable regressions. All broader4be-A/
+Release1 and Config semantic gates remain open. No new architecture proposal.
+
+**Inventory comparison135 qualified,2026-10-15 Pacific:** productb936503e/
+testad7b7056 records272 PASS/28 FAIL over300 unique checks, retaining the exact257
+prefix without a harness exception. Managed fields, exact quantity and bounded
+retry pass; seven ROW,20 changed-input and unresolved Config checks fail. Preserved
+five packages/all486 tooling/settings/fixtures and normal unforced native/owned
+closure qualify through2026-10-16T06:43:57.8070488Z. Static370/6568/142598 retains
+194 duplicates/9 literal/45 unresolved calls and all size limits. Config changes
+are observed during save calls and identified as core.xml/workbook.bin; semantic
+significance remains unresolved in the required artifact. ROW source68949ab0 is
+prepared with updated callers, awaiting build and focused packaged proof. No
+promotion or full acceptance; remaining revalidation/coordination/retry and broader
+4be-A/Release1 gates stay open.
+
+**Inventory exact quantity/retry GREEN,2026-10-15 Pacific:** focused actual Edit
+target RED11/1 becomes12/12 on306fa2da. Queued-event failure/retry establishes17/3;
+the expanded unrelated pending-event control establishes17/5 over22 checks. On
+b936503e, bounded exact-payload/event matching and an optional exact-receipt
+processor filter produce22/22: one original event applies, exact target/identities
+are preserved and the unrelated event remains unapplied. Preserved five packages/
+all486 tooling/settings/fixtures and normal owned/native closure qualify through
+2026-10-16T06:24:09.0656757Z. Candidate remains unpromoted. Full300 comparison and
+safe Config part/save-phase instrumentation are prepared. All remaining ROW/input
+revalidation, canonical catalog ownership, create/result-save retry, Config cause
+and broader4be-A/Release1 gates remain open; focused GREEN is not acceptance.
+
+**Inventory managed-field GREEN,2026-10-15 Pacific:** actual modal Additional
+Field/worksheet Upload tests move RED28/5 on08d0e3f1 to GREEN33/33 on73e883b0,
+unchanged test9367159b and exact assertion identities/order. Build125 and preserved
+five packages/all486 tooling/settings/fixtures plus normal owned/native closure
+qualify through2026-10-16T06:00:02.9654160Z. No promotion or full acceptance. Next
+increment addresses exact Edit quantity RED120 using a Core exact-entity command;
+remaining revalidation/catalog ownership/ROW/retry and Config diagnosis stay open.
+
+**Inventory authority increment qualified,2026-10-15 Pacific:** source/test08d0e3f1
+completes229 PASS/28 FAIL over257 checks, retaining251 prior names/order and42
+actual handler/yield cases without a harness exception. Tested stale authority,
+session/capability and changed-root refusals now pass; both authorized zero-quantity
+controls pass. ROW, catalog/entity/table replacement, exact Edit quantity and Config
+remain open. Five packages/all486 tooling/settings/fixtures and normal owned/native
+closure qualify through2026-10-16T05:40:51.8753855Z. Guarded build121/cold122 qualify
+the unpromoted validation-inventory-authority-01 candidate, with all five compiles.
+Static generation retains194 duplicate candidates and9/45 dynamic-call counts.
+The code receipt records the exact123 provenance and required unresolved Config
+artifact. Next focused test exercises reserved managed fields through actual form/
+Upload handlers before guard changes. Complete Core coordination, revalidation,
+identity/quantity, retry and remaining4be-A/Release1 acceptance remain required.
+
+**Inventory focused quantity RED,2026-10-15 Pacific:** source1c9bff87/testc60fad9f
+passes11/fails1 through actual Edit/reason after owning single-entity creation.
+Only the exact target quantity fails; identity/other quantities and all five
+compiles pass. Preserved normal closure qualifies through
+2026-10-16T05:01:20.9278151Z. Config is unmeasured in that focused scope and remains
+unresolved, separately from119's comparison. A first implementation increment now
+adds Core-captured source/session checks at the launcher and real form actions,
+with unchanged search helpers extracted to prevent oversized-component growth.
+Catalog/entity/table revalidation, full Core coordination/write ownership, D14
+quantity/payload and partial/retry work remain; no candidate GREEN or acceptance.
+
+**Inventory replacements RED qualified,2026-10-15 Pacific:** source1c9bff87/
+testf379ae51 completes183 PASS/68 FAIL,251 unique checks with all190 prior names/
+order/outcomes retained and42 actual handler/yield cases reached. Catalog/entity/
+worksheet replacement and UOM/Delete-reason authority changes expose continuation;
+changed source root causes foreign runtime-file changes in Add and operator save
+in Create. The Boolean foreign-file proof does not identify contents or quantity
+redirection. Five packages/all486 tooling/settings/fixture preservation and normal
+unforced native/owned closure qualify through2026-10-16T04:54:07.6935062Z, without
+desktop stops or Excel failures. Config cause remains unresolved in the required
+cohort artifact. Next: actual exact-entity Edit target-quantity RED for the existing
+ROW guard, then applicable partial/retry and remaining gates. No product edits.
+
+**Inventory Config diagnostic qualified,2026-10-15 Pacific:** unchanged
+source1c9bff87/testd9aab17a completes142 PASS/48 FAIL with190 unique checks,
+retaining all185 prior names/order/outcomes. Five read-only extraction proofs
+pass. Table-cell values/shapes do not change; four callback cases change one
+metadata and one unidentified Other ZIP part, while other-warehouse changes none.
+Config cause remains explicitly unresolved in the cohort-bound artifact. Preserved
+five packages/all486 tooling/settings/fixtures and normal unforced owned/native
+closure qualify through2026-10-16T04:36:26.4217803Z, without desktop stop or Excel
+failure. Next test expansion covers catalog/entity/source/table changes and UOM/
+Delete-reason prompts; it is prepared, not yet run. No product implementation.
+
+**Approved Inventory first expanded RED,2026-10-15 Pacific:** source1c9bff87/
+testc8321d65 completes137 PASS/48 FAIL,185 unique checks without a harness
+exception. All45 baseline names/order/outcomes and30 actual modal/worksheet
+handler/yield cases are retained/reached. Authorized modal Add and worksheet
+Upload persist exact zero-quantity entities. Stale authority and changed catalog
+cases fail; worksheet Create/Upload save after another-warehouse authority switch.
+Five packages/all486 tooling/settings/fixture preservation and normal native/owned
+closure qualify through2026-10-16T04:22:45.9302285Z, without desktop stops or Excel
+failure events. Code Inventory receipt records exact scope and the cohort-bound
+unresolved Config note. Further replacement/yield/partial-result/Core/headless
+cases and Config diagnosis remain required; no product implementation yet.
+
+**Current approval boundary,2026-10-15 Pacific:** Add/Edit Inventory trial115 on
+unchanged recording02/source1c9bff87 completes35 PASS/10 FAIL through the actual
+Ribbon/modal OK path, retaining all45 names/order without a harness exception.
+Independent read-only reopen proves exact authorized and signed-out persisted
+creates. ROW payload/display and one wrong-host capture also fail. Another
+warehouse's Admin does not mutate inventory; replacement-session refusal is not
+assumed as an already approved rule. Auth is preserved; Config bytes change with
+unresolved cause. Five packages/all485 tooling/settings/fixture preservation and
+normal owned/native closure qualify through2026-10-16T00:02:59.4379339Z, with zero
+Excel failures or desktop stops. Code Inventory receipt records exact evidence.
+
+Normative **D8-INV-01 is APPROVED,2026-10-15 Pacific**, within the existing4be-A
+slice. It defines a separate Core-owned interactive Add/Edit/Delete and worksheet
+command boundary, captured source/session checks at every listed yield and before
+mutation, D14 identity, exact entity/source/table revalidation and honest partial
+retry. It preserves separate headless authorization and existing catalog/SKU
+selection; no new quantity allocation, conversion, receipt store, historical import
+or bulk delete is implied. The revised D13 list explicitly protects zero-quantity
+creation through modal Add and worksheet ADD; this decision authorizes no edit to
+D14's locked quantity wording. Modal catalog/source/selection or affected-entity
+replacement after a yield must refuse without silently binding a replacement,
+including the Add path before its new entity exists. The user explicitly approved
+the tightened docs98f63d7 contract; D13 test-first implementation is now authorized,
+not acceptance or deployment.
+
+Next: expand actual-action D13 RED across Edit/Delete, worksheet Create/
+Upload, live session/source changes and reachable yield/write phases. Require the
+Inventory receipt's written `Config diagnosis` artifact tied to each RED's exact
+product/test commits and controller/worker IDs, with proven cause or explicit
+unresolved status, supporting evidence and next diagnostic. Focused GREEN cannot
+silently close that unresolved finding. Then implement and qualify focused,
+regression, layout, static, recording and guidance gates. Tester127, Settings202,
+recording80 and Receiving121
+remain qualified on source1c9bff87. Current Release1 fixture conformance, remaining
+coverage and comprehensive4be-A acceptance remain open. No package promotion or
+new recording ID. Earlier dated checkpoints below retain their original scopes.
+
+**Current shared lifecycle qualified,2026-10-15 Pacific:** source1c9bff87/
+recording02 passes80/80 with two original-size reviewed captures and verified
+five-package/all484 tooling/settings/fixture preservation. Normal owned closure
+and zero delayed native failures qualify through23:44:34.0908423Z; no desktop
+stop. Initial99 refuses its option combination before Excel, not product RED;
+fresh112 explicitly supplies the already implied published-read flag. Tester127,
+Settings202 and Receiving121 stand. Next uncovered entry is Add/Edit Inventory:
+the isolated compiled Ribbon/modal diagnostic is prepared, with product unchanged
+and no native persistence claim yet. No new architecture approval or deployment.
+Release1 fixture conformance and remaining coverage keep4be-A open; code receipts
+give exact scoped evidence.
+
+**Current shared Settings regression qualified,2026-10-15 Pacific:** source
+1c9bff87/recording02 passes202/202 with ten original-size reviewed captures and
+exact retention of the earlier catalog/capture-attempt assertion prefixes. The
+test adds exact43/186 alongside retained41/172 and42/179; product/capture guards
+remain unchanged. Packages/all484 tooling, settings/fixture cleanup, original
+taskbar state and normal owned closure pass through23:34:52.4228054Z, with zero
+delayed Excel failures or desktop stops. Earlier98/109 keep their partial scopes.
+Receiving121 and Tester127 stand; recording lifecycle is running. Next uncovered
+entry audit is Add/Edit Inventory; Release1 fixture conformance and remaining
+coverage still keep4be-A open. Code receipts give exact evidence; no deployment
+or new approval occurs.
+
+**Current Receiving packaged gate qualified,2026-10-15 Pacific:** recording02/
+source1c9bff87 trial108 passes121/121 with every earlier behavior-check name/order
+retained and15 captures reviewed at original size. Parent-owned fixture removal,
+settings/package/template/all484 tooling preservation, original taskbar restoration
+and normal worker/Excel/controller/monitor closure pass. Delayed native audit through
+23:15:41.5845891Z finds zero Excel failures; no desktop stop or forced termination.
+Older107 remains121/1. This qualifies the current early-B0 technical gate, not
+comprehensive B0/4be-A or human acceptance. Tester127 stands; Settings is running
+and lifecycle is prepared. Release1 fixture conformance and uncovered controls
+remain required. Product source/static qualification is unchanged; code receipts
+provide exact scoped evidence. No new approval or deployment occurs.
+
+**Current shared Tester guide regression,2026-10-15 Pacific:** recording02/source
+1c9bff87 passes127/127 with eight reviewed captures, verified five-package/all484
+tooling pins, preserved settings/fixtures and normal native/owned closure through
+22:57:36.4777226Z. No desktop stop or Excel failure event. The launcher observation
+ends143 while its separately launched runner finishes with original orchestration
+exit codes0; the native gate is complete. B0's saved-copy fixture now supports
+parent-owned cleanup after worker/Excel exit, retaining existing guarded path
+validation. Four refusal checks pass; the complete121 rerun is prepared. No product
+contract change or new approval. Settings/lifecycle, Release1 fixture conformance
+and remaining coverage keep4be-A open; code receipts give exact provenance.
+
+**Current Receiving behavior result,2026-10-15 Pacific:** trial107 on unchanged
+recording02/source1c9bff87 completes121 passing checks and one child-cleanup
+harness failure, with15 directly reviewed images and unchanged package/template/
+all484 tooling pins. No product assertion fails. Worker/Excel/controller eventually
+exit unforced; settings preservation and zero delayed native failures qualify
+through22:39:30.7159407Z. Outer observation143 lacks original orchestration closure;
+recovered monitor closure and original-taskbar restoration are separate receipts.
+Automatic review rejects proposed worker termination, which is never executed
+and is unnecessary after natural exit. No new approval is pending. Preserve the
+cleanup failure and require parent-owned post-worker cleanup for full B0 proof.
+Shared regressions, Release1 fixture conformance and remaining control coverage
+still keep4be-A open. Exact provenance is in the code Receiving receipt.
+
+**Current B0 capture-fixture correction,2026-10-15 Pacific:** diagnostic103 retains
+44/2 harness-only failure and identifies taskbar overlap; temporary taskbar
+comparison104 retains41/2 because the larger test fixture keeps an out-of-work-area
+position. Both close normally with preserved inputs, no desktop stop and original
+taskbar-state restoration. Dedicated blank-fixture tooling RED->GREEN retains all
+six cases, size/topmost state and covered-window refusal. Only B0 test-window
+positioning changes; no product package, size requirement, action or capture guard
+changes. Full trial107 now runs with original taskbar restoration required. The
+Receiving receipt gives exact proof; current B0/4be-A acceptance remains open.
+
+**Current Receiving B0 harness checkpoint,2026-10-15 Pacific:** recording02/source
+1c9bff87 trial96 ends44 PASS/2 harness exceptions, with no failed product assertion.
+Native capture refuses obscured content after maximized state/control-fit checks;
+the child cleanup leaves five startup-probe copies, removed only after process
+exit and exact disposable-content verification. Preserved normal native/owned
+closure passes through21:58:55.9692400Z; no desktop stop. Read-only failure metadata
+now retains existing IDs/classes/geometry, preserving refusal/no-image/no-retry
+behavior. Five isolated redaction/honesty checks and unchanged native-code proof
+pass. Full unchanged-product trial103 continues with all checks/guards; no product
+RED or current B0 acceptance is claimed. Exact evidence is in the Receiving receipt.
+
+**Current six-group Aggregation qualification,2026-10-15 Pacific:** fresh unchanged
+NamedReturns57/FeedReopen29 join path88/Ownership60/Completion60/Restart14, proving
+273 distinct checks with identical five-package/all484 tooling pins. The57 retains
+every passing interrupted94 check;94 remains40/1 stop evidence. Normal preserved
+closure and zero delayed native events pass through21:55:07.4471793Z, without a new
+desktop stop. Recording125, independent guide135/eight reviewed captures and cold/
+static gates stand on source1c9bff87. Current Receiving B0 runs with byte-identical
+pinned candidate copies/template. Shared regressions, Release1 fixture conformance
+and remaining control coverage keep4be-A open. The code receipt names the exact
+composite verifier; no product change, new approval or current/NAS promotion occurs.
+
+**Current Aggregation regression checkpoint,2026-10-15 Pacific:** unchanged
+recording02/source1c9bff87 qualifies path88/Ownership60/Completion60/Restart14,
+199 distinct checks on identical five-package/all484 tooling pins, with normal
+preserved closure through21:31:00.3298002Z. NamedReturns94 stops40/1 on actual
+error5 at21:37:15.1398023Z (14:37:15 Pacific); exact passing prefix retained,
+clean preserved closure through21:37:43.2865463Z. This is partial stop evidence,
+not behavioral RED or complete GREEN. The user resumes; passive inspection is
+clear at21:39:25.8217256Z and frozen pins match. Fresh unchanged NamedReturns100/
+FeedReopen101 run in batch102, retaining the completed groups. No bypass, security
+change or new approval. Current B0/shared regressions, Release1 fixture conformance
+and remaining control coverage keep4be-A open; exact provenance is in the code receipt.
+
+**Current Aggregation guide/cold qualification,2026-10-15 Pacific:** unchanged
+recording02/source1c9bff87 passes independent guide135, with eight reviewed captures.
+Actual independent recordings and saved guide conclusions distinguish successful,
+Incomplete and Failed outcomes; reader authoring refuses and all three views
+preserve evidence. Pins/settings/cleanup and normal native/owned closure pass
+through20:51:56.8313608Z. All five projects cold-compile;359 components preserve all
+prior358 with exactly seven intended source additions/changes, clean closure through
+20:53:08.0573248Z. Exact provenance is in the code Aggregation receipt. Current six-
+group D8 regressions run next; shared-store/Release1 regressions, remaining control
+coverage and current Receiving B0 keep4be-A open. Earlier stop records retain their
+scope. No product/assertion change, new approval or current/NAS promotion occurs.
+
+**Current Release1 regression fixture limitation,2026-10-15 Pacific:** source
+inspection finds that `validate_phase6_live_role_workflows.ps1.New-InventoryWorkbook`
+writes synthetic canonical create/applied rows with fixed SKU-indexed SYS-LIVE keys;
+the ordered full-chain copy retains that prefix. Its separate Admin-generated
+entry gate does not validate those seed rows. Before current release-regression
+qualification, use generated runtimes and owning creation/processing results,
+preserving exact generated keys and all existing workflow assertions/counts.
+Historical live48/chain evidence keeps its original scope. This follows current
+D14/AGENTS fixture rules and adds no architecture or product behavior; no new RED
+or runtime result is claimed. The code remaining-Admin coverage audit records
+the concrete source finding. The active Aggregation guide/regression work continues.
+
+**Current error5 stop,2026-10-15 Pacific:** corrected independent guide trial87
+on recording02/source1c9bff87 ends7 PASS/1 desktop-stop harness failure at
+20:23:20.1669715Z (13:23:20 Pacific). Compiles/fixture/actual Start pass; complete
+guide, saved output/conclusions and images remain unqualified. Settings/pins/
+cleanup and normal native/owned closure pass through20:24:09.5596802Z; Excel is
+closed. No bypass or further runtime dispatch. Qualified recording104/outcome27
+retain125 distinct checks and full static ratchets stand (194 duplicates,9/45
+calls/caps). Cold/source comparison, current relevant regressions, complete
+guidance/control coverage and4be-A/B0 remain open; Handoff186 gives continuation.
+
+**Aggregation final recording qualification,2026-10-15 Pacific:** candidate02/
+source1c9bff87 passes104/104, preserving all original RED names/order. Identical
+packages/all484 tooling with outcome27 retain125 distinct passing checks. Actual
+controls, exact output, source preservation, suppression/store faults and clean
+preserved native/owned closure pass through20:15:46.4874456Z. First guide7/1 is a
+FileInfo short-path harness failure after actual Start, with clean closure through
+20:18:13.7730381Z; no behavioral RED or guide acceptance. Test549c1d79 corrects its
+FullName/LiteralPath read and adapts optional notices only for non-recording
+regressions. No product/assertion change. Fresh guide trial87 runs; cold/source
+comparison, relevant regressions, independent guidance and4be-A/B0 remain open.
+
+**Aggregation static qualification,2026-10-15 Pacific:** full source1c9bff87
+maintenance generation and reproducible ratchets pass:366/6559/142380,194 duplicate
+groups,9/45 dynamic calls, no old oversized growth and new maxima213/83 against
+1000/200 caps. The enumeration consolidation removes one procedure, three lines
+and the new duplicate. No exception. Final104/guide sequence is running; cold/
+source comparison, relevant regressions and4be-A/B0 remain open. Static evidence
+qualifies source maintenance only, not runtime or deployment.
+
+**Aggregation outcome GREEN27,2026-10-15 Pacific:** source1c9bff87/recording02
+passes unchanged27/27 with both failures cleared, exact RED order and484 tooling
+pins retained. Real failed connection and post-save audit failure records no longer
+claim nonexistent retained attempts; independent owner/output/receipt/UI facts pass.
+Five compiles, preservation and clean native/owned closure pass through19:59:19.4545410Z;
+build closure passes through19:53:38.6669835Z. No desktop stop or promotion.
+Final-candidate104 and independent guides now run serially. Source-only metrics
+return duplicates to194 and retain9/45 calls; complete generation/ratchet verification
+and current relevant regressions/4be-A/B0 remain required.
+
+**Aggregation message-honesty correction,2026-10-15 Pacific:** test69d47521 on
+unchanged recording01 gives25 PASS/2 expected FAIL. Both actual record messages
+claim a retained attempt without one: failed connection has no writer/output/
+receipt; completed Core output followed by injected audit failure has an already-
+resolved receipt. All independent owner/output/context/preservation/compile/native
+checks pass through19:51:00.1405429Z. Source1c9bff87 corrects the two messages and
+consolidates the sole-caller ID list into the existing catalog method. Unchanged
+IDs/order/positive semantics remain catalog43/186. Candidate02 and27/104 GREEN,
+static, guides/relevant regressions and4be-A/B0 remain pending; no promotion.
+
+**Aggregation recording GREEN104,2026-10-15 Pacific:** unchanged source857d250a/
+recording01 passes104/104, preserving all RED assertion names/order and483 tooling
+pins, clearing52 failures. Actual controls, redaction/context, exact persisted
+output, source preservation, suppression and reached optional-store faults pass.
+Five compiles and clean preserved native/owned closure pass through19:46:00.2957033Z;
+no desktop stop. Earlier71/1 remains partial. A focused outcome-message follow-up
+now tests failed connection and post-save audit failure against actual output/
+receipt facts before wording correction. Static duplicate cleanup, independent
+guidance, current relevant regressions and4be-A/B0 remain open; no deployment.
+
+**Current error5 stop,2026-10-15 Pacific:** catalog43 recording candidate01,
+source857d250a, ends71 PASS/1 desktop-stop harness failure at19:24:50.1946379Z
+(12:24:50 Pacific). All71 retain the exact RED prefix; whole GREEN104 and the
+new candidate's successful persisted aggregate are unqualified. Five compiles,
+settings/pins/cleanup and clean native/owned closure pass through19:25:18.2119683Z,
+with Excel closed; build closure passes through19:21:21.2063645Z. No bypass or new
+runtime dispatch follows. Source-only static reports keep9/45 dynamic calls and
+size caps, but add one normalized ControlIds duplicate (194->195); no exception
+is accepted, and complete maintenance generation remains pending. Owner-09's447
+checks keep their source45336d88 scope. Recording/guides, relevant regressions,
+static and4be-A/B0 remain open. Handoff185 gives the unchanged-candidate rerun.
+
+**Aggregation D18 recording entry,2026-10-15 Pacific:** test3af831b1 on unchanged
+owner-09 gives52 PASS/52 expected FAIL over104 checks. Actual callback/form output
+is independently exact; missing definitions/activity are meaningful RED. Global/
+control/user suppression, source preservation, five compiles,483 tooling/package
+pins and clean native/owned closure pass through19:15:22.0736922Z. Optional-store
+adapters are unreached because activity is absent; no fault-handling causality is
+claimed. Catalog43 adds seven source-bound redacted observations with explicit
+owner outcomes, programmatic loading exclusions and joint checks after optional
+notices. Runtime GREEN, guidance, relevant regressions/static and4be-A/B0 remain
+required. This follows approved D18 and adds no replay authority or deployment.
+
+**Current owner-09 matrix qualification,2026-10-15 Pacific:** all ten named
+return/phase groups pass, retaining447 distinct assertions on identical packages/
+all481 tooling pins. Both connections45 each, confirmed review72, cancelled review62,
+failed result57, both completed-result variants37 each, before/after save47 each
+and after promotion52 are qualified. Every group covers all five source/feed/
+authority faults. Compiles, source preservation, settings/cleanup, normal owned/
+Excel closure and zero delayed native events pass through19:04:46.7368156Z; no
+desktop stop. Known completed output remains acknowledged after promotion while
+further success refuses and retry evidence remains until explicit review. Source
+45336d88 stays frozen. Relevant regressions, recording/guidance and4be-A/B0 remain
+open. The earlier sequential provenance-parser stop was orchestration failure;
+its passing trial was independently qualified and only unrun groups resumed.
+
+**Observed-feed reopening GREEN29,2026-10-15 Pacific:** source45336d88 in unpromoted
+owner-09 passes29/29, retaining every RED21/8 name/order and all481 tooling pins.
+Both old captures remain refused after restored settings in the same session;
+fresh captures persist exact output. Compiles, source/output preservation, pins/
+settings/cleanup and normal native/owned closure pass through17:39:54.1534626Z.
+Static05 retains365/6553,194 duplicates,9/45 dynamic calls and size caps, with only
+the intended Authority component changed from12b39790. Following protecting RED,
+`modAggregationAuthority.Check` now consumes an existing
+capture when the saved feed is untrusted. Restoring Config cannot revive it; reopen
+for fresh authorized capture. Global sessions, source inventory, receipt ownership,
+shared store and headless authorization are unchanged. Cold-start Operations and five
+compiles pass with clean preserved closure through17:41:36.1395087Z. Compiled comparison
+of358 components changes only Core Authority from08, preserving string-literal checks.
+Current-candidate full matrices and relevant regressions remain required; earlier owner-08 gates retain
+their scopes. This implements the
+already approved reopening rule and requires no new proposal.
+
+**Observed-feed reopening RED,2026-10-15 Pacific:** unchanged owner-08 completes21
+PASS/8 expected FAIL through both actual connection-return branches. After observing
+a changed trusted feed, restoring only Config bytes in the same live session revives
+the old form capture: it writes, reports completion, changes feed bytes and drops
+reopening feedback. Fresh-capture controls persist the exact selected set. All
+preconditions/compiles, source preservation, settings/pins/cleanup and normal native/
+owned closure pass through17:26:55.9302623Z; no harness exception. This violates the
+already approved requirement to reopen after a changed trusted feed. Make Core keep
+that observed-untrusted capture refused, then prove GREEN on a new candidate. No
+new proposal, permission, headless contract or source inventory behavior is added.
+
+**Full confirmed-review GREEN72,2026-10-15 Pacific:** owner-08 passes72/72 for all
+five source/feed/authority faults at the real confirmation return. Handler/direct
+Core feedback requires reopening without false cancellation, no writer runs, exact
+receipts and known feed bytes survive, and fresh authorized review resolves each
+known state. Compiles, preservation and clean native/owned closure pass through
+17:19:41.4146381Z. Retention proves150 distinct checks across three full groups on
+identical packages/tooling. Restored-feed capture follow-up and the remaining
+cancelled-review/result/phase variants plus broader4be-A/B0 gates remain open.
+
+**Connection-return matrices GREEN,2026-10-15 Pacific:** owner-08 passes45/45 each
+for actual failed/successful return branches: ordinary control plus changed/missing
+source, changed feed, sign-out and saved-rights revocation. All fault prerequisites,
+immediate reopening, pre-writer refusal, feed/source preservation and fixed redacted
+feedback pass. Five compiles, pins/settings/cleanup and normal native/owned closure
+pass through17:10:53.3785318Z. External connection results are adapted in disposable
+copies; the real form/Core guards run. Full review/result/phase variants, relevant
+regressions, recording/guidance and4be-A/B0 remain open. Product source12b39790 is unchanged.
+
+**Restored phase GREEN32,2026-10-15 Pacific:** real owner-08 checks pass32/32,
+retaining all29 equivalent-RED business assertions in order and clearing all eight
+failures, with three explicit successful fresh reviews. Identical five-package
+hashes/all480 tooling pins, five compiles, source preservation, settings/cleanup and
+normal native/owned closure pass. Sign-out before/after save preserves feed bytes
+and bound retry evidence; after promotion, complete saved output stays independently
+verified and acknowledged while retry evidence remains until fresh review. The
+three RED-only seam assertions are explicitly excluded from business retention.
+Full source/feed/authority variants and broader4be-A/B0 gates remain open; source12b39790
+is unchanged. Exact reproducible proof is in the code Aggregation receipt.
+
+**D13 phase proof returns to RED,2026-10-15 Pacific:** the equivalent isolated seam
+on disposable owner-08 copies gives24 PASS/8 expected FAIL, with all compile/seam/
+fault preconditions and no harness exception. Removing repeated freshness checks
+allows signed-out pre/post-save feed mutation and removes retry evidence at all
+three save/promotion returns. After-promotion complete output remains independently
+verified and acknowledged; Boolean refusal does not prove preserved feed/receipts.
+Pins/settings/cleanup and normal native/owned closure pass through16:56:25.0524654Z.
+This is a RED-only test seam, not a real owner-08 defect or product change. Restore
+the real checks for GREEN, then cover full joint-check variants and remaining gates.
+
+**Owner-08 supporting gates,2026-10-15 Pacific:** cold-start Operations references
+and five project compiles pass, with358 source-hash component records and clean
+preserved native/owned closure through16:49:11.1102615Z. Static04 retains365
+components/6553 procedures,194 duplicates and9/45 dynamic calls;142189 lines,
+new-module/procedure maxima213/83 and no oversized growth satisfy all ratchets.
+Only the intended two product components differ from38dea294. Remaining full
+joint-check variants, D13 phase proof, regressions and4be-A/B0 remain open.
+
+**Focused return GREEN57,2026-10-15 Pacific:** source12b39790 in fresh unpromoted
+owner-08 passes57/57, retaining every RED50/7 assertion in exact order with identical
+tooling pins. Five compiles, source/authority/snapshot preservation, settings/pins/
+owned cleanup, normal Excel/wrapper closure and delayed zero native events pass
+through16:47:06.1086058Z. After the protecting RED, the existing Admin form now always rechecks connection returns,
+captures selected paths before dialogs, rechecks confirmation and validates the
+original set at result return. Failed-result feedback preserves verified persistence
+facts while requiring reopening. Core confirmed review distinguishes busy/context
+refusal from cancellation. Only these two product components change. Full joint-check
+variants/phases and relevant regressions remain required;07's retained218 does not
+automatically qualify08. Approval, catalog42/179, separate
+headless authorization and incomplete4be-A/B0 status remain unchanged.
+
+**Actual named-return RED,2026-10-15 Pacific:** unchanged owner-07 completes50
+PASS/7 expected FAIL with five compiles, all real return-fault preconditions and
+no harness exception. Failed connection, confirmed/cancelled review and failed
+result returns miss reopening feedback; confirmed review falsely reports cancellation
+through the handler and direct Core. Clearing selection at a completed result also
+makes its return check miss a changed source from the set used for saved output.
+Known complete persistence, preserved feed/receipts/sources, fresh review, pins/
+settings/cleanup and normal native/owned closure pass through16:34:05.8110120Z.
+This establishes the previously static hypotheses and a captured-selection gap
+within approved D8. Correct the two existing product components test-first, then
+prove GREEN and the remaining joint-check variants/phases;4be-A/B0 stay open.
+
+**Retained Aggregation matrix qualified,2026-10-15 Pacific:** owner-07 Ownership60
+and authority/path88 pass with preserved pins/settings/cleanup, normal owned and
+Excel closure, and delayed zero native events through16:24:56.4940782Z. Exact
+retention proves218 distinct passing assertions on identical five-package hashes,
+covering all215 earlier matrix names. The interrupted56/1 stays partial; its passing
+portion and fresh tail are explicitly composed, with duplicates counted once.
+This qualifies retained assertions, not one whole-run GREEN or full D8 acceptance.
+Additional actual-yield/phase tests, applicable regressions, recording/guidance and
+comprehensive4be-A/B0 remain open. Product source38dea294/static03 are unchanged;
+no package promotion or security setting change. Exact receipts and reproducible
+ignored proof are in code `plan022_slice4be_admin_aggregation_results.md`.
+
+**Resumed write tail GREEN,2026-10-15 Pacific:** owner-07 passes16/16 through the
+actual unknown-column action and final Write-group source preservation assertion.
+Five compiles, settings/package/tooling pins, owned cleanup and normal Excel/
+controller/monitor closure pass; delayed Excel events are zero through16:08:15.3132193Z.
+The case selector changes only test selection; D13 does not require manufactured
+behavioral RED for it. The prior56/1 stays partial until explicit same-package,
+assertion-name retention qualifies its passing cases with this tail. Remaining
+Ownership/authority-path, closed-yield/phase tests, recording/guidance and4be-A/B0
+remain open. Product source/static03, approval and security stop rules stand.
+
+**Previous error5 stop,2026-10-14 21:50:25 Pacific:** actual error5 occurs at
+2026-10-15T04:50:25.8234260Z with inactive input, Other desktop and screensaver
+running. Write-group56 PASS/1 stop-related harness failure is incomplete: seven
+cases pass; unknown-column and final whole-group preservation assertions are absent.
+No further test is dispatched after safe return. Settings/package/tooling pins,
+owned cleanup, normal Excel/wrapper closure and zero delayed Excel events pass
+through04:52:29.5788230Z; CIM confirms no Excel process. No security/OLED setting
+change or bypass was attempted. This continuation qualifies Tester444, actual
+add-in retry restart14 and inspection42, retaining integrity60/static03. Ownership/
+authority-path, full retention and the extra yield/phase matrix below remain open,
+then Aggregation recording/guidance and comprehensive4be-A/B0. Handoff184 contains
+resumption; D8-AGG-01 approval stands and no new approval is pending.
+
+**Aggregation retry restart GREEN,2026-10-14 Pacific:** owner-07 passes14/14 after
+actual disposable five-add-in unload/reload. Pending evidence survives fresh Core
+state; the reopened form cannot auto-promote an unresolved attempt, and feed/source
+bytes remain preserved. Five compiles, settings/pins/owned cleanup, normal Excel/
+wrapper closure and zero delayed native events pass through04:31:27.6552742Z.
+This proves add-in restart only. Broader boundary/path verification runs through
+unchanged assertions grouped as Inspection5/Write8/Ownership6 plus authority/path;
+all19 default cases retain exact order. Full name-level retention is required before
+broad GREEN. Product source, GREEN60/static03 and qualified Tester444 stand.
+
+**Remaining D8 verification audit:** after the retained matrix, add actual-form
+connection/confirmation/result-return source/feed/authority faults and the missing
+post-save/post-promotion variants. The current helpers cover inspection/pre-save,
+write failure and partial output, not that whole closed-yield/phase matrix. A
+failed-connection early return before its joint check is a static hypothesis only;
+establish behavioral RED through the real handler before any source correction.
+Likewise protect confirmed review followed by invalid context against a false
+cancellation message from `ResolveRetry`; this remains an unproved hypothesis.
+Identify absent Core DoEvents/picker sites explicitly. This stays within approved
+D8-AGG-01/D13; retained-matrix GREEN alone cannot close that contract or4be-A.
+
+**Current scoped GREEN,2026-10-14 Pacific:** focused owner-07 Tester guide127/127
+passes with eight reviewed captures. Five compiles, settings/package/tooling pins,
+owned cleanup, normal Excel and owned wrapper closure pass; delayed native events
+are zero through2026-10-15T04:25:31.7165189Z. Reproducible retention proves444
+distinct owner/recording/guide checks on identical five-package hashes, with all88
+earlier passing guide checks retained. Earlier355/1 and251/1 runs remain partial.
+This qualifies the shared-store Tester regression, not Aggregation or4be-A.
+Source remains unchanged; Aggregation GREEN60/static03 stand. Broader boundary/
+path, actual retry restart, relevant regressions, Aggregation recording/guidance
+and4be-A/B0 remain open. See the exact Tester receipt and ignored retention proof.
+
+**Continuation,2026-10-14 21:04 Pacific:** under the resumed goal, a single
+passive check finds Default desktop, available input, no running screensaver,
+no native error and no Excel process. No protection setting changes. The focused
+Tester GuideOnly selector runs existing fresh-recording, publication and guide
+assertions on frozen owner-07; prior passing owner/recording boundaries retain
+their scope. This is a harness selection change, not a product contract or new
+acceptance claim. Actual error5, lockscreen and mouse-lock stop guards remain.
+
+**Previous error5 stop,2026-10-14 19:58:24 Pacific:** inactive input was informational,
+but the passive monitor then observed actual Win32 error5 at
+2026-10-15T02:58:24.8356015Z, with Other desktop and running screensaver. The Tester
+recording/guide continuation ends251 PASS/1 stop-related harness failure. Four
+independent recordings/publication and successful guide views pass; interrupted/
+unconfirmed view tails remain incomplete. Five compiles, settings/package/tooling
+pins, owned cleanup, normal Excel closure and zero delayed native events pass
+through02:59:32.8303505Z. No matching test processes remain. No security bypass,
+desktop rebind or OLED setting change was attempted. Stop per the user's actual
+error5 rule; inactive input alone is still permitted when work functions. Handoff183
+and the Tester receipt record the precise limits, including unproved normal outer
+wrapper closure. Owner-07 GREEN60/static03 and D8-AGG-01 approval stand; broader
+candidate07 gates, Aggregation recording/guidance and4be-A/B0 remain incomplete.
+
+**Resumed with clarified stop conditions,2026-10-14 Pacific:** the user permits
+continued work while input is inactive or the screensaver runs if the work still
+functions. Stop for actual error5 or mouse lock; do not bypass security or change
+OLED protection. Inactivity alone does not establish a Windows lock. The earlier
+stop was the agent's conservative interpretation, not an explicit inactive-input
+stop instruction. The isolated continuation used unchanged owner-07, with inactivity
+recorded separately, and subsequently stopped on actual error5. No new architecture
+approval or product contract change is implied; D13 does not apply to this policy
+record correction. All remaining acceptance gates stay open until verified.
+
+**Historical inactive-input stop,2026-10-14 18:50:59 Pacific:** the
+passive monitor records inactive input, Other desktop and running screensaver,
+zero error5/mouse-lock/other failures. Windows lock and exact causality are not
+established. Owner-07 integrity/completion GREEN60 and static ratchets stand.
+Tester regression355 PASS/1 stop-related harness failure is incomplete; its164
+owner prefix passes, interrupted recording/guide tail remains open. Pins/settings/
+owned cleanup, normal Excel closure and zero delayed events pass through
+2026-10-15T01:51:41.4885938Z. Automation was paused until the user resumed under
+the clarified conditions above. D8-AGG-01 approval
+stands; no new approval is needed for that contract. Handoff182 records continuation.
+
+**Current scoped GREEN,2026-10-14 Pacific:** owner-07 passes60/60 actual-handler
+integrity/manual/completion checks after45/14 RED. Multi-source exactness, malformed
+row refusal, exact text/formulas, output availability/overlap, saved metadata and
+unknown-output review all pass. Five compiles, source/pin/settings/owned cleanup,
+normal closure and zero delayed events pass through2026-10-15T01:20:25.5372399Z.
+Static03 holds194 duplicate groups,9/45 dynamic calls and all size caps. Tester
+regression runs for the shared private store. Candidate07 broader boundary/path,
+restart and relevant regression gates plus recording/guidance remain open. Code
+38dea294/docs d807736 are pushed; there is no promotion or4be-A completion.
+
+**Aggregation integrity follow-up,2026-10-14 Pacific:** owner-06's broader gate
+finishes213 PASS/2 FAIL, with clean preserved closure; exact-instance follow-up
+resolves its two closed-workbook failures as a default-instance probe artifact.
+The focused integrity/completion gate completes45 PASS/14 FAIL without a harness
+exception. Multi-source exactness and mixed changed-source refusal pass, as do
+manual saved-hint denial and retained/unknown output review. New REDs protect
+orphan rows, numeric-text SKU, external holders, indeterminate overlap, relative
+formulas, saved metadata/provenance and truthful pre-staging refusal. Their fixes
+and the metric-preserving private-store refactor are building in candidate07;
+GREEN, recording/guidance and overall4be-A remain open. Pins/settings/owned cleanup,
+normal closure and zero delayed events pass through2026-10-15T00:53:08.9628746Z.
+See the exact code receipt; there is no new approval or package promotion.
+
+**Scoped Aggregation authority GREEN,2026-10-14 Pacific:** unpromoted owner-06
+passes76/76 actual Ribbon/form checks, including exact persisted output for normal
+Admin and switched active workbook; original binding and source/unrelated workbook
+preservation; pre-writer refusal of sign-out, saved hint, Reader, another warehouse's
+Admin and replacement session; and read-only exact binary hashing. Five compiles,
+pins/settings/owned cleanup and normal closure pass; delayed Excel events are zero
+through23:38:22.7700976Z. The full source/feed/output/failure/path matrix is running.
+Restart/completion GREEN, recording/guidance and overall4be-A remain open. This is
+scoped entry evidence, not D8-AGG-01 completion or package promotion.
+
+**Approved Aggregation implementation entry,2026-10-14 Pacific:** resumed baseline
+restart RED completes10 PASS/4 FAIL after actual disposable XLAM unload/reload;
+completion/manual-entry RED completes10 PASS/6 FAIL, proving signed-out saved-hint
+dispatch and falsely claimed/overwritten incomplete persisted output. Five compiles,
+source preservation, settings/pins, owned cleanup and normal closure pass; delayed
+Excel events are zero through22:13:13.0906848Z and22:29:05.5021909Z. These complete
+the protecting entry gates, not acceptance. The approved Core-owned interactive
+implementation is now in source and unpromoted. Candidate compile/control failures
+are being corrected; no GREEN, new recording ID or4be-A completion is claimed.
+See the code Aggregation receipt for run identities and limits. Earlier pending and
+pause statements below describe their checkpoints, not a renewed approval blocker.
+
+**Resumed by the user later2026-10-14 Pacific:** the laptop has required OLED
+protection; current settings enable a nonsecure screensaver. Fresh active-input,
+bounded movement/restoration and zero-error5 checks pass. Prior inactive input did
+not establish a Windows lock or OLED causality. Protection settings are unchanged;
+monitoring adds fixed desktop/screensaver classifications and retains stop guards.
+Actual-handler focused write RED completes36 PASS/36 FAIL with no harness exception,
+five compiles, preserved settings/pins, normal closure and zero delayed native
+events through21:51:27.4179880Z. Duplicate/schema/custom-column/overlap cases now
+reach behavioral assertions. Restarted retry remains next before product edits;
+D8-AGG-01 is approved and4be-A remains incomplete. The pause below is historical.
+
+**Paused2026-10-14 at14:32:12 Pacific under the user's desktop-lock stop rule.**
+The owned monitor records one lock condition, zero error5/mouse-lock observations
+and stops; the packaged macro guard dispatches no further work. The latest focused
+write run is19 PASS/11 FAIL including this stop, so it remains partial evidence.
+The preceding completed104/46 RED is retained. Added probes protect post-save
+failure, pre-save source/feed/sign-out changes, malformed/duplicate sources,
+unknown output columns and overlaps; later cases and restarted retry remain
+unverified. Settings/package/tooling preservation, normal Excel closure and zero
+delayed native events pass through21:32:41.5673421Z. Product VBA is unchanged;
+D8-AGG-01 stays approved and4be-A stays incomplete. Controls1.585 and Handoff181
+record this session boundary; reverify desktop input before resuming automation.
+
+**Local D8-AGG-01 entry RED,2026-10-14 Pacific:** unchanged product source
+`ff5db426` is rebuilt only into unpromoted `validation-aggregation-baseline-01`.
+The complete packaged path comparison retains65/7 and adds12 checks for74 PASS/
+10 FAIL. Normalization alone fixes the drive fixture's SaveAs1004; both UNC variants
+persist, but only normalized dispatch is canonical. Expanded post-inspection,
+borrowed-output and write/retry boundaries give88 PASS/35 FAIL without a harness
+exception. Package/tooling/settings pins, normal closure and delayed zero native
+events pass. This is RED, not product implementation/acceptance. Saved revocation,
+dirty/unreadable authority, read-only output, closed workbook and remaining phase/
+retry checks continue before product edits. Exact scope and baseline-adapter limits
+are in code `plan022_slice4be_admin_aggregation_results.md`. Approval stands.
+The subsequent broader refusal gate gives104 PASS/46 FAIL without a harness
+exception and adds saved revocation, dirty/unreadable authority, read-only output
+and closed-workbook evidence. Pins/settings/normal closure and delayed zero native
+events pass. Its earlier closed-workbook case prepares the decoy before the old
+switch regression; the next run uses a fresh decoy and adds retry/redaction checks.
+Do not treat an uncompleted next run as verified or these REDs as implementation.
 
 **Aggregation prerequisite,2026-10-13 Pacific:** packaged diagnostic65 PASS/7 FAIL
 on unchanged tester-recording-02 exposes active-workbook redirection and three
 stale-authority paths reaching Core. Authorized callback output fails at SaveAs
 with Excel1004; normalized-path direct Core comparison succeeds. No unauthorized
-persisted output is claimed. Proposed **D8-AGG-01** in v4.11 binds the interactive
+persisted output is claimed. Approved **D8-AGG-01** in v4.11 binds the interactive
 command to the original workbook/live source session, moves its authority check
 to Core and defines captured-feed/borrowed-output ownership and fixed feedback.
-**Approval pending; no product implementation.** Controls1.581 and code
+**Approved2026-10-14 Pacific; product implementation pending.** Controls1.584 and code
 `plan022_slice4be_admin_aggregation_results.md` record the same scope. Catalog42/179,
 qualified Tester evidence, D17 source/advisory rules and D18-REPLAY-01/B0 remain
-unchanged. After approval, extend packaged/direct-Core RED before implementation;
+unchanged. Extend packaged/direct-Core RED before implementation;
 recording is a subsequent D18 step. This proposal does not redefine scheduled
 headless authorization or grant broader replay eligibility.
+
+**Approved tightening,2026-10-14 Pacific:** v4.11 D8-AGG-01 now requires joint
+authority/selected-source/trusted-feed revalidation before work, after source
+inspection, immediately after every named reachable yield and before output
+mutation. Changed source fingerprints refuse the attempt; a changed saved trusted
+feed requires reopening, rather than following new configuration mid-run. The
+proposed owner builds a complete candidate in Core-owned staging. Pre-promotion
+refusal preserves feed bytes; failed/indeterminate persistence retains staging and
+durable internal retry evidence without an unproved rollback or success claim.
+Retry requires fresh captured authority and complete revalidation.
+
+Expand the packaged/direct-Core RED for each of those boundaries,
+including source/feed changes, staging/promotion failure, retained retry state and
+stale retry refusal. Include the required path-only comparison through the actual
+packaged Ribbon/form handler on the unchanged baseline, holding every other input
+fixed in disposable copies; protect canonical drive/UNC paths without redirecting
+the captured feed. One normalized-path direct Core verification is supplemental;
+it neither proves the SaveAs hypothesis nor replaces packaged RED/GREEN. Mark
+absent yields inapplicable. The user approved all four tightenings and cleared
+Handoff180's approval blocker. Approval recording changes documentation only;
+product implementation and new runtime evidence remain pending. Continue toward
+complete4be-A; exit the prompt for desktop error5, lockscreen, mouse lock or a
+new proposal requiring approval. Do not request D8-AGG-01 approval again.
 
 **Current checkpoint,2026-10-13 Pacific:** Tester recording and guide conclusions
 are scoped-qualified on unpromoted tester-recording-02, catalog42/179. RED20/46
