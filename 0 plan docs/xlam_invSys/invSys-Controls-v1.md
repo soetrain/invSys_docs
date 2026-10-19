@@ -1,6 +1,18 @@
 # invSys Form Controls v1
 
-**Version:** 1.674 -- Modal catalog-only GREEN50; imported ADD receipt gate pending.
+**Version:** 1.675 -- Source PRs merged; imported ADD receipt RED46/10 remains open.
+
+**2026-10-19 integration checkpoint:** the user authorized reviewed code PR3/docs
+PR2 integration into main. RED195 completed on unchanged producte6b2809b with
+46 PASS/10 FAIL: five invalid IMPORTED cases each fail whole-selection refusal
+and honest receipt reporting. The confirmed prior-ADD control passes. Next fix is
+Upload receipt preflight under approved D8-INV-01; no new approval is pending.
+Retain scoped Edit50/50 and headless56/56. Admin-to-Core primitive contracts,
+EDIT retry, Create authority/yields, Config diagnosis and final regression/static/
+packaged/recording/B0 gates remain open. No current Inventory build or deployment.
+Code `plan022_slice4be_pr_merge_review.md` records review scope and limits.
+
+**Version1.674 checkpoint — modal catalog-only GREEN50:**
 
 **Modal catalog-only completion GREEN193 qualified:** sourcee6b2809b retains
 all50 RED192 assertion IDs/order and passes50/50 (originaltesta5d7f222; owning

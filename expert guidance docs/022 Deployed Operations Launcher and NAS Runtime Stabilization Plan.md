@@ -1,5 +1,16 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**2026-10-19 integration checkpoint:** reviewed code PR3/docs PR2 are merged into
+main under the user's explicit instruction. Imported-row RED195 is complete,
+not running:46 PASS/10 FAIL on unchanged producte6b2809b/testab86b07f. Five invalid
+IMPORTED scenarios each fail whole-selection refusal and honest receipt reporting;
+the confirmed prior-ADD control passes. Upload receipt preflight is next under
+approved D8-INV-01; no new approval is pending. Retain scoped Edit50/50 and
+headless56/56. Primitive Admin-to-Core contracts, EDIT retry, Create authority/yields,
+Config preservation diagnosis and final current-source regression/static/packaged/
+recording/B0 gates remain open. No current Inventory build/deployment or acceptance.
+See Controls1.675, handoff193 and code `plan022_slice4be_pr_merge_review.md`.
+
 **Modal catalog-only completion GREEN193 qualified:** sourcee6b2809b retains
 all50 RED192 assertion IDs/order and passes50/50 (originaltesta5d7f222; owning
 boundary probe follows the internal module extraction ine6b2809b). The new entity
