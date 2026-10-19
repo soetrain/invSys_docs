@@ -1,6 +1,15 @@
 # invSys Form Controls v1
 
-**Version:** 1.675 -- Source PRs merged; imported ADD receipt RED46/10 remains open.
+**Version:** 1.676 -- Local receipt assertions46/10; native exit blocks qualification.
+
+**2026-10-19 local continuation:** product source is unchanged. An explicit
+34-module unsaved overlay on the available Tester baseline compiles all five
+projects and reproduces the same56 assertions (46 PASS/10 FAIL). Normal Excel
+shutdown and settings restoration remain unconfirmed; native termination returned
+error5 at14:51:51 Pacific, while the separate desktop monitor reported no lock.
+Further tests stopped under the user's rule. This does not replace qualified
+RED195 or establish GREEN/acceptance. See handoff194 and the code Inventory
+receipt's local continuation/Config diagnosis. No new approval is pending.
 
 **2026-10-19 integration checkpoint:** the user authorized reviewed code PR3/docs
 PR2 integration into main. RED195 completed on unchanged producte6b2809b with
