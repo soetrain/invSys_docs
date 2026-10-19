@@ -1,15 +1,17 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
-**2026-10-19 local continuation:** unchanged product source, explicit34-module
-unsaved overlay on the available Tester baseline, five compiles pass; the same56
-assertions reproduce46 PASS/10 FAIL. Native Excel exit then stalls. Termination
-returns error5 at14:51:51 Pacific; the separate desktop monitor reports no lock.
-Tests stopped under the user's rule. Normal closure and settings restoration are
-unconfirmed, so this local run is not qualified and does not supersede RED195.
-Resolve cleanup before another Excel run, then fix Upload receipt preflight under
-approved D8-INV-01. Controls1.676/handoff194 and the code receipt retain exact
-evidence and the still-open Config diagnosis. No product change/build/deploy or
-new approval request.
+**2026-10-19 receipt continuation:** prior cleanup completed with settings/pins
+preserved and Excel closed; its recorded intervention still limits qualification.
+Approved D8-INV-01 signed-in IMPORTED ADD preflight now verifies the exact saved
+event/entity and submitted payload. Source/tooling5914b4f8 passes the unchanged56
+assertions, including the refusal explanation after a successful staging save.
+Real save/authority errors remain authoritative. Five instrumented compiles,
+normal preserved closure and delayed native audit pass. Saved-result/retry
+regression qualifies64/64 on the same source. Next: the unchanged primitive-
+boundary check remains1 PASS/3 FAIL; correct those calls under D8-INV-01 item3
+while retaining payload fields, exact identities and operator/headless behavior.
+Controls1.677 and the code Inventory receipt retain exact evidence and the open
+Config diagnosis. No new contract/approval, XLAM build/deploy or acceptance.
 
 **2026-10-19 integration checkpoint:** reviewed code PR3/docs PR2 are merged into
 main under the user's explicit instruction. Imported-row RED195 is complete,

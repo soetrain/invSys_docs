@@ -1,15 +1,18 @@
 # invSys Form Controls v1
 
-**Version:** 1.676 -- Local receipt assertions46/10; native exit blocks qualification.
+**Version:** 1.677 -- Imported ADD receipt preflight GREEN56; retry regression64/64.
 
-**2026-10-19 local continuation:** product source is unchanged. An explicit
-34-module unsaved overlay on the available Tester baseline compiles all five
-projects and reproduces the same56 assertions (46 PASS/10 FAIL). Normal Excel
-shutdown and settings restoration remain unconfirmed; native termination returned
-error5 at14:51:51 Pacific, while the separate desktop monitor reported no lock.
-Further tests stopped under the user's rule. This does not replace qualified
-RED195 or establish GREEN/acceptance. See handoff194 and the code Inventory
-receipt's local continuation/Config diagnosis. No new approval is pending.
+**2026-10-19 receipt continuation:** prior cleanup eventually restored settings,
+preserved every pin and closed Excel; its intervention caveat remains. Approved
+D8-INV-01 now checks a signed-in IMPORTED ADD against its saved event, exact
+System_Key and payload before skipping it. Source/tooling5914b4f8 passes the
+unchanged56 assertions after preserving the refusal explanation across a successful
+staging save. Five instrumented compiles, normal preserved closure and the delayed
+native audit pass. Saved-result/retry regression also qualifies64/64 on the same
+source, including failed saves and duplicate-free retry. No new control ID,
+contract or approval. Source overlays are not built-package acceptance.
+Imported EDIT, separate headless proof and broader acceptance remain open.
+See the code Inventory receipt's local fix continuation for exact scope/evidence.
 
 **2026-10-19 integration checkpoint:** the user authorized reviewed code PR3/docs
 PR2 integration into main. RED195 completed on unchanged producte6b2809b with
@@ -8508,7 +8511,7 @@ zero-quantity paths are protected; replacement/remaining phase gates stay open.
 | `btnAddMode` | Button — **Add Item Mode** | Selects add mode and clears add fields. |
 | `btnEditMode` | Button — **Edit Item** | Selects edit mode and exposes inventory search/results. |
 | `btnCreateInventoryTable` | Button — **Create Inventory Table** | Creates a uniquely named bulk ADD/EDIT staging table in the captured workbook and closes the modal form so the worksheet can be edited. |
-| `btnUploadInventoryTable` | Button — **Upload Selected Inventory Table** | Resolves the selected invSys inventory table in the captured workbook, preflights every pending row, then submits valid rows through existing Admin authorities and writes row outcomes. |
+| `btnUploadInventoryTable` | Button — **Upload Selected Inventory Table** | Uses the captured workbook/table and live Core authority. Preflights pending rows and verifies a signed-in claimed `IMPORTED` ADD against its exact saved event, `System_Key` and payload before skipping it. An invalid receipt refuses the whole selection, retains the prior receipt and displays the refusal explanation. Applicable EDIT, headless and final acceptance gates remain open. |
 | `cmbEditItem` | Combo box — Inventory item | Typed text filters candidates. Choosing a dropdown row binds its exact catalog SKU and loads that item's editable fields. Visible display text alone is not identity. |
 | `lstEditItemResults` | List box | Shows filtered candidate inventory items; choosing a row converges on the same SKU-backed edit loader as a combo dropdown choice. |
 | `txtItemName` | Text box — Item name * | Required descriptive item name. |
