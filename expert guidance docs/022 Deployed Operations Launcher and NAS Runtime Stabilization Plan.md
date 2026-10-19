@@ -1,5 +1,15 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**2026-10-19 creation boundary continuation:** productd0119c82 corrects the three
+recorded Inventory creation crossings under approved D8-INV-01 item3. The
+strengthened architecture check is4/4; literal payload compatibility9/9 and
+operator Edit/catalog-completion50/50 qualify with preserved normal closure and
+zero-fault native audits. Headless56/56, saved-result/retry64/64 and imported ADD
+receipts56/56 also qualify. The focused correction is complete; next is Create
+handler authority/write-phase RED. EDIT retry, Config diagnosis and final gates
+remain open. Controls1.678/code Inventory evidence retain exact scope; no business
+contract, recording control, new approval or built-XLAM acceptance.
+
 **2026-10-19 receipt continuation:** prior cleanup completed with settings/pins
 preserved and Excel closed; its recorded intervention still limits qualification.
 Approved D8-INV-01 signed-in IMPORTED ADD preflight now verifies the exact saved
@@ -7,10 +17,10 @@ event/entity and submitted payload. Source/tooling5914b4f8 passes the unchanged5
 assertions, including the refusal explanation after a successful staging save.
 Real save/authority errors remain authoritative. Five instrumented compiles,
 normal preserved closure and delayed native audit pass. Saved-result/retry
-regression qualifies64/64 on the same source. Next: the unchanged primitive-
-boundary check remains1 PASS/3 FAIL; correct those calls under D8-INV-01 item3
-while retaining payload fields, exact identities and operator/headless behavior.
-Controls1.677 and the code Inventory receipt retain exact evidence and the open
+regression qualifies64/64 on the same source. At this receipt checkpoint the
+primitive-boundary check remained1 PASS/3 FAIL; the later continuation above
+tracks that correction while retaining fields, identities and authorization.
+Controls1.677 and the code Inventory receipt retain the earlier evidence and open
 Config diagnosis. No new contract/approval, XLAM build/deploy or acceptance.
 
 **2026-10-19 integration checkpoint:** reviewed code PR3/docs PR2 are merged into

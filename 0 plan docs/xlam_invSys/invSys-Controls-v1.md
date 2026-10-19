@@ -1,6 +1,16 @@
 # invSys Form Controls v1
 
-**Version:** 1.677 -- Imported ADD receipt preflight GREEN56; retry regression64/64.
+**Version:** 1.678 -- Primitive creation boundary correction and focused regressions qualified.
+
+**2026-10-19 creation boundary continuation:** productd0119c82 corrects the three
+recorded Admin-to-Core creation crossings under D8-INV-01 item3. Architecture4/4,
+exact payload compatibility9/9 and operator Edit/catalog-completion50/50 pass;
+both Excel gates have preserved normal closure and zero-fault delayed audits.
+Headless56/56, saved-result/retry64/64 and imported ADD receipts56/56 also qualify
+with preserved normal closure and zero-fault delayed audits. Next: Create handler
+authority/write-phase RED; EDIT retry, Config diagnosis and final gates remain open.
+No control, wording, recording ID, business contract or approval changes.
+Built-package and comprehensive4be-A acceptance remain open.
 
 **2026-10-19 receipt continuation:** prior cleanup eventually restored settings,
 preserved every pin and closed Excel; its intervention caveat remains. Approved
