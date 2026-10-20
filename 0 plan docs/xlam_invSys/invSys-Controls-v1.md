@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.693 -- EDIT binding/mutation263/263; native qualification pending.
+**Version:** 1.693 -- EDIT binding/mutation GREEN qualified263/263.
 
 **2026-10-20 binding/mutation regression:** draft5524cf7f (product a9faab9c)
 passes263 actual-Upload checks, including all five instrumented compiles, all nine
@@ -8,7 +8,9 @@ canonical receipt mutations,45 privacy checks and72 Config/Auth/read checks.
 Identical-payload edits retain separate commands/events; changed operator or
 receipt bindings refuse the whole selection. The duplicate-receipt fixture now
 uses Range.Copy; the preceding186-pass harness-error run is not GREEN.
-Normal cleanup/restoration/native qualification is pending. No product behavior,
+Normal closure18:16:29.314Z confirms settings restoration and all pins;
+audit18:16:49.326Z records zero Excel events. No intervention occurred.
+No product behavior,
 wording, control or contract changed. Broader receipt phases/results/save,
 retained regressions and final4be-A acceptance remain open; no approval is pending.
 
