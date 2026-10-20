@@ -1,6 +1,17 @@
 # invSys Form Controls v1
 
-**Version:** 1.685 -- EDIT canonical-save RED qualified; implementation open.
+**Version:** 1.686 -- EDIT binding diagnostic corrected; validation and implementation open.
+
+**2026-10-19 EDIT binding evidence correction:** test212a3547's83 PASS/29 FAIL
+does not qualify imported-row binding RED: its cases reused a failed EDIT row.
+Normal process closure, settings/pin preservation and zero-fault native audit pass.
+Corrected teste2a7b246 retains the independently successful first row and observes
+lookup event identity; its run is pending. Privacy checks now include embedded
+canaries. Receipt-side mutation cases are explicitly unexercised until an actual
+EDIT produces the required receipt. No control, wording or runtime contract changed.
+The earlier phase/result/canonical-save REDs lack cohort-specific Config/Auth
+comparisons; their diagnoses remain explicitly unresolved in code Inventory
+evidence. No previous comparison is substituted.4be-A acceptance remains open.
 
 **2026-10-19 EDIT canonical-save coverage:** actual Upload on unchanged product
 fc2fba93/testc7a2599c completes83 PASS/28 FAIL. Before/after-save failure and sign-out

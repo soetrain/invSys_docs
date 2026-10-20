@@ -1,5 +1,17 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**2026-10-19 EDIT binding diagnostic correction:** test212a3547's83 PASS/29 FAIL
+is excluded as binding RED because later cases reused the second EDIT's failed
+row. Normal closure06:22:33.259Z/native audit06:22:53.269Z on2026-10-20 UTC passed.
+Teste2a7b246 retains the first independently imported row, observes the exact event
+lookup, checks embedded privacy canaries, and collects Config/Auth comparisons.
+Its new run is pending. Receipt-side mutations require an actual produced receipt;
+missing product output is recorded without claiming those guarded cases executed.
+The phase/result/save RED cohorts retain their focused findings, but each lacks
+its own Config/Auth comparison; code Inventory evidence explicitly carries those
+diagnoses as unresolved. Controls1.686. Product source remains fc2fba93; no
+implementation, deployment or acceptance is claimed.
+
 **2026-10-19 EDIT canonical-save RED:** product fc2fba93/testc7a2599c
 completes83 PASS/28 FAIL through actual Upload before/after-save failure and
 sign-out, including fresh-session retry. Missing command/event receipts and both
