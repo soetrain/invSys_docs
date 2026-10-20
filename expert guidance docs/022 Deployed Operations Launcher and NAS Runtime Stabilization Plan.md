@@ -1,5 +1,17 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**2026-10-20 result-save cohort GREEN qualified:** draft89a70936/product a9faab9c
+passes OperatorSaveThrows36/36, OperatorSaveThrowsLaterQuantity40/40 and
+AfterApplyAuthorityLost36/36. The union is100 distinct checks, including30 Config/
+Auth/read checks. All five instrumented compiles pass per run; each restores
+settings, preserves all pins, closes normally and records zero native events.
+Receipt/event identity survives fresh-session retry and later quantity changes
+without duplicate effects. No product or contract change was needed.
+Controls1.696 and the integration matrix retain exact traceability.
+Next: all four canonical-save boundary cases through the same selector and normal
+closure gates. Retained/final4be-A acceptance and older RED Config diagnosis gaps
+remain open.
+
 **2026-10-20 receipt phases GREEN qualified81/81:** separate
 `EditReceiptPhases` on draftd16b809a/product a9faab9c passes all actual-Upload
 catalog-only/no-op/quantity/queue-failure retry checks, five instrumented compiles

@@ -1,6 +1,17 @@
 # invSys Form Controls v1
 
-**Version:** 1.695 -- EDIT phases GREEN qualified81/81.
+**Version:** 1.696 -- EDIT result-save cohort GREEN qualified.
+
+**2026-10-20 result-save regression:** draft89a70936/product a9faab9c passes all
+three default cases separately:36/36,40/40,36/36 (100 distinct checks).
+Failed operator saves and authority loss after application report partial
+completion honestly; authorized retry preserves the original event and any later
+quantity change without repeating catalog or quantity effects. All30 Config/Auth/
+read checks pass. All five instrumented compiles pass in each run, with settings
+restored, all pins preserved, normal closure and zero native events.
+Exact case/run references are in the integration record. No product, control,
+wording or contract changes. Four canonical-save cases, retained regressions and
+final4be-A acceptance remain open; this is source-overlay evidence.
 
 **2026-10-20 receipt phases:** draftd16b809a/product a9faab9c passes81 checks
 through actual Upload: catalog-only/no-op receipt completion, exact quantity
