@@ -1,6 +1,15 @@
 # invSys Form Controls v1
 
-**Version:** 1.683 -- D8-INV-EDIT-01 phase RED qualified; implementation remains open.
+**Version:** 1.684 -- EDIT phase and result-boundary RED qualified; implementation open.
+
+**2026-10-19 EDIT result-boundary coverage:** actual Upload on unchanged product
+fc2fba93/test5e76fcd4 qualifies50 PASS/20 FAIL. Failed result saves and post-apply
+sign-out preserve operator files and report honest partials; retries repeat catalog
+history and lack durable command/event proof. Following a later authorized quantity
+change, retry reaches the adjustment queue again and fails the no-extra-effect check.
+All five instrumented compiles, normal closure/restoration/pin preservation and
+zero-fault native audit pass. No control, wording, receipt store or runtime contract
+changed. Remaining D13 coverage, implementation and final4be-A acceptance stay open.
 
 **2026-10-19 EDIT phase coverage:** actual Upload on unchanged product fc2fba93/
 testf2d26e8f qualifies41 PASS/12 FAIL, with all five instrumented compiles, normal
