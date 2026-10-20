@@ -1,1 +1,1 @@
-`195 Inventory EDIT Receipt Approval Checkpoint.md`
+`196 EDIT Receipt Contract Approved and RED Qualified.md`
