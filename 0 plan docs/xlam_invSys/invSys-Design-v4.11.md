@@ -5896,6 +5896,65 @@ Approval authorizes this test-first implementation, not4be-A acceptance, new D18
 ControlIds/replay adapters, package promotion or historical inventory import.
 
 ---
+### D8-INV-EDIT-01 — Durable worksheet EDIT receipts (PROPOSED; approval required)
+
+**Problem:** D8-INV-01 items5–6 require independent imported-row confirmation and
+exact retry reconciliation. Worksheet EDIT currently skips an `IMPORTED` label
+without verification. Quantity events prove adjustments, but do not prove the
+catalog fields/reason submitted with an EDIT; catalog-only edits have no inventory
+event. Current catalog values and human edit history are not exact command receipts.
+
+**Decision requiring approval:** introduce one narrowly scoped receipt table,
+`tblInventoryEditReceipts`, in the captured canonical Inventory workbook. This is
+an explicit extension to D8-INV-01's prohibition on implicitly adding a general
+receipt store. It covers interactive worksheet EDIT only, not a general command
+ledger, Action Path evidence, or a replacement for Domain inventory events.
+
+- Core authorizes and coordinates; Inventory Domain owns the stored receipts.
+  Use typed calls and primitive/serialized envelopes. Retain D8-INV-01's live
+  source/session/input rechecks before writes and after every listed yield.
+- Core generates one immutable command ID, distinct from `System_Key`. Bind it
+  to the exact source warehouse/station/user, Item Code, submitted catalog/custom
+  values, reason and quantity intent. Retain exact planned quantity-event and
+  entity identities when needed. A fingerprint alone is not application proof.
+- Save the prepared command reference in the existing operator result boundary
+  before canonical application. Persist the catalog change and its catalog-phase
+  receipt in the same owning workbook save; independently confirm that save.
+  Before queueing, durably retain the exact quantity-event identity. Record
+  catalog and quantity outcomes separately. Catalog-only/no-op quantity outcomes
+  do not fabricate inventory events or physical entities.
+  Receipt identity, input binding and planned identities are immutable; confirmed
+  phases advance only on saved proof. R1 performs no automatic receipt pruning.
+- A fresh session may reconcile only the receipt's original source/user with
+  current ADMIN_MAINT. Confirm catalog application from its saved receipt and any
+  quantity application from the exact canonical event/log receipts. Never infer
+  past application from current quantity or recalculate a new adjustment for an
+  already-applied command. Resume only an unchanged, verified pending plan; a
+  changed binding/input or ambiguous result refuses without resubmission.
+- Skip an imported EDIT only after that independent confirmation. Missing, forged,
+  changed, duplicate or wrong-action receipts refuse the whole pending selection
+  before canonical writes. Preserve original identifiers and report the unresolved
+  result. Do not invent receipts for earlier unproved EDIT labels.
+- The owning explicit EDIT command may initialize only this absent receipt table
+  after full preflight and authority checks. Inspection/preflight never creates it;
+  an existing malformed table refuses. No Config/Auth repair, historical inventory
+  conversion, borrowed-workbook save or unrelated schema repair is authorized.
+  Resolve required headers by name and preserve unknown columns. User-submitted
+  catalog/custom fields cannot create, overwrite or remove command receipts.
+- Authority loss stops all further writes, including receipt/status cleanup. Keep
+  known partial outcomes and disclose any unconfirmed durability. A lost result
+  save cannot cause a duplicate catalog application or quantity event on retry.
+
+**Approval gate:** no implementation of this new store before approval. D13 must
+retain actual Upload controls and cover genuine/forged/relabeled receipts,
+catalog-only and no-op edits, altered inputs, duplicate/missing receipt identities,
+failed catalog/receipt/operator saves, authority loss and fresh-session retry.
+Independent persisted checks must prove one catalog application and at most the
+one intended quantity event, preserving exact entity identity and custom columns.
+Existing accepted Add/Create, headless, Operations and Release1 gates still apply;
+approval does not close4be-A or add a recording ControlId/replay adapter.
+
+---
 ### D9 -- Operator Read Models and Refresh Contract (R1 Locked)
 **Decision:** Operator-facing inventory tables are read models refreshed from published or local warehouse snapshots. They are not authoritative write targets.
 

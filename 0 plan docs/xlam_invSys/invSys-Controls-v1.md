@@ -1,6 +1,15 @@
 # invSys Form Controls v1
 
-**Version:** 1.680 -- Scoped Config save diagnosis18/18 qualified; EDIT receipt/retry remains open.
+**Version:** 1.681 -- Worksheet EDIT receipt decision D8-INV-EDIT-01 proposed; approval required.
+
+**2026-10-19 worksheet EDIT proposal:** Architecture4.11 D8-INV-EDIT-01 proposes
+independent saved catalog/quantity receipt confirmation before Upload skips an
+imported EDIT, and exact reconciliation before retry. Forged/unproved rows would
+refuse the whole pending selection and retain their references. A scoped receipt
+table is a new architectural decision, not an accepted implementation. No new
+control or ControlId is proposed. The actual-handler diagnostic completes28 PASS /
+4 FAIL, limited to forged/relabeled EDIT refusal/reporting. Native qualification
+and implementation remain open; no receipt store has been implemented.
 
 **2026-10-19 Config diagnosis:** unchanged product fc2fba93/test9c9548a2 passes18/18
 through the actual Upload handler, with normal closure and zero delayed faults.

@@ -1,5 +1,16 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**2026-10-19 worksheet EDIT decision pending:** D8-INV-EDIT-01 is proposed in
+Architecture4.11. It would authorize a scoped Domain-owned worksheet EDIT
+receipt table, because catalog fields/history and quantity-event receipts cannot
+independently prove the whole prior EDIT. The actual Upload diagnostic on product
+fc2fba93/test13f1ea0c completes28 PASS /4 FAIL: a genuine EDIT control passes;
+forged and relabeled EDIT claims fail whole-selection refusal/reporting. Normal
+cleanup/native qualification is pending. Config/Auth preservation is diagnosed
+for all3 cases in the code Inventory evidence.
+Stop before implementing the proposed receipt store. Controls1.681 records the
+same approval gate. Retain D8-INV-01 and all remaining4be-A acceptance obligations.
+
 **2026-10-19 Config diagnosis:** unchanged product fc2fba93/test9c9548a2 qualifies
 18/18 through actual Upload, with preserved normal closure and zero delayed faults.
 Three traced inbox-setup saves account for this cohort's revision-pointer document
