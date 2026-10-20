@@ -1,12 +1,23 @@
 # invSys Form Controls v1
 
-**Version:** 1.686 -- EDIT binding diagnostic corrected; validation and implementation open.
+**Version:** 1.687 -- EDIT binding RED qualified; receipt implementation open.
+
+**2026-10-20 EDIT binding coverage:** product fc2fba93/teste2a7b246 qualifies
+147 PASS/32 FAIL through actual Upload, with a passing unchanged imported-row
+control. Exact lookup observation confirms completed-event reuse; invalid imported
+EDIT bindings fail whole-selection refusal. All43 supplemental privacy checks and
+42 Config/Auth/read-preservation checks pass. All five instrumented compiles,
+normal closure/restoration/pin preservation and zero-fault native audit pass.
+Nine receipt-side mutations remain explicitly unexercised until the actual command
+produces a receipt. Older phase/result/save Config comparisons remain open; the new
+combined observer gate addresses those next. No control, wording or runtime contract
+changed. Packaged/native-input and final4be-A acceptance remain open.
 
 **2026-10-19 EDIT binding evidence correction:** test212a3547's83 PASS/29 FAIL
 does not qualify imported-row binding RED: its cases reused a failed EDIT row.
 Normal process closure, settings/pin preservation and zero-fault native audit pass.
 Corrected teste2a7b246 retains the independently successful first row and observes
-lookup event identity; its run is pending. Privacy checks now include embedded
+lookup event identity; its qualified result is above. Privacy checks now include embedded
 canaries. Receipt-side mutation cases are explicitly unexercised until an actual
 EDIT produces the required receipt. No control, wording or runtime contract changed.
 The earlier phase/result/canonical-save REDs lack cohort-specific Config/Auth
