@@ -1,1 +1,1 @@
-`194 Inventory Receipt RED Native Exit Blocker.md`
+`195 Inventory EDIT Receipt Approval Checkpoint.md`
