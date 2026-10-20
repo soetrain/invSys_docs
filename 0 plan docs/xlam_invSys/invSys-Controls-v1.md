@@ -1,6 +1,16 @@
 # invSys Form Controls v1
 
-**Version:** 1.684 -- EDIT phase and result-boundary RED qualified; implementation open.
+**Version:** 1.685 -- EDIT canonical-save RED qualified; implementation open.
+
+**2026-10-19 EDIT canonical-save coverage:** actual Upload on unchanged product
+fc2fba93/testc7a2599c completes83 PASS/28 FAIL. Before/after-save failure and sign-out
+retain correct write boundaries and intended quantity effects, but durable command
+references are missing and both post-save retries repeat catalog history.
+All five instrumented compiles, normal Excel closure/restoration, pin preservation
+and the delayed zero-fault native audit pass. This qualifies source-overlay RED,
+not packaged/native-input acceptance.
+No control, wording, receipt store or architecture changed. Remaining D13 coverage,
+implementation and final4be-A acceptance remain open.
 
 **2026-10-19 EDIT result-boundary coverage:** actual Upload on unchanged product
 fc2fba93/test5e76fcd4 qualifies50 PASS/20 FAIL. Failed result saves and post-apply
