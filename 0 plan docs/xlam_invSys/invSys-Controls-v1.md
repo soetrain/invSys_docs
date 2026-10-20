@@ -1,12 +1,14 @@
 # invSys Form Controls v1
 
-**Version:** 1.694 -- EDIT phases81/81; native qualification pending.
+**Version:** 1.695 -- EDIT phases GREEN qualified81/81.
 
 **2026-10-20 receipt phases:** draftd16b809a/product a9faab9c passes81 checks
 through actual Upload: catalog-only/no-op receipt completion, exact quantity
 application, saved-before-queue proof and fresh-session quantity-only retry.
 Five instrumented compiles and27 Config/Auth/read checks pass at nine boundaries.
-Cleanup/restoration/native qualification is pending. No product, wording, control
+Normal closure19:28:29.015Z confirms settings restored, Excel closed and all pins
+preserved; audit19:28:49.022Z records zero Excel events. No intervention occurred.
+This remains source-overlay evidence. No product, wording, control
 or contract changed. Binding/mutation GREEN remains qualified263/263; result-save/
 canonical-save, retained regressions and final4be-A gates remain open.
 
