@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.689 -- Combined EDIT run excluded; intervention cleanup pending.
+**Version:** 1.690 -- Receipt draft PR4; Windows cleanup blocks validation.
 
 **2026-10-20 combined-run limitation:** product fc2fba93/teste2eb0e0d's
 `EditReceiptAll` run has an Excel Event1001 `RADAR_PRE_LEAK_64` in its audit
@@ -16,6 +16,10 @@ The already-excluded run required termination of its test-owned Excel process at
 09:07:42.137Z after a blocked normal-Quit attempt, using the user's standing Excel
 closure authorization. Package hashes were preserved beforehand. Restoration and
 closure audit are still pending; this intervention cannot qualify a test gate.
+The blocked worker was also stopped at09:32:37.268Z. Its parent retains the
+original settings snapshot in memory while Windows still lists terminated Excel.
+Draft code PR4 is uncompiled; wait for cleanup/restoration, then run focused
+`EditOwnership` with native resource tracing. No new approval is pending.
 
 **2026-10-20 EDIT binding coverage:** product fc2fba93/teste2a7b246 qualifies
 147 PASS/32 FAIL through actual Upload, with a passing unchanged imported-row

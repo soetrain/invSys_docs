@@ -5,18 +5,24 @@ unchanged product fc2fba93/teste2eb0e0d controller
 `7990302e43dd4710bb3ada422e38182b` has an Excel Event1001
 `RADAR_PRE_LEAK_64` at07:48:10.752Z in its audit interval. Do not retrospectively
 exclude the event or qualify partial results; cause and exact process attribution
-are unestablished, and normal closure is still pending. Separate qualified REDs
+are unestablished, and cleanup is still pending. Separate qualified REDs
 remain valid; the expanded Config comparisons remain open. D8-INV-EDIT-01 draft
 branch `work/d8-inv-edit-receipts` has nonregressing static call/duplicate metrics
 but no VBA compile or GREEN yet. Next use the focused `EditOwnership` subset
 after the existing controller is closed and audited, preserving the audit's
-failed result. Controls1.689 and code Inventory evidence track these limits.
+failed result. Controls1.690 and code Inventory evidence track these limits.
 Normal Quit could not obtain a COM response. After over45 minutes without a new
 assertion, the test-owned Excel process was terminated at09:07:42.137Z under the
 user's standing Excel closure authorization. Frozen package hashes were preserved.
 The controller still awaits process removal/restoration/audit; the intervention is
 recorded explicitly and cannot qualify this run. Do not start another Excel test
 while this cleanup remains outstanding.
+The blocked worker was stopped at09:32:37.268Z; the parent controller still holds
+restoration state in memory. At09:37Z, Windows still lists terminated Excel.
+Preserve that controller; do not reboot or start another Excel test while its
+settings snapshot is unrestored. Draft code PR4 is uncompiled. The next focused
+run uses `EditOwnership -TraceResourcesForTest` after cleanup; the tracer is
+observational and retains its existing diagnostic resource bounds.
 
 **2026-10-20 EDIT binding RED qualified:** product fc2fba93/teste2a7b246
 completes147 PASS/32 FAIL. The unchanged imported-row control passes; changed/missing/
