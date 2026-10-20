@@ -1,5 +1,17 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**2026-10-20 combined baseline unqualified; implementation draft isolated:**
+unchanged product fc2fba93/teste2eb0e0d controller
+`7990302e43dd4710bb3ada422e38182b` has an Excel Event1001
+`RADAR_PRE_LEAK_64` at07:48:10.752Z in its audit interval. Do not retrospectively
+exclude the event or qualify partial results; cause and exact process attribution
+are unestablished, and normal closure is still pending. Separate qualified REDs
+remain valid; the expanded Config comparisons remain open. D8-INV-EDIT-01 draft
+branch `work/d8-inv-edit-receipts` has nonregressing static call/duplicate metrics
+but no VBA compile or GREEN yet. Next use the focused `EditOwnership` subset
+after the existing controller is closed and audited, preserving the audit's
+failed result. Controls1.688 and code Inventory evidence track these limits.
+
 **2026-10-20 EDIT binding RED qualified:** product fc2fba93/teste2a7b246
 completes147 PASS/32 FAIL. The unchanged imported-row control passes; changed/missing/
 duplicate receipts expose whole-selection refusal failures. Exact lookup observation

@@ -1,6 +1,17 @@
 # invSys Form Controls v1
 
-**Version:** 1.687 -- EDIT binding RED qualified; receipt implementation open.
+**Version:** 1.688 -- Combined EDIT baseline unqualified; isolated receipt draft.
+
+**2026-10-20 combined-run limitation:** product fc2fba93/teste2eb0e0d's
+`EditReceiptAll` run has an Excel Event1001 `RADAR_PRE_LEAK_64` in its audit
+interval. Cause and exact process attribution are unestablished; the existing
+native gate counts it. Closure is still pending, and this run cannot qualify
+the older Config comparison gaps. Preserve the separate qualified REDs below.
+Approved D8-INV-EDIT-01 implementation is drafted on
+`work/d8-inv-edit-receipts`, not compiled or promoted. Static call/duplicate
+metrics do not regress. Focused ownership/quantity-retry tests are prepared;
+behavioral GREEN, regressions and final4be-A acceptance remain open. No new
+ControlId, replay adapter or contract is introduced.
 
 **2026-10-20 EDIT binding coverage:** product fc2fba93/teste2a7b246 qualifies
 147 PASS/32 FAIL through actual Upload, with a passing unchanged imported-row
