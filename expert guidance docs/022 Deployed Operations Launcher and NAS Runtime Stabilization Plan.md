@@ -11,8 +11,10 @@ Controls 1.701 and the integration record retain exact evidence and limits.
 Candidate `validation-inventory-receipts-01` from draft `47d2ac5c` / product
 `a9faab9c` now passes all five packaged compiles and Operations cold start,
 with preserved settings/pins, normal closure and a zero-event native audit at
-22:32:32.898Z. Packaged smoke is pending normal teardown. Next: its closure and
-preservation qualification, then layout and remaining acceptance gates.
+22:32:32.898Z. At 23:22Z, packaged smoke's first native exit remains unresolved
+after more than 43 minutes; its controller is still active, with no intervention
+or desktop stop condition. Next: its closure, preservation and delayed native
+audit, before any new Excel test, then layout and remaining acceptance gates.
 Inventory recording/guide coverage, live/full-chain fixture conformance,
 Receiving B0 and visible acceptance still keep 4be-A incomplete.
 
