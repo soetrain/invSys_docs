@@ -1,5 +1,15 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**2026-10-19 Config diagnosis:** unchanged product fc2fba93/test9c9548a2 qualifies
+18/18 through actual Upload, with preserved normal closure and zero delayed faults.
+Three traced inbox-setup saves account for this cohort's revision-pointer document
+ID and modification-time changes; Config cells/shapes and Auth bytes are unchanged.
+Read-only extraction and43 redaction/classification checks pass. Controls1.680 and
+the code Inventory evidence record the exact cohort and limits; this comparison
+does not replace earlier RED artifacts or prove all Config semantics. No product
+change or new approval. Next: EDIT imported-row confirmation and receipt/retry;
+final current-source/built-package/visible/Release1 acceptance remains open.
+
 **2026-10-19 Create worksheet continuation:** approved D8-INV-01 now has qualified
 97-check RED (76 PASS /21 FAIL), focused rename RED (24 PASS /3 FAIL), and combined
 108/108 GREEN on fc2fba93. Core retains selected/new-table bindings and the original

@@ -1,6 +1,15 @@
 # invSys Form Controls v1
 
-**Version:** 1.679 -- Create worksheet phases108/108 and retained Upload regression64/64 qualified.
+**Version:** 1.680 -- Scoped Config save diagnosis18/18 qualified; EDIT receipt/retry remains open.
+
+**2026-10-19 Config diagnosis:** unchanged product fc2fba93/test9c9548a2 passes18/18
+through the actual Upload handler, with normal closure and zero delayed faults.
+Three inbox-setup saves account for the observed revision-pointer document ID and
+modification-time changes; Config cells/shapes, Auth bytes and inspected inputs
+are preserved. This is cohort-specific read-only evidence, not a new control,
+contract, blanket semantic proof or built-package acceptance. Earlier cohort
+artifacts retain their limits. Redaction/classification checks pass43/43. Next:
+EDIT imported-row confirmation and receipt/retry, then final acceptance gates.
 
 **2026-10-19 Create continuation:** approved D8-INV-01 now has qualified
 97-check RED (76 PASS /21 FAIL) on unchanged product d0119c82 and a focused rename
