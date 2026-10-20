@@ -1,5 +1,19 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**2026-10-20 broader EDIT receipt/mutation regressions qualified:**
+binding263/263, phases81/81, result-save100 distinct checks and canonical-save147
+distinct checks. All default scenarios are covered; result/canonical partitions
+retain unchanged assertions and exact selected-case evidence. Canonical cases
+pass40/40,41/41,41/41,43/43 on draft3fd268cf/product a9faab9c, including36 Config/
+Auth/read checks. All five instrumented compiles pass per run. Each restores
+settings, preserves all pins, closes normally and records zero native events.
+No product or contract change was needed. Controls1.697 and the integration
+matrices retain exact evidence; prior REDs and excluded attempts remain recorded.
+Next: retained Inventory worksheet/Catalog/headless regressions on the fixed
+draft, then remaining build and acceptance gates. Older RED Config diagnosis
+gaps, final packaged/native/layout/live-role recording and guide conclusion,
+Receiving B0/full Release1 chain and visible acceptance remain open.
+
 **2026-10-20 result-save cohort GREEN qualified:** draft89a70936/product a9faab9c
 passes OperatorSaveThrows36/36, OperatorSaveThrowsLaterQuantity40/40 and
 AfterApplyAuthorityLost36/36. The union is100 distinct checks, including30 Config/

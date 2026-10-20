@@ -1,6 +1,19 @@
 # invSys Form Controls v1
 
-**Version:** 1.696 -- EDIT result-save cohort GREEN qualified.
+**Version:** 1.697 -- Broader EDIT receipt/mutation regressions qualified.
+
+**2026-10-20 canonical-save regression:** draft3fd268cf/product a9faab9c passes
+all four default cases separately:40/40,41/41,41/41,43/43 (147 distinct checks).
+Before-save failures preserve the unsaved source; authority loss prevents writes.
+After-save failures retain the joint catalog/receipt/event-plan save. Authorized
+retry completes only unfinished work under the same command and saved event plan.
+All36 Config/Auth/read checks and five instrumented compiles per run pass.
+Every run restores settings, preserves all pins, closes normally and records zero
+native events. The integration matrix retains exact references.
+Binding/mutation263/263, phases81/81 and result-save100 distinct checks are also
+qualified. No product/control/wording/contract change or package promotion.
+Retained regressions, older RED Config diagnosis gaps and final4be-A acceptance
+remain open; these are source-overlay actual-handler results.
 
 **2026-10-20 result-save regression:** draft89a70936/product a9faab9c passes all
 three default cases separately:36/36,40/40,36/36 (100 distinct checks).
