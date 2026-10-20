@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.691 -- EDIT ownership findings; closure qualification pending.
+**Version:** 1.692 -- EDIT ownership GREEN qualified66/66.
 
 **2026-10-20 ownership diagnostic:** draft204d9be9 compiles all five instrumented
 XLAMs and completes60 PASS/6 FAIL through actual Upload. Five failures expose
@@ -8,8 +8,25 @@ mixed-selection and pending-quantity borrowed-source writes; the sixth expects
 a new queue observation after the defective prior step already applied the event.
 Final exact event/log proof passes. Closed-source mixed retry, saved receipt/
 planned-event ordering, completed-row inspection and all eight observed Config/
-Auth/read boundaries pass. Closure/restoration/native qualification is pending.
-No control, runtime contract or acceptance changes. No new approval is pending.
+Auth/read boundaries pass. Normal closure15:39:44.535Z confirms settings and all
+pins restored/preserved; native audit15:40:04.553Z records zero Excel events.
+No intervention occurred.
+
+Draft fixfe4b5fb4 enforces the approved ownership rule during pending EDIT
+preparation and before writes, retaining completed-row read-only confirmation.
+Refusal says "Close the Inventory workbook before uploading pending EDIT changes."
+If the source cannot be verified, it says "The pending EDIT source could not be
+confirmed." This fallback-only clarification in a9faab9c follows the qualified
+fe4b5fb4 run; exact source comparison verifies no other change. The unchanged
+66-check cohort completes66 PASS/0 FAIL with all five instrumented compiles
+passing. Normal closure16:17:42.215Z confirms restoration and all pins;
+native audit16:18:02.230Z records zero Excel events. No intervention occurred.
+Both refusal cases preserve the source and its
+owner; closed-source retries use the original event and completed-row inspection
+remains available.
+No new runtime contract, control or final acceptance is claimed; no approval is
+pending. The clarified fallback was not separately runtime-tested. This remains
+source-overlay evidence; broader receipt/regression and final4be-A gates are open.
 
 **2026-10-20 combined-run limitation:** product fc2fba93/teste2eb0e0d's
 `EditReceiptAll` run has an Excel Event1001 `RADAR_PRE_LEAK_64` in its audit
@@ -19,7 +36,7 @@ the older Config comparison gaps. Preserve the separate qualified REDs below.
 Approved D8-INV-EDIT-01 implementation is drafted on
 `work/d8-inv-edit-receipts`, not promoted. Static call/duplicate
 metrics do not regress. Focused ownership/quantity-retry findings are above;
-behavioral GREEN, regressions and final4be-A acceptance remain open. No new
+broader receipt GREEN, regressions and final4be-A acceptance remain open. No new
 ControlId, replay adapter or contract is introduced.
 The already-excluded run required termination of its test-owned Excel process at
 09:07:42.137Z after a blocked normal-Quit attempt, using the user's standing Excel

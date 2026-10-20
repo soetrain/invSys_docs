@@ -1,16 +1,26 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
-**2026-10-20 focused EDIT ownership findings:** draft204d9be9 compiles all five
+**2026-10-20 focused EDIT ownership RED qualified:** draft204d9be9 compiles all five
 instrumented XLAMs and completes60 PASS/6 FAIL through actual Upload. Five
 failures expose mixed-selection and pending-quantity borrowed-source writes.
 The sixth is a dependent queue observation after the preceding defective action
 already applied the event; exact final event/log proof passes. Receipt/save
 ordering, closed-source mixed retry and completed-row read-only inspection pass.
 All eight observed Config/Auth/read boundaries are preserved or have classified
-metadata-only saves. Closure/restoration/native qualification is pending.
-Controls1.691 and code Inventory evidence carry the scope. Next, after qualification,
-protect pending EDIT ownership before whole-selection writes and recheck at write
-boundaries; retain completed imported-row inspection. No new approval is pending.
+metadata-only saves. Normal closure15:39:44.535Z confirms restoration and all pins;
+audit15:40:04.553Z records zero Excel events. No intervention occurred.
+Draft fixfe4b5fb4 now protects pending EDIT preparation, prepared-selection
+confirmation, Domain plan claim and quantity queue/application boundaries, retaining
+completed-row read-only inspection. The unchanged66-check cohort completes66 PASS/
+0 FAIL, including all five instrumented compiles. Both refusals preserve source/
+owner, retries keep the original event and do not repeat catalog work, and
+completed-row inspection stays available. Normal closure16:17:42.215Z confirms
+settings restoration and all pins; native audit16:18:02.230Z records zero Excel
+events. No intervention occurred. Final fallback-only clarification a9faab9c
+removes the inaccurate claim that no earlier event was queued; exact source
+comparison verifies that only this string changed. Runtime/compile qualification
+is on fe4b5fb4, not separate execution of the clarified fallback.
+Controls1.692 and code Inventory evidence carry the scope. No approval is pending.
 
 **2026-10-20 combined baseline unqualified; implementation draft isolated:**
 unchanged product fc2fba93/teste2eb0e0d controller
@@ -20,7 +30,8 @@ exclude the event or qualify partial results; cause and exact process attributio
 are unestablished. Cleanup is now complete. Separate qualified REDs
 remain valid; the expanded Config comparisons remain open. D8-INV-EDIT-01 draft
 branch `work/d8-inv-edit-receipts` has nonregressing static call/duplicate metrics
-but no behavioral GREEN yet. The focused `EditOwnership` findings are above;
+with focused ownership GREEN now qualified. Broader receipt GREEN remains open.
+The focused `EditOwnership` findings are above;
 the prior combined audit remains failed.
 Normal Quit could not obtain a COM response. After over45 minutes without a new
 assertion, the test-owned Excel process was terminated at09:07:42.137Z under the
