@@ -1,6 +1,14 @@
 # invSys Form Controls v1
 
-**Version:** 1.700 -- Retained Inventory regressions qualified; candidate gates next.
+**Version:** 1.701 -- Inventory candidate build/compile qualified; acceptance open.
+
+**2026-10-20 candidate build:** `validation-inventory-receipts-01`, built from
+draft `47d2ac5c` / product `a9faab9c`, compiles all five packaged projects and
+passes Operations cold start. Normal closure at 22:32:12.874Z preserves settings,
+frozen packages and source; audit at 22:32:32.898Z records zero native Excel events.
+The Inventory integration record names the exact evidence. Packaged smoke is
+pending normal teardown; layout, recording/guide/B0, conformant live/full-chain
+and visible acceptance remain open. No product/control/contract change or promotion.
 
 **2026-10-20 retained Inventory gates:** worksheet 64/64, Catalog 50/50, headless
 56/56 and imported ADD 56/56 qualify on draft `8af28d99` / product `a9faab9c`.
