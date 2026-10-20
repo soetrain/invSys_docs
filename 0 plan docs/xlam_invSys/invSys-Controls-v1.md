@@ -1,6 +1,14 @@
 # invSys Form Controls v1
 
-**Version:** 1.693 -- EDIT binding/mutation GREEN qualified263/263.
+**Version:** 1.694 -- EDIT phases81/81; native qualification pending.
+
+**2026-10-20 receipt phases:** draftd16b809a/product a9faab9c passes81 checks
+through actual Upload: catalog-only/no-op receipt completion, exact quantity
+application, saved-before-queue proof and fresh-session quantity-only retry.
+Five instrumented compiles and27 Config/Auth/read checks pass at nine boundaries.
+Cleanup/restoration/native qualification is pending. No product, wording, control
+or contract changed. Binding/mutation GREEN remains qualified263/263; result-save/
+canonical-save, retained regressions and final4be-A gates remain open.
 
 **2026-10-20 binding/mutation regression:** draft5524cf7f (product a9faab9c)
 passes263 actual-Upload checks, including all five instrumented compiles, all nine
