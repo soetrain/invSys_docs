@@ -1,6 +1,17 @@
 # invSys Form Controls v1
 
-**Version:** 1.698 -- Retained worksheet regression qualified.
+**Version:** 1.699 -- Retained worksheet, Catalog and headless regressions qualified.
+
+**2026-10-20 retained Catalog/headless regressions:** draft `8af28d99` /
+product `a9faab9c` qualifies Catalog/Edit completion 50/50 and headless authority
+56/56. Exact identity/quantity, unrelated pending events, modal continuation,
+honest partials and separately provisioned headless access are preserved. Each
+run compiles five instrumented packages, restores settings, preserves all pins,
+closes normally without intervention and records zero native events. The
+integration record carries exact provenance and ten same-cohort Config/Auth
+observations. Worksheet 64/64 is also qualified. No product/control/contract
+change; imported-ADD preflight, final packages and 4be-A acceptance remain open.
+
 
 **2026-10-20 retained worksheet regression:** draft `8af28d99` / product
 `a9faab9c` passes 64/64 actual-Upload checks, retaining zero-quantity creation,

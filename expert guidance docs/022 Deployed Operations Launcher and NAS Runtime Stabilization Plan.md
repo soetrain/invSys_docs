@@ -1,5 +1,14 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**2026-10-20 retained Catalog/headless regressions qualified:** draft `8af28d99`
+/ product `a9faab9c` passes Catalog/Edit completion 50/50 and headless authority
+56/56, retaining worksheet 64/64. Each run has five instrumented compiles, settings
+restoration, unchanged pins, normal closure and zero native events. Exact
+controllers/workers and ten same-cohort Config/Auth observations are in the
+Inventory integration record; Controls 1.699 is synchronized. No product or
+contract change. Next: imported-ADD preflight for the shared receipt code, then
+the isolated candidate build and remaining acceptance gates. 4be-A stays open.
+
 **2026-10-20 retained worksheet regression qualified:** draft `8af28d99` /
 product `a9faab9c` passes all 64 retained actual-Upload checks and five instrumented
 compiles. Exact identity, custom columns, authority/input refusal, honest partials
