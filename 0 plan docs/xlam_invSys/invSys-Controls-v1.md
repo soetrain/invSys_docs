@@ -1,25 +1,33 @@
 # invSys Form Controls v1
 
-**Version:** 1.690 -- Receipt draft PR4; Windows cleanup blocks validation.
+**Version:** 1.691 -- EDIT ownership findings; closure qualification pending.
+
+**2026-10-20 ownership diagnostic:** draft204d9be9 compiles all five instrumented
+XLAMs and completes60 PASS/6 FAIL through actual Upload. Five failures expose
+mixed-selection and pending-quantity borrowed-source writes; the sixth expects
+a new queue observation after the defective prior step already applied the event.
+Final exact event/log proof passes. Closed-source mixed retry, saved receipt/
+planned-event ordering, completed-row inspection and all eight observed Config/
+Auth/read boundaries pass. Closure/restoration/native qualification is pending.
+No control, runtime contract or acceptance changes. No new approval is pending.
 
 **2026-10-20 combined-run limitation:** product fc2fba93/teste2eb0e0d's
 `EditReceiptAll` run has an Excel Event1001 `RADAR_PRE_LEAK_64` in its audit
 interval. Cause and exact process attribution are unestablished; the existing
-native gate counts it. Closure is still pending, and this run cannot qualify
+native gate counts it. Cleanup finished, but this run cannot qualify
 the older Config comparison gaps. Preserve the separate qualified REDs below.
 Approved D8-INV-EDIT-01 implementation is drafted on
-`work/d8-inv-edit-receipts`, not compiled or promoted. Static call/duplicate
-metrics do not regress. Focused ownership/quantity-retry tests are prepared;
+`work/d8-inv-edit-receipts`, not promoted. Static call/duplicate
+metrics do not regress. Focused ownership/quantity-retry findings are above;
 behavioral GREEN, regressions and final4be-A acceptance remain open. No new
 ControlId, replay adapter or contract is introduced.
 The already-excluded run required termination of its test-owned Excel process at
 09:07:42.137Z after a blocked normal-Quit attempt, using the user's standing Excel
-closure authorization. Package hashes were preserved beforehand. Restoration and
-closure audit are still pending; this intervention cannot qualify a test gate.
-The blocked worker was also stopped at09:32:37.268Z. Its parent retains the
-original settings snapshot in memory while Windows still lists terminated Excel.
-Draft code PR4 is uncompiled; wait for cleanup/restoration, then run focused
-`EditOwnership` with native resource tracing. No new approval is pending.
+closure authorization. Package hashes were preserved beforehand.
+The blocked worker was also stopped at09:32:37.268Z. Its parent retained the
+original settings snapshot until closure10:21:01.698Z confirmed restoration and
+all pins preserved. Audit10:21:21.713Z records one Excel event. The intervention
+and failed audit remain excluded from acceptance.
 
 **2026-10-20 EDIT binding coverage:** product fc2fba93/teste2a7b246 qualifies
 147 PASS/32 FAIL through actual Upload, with a passing unchanged imported-row
