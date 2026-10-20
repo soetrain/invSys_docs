@@ -1,5 +1,17 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**2026-10-19 Create worksheet continuation:** approved D8-INV-01 now has qualified
+97-check RED (76 PASS /21 FAIL), focused rename RED (24 PASS /3 FAIL), and combined
+108/108 GREEN on fc2fba93. Core retains selected/new-table bindings and the original
+created-table name; Admin rechecks before writes and reports honest partials;
+saved output is independently confirmed. Normal closure, preservation and delayed
+native audits pass. Architecture4/4, worksheet guards8/8, Add guards7/7 and final
+static metrics pass; oversized modules and dynamic-call/duplicate counts do not
+grow. The retained64-check Upload/save/retry regression also qualifies with
+preserved normal closure and zero native faults. Controls1.679 and code Inventory
+evidence retain exact scope. Next: scoped Config diagnosis and EDIT receipt/retry.
+Final built-package/visible/Release1 gates remain open; no new approval.
+
 **2026-10-19 creation boundary continuation:** productd0119c82 corrects the three
 recorded Inventory creation crossings under approved D8-INV-01 item3. The
 strengthened architecture check is4/4; literal payload compatibility9/9 and

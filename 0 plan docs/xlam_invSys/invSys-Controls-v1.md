@@ -1,6 +1,20 @@
 # invSys Form Controls v1
 
-**Version:** 1.678 -- Primitive creation boundary correction and focused regressions qualified.
+**Version:** 1.679 -- Create worksheet phases108/108 and retained Upload regression64/64 qualified.
+
+**2026-10-19 Create continuation:** approved D8-INV-01 now has qualified
+97-check RED (76 PASS /21 FAIL) on unchanged product d0119c82 and a focused rename
+RED (24 PASS /3 FAIL). Implementation through fc2fba93 checks the captured command
+before writes, retains the original selected table and the new table's exact name,
+and confirms its saved copy. Partials distinguish saved-but-unconfirmed and
+uncertain saves, label the captured table reference and require reopening.
+Combined108/108 GREEN retains all prior checks with preserved normal closure and
+zero native faults. Static metrics pass without oversized-module growth; the form
+shrinks1529 to1526 lines. The retained64-check Upload/save/retry regression also
+qualifies with preserved normal closure and zero native faults. Config diagnosis
+and EDIT receipt/retry remain open before final acceptance gates.
+The implementation changes no control ID, warehouse permission or inventory
+identity contract. No built-package or 4be-A acceptance is claimed.
 
 **2026-10-19 creation boundary continuation:** productd0119c82 corrects the three
 recorded Admin-to-Core creation crossings under D8-INV-01 item3. Architecture4/4,
@@ -8520,7 +8534,7 @@ zero-quantity paths are protected; replacement/remaining phase gates stay open.
 | `btnDeleteItem` | Button — **Delete Item** | Visible only in Edit mode. After an exact SKU is selected, requires confirmation and a reason, then retires all active exact `System_Key` entities for that SKU through audited Admin adjustment lines. Counted balances become zero; non-counted Utility/Service entities receive zero-delta retirement evidence. Canonical catalog/entity/event history is retained, while the retired item is removed from ordinary Edit search, managed inventory, Viewer levels, and Production pickers after Refresh. |
 | `btnAddMode` | Button — **Add Item Mode** | Selects add mode and clears add fields. |
 | `btnEditMode` | Button — **Edit Item** | Selects edit mode and exposes inventory search/results. |
-| `btnCreateInventoryTable` | Button — **Create Inventory Table** | Creates a uniquely named bulk ADD/EDIT staging table in the captured workbook and closes the modal form so the worksheet can be edited. |
+| `btnCreateInventoryTable` | Button — **Create Inventory Table** | Creates a uniquely named bulk ADD/EDIT staging table in the captured workbook and closes the modal form after the saved table is confirmed. Changed authority or table inputs stop further writes. Partial results identify the captured table when known and require reopening before retrying; they do not claim rollback. Phase97/97 is qualified under D8-INV-01; name binding and final regressions remain pending. |
 | `btnUploadInventoryTable` | Button — **Upload Selected Inventory Table** | Uses the captured workbook/table and live Core authority. Preflights pending rows and verifies a signed-in claimed `IMPORTED` ADD against its exact saved event, `System_Key` and payload before skipping it. An invalid receipt refuses the whole selection, retains the prior receipt and displays the refusal explanation. Applicable EDIT, headless and final acceptance gates remain open. |
 | `cmbEditItem` | Combo box — Inventory item | Typed text filters candidates. Choosing a dropdown row binds its exact catalog SKU and loads that item's editable fields. Visible display text alone is not identity. |
 | `lstEditItemResults` | List box | Shows filtered candidate inventory items; choosing a row converges on the same SKU-backed edit loader as a combo dropdown choice. |
