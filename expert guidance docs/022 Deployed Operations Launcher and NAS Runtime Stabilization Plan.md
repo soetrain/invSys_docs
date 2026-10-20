@@ -1,5 +1,15 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**2026-10-20 retained worksheet regression qualified:** draft `8af28d99` /
+product `a9faab9c` passes all 64 retained actual-Upload checks and five instrumented
+compiles. Exact identity, custom columns, authority/input refusal, honest partials
+and failed-save retry remain GREEN. Normal closure at 21:26:31.975Z preserves
+settings and all pins; native audit at 21:26:51.989Z records zero Excel events,
+without intervention. Controls 1.698 and the Inventory integration record retain
+the exact controller/worker and six same-cohort Config/Auth observations.
+Next: Catalog/headless and other relevant retained regressions, then final build
+and acceptance gates. No product or contract change; 4be-A remains incomplete.
+
 **2026-10-20 broader EDIT receipt/mutation regressions qualified:**
 binding263/263, phases81/81, result-save100 distinct checks and canonical-save147
 distinct checks. All default scenarios are covered; result/canonical partitions

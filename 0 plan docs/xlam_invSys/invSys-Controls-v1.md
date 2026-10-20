@@ -1,6 +1,17 @@
 # invSys Form Controls v1
 
-**Version:** 1.697 -- Broader EDIT receipt/mutation regressions qualified.
+**Version:** 1.698 -- Retained worksheet regression qualified.
+
+**2026-10-20 retained worksheet regression:** draft `8af28d99` / product
+`a9faab9c` passes 64/64 actual-Upload checks, retaining zero-quantity creation,
+custom columns, authority/input refusal, honest partials and exact-event retry
+without duplicate creation. Five instrumented compiles pass. Settings and all
+pins are preserved; normal closure at 21:26:31.975Z and the zero-event native
+audit at 21:26:51.989Z qualify the run without intervention. Six Config/Auth
+observations retain their same-worker diagnosis in the integration record.
+No product, control, wording or contract changed. Catalog/headless, remaining
+retained regressions and final packaged/visible/4be-A acceptance remain open.
+
 
 **2026-10-20 canonical-save regression:** draft3fd268cf/product a9faab9c passes
 all four default cases separately:40/40,41/41,41/41,43/43 (147 distinct checks).
