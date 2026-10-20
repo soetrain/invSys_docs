@@ -1,6 +1,15 @@
 # invSys Form Controls v1
 
-**Version:** 1.682 -- D8-INV-EDIT-01 approved with four tightenings; baseline RED qualified.
+**Version:** 1.683 -- D8-INV-EDIT-01 phase RED qualified; implementation remains open.
+
+**2026-10-19 EDIT phase coverage:** actual Upload on unchanged product fc2fba93/
+testf2d26e8f qualifies41 PASS/12 FAIL, with all five instrumented compiles, normal
+closure/restoration/pin preservation and zero delayed Excel faults. Catalog-only,
+no-op and changed-quantity edits lack durable command receipts/planned event IDs;
+failed-queue retry repeats catalog history. Intended quantity and custom-column
+checks pass. This adds evidence only: no control, wording, receipt store or runtime
+contract changed. Remaining D13 coverage, implementation, packaged/native and
+Release1 acceptance stay open; Architecture4.11 D8-INV-EDIT-01 remains approved.
 
 **2026-10-19 worksheet EDIT approval:** Architecture4.11 D8-INV-EDIT-01 requires
 one confirmed Inventory save of catalog/receipt/planned event ID before queueing;

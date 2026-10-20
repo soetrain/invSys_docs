@@ -1,5 +1,14 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**2026-10-19 EDIT phase RED:** approved D8-INV-EDIT-01 now has expanded actual-Upload
+RED41 PASS/12 FAIL on unchanged product fc2fba93/testf2d26e8f. Catalog-only/no-op,
+changed quantity and failed-queue retry expose missing durable command/event plans;
+retry repeats catalog history. Normal closure03:33:47.104Z and zero-fault audit
+03:34:07.125Z on2026-10-20 UTC confirm restoration/preservation. Controls1.683 and
+the code Inventory evidence record scope and limits. Remaining save/authority,
+binding, event-separation and privacy D13 coverage still precedes implementation;
+all final4be-A gates remain open. No contract change or new approval is needed.
+
 **2026-10-19 worksheet EDIT approval:** D8-INV-EDIT-01 is approved with four
 tightenings in Architecture4.11: one confirmed Inventory save holds catalog,
 receipt and planned event ID before queueing; application proof uses that event ID
