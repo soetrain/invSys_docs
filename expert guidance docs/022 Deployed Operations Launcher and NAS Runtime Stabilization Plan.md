@@ -1,15 +1,18 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
-**2026-10-19 worksheet EDIT decision pending:** D8-INV-EDIT-01 is proposed in
-Architecture4.11. It would authorize a scoped Domain-owned worksheet EDIT
-receipt table, because catalog fields/history and quantity-event receipts cannot
-independently prove the whole prior EDIT. The actual Upload diagnostic on product
-fc2fba93/test13f1ea0c completes28 PASS /4 FAIL: a genuine EDIT control passes;
-forged and relabeled EDIT claims fail whole-selection refusal/reporting. Normal
-cleanup/native qualification is pending. Config/Auth preservation is diagnosed
-for all3 cases in the code Inventory evidence.
-Stop before implementing the proposed receipt store. Controls1.681 records the
-same approval gate. Retain D8-INV-01 and all remaining4be-A acceptance obligations.
+**2026-10-19 worksheet EDIT approval:** D8-INV-EDIT-01 is approved with four
+tightenings in Architecture4.11: one confirmed Inventory save holds catalog,
+receipt and planned event ID before queueing; application proof uses that event ID
+in tblAppliedEvents/tblInventoryLog; receipts remain private to Inventory and are
+excluded from snapshots, roles and D8-AGG-01/D17 aggregation; staging row and receipt
+must mutually match command ID/source/inputs. Modal Edit remains unchanged.
+The actual Upload RED on product fc2fba93/test13f1ea0c qualifies28 PASS /4 FAIL:
+the genuine EDIT control passes; forged/relabeled claims fail refusal/reporting.
+Normal closure02:05:57.094Z and zero-fault native audit02:06:17.109Z on2026-10-20
+UTC confirm preservation/restoration; Config/Auth diagnosis covers all3 cases.
+Controls1.682 records the same contract. Next: expand D13 for the tightened contract
+before implementation. No new Excel test preceded verified cleanup. Approval does
+not waive any remaining4be-A acceptance gate.
 
 **2026-10-19 Config diagnosis:** unchanged product fc2fba93/test9c9548a2 qualifies
 18/18 through actual Upload, with preserved normal closure and zero delayed faults.

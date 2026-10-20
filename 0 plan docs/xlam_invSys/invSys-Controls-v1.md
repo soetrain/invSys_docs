@@ -1,15 +1,17 @@
 # invSys Form Controls v1
 
-**Version:** 1.681 -- Worksheet EDIT receipt decision D8-INV-EDIT-01 proposed; approval required.
+**Version:** 1.682 -- D8-INV-EDIT-01 approved with four tightenings; baseline RED qualified.
 
-**2026-10-19 worksheet EDIT proposal:** Architecture4.11 D8-INV-EDIT-01 proposes
-independent saved catalog/quantity receipt confirmation before Upload skips an
-imported EDIT, and exact reconciliation before retry. Forged/unproved rows would
-refuse the whole pending selection and retain their references. A scoped receipt
-table is a new architectural decision, not an accepted implementation. No new
-control or ControlId is proposed. The actual-handler diagnostic completes28 PASS /
-4 FAIL, limited to forged/relabeled EDIT refusal/reporting. Native qualification
-and implementation remain open; no receipt store has been implemented.
+**2026-10-19 worksheet EDIT approval:** Architecture4.11 D8-INV-EDIT-01 requires
+one confirmed Inventory save of catalog/receipt/planned event ID before queueing;
+queue failure resumes only quantity under that ID. Applied proof uses the exact
+event ID in tblAppliedEvents/tblInventoryLog, not payload matching. Row and receipt
+must mutually match command ID/source/inputs. The receipt table is Inventory-only,
+excluded from snapshots, role workbooks and D8-AGG-01/D17 aggregation; it creates no
+schema/repair obligations in other stores. Modal Edit/live confirmation is unchanged.
+Actual-handler RED28 PASS /4 FAIL now has preserved normal closure and zero delayed
+native faults. Expanded D13 and implementation remain open. No receipt store, new
+control or ControlId has been implemented; approval is not4be-A acceptance.
 
 **2026-10-19 Config diagnosis:** unchanged product fc2fba93/test9c9548a2 passes18/18
 through the actual Upload handler, with normal closure and zero delayed faults.

@@ -5896,7 +5896,12 @@ Approval authorizes this test-first implementation, not4be-A acceptance, new D18
 ControlIds/replay adapters, package promotion or historical inventory import.
 
 ---
-### D8-INV-EDIT-01 — Durable worksheet EDIT receipts (PROPOSED; approval required)
+### D8-INV-EDIT-01 — Durable worksheet EDIT receipts (APPROVED,2026-10-19)
+
+The user approved this decision with the four tightenings below: one confirmed
+Inventory save before queueing, event-ID application proof, Inventory-only storage,
+and reciprocal operator-row/receipt binding. Approval authorizes D13 implementation,
+not acceptance; prior controller closure/native qualification precedes new Excel tests.
 
 **Problem:** D8-INV-01 items5–6 require independent imported-row confirmation and
 exact retry reconciliation. Worksheet EDIT currently skips an `IMPORTED` label
@@ -5904,11 +5909,12 @@ without verification. Quantity events prove adjustments, but do not prove the
 catalog fields/reason submitted with an EDIT; catalog-only edits have no inventory
 event. Current catalog values and human edit history are not exact command receipts.
 
-**Decision requiring approval:** introduce one narrowly scoped receipt table,
+**Approved decision:** introduce one narrowly scoped receipt table,
 `tblInventoryEditReceipts`, in the captured canonical Inventory workbook. This is
 an explicit extension to D8-INV-01's prohibition on implicitly adding a general
 receipt store. It covers interactive worksheet EDIT only, not a general command
 ledger, Action Path evidence, or a replacement for Domain inventory events.
+Modal Edit remains unchanged; it already has live confirmation.
 
 - Core authorizes and coordinates; Inventory Domain owns the stored receipts.
   Use typed calls and primitive/serialized envelopes. Retain D8-INV-01's live
@@ -5918,16 +5924,25 @@ ledger, Action Path evidence, or a replacement for Domain inventory events.
   values, reason and quantity intent. Retain exact planned quantity-event and
   entity identities when needed. A fingerprint alone is not application proof.
 - Save the prepared command reference in the existing operator result boundary
-  before canonical application. Persist the catalog change and its catalog-phase
-  receipt in the same owning workbook save; independently confirm that save.
-  Before queueing, durably retain the exact quantity-event identity. Record
-  catalog and quantity outcomes separately. Catalog-only/no-op quantity outcomes
+  before canonical application. The staging row's command ID must match the
+  receipt's command ID, source and bound inputs; verify the binding in both
+  directions. A mismatch in either direction refuses the run.
+  A single save of the captured Inventory workbook holds the catalog change,
+  its catalog-phase receipt and, when required, the planned quantity-event ID
+  stored in that receipt. Independently confirm this save before queueing.
+  If queueing then fails, retry resumes only the quantity phase under that same
+  event ID; it does not repeat the saved catalog application. Record catalog
+  and quantity outcomes separately. Catalog-only/no-op quantity outcomes
   do not fabricate inventory events or physical entities.
   Receipt identity, input binding and planned identities are immutable; confirmed
   phases advance only on saved proof. R1 performs no automatic receipt pruning.
 - A fresh session may reconcile only the receipt's original source/user with
   current ADMIN_MAINT. Confirm catalog application from its saved receipt and any
-  quantity application from the exact canonical event/log receipts. Never infer
+  quantity application by the planned event ID against `tblAppliedEvents` and
+  `tblInventoryLog`, including its bound entity and intended effect. Payload
+  equality is not application proof: `FindExact` matches payload text and skips
+  APPLIED rows. Queue checks detect only pending events; two edits with identical
+  payloads retain distinct event identities and cannot confirm each other. Never infer
   past application from current quantity or recalculate a new adjustment for an
   already-applied command. Resume only an unchanged, verified pending plan; a
   changed binding/input or ambiguous result refuses without resubmission.
@@ -5941,14 +5956,22 @@ ledger, Action Path evidence, or a replacement for Domain inventory events.
   conversion, borrowed-workbook save or unrelated schema repair is authorized.
   Resolve required headers by name and preserve unknown columns. User-submitted
   catalog/custom fields cannot create, overwrite or remove command receipts.
+- `tblInventoryEditReceipts` is private to the canonical Inventory workbook.
+  Exclude it from published snapshots, role workbooks, D8-AGG-01 and D17 aggregation.
+  Its presence or absence never authorizes repair, migration or schema validation
+  of another store.
 - Authority loss stops all further writes, including receipt/status cleanup. Keep
   known partial outcomes and disclose any unconfirmed durability. A lost result
   save cannot cause a duplicate catalog application or quantity event on retry.
 
-**Approval gate:** no implementation of this new store before approval. D13 must
-retain actual Upload controls and cover genuine/forged/relabeled receipts,
+**D13 implementation gate:** retain the qualified baseline RED and expand it before
+implementation. Tests must retain actual Upload controls and cover
+genuine/forged/relabeled receipts,
 catalog-only and no-op edits, altered inputs, duplicate/missing receipt identities,
 failed catalog/receipt/operator saves, authority loss and fresh-session retry.
+Cover failed queueing after the single confirmed Inventory save, unchanged event
+identity on quantity-only retry, identical-payload/different-event separation,
+both directions of row/receipt mismatch, and snapshot/role/aggregation exclusion.
 Independent persisted checks must prove one catalog application and at most the
 one intended quantity event, preserving exact entity identity and custom columns.
 Existing accepted Add/Create, headless, Operations and Release1 gates still apply;
