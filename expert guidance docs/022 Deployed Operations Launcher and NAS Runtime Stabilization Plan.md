@@ -10,7 +10,13 @@ remain valid; the expanded Config comparisons remain open. D8-INV-EDIT-01 draft
 branch `work/d8-inv-edit-receipts` has nonregressing static call/duplicate metrics
 but no VBA compile or GREEN yet. Next use the focused `EditOwnership` subset
 after the existing controller is closed and audited, preserving the audit's
-failed result. Controls1.688 and code Inventory evidence track these limits.
+failed result. Controls1.689 and code Inventory evidence track these limits.
+Normal Quit could not obtain a COM response. After over45 minutes without a new
+assertion, the test-owned Excel process was terminated at09:07:42.137Z under the
+user's standing Excel closure authorization. Frozen package hashes were preserved.
+The controller still awaits process removal/restoration/audit; the intervention is
+recorded explicitly and cannot qualify this run. Do not start another Excel test
+while this cleanup remains outstanding.
 
 **2026-10-20 EDIT binding RED qualified:** product fc2fba93/teste2a7b246
 completes147 PASS/32 FAIL. The unchanged imported-row control passes; changed/missing/

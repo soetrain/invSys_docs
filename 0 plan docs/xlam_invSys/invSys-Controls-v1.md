@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.688 -- Combined EDIT baseline unqualified; isolated receipt draft.
+**Version:** 1.689 -- Combined EDIT run excluded; intervention cleanup pending.
 
 **2026-10-20 combined-run limitation:** product fc2fba93/teste2eb0e0d's
 `EditReceiptAll` run has an Excel Event1001 `RADAR_PRE_LEAK_64` in its audit
@@ -12,6 +12,10 @@ Approved D8-INV-EDIT-01 implementation is drafted on
 metrics do not regress. Focused ownership/quantity-retry tests are prepared;
 behavioral GREEN, regressions and final4be-A acceptance remain open. No new
 ControlId, replay adapter or contract is introduced.
+The already-excluded run required termination of its test-owned Excel process at
+09:07:42.137Z after a blocked normal-Quit attempt, using the user's standing Excel
+closure authorization. Package hashes were preserved beforehand. Restoration and
+closure audit are still pending; this intervention cannot qualify a test gate.
 
 **2026-10-20 EDIT binding coverage:** product fc2fba93/teste2a7b246 qualifies
 147 PASS/32 FAIL through actual Upload, with a passing unchanged imported-row
