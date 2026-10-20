@@ -1,5 +1,17 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**2026-10-20 retained Inventory regressions qualified:** worksheet 64/64, Catalog
+50/50, headless 56/56 and imported ADD 56/56 on draft `8af28d99` / product
+`a9faab9c`. All prior GREEN IDs/order are retained. Every run compiles five
+instrumented packages, preserves settings/pins, closes normally and records zero
+native events. Imported ADD's final audit is 22:29:50.778Z. Static metrics/ratchets
+are unchanged; three JSON contracts and 36 retained source checks pass. Two stale
+source guards now follow approved Core ownership; no product behavior changed.
+Controls 1.700 and the integration record retain exact evidence and limits.
+Next: isolated five-package candidate build/compile and remaining acceptance
+gates. Inventory recording/guide coverage, live/full-chain fixture conformance,
+Receiving B0 and visible acceptance still keep 4be-A incomplete.
+
 **2026-10-20 retained Catalog/headless regressions qualified:** draft `8af28d99`
 / product `a9faab9c` passes Catalog/Edit completion 50/50 and headless authority
 56/56, retaining worksheet 64/64. Each run has five instrumented compiles, settings

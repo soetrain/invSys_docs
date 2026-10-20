@@ -1,6 +1,17 @@
 # invSys Form Controls v1
 
-**Version:** 1.699 -- Retained worksheet, Catalog and headless regressions qualified.
+**Version:** 1.700 -- Retained Inventory regressions qualified; candidate gates next.
+
+**2026-10-20 retained Inventory gates:** worksheet 64/64, Catalog 50/50, headless
+56/56 and imported ADD 56/56 qualify on draft `8af28d99` / product `a9faab9c`.
+All retain earlier GREEN IDs/order, five instrumented compiles, preserved settings
+and pins, normal closure and zero native events. Imported ADD's final audit is
+22:29:50.778Z; its six Config/Auth observations and exact run references are in
+the integration record. Five source guards pass 36 checks after two stale-owner
+test corrections. Static metrics and ratchets are unchanged; three JSON contracts
+pass. No product/control/contract change or package promotion. Final candidate,
+recording/guide/B0, conformant live/full-chain and visible acceptance remain open.
+
 
 **2026-10-20 retained Catalog/headless regressions:** draft `8af28d99` /
 product `a9faab9c` qualifies Catalog/Edit completion 50/50 and headless authority
