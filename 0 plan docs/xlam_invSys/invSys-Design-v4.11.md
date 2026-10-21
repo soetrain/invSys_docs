@@ -892,6 +892,14 @@ Close action. Fixed explanations contain no entered value, table/path or raw
 error. This adds no replay adapter or permission. Packaged D13, partial/retry
 evidence and independent guide qualification are pending.
 
+Qualification checkpoint2026-10-21: worksheet observation implementation is draft,
+not compiled or accepted. Create's completed RED prefix is65 PASS/8 FAIL; its run
+then fails Upload fixture setup. A separate Upload cohort completes69 PASS/17 FAIL,
+including three Config byte comparisons requiring scoped diagnosis. Native shutdown
+remains unresolved after TerminateProcess returns error5 at07:56:40Z; desktop
+monitor counters remain zero. No GREEN or normal-closure acceptance is claimed.
+Exact scope is in `plan022_slice4be_inventory_worksheet_recording_results.md`.
+
 Selection qualification2026-10-21: RED40/25 -> GREEN65/65; independent guide75
 proves complete15-step and interrupted13-step observations. Retained boundaries151,
 Catalog/Edit50, smoke86 and Settings202 preserve exact prior ordered checks;

@@ -1,6 +1,6 @@
 # invSys Form Controls v1
 
-**Version:** 1.714 -- Inventory worksheet recording pending;4be-A acceptance remains open.
+**Version:** 1.715 -- Inventory worksheet RED checkpoint;4be-A acceptance remains open.
 
 D18's catalog47/201 refinement adds `ADMIN_INVENTORY_CREATE_TABLE` and
 `ADMIN_INVENTORY_UPLOAD_TABLE`, Command/ADMIN_INVENTORY/ADMIN_MAINT, at the existing
@@ -12,6 +12,13 @@ from PARTIAL/FAILED. Exact contributing source references come from owners;
 catalog-only edits need none. Policy/context/redaction/receipt rules are unchanged.
 Actual-handler RED/GREEN, partial/retry and independent guide qualification are
 pending. Catalog46 qualification below remains scoped to its existing candidate.
+
+Worksheet implementation is draft and uncompiled. Create RED prefix65/8 and
+separate Upload69/17 are recorded; three Upload Config-byte comparisons still need
+the scoped diagnostic. Cleanup is unresolved after native TerminateProcess error5
+at2026-10-21 07:56:40Z, with no desktop-lock counter. No packaged GREEN, normal
+closure or worksheet acceptance is claimed. See the code worksheet recording
+results record for exclusions and exact evidence.
 
 D18's Inventory UOM prompt refinement adds catalog46 control
 `ADMIN_INVENTORY_UOM_ADD`, owner ADMIN_INVENTORY/capability ADMIN_MAINT.

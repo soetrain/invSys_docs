@@ -6,8 +6,15 @@ packaged RED for missing observations while independently proving existing local
 save/canonical outcomes. Return fixed owner facts and exact contributing event
 identities; do not parse reports or infer completion from Boolean/Hide. Protect
 preflight refusal, empty selection, partial results, retries, policies/context,
-redaction and unknown columns. Controls1.714 records this pending scope; no write,
+redaction and unknown columns. Controls1.715 records this pending scope; no write,
 authority or replay behavior changes. Retain the qualified catalog46 gates below.
+
+Checkpoint2026-10-21: draft implementation remains uncompiled. Create's completed
+RED prefix is65/8; separate Upload cases finish69/17, including three Config-byte
+comparisons needing the scoped diagnostic. Upload native shutdown remains pending
+after TerminateProcess error5 at07:56:40Z; desktop monitor counters are zero.
+First finish cleanup/restoration and audit, then run the expanded Evidence RED on
+the unchanged catalog46 candidate before building/GREEN. No acceptance is claimed.
 
 **Inventory UOM prompt,2026-10-21, qualified:** D18 and Controls1.713 define
 catalog46/199. Actual Change/Click handlers establish RED56/12 -> GREEN68/68;
