@@ -896,8 +896,11 @@ Qualification checkpoint2026-10-21: worksheet observation implementation is draf
 not compiled or accepted. Create's completed RED prefix is65 PASS/8 FAIL; its run
 then fails Upload fixture setup. A separate Upload cohort completes69 PASS/17 FAIL,
 including three Config byte comparisons requiring scoped diagnosis. Native shutdown
-remains unresolved after TerminateProcess returns error5 at07:56:40Z; desktop
-monitor counters remain zero. No GREEN or normal-closure acceptance is claimed.
+was delayed after TerminateProcess returned error5 at07:56:40Z; desktop
+monitor counters remained zero. The controller later confirmed closure and settings/
+package preservation at08:02:23Z; the delayed native audit is clear. The cause is
+unresolved and the intervened shutdown is not normal-closure acceptance. No GREEN
+is claimed.
 Exact scope is in `plan022_slice4be_inventory_worksheet_recording_results.md`.
 
 Selection qualification2026-10-21: RED40/25 -> GREEN65/65; independent guide75
@@ -6037,6 +6040,30 @@ Approval authorizes this test-first implementation, not4be-A acceptance, new D18
 ControlIds/replay adapters, package promotion or historical inventory import.
 
 ---
+### D8-INV-CONFIG-01 — Inventory inbox preparation preserves Config formatting (PROPOSED)
+
+**Approval required; not operative.** The2026-10-21 packaged Upload diagnostic
+traces Config worksheet/style changes to inbox preparation's `FormatConfigSurface`
+call. Suppressing that call in an unsaved diagnostic package removes those changes;
+the remaining two header-format references resolve to byte-identical format records.
+This is a proposed owning-behavior change, separate from D18's observation-only work.
+
+Proposed rule: Inventory Add and worksheet ADD, including retries and separately
+authorized headless Add, request nonformatting inbox preparation from Core. This
+path must not auto-fit Config columns, force row-font formatting or otherwise apply
+presentation formatting. Preserve effective formatting and unknown user columns.
+Keep existing permitted schema/default/station/inbox work and its D8-INV-01 checks;
+this grants no new write authority or exception for borrowed, dirty or read-only
+workbooks. Explicit Config setup/provisioning and other callers retain their current
+formatting behavior. Core stays headless; use typed calls and primitive arguments.
+
+D13: first show changed custom Config widths/fonts through actual packaged modal
+Add and worksheet Upload handlers, then prove preservation with unchanged owning
+Inventory results and retained authority/receipt regressions. Config diagnosis stays
+strict: a changed header-format reference is serialization-only only if its exact
+referenced format bytes match and every other changed part is independently explained.
+The diagnostic override is not production GREEN. No new control ID or replay adapter.
+
 ### D8-INV-EDIT-01 — Durable worksheet EDIT receipts (APPROVED,2026-10-19)
 
 The user approved this decision with the four tightenings below: one confirmed

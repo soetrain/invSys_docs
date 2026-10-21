@@ -1,6 +1,13 @@
 # invSys Form Controls v1
 
-**Version:** 1.715 -- Inventory worksheet RED checkpoint;4be-A acceptance remains open.
+**Version:** 1.716 -- Inventory Config formatting proposal;4be-A acceptance remains open.
+
+**Pending approval: D8-INV-CONFIG-01.** Inventory Add and worksheet ADD currently
+invoke Config formatting during inbox preparation. The proposed nonformatting path
+preserves Config presentation while explicit setup and existing permitted provisioning
+retain their behavior and authority checks. No control ID changes. Actual-handler
+RED/GREEN with custom Config presentation and retained regressions are required before
+acceptance; the diagnostic suppression is not a product fix or GREEN result.
 
 D18's catalog47/201 refinement adds `ADMIN_INVENTORY_CREATE_TABLE` and
 `ADMIN_INVENTORY_UPLOAD_TABLE`, Command/ADMIN_INVENTORY/ADMIN_MAINT, at the existing
@@ -15,9 +22,10 @@ pending. Catalog46 qualification below remains scoped to its existing candidate.
 
 Worksheet implementation is draft and uncompiled. Create RED prefix65/8 and
 separate Upload69/17 are recorded; three Upload Config-byte comparisons still need
-the scoped diagnostic. Cleanup is unresolved after native TerminateProcess error5
-at2026-10-21 07:56:40Z, with no desktop-lock counter. No packaged GREEN, normal
-closure or worksheet acceptance is claimed. See the code worksheet recording
+the scoped diagnostic. Cleanup/settings/package preservation eventually completed
+at2026-10-21 08:02:23Z after the termination intervention; the delayed audit is clear.
+The shutdown cause remains unresolved. No packaged GREEN, normal-closure or
+worksheet acceptance is claimed. See the code worksheet recording
 results record for exclusions and exact evidence.
 
 D18's Inventory UOM prompt refinement adds catalog46 control
