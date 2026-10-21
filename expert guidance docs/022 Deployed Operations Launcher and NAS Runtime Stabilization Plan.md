@@ -1,5 +1,16 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**2026-10-21 Inventory observation increment:** D18's normative Inventory
+coverage refinement defines Open, Add/Edit mode and explicit Close observations,
+with captured context, policy suppression and no canonical-change claim. Actual
+Ribbon/form RED32/31 -> packaged GREEN63/63 now qualifies. Controls1.710 lists
+the remaining command/selection coverage explicitly; this increment cannot close
+4be-A. Current smoke86 and Settings202 retain exact prior checks; ten Settings
+captures and normal preserved closure/audits qualify. Inventory visible evidence,
+guides and remaining release gates stay open.
+No Inventory replay adapter or authority change is introduced; exact evidence
+and excluded attempts are in the code Inventory recording results record.
+
 **2026-10-21 01:53Z Receiving replay qualified:** unchanged Inventory candidate
 passes121/121 with15 reviewed captures, normal preserved closure/fixture removal and
 clear delayed native audit. Settings202/recording80/smoke86/layout stand. Controls1.709

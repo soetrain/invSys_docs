@@ -775,6 +775,38 @@ may still read an authored guide, whose provenance remains visible.
 
 **What is tracked and published:**
 
+**Inventory coverage refinement (2026-10-21, D18 semantic inheritance):**
+The existing Admin Add/Edit Inventory surface is covered through its captured
+operator workbook and invSys session. Navigation observations use logical owner
+`ADMIN_INVENTORY` and capability `ADMIN_MAINT`: `ADMIN_INVENTORY_OPEN` (Add/Edit
+Inventory, OPENED only after presentation), `ADMIN_INVENTORY_ADD_MODE` (Add Item Mode,
+SELECTED), `ADMIN_INVENTORY_EDIT_MODE` (Edit Item, SELECTED), and
+`ADMIN_INVENTORY_CLOSE` (Close, CLOSED for Cancel or window close). Mode changes
+and dismissal assert no canonical change (Unchanged); entry remains Unknown.
+Programmatic configuration, repeated activation, Hide after OK, and cleanup
+Unload are not additional user actions. Fixed FAILED observations remain Unknown.
+Existing tracking policy, per-user suppression, stale-context refusal, redaction,
+non-blocking storage failure and independent guide evidence apply unchanged.
+
+This is the first tested increment, not complete Inventory coverage. Deliberate
+item/UOM/quantity-mode/location/category/custom-field selection, custom-field
+Add/Remove, Create Inventory Table, Upload, Add/Edit acceptance and retirement
+remain pending until their actual-handler tests and owner outcomes qualify.
+Typing/filtering and programmatic selection are excluded. Modal OK only accepts
+inputs: canonical completion belongs to the later owning command. Worksheet
+receipt failures and partial catalog/quantity outcomes must retain uncertainty;
+no completion may be inferred from a hidden form or a Boolean submission alone.
+No Inventory replay adapter or changed business authorization is introduced.
+
+Navigation evidence2026-10-21: actual Ribbon/form RED32/31 -> packaged GREEN63/63
+with the same ordered checks. Catalog44/190 preserves all186 prior definitions.
+Normal preserved closure, five compiles/cold start, source guards and static
+limits qualify; current smoke86 and Settings202 retain exact prior checks, with
+ten reviewed Settings captures. Inventory visible/guide and remaining release
+gates stay open.
+The code `plan022_slice4be_inventory_recording_results.md` records exact evidence
+and excluded test-adapter attempts. This is not comprehensive Inventory acceptance.
+
 **4be.1 Complete Run action-entry prerequisite (D18 clarification; acceptance pending):**
 Loading and entry nested within an active Production action are not independent
 operator completion attempts. The actual Complete Run handler must suppress them

@@ -1,6 +1,27 @@
 # invSys Form Controls v1
 
-**Version:** 1.709 -- Current Receiving121, recording80, Settings202, smoke86 and Production layout qualified; remaining4be-A gates open.
+**Version:** 1.710 -- Inventory navigation recording63 qualified; comprehensive coverage/acceptance pending.
+
+**Inventory recording, 2026-10-21:** governed by the D18 Inventory coverage
+refinement. Catalog44 appends four controls to catalog43/186; no prior definition
+changes. All four have actual Ribbon/form RED32/31 -> packaged GREEN63/63, normal
+preserved closure/audit, compile and static evidence. Smoke86 and Settings202
+retain exact prior checks with ten reviewed Settings captures. Inventory guide,
+visible and remaining release acceptance stay open; see the code recording record.
+
+| ControlId | Operator handler / completion source | Observation |
+|---|---|---|
+| ADMIN_INVENTORY_OPEN | Add_InventoryItem / visible frmAddInventoryItem | OPENED |
+| ADMIN_INVENTORY_ADD_MODE | mBtnAddMode_Click / mode selected | SELECTED |
+| ADMIN_INVENTORY_EDIT_MODE | mBtnEditMode_Click / mode selected | SELECTED |
+| ADMIN_INVENTORY_CLOSE | mBtnCancel_Click or window QueryClose / dismissal | CLOSED |
+
+Owner ADMIN_INVENTORY, Admin/Navigation, ADMIN_MAINT. Results above are Unchanged
+for canonical data; REQUESTED/FAILED are Unknown. Repeated activation and
+programmatic Configure/Hide/Unload are excluded. Pending coverage: item, UOM,
+quantity mode, location, category and custom-field selection; custom Add/Remove;
+Create Table; Upload; modal Add/Edit and Delete owner outcomes; independent saved
+guide conclusions. No replay adapter or comprehensive Inventory acceptance.
 
 **2026-10-21 01:53Z:** unchanged candidate passes121/121 Receiving replay checks
 with15 reviewed captures. Successful and stopped conclusions, fresh exact applied
