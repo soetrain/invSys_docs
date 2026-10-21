@@ -9,7 +9,7 @@ binding, optional-storage failures and independent saved guide conclusions.
 
 ## 2. Current verified state
 
-Last verified2026-10-21 05:29Z. Main code remains `main`/`origin/main` at
+Last verified2026-10-21 05:27Z. Main code remains `main`/`origin/main` at
 `6d247543`; implementation is in sibling `../invSys_edit_receipts`, branch
 `work/d8-inv-edit-receipts`, pushed `053b1e6a`. Draft PR4 targets soetrain/main
 and points at that commit. Docs main is pushed at `2e326bf` before this handoff
