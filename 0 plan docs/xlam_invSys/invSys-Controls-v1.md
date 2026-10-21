@@ -1,6 +1,13 @@
 # invSys Form Controls v1
 
-**Version:** 1.705 -- Packaged smoke86/86; layout and remaining4be-A gates open.
+**Version:** 1.706 -- Packaged smoke86/86 and Production layout qualified; remaining4be-A gates open.
+
+**2026-10-21 01:30Z:** unchanged candidate passes18 Production geometry checks
+and five native-window checks. Six Run List/Settings captures reviewed; minimum
+requests retain the established1110x800-point floor. Normal preserved closure and
+delayed native audit qualify. No wording, control, contract or package change.
+Inventory recording/guide and current B0/shared/conformant live/full-chain/visible
+release acceptance remain; exact references are in the code Inventory record.
 
 **2026-10-21 01:26Z:** all86 prior packaged smoke checks pass in the same order.
 The corrected Inventory fixture uses Admin generation/seed and live captured
