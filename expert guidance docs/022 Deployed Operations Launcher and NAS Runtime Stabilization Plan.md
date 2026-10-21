@@ -1,5 +1,11 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**2026-10-21 01:38Z Settings qualified:** unchanged Inventory candidate passes202/202
+distinct checks with ten reviewed captures, normal preserved closure and clear
+delayed audit. Controls1.707 and the code Settings record carry scope/limits.
+Smoke86/layout stand; recording/B0, Inventory observation/guide coverage and
+conformant live/full-chain/visible acceptance remain.4be-A is incomplete.
+
 **2026-10-21 01:30Z layout qualified:** unchanged current candidate passes18
 geometry/five native-window checks, with six Run List/Settings screenshots reviewed.
 Normal preserved closure and delayed native audit qualify; smoke86/86 stands.

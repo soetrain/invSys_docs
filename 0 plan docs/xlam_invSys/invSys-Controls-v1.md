@@ -1,6 +1,12 @@
 # invSys Form Controls v1
 
-**Version:** 1.706 -- Packaged smoke86/86 and Production layout qualified; remaining4be-A gates open.
+**Version:** 1.707 -- Current Settings202/202, smoke86/86 and Production layout qualified; remaining4be-A gates open.
+
+**2026-10-21 01:38Z:** current Inventory candidate passes202/202 distinct Settings
+checks with ten reviewed captures, including Operations maximize/restore. Normal
+preserved closure and delayed native audit qualify. Product/control wording is
+unchanged. See the code Settings record for exact references and historical
+raw-receipt availability; this does not establish4be-A acceptance.
 
 **2026-10-21 01:30Z:** unchanged candidate passes18 Production geometry checks
 and five native-window checks. Six Run List/Settings captures reviewed; minimum
