@@ -1,6 +1,13 @@
 # invSys Form Controls v1
 
-**Version:** 1.704 -- Smoke shutdown corrected; four Inventory fixture checks remain.
+**Version:** 1.705 -- Packaged smoke86/86; layout and remaining4be-A gates open.
+
+**2026-10-21 01:26Z:** all86 prior packaged smoke checks pass in the same order.
+The corrected Inventory fixture uses Admin generation/seed and live captured
+authority, with unchanged product handlers/guards. Both Excel exits are normal;
+Config/Auth/Inventory bytes, settings/reports and five packages are preserved;
+the delayed native audit is clear. No visible contract change or package promotion.
+Layout, recording/guide/B0/live/full-chain and visible release acceptance remain.
 
 **2026-10-21 01:06Z:** the complete smoke sequence retains all86 prior IDs/order,
 result82 PASS/4 FAIL, and closes both Excel hosts normally after the harness action

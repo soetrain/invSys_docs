@@ -1,5 +1,13 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**2026-10-21 01:26Z packaged smoke GREEN:**86/86 exact prior IDs/order pass on the
+unchanged candidate after correcting the Inventory fixture to use Admin generation,
+Admin seed and live captured authority. Focused fixture RED4/6 -> GREEN10/10;
+no product authorization change. Both Excel exits are normal, source stores and
+settings/reports/packages are preserved, and the delayed audit is clear. Controls1.705
+and the Inventory record retain exact evidence. Next: packaged layout and remaining
+recording/guide/B0/live/full-chain/visible gates.4be-A remains incomplete.
+
 **2026-10-21 01:06Z shutdown correction:** the unchanged initial smoke actions
 now finish their PowerShell scope before Excel cleanup. All86 prior IDs/order run,
 result82/4, and both native exits are unassisted; settings/reports/packages and the
