@@ -1,13 +1,16 @@
 # invSys Form Controls v1
 
-**Version:** 1.716 -- Inventory Config formatting proposal;4be-A acceptance remains open.
+**Version:** 1.717 -- Tightened Inventory Config proposal;4be-A acceptance remains open.
 
-**Pending approval: D8-INV-CONFIG-01.** Inventory Add and worksheet ADD currently
-invoke Config formatting during inbox preparation. The proposed nonformatting path
-preserves Config presentation while explicit setup and existing permitted provisioning
-retain their behavior and authority checks. No control ID changes. Actual-handler
-RED/GREEN with custom Config presentation and retained regressions are required before
-acceptance; the diagnostic suppression is not a product fix or GREEN result.
+**Pending approval: D8-INV-CONFIG-01.** Only interactive modal Add and worksheet
+ADD, including retries, switch to a separate Core nonformatting entry point. Save
+Config only for actual permitted configuration changes; otherwise require zero
+saves and identical bytes. Architecture4.11 names the exact callers. Shared and
+automation APIs, headless Add, catalog-only completion, Seed/repair, retirement,
+Tester, Bootstrap and migration retain formatting/save behavior. Authority and
+ownership checks remain. No control ID changes. Packaged Add/Upload presentation
+and no-op-save RED/GREEN, permitted-change persistence and retained-caller runtime
+formatting/output regressions are required. Diagnostic suppression is not GREEN.
 
 D18's catalog47/201 refinement adds `ADMIN_INVENTORY_CREATE_TABLE` and
 `ADMIN_INVENTORY_UPLOAD_TABLE`, Command/ADMIN_INVENTORY/ADMIN_MAINT, at the existing

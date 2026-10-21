@@ -6048,21 +6048,59 @@ call. Suppressing that call in an unsaved diagnostic package removes those chang
 the remaining two header-format references resolve to byte-identical format records.
 This is a proposed owning-behavior change, separate from D18's observation-only work.
 
-Proposed rule: Inventory Add and worksheet ADD, including retries and separately
-authorized headless Add, request nonformatting inbox preparation from Core. This
-path must not auto-fit Config columns, force row-font formatting or otherwise apply
-presentation formatting. Preserve effective formatting and unknown user columns.
-Keep existing permitted schema/default/station/inbox work and its D8-INV-01 checks;
-this grants no new write authority or exception for borrowed, dirty or read-only
-workbooks. Explicit Config setup/provisioning and other callers retain their current
-formatting behavior. Core stays headless; use typed calls and primitive arguments.
+**Proposed scope, tightened2026-10-21:** add a distinct Core entry point,
+`modConfig.EnsureStationInboxWithoutFormatting`, for the interactive branch of
+`modAdmin.AddInventoryItemForWarehouse` only. Its two callers are modal Add through
+`frmAddInventoryItem.mBtnOK_Click` -> `modAdmin.Add_InventoryItem` and worksheet ADD through
+`frmAddInventoryItem.mBtnUploadInventoryTable_Click` ->
+`modAdmin.ApplyInventoryWorksheetRecordForWarehouse`. Include their authorized
+retries and all three inbox roles. A missing or expired interactive context must
+not turn an interactive request into a headless fallback.
 
-D13: first show changed custom Config widths/fonts through actual packaged modal
-Add and worksheet Upload handlers, then prove preservation with unchanged owning
-Inventory results and retained authority/receipt regressions. Config diagnosis stays
-strict: a changed header-format reference is serialization-only only if its exact
-referenced format bytes match and every other changed part is independently explained.
-The diagnostic override is not production GREEN. No new control ID or replay adapter.
+Preserve the signatures, defaults, formatting and save behavior of
+`EnsureStationInbox`, `EnsureStationInboxForAutomation` and
+`EnsureStationInboxPackedForAutomation`. Keep `modAdmin.EnsureDemoStationInboxes`
+unchanged for its retained callers. The following retain the existing formatting
+path, including when invoked from an inventory workflow:
+
+- Separately authorized headless `modAdmin.AddInventoryItemForWarehouse`.
+- Catalog-only completion: `modAdminInventoryCreate.CompleteCatalogItem`.
+- Seed/repair: `frmSeedInventory.RepairStationInboxes`,
+  `modAdminInventorySeed.EnsureDemoStationInboxes` and
+  `modAdmin.SeedDemoInventoryForWarehouse` via `modAdmin.EnsureDemoStationInboxes`.
+- Inventory retirement: `modInventoryRetirementCommands.RetireActiveEntities`.
+- Tester provisioning: `modTesterProvisioning.SetupTesterStation`.
+- Warehouse Bootstrap: `modWarehouseBootstrap.BootstrapWarehouseLocal`.
+- Retire migration: `modWarehouseRetire.EnsureMigrationInboxReadyRetire`.
+
+**New-path preservation and saves:** do not auto-fit columns, force row fonts or
+apply other Config presentation formatting. Preserve effective formatting and
+unknown user columns. Save Config only when this invocation actually changes
+permitted schema, defaults or warehouse/station configuration. Already-correct
+values must not be rewritten; inbox-only work is not a Config change. With no
+Config change, perform no Config save, preserve its file bytes and leave no new
+unsaved Config edits. Track actual permitted changes, not merely `Workbook.Saved`.
+Keep existing permitted inbox work and D8-INV-01 authority, source, ownership and
+yield checks; this grants no new repair/write authority or exception for borrowed,
+dirty or read-only workbooks. Core stays headless; use typed calls and primitive
+arguments at the declared boundaries.
+
+**D13:** before implementation, use actual packaged modal Add and worksheet Upload
+handlers to show changed custom widths/fonts and unnecessary Config saves when
+configuration is already correct. GREEN must prove unchanged presentation, zero
+Config saves and identical Config bytes in that case, including retries; separately
+prove permitted missing configuration persists correctly without reformatting.
+Retain owning Inventory results and authority/receipt regressions. Add a retained-
+caller regression matrix against the unchanged baseline: exercise the formatting
+call sites above and both automation wrappers, verify auto-fit/header-bold behavior
+and unchanged semantic outputs, using packaged operator handlers where available.
+Source call-site checks supplement this runtime proof; they cannot replace it.
+
+For necessary Config saves, diagnosis remains strict: a changed header-format
+reference is serialization-only only if its exact referenced format bytes match
+and every other changed part is independently explained. No serialization exception
+applies to the no-change/no-save case. The diagnostic override is not production
+GREEN. No new control ID or replay adapter. Approval is still required.
 
 ### D8-INV-EDIT-01 — Durable worksheet EDIT receipts (APPROVED,2026-10-19)
 

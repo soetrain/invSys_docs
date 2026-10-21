@@ -9,7 +9,7 @@ Architecture4.11/Plan022. **4be-A remains incomplete;4be-B/fullR1 are separate.*
 
 Last verified2026-10-21 15:50Z. Implementation worktree `../invSys_edit_receipts`,
 branch `work/d8-inv-edit-receipts`, is pushed `6304d89e`; draft code PR4 targets
-soetrain/main. Docs main is pushed `433153a` before this handoff. Main code remains
+soetrain/main. Docs main was pushed `1774d05` before this proposal revision. Main code remains
 `6d247543`; preserve its user-modified AGENTS.md and unrelated docs changes
 (old024 deletion, handoff067, untracked023/renamed024/025).
 
@@ -17,13 +17,18 @@ Excel is closed; latest controller confirms settings/package preservation and
 clear delayed audit. Desktop monitor21500 stopped normally with zero sticky error5/
 lock/mouse-lock counters. Catalog47/201 remains draft, unbuilt and unaccepted.
 The frozen catalog46 candidate is main `deploy/validation-inventory-uom-02`.
-Controls1.716 and Plan022 match the new proposal.
+Controls1.717 and Plan022 match the tightened proposal (documentation-only review,
+2026-10-21; no new runtime verification).
 
 ## 3. Decisions and constraints
 
-**D8-INV-CONFIG-01 is PROPOSED, not approved.** It changes Inventory inbox
-preparation to preserve Config presentation, while explicit setup formatting and
-existing permitted provisioning/authority checks remain. No product code implements it.
+**D8-INV-CONFIG-01 is PROPOSED, not approved.** The tightened proposal switches
+only interactive modal Add/worksheet ADD, including retries, to a separate Core
+entry point. No actual Config change means no save and identical file bytes.
+Shared/automation APIs, headless Add, catalog-only completion, Seed, retirement,
+Tester, Bootstrap and migration retain formatting/save behavior; Architecture
+names their exact callers. D13 adds retained-caller runtime formatting/output
+regressions. Existing authority/ownership checks remain. No product code implements it.
 Stop for approval before implementation. This PC retains its established origin
 feature-branch/code and origin/main/docs workflow; laptop-only defaults do not apply.
 
@@ -75,8 +80,9 @@ retained regressions and wider4be-A/earlyB0/live/full-chain/visible gates remain
 
 ## 8. Immediate next action
 
-After approval, extend actual Add/Upload RED with custom Config widths/fonts on the
-unchanged candidate before implementing the approved nonformatting path.
+After approval, extend actual Add/Upload RED with custom Config widths/fonts and
+no-change save detection on the unchanged candidate, recording retained-caller
+formatting/output baselines before implementing the separate nonformatting path.
 
 ## 9. Critical references
 
