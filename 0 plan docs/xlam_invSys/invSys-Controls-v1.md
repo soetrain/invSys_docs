@@ -1,6 +1,14 @@
 # invSys Form Controls v1
 
-**Version:** 1.702 -- Stalled smoke recovered; partial failures remain unqualified.
+**Version:** 1.703 -- Empty-authority smoke fixtures confirmed; shutdown diagnosis open.
+
+**2026-10-21 diagnosis:** the old Add, Delete and Worksheet smoke helpers supply
+empty captured authority handles; the packaged handlers correctly refuse them.
+Focused diagnostic9/9 confirms the cause without changing authorization. Correct
+fixture setup remains required. Harness guard19/19 adds bounded, honestly recorded
+recovery and restores existing close-event delivery; full smoke still stalls.
+See the Inventory integration record for exact cohorts and a separate unqualified
+settings-restoration race. No visible control/contract change or acceptance.
 
 **2026-10-20 Pacific recovery:** user-authorized Excel termination ended the
 two-hour native-exit wait at 00:40:32.664Z on October 21. The controller/observer

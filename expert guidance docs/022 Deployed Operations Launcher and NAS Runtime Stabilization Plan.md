@@ -1,5 +1,13 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**2026-10-21 diagnostic checkpoint:** the four Inventory smoke failures come
+from old helpers passing empty captured authority handles; correct the fixture,
+preserving D8-INV-01. Harness guards pass19/19 and now bound native-exit waiting,
+record recovery and refuse restart after intervention. Full smoke still needs
+native-lifetime diagnosis. Isolated cohorts and the unqualified settings-restoration
+race are recorded in the Inventory integration record; Controls1.703 agrees.
+No new contract, product change, promotion or 4be-A acceptance.
+
 **2026-10-20 Pacific recovery checkpoint:** the stalled smoke below is now
 interrupted and cleaned up under the user's explicit authorization to close
 Excel on this dedicated AI computer. Recovery at October 21 00:40:32.664Z ends
