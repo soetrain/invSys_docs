@@ -1,6 +1,13 @@
 # invSys Form Controls v1
 
-**Version:** 1.708 -- Current recording80/80, Settings202/202, smoke86/86 and Production layout qualified; remaining4be-A gates open.
+**Version:** 1.709 -- Current Receiving121, recording80, Settings202, smoke86 and Production layout qualified; remaining4be-A gates open.
+
+**2026-10-21 01:53Z:** unchanged candidate passes121/121 Receiving replay checks
+with15 reviewed captures. Successful and stopped conclusions, fresh exact applied
+source proof, Training-only dispatch, authority/tracking guards and busy close pass.
+Normal preserved closure/fixture removal and delayed audit qualify. See the code
+Receiving record for exact scope/limits. Inventory observation/guide and remaining
+coverage/release acceptance remain open; no control/contract change or promotion.
 
 **2026-10-21 01:43Z:** unchanged candidate passes80/80 shared recording/lifecycle
 and published-read checks, with two reviewed captures, normal preserved closure
