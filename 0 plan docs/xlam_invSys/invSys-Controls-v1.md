@@ -1,6 +1,17 @@
 # invSys Form Controls v1
 
-**Version:** 1.713 -- Inventory UOM prompt recording qualified;4be-A acceptance remains open.
+**Version:** 1.714 -- Inventory worksheet recording pending;4be-A acceptance remains open.
+
+D18's catalog47/201 refinement adds `ADMIN_INVENTORY_CREATE_TABLE` and
+`ADMIN_INVENTORY_UPLOAD_TABLE`, Command/ADMIN_INVENTORY/ADMIN_MAINT, at the existing
+`frmAddInventoryItem` Create/Upload handlers and their worksheet owners. Create
+SAVED proves a saved local table, not inventory application. Upload CONFIRMED
+requires exact owning completion plus saved operator results; retries prevent
+inferring a fresh canonical change. EMPTY/REJECTED/initial REFUSED remain distinct
+from PARTIAL/FAILED. Exact contributing source references come from owners;
+catalog-only edits need none. Policy/context/redaction/receipt rules are unchanged.
+Actual-handler RED/GREEN, partial/retry and independent guide qualification are
+pending. Catalog46 qualification below remains scoped to its existing candidate.
 
 D18's Inventory UOM prompt refinement adds catalog46 control
 `ADMIN_INVENTORY_UOM_ADD`, owner ADMIN_INVENTORY/capability ADMIN_MAINT.

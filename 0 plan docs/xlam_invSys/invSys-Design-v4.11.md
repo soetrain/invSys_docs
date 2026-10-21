@@ -856,6 +856,42 @@ preserve exact prior ordered checks;16 captures reviewed. Five compiles/cold sta
 See code `plan022_slice4be_inventory_uom_recording_results.md` for exact candidate
 scope and exclusions. This does not accept comprehensive Inventory or4be-A.
 
+**Inventory worksheet observation refinement (2026-10-21, D18 semantic inheritance):**
+Catalog47 appends `ADMIN_INVENTORY_CREATE_TABLE` and
+`ADMIN_INVENTORY_UPLOAD_TABLE`, both Command/ADMIN_INVENTORY/ADMIN_MAINT.
+Record REQUESTED before the real form handler's guard; recheck the captured
+command context after observation before invoking the existing owner. Owners
+return fixed primitive outcome facts separately from their operator report;
+recording never parses that report or derives success from Hide or a Boolean.
+
+Create reports SAVED only after the existing owner confirms its saved local
+table and completes the presentation steps; canonical DataEffect is Unchanged.
+REFUSED identifies a known pre-write refusal (Unchanged). PARTIAL means local
+changes may remain or saving/completion is unconfirmed (Unknown); FAILED is
+Unknown. There are no canonical source references. Only SAVED is a positive
+CommandCompleted result; it does not assert inventory application.
+
+Upload reports EMPTY for no pending rows and REJECTED for whole-selection
+preflight refusal (both canonically Unchanged). REFUSED is a known initial
+authority/target refusal (Unchanged). CONFIRMED requires the existing owning
+commands' exact durable completion and the operator result save; it has Unknown
+DataEffect because a retry may confirm previously applied work. PARTIAL/FAILED
+retain Unknown and never assert rollback or complete batch application. Only
+CONFIRMED is positive CommandCompleted. Record every distinct exact Inventory
+event ID actually returned by the owning submission/receipt path, including
+contributing work before a partial failure; no ID is recovered by payload matching,
+human-report parsing or by treating a merely planned event as submitted. Use the
+existing four-field source envelope and its Submitted/Unknown meaning. Catalog-only
+edits may legitimately return no event reference. SourceEventsApplied still
+requires independent published proof and cannot follow from CONFIRMED alone.
+
+Existing policies, per-user suppression, captured context, non-blocking storage,
+redaction, exact identity, unknown columns and authority/receipt semantics remain.
+Context loss may leave only the attempt. Programmatic Hide/cleanup creates no
+Close action. Fixed explanations contain no entered value, table/path or raw
+error. This adds no replay adapter or permission. Packaged D13, partial/retry
+evidence and independent guide qualification are pending.
+
 Selection qualification2026-10-21: RED40/25 -> GREEN65/65; independent guide75
 proves complete15-step and interrupted13-step observations. Retained boundaries151,
 Catalog/Edit50, smoke86 and Settings202 preserve exact prior ordered checks;

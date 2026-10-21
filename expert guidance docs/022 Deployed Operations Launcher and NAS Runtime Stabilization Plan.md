@@ -1,5 +1,14 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**Inventory worksheet observation,2026-10-21, pending:** implement the D18
+catalog47/201 refinement through actual Create Table/Upload handlers. Establish
+packaged RED for missing observations while independently proving existing local
+save/canonical outcomes. Return fixed owner facts and exact contributing event
+identities; do not parse reports or infer completion from Boolean/Hide. Protect
+preflight refusal, empty selection, partial results, retries, policies/context,
+redaction and unknown columns. Controls1.714 records this pending scope; no write,
+authority or replay behavior changes. Retain the qualified catalog46 gates below.
+
 **Inventory UOM prompt,2026-10-21, qualified:** D18 and Controls1.713 define
 catalog46/199. Actual Change/Click handlers establish RED56/12 -> GREEN68/68;
 guide-editor RED73/1 ->74/74 corrects the missing REFUSED expectation choice.
