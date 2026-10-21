@@ -781,12 +781,22 @@ operator workbook and invSys session. Navigation observations use logical owner
 `ADMIN_INVENTORY` and capability `ADMIN_MAINT`: `ADMIN_INVENTORY_OPEN` (Add/Edit
 Inventory, OPENED only after presentation), `ADMIN_INVENTORY_ADD_MODE` (Add Item Mode,
 SELECTED), `ADMIN_INVENTORY_EDIT_MODE` (Edit Item, SELECTED), and
-`ADMIN_INVENTORY_CLOSE` (Close, CLOSED for Cancel or window close). Mode changes
-and dismissal assert no canonical change (Unchanged); entry remains Unknown.
+`ADMIN_INVENTORY_CLOSE` (Close, CLOSED for Cancel or window close). Successful
+presentation, mode changes and dismissal assert no canonical change (Unchanged);
+the REQUESTED entry observation remains Unknown.
 Programmatic configuration, repeated activation, Hide after OK, and cleanup
 Unload are not additional user actions. Fixed FAILED observations remain Unknown.
 Existing tracking policy, per-user suppression, stale-context refusal, redaction,
 non-blocking storage failure and independent guide evidence apply unchanged.
+Capture the owning Core command context before optional observation work can
+yield. Recheck that captured context before presentation; a closed or same-name
+replacement workbook cannot substitute for the original operator workbook.
+
+An independent recording of these exact positive navigation outcomes may satisfy
+an authored `CommandCompleted` conclusion. It asserts navigation only, never
+Domain application. A missing Close after session interruption remains incomplete;
+the source guide cannot supply that missing observation. This clarifies the
+existing D18 conclusion rule; it adds no control, authority or replay capability.
 
 This is the first tested increment, not complete Inventory coverage. Deliberate
 item/UOM/quantity-mode/location/category/custom-field selection, custom-field

@@ -1,6 +1,22 @@
 # invSys Form Controls v1
 
-**Version:** 1.710 -- Inventory navigation recording63 qualified; comprehensive coverage/acceptance pending.
+**Version:** 1.711 -- Inventory navigation guide/binding qualified; comprehensive coverage and4be-A acceptance remain open.
+
+The D18 navigation conclusion clarification permits only exact observed positive
+Inventory outcomes to satisfy CommandCompleted. The independent guide test now
+passes73/73 after two semantic RED failures: a separate successful run concludes,
+while an interrupted run lists Close as missing and cannot borrow guide-source
+success. All six captures were reviewed, including multiline instructions,
+provenance and all three views. No new control, authority, Domain-application
+claim or replay capability is introduced. Core context capture before optional
+observation preserves the existing captured-workbook rule: closed/replaced-owner
+refusal qualifies RED33/4 -> GREEN37/37. Expanded navigation/boundaries151/151
+retain all63 original checks, covering session/warehouse changes and both storage
+failure phases. On `validation-inventory-guide-01`, retained Catalog/Edit50 and
+smoke86 preserve exact prior ordered checks; five compiles/cold start, static
+limits and36 source guards pass. Normal closure, declared preservation and delayed
+native audits qualify through2026-10-21 05:26Z. Exact scope and exclusions are in
+the code recording record. No package promotion or comprehensive acceptance.
 
 **Inventory recording, 2026-10-21:** governed by the D18 Inventory coverage
 refinement. Catalog44 appends four controls to catalog43/186; no prior definition
@@ -20,8 +36,9 @@ Owner ADMIN_INVENTORY, Admin/Navigation, ADMIN_MAINT. Results above are Unchange
 for canonical data; REQUESTED/FAILED are Unknown. Repeated activation and
 programmatic Configure/Hide/Unload are excluded. Pending coverage: item, UOM,
 quantity mode, location, category and custom-field selection; custom Add/Remove;
-Create Table; Upload; modal Add/Edit and Delete owner outcomes; independent saved
-guide conclusions. No replay adapter or comprehensive Inventory acceptance.
+Create Table; Upload; modal Add/Edit and Delete owner outcomes. The qualified
+independent guide covers these four navigation controls only. No replay adapter
+or comprehensive Inventory acceptance.
 
 **2026-10-21 01:53Z:** unchanged candidate passes121/121 Receiving replay checks
 with15 reviewed captures. Successful and stopped conclusions, fresh exact applied

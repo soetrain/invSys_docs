@@ -1,5 +1,22 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**Inventory navigation guide checkpoint,2026-10-21:** D18's existing
+CommandCompleted rule now classifies the four positive Inventory navigation
+outcomes. Two semantic RED failures -> GREEN73/73 qualify an independent
+successful conclusion and an interrupted run with Close missing; all six captures,
+exact provenance, multiline instructions and all three views were reviewed.
+The captured-workbook fix qualifies RED33/4 -> GREEN37/37: capture Core context
+before optional recording and refuse a closed/replaced owner before presentation.
+Controls1.711 and the code recording record hold scope and excluded attempts.
+Expanded navigation/boundaries151/151 retain all63 original checks; workbook,
+session, warehouse and both storage-failure phases preserve context and truthful
+outcomes. On `validation-inventory-guide-01`, retained Catalog/Edit50 and smoke86
+preserve exact prior ordered checks; five compiles/cold start, static limits,
+36 source guards, normal preserved closure and delayed audits qualify through
+2026-10-21 05:26Z. Next: remaining Inventory selectors/custom fields and owning
+worksheet/mutation outcomes, then the wider coverage and release gates. No new
+control, authority, Domain-application claim, replay adapter or4be-A acceptance.
+
 **2026-10-21 Inventory observation increment:** D18's normative Inventory
 coverage refinement defines Open, Add/Edit mode and explicit Close observations,
 with captured context, policy suppression and no canonical-change claim. Actual
