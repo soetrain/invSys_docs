@@ -1,6 +1,11 @@
 # invSys Form Controls v1
 
-**Version:** 1.707 -- Current Settings202/202, smoke86/86 and Production layout qualified; remaining4be-A gates open.
+**Version:** 1.708 -- Current recording80/80, Settings202/202, smoke86/86 and Production layout qualified; remaining4be-A gates open.
+
+**2026-10-21 01:43Z:** unchanged candidate passes80/80 shared recording/lifecycle
+and published-read checks, with two reviewed captures, normal preserved closure
+and clear delayed native audit. No new Inventory control ID or replay adapter.
+See the code recording record for exact scope and historical evidence limits.
 
 **2026-10-21 01:38Z:** current Inventory candidate passes202/202 distinct Settings
 checks with ten reviewed captures, including Operations maximize/restore. Normal
