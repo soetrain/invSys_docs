@@ -1,6 +1,15 @@
 # invSys Form Controls v1
 
-**Version:** 1.701 -- Inventory candidate build/compile qualified; acceptance open.
+**Version:** 1.702 -- Stalled smoke recovered; partial failures remain unqualified.
+
+**2026-10-20 Pacific recovery:** user-authorized Excel termination ended the
+two-hour native-exit wait at 00:40:32.664Z on October 21. The controller/observer
+are stopped; settings/reports are restored and five packages preserved. Delayed
+recovery audit finds no Excel process or native events. Partial smoke is 70 PASS /
+4 FAIL; restart did not run. Add/dropdowns, zero quantity, Delete and worksheet
+helper failures require diagnosis; fixed test identities without a matching live
+session are a suspected fixture cause. No product/control/contract change or
+acceptance. Candidate build/compile remains qualified; later gates remain open.
 
 **2026-10-20 candidate build:** `validation-inventory-receipts-01`, built from
 draft `47d2ac5c` / product `a9faab9c`, compiles all five packaged projects and

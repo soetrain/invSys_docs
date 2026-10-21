@@ -1,5 +1,16 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**2026-10-20 Pacific recovery checkpoint:** the stalled smoke below is now
+interrupted and cleaned up under the user's explicit authorization to close
+Excel on this dedicated AI computer. Recovery at October 21 00:40:32.664Z ends
+the native-exit wait; controller exit 1 restores settings/reports and preserves
+five packages. All helpers/Excel are gone and the delayed audit is clear.
+Partial results: 70 PASS / 4 FAIL; restart did not run. Controls 1.702 and the
+Inventory integration record retain the four failed check IDs and intervention
+classification. Next: focused diagnosis of the old fixed-identity Inventory
+test helpers and the native lifetime, then a fresh guarded smoke run. No product
+change or acceptance; all later 4be-A gates remain open.
+
 **2026-10-20 retained Inventory regressions qualified:** worksheet 64/64, Catalog
 50/50, headless 56/56 and imported ADD 56/56 on draft `8af28d99` / product
 `a9faab9c`. All prior GREEN IDs/order are retained. Every run compiles five
