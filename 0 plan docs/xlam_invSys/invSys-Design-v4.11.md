@@ -799,8 +799,8 @@ the source guide cannot supply that missing observation. This clarifies the
 existing D18 conclusion rule; it adds no control, authority or replay capability.
 
 The navigation increment is not complete Inventory coverage. Selection and local
-custom-field actions are defined separately below. UOM creation, Create Inventory
-Table, Upload, Add/Edit acceptance and retirement remain pending until their
+custom-field actions and the UOM prompt are defined separately below. Create
+Inventory Table, Upload, Add/Edit acceptance and retirement remain pending until their
 actual-handler tests and owner outcomes qualify.
 Typing/filtering and programmatic selection are excluded. Modal OK only accepts
 inputs: canonical completion belongs to the later owning command. Worksheet
@@ -828,9 +828,33 @@ separate actions. Typing/filtering, initialization, loading an item's dependent
 fields, mode-driven defaults and cleanup produce no extra selection observations.
 Existing optional-recording policy, captured context, redaction and non-blocking
 failure rules apply; local staging does not create a canonical event reference.
-The UOM creation prompt, worksheet and Add/Edit/Delete owning outcomes remain
-separate pending coverage. This refinement adds observations, not permissions,
+The UOM prompt is covered by the next refinement; worksheet and Add/Edit/Delete
+owning outcomes remain pending. This refinement adds observations, not permissions,
 canonical authority, automatic navigation or replay capability.
+
+**Inventory UOM prompt refinement (2026-10-21, D18 semantic inheritance):**
+Catalog46 adds `ADMIN_INVENTORY_UOM_ADD` (Command, ADMIN_INVENTORY,
+ADMIN_MAINT) for the existing Add UOM choice. Record REQUESTED before the prompt;
+STAGED means the returned UOM was selected in the local form, whether newly
+inserted or already present. Empty input/cancel is CANCELLED; the existing
+post-dialog owner refusal is REFUSED. These known outcomes assert no canonical
+change; REQUESTED/FAILED remain Unknown. Only STAGED can satisfy this control's
+independent CommandCompleted conclusion. Recording follows the existing captured
+context and policy: loss of the recording context can leave only the attempt,
+never a fabricated terminal result. No entered UOM or canonical reference is
+recorded. Programmatic initialization is excluded; the prompt's automatic combo
+updates do not also record SELECT_UOM. A later deliberate existing-UOM choice
+still records normally. This does not save the warehouse UOM catalog, alter the
+existing post-dialog authority check, or authorize replay.
+
+UOM qualification2026-10-21: actual-handler RED56/12 -> GREEN68/68; independent
+guide-editor RED73/1 ->74/74 after exposing its catalog-defined REFUSED choice.
+Complete seven-step and interrupted three-step recordings retain distinct
+conclusions and exact provenance. Retained selections65, smoke86 and Settings202
+preserve exact prior ordered checks;16 captures reviewed. Five compiles/cold start,
+36 source guards, static limits and normal preserved closure/audits qualify.
+See code `plan022_slice4be_inventory_uom_recording_results.md` for exact candidate
+scope and exclusions. This does not accept comprehensive Inventory or4be-A.
 
 Selection qualification2026-10-21: RED40/25 -> GREEN65/65; independent guide75
 proves complete15-step and interrupted13-step observations. Retained boundaries151,

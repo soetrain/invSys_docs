@@ -1,5 +1,16 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**Inventory UOM prompt,2026-10-21, qualified:** D18 and Controls1.713 define
+catalog46/199. Actual Change/Click handlers establish RED56/12 -> GREEN68/68;
+guide-editor RED73/1 ->74/74 corrects the missing REFUSED expectation choice.
+New/existing local choices, cancel, owner refusal, later ordinary selection,
+policy suppression, redaction and canonical bytes are protected. No warehouse UOM
+save or authority/replay change. Retained selections65/smoke86/Settings202 preserve
+exact prior checks;16 guide/Settings captures reviewed. Five compiles/cold start,
+36 source guards, all27 static caps and normal preservation/closure/audits pass.
+Code `plan022_slice4be_inventory_uom_recording_results.md` owns exact candidate
+scope. Next: worksheet and owning mutation recording;4be-A remains incomplete.
+
 **Inventory selections/local fields,2026-10-21:** implement D18's
 eight-control catalog45 refinement through actual Inventory handlers, starting
 with packaged RED for missing observations. RED40/25 -> GREEN65/65 now qualifies
@@ -14,8 +25,8 @@ Preserve190 prior definitions,
 single-choice correlation, distinct repeated choices, typing/programmatic
 suppression, policy/context boundaries and canonical bytes. Local custom-field
 results are STAGED/REJECTED/UNCHANGED; they prove no canonical mutation. Controls
-1.712 tracks this candidate's scope. UOM creation and owning worksheet/mutation
-outcomes remain later coverage; no replay or authority change.
+1.712 tracks this candidate's scope. The UOM prompt is qualified separately above;
+owning worksheet/mutation outcomes remain later coverage; no replay or authority change.
 
 **Inventory navigation guide checkpoint,2026-10-21:** D18's existing
 CommandCompleted rule now classifies the four positive Inventory navigation

@@ -1,6 +1,21 @@
 # invSys Form Controls v1
 
-**Version:** 1.712 -- Inventory selections/local fields;4be-A acceptance remains open.
+**Version:** 1.713 -- Inventory UOM prompt recording qualified;4be-A acceptance remains open.
+
+D18's Inventory UOM prompt refinement adds catalog46 control
+`ADMIN_INVENTORY_UOM_ADD`, owner ADMIN_INVENTORY/capability ADMIN_MAINT.
+The actual Add UOM prompt reports local STAGED, CANCELLED or owner REFUSED,
+without entered values or a canonical-save claim. A changed recording context
+may leave only REQUESTED. Programmatic combo changes are not extra selections;
+the next deliberate existing-UOM choice remains observable. Actual-handler
+RED56/12 -> GREEN68/68 qualifies recording; guide-editor RED73/1 ->74/74 makes
+REFUSED selectable and distinguishes complete seven-step/incomplete three-step
+observations. All198 prior definitions are preserved. Retained selections65,
+smoke86 and Settings202 preserve exact prior checks;16 guide/Settings captures
+reviewed. Build/static/source guards and normal preserved closure/audits pass.
+See the code Inventory UOM results record for exact candidate scopes. Catalog45
+evidence below remains valid for its separate candidate; owning worksheet and
+mutation recording, wider D18 and release acceptance remain open.
 
 D18's selection/local-field refinement defines the following catalog45/198
 observations. Actual-handler RED40/25 -> packaged GREEN65/65 now qualifies the
