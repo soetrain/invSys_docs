@@ -1,17 +1,17 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
-**D8-INV-CONFIG-01 tightened,2026-10-21; approval required:** only interactive
-modal Add and worksheet ADD (including retries) use the proposed separate Core
+**D8-INV-CONFIG-01 approved,2026-10-21:** interactive modal Add/worksheet ADD
+and catalog-only quantity completion through modal Edit/worksheet EDIT use the separate Core
 `EnsureStationInboxWithoutFormatting` entry point. Save Config only for actual
 permitted schema/default/warehouse/station changes; otherwise require zero saves
 and identical Config bytes. Architecture4.11 names the exact switched/retained
-callers. Existing shared/automation APIs, headless Add, catalog-only completion,
+callers, including retries. Existing shared/automation APIs and headless Add/completion,
 Seed/repair, retirement, Tester, Bootstrap and migration retain formatting and
 their current save behavior. Preserve D8 authority and ownership safeguards.
-Controls1.717 reflects this pending scope. After approval, establish packaged
-Add/Upload presentation/no-op-save RED, implement GREEN and verify retained-caller
+Controls1.718 reflects the approved scope. Establish packaged Add/Edit/Upload
+presentation/no-op-save RED, implement GREEN and verify retained-caller
 formatting/output regressions before recording/guide and release qualification.
-No product change implements this proposal;4be-A remains incomplete.
+Implementation and acceptance remain pending;4be-A remains incomplete.
 
 **Inventory worksheet observation,2026-10-21, pending:** implement the D18
 catalog47/201 refinement through actual Create Table/Upload handlers. Establish
@@ -19,7 +19,7 @@ packaged RED for missing observations while independently proving existing local
 save/canonical outcomes. Return fixed owner facts and exact contributing event
 identities; do not parse reports or infer completion from Boolean/Hide. Protect
 preflight refusal, empty selection, partial results, retries, policies/context,
-redaction and unknown columns. Controls1.717 records this pending scope; no write,
+redaction and unknown columns. Controls1.718 records this pending scope; no write,
 authority or replay behavior changes. Retain the qualified catalog46 gates below.
 
 Checkpoint2026-10-21: draft implementation remains uncompiled. Create's completed

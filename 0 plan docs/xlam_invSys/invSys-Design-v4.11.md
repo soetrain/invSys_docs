@@ -6040,21 +6040,25 @@ Approval authorizes this test-first implementation, not4be-A acceptance, new D18
 ControlIds/replay adapters, package promotion or historical inventory import.
 
 ---
-### D8-INV-CONFIG-01 — Inventory inbox preparation preserves Config formatting (PROPOSED)
+### D8-INV-CONFIG-01 — Inventory inbox preparation preserves Config formatting (APPROVED,2026-10-21)
 
-**Approval required; not operative.** The2026-10-21 packaged Upload diagnostic
+**Approved with interactive catalog-only completion included.** The2026-10-21 packaged Upload diagnostic
 traces Config worksheet/style changes to inbox preparation's `FormatConfigSurface`
 call. Suppressing that call in an unsaved diagnostic package removes those changes;
 the remaining two header-format references resolve to byte-identical format records.
-This is a proposed owning-behavior change, separate from D18's observation-only work.
+This is an approved owning-behavior change, separate from D18's observation-only work.
 
-**Proposed scope, tightened2026-10-21:** add a distinct Core entry point,
+**Approved scope:** add a distinct Core entry point,
 `modConfig.EnsureStationInboxWithoutFormatting`, for the interactive branch of
-`modAdmin.AddInventoryItemForWarehouse` only. Its two callers are modal Add through
+`modAdmin.AddInventoryItemForWarehouse`. Its two callers are modal Add through
 `frmAddInventoryItem.mBtnOK_Click` -> `modAdmin.Add_InventoryItem` and worksheet ADD through
 `frmAddInventoryItem.mBtnUploadInventoryTable_Click` ->
 `modAdmin.ApplyInventoryWorksheetRecordForWarehouse`. Include their authorized
-retries and all three inbox roles. A missing or expired interactive context must
+retries and all three inbox roles. Also switch
+`modAdminInventoryCreate.CompleteCatalogItem` when `interactiveContext` is not empty:
+modal Edit and worksheet EDIT reach it through `SetInventoryQuantityForWarehouse`
+-> `CreateFirstInventoryEntityForCatalogItemAdmin` when giving quantity to a
+catalog-only item. A missing or expired interactive context must
 not turn an interactive request into a headless fallback.
 
 Preserve the signatures, defaults, formatting and save behavior of
@@ -6064,7 +6068,8 @@ unchanged for its retained callers. The following retain the existing formatting
 path, including when invoked from an inventory workflow:
 
 - Separately authorized headless `modAdmin.AddInventoryItemForWarehouse`.
-- Catalog-only completion: `modAdminInventoryCreate.CompleteCatalogItem`.
+- Separately authorized headless `modAdminInventoryCreate.CompleteCatalogItem`
+  (`interactiveContext` empty).
 - Seed/repair: `frmSeedInventory.RepairStationInboxes`,
   `modAdminInventorySeed.EnsureDemoStationInboxes` and
   `modAdmin.SeedDemoInventoryForWarehouse` via `modAdmin.EnsureDemoStationInboxes`.
@@ -6086,7 +6091,8 @@ dirty or read-only workbooks. Core stays headless; use typed calls and primitive
 arguments at the declared boundaries.
 
 **D13:** before implementation, use actual packaged modal Add and worksheet Upload
-handlers to show changed custom widths/fonts and unnecessary Config saves when
+handlers, plus modal Edit and worksheet EDIT giving quantity to catalog-only
+items, to show changed custom widths/fonts and unnecessary Config saves when
 configuration is already correct. GREEN must prove unchanged presentation, zero
 Config saves and identical Config bytes in that case, including retries; separately
 prove permitted missing configuration persists correctly without reformatting.
@@ -6100,7 +6106,8 @@ For necessary Config saves, diagnosis remains strict: a changed header-format
 reference is serialization-only only if its exact referenced format bytes match
 and every other changed part is independently explained. No serialization exception
 applies to the no-change/no-save case. The diagnostic override is not production
-GREEN. No new control ID or replay adapter. Approval is still required.
+GREEN. No new control ID or replay adapter. Approval authorizes D13 implementation,
+not acceptance.
 
 ### D8-INV-EDIT-01 — Durable worksheet EDIT receipts (APPROVED,2026-10-19)
 

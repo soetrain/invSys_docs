@@ -1,14 +1,15 @@
 # invSys Form Controls v1
 
-**Version:** 1.717 -- Tightened Inventory Config proposal;4be-A acceptance remains open.
+**Version:** 1.718 -- Approved Inventory Config preservation;4be-A acceptance remains open.
 
-**Pending approval: D8-INV-CONFIG-01.** Only interactive modal Add and worksheet
-ADD, including retries, switch to a separate Core nonformatting entry point. Save
+**Approved: D8-INV-CONFIG-01.** Interactive modal Add/worksheet ADD and catalog-only
+quantity completion through modal Edit/worksheet EDIT, including retries, switch
+to a separate Core nonformatting entry point. Save
 Config only for actual permitted configuration changes; otherwise require zero
 saves and identical bytes. Architecture4.11 names the exact callers. Shared and
-automation APIs, headless Add, catalog-only completion, Seed/repair, retirement,
+automation APIs, headless Add/completion, Seed/repair, retirement,
 Tester, Bootstrap and migration retain formatting/save behavior. Authority and
-ownership checks remain. No control ID changes. Packaged Add/Upload presentation
+ownership checks remain. No control ID changes. Packaged Add/Edit/Upload presentation
 and no-op-save RED/GREEN, permitted-change persistence and retained-caller runtime
 formatting/output regressions are required. Diagnostic suppression is not GREEN.
 
