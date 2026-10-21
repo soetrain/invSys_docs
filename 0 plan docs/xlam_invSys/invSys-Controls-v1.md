@@ -1,6 +1,35 @@
 # invSys Form Controls v1
 
-**Version:** 1.711 -- Inventory navigation guide/binding qualified; comprehensive coverage and4be-A acceptance remain open.
+**Version:** 1.712 -- Inventory selections/local fields;4be-A acceptance remains open.
+
+D18's selection/local-field refinement defines the following catalog45/198
+observations. Actual-handler RED40/25 -> packaged GREEN65/65 now qualifies the
+focused scope; all190 prior definitions remain unchanged. Retained navigation/
+boundaries151/151, five compiles/cold start,36 source guards and static limits
+pass. Independent selection guides75/75 qualify a complete15-step run and an
+interrupted run with its final two steps missing; six captures were reviewed.
+Retained Catalog/Edit50 and smoke86 preserve exact prior ordered checks, normal
+closure and delayed audits. Settings202 retains exact prior checks, with ten
+reviewed captures and normal preserved closure/audit; see the code
+Inventory selection results record for exact candidate scope and exclusions.
+
+| ControlId suffix (ADMIN_INVENTORY_) | Operator boundary | Result |
+|---|---|---|
+| SELECT_ITEM | Inventory item dropdown or search-result choice | SELECTED |
+| SELECT_UOM | Existing UOM choice | SELECTED |
+| SELECT_QUANTITY_MODE | Quantity dropdown choice | SELECTED |
+| SELECT_LOCATION | Default location choice | SELECTED |
+| SELECT_CATEGORY | Category choice | SELECTED |
+| SELECT_CUSTOM_FIELD | Additional-field row choice | SELECTED |
+| CUSTOM_FIELD_ADD | Additional-field Add | STAGED or REJECTED |
+| CUSTOM_FIELD_REMOVE | Additional-field Remove | STAGED or UNCHANGED |
+
+The first six are Navigation; Add/Remove are Command. All retain owner
+ADMIN_INVENTORY and ADMIN_MAINT. Terminal facts assert no canonical change;
+REQUESTED/FAILED remain Unknown. Typing, programmatic loading/defaults and duplicate
+MSForms events are excluded, while repeated deliberate choices remain distinct.
+No entered/selected values or canonical source references are recorded. UOM
+creation, worksheet and owning mutation outcomes remain pending.
 
 The D18 navigation conclusion clarification permits only exact observed positive
 Inventory outcomes to satisfy CommandCompleted. The independent guide test now

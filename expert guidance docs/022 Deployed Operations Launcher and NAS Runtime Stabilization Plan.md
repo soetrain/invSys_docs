@@ -1,5 +1,22 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**Inventory selections/local fields,2026-10-21:** implement D18's
+eight-control catalog45 refinement through actual Inventory handlers, starting
+with packaged RED for missing observations. RED40/25 -> GREEN65/65 now qualifies
+the focused scope; retained navigation/boundaries151/151, build/static and36
+source guards pass. Independent selection guides75/75 and six reviewed captures
+qualify a complete15-step run and interrupted13 matches/two missing steps.
+Retained Catalog/Edit50 and smoke86 preserve exact prior ordered checks, normal
+closure and delayed audits. Settings202 retains exact prior checks, ten reviewed
+captures and normal preserved closure/audit. This candidate is qualified through
+2026-10-21 06:17Z;4be-A acceptance remains open.
+Preserve190 prior definitions,
+single-choice correlation, distinct repeated choices, typing/programmatic
+suppression, policy/context boundaries and canonical bytes. Local custom-field
+results are STAGED/REJECTED/UNCHANGED; they prove no canonical mutation. Controls
+1.712 tracks this candidate's scope. UOM creation and owning worksheet/mutation
+outcomes remain later coverage; no replay or authority change.
+
 **Inventory navigation guide checkpoint,2026-10-21:** D18's existing
 CommandCompleted rule now classifies the four positive Inventory navigation
 outcomes. Two semantic RED failures -> GREEN73/73 qualify an independent

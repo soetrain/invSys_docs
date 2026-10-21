@@ -798,15 +798,46 @@ Domain application. A missing Close after session interruption remains incomplet
 the source guide cannot supply that missing observation. This clarifies the
 existing D18 conclusion rule; it adds no control, authority or replay capability.
 
-This is the first tested increment, not complete Inventory coverage. Deliberate
-item/UOM/quantity-mode/location/category/custom-field selection, custom-field
-Add/Remove, Create Inventory Table, Upload, Add/Edit acceptance and retirement
-remain pending until their actual-handler tests and owner outcomes qualify.
+The navigation increment is not complete Inventory coverage. Selection and local
+custom-field actions are defined separately below. UOM creation, Create Inventory
+Table, Upload, Add/Edit acceptance and retirement remain pending until their
+actual-handler tests and owner outcomes qualify.
 Typing/filtering and programmatic selection are excluded. Modal OK only accepts
 inputs: canonical completion belongs to the later owning command. Worksheet
 receipt failures and partial catalog/quantity outcomes must retain uncertainty;
 no completion may be inferred from a hidden form or a Boolean submission alone.
 No Inventory replay adapter or changed business authorization is introduced.
+
+**Inventory selection/local-field refinement (2026-10-21, D18 semantic inheritance):**
+Catalog45 appends eight controls under existing ADMIN_INVENTORY/ADMIN_MAINT:
+`ADMIN_INVENTORY_SELECT_ITEM`, `ADMIN_INVENTORY_SELECT_UOM`,
+`ADMIN_INVENTORY_SELECT_QUANTITY_MODE`, `ADMIN_INVENTORY_SELECT_LOCATION`,
+`ADMIN_INVENTORY_SELECT_CATEGORY`, `ADMIN_INVENTORY_SELECT_CUSTOM_FIELD`
+(Navigation, SELECTED), and `ADMIN_INVENTORY_CUSTOM_FIELD_ADD` /
+`ADMIN_INVENTORY_CUSTOM_FIELD_REMOVE` (Command, STAGED for a completed local
+draft change). Invalid Add reports REJECTED; Remove without a selected row reports
+UNCHANGED. These terminal facts assert no canonical change (Unchanged);
+REQUESTED/FAILED remain Unknown. Only SELECTED/STAGED/UNCHANGED can satisfy the
+corresponding independent CommandCompleted conclusion. Record no selected value,
+field name/value, item identity, entered text or path in this activity envelope.
+
+Both item dropdown and search-result selection represent the same logical
+selection control. A single choice produces one correlated attempt/result, even
+when MSForms delivers Change and Click. Deliberate repeated choices remain
+separate actions. Typing/filtering, initialization, loading an item's dependent
+fields, mode-driven defaults and cleanup produce no extra selection observations.
+Existing optional-recording policy, captured context, redaction and non-blocking
+failure rules apply; local staging does not create a canonical event reference.
+The UOM creation prompt, worksheet and Add/Edit/Delete owning outcomes remain
+separate pending coverage. This refinement adds observations, not permissions,
+canonical authority, automatic navigation or replay capability.
+
+Selection qualification2026-10-21: RED40/25 -> GREEN65/65; independent guide75
+proves complete15-step and interrupted13-step observations. Retained boundaries151,
+Catalog/Edit50, smoke86 and Settings202 preserve exact prior ordered checks;
+16 guide/Settings captures were reviewed. Build, static limits, preservation and
+normal closure/audits qualify. Exact scope is in the code
+`plan022_slice4be_inventory_selection_results.md`;4be-A remains incomplete.
 
 Navigation evidence2026-10-21: actual Ribbon/form RED32/31 -> packaged GREEN63/63
 with the same ordered checks. Catalog44/190 preserves all186 prior definitions.
