@@ -1,6 +1,12 @@
 # invSys Form Controls v1
 
-**Version:** 1.703 -- Empty-authority smoke fixtures confirmed; shutdown diagnosis open.
+**Version:** 1.704 -- Smoke shutdown corrected; four Inventory fixture checks remain.
+
+**2026-10-21 01:06Z:** the complete smoke sequence retains all86 prior IDs/order,
+result82 PASS/4 FAIL, and closes both Excel hosts normally after the harness action
+scope correction. Settings/reports/packages are preserved and the delayed audit is
+clear. The four old Inventory fixture checks still need a valid live captured Admin
+context. No control/contract change, package promotion or4be-A acceptance.
 
 **2026-10-21 diagnosis:** the old Add, Delete and Worksheet smoke helpers supply
 empty captured authority handles; the packaged handlers correctly refuse them.

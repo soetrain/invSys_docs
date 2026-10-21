@@ -1,5 +1,12 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**2026-10-21 01:06Z shutdown correction:** the unchanged initial smoke actions
+now finish their PowerShell scope before Excel cleanup. All86 prior IDs/order run,
+result82/4, and both native exits are unassisted; settings/reports/packages and the
+delayed audit qualify. The four old Inventory fixture failures remain. Controls1.704
+and the Inventory record carry exact evidence. Next: live Admin fixture/context
+correction, then the remaining4be-A gates. No product/contract change or acceptance.
+
 **2026-10-21 diagnostic checkpoint:** the four Inventory smoke failures come
 from old helpers passing empty captured authority handles; correct the fixture,
 preserving D8-INV-01. Harness guards pass19/19 and now bound native-exit waiting,
