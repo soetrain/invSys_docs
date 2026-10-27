@@ -17,6 +17,9 @@ temporarily suspended that fork requirement and explicitly authorized publishing
 both diagnostic feature branches to soetrain and opening draft PRs. Main-branch
 pushes and merges are not authorized by this exception.
 
+Published diagnostic draft PRs: [code5](https://github.com/soetrain/invSys_fork/pull/5)
+and [docs3](https://github.com/soetrain/invSys_docs/pull/3), both targeting main.
+
 The paused implementation remains in `../invSys_edit_receipts` at `99e06ae9`,
 with uncommitted `src/Core/Modules/modConfig.bas` and
 `tests/tooling/Slice4beInventoryCommandBoundaries.ps1`. Preserve these drafts,
