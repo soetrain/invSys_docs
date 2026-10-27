@@ -1,5 +1,11 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**User pause,2026-10-27:** 4be-A is paused for approximately two to three days;
+resume only on the user's direction. Separate harness work measures Excel shutdown
+phases without changing product behavior or weakening acceptance. The initial
+diagnostic retains Quit, explicit release, GC and finalizer waiting and independently
+observes the exact owned process exit. Assisted teardown is not release evidence.
+
 **D8-INV-CONFIG-01 approved,2026-10-21:** interactive modal Add/worksheet ADD
 and catalog-only quantity completion through modal Edit/worksheet EDIT use the separate Core
 `EnsureStationInboxWithoutFormatting` entry point. Save Config only for actual
