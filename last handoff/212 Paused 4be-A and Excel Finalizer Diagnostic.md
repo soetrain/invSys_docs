@@ -12,8 +12,10 @@ Last verified2026-10-27. Diagnostic code is in `../invSys_shutdown_diagnostic`,
 branch `work/excel-shutdown-timing`, latest `97716fa2` (timing implementation
 `1439172e`, controller correction `2f1d146a`), based on
 code main `6d247543`. Docs use the same branch name; `1371611` records the pause.
-The new instructions require pushes to the justinwj forks, but authentication is
-soetrain. Both fork pushes were denied. No diagnostic PR exists yet.
+Both justinwj fork pushes were denied under the soetrain login. The user has now
+temporarily suspended that fork requirement and explicitly authorized publishing
+both diagnostic feature branches to soetrain and opening draft PRs. Main-branch
+pushes and merges are not authorized by this exception.
 
 The paused implementation remains in `../invSys_edit_receipts` at `99e06ae9`,
 with uncommitted `src/Core/Modules/modConfig.bas` and
@@ -83,8 +85,9 @@ monitor must be stopped normally when the diagnostic is complete.
 ## 7. Open questions and blockers
 
 Which COM references cause the wait remains unresolved. Normal test teardown has
-not been changed. Publishing requires the intended fork credentials or explicit
-authorization for another feature-branch destination.4be-A remains paused/incomplete.
+not been changed. Origin feature-branch publication is now explicitly authorized;
+the prior fork permission failure is no longer a publishing blocker.
+4be-A remains paused/incomplete.
 
 ## 8. Immediate next action
 
