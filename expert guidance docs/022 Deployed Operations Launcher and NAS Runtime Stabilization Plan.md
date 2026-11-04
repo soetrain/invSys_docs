@@ -1,5 +1,50 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**Approved,2026-11-03:** Architecture D8-INV-EDIT-02 resolves
+the worksheet catalog-only completion routing conflict. D8-INV-CONFIG-01 includes
+that path, but Core's durable EDIT planner previously required an existing entity;
+the actual Upload test now reaches the handler and finishes RED16/3. The decision
+retains Admin key generation, Core authorization, private receipts, exact creation
+event proof and immutable retry identities, and names the additional Core CREATE
+phase using the no-formatting inbox entry. Modal Edit and retained formatting
+callers stay unchanged. Controls1.727 tracks the unqualified implementation.
+Expanded actual Upload baseline finishes98/17; sixteen failures are missing
+CREATE receipt/catalog/queue output, and one later authority checkpoint cannot
+be reached after refusal. Dependent retry/identity checks are not fabricated.
+Candidate validation-inventory-config-01 builds and cold compiles all five packages
+with preserved unassisted closure and clean delayed native audits. Focused RED34/1,
+56/4 and53/4 expose catalog reapplication and changed pending quantity plans through
+actual Upload and headless processing. Sourcef38d0370 corrects Core payload/preflight
+and Domain's exact saved CREATE receipt path under the approved quantity-only rule.
+Ordinary CREATE callers retain their existing behavior; no new wire field or store.
+All focused RED controllers close unassisted with preservation and clean delayed
+native audits. Candidate02, source27a05408/productf38d0370, builds/cold compiles all
+five packages, preserves source/package pins and closes with a clean delayed audit.
+The combined run prints158 PASS through creation, identity-loss and reopened failure
+retries, then is intentionally cancelled for the original deadline. Quit/release
+return, but Excel remains after assisted worker termination; exact-process
+termination returns error5 while an independent cursor check passes. The original
+settings snapshot is recovered securely before the user-approved Windows restart.
+Recovery completes23:05Z: settings restoration/readback, all five package hashes,
+Excel closure and a zero-fault native audit pass. No post-restart product test runs.
+This is assisted recovery, not full GREEN or release closure. The user ends the
+workday and hands off; fresh desktop checks precede the next test. A test-only observer now handles
+the expected authority-loss tracking warning. Focused quantity-phase GREEN must
+retain131 prior passes and correct9 prior failures; broader gates remain.
+Retained source guards pass36/36.
+Static evidence shows no dynamic-call or oversized-module growth. The additional
+missing-default test awaits its baseline/candidate runs through the same handlers.
+See the code Inventory entry audit for exact evidence. Approval is not acceptance. The original work timer
+continues toward2026-11-03 22:14:05Z (2:14 PM Pacific), including the approval pause.
+
+**User resume,2026-11-03:** 4be-A resumed on the user's direction after the
+2026-10-27 pause. The current work increment ends after four hours and forty-four
+minutes, with updated evidence and a handoff; acceptance remains unproven.
+Separate harness work measures Excel shutdown
+phases without changing product behavior or weakening acceptance. The initial
+diagnostic retains Quit, explicit release, GC and finalizer waiting and independently
+observes the exact owned process exit. Assisted teardown is not release evidence.
+
 **D8-INV-CONFIG-01 approved,2026-10-21:** interactive modal Add/worksheet ADD
 and catalog-only quantity completion through modal Edit/worksheet EDIT use the separate Core
 `EnsureStationInboxWithoutFormatting` entry point. Save Config only for actual

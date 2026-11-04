@@ -1,1 +1,1 @@
-`211 Inventory Config Formatting Diagnosis and Approval.md`
+`217 Perplexity Tooling Shift and Inventory Runtime Gate.md`
