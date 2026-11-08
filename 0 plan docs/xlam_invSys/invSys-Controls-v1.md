@@ -1,14 +1,33 @@
 # invSys Form Controls v1
 
-**Version:** 1.732 -- Visible test-Excel amendment VT-EXCEL-01 approved and qualified; 4be-A acceptance pending.
+**Version:** 1.733 -- PR4-BASE-01 baseline approved; integrated PR 4 worker qualified for visible QueueFailure; 4be-A acceptance pending.
+
+**PR4-BASE-01 qualification GREEN, 2026-11-08:** the owner approved a separate,
+commit-specific input baseline for invSys_fork PR 4 head `d10e658c`. Its manifest
+(6FDE11C2…, 538 files) changes only six worker entries (five helpers from `6da35d64`
+and the integrated worker AD8797E8) and adds the three deferred-lane files. The
+historical manifests F2D2768D and D38E9446 are unchanged. Candidate-03 packages
+match src at `d10e658c` (0 mismatched VBA modules). Codex package v12 ran the
+unmodified PR 4 worker with `-VisibleExcelForTest`: visible QueueFailure passed
+**34/34**, the worker exited 0, and Excel exited unassisted 9.42 s after Quit.
+Settings and all 538 inputs were preserved, no extra Excel appeared and the delayed
+audit was clean. The deferred lane stayed inert (`INVSYS_DEFERRED_INVENTORY_SIGNAL`
+unset). A first attempt stopped before dispatch on a launcher strict-mode defect and
+was not retried. This closes the derived-versus-integrated worker evidence gap only;
+no control ID or displayed wording changed, and Release 1 and 4be-A remain open.
+
+**Correction, 2026-11-08:** the VT-EXCEL-01 entries below wrongly called the combined
+visible guard failure (255/1) open. It was resolved on 2026-09-29: after the
+retained-form ClosedWorkbook fixture correction, the combined visible gate passed
+264/264 unassisted (Plan 022, "Current UOM visible closure checkpoint"). A guard run
+on the PR 4 candidate would be a fresh regression, not a retry.
 
 **VT-EXCEL-01 qualification GREEN, 2026-11-08:** with the `-VisibleExcelForTest`
 change and the re-pinned worker entry, visible packaged QueueFailure passed 34/34
 and Success 88/88 on `validation-inventory-config-03`. Excel exited unassisted 9.56 s
 and 9.19 s after Quit, inputs and settings were preserved, and the delayed audit was
 clean. The v11 6/1 attempt is excluded as a launcher-sampler file-access collision.
-No control ID or displayed wording changed; the 255/1 visible guard gate, Release 1
-and 4be-A remain open.
+No control ID or displayed wording changed; Release 1 and 4be-A remain open.
 
 **Approved VT-EXCEL-01, 2026-11-08:** test tooling
 may run packaged automated Excel visible through a new worker opt-in
@@ -22,7 +41,7 @@ with 144.6 s hidden. The switch sets only `Application.Visible` and is separate
 from `GuideCaptureVisibleExcelForTest`, which keeps its guide-only restriction.
 Hidden runs remain diagnostic only. Re-pinning the changed worker and manifest
 is an explicit exception; the other frozen inputs are unchanged. The earlier
-combined visible guard failure (255/1) remains open. Qualification required a
+combined visible guard failure (255/1) was already resolved (see correction above). Qualification required a
 repeat visible QueueFailure plus one broader packaged gate; v11.1 met both.
 No control ID, displayed wording, architecture or product behavior changes;
 implementation is in invSys_fork PR 9; qualification GREEN (above).
@@ -4539,7 +4558,8 @@ GREEN checks remain. Acceptance of the combined visible suite remains open:255/1
 at the closed-workbook test adapter,80010007 dialog, then oleaut32/c0000005 after
 diagnostic Reset; recovery cleanup needed assistance. This is not desktop error5.
 The same candidate's capture-disabled comparison passes264/264 with all earlier232
-identities and normal closure; it does not close the failed visible guard gate.
+identities and normal closure; it does not close the failed visible guard gate. (Superseded the same day: after the
+retained-form fixture correction, the combined visible gate passed 264/264; see Plan 022.)
 
 On this extent candidate, UOM paths now pass84/84 unassisted with exact prior
 identities and a reviewed terminal REUSED detail capture. Settings202/202 and

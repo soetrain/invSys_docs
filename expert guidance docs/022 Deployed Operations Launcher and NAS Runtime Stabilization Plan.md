@@ -1,5 +1,36 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**PR4-BASE-01 qualification GREEN, 2026-11-08:** PR 4 (head `d10e658c`) brings in
+PR 9's visible switch, the deferred-cleanup lane (b33e8de7) and five helper updates
+from `6da35d64`, so its worker AD8797E8 had not run under any pinned baseline. The
+owner approved PR4-BASE-01: a separate commit-specific manifest
+`frozen-input-pins-pr4-base-01-d10e658c.json` (6FDE11C2…, 538 files: Worker 524,
+Main 8, Diagnostic 6). It changes six worker entries and adds Invoke-InventoryEditCreationDeferred,
+Run-InventoryEditCreationController and Test-InventoryDeferredCleanup. No non-worker pin
+changed. The historical manifests F2D2768D (535 files) and D38E9446 (VT-EXCEL-01) are unchanged.
+Package provenance: a read-only VBA extraction found candidate-03's five packages
+(built 2026-11-05) match src at `6da35d64`, which is identical to src at `d10e658c`. It found 0 mismatches
+in 372 modules; the rest differ only in formatting or are generated. Codex package v12
+(launcher 92E90CEF) ran the unmodified worktree worker once with `-VisibleExcelForTest`:
+QueueFailure GREEN passed **34/34**, worker exit code 0, empty stderr, and Excel
+(identified by the launcher as the sole new process) exited unassisted 9.42 s after Quit, with both native exits
+verified. Section handles fell 1,058 -> 51 and Dxgk 37 -> 0 at exit. Settings were restored, all
+538 inputs preserved, no extra Excel appeared, and the 120 s delayed audit found no
+Excel fault, hang or WER events. The deferred lane stayed inert (signal unset and
+cleared for the child). Registry writes were limited to restoring the invSys test
+settings key. Attempt 1 (launcher 37FC811E) stopped before dispatch because a
+strict-mode empty-set `.Count` check in the launcher failed. Nothing ran; it was not retried and needed
+a corrected launcher and fresh approval. Timeline 4EB6C9AD…30CF1 is local ignored
+evidence. This closes the evidence gap between v11.1's derived worker and PR 4's
+integrated worker; it is not 4be-A acceptance. Success on the PR 4 worker,
+any fresh guard regression on the PR 4 candidate, QuantityPhase, Inventory GREEN,
+early Receiving B0 and Release 1 remain open.
+
+**Correction, 2026-11-08:** the VT-EXCEL-01 entries below said the combined visible
+guard failure (255/1) remained open. That was wrong: it was resolved on 2026-09-29 by
+the retained-form ClosedWorkbook fixture correction, after which the combined visible
+gate passed 264/264 unassisted ("Current UOM visible closure checkpoint", below).
+
 **VT-EXCEL-01 qualification GREEN, 2026-11-08:** Codex package v11.1 ran PR 9's
 `-VisibleExcelForTest` change, applied to the pinned v4 generated worker, against
 the re-pinned manifest (D38E9446; only the worker entry changed). On candidate
@@ -12,8 +43,8 @@ A83B4DEB…4683 and 61D616F9…5B8C are local ignored evidence. The earlier v11 
 (6/1) is excluded: its launcher sampler opened the worker's call-timing log during
 the run and caused a file-in-use error, Excel still exited in 9.48 s, and v11.1
 removed those reads. Packaged gates may now pass `-VisibleExcelForTest`, and hidden
-runs remain diagnostic only. This qualifies the test-host workaround only; the
-combined visible guard gate (255/1), Release 1 and 4be-A remain open. The
+runs remain diagnostic only. This qualifies the test-host workaround only; Release 1
+and 4be-A remain open. The
 Excel/Windows defect itself is unresolved and reported separately.
 
 **Approved amendment VT-EXCEL-01, 2026-11-08:**
@@ -44,8 +75,8 @@ only, consistent with the existing native-harness rule. Re-pin the changed
 worker and pins manifest as a separately approved exception; the other frozen
 inputs stay unchanged. Visible runs need the interactive non-elevated session
 left idle, because focus or input interference invalidates the run. The earlier
-combined visible guard failure (255/1, 80010007, then oleaut32/c0000005) remains
-open and is not explained by this change. Qualification required a repeat visible
+combined visible guard failure (255/1, 80010007, then oleaut32/c0000005) was
+already resolved by the 2026-09-29 fixture correction (264/264; see correction above). Qualification required a repeat visible
 QueueFailure plus one broader packaged gate with unassisted closure, preserved
 inputs and a clean delayed audit; v11.1 met these gates (above). Controls
 1.732 records this approved scope; no architecture, replay, authority or
