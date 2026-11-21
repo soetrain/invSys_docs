@@ -574,7 +574,7 @@ their consumers and before A closes.
 | Record | Fields and constraints |
 |---|---|
 | Execution profile v1 | `SchemaVersion=1`, `RecordKind=ExecutionProfile`, `ProfileId`, `Version`, `RecordId`, `PreviousRecordId`, `PreviousSha256`, `WarehouseId`, `CreatedByUserId`, `CreatedAtUTC`, `Guide`, `CatalogVersion`, `PackageSetVersion`, `AdapterSetVersion=1`, `Steps`, `ExpectedConclusion`, `ContentSha256`. Version/history/identity/hash rules match immutable guides. Store in `ExecutionProfiles/<ProfileId>.<Version>.json` under the current Action Paths root. |
-| Guide binding | `ActionPathId`, `Version`, `RecordId`, `ContentSha256` identify one exact local guide. `ExpectedConclusion` is that guide's existing schema1 definition, with a non-None terminal. Every required ordered expectation must correspond to the guide's action order; unchanged control IDs alone cannot rebind an edited guide. |
+| Guide binding | `ActionPathId`, `Version`, `RecordId`, `ContentSha256` identify one exact local guide. `ExpectedConclusion` is that guide's existing definition, with a non-None terminal. Every required ordered expectation must correspond to the guide's action order; unchanged control IDs alone cannot rebind an edited guide. D18-COURSE-01 changes guide metadata, not this expectation shape. |
 | Execution step | `StepId`, `ControlId`, `AdapterId`, `AdapterVersion`, `Inputs`. Steps match the guide's stable StepIds/control IDs in its saved order, exactly once. Adapter IDs name registered typed adapters, never procedures. Registry metadata separately declares automatic/operator-required/excluded support and reason. An operator-required step needs explicit completion evidence; it cannot silently succeed. |
 | Typed input | `Name`, `Type`, `Binding`. Each adapter declares exact allowed names, semantic types and bounds. Binding is one strict variant: `{Kind:Literal,Value:<typed scalar>}`, `{Kind:Prompt,PromptId:<registered name>}`, `{Kind:Fixture,FixtureId:<local registered fixture>}`, or `{Kind:PriorOutput,StepId:<earlier step>,OutputName:<declared output>}`. No arbitrary expressions, paths, credentials or original inventory keys. Item/SKU references select a validated item type, never substitute for durable entity identity. |
 | Run record v1 | `SchemaVersion=1`, `RecordKind=ExecutionRun`, `RunId`, `Revision`, `RecordId`, `PreviousRecordId`, `PreviousSha256`, `WarehouseId`, `StationId`, `CreatedByUserId`, `CreatedAtUTC`, `ContextSha256`, `Guide`, `Profile`, `PackageSetVersion`, `PackageBuilds`, `Mode`, `State`, `ReasonCode`, `Recording`, `Steps`, `ContentSha256`. Profile binding uses `ProfileId`, `Version`, `RecordId`, `ContentSha256`; package rows use `PackageId`, `BuildIdentity`. Modes are RunAll/StepThrough. States are Ready/Running/Stopped/Completed/Blocked/Failed/Unknown; Completed describes dispatch, never verified business success. Store immutable revisions in `Runs/<RunId>.<Revision>.json`. |
@@ -4465,6 +4465,113 @@ controls implement the approved library and integrity rules. Guide authoring,
 expectations, evaluation, both presentations and import/export remain required
 extensions of that library, not alternative records or a reduced R1 scope.
 
+**Approved D18-SEARCH-INPUT-01, 2026-11-20:** Match the
+existing Viewer search interaction: each change to `txtPathSearch` immediately
+filters only the recording headers loaded by the last authorized Open or
+Refresh. This is local presentation of an already loaded snapshot, not a Core
+library read or a new authorization decision. It must not open Config, read
+NAS journals, publish, record keystrokes or display new evidence. Each edit
+checks the captured invSys session/warehouse locally; loss of binding clears
+the list and evidence. Filtering clears the selected recording's evidence and
+disables dependent guide/evaluation actions until the operator selects a row
+again. That selection, Open, Refresh and every other Core-backed library
+action still check the current policy and authority before returning evidence
+or enabling a dependent action. `btnPathRefresh` reloads current headers from
+Core under the current policy, then applies the existing search text. Headers
+already loaded may remain locally filterable after an external policy change
+until Refresh; they cannot reveal observations or authorize a new action.
+This is an explicit, narrow exception to the per-action policy rule above for
+local filtering only; the requirement that previously loaded evidence cannot
+bypass a later restriction remains in force. No new control, ControlId or
+displayed wording is proposed. D13 must prove native per-character filtering
+and responsiveness, no per-key Config/NAS read, current-policy selection and
+Refresh, stale session/warehouse refusal, and the retained reader/layout
+regressions before visible NAS acceptance.
+
+**Proposed D18-RECORDING-LIST-01 (approval pending, 2026-11-21):** The
+Operations **Saved recordings** list should identify runs using four labelled,
+visible columns: **Started (UTC)** from the Start entry, **Recorded by** from
+the bound invSys user, **Actions** as the distinct attempted-action count, and
+**Capture state** as Stopped, Cancelled, Incomplete or Interrupted. Keep the
+exact immutable ActionPathId hidden for selection and binding. Sort newest
+Start first, with ActionPathId as a stable tie-breaker. The fixed journal Name
+`Recorded sequence` remains unchanged but is not the primary visible label.
+Search matches the displayed metadata and exact ID in the snapshot loaded by
+authorized Open/Refresh. It must retain D18-SEARCH-INPUT-01's local,
+per-character filtering and current-session check, with no per-key Config or
+NAS access.
+
+Core must validate the journal before presenting an action count or capture
+state; missing or corrupt evidence shows **Incomplete evidence** in place of
+the capture state and leaves the action count blank.
+Open/Refresh may read the journal under current policy, but cached rows must
+contain only permitted recording metadata. Do not put control captions,
+observations, entered values, guide text or inferred business outcomes into
+searchable headers: those require current-policy selection and can become
+restricted after a policy change. Selection still revalidates the complete
+journal and current policy. Existing recording entries, guide titles,
+permissions, evaluation, and publication semantics do not change. D13 must
+first show behavioral RED through the packaged Action Paths form on exact
+column labels/data, ordering, filtering, invalid-evidence handling, layout and
+retained Search responsiveness; then prove GREEN and visible NAS usability.
+This proposal is not implementation authority until explicitly approved.
+
+**Approved D18-COURSE-01, 2026-11-21:** Learning subjects group authored
+Action Path guides; a guide's authored title tells a learner where that guide
+fits in the progression. A subject is shared text, not a new course identity,
+completion record or permission boundary. The author chooses the wording and
+may include a lesson number in the title. The system does not infer task
+completion or reorder authored steps from either field. Raw recording journals
+remain immutable observed evidence and receive no course subject or title.
+The separate proposed D18-RECORDING-LIST-01 concerns recording metadata only.
+
+The guide editor labels the existing required `Name` as **Title** and adds a
+separate **Subject** text field. Tags remain independent free-form tags; no tag
+is silently promoted to Subject. New and revised guide saves require a
+nonempty, trimmed Subject and Title. Text entry uses D18-GUIDE-INPUT-01's
+local buffer, exact draft binding, focus-exit flush, Save flush and Cancel/X
+discard rules. Core checks maintenance authority and the same captured
+session, warehouse and policy on every flush/save. Unsaved subject/title edits
+cannot change an existing published version. A new immutable version may
+change either field without changing ActionPathId, StepIds, source observations,
+expectation or predecessor linkage.
+
+Guide schema 3 adds `Subject` to the existing guide fields and keeps `Name`
+as the on-wire title for compatibility. New local guides and revisions use
+schema 3. Schema 3 allows `TransferOrigin` only for imported guides; their
+origin validation remains binding. Existing schema 1 native and schema 2
+imported versions remain readable, unmodified and exportable. In their read
+projection, Subject is **Unassigned** and Title is the original Name; editing
+one publishes a schema 3 successor rather than migrating or rewriting the
+old version. Importing an older transfer produces a local schema 3 guide with
+an unassigned Subject; its next authored Save must assign a Subject. Transfer
+v1 continues to carry one exact validated guide version and accepts schema
+1, 2 or 3; export/import preserves any authored Subject and Title and all
+existing provenance, integrity and size limits. It never imports a course
+registry or business inventory.
+
+**Published guides** displays labelled Subject, Title, Version and Tags
+columns. Each immutable version remains separately selectable by its hidden
+exact ID/version/hash. List ordering is case-insensitive Subject then Title,
+with exact ID and numeric version as tie-breakers; Unassigned sorts last.
+Search matches Subject, Title, Tags and exact guide ID. Published-guide Search
+retains its current Core-backed policy check on each action; the separate
+D18-SEARCH-INPUT-01 local-filter exception applies only to Saved recordings.
+Selection and every Core-backed action recheck current policy, integrity and
+exact binding; search never exposes restricted authored steps or observations.
+Refresh reloads
+under current policy, reapplies the query and retains only a still-valid exact
+selection. How-To and provenance views label the authored Subject and Title
+without treating them as observed actions or diagnostic conclusions.
+
+D13 first exercises the packaged guide editor Save/Edit/Cancel and Published
+guides Open/Search/Refresh/Export/Import handlers. Behavioral RED must show
+missing Subject entry, list grouping/search and exact transfer round trip;
+compile, fixture or adapter failures do not count. GREEN must include old
+schema 1/2 reads and edits, immutable version and source identity, current
+policy, buffered typing, list layout, native responsiveness and visible NAS
+operator review before this course presentation is accepted.
+
 **4be.5 guide draft entry refinement:** The recorded-run library exposes
 `btnCreateGuide`, **Create guide**, for the selected permitted run. It is enabled
 only with ACTION_PATH_MAINT and a validated selection. The command opens one
@@ -4510,6 +4617,62 @@ implement the already approved How-To authoring contract under semantic inherita
 they do not relax immutable save/version/publication, search, both presentations,
 comparison, export/import, current-policy or incomplete-evidence requirements.
 The initial draft-entry D13 gate does not accept those remaining behaviors.
+
+**D18-GUIDE-INPUT-01 -- approved 2026-11-17:** Justin approved this
+event-ordering contract for test-first implementation. Approval does not
+establish packaged GREEN, operator usability or 4be-A acceptance.
+The current guide editor calls guarded Core `WriteText` for each TextBox
+`Change`. A 2026-11-16 packaged actual-handler RED preserved all three
+authored fields but took 19.89 s for 20 guide-name characters, 26.36 s for
+25 guide-instruction characters and 23.95 s for 22 step-instruction
+characters. The following explicit exception to the preceding "later operator
+actions retain their own guards" rule makes text entry usable.
+
+Keystrokes in `txtGuideName`, `txtGuideTags`, `txtGuideInstructions` and
+`txtGuideStepInstruction` update only an Operations-owned, unsaved form buffer.
+A keystroke is not a Core write, policy decision, activity event or proof of an
+action. Before loading a newly selected step, step reorder/removal, expectation
+authoring, Save or any action that reads or replaces authored text, the editor
+flushes each dirty field through the existing typed Core `WriteText` boundary
+under its captured draft and, for step text, the exact StepId being edited.
+The form retains that editing StepId separately from the list's current
+selection. Because `mSteps_Change` observes the newly selected row, it must
+flush dirty step text against the **previous editing StepId** before reading
+the new step. Step reorder, removal and draft reload likewise flush the bound
+old step before changing order, identity or displayed text; failure stops the
+action without assigning the dirty text to another StepId and follows the
+invalidation rule below.
+
+Ordinary focus exit also flushes dirty text. Cancel and window close take
+precedence over focus-exit flushing: a focus transition caused by Cancel or
+the window X is not an ordinary edit completion, even if its event fires
+before the Click or QueryClose handler. Those paths discard dirty form text
+without calling Core `WriteText`, publishing or creating an activity event,
+including when session, policy or capability is stale. Each attempted flush
+and each later operator action
+retains the current source, session/warehouse, policy and ACTION_PATH_MAINT
+guard; Save performs its existing complete guard again. If any flush fails or
+its binding is stale,
+the editor refuses the dependent action and Save, invalidates the draft,
+clears retained source evidence and reports the existing unavailable notice.
+Reopening or refreshing an editor cannot overwrite dirty local text without a
+successful guarded flush or explicit Cancel. No form buffer is persisted,
+shared across sessions, exposed as observed evidence or treated as Domain/Core
+authority. Step identity, immutable guide versions, activity recording,
+source-data integrity and all other 4be.5 guards remain unchanged.
+
+D13 must first retain the qualified three-field RED, then prove GREEN for
+incremental input through the real form handlers, including tags. Tests must
+cover dirty step switch/reorder/removal against the prior StepId, ordinary
+focus exit, expectation entry/return, refresh/rebind, Save while a field is
+still focused, and exact persisted guide text and step assignment. Actual
+Cancel and window-X event sequences with dirty text and stale session,
+policy or capability must prove zero `WriteText` calls and no publication.
+Dependent actions and Save must refuse stale context, policy or capability.
+Then require packaged XLAM/compile/layout and retained Release 1 gates. Separate
+operator evidence must confirm that the action and step lists are usable; the
+one-second local selection measurements did not reproduce the full NAS
+complaint. No implementation or acceptance is claimed by this approval.
 
 **4be.5 immutable guide-save refinement:** `frmActionPathGuide` adds
 `btnSaveGuide`, **Save guide**. Visible wording explains that Save publishes a
@@ -4621,11 +4784,13 @@ bodies retain their publication group/line order independently of authored order
 Different groups do not constitute a single original execution sequence: both
 picker and editor explicitly label them selected published actions, with **No
 recorded sequence; authored order is not execution evidence**. New stable StepIds
-refer to the exact original ActivityIds. Guide schema 1 is unchanged: `SourceRun`
-is empty on this route, even when an individual selected activity originally had
+refer to the exact original ActivityIds. `SourceRun` is empty on this route,
+even when an individual selected activity originally had
 a SequenceId. Its original body is preserved. No recording identity, lifecycle,
 expectation or conclusion is inferred. ExpectedConclusion remains None until
 explicitly authored, and use/evaluation still requires a separately selected run.
+This source rule holds for new schema3 saves under D18-COURSE-01; historical
+schema1 direct-curation guides remain unchanged.
 
 Entry and every selection/draft/save action check captured context, current policy,
 ACTION_PATH_MAINT and the exact loaded publication binding. Previously hidden
@@ -4659,11 +4824,13 @@ context loss clears retained guide content rather than retargeting it.
 `txtPublishedObservations`, `lblPublishedGuideSource`, `lblPublishedGuideStatus`
 and `btnCloseGuides` provide search, exact-version selection, explicit Refresh,
 locked authored/observed text, provenance, availability and Close. Search matches
-guide name, tags or exact ID, case-insensitively. Each immutable version is a
+guide name, tags or exact ID, case-insensitively; D18-COURSE-01 also adds
+Subject and displays the existing Name as Title. Each immutable version is a
 separate selectable entry; its hidden value binds ID, version and hash, never a
 list position or an implicit latest version. Refresh retains that exact selection
-only while it remains available and valid. Versions are ordered by guide ID and
-numeric version, independently of filesystem enumeration order.
+only while it remains available and valid. The original guide-ID/numeric-version
+display order is superseded by D18-COURSE-01's Subject/Title order; exact ID
+and numeric version remain tie-breakers, independently of filesystem order.
 
 Core validates the selected guide and its complete predecessor chain, including
 exact prior RecordId/hash and distinct revision identities. Invalid, missing or
@@ -5128,8 +5295,8 @@ automatic profile installation or source-policy modification occurs.
 
 | Record | Exact fields / interpretation |
 |---|---|
-| Transfer v1 | `SchemaVersion=1`, `RecordKind=GuideTransfer`, generated `TransferId`, verified `ExportedAtUTC`, `ExportedByUserId`, `SourceWarehouseId`, `Guide`, final `ContentSha256`. `Guide` is one complete validated schema1/2 guide version including its own hash, not a library/history dump. SourceWarehouseId equals that guide's local WarehouseId. |
-| Imported guide v2 | Existing guide fields plus `TransferOrigin`. Assign new local ActionPathId/RecordId, Version1, empty predecessor fields, receiving WarehouseId, importing actor/current UTC and current policy version. Preserve authored content, StepIds, expectation, original observations/source-run provenance and OriginWarehouseId. Native guides continue to use schema1 unchanged. |
+| Transfer v1 | `SchemaVersion=1`, `RecordKind=GuideTransfer`, generated `TransferId`, verified `ExportedAtUTC`, `ExportedByUserId`, `SourceWarehouseId`, `Guide`, final `ContentSha256`. `Guide` is one complete validated schema1/2/3 guide version including its own hash, not a library/history dump. SourceWarehouseId equals that guide's local WarehouseId. |
+| Imported guide v2 (legacy) and schema3 (D18-COURSE-01) | Existing guide fields plus `TransferOrigin`. Assign new local ActionPathId/RecordId, Version1, empty predecessor fields, receiving WarehouseId, importing actor/current UTC and current policy version. Preserve authored content, StepIds, expectation, original observations/source-run provenance and OriginWarehouseId. Legacy imported schema2 and native schema1 remain unchanged; new imports and new native guides use schema3, preserving or explicitly leaving Subject unassigned. |
 | TransferOrigin | `TransferId`, `TransferSha256`, `SourceWarehouseId`, source guide `ActionPathId`, `Version`, `RecordId`, `ContentSha256`. This identifies the immediate imported artifact; original observation origin remains distinct on re-export. Retain this object unchanged in later local guide edits. |
 
 Use existing ASCII-escaped JSON, trailing SHA-256 over the body, atomic publication
