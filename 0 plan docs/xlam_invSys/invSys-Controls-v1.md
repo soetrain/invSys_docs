@@ -10,7 +10,10 @@ four labelled list columns, Subject search, current-policy reads and layout
 checks. The guide transfer route passed 69/69, including Subject/Title export
 and import and imported-origin wording. The real picker/editor route passed
 61/61, including per-character Subject responsiveness, buffered flush, stale
-Cancel/X refusal and sorting two subjects opposite creation order. Five
+Cancel/X refusal and sorting two subjects opposite creation order.
+Published-guide Edit passed 60/60:
+Subject and Title reopen, append together in schema 3 with exact predecessor
+binding, and leave earlier version/source bytes unchanged. The same five
 instrumented XLAMs compiled in each route. The static scan has 391 components,
 6767 procedures, 193 duplicate candidates, 7 same-project late bindings,
 290 unresolved candidates and 30 warnings; the last three metrics and warning

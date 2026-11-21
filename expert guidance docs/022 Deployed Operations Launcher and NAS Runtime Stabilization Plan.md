@@ -4,6 +4,8 @@
 contract has focused packaged RED (171/3 on the prior candidate; list/search
 RED 174/3 on the first schema-3 build) and current packaged passes of 177/177
 editor/library/expectation, 69/69 transfer and 61/61 buffered input/picker.
+Published-guide Edit adds 60/60, including exact Subject/Title revision and
+immutable predecessor checks.
 The five XLAMs compiled in each run. Static inventory shows unchanged
 duplicate, late-binding, unresolved and warning counts against the prior
 2026-11-20 scan. The raw-recording metadata proposal remains unapproved.
