@@ -1,5 +1,983 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**Approved D18-COURSE-01, 2026-11-21:** Learning Subject groups authored
+guides and Title is the existing guide Name displayed to learners. Tags are
+separate; raw recordings remain evidence without course labels. New/edited
+guides use schema 3 with Subject, preserving legacy schema 1/2 reads and
+immutable history. Transfer v1 accepts all three guide schemas and preserves
+Subject, Title and provenance; old imports are Unassigned until authored.
+Published guides displays/searches Subject, Title, Version and Tags; Search
+retains its current per-action Core policy check. The local per-key exception
+remains limited to Saved recordings. D13 starts with packaged
+editor/library/transfer behavioral RED,
+then build/compile, regressions and visible NAS course review. This approved
+contract does not make the separate saved-recording metadata proposal
+D18-RECORDING-LIST-01 approved. See Architecture v4.11 and Controls 1.793.
+
+**Proposed D18-RECORDING-LIST-01, approval pending 2026-11-21:** The
+saved-recording rows need labelled Started (UTC), Recorded by, Actions and
+Capture state columns; the exact ActionPathId stays hidden and newest runs
+sort first. Core supplies only permitted validated metadata on authorized
+Open/Refresh. Search keeps the approved local per-key filter and selection
+keeps current-policy journal validation. No observation/control caption or
+guide text enters cached headers. Before a product edit, run a focused D13
+actual-form RED for columns, order, invalid evidence, policy and responsiveness;
+then compile/build, run reader/layout regressions and repeat visible NAS review.
+The current fixed Name remains in the journal; guide authoring is separate.
+Architecture approval is required before this proposal becomes a gate.
+
+**2026-11-21 visible NAS Search review:** Justin reports working Search
+recordings with the 29-recording WHT7025AE library; a matching query filters
+the list in the operator screenshot. No native timing was measured at this
+size. The two visible fields are a repeated fixed title and UTC timestamp,
+which leaves saved-recording identification inadequate. Guide authoring does
+not rename recorded runs. Treat Search responsiveness as qualitative visible
+evidence and list identification as an open 4be-A usability issue. See Controls
+1.792 and report 026; final acceptance remains open.
+
+**2026-11-21 disposable NAS Search-library setup:** In WHT7025AE, 28
+additional empty recordings were created through the actual Viewer Start/Stop
+buttons, raising the saved Action Paths library from one to 29. All 29 have
+Stopped Close entries, and no capture remains active. One Stop click in the
+bounded fill sequence did not close immediately; a separate guarded Stop
+completed that recording. Original files remained byte-identical. This is
+search-load setup only, not native Search or visible operator acceptance at
+29 rows. D18-SEARCH-INPUT-01 and the candidate XLAMs remain unchanged; see
+report 026 and Controls 1.790.
+
+**2026-11-20 Action Paths Search native keyboard checkpoint:** The
+test-only saved-copy/saved-host correction allowed the actual packaged form's
+native Search diagnostic to complete **152/152** with seven disposable
+recordings. Six key transitions verified exact textbox content, filtered row
+count, no selected row and 4.5–49.7 ms key-to-result times. All five
+instrumented XLAMs compiled, Excel exited naturally, and the saved host and
+candidate package bytes were preserved. A single owned textbox click before
+continuous typing was required for reliable native focus; repeated clicks
+disturbed text entry. This is focused diagnostic GREEN, not a pinned final
+candidate, larger-library NAS review or 4be-A acceptance. No product or
+architecture change was made. See report 026 and Controls 1.789.
+
+**2026-11-20 Viewer startup diagnostic for native Search:** The existing
+fixed-stage probe localized the visible fixture's `80010007` to
+`frmInventoryViewer.SetWarehouse` at `Me.Caption`. The failure reproduced
+with original read-only and writable unsaved instrumented XLAMs, including
+with a saved active operator workbook. Saved disposable probe copies passed
+with and without that workbook. The host window alone is not the cause;
+unsaved in-memory probe state is the isolated fixture condition. No product
+source, candidate XLAM, or contract changed. Correct the test-only fixture
+before measuring native Search; these diagnostics are not behavioral RED.
+See report 026 and Controls 1.788.
+
+**2026-11-20 Action Paths Search identity and native retest:** The slow
+operator session's exact loaded Operations XLAM was not captured. Excel
+startup still registered November 16 Admin/Operations beside November 20
+Core/Domain add-ins; the old Operations source rereads Core on each Search
+edit. After the two entries were temporarily corrected, live Excel reported
+all five November 20 candidate add-ins installed. In disposable WHT7025AE,
+Justin found one-recording typing, Backspace/clear, filtering and selected
+evidence/action clearing prompt, with no error. This supports package mismatch
+as the slow-session explanation but leaves measured native latency and a
+larger recording library unqualified. A separate visible automation fixture
+fails at Viewer open with `80010007` before Search; the test-only native probe
+has not run. Architecture v4.11 D18-SEARCH-INPUT-01 is unchanged; Controls
+1.788 records the limited operator result. Do not promote the candidate or
+count 4be-A acceptance from it. See report 026 and handoff 256.
+
+**2026-11-20 D18-SEARCH-INPUT-01 implementation checkpoint:** Visible
+operator comparison showed Viewer Search filtering quickly on each keystroke,
+while Action Paths Search was unusably slow. The approved Architecture v4.11
+exception now filters the headers loaded by authorized Open/Refresh locally;
+typing checks session binding and clears selected evidence/actions. Selection,
+Refresh and other Core-backed actions retain current-policy checks. The
+actual-handler packaged RED was **123 PASS / 4 behavioral FAIL** on the old
+five XLAMs. The isolated final candidate built and compiled all five XLAMs
+and passed **130/130 GREEN**, including no per-key policy read, local filtering
+without journal access, Refresh selection retention, current-policy
+reselection, policy-change headers, sign-out/warehouse switch, reader
+integrity and layout. Excel exited naturally. Controls 1.785 records the same
+checkpoint;
+no ControlId or wording changed. The earlier experimental 128/128 builds
+remain disqualified. The new candidate has not replaced `deploy/current`.
+Native keyboard responsiveness on the disposable NAS warehouse and 4be-A
+operator acceptance remain open.
+
+**2026-11-20 current-candidate transfer policy GREEN:** Test-only commit
+`5d10c4b4` authors a catalog-29-safe guide through actual Settings, publication,
+action picker, guide Save and Export handlers; older-policy cases use that
+complete guide and its own export package. The unchanged five-XLAM candidate
+passed the separate packaged policy/activity fixture **426/426** across
+control-off, user-off, older-policy, unavailable-store and recovery cases.
+Controller `reports/runtime/guide-transfer-controller/b0a77f686bd64cbb99d938fa3f68a228`
+records natural Excel closure, restored settings and preserved package bytes.
+This resolves the historical fixture gap below; operator acceptance remains
+open. No product package or architecture behavior changed.
+
+**2026-11-20 current-candidate Viewer published-read/recording:** The unchanged
+five-XLAM candidate passed the packaged gate **80/80**. Five compiles and the
+actual Events read, filter and detail handlers passed with policy visibility,
+Start/Stop/Cancel, repeated exact action occurrences, interrupted runs, storage
+failure, and an ordinary Viewer user's own recording. Excel exited naturally;
+local layout/detail captures and checks are at
+`reports/runtime/slice4be-viewer-published-read/ec3686ab7cfc4a78bbe5a2504e2f04c3`.
+Visible operator How-To/Diagnostic comparison remains open.
+
+**2026-11-20 current-candidate Viewer groups/publication:** The unchanged
+five-XLAM candidate passed the packaged Events group and Admin publication
+regression **86/86**. The actual handlers preserved exact-key group lines,
+pagination/search, 5,000-group retention, and named source coverage. Missing,
+dirty and empty Shipping sources were reported without invented state or source
+repair; failed replacement retained prior bytes. Excel exited naturally.
+Local checks and visible captures:
+`reports/runtime/slice4be-viewer-groups/b41aead7bc484a1fac16c928886f26e1`.
+Human comparison and NAS list usability remain open.
+
+**2026-11-20 current-candidate Settings:** The unchanged five-XLAM candidate
+passed the visible packaged Admin/Operations Event Tracking Settings regression
+**202/202**, with five instrumented compiles, policy and user recording options,
+detail profile, personal Action Path preference, saved-copy restart in a new
+Excel process, and current-context close/reopen. Both Excel processes exited
+naturally; the restart receipt confirms no termination. Captures and checks
+are local at `reports/runtime/slice4be-tracking-settings/9b872f459eae40d9976416df1dd7f7c5`.
+Human How-To/Diagnostic comparison and NAS list usability remain open.
+
+**2026-11-20 current-candidate Event Detail:** The unchanged five-XLAM
+candidate passed the independent packaged regression **81/81**, with five
+instrumented compiles, multiline Operations/Admin rendering, saved profile
+refresh, layout geometry, and stale-context invalidation. Excel exited
+naturally. The earlier visible/native cursor screenshot gate was not repeated,
+and human acceptance remains open. Local report:
+`reports/runtime/slice4be-viewer-detail/2b4ee038367247acbb5cafd3bb67b1ec`.
+
+**2026-11-20 guide transfer policy fixture:** On the unchanged five-XLAM
+candidate, the packaged activity/policy gate first reached 211 PASS before an
+invalid older-policy fixture stopped it. Catalog 47 had been relabelled 29
+without removing controls introduced after 30. Test-only commit `f7bcd4bf`
+uses Core's exact catalog-29 IDs and rejects a guide containing later controls
+as a fixture prerequisite. The corrected runtime passed 412 checks and exposed
+14 invalid expectations: the current guide contains later controls, which a
+valid catalog-29 policy hides, so its Export/Import success cases cannot serve
+as older-policy observation proof. The D13 task at that point was to author an
+actual catalog-29-only guide through packaged controls, then rerun this policy
+gate. Neither historical run qualified the complete policy gate or product RED; settings,
+package bytes and Excel natural closure were preserved. Local controller
+receipts: `reports/runtime/guide-transfer-controller/99267efcce1a45c9beef08aa5c86ad04`
+and `reports/runtime/guide-transfer-controller/b263c44ca6e440738edb7ac5eb6f1a5d`.
+
+**2026-11-20 current-candidate guide transfer:** The unchanged guide-input
+five-XLAM candidate passed a separate packaged Export/Import round trip
+**68/68**, including exact-version provenance, long multiline content,
+foreign-origin labelling, malformed/oversize refusal, visibility/rights loss,
+local edit/re-export and source non-mutation. A second packaged recorded
+transfer and diagnostic comparison run passed **496/496**, covering twenty
+Export/Import outcomes and their How-To/Diagnostic/Compare both views without
+invented Domain application. Five instrumented compiles passed in each run.
+Both Excel sessions exited naturally; the 496-check session took roughly nine
+minutes after its final GREEN line to exit. A five-minute quiet-window capture
+found no visible modal, and the checked Application fault window was clear.
+This slow native exit remains unresolved and the run is technical evidence,
+not human operator acceptance. Reports are local under
+`reports/runtime/slice4be-guide-transfer/0fd79a5f7230496f8dd536e1fe84adef`
+and `reports/runtime/slice4be-guide-transfer/f6a45fe04a5a4eee8d4d5abd1ceffbad`.
+
+**2026-11-20 current-candidate guide preference restart:** The unchanged
+guide-input five-XLAM candidate passed five instrumented compiles and the
+isolated packaged restart gate **28/28**. Its first Excel process exited
+normally; a different verified Excel process reopened Operations Settings
+with the saved personal view choice, without silently selecting a guide/run
+pair or inferring an evaluation. Explicit pairing retained the exact guide
+and observed run; all training, Config and probe-package bytes remained
+unchanged. The second Excel process also exited; the checked Application
+Error/Hang window had zero Excel faults. This technical restart does not
+replace visible NAS list usability or human How-To/Diagnostic/Compare review.
+Evidence: `reports/runtime/slice4be-viewer-published-read/a8b53e2c099b4032888f3d9f64a88a36/green.json`.
+
+**2026-11-20 current-candidate ordered chain and live-role checkpoint:** An
+isolated worktree at code commit `17675c6c` ran the existing Release 1
+chain against the unchanged `guide-input-green6-20261117` five XLAMs. The
+ordered Generate/Seed/Receive/Production/Boxing/Shipping/processor/restart
+chain passed **33/33**, including six packaged D14 identity, schema and
+custom-column assertions, five-package runtime presence, static ROW-warning
+review (six exact-hash reviewed, zero unreviewed), local-settings restoration
+and zero Excel Application faults. Excel's residual cleanup was slow enough
+to trigger the five-minute quiet-window inventory; 56 owned top-level windows
+were captured locally, with no visible native modal. Both remaining Excel
+processes later exited without intervention. A separate standalone live-role
+regression on the same packages passed **48/48**, with natural Excel exit and
+zero Excel fault events. Generated row-level reports remain local in the
+isolated worktree; do not commit or attach them without sanitization. These
+technical gates do not establish human B0, visible NAS guide-list usability,
+4be-A or Release 1 operator acceptance.
+
+**2026-11-20 current-candidate Receiving B0 technical replay:** The unchanged
+`guide-input-green6-20261117` five-XLAM candidate passed the full saved-copy,
+visible-capture Receiving replay **121/121**. A read-only comparison found all
+121 check names unique and in the exact order of the retained v20 B0 list.
+The source guide, exact source event, actual replay and fresh applied proof
+flags are true, with six source steps. The harness restored local settings;
+all five candidate package hashes remained unchanged, Excel exited, and the
+checked Application Error/Hang window contained zero Excel faults. The scope
+file explicitly says `B0Accepted=false`; this is technical replay evidence,
+not human B0 or 4be-A acceptance. Evidence:
+`reports/runtime/slice4be-receiving-replay/68d5f84c0f3d44e2a17a01abea3c43cb/green.json`.
+
+**2026-11-20 D18 stale-authority input-order GREEN:** The unchanged isolated
+five-XLAM candidate passed five instrumented compiles and a focused packaged
+guide-handler run **56/56**, with natural Excel exit. The six added checks
+exercise dirty Save, native Cancel and native window X under stale policy and
+revoked `ACTION_PATH_MAINT`; the prior stale-session checks also pass. Refused
+Save cannot publish and invalidates retained evidence; Cancel/X cause zero
+Core `WriteText` calls or guide publication. The disposable Auth workbook was
+restored byte-for-byte. This closes the focused D18 input-order matrix, not
+visible NAS list usability, live-role or Release 1 acceptance. Evidence:
+`reports/runtime/slice4be-viewer-published-read/ee761bd6c3a74a6fb34be37169be336b/green.json`.
+
+**2026-11-20 D18 guide-input static-maintenance review:** The regenerated
+candidate scan at `reports/runtime/guide-input-static-20261120` reports 391
+components, 6760 procedures, 9 literal and 45 unresolved dynamic calls, and
+194 duplicate-body groups. Against the 2026-11-14 candidate scan (191 groups),
+the only three new groups are `frmActionPathGuide`'s four `Exit`, four `KeyDown`
+and four `MouseDown` MSForms field handlers. These separate event entry points
+are required to route Name, Tags, Instructions and Step Instruction through the
+approved dirty-buffer boundary; each delegates to one shared flush helper and
+retains its distinct field argument. This is an explicit reviewed exception to
+the duplicate-body count ratchet, not deletion authority. No new same-project
+late binding or unresolved dynamic call was found; the 43 split-module
+candidates are unchanged. The warning classifier found six reviewed and zero
+unreviewed changes. Focused packaged input and saved-guide tests protect the
+handlers; final Release 1 static and runtime qualification remain open.
+
+**2026-11-20 D18 guide-input and paired-view regression checkpoint:**
+The isolated `guide-input-green6-20261117` five-XLAM candidate passed five
+instrumented compiles and the focused actual-handler input run **50/50**.
+That run now covers dirty step reorder/removal, exact saved StepId text,
+expectation entry/return, same-source reuse versus draft rebind, focused Save,
+stale dirty Save refusal, and stale dirty Cancel/X discard. A separate saved-copy
+Viewer/guide run passed **171/171**; its earlier two preservation failures were
+test assertions that counted the fixture's explicit Admin policy saves and
+Start/Close records as unexpected additions. Exact earlier bytes remain
+unchanged. The extended guide evaluation and How-To/Diagnostic/Compare run
+passed **247/247**. Its former preservation failure likewise counted four
+explicit personal-preference saves; the corrected check requires four matched
+REQUESTED/COMPLETED activity pairs and unchanged Config/publication. All runs
+used the same unchanged candidate packages and exited Excel naturally. These
+are separate gates, not a combined total. Dirty stale policy/capability input
+ordering, static maintenance, current-candidate live-role/B0/full-chain and
+restart qualification, visible NAS list usability and operator acceptance
+remain open. No new contract, ControlId, wording or package promotion is claimed;
+4be-A remains incomplete. The later stale-authority input-order result above
+closes that focused gap; the other listed gates remain open.
+
+**2026-11-19 D18 guide-input candidate checkpoint:** Approved
+`D18-GUIDE-INPUT-01` is implemented in the draft Operations source through
+local dirty buffers, a retained editing StepId, guarded flushes at Save and
+dependent actions, Tab and cross-field mouse focus, and dirty Cancel/X
+discard. The focused packaged actual-handler run on isolated candidate
+`guide-input-green6-20261117` passed **43/43**, including one Core write per
+ordinary mouse/Tab blur, exact saved text and prior-StepId assignment, both
+Save routes, and stale dirty Cancel/X with no Core write or publication.
+Instrumented five-package compile passed. A separate retained Viewer/guide
+run passed **169/171**; `GuideLibrary.ReadsPreserveGuideSourceAndActivityBytes`
+and `GuideExpectation.AllActionsPreserveRecordedExpectationsAndActivity`
+failed. The changed file or predicate is not yet isolated, so this candidate
+is not broad GREEN or 4be-A acceptance. Windows later restarted unexpectedly;
+Excel is closed and no Excel Application Error 1000/1002 was found in the
+checked window. Do not infer that the test caused the restart. Next: record
+which pin predicate changed, resolve the two failures, then finish dirty
+reorder/removal, expectation/rebind, stale-authority and acceptance gates.
+
+**2026-11-17 D18 guide-input RED and input-failure stop:** The approved
+buffer contract is unchanged. A disposable, unchanged-package Core write
+counter extended the actual-handler test to tags, blur, prior StepId, focused
+Save and exact persisted content. The completed run had 28 PASS, 12 behavioral
+FAIL and one native-test harness exception. Name/tags/instructions/step text
+still wrote Core per character and took 42.18/34.01/54.03/48.00 seconds;
+ordinary blur and the dirty step-switch did not perform the required single
+flush. The native Cancel/X test remains unqualified: the final attempt failed
+to restore the cursor (`SetCursorPos=False`, Win32 error 0). Stop desktop
+testing under AGENTS.md; no product implementation, GREEN or 4be-A acceptance
+is claimed. Excel exited naturally after the failed diagnostic. Resume by
+restoring verified desktop input, then prove Cancel/X zero-write ordering and
+the remaining dirty-action cases before changing `frmActionPathGuide`.
+
+**2026-11-17 D18-GUIDE-INPUT-01 approval and D13 entry:** Justin approved
+the Architecture v4.11 local guide-text buffer and its event ordering.
+The previous editing StepId must receive dirty text before the new step loads,
+and Cancel/window X must discard ahead of focus-exit flushing, including
+stale authority. Controls 1.766 records the same approved contract. Extend
+the actual packaged handler test first for tags, step switch/reorder/removal,
+blur, expectation entry/return, refresh/rebind, Save while focused and exact
+persisted text/StepId. Dirty Cancel/X must prove no Core `WriteText` or
+publication. The existing 24 PASS / 3 FAIL is the behavioral input RED;
+missing fixtures or compile failures are not. Only then change the Operations
+guide form, preserving typed Core guards, immutable saves and source evidence.
+Packaged GREEN, layout, static, live-role, full-chain and visible NAS list
+usability remain required; 4be-A remains open.
+
+**2026-11-16 4be-A operator guide-save and input-latency finding:** In the
+open disposable WHT7025AE review, Justin reported that picker/guide lists and
+typing a guide title or instructions were very slow. The guide editor reported
+Published version 1; a read-only store count confirmed one guide JSON and no
+pending save file. This establishes one visible Save result, not the required
+complete/incomplete How-To and Diagnostic comparison. Source inspection shows
+the text Change handlers invoke Core `WriteText` and its current source,
+policy, session and capability guard for every changed character. That is a
+plausible latency cause, not yet a timed attribution. A focused actual-handler
+test for incremental typing and repeated list selection was prepared; the
+checkpoint below records its later execution. No product or normative
+contract change is approved or implemented; 4be-A remains open.
+
+**2026-11-16 D18 guide-input RED and proposal checkpoint:** After Justin
+finished the review, Excel closed naturally with both workbooks Saved. The
+unchanged final five XLAMs cold-compiled and the focused actual-handler test
+returned 24 PASS / 3 FAIL: incremental name, guide instructions and step
+instructions took 19.89/26.36/23.95 seconds for 20/25/22 characters, while
+exact text, both Save routes, Cancel and source bytes passed. Local picker
+toggles and step selection were about one second each; NAS list usability
+remains an operator finding. Excel exited without assistance; all five source
+XLAM hashes matched afterward and the Application audit found no Excel
+Error 1000/Hang 1002. At this checkpoint, Architecture v4.11 contained the
+unapproved `D18-GUIDE-INPUT-01` local text-buffer proposal. D13 then required
+stale-context and step-switch coverage, packaged GREEN, compile, layout,
+static, live-role, full-chain and visible operator evidence. This
+RED is not 4be-A acceptance.
+
+**D18-GUIDE-INPUT-01 review refinement, 2026-11-16:** The guide form's
+`mSteps_Change` reads the new list selection, so dirty step instructions must
+retain and flush their previous editing StepId before the new row loads or a
+step is reordered, removed or the draft reloaded. Cancel and window X must
+discard ahead of focus-exit flushing in the actual event sequence, including
+stale authority, with no `WriteText` or publication. D13 adds tags, exact
+persisted text/step assignment, Save while focused, ordinary blur,
+expectation entry/return, refresh/rebind and stale session/policy/capability
+cases to the existing real-handler RED before product work. These clarify
+the then-proposed contract; the 2026-11-17 checkpoint above records approval.
+
+**2026-11-16 disposable Inventory source diagnosis:** A read-only ACE query of
+WHT7025AE's `InventoryLog$` worksheet saw 227 event rows, including one row
+with a nonblank EventID and EventType but a blank `System_Key`. Required
+publication headers are present and the prohibited `ROW` header is absent;
+the workbook SHA-256 was identical before and after inspection. Core's
+`cEventsPublication.CaptureInventory` refuses an event without its exact
+`System_Key`, so this is a plausible explanation for the current Inventory
+source warning. The query has not proved that the suspect row lies inside the
+Excel ListObject used by Core. Do not repair, invent or map its identity.
+Confirm the exact table scope through a separate read-only check before
+attributing the warning. The open operator review and 4be-A acceptance remain
+pending.
+
+**2026-11-16 4be-A empty Shipping Holds follow-up:** The owning Shipping
+handler creates a zero-byte local Holds store when no rows remain. The
+Operations publication read classified that existing empty store as
+unavailable. Focused actual-handler RED was 69 PASS / 1 FAIL; an incomplete
+first reader correction was 85/1. Final PR17 package GREEN was 86/86 on the
+full Events publication selector, preserving source bytes and nonempty
+owner-row behavior. All five XLAMs cold-compiled; a fresh Release 1 chain
+passed 33/33 with static ratchet, live roles, natural Excel exit, restored
+settings, five unchanged package hashes and zero Excel Error/Hang events.
+The disposable NAS warehouse has not been republished on this build, so its
+older Events artifact's Shipping Holds status is not live proof of the fix.
+Inventory source validation, human Action Path review, ordinary guide-right
+grant, human B0, 4be-A and Release 1 acceptance remain open. This corrects
+the existing 4be.3/D18 owner read; no architecture contract was changed.
+The 121/121 technical B0 replay predates this Shipping-reader rebuild and
+must be rerun on the final candidate before 4be-A acceptance.
+
+**2026-11-16 4be-A stopped-recording picker checkpoint:** The first disposable
+Training preview exposed a slow **Choose tracked actions** selection and an
+unattributed later Excel crash. Focused packaged RED on the unchanged five
+XLAMs passed 16 checks and failed the response check: the first selection
+took 10.39 seconds with 23 real published candidates. PR17 changes only the
+Operations picker form's selection synchronization: unchanged visible rows no
+longer repeat Core `Choose`; changed rows still pass through its guard. The
+rebuilt five-XLAM GREEN passed 17/17 with a 0.84-second first selection,
+both guide Save routes, Cancel and source immutability. Retained direct
+curation passed 70/70; current-package early Receiving replay passed 121/121
+technically with `B0Accepted=false` pending human review.
+
+PR16's packaged D14 chain coverage was carried into PR17. The six exact
+Create/Seed/identity/custom-column checks passed with natural Excel exit;
+the static `ROW` review passed 6/6 after byte-level newline normalization,
+which still rejects changed source. A first full chain passed 32/32 internal
+checks but an independent Windows audit found Excel Error 1000 in
+`combase.dll`; it is not clean acceptance evidence. The chain controller now
+checks native Error/Hang events, and a fresh run passed 33/33 with zero Excel
+faults, natural exit, settings restored and all five package hashes preserved.
+Static maintenance was regenerated with no new product warning paths or
+dynamic-call targets. The original `VBE7.DLL` operator crash remains
+unattributed. A matching review copy is open for a second human preview in
+disposable NAS warehouse WHT7025AE; no second-preview verdict is recorded.
+Ordinary guide-right onboarding, full Events source coverage, human B0,
+4be-A and Release 1 acceptance remain open. Architecture v4.11 and the D18
+contract are unchanged.
+
+**2026-11-15 4be-A disposable Training human-preview checkpoint:** The current
+five-XLAM candidate was used in existing disposable NAS warehouse WHT7025AE.
+A test-only guide right and tracking policy v1 enabled recording. The visible
+Viewer loaded 23/23 available groups; Inventory and Shipping Holds sources
+remained unavailable. The stopped Receiving recording held five controls/ten
+observations and no expected conclusion. The Viewer showed four controls from
+a publication made before the final result and Close; republishing was not
+completed. The operator found **Choose tracked actions** unresponsive, then
+attempted guide Save. No guide version was written. Excel
+16.0.20527.20196 crashed in `VBE7.DLL` (`0xc0000005`); the exact trigger and
+editor entry route remain unknown. Recovered review/Receiving workbooks
+were left untouched for inspection. Justin later confirmed he did not save
+any open Excel files; the original review host remained unchanged. Excel was
+closed by wrap-up; residual AutoRecover status is unknown. Next: protect
+both guide-entry routes and
+the picker-to-Save interaction with focused packaged RED after recovery, then
+localize the defect before implementation. No contract or package changed;
+4be-A, human B0 and Release 1 acceptance remain open.
+
+**2026-11-15 4be-A human-review setup checkpoint:** Justin chose a new
+disposable Training warehouse for the Operations/Admin How-To and Diagnostic
+comparison. The current five-XLAM candidate and inventory template were copied
+byte-for-byte into an ignored local review folder; an empty Training hub was
+prepared. At that setup checkpoint, no warehouse had been created and no human result had been recorded. The
+versioned [operator review sheet](https://github.com/soetrain/invSys_fork/blob/work/d14-packaged-chain-coverage/tests/integration/plan022_slice4be_operator_review.md)
+covers separate complete and incomplete observed runs.
+
+Read-only source inspection found a user-side setup gap: new-warehouse bootstrap
+grants the initial user `ADMIN_MAINT` and `RECEIVE_POST`, while guide authoring
+requires separate `ACTION_PATH_MAINT`. The current Users & Roles form and typed
+Core write command expose only six other capabilities and cannot grant it.
+Bootstrap also leaves the initial user's PIN hash empty, and normal sign-in
+rejects that account; no credential field or subsequent destination-user setup
+is present in the Create Warehouse form. Older
+packaged guide fixtures explicitly inserted the grant into disposable Auth data;
+that proves the guide handlers under a prepared fixture, not supported user-side
+onboarding. Disclosed test-only credential and capability setup could support an
+early usability preview, but would not qualify Release 1 onboarding. No product
+or normative contract change is approved by this checkpoint; the setup choice
+and a user-side onboarding proposal remain open. Do not mark 4be-A or human B0
+accepted.
+
+**2026-11-14 current-package early B0 replay checkpoint:** Read-only
+comparison found v20's five XLAMs differ from the current validation set.
+Standalone v82 therefore ran the existing 121-check Receiving replay on the
+unchanged current five XLAMs. All 121 identities passed in exact order; the
+source guide, exact source event, actual replay and fresh applied proof flags
+were true, with no proof-critical check missing. Excel exited naturally,
+settings and package hashes were preserved, desktop failure counts were zero,
+and delayed Excel fault audit was clear. Representative setup, concluded,
+stopped and resize captures were reviewed. The harness deliberately records
+`B0Accepted=false`; v82 is technical B0 replay evidence, not human B0 or
+4be-A acceptance. No product or architecture contract changed.
+
+**2026-11-14 current-package UOM guide identity checkpoint:** Standalone
+v81 updates the test controller's exact list from the historical 74 names
+to those 74 in order plus six `InventoryPartialChoices` identities. The
+unchanged packaged Inventory UOM guide passed 80/80 unique and ordered checks,
+with natural Excel exit, restored settings, zero desktop failures and zero
+delayed Excel faults. This resolves v72 run 08's test-list mismatch; it is
+not a product change or broad Inventory/4be-A acceptance.
+
+**2026-11-14 packaged D14 chain checkpoint:** Draft code PR16 replaces the
+obsolete source Create gate with six exact D14 checks through current packaged
+Admin Create/Seed and Core snapshot/refresh paths. Focused v76 and exact-case
+v79 each passed 6/6 with natural Excel exit, restored settings and unchanged
+five XLAM hashes. The static warning review passed 5/5 focused checks; the
+chain contract passed 13/13. Its exact-hash exception covers six reviewed
+`ROW` guard or local staging warnings; changed source or new warnings fail.
+
+Isolated chain v77 passed 31/32 and exposed the warning-ratchet prerequisite.
+After review, v78 passed all 32 internal checks, including D14, but a delayed
+Windows audit found one Excel Application Error 1000 (`combase.dll`,
+`0xc0000005`, PID 24652). The faulting stage is unproven. A fresh isolated
+v80 passed 32/32 with exact-case D14 protection, restored settings, matching
+five-package hashes, natural Excel closure, no modal and zero delayed Excel
+faults. The technical chain regression is qualified on this candidate.
+No product behavior, XLAM, ControlId, displayed wording or architectural
+contract changed. Broad Inventory, human Receiving B0, visible operator
+comparison and 4be-A/Release 1 acceptance remain open. Controls 1.756 and
+handoff 242 record this boundary.
+
+**2026-11-14 current-package Inventory continuation checkpoint:** The five
+validation XLAMs stayed unchanged. Standalone v68 WorksheetResults passed
+67/67 unique checks: its 64 historical identities remain in order, with
+three additional exact tracking-notice checks, so this is not a 64-name
+exact gate. v69 OwnResults passed 50/50 exact, v70 HeadlessWorksheet
+56/56 exact, and v71 recording/navigation 151/151 exact.
+
+The v72 sequential follow-up passed exact historical lists for run 05
+Selections (65/65), run 06 Selections.Guide (75/75), and run 07 UOM
+recording (68/68). Run 08 UOM.Guide passed 80/80 unique behavioral checks
+but failed the controller's old 74-name exact identity gate because six
+new InventoryPartialChoices checks were emitted. All original 74 names
+remain in order. The series stopped as designed before run 09. A
+separate current-package v73 then passed run 09 Recording.Guide 73/73
+exact checks. Every started run closed Excel naturally, restored test settings, and recorded
+zero desktop failures or Excel fault events. Run 08 is a test identity
+mismatch, not a demonstrated product failure or a qualified exact gate.
+No product, ControlId, displayed wording or architectural contract
+changed. Broad Inventory, ordered chain, operator acceptance and 4be-A
+remain open. Controls 1.753 records the same boundary.
+
+**2026-11-14 current-package Admin/live-role checkpoint:** On the unchanged
+five validation XLAMs, standalone v58 Reconcile passed 360/360, v59
+Warehouse Root 370/370, v62 Create Warehouse 381/381 ordered checks, and
+v63 Tester Setup 444/444. The 444 includes 145 checks beyond the 299-name
+historical Tester baseline; it is not a 299-name exact gate. v60 Users &
+Roles passed 126/129: three new-record assertions expected catalog 39
+while loaded Core reported 47. Test-only PR15 commit `0e988b2c` reads the
+loaded catalog; PR4-BASE-18 re-pins only two Users fixtures and keeps all
+five XLAMs unchanged. v61 then passed 129/129 exact checks. All these
+packaged runs had natural Excel closure, restored settings, preserved
+pins and zero delayed Excel faults.
+
+A separate current-package live-role v67 passed 48/48 distinct checks,
+with natural Excel exit, restored settings, unchanged package hashes and
+zero desktop or Excel fault events. Static scan v66 exactly matches the
+2026-11-12 candidate: 391 components, 6,743 procedures, 29 forms,
+1,043 dynamic roots, 30 warnings and 1,246 maintenance candidates.
+These independent results do not constitute the ordered Release 1 chain.
+
+The v64 full-chain attempt stopped after packaged Admin bootstrap, Seed
+and inventory creation: its older source integration harness raised a
+VBA compile error for missing `modConfigPaths`. A focused disposable v65
+imported that module and reached a second missing `modInventoryCommands`;
+a lexical scan found 41 candidate module names outside the old
+harness import list. The incomplete one-line fixture change was discarded.
+Both runs needed a captured dialog and IDE reset, so neither is unattended
+GREEN. Packaged Create v62 does not carry the old harness's named D14 key,
+no-ROW, Condition and custom-column assertions. Simply replacing the
+source gate with v62 would weaken coverage; map those assertions to
+current packaged paths before repairing the chain. The ordered full-chain, human Receiving B0, broad Inventory,
+layout/operator comparison and 4be-A/Release 1 acceptance remain open.
+Controls 1.752 records the same boundary.
+
+**2026-11-13 current-package Admin Aggregation checkpoint:** On the
+unchanged five validation XLAMs, v56 completed 131 PASS / 4 FAIL across
+135 exact names. All four failures came from recording fixtures expecting
+catalog version 43 while the packaged Core reports 47; this was test
+fixture drift, not demonstrated product RED. Test-only code PR15 commit
+`415450fb` reads the loaded Core catalog for newly recorded activity and
+retains the historical 43/42 definition checks. Separate PR4-BASE-17
+manifest `A83EA130...` re-pins only the two Aggregation test files; the
+five XLAMs are unchanged. v57 passed **135/135 exact identities** through
+the packaged Admin Aggregation owner and guide paths. Excel exited
+naturally, settings and all 541 pins were preserved, and delayed audit
+found zero Excel faults. This is standalone technical GREEN under
+Architecture v4.11 D8-AGG-01/D18, not full 4be-A or Release 1 acceptance.
+Controls 1.751 records the same boundary.
+
+**2026-11-13 current-package guide and Admin checkpoint:** PR4-BASE-14
+v48 passed 499/499 exact guide-transfer identities. PR4-BASE-15 v50
+passed 188/188 exact Admin Console callback, recording and guide identities
+after v49 exposed five stale catalog-version assertions (183 PASS / 5 FAIL).
+Both GREEN runs used the unchanged five XLAMs, exited naturally, restored
+settings, preserved all 541 pins, and had zero delayed Excel faults. These
+are separate technical gates, not comprehensive 4be-A acceptance. PR15's
+test-only Console correction changes two fixture files; no product or
+architectural contract changed.
+
+Admin Seed v51 on BASE-15 completed 286 PASS / 5 FAIL across 291 unique
+identities: its 283 historical names were present, plus eight native-feedback
+checks. The five failures are stale catalog-version/count assertions in two
+Seed fixtures. Excel exited naturally, settings and pins were preserved,
+and delayed audit found zero faults. PR4-BASE-16 re-pins only those two
+test files for a separate v52 packaged gate. v52 passed 291/291 exact
+identities, including the eight native-feedback checks. It exited
+naturally with settings/pins preserved and zero delayed Excel faults.
+This is standalone Admin Seed technical GREEN, not full Demo Inventory
+control coverage. On the same BASE-16 pins, v53 separately passed
+202/202 exact Admin Verify callback, recording and guide identities,
+with natural Excel exit, restored settings/pins and zero delayed faults.
+v51 is fixture RED, not product RED. On BASE-16 v54 separately passed
+219/219 exact Admin
+Directory callback, recording and guide identities with natural Excel
+exit, restored settings/pins and zero delayed faults. Human Receiving B0,
+broader Admin/Operations, live-role, full-chain, visible operator, 4be-A
+and Release 1 acceptance
+remain open. Controls 1.750 records the same evidence boundary.
+
+**2026-11-13 PR4-BASE-13 observed guide ordinals checkpoint:** The
+approved v46 packaged guide-transfer run on BASE-12 stopped after 11
+PASS and one restart-fixture exception. Its sanitized journal receipt
+confirmed 14 versions, six actions, 12 observations and Save Value
+ordinals 3/6; the fixture had inferred 2/5. Both processes exited
+naturally, settings and frozen inputs were preserved, and delayed audit
+found zero Excel faults. This is a fixture prerequisite failure, not
+product RED or guide-transfer GREEN. Test-only draft PR15 at `d6fb040c`
+now uses the observed ordinals (focused RED 4/1, GREEN 5/5); the prior
+recording-filter test stays 4/4. Separate PR4-BASE-13 manifest SHA256
+`B3DCF39A...` re-pins those two files; five XLAMs and earlier manifests
+are unchanged. v47 checks-only passed 541 pins and 499 exact names.
+One packaged run awaits owner approval. Controls 1.749 records the same
+limit; 4be-A and Release 1 acceptance remain open.
+
+**2026-11-13 PR4-BASE-12 guide restart fixture checkpoint:** The
+approved PR4-BASE-11 v45 guide-transfer worker passed the v44 recording
+fixture and stopped at the next restart-journal fixture (11 PASS, one
+fixture exception, 488 missing expected identities). Both native exits
+were verified; settings and pins were preserved; delayed Excel audit
+found zero faults. This is a test prerequisite failure, not product RED
+or guide-transfer GREEN. Draft code PR15 at `686dbf02` now includes a
+test-only restart-fixture correction and file-only test (focused RED
+4/1, GREEN 5/5); the expected selection-inclusive journal shape is
+inferred until packaged evidence confirms it. Separate PR4-BASE-12
+manifest SHA256 `224F0BE5...` pins 541 inputs, changing one fixture and
+adding one test relative to BASE-11. The five XLAMs and earlier manifests
+are unchanged. v46 checks-only passed 541 pins and 499 exact identities;
+one packaged run awaits owner approval. Controls 1.748 records the same
+limit. Guide transfer, 4be-A and Release 1 acceptance remain open.
+
+**2026-11-13 PR4-BASE-10 Viewer gates and guide fixture checkpoint:**
+On the unchanged five XLAMs and 539 pinned inputs, separate hidden-start
+runs v41 (published read/recording 80/80), v42 (groups/publication 82/82)
+and v43 (refresh failure 16/16) passed exact identities. All three workers
+exited 0; Excel exited naturally, test settings and pins were preserved,
+no modal or IDE intervention occurred, and delayed audit found zero Excel
+faults. v41 supports initial-host visibility as the v40 break condition,
+but the underlying Excel cause is unproved. These are separate technical
+gates, not full Viewer/operator or 4be-A acceptance.
+
+Current-package v44 recorded guide transfer stopped at 11 PASS, one fixture
+exception and 488 missing checks. The shared `SaveRecordedSetting` fixture
+counted unrelated, approved Admin Settings selection events as part of its
+required Save Value pair. Code draft PR15 (`3a5700c1`) filters only the
+fixture observation: focused file-only RED 3/1 and GREEN 4/4; no product
+source or XLAM changes. Separate PR4-BASE-11 manifest SHA256 23EEDA51...
+pins 540 inputs (one changed fixture, one new test); BASE-10 and all older
+manifests remain unchanged. v45 checks-only passed 540 pins and 499 exact
+historical identities. Owner approval for the manifest and one packaged
+v45 run is pending. This is not guide-transfer GREEN, human B0 acceptance,
+4be-A or Release 1 acceptance; Controls 1.747 records the same limit.
+
+**2026-11-13 PR4-BASE-10 Viewer published-read/recording diagnostic:**
+The separately approved v40 visible packaged run passed checks-only (539 pins,
+80 exact expected identities) and its first eight worker assertions (five
+instrumented compiles, recording-probe installation, and two publication
+checks). It then paused in test-owned Excel/VBA break mode at
+`modInventoryViewer.OpenInventoryViewer` calling `SetWarehouse`, before the
+third publication check. The owned-window capture found no modal; GDI/USER
+counts were stable near 2,100, below the earlier 10,000-object quota. The
+runtime error and cause are unknown. After the 15-minute controller budget,
+the worker reported 8 PASS, one packaged-call exception, and 72 unrun checks;
+the controller failed the exact-identity gate. Both processes exited, test
+settings were restored, 539 pins were preserved, and the delayed audit found
+zero Excel faults; whether anyone interacted with the VBA window is being
+confirmed. This is neither product RED nor current-package GREEN. A separate
+hidden-start comparator, matching the historical fixture's reveal-before-Viewer
+timing, passed checks-only and awaits its own authorization. Product packages, Architecture v4.11,
+ControlIds and displayed behavior remain unchanged; 4be-A stays open.
+
+**2026-11-12 PR4-BASE-10 v39 Event Detail qualification:** The approved
+visible packaged Event Detail run passed 90/90 exact identities, including
+five compiles performed by the detail fixture. Native scrolling/typing,
+long and multiline text, selected-line detail and layout checks passed.
+The worker exited 0, controller `StopReason=null`, Excel exited naturally
+2.52 seconds after stdout quiet, settings and 539 pins were preserved,
+and the delayed Application audit found zero Excel faults. Reviewed
+default/maximized/restored and scroll captures show readable multiline
+content, a reachable last line and horizontal `END` marker, and Close.
+v37 stopped before Excel on an unsupported controller compile switch;
+v38 worker passed 90/90 but its controller expected 85, so neither is
+qualified or product RED. Controls 1.745 records v39 as standalone
+Event Detail evidence. Other Viewer, Action Path, human B0, live-role,
+full-chain and Release 1 gates remain open.
+
+**2026-11-12 PR4-BASE-10 v36 Settings qualification:** v35 never
+dispatched because its approval followed the pinned cutoff. A separately
+approved v36 visible packaged Settings/policy/detail/preference run passed
+202/202 exact identities, worker exit 0 and controller `StopReason=null`.
+The pinned Preference restart was proved; the first and replacement Excel
+processes both exited naturally with native evidence and no extra Excel.
+Settings and 539 frozen inputs were preserved; no termination, modal
+intervention or delayed Application fault occurred. Run time was 6.49
+minutes. The negative stdout-quiet-to-first-Excel-exit value is not an exit
+speed measure for this two-Excel run: the first Excel exits before later
+checks. The standalone Settings gate is qualified on the unchanged five
+XLAMs. Controls 1.744 records the same limit. 4be-A and Release 1
+acceptance, human Receiving B0 and other pending gates remain open.
+
+**2026-11-12 PR4-BASE-10 v34 Settings checkpoint:** The approved visible
+packaged worker passed 202/202 exact Settings/policy/detail/preference
+identities and exited 0. The pinned Preference fixture quit its first Excel
+naturally and launched a second for the saved-choice restart check. The v34
+controller rejected the second PID, so the controller gate failed; this is
+worker GREEN, not qualified Settings GREEN. Settings and 539 frozen inputs
+were preserved, both Excel processes ended without assisted teardown, and
+the delayed Application audit found zero Excel faults. No v34 retry is
+authorized. A separate v35 controller now requires exactly one proven
+Preference restart and native exit evidence for both Excel lifetimes;
+checks-only passed 539 pins and 202 expected identities without Excel.
+Fresh approval and runtime evidence are pending. The five XLAMs, product
+contract, ControlIds and displayed behavior are unchanged. 4be-A and Release
+1 acceptance remain open; Controls 1.743 records the same limit.
+
+**2026-11-12 PR4-BASE-08 A-family regression checkpoint:** On the unchanged five
+validation XLAMs and 539 frozen inputs, visible v28 Recording passed 151/151.
+v29 run 05 passed 65/65; run 06 printed 75 PASS but its observer lost the
+gate to a timeline file-sharing error. The separate corrected v29.1 series
+passed Recording/Guide runs 06-09 exactly (75, 68, 80 and 73; 296/296),
+with natural exits, restored settings and zero delayed Excel faults. Visible
+v30 passed Admin Tester/Create recording exactly (163 and 170; 333/333),
+with the same closure and preservation evidence. v31 checks-only exposed a
+controller initializer error before Excel; corrected v31.1 passed 121/121
+Receiving replay identities, all ten proof-critical checks and four fresh
+replay scope flags, with natural closure and zero delayed faults. Its harness
+records `B0Accepted=false`: technical replay proof is current, but human B0
+acceptance is not established. These standalone results do not combine into
+4be-A or Release 1 acceptance.
+
+v32 and the separately authorized v32.1 each reached 134 PASS, then a
+fixture-target selection exception (`WH_CONFIG_INVALID`) and 68 unrun
+Settings/policy/detail/preference checks. Both were attended after a captured
+Excel insufficient-memory dialog; both closed naturally with settings and
+pins preserved. Perplexity-owned models and system commit pressure co-occurred
+in v32. In v32.1, about 40 GiB of virtual memory remained free while Excel
+reached 10,000 GDI objects; v32 reached 10,000 USER objects. Both configured
+per-process quotas are 10,000. The v32.1 delayed Application audit found nine
+`GDIObjectLeak` reports naming `EXCEL.EXE`, so it did not pass the fault gate.
+Captured windows included about 288 `XLMAIN` and 582 `OfficeGripperWnd`
+windows. Plain visible-Excel 40-cycle `.xlsx` and `.xlsb` controls, including
+hide-before-close and held child references, kept GDI near baseline and
+`XLMAIN` at two. A test-only packaged Core probe then isolated the host
+condition: with no saved workbook open, 80 successful `modConfig.LoadConfig`
+calls grew GDI 1,036 to 3,606 and `XLMAIN` 20 to 100 even though the workbook
+count returned to zero; ten Settings open/show/close cycles reached the
+5,000-object safety stop. With one disposable saved `.xlsb` reopened under
+the same five XLAMs, the same 80 loads held GDI at 927-929 and `XLMAIN` at
+16; 20 Settings cycles ended at 935 GDI, zero loaded forms and a natural
+Excel exit. This matches Architecture v4.11's existing saved-workbook
+operator model and its retained add-in-only stress finding. The saved-host
+probe is diagnostic, not the full Settings gate: neither v32 nor v32.1 is
+product RED or Settings GREEN. The Settings test harness must establish that
+saved host before a fresh pinned acceptance run. Architecture, five XLAMs,
+ControlIds and displayed wording are unchanged; Controls 1.740 records the
+same acceptance limit.
+Draft code PR14 (`d94768c7`) adds only the saved-host switch to the packaged
+Settings test worker; it does not change a product package. Separate
+PR4-BASE-09 manifest `6F867D13...` differs from BASE-08 in exactly that
+worker file pin. The v33 visible Settings controller passed checks-only with
+539 exact pins and 202 expected identities. Its approved single run stopped
+after six compiled-probe PASS checks and one test-host assertion failure
+immediately after fixture creation; 196 identities were not reached. The
+assertion combines saved-host path, dirty flag and workbook count, so the
+changed component is unknown. Excel and worker exited naturally; settings
+and inputs were preserved, and the delayed audit found zero Excel faults.
+This is a harness setup failure, not Settings GREEN or product RED. A distinct
+test-only copy now records those three host facts before any further Settings
+gate. Its approved single run proved the host object and exact path remained
+accessible, its file existed, and exactly one workbook was open; only Excel's
+in-memory `Workbook.Saved` flag became false. The worker exited 0, Excel
+closed naturally and the delayed Application audit found zero faults. A dirty
+flag does not revoke saved-workbook identity. Draft PR14 commit `b8f94241`
+therefore removes only the after-fixture dirty-flag assertion while retaining
+the path, file and sole-workbook checks. PR4-BASE-10 (`68338D11...`) re-pins
+that one test file; v34 passed checks-only for 539 pins and 202 names with no
+Excel. Its separately approved packaged run is still required. Earlier
+manifests are unchanged. Controls 1.742 records the same acceptance limit.
+
+**2026-11-11/12 worksheet result/notice D13 checkpoint:** The
+PR4-BASE-06 validation packages passed v25's 170 exact Inventory
+worksheet result identities: WorksheetResults 64, OwnResults 50 and
+HeadlessWorksheet 56. WorksheetResults was attended because three
+actual stale-context `invSys Admin` tracking notices required recorded
+OK clicks; its 64/64 is diagnostic evidence. The other two runs were
+unattended. A test-only packaged fixture now observes and asserts the
+exact notice in the three deliberate sign-out cases. v26 stopped on a
+fixture seam setup error before behavioral checks, not a product RED.
+The corrected commit `f9016668` uses the established whole-module seam;
+PR4-BASE-08 (`B5FE3624...`) re-pins only that test helper and retains
+all five PR4-BASE-06 XLAM hashes. v27 passed 67/67 exact packaged
+WorksheetResults identities, with no modal or intervention, natural
+Excel/worker exits, preserved settings and 539 pins, and zero delayed
+Excel faults. The product contract and source are unchanged by this
+fixture. v25 and v27 are separate focused evidence; broad Inventory,
+early Receiving B0 acceptance, 4be-A and Release 1 remain open.
+Controls 1.737 records the same checkpoint.
+
+**2026-11-11/12 worksheet upload PARTIAL checkpoint:** Architecture
+v4.11 already requires an exact owner outcome and event reference when
+Inventory worksheet Upload saves inventory but its result save is
+unconfirmed. On PR4-BASE-05, v23 reached the packaged Upload handler:
+76/78 exact checks passed; only `UploadSaveThrows.ExactCorrelatedOwnerOutcome`
+and `UploadSaveThrows.ExactOwnerEventReferences` failed. Code commit
+`c4444f58` (draft PR12) changes the Admin handler's post-application
+save-error outcome from FAILED to PARTIAL while retaining the existing
+report and owner event references. A separate PR4-BASE-06 manifest
+`98AFB384...` pins the unchanged 539 tooling inputs and the rebuilt
+five XLAMs. v24 passed all 78 exact packaged checks, including both
+former failures, with five package compiles, source extraction match,
+natural Excel/worker exits, restored settings, preserved inputs and
+zero delayed Excel faults. Static maintenance metrics did not grow.
+This is focused Inventory GREEN, not broad Inventory, 4be-A or Release 1
+acceptance. The remaining selectors and live/full-chain/operator gates
+remain open. Controls 1.736 records the same evidence.
+
+**2026-11-11 PARTIAL guide expectation D13 checkpoint:** Architecture
+v4.11 already defines PARTIAL for Inventory Create/Upload; Core's guide
+expectation choices omitted it. On PR4-BASE-04, v21 established exact
+packaged RED (76 PASS, four specified Create/Upload choice FAIL; two
+UOM and 74 retained guide checks PASS). Code commit 0e014dc8 adds only
+PARTIAL to Core's non-catalog choice list. The five validation XLAMs
+matched that source. Justin approved a separate PR4-BASE-05 manifest
+2280127D... with the same 539 file pins as PR4-BASE-04 and one v22
+run. v22 passed 80/80 exact visible packaged checks; both native exits,
+settings restoration, input preservation and zero delayed Excel faults
+were verified. The prior manifests and candidate packages remain
+unchanged. v19 separately passed Inventory Recording.Uom 68/68 on
+PR4-BASE-03; v20 passed early Receiving replay 121/121 technically,
+but its proof states B0Accepted=false. These results are not combined
+into broad Inventory GREEN, B0, 4be-A or Release 1 acceptance. Current
+regression, live-role, full-chain, restart, static, layout and visible
+operator gates remain open. Controls 1.735 records the same checkpoint.
+
+**2026-11-10 PR4-BASE-03 Inventory recording/guide checkpoint:** v17 ran
+the Inventory results and recording selectors on PR4-BASE-02. Runs 01
+WorksheetResults 64/64, 02 OwnResults 50/50, 03 HeadlessWorksheet 56/56,
+04 Recording 151/151 and 05 Recording.Selections 65/65 matched exactly
+with natural exits (run 01 was attended after three native tracking notices); run 06 Recording.Selections.Guide stopped the series
+at 9 PASS, 1 FAIL, 66 missing. Runs 07 Recording.Uom, 08 and 09 did not
+run. v17.1 to v17.4, on tooling copies outside the pinned tree, isolated
+the fault to the pinned guide re-asserting Application.Visible = True on
+an already visible Excel, which moved the application window handle and
+emptied Workbook.Windows; executing each visible-host statement only
+when its target was not already in the requested state passed the same
+75 checks (v17.4 run-06b).
+
+Justin approved a PR4-BASE-03 re-pin exception for exactly three
+test-tooling files (Slice4beInventoryGuide.ps1,
+Slice4beAdminTesterRecording.ps1, Slice4beAdminCreateRecording.ps1) at
+code commit 55f46fcc (PR10, merged into the PR4 working branch as 550d9ff0), as a separate manifest SHA256
+B03E9264... pinning their on-disk hashes; PR4-BASE-02 F2DE6B82...,
+PR4-BASE-01 6FDE11C2..., the worker and all XLAM pins are unchanged.
+No product or architectural contract changed.
+
+v18 then passed seven sequential visible packaged runs on PR4-BASE-03:
+04 Recording 151/151, 05 Recording.Selections 65/65, 06
+Recording.Selections.Guide 75/75, 08 Recording.Uom.Guide 74/74, 09
+Recording.Guide 73/73, focused Tester.Recording 163/163 and focused
+Create.Recording 170/170. All 771 expected identities matched exactly
+once; seven worker/Excel pairs exited naturally, settings and frozen
+inputs were preserved, and the delayed audit found zero Excel faults.
+v18 stands alone and is not added to v17, v16 or v13.1. Controls 1.734
+and handoff 224 record this checkpoint. Local ignored evidence is under
+reports/runtime/inventory-gate-v17-pr4-base-02-20261110/,
+inventory-gate-v17-1..4-guide-host-20261110/ and
+inventory-gate-v18-pr4-base-03-20261110/.
+
+At this 2026-11-10 checkpoint, run 07 Recording.Uom had not run on either
+baseline; v19 later completed it on PR4-BASE-03. Whether the product
+itself re-asserts Application.Visible is unexamined; the Excel native-exit
+slowness is unresolved. Broad
+Inventory GREEN, 4be-A and Release 1 acceptance remain open.
+
+**2026-11-08 PR4-BASE-02 Inventory checkpoint:** v14 ran
+BeforeCatalogSaveThrows and AfterCatalogSaveThrows separately on unchanged
+PR 4 tooling. Each reproduced the v13.1 failure: 17 PASS, 2 FAIL, with
+9 and 14 missing checks respectively. Both failed
+ActualCanonicalSaveBoundaryReached and NoCreationAfterUnconfirmedSave.
+The combined session was not the cause. v15 traced the test-setup fault:
+the probe used the main checkout's source tree to choose its save owner.
+That tree lacks the Domain module, so the probe attached to the old Admin
+path while the loaded Domain XLAM performed the save. Choosing the owner
+from the loaded Domain package passed the isolated cases 28/28 and 33/33.
+
+PR 4 commit e2c8a06f changes only
+tests/tooling/Slice4beInventoryEditCanonicalSave.ps1. It now checks the
+loaded Domain package and stops clearly if inspection fails, with no
+silent fallback to Admin. Justin approved PR4-BASE-02 as a separate
+test-only baseline: manifest SHA256 F2DE6B82..., one re-pinned tooling
+file SHA256 E0428CB0..., 538 frozen inputs and unchanged XLAM pins.
+The PR4-BASE-01 manifest SHA256 6FDE11C2... is untouched. No product
+or architectural contract changed.
+
+v16 then passed four sequential visible packaged runs on PR4-BASE-02:
+EditCreation.All 545/545 (including 140 QuantityPhase checks),
+ConfigPreservation.All 50/50, MissingDefault 54/54 and RetainedShared
+123/123. All 772 expected identities matched exactly once; zero failed,
+missing, duplicate or unexpected checks. All four worker/Excel pairs
+exited naturally, test settings and frozen inputs were preserved, and
+the delayed audit found zero Excel faults. Run 01 AfterQuit-to-exit was
+14.95 s; the Config selectors record only informational
+stdout-quiet-to-exit times. v16 stands alone and is not added to v13.1's
+failed combined run. Controls 1.733 and the code Inventory audit record
+this checkpoint. Local ignored evidence is under
+reports/runtime/inventory-creation-save-v14-20261108/,
+reports/runtime/inventory-creation-save-v15-20261108/ and
+reports/runtime/inventory-gate-v16-pr4-base-02-20261108/.
+
+Still open: complete retained-formatting caller coverage (the
+RetainedShared selector is narrower), other Inventory selectors and
+broad Inventory GREEN, recording and guides, early Receiving B0,
+live-role, restart, full Release 1 chain, final compile/layout/static
+and visible-operator evidence, and 4be-A acceptance. The slowdown
+across Execute calls and underlying Excel native-exit defect remain
+unresolved. Justin submitted the Microsoft report; no follow-up
+dialogue is open. Separate 4be-B replay acceptance also remains open.
+
+**2026-11-05 CREATE queue-failure regression:** packaged candidate
+`validation-inventory-config-03` passed **34/34** through actual Upload and
+reopened retry. The failed queue left the saved catalog/CREATE receipt and
+operator reference intact, created no entity and did not report imported.
+Retry retained the command, planned event and exact `System_Key`, created one
+entity, and did not repeat the catalog edit. Config/Auth/presentation/custom
+column preservation and read-only inspection passed. Five instrumented XLAMs
+compiled; Excel closed unassisted, settings and package pins were restored,
+and desktop/delayed native audits were clear. Finalization still took about
+3 minutes 44 seconds; no general shutdown fix is claimed. Controller
+`green-f8fda55c6c1645cb99b72222ec7d7058` holds local ignored evidence.
+Controls 1.731 and the code audit record this one qualified regression; 4be-A
+and the remaining release gates stay open.
+
+**2026-11-05 broader CREATE success regression:** the packaged actual Upload
+`Success` case passed **88/88** on candidate `validation-inventory-config-03`.
+It covered exact fresh creation, saved command/event/key identities, imported
+operator result, reopened retry without duplication, and six identity-loss
+refusals without replacement identities. Config/Auth bytes and presentation,
+unknown operator columns, and read-only inspection were preserved. Five
+instrumented XLAMs compiled; Excel closed unassisted, settings/package pins
+were preserved, and desktop and delayed native-fault audits were clear.
+Controller `green-fc0444a923084b5a844aea183d06d86e` holds local ignored
+evidence. This single broader case does not close the remaining Inventory,
+live-role, visible-operator, Release 1 or 4be-A gates.
+
+**2026-11-05 retained EDIT receipt checkpoint:** packaged candidate
+`validation-inventory-config-03` passed **81/81** focused checks through the
+actual Add/Upload handlers: catalog-only and no-op EDIT, applied quantity EDIT,
+and failed queue followed by reopened retry. Saved command/receipt binding,
+one catalog application, the pre-queue planned event ID, exact applied/log proof,
+and retry without a duplicate edit or quantity application passed. Config,
+Auth, custom columns, and read-only inspection bytes were preserved. All five
+instrumented XLAMs compiled; Excel closed unassisted with settings/package pins
+preserved, zero desktop input failures, and zero delayed Excel faults. Controller
+`green-d5c80885c6c84984900e1f463fcb8120` is the local ignored evidence.
+The earlier 20/1 desktop-stop run remains excluded. Broader Inventory,
+live-role, visible-operator and full Release 1 gates keep 4be-A open. Controls
+1.729 and the code audit record this checkpoint; no architecture change.
+
+**2026-11-05 D8-INV-EDIT-02/D8-INV-CONFIG-01 checkpoint:** the focused
+worksheet CREATE quantity phase is GREEN across five isolated actual Upload
+and headless-completion runs on packaged candidate
+`validation-inventory-config-03`: the same 140 named checks as qualified RED
+now pass, including all 9 prior failures. The saved-catalog/unconfirmed-quantity
+notice now reaches the operator row through an exact Core receipt check.
+Retained shared, automation and packed Config formatting passes 123/123 across
+RECEIVE, SHIP and PRODUCTION; its original empty-sheet AutoFit measurement was
+a test defect and is excluded. The missing-default Config matrix passed 54/54
+through the four packaged Add/Edit handlers, with only the missing default
+saved and unknown columns/presentation preserved. All seven qualifying runs compiled five packaged
+XLAMs, closed Excel without assistance, restored settings, preserved package
+hashes, and had zero delayed Excel faults. The combined QuantityPhase attempt
+needed assisted teardown and is excluded. Broader Inventory regressions,
+live-role/visible operator
+evidence, the full Release 1 chain and 4be-A acceptance remain open. Controls
+1.728 and the code Inventory audit record this checkpoint. No new contract or
+approval is needed.
+
+**2026-11-05 retained-receipt interruption:** the disposable seeded Inventory
+workbook remained open and dirty, so Core correctly refused the initial
+test fixture capture. The test now saves and closes only that exact owned
+workbook before the receipt cohort. A packaged rerun reached actual Add and
+catalog-only EDIT, printing 20 passes, then stopped at the next boundary when
+the desktop monitor reported one input-desktop mismatch. Its 20/1 result is
+not receipt GREEN; the other three scenarios did not run. Excel closed
+unassisted and settings/package pins were restored. Resume only after an
+unlocked desktop is confirmed. No product contract changed.
+
 **Approved,2026-11-03:** Architecture D8-INV-EDIT-02 resolves
 the worksheet catalog-only completion routing conflict. D8-INV-CONFIG-01 includes
 that path, but Core's durable EDIT planner previously required an existing entity;

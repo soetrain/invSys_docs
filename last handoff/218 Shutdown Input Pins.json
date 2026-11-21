@@ -1,0 +1,2683 @@
+﻿{
+    "Purpose":  "One sequential Excel shutdown diagnostic pair; no release qualification",
+    "DiagnosticCommit":  "62b3da4dbf7e39e0cf626e44f8949f1952a7b03b",
+    "WorkerCommit":  "44557070b2f1c3d7d744e1f8040315a837933a8f",
+    "MainCommit":  "6d247543c557cca92fb6324f484b6ec2087e4527",
+    "Files":  [
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/IsolatedAutomationCleanup.ps1",
+                      "SHA256":  "195DB3A89DED6D43C0113AFD2B48A057B026C106D95A6AA5D4592769655346C3"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/New-Slice4beChainTrace.ps1",
+                      "SHA256":  "27D738FD63009D5FE270E61851FFD10B67C35A703F76EB3D3038B5C7B7A6E3E0"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/PackagedInventorySmokeFixture.ps1",
+                      "SHA256":  "5759CFE846AAB39F7E70586E6C6B6ECB72B83927DE9FCDF8AA9E2A6D4B3A4C55"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/ProductionBatchBoundaryTrace.ps1",
+                      "SHA256":  "FCF65BE642D86B63A1FF861EB8C854819757ADEA3E93DC1B75E1F786E6821761"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/ProductionPaletteProbe.ps1",
+                      "SHA256":  "9567410454D96E37E26A94D45BBEDA9B042E153BCFF9F067B0A8E5784B6F068D"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/ProductionQuietBoundaryProbe.ps1",
+                      "SHA256":  "BC7670B03BD28969B0969FA5AD6C180395C7AB78C799A38417EA5C0831D4544A"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/ProductionRestartTrace.ps1",
+                      "SHA256":  "84163793C01FC9A4C503D0681968ED7F7C1856E92FF95FAD9C4442D884A7CB02"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/ProductionReusableCleanup.ps1",
+                      "SHA256":  "40958A28AB333894EB0417DEB8E95BE4C916195992400FB91B61D99597D78CC7"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/ProjectionBoundaryTrace.ps1",
+                      "SHA256":  "49D9B8C16C5911902C33C277D093719DE583BFF4693FA6DBA76701F4328C291A"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Read-Slice4beGuideViewTrace.ps1",
+                      "SHA256":  "DC7EE749D4E8F751044FAF97057D560AA820AE69B31D5DCE040FB12AB33ABC53"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beActionPathPreference.ps1",
+                      "SHA256":  "B9251F96309536778EEAFE406322E3B5E03E7772CBAF6D913A1B577868B3348F"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beActionRecording.ps1",
+                      "SHA256":  "E1EB5204A9D8B35BCA6FB2F937D058008D18C376AABD2D52F729CAE9064CCF8B"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beActivityAssertions.ps1",
+                      "SHA256":  "DDCA1A5E93E310AA93772A8F3386CBA4301A86D069FE9DDB6AACD6F14BF7F021"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beActivityFoundation.ps1",
+                      "SHA256":  "B37AEF85DF6B864AE1C8B7B75C52D2BFFAF7BFF82B519D6A182F5DA962A5AA23"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminAggregation.ps1",
+                      "SHA256":  "26109C55C85CF2BACA62A77E35854908CABE237B84FF09C811EDBF60B9ABEDAF"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminAggregationBoundaries.ps1",
+                      "SHA256":  "9F61B464C9305B7555194480CD1AD702C632E2D8CF43A8341E7EBA2CC4BDC276"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminAggregationCompletion.ps1",
+                      "SHA256":  "58E876C0E359A63644E67C190E35164B475176C213C71AF4145059D15392BF2F"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminAggregationFeedReopen.ps1",
+                      "SHA256":  "44388F9EDB29059E70DA3EC6846CFF3FF8B2592111A84B4191B8140F3CD5EBCF"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminAggregationGuide.ps1",
+                      "SHA256":  "9E050FDD2755E4CE3A1865EC59D95544976EC79DE1518D4B9EB85D482F26132A"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminAggregationIntegrity.ps1",
+                      "SHA256":  "DC40CCB3747BDE5113BD78B9E029A6BFFBCEFE2A7BC65A6C9602E1932AE823DD"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminAggregationOutcomes.ps1",
+                      "SHA256":  "1118DC9D6CC526E98489C8CB2AAD5DE9D9B7661E0E5C7804747FEAF79096E441"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminAggregationRecording.ps1",
+                      "SHA256":  "2E6F0AEBF8EECACD14C27CE11B419E812B2B69C6C8BEAB9331AF05CAE28A7D92"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminAggregationRestart.ps1",
+                      "SHA256":  "663F096BE8E8CCB890A034121C9321282A00FB34C81F847C4D6D65E0C624FDAF"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminAggregationYields.ps1",
+                      "SHA256":  "8288D5D7BCB8837370C82A5BB9FFFE37B18547C51076B547383895D0F5F8C609"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminAuthRefresh.ps1",
+                      "SHA256":  "293E04D55E1E9DF5FA4DA57433A254CAD15599316E0959F53BDEFB754FC7BDCA"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminAuthWriteDiagnostic.ps1",
+                      "SHA256":  "11034D40DC3C3BBF72520758758E00C5B65B7377FD2D4DD5BF07B3E4C5B9E184"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminCloseActivity.ps1",
+                      "SHA256":  "F6E20E8792215A8504E7A4F4A33C3DC5F622EA1B91D91037449EB6DE0B855A5D"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminCloseRecorded.ps1",
+                      "SHA256":  "0D903D8D1814ED74366B7C266806C589F0E7BCA04073F24BBD6CB65130456AAC"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminConsole.ps1",
+                      "SHA256":  "F3C3180376528A9D029E92A46BAE50877403FDE884F15B92DB977B2C98BADDF6"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminConsoleBoundaries.ps1",
+                      "SHA256":  "B91CFDF545931558F4A15C682FCFB41DD3BC1A8B52E97B8731B6880BA143BB27"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminConsoleGuide.ps1",
+                      "SHA256":  "372B9BCBB97A0096664768D783DE95949BDE7808E43BE042F855CC4980CDF2A1"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminCreateAuthority.ps1",
+                      "SHA256":  "FF659BA69D90561243646A10FF2E04B238E2DE35E885C80B21607E70179A4520"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminCreateBoundaries.ps1",
+                      "SHA256":  "52B196C6F593EE1218E5A4AD6BE48D9C1EA3EA5ACFA0492CB865B460CFB525B4"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminCreateEdges.ps1",
+                      "SHA256":  "13FD154F232A290B8C1316862F9D007FD099FC4BAB7C70F06D92DF7D8C1C2E8F"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminCreateGuide.ps1",
+                      "SHA256":  "E6F2006C6D820712B8539B0B738ECB06E8D61C459C6162D2B88D0CE1A423F8DA"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminCreateRecording.ps1",
+                      "SHA256":  "D250E8B0DD3CBC9D181302D321A9F1765F0B642690054B9B5287AD268CFD3DAA"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminCreateWarehouseOwner.ps1",
+                      "SHA256":  "A4B773BCB8829B579736666A577C9CAC977C5C755B5474A44D00EE41E6F248AC"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminDirectoryBoundaries.ps1",
+                      "SHA256":  "EFE22D3E57D574DCD630F4BFB5477158B0BDF73906D62675F8866CD8FEC33506"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminDirectoryColumns.ps1",
+                      "SHA256":  "716A6B9D465957853942307684DE624A1DC2D6900DA57F237B2B0B555746EB09"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminDirectoryGuide.ps1",
+                      "SHA256":  "4F44C59B2F558EED9510D6F815B454B965C7CEB425A2D26F9C71244FB4B032CE"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminDirectoryRecording.ps1",
+                      "SHA256":  "3BC07B64EFB128C555243E564857B7B5CCBADEE77E43EE0F4D1056B25B1716DC"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminInventoryEntry.ps1",
+                      "SHA256":  "26EA93165D90EFEEFB18A0771EB1639D692EC297802928AB8FA7C8703A45C78F"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminNavigationRecorded.ps1",
+                      "SHA256":  "B9E7F0A2D0D8F8513DC2713E77248D06C9CBCEE93461154678DAB4918024B857"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminReconcileAppliedGuide.ps1",
+                      "SHA256":  "AFF577CF9995110311691E44ABAB24AEE0DBB4A3FEC71BF555509835D06224A9"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminReconcileAuthority.ps1",
+                      "SHA256":  "11D3B08D33FAA068CDB5D9B09C42469AB90348D555CB5550D07260F9981C46AC"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminReconcileConfirmation.ps1",
+                      "SHA256":  "E80880AA96BEE072473380BF4388F236D6BA38D51A2F07154BCFCF23479911F6"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminReconcileFont.ps1",
+                      "SHA256":  "3FBB8317CE1FAC26ADAEF950344AC3C5AEA0A71B8FD03BA318EB583573D7ECF5"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminReconcileGuide.ps1",
+                      "SHA256":  "12D64392E07B7901917A34E36EFCB3E8666294D3A7ED289D4EC476CBAB8EC6CD"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminReconcileHistory.ps1",
+                      "SHA256":  "CA09C0E4CF37AB4D143BB918DDD78A9840491DE991590401C1FAC7E3AAD6C6D0"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminReconcileIdentity.ps1",
+                      "SHA256":  "F00448A29345E5E98D91E56E5C79014F7050EC8EAA34DA361A92E324F2550A53"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminReconcileLocalDiagnostic.ps1",
+                      "SHA256":  "3DA7FA111464DA7F077E15F020FDCFF1B64ADF8EABFED2E3CDCDDDE0D0593804"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminReconcileNative.ps1",
+                      "SHA256":  "0E5708D3BA7E573EF520872D3A0BC276E382CDABA0858823FC13B54C3BB4E2E5"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminReconcileRecording.ps1",
+                      "SHA256":  "968A43110BF2CB1960068E2E3A60E0B36C50380C9369C22684EB7B93E9261255"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminReconcileSelection.ps1",
+                      "SHA256":  "67029C370F182EE09A431883848D29DCE78E5F8B951284D8F9B181A77DA3646D"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminRootBoundaries.ps1",
+                      "SHA256":  "8A32CFC7D54B7CE47A971224D562128110FDDB779E829A0C40410FFA5F637325"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminRootFeedbackNative.ps1",
+                      "SHA256":  "C8A4649CF83B21FBC91CBB56A5C19B6D2A133FDEBB9A4722E337FB5EC41EF344"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminRootGuide.ps1",
+                      "SHA256":  "CEF84B608CEE5E4B53B518BE5D435B1E8ABF8F30B198F5B705CE9FE40647E4BD"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminRootRecording.ps1",
+                      "SHA256":  "0B309B085C4E7CBCD73498E114418B3E82B850898C2FBCEBE8AACA73C2B33A1C"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminRootScope.ps1",
+                      "SHA256":  "C4B6CA675A783B0E2686A2A19B53A1EAA4759B00883318EE38EE75A7935F31C1"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminSeedAppliedGuide.ps1",
+                      "SHA256":  "21FF4018374A909F3C5EF140074D02295CFDB96184625937A3CBB56DAC240E7C"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminSeedBoundaries.ps1",
+                      "SHA256":  "09C5CEBD59D47971814256B7731E92C714227B722D09CDD9206F0B5E8D78C376"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminSeedFeedback.ps1",
+                      "SHA256":  "C4392F51F82398A52063611D058806385CB3D520E93E05ED664CD7DCBF097E35"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminSeedGuide.ps1",
+                      "SHA256":  "44D878A6C61C6F9B3137482D1470CE48108F3F89DD049600B7A3B7B7D9F3E643"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminSeedGuideTiming.ps1",
+                      "SHA256":  "C80856835E2A788565E0798459AFD6061849A64F7B3E2654E5731B0447D39CAD"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminSeedOutcome.ps1",
+                      "SHA256":  "B4DFA5EABD5A3151B428722CD34784DE03997E932C251A2C0A22A7E40D98F7B6"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminSeedRecording.ps1",
+                      "SHA256":  "BE192432D19E3816162EF676B2384BA5C7551203893651310C86E2D2C06DAA8E"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminSeedWorkflow.ps1",
+                      "SHA256":  "5541A1F9223BE80EF6212BD7B9D8434DF0FBD7179CE08378E3253B3917EDC459"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminSettingsClose.ps1",
+                      "SHA256":  "A1BF65477AEBF54B9DF318A52DBE81EED77B510BD32A181EA1BEEA7B17F8085B"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminSettingsEntry.ps1",
+                      "SHA256":  "105BD44F5B92F01A2A9D99199B9512E7765C146929DDC8B23FDD4319BF9F8DFC"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminSettingsEntryFailures.ps1",
+                      "SHA256":  "43973D2272F9E19496351D1D0B033A077CF6E98D737C364767980E69CF8CE49E"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminSettingsEntryRefusals.ps1",
+                      "SHA256":  "21499159AAFD072F28DCBBF19B7AE5B62A25369D140435553131CB17531896A7"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminSettingsNavigation.ps1",
+                      "SHA256":  "52379133C0F1DFC66BB459330952CE90AFF882F838A5E0BB458E372304257F09"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminSettingsNavigationFailures.ps1",
+                      "SHA256":  "0D322638FD0200579AF4687F89533CF130ECEB7A0DDBBA03673E6AB47105C7B2"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminTesterBoundaries.ps1",
+                      "SHA256":  "26ABB18CFE5DF18AE9C78E7BF36273ECE441EACB8040614BEB2B1D52B0D21359"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminTesterGuide.ps1",
+                      "SHA256":  "A313B9E8F4B6D97A0DB59DBF9DF238E48583A4D8AACA061716CE090B58A70D89"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminTesterOwnershipPaths.ps1",
+                      "SHA256":  "E733055D7C4D89AA3E64BA8F7409460A4ED1407BC7F753D82364C120F9E6AD16"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminTesterRecording.ps1",
+                      "SHA256":  "14034136D9A6E78DC243DEAF65F04DCA155228B4C2633C9B0FD8C5C9BE429FAB"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminTesterSetupOwner.ps1",
+                      "SHA256":  "E58398451F3923200B1F68F43D6C98F63BC12DD770DC6BDDA2928B9DE4BA714B"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminUomActivity.ps1",
+                      "SHA256":  "627B97CA8FBF956CD6D26348CCE9F42DF5319EFB94CAFA7FD4CE0461780A45AF"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminUomExpectation.ps1",
+                      "SHA256":  "7ADE4C87427F2FDA4774F9E56FF8D99495831A151FEBD018832922A57AD443A4"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminUomProbe.ps1",
+                      "SHA256":  "86FC579E8A55A34BA36F0284D6089D3D1175B56F0EB0D1A361091630696C601B"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminUomTracking.ps1",
+                      "SHA256":  "F0688B60034DCAF086E217891175CE31B6B96DBBC959EF83D6ED7C533AF51F36"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminUsersAuthority.ps1",
+                      "SHA256":  "E50B5D66D6D563FDF7CE9D531035A9149C4EEDAD111A356EFF25754F01AF0972"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminUsersGuide.ps1",
+                      "SHA256":  "65AE8DA395912BB3B855351D94C2ECDD80766C814534A8695DDA24D3F6DDABD0"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminUsersRecording.ps1",
+                      "SHA256":  "0B891BDAE47FE9958E609661CE2F9A3F59179F09285BB424165FF742D92F137A"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminUsersRecordingContext.ps1",
+                      "SHA256":  "0E5BE82D31A34673BFFAA51444237A63D03DA4571658FE1132D43AFBB7DFB78F"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminUsersRecordingStorage.ps1",
+                      "SHA256":  "96AB5750DD022C42AE41DB07E4541DFD136D281DE9EC067DCAF7D936A73EF970"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminVerifyAddins.ps1",
+                      "SHA256":  "EE0EA61393DE41F5C04311196DCF32FFA93C5DFD5984F3AAE0C2E79FBB57B612"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminVerifyBoundaries.ps1",
+                      "SHA256":  "ABF9C9634BF82B824BCF4BCEBDCD6EAF37D54D54472121BC5B2162BF174CE719"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminVerifyGuide.ps1",
+                      "SHA256":  "31A912AF00E73D3346D22B1021237D45E67A1471691366E51DFD822D79C199F8"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAdminWarehouseRootWrite.ps1",
+                      "SHA256":  "69EB3F2173B16618B5612EF4BD78BD532DF4F9F286136AC15038C737EACB830E"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beAuthReadOnly.ps1",
+                      "SHA256":  "96D633235E869ABC224A04E923331974963C98AD5E03FCACF7FC14CF3FB7D9D7"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beBootstrapTrace.ps1",
+                      "SHA256":  "8B4B85E17D89F8910314B9DEFB5E4576F0945AD07DCE6BDFD8680FFB4A799E43"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beBoxingActivity.ps1",
+                      "SHA256":  "2BE5BA1FBF739366830580CAAD9D5CDE1AAAFC518ACB7A794E467CB71760D57E"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beBoxingContext.ps1",
+                      "SHA256":  "7391807E540B2469C1507CAF9993165CF92C31AB8B85B0212CA35543F86A7793"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beBoxingOutcomes.ps1",
+                      "SHA256":  "D55607E148764478AAB72172B668F96C0589EB66BC571E0C07B2583E2077A9C8"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beBoxingPublishedRead.ps1",
+                      "SHA256":  "4B83C13CDCE5E89A169666E997742B89997B76F343BED2FBCB7613B18208C2A8"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beBoxingTracking.ps1",
+                      "SHA256":  "BAFBA4AA2969AC3D21F0F74680E4F085BB2EA0FCA2010BC426C931EA529B8F4C"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beDesignsPublicationSource.ps1",
+                      "SHA256":  "27A258B0930FFEF5894481DAE10E204BF256798011DBBD1DAE6DD4C129A9B790"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beDesignsSourceEvidence.ps1",
+                      "SHA256":  "8961A9D8D84101C77B607C70F854D7116834A1C2A54DB02EE693EAF9614FFD14"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beDetailColumns.ps1",
+                      "SHA256":  "5B1E403D5AC3241AEA1810DC3D9E98201EF65A14FB7BA1A7041A95AB24BBE526"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beDetailGlyphEvidence.ps1",
+                      "SHA256":  "0D6563AADA823A2A70F14CE5D107AE8FC3C01A9FA33020B67514F2B4F319481B"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beDetailMultiline.ps1",
+                      "SHA256":  "5EDD121765CF6CE66E68A2C8BF2398C17EA55CCDDA416B284C293235A0BA995C"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beDetailProfile.ps1",
+                      "SHA256":  "102B8336639D02C436DFEF2F4FA9962A1FEA64C1B3D00361F542520D4C885618"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beDetailScrollEvidence.ps1",
+                      "SHA256":  "83C979E5B407938A2ED747105C03D4A6DD9B6388F203112B5A5E0FDE93EE987E"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beEvaluationBinding.ps1",
+                      "SHA256":  "78494B2A1962254FAC45D2C85F70C87A74117D2613410E5810499E663B0C1993"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beEvaluationContracts.ps1",
+                      "SHA256":  "7AAB9B909F4E7C939EE82393EBB885621B5838A7B4DB51A5C6D9825C50850071"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beEvaluationEvidence.ps1",
+                      "SHA256":  "DF8C8CF80B3367E14A19AE80944A2B2D95DD0021A447D156618F94E240BD6105"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beEvaluationIntegrity.ps1",
+                      "SHA256":  "6450552491A5A9A01788E59F6BC8B073565C894F14A31E9D25566B01C4A26B6F"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beEvaluationNativeTrace.ps1",
+                      "SHA256":  "9DFE9A37754571DF6CF40261789B849A4AF61FAAC489EBB00E620A3BB6149445"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beEvaluationVisualEvidence.ps1",
+                      "SHA256":  "5B1B06A2D4A36538F17E16AAD962EA1A3B9AE85115515591D04D4665C37655D2"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beExecutionDiagnostics.ps1",
+                      "SHA256":  "D3AE1A751C911EE6E8052B08BA7BCA8A6F9B9412BB47A36E78BE2994DF790E67"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beExecutionProfile.ps1",
+                      "SHA256":  "4E6E29190899C6C08A4C7BD1D0ED8B61C7C16369591BDF6A790291BFB592303C"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beExecutionProfileSafety.ps1",
+                      "SHA256":  "F28A8B2D36B01B02252C011BE0F5FF3F59496AAF8E0704FF4DB326119D677816"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beExpectationCompatibility.ps1",
+                      "SHA256":  "777A58AE900DDE5D06FB768A6639A0BB75C598CDE29E35FC517377FF4C908AB8"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGeneralSettings.ps1",
+                      "SHA256":  "5C9D0C77AB47C0B1D3D2381D443D8A85E1003B36C4D1BAE53B0059FD05CB59F2"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGeneralSettingsGuidePaths.ps1",
+                      "SHA256":  "4DE0F9D5FEF7A395F0CCAB695C95D5E346951A4140913C4BD740087F5D6C3D1B"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGeneralSettingsPolicy.ps1",
+                      "SHA256":  "79C8CB870E1DCB59E0BB97B632862B1D3687C412218EC052712F90714974F9B0"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGeneralSettingsProbe.ps1",
+                      "SHA256":  "F38D658164FC2F18460E2FB9B2E58A561E8E94D25D6C98459159C7333CD3F274"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGeneralSettingsRecorded.ps1",
+                      "SHA256":  "7FA361BC5471DF458C365D50D2893EFBB5E47BAC23A66708FAC3C47DAC5203E3"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGuideActionCuration.ps1",
+                      "SHA256":  "1A90C6BA0C627AE4988306E726CA11150B1C3ABFC40965D818B2E2849F3806EF"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGuideDraft.ps1",
+                      "SHA256":  "202B623B27D99932E6AFC002CB0E3BF017DEF240DF1C5CFA7CD8F3DA3351B6D6"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGuideEvaluation.ps1",
+                      "SHA256":  "4BC1867FAA0584EC73ABBCE86A2AF24D0C52EC142821051C9A2D79D845F23ED0"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGuideExpectation.ps1",
+                      "SHA256":  "D064A5EC5D18F9E773B989B77FBF9776BAC63875C06AD91EDB9682B09B8578C6"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGuideLibrary.ps1",
+                      "SHA256":  "F40E607731FBD47DA3AEA05DE52CA9B12758487A621815BFFF13A09AA976D982"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGuidePresentation.ps1",
+                      "SHA256":  "3CEAC5B0FB1B5B0E5F1519C63D182FE83250DAF48EAAF09FB02B043D439611DF"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGuidePresentationAvailability.ps1",
+                      "SHA256":  "46C0F8EDAF74A82BE4F93F73453802DAFF4547132C52525D4B68CA790ECA382D"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGuidePresentationRestart.ps1",
+                      "SHA256":  "F754781E6BEBED0AA07E9D6C34813EA8A35312D0C7D833D97B5986D021F4EB2C"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGuidePresentationScenarios.ps1",
+                      "SHA256":  "7E51E4534E82D7C3C7C7EC8F2BFC84236F38959C2565DC20800F271C4C272DD6"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGuideResourceTrace.ps1",
+                      "SHA256":  "8159475F7BFBABE9BF780B2297A7333675AFF7A740D121142F65CEC6FDA79E4B"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGuideRestartFixture.ps1",
+                      "SHA256":  "03F17759FA4B891CF2CCA13933487DD5A4250818FCBFDCE9DBE07C6D0D54DC92"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGuideSave.ps1",
+                      "SHA256":  "46673DEC66BB3B291B6E1C975E5AE0F6E83CC596E42609A52C0D023D95DF855C"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGuideTestActions.ps1",
+                      "SHA256":  "DB7937E0F4C103A4CE837C359F64CB0DCF31D70BDBCCCC0323F4B5E8150BD0B4"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGuideTransfer.ps1",
+                      "SHA256":  "0FC528D42B608E08A14BA72019A8F05655C16AC91EC7279E70EF63071A3AE447"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGuideTransferActivity.ps1",
+                      "SHA256":  "DA2CF05849F3D0B607E1D1279F72C4080EC3CE3D2B173B87131A0A446C81CAAF"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGuideTransferGuards.ps1",
+                      "SHA256":  "F6AE753ED25B33B96DEDF5B7CDF6C816E8F70213BA7999760D1A061E30FFFC48"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGuideTransferPaths.ps1",
+                      "SHA256":  "2C9405CFBF5D36E08A11E3BBA79B620BDD8EA245F30B6B2305ABD5967E15D44A"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGuideTransferPermissions.ps1",
+                      "SHA256":  "317E85454EB00AC8ECBB80841693B191ABC2B7A140DBDBAC5CD56AFA69BE48C2"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGuideTransferPolicy.ps1",
+                      "SHA256":  "B59D2C5426B3053AC8F4A12BBCDDAD9CAFBBF5CDE4C1ED6926BDB85B3177699E"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGuideTransferRecorded.ps1",
+                      "SHA256":  "E656458E94E1BBB20BF024E3D7570CA382D6F38058BF478EF83DD4C0FD2AD5FD"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGuideTransferRecordedProbe.ps1",
+                      "SHA256":  "D600E73376B8D889C7BCC84033116FF1F68C70CACDDDDEC2A46610C9D14A0890"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGuideTransferRoundTrip.ps1",
+                      "SHA256":  "33540A5FBFF94D16587A6D2953AB359986E76C41830D3A9CAB28D605272CD239"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGuideTransferWire.ps1",
+                      "SHA256":  "C50A618FB7DD42C698EBA64CDBFE120E8D31EDAE60A83EF822B67C4F0DEA7DE9"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beGuideViewTrace.ps1",
+                      "SHA256":  "D59329BDEA99F13E90D77B37EBEEF69C0F15A2F7896AB94824429D1920F84FE0"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryAddResults.ps1",
+                      "SHA256":  "229835F6AD51E95BE448952CFCE1B6BA0D78D256D4C34C84565D2421F7A72626"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryCallTiming.ps1",
+                      "SHA256":  "D3D521F3DD8B7965BC019900F089B63836B32D02967604179C38C3036FCB49AD"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryCatalogCompletion.ps1",
+                      "SHA256":  "58459067AA7B69AC34556AD8E7073C24EB64537D026E2836A0B759EE805E153C"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryCatalogPhase.ps1",
+                      "SHA256":  "EDFFBC6543855EAC15A9DDD3F9321729A3EB27616523A7371E204C8CEFF0F7D7"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryCatalogReal.ps1",
+                      "SHA256":  "156F88E1E1115B31994462ABC0ED07E0847E7D75F1FF0D44CA9923A9AA9679B7"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryCommandBoundaries.ps1",
+                      "SHA256":  "EC1985EB4EAA1174E139BCB7A3E98740FEFE6BCB6594D7F41A05BB3A6B3491F3"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryConfigMetadata.ps1",
+                      "SHA256":  "3F5FF8F65AF95BF12E2A3F62130F17967570E6DBA71AB2867399F24508DE6B92"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryConfigPreservation.ps1",
+                      "SHA256":  "ADD84A5A166B4A9012F44A36621DCF12EC989A7A786C00078D3ABD28A0A58F9B"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryConfigRetained.ps1",
+                      "SHA256":  "D3D00758E5C37D166AF7C71F1351A1DA0B61ACAE7DB82DA581F095F8FACBF4BA"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryCreatePhases.ps1",
+                      "SHA256":  "45947F09A8451A0B195993E0411DB9ADD02083E770F5E87069F9149BA969C152"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryDeleteResults.ps1",
+                      "SHA256":  "64279B2EBD4155A1533B2D89D1017D150EE1276E2E3F0AEDF6BEE8B23E571EC5"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryEditBindings.ps1",
+                      "SHA256":  "76D7A0A00068703CCE03C1C0A9C3DFD52918A21DD2CE2F628F3B30181AA3C6BC"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryEditCanonicalSave.ps1",
+                      "SHA256":  "56D8CC717E6579A8BFCE5977FECD9874C7641CDF61286B89BAF8D774276D4E73"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryEditCreation.ps1",
+                      "SHA256":  "C67141E46C1F427583A1BD1ACE788CB157DFC7EDEAC0DC0CF689CD58A774885E"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryEditOwnership.ps1",
+                      "SHA256":  "F5276B79D4AC4A602963262E7F48227886851EA18D836D2E81340B3156538CB6"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryEditPrivacy.ps1",
+                      "SHA256":  "730C9FD0BDBE85AF44887219976422D721481D0362E8D295B8B06F1164C073B2"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryEditReceipts.ps1",
+                      "SHA256":  "FFFE6B73A3102ADE3A0DC7297B8065381E7ECEED959E19DCB33DC9B3C21110CF"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryGuide.ps1",
+                      "SHA256":  "EB81A925112419CC25E225B0B7FBFBB0973B50D880D034B80BE4481C52007E85"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryHeadlessWorksheet.ps1",
+                      "SHA256":  "1E39B437F47BBC25DB815B17BC6A2A278D7F2634130912B611695DA554EA66D4"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryImportedRows.ps1",
+                      "SHA256":  "F014D7CDEA6F3A8BFB46A0A0C901A90B6D77DCC247FB30E0C61ED030413B2769"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryOwnResults.ps1",
+                      "SHA256":  "E5BCAA2168514FDF168C0B7BBB9F6EBD02414E5658E203449D70D73BAA80AE2D"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryPrimitivePayload.ps1",
+                      "SHA256":  "1D75FEA4F11B39884950F9291D19069DB5F0712D2DADE3B8B11D488380FD9738"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryQueryReadOnly.ps1",
+                      "SHA256":  "33D01890A5704B2A54D6F2E1785B8AB9F837C83E9C9C26E2849973BCFA7DFA71"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryReadOnlyOperators.ps1",
+                      "SHA256":  "652D0F3E250EC971CF2C21C62DB62C6B2C168AFAA9785E254963B491CB1646B0"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryReceiptScenarios.ps1",
+                      "SHA256":  "9A5D350C3DC34C63EB5E0049684FEBB528D5A1C945FC8D7685653A02CC106D84"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryRecording.ps1",
+                      "SHA256":  "24D053F8B69F21DE3BB982CB516D67BED39B356F226D5FD6712D3FCBA4853D9D"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryRecordingBoundaries.ps1",
+                      "SHA256":  "ABE2ADCA98FF2AF55C7C47D60274C19CD25CB29B9E2654FA8E3C2AA2DF89C216"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventorySelections.ps1",
+                      "SHA256":  "54AE307A91BBAA7763F075BB82078623832F0E9A5BF7B6A10B513E033FB110E4"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventorySourceOverlay.ps1",
+                      "SHA256":  "22017D42EC0878C518F3A787C0ADB9A8811A0F8BAB403D9DA4692ADD62A5A65A"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryUomRecording.ps1",
+                      "SHA256":  "1C01CC4A0753EA39929CFD8C18F49F8A5BE58DDB2554A0E1C828A06072021A3D"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryWorksheetRecording.ps1",
+                      "SHA256":  "244EB99841EB86DBCF503A9D78341618F1B409ABF8A8F9469FBA5AD492E1A96C"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beInventoryWorksheetResults.ps1",
+                      "SHA256":  "749FC618E07336A9DEF78EC934EF7B62D1F7EE96BED7EFA1F62D91B9CF1EB17F"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beNativeGuideResize.ps1",
+                      "SHA256":  "43FAB2892FFB984C624679BBFE5141FBF4408B08171DE82FD3B673A412BCDF9E"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beOperationsGuidePresentation.ps1",
+                      "SHA256":  "4E50678D0565F07FCAAB9A286A2AC8EDDFDD564B7129C13EE160FA1C9167AA8C"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beOperationsTrackingSettings.ps1",
+                      "SHA256":  "7FDEC03E9829CD61412E6680FC7428B74CF81F769B6D27E6222E382381322E35"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beOwnerCommandCompletion.ps1",
+                      "SHA256":  "DBDDA1154CF984EF568F7D7E192598329DE3AFE33F24848B88A0AAFAB8C8D504"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4bePreferenceSavePins.ps1",
+                      "SHA256":  "D91EAA1DD5C7BFEB13F6D5082E3CEEA62F5FFC3566DEEA8EE7CB0CB0FEC1D0E0"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProbePackages.ps1",
+                      "SHA256":  "2F7519A70E070A66929B50ADC757A0B99AAE50928E4E1563F611B57F66ACF2CE"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProcessWorksheetActivity.ps1",
+                      "SHA256":  "FDAA633A03D117E952B62ED96684082E4315AEB01EB3875078EBCCECCC745E08"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProcessWorksheetHeaders.ps1",
+                      "SHA256":  "A9BA72680D203D2649270E5890D2633BD4267415BB65222D00A4342EDADDB2B5"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProcessWorksheetPaths.ps1",
+                      "SHA256":  "7E407C4BC16B1453AA29DBCD63098E6C00BC269BBA1D3150CA11B98B28DFF5C6"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProcessWorksheetPicker.ps1",
+                      "SHA256":  "026BD0FC81C80C3C33777F2C679DA0AC4ACF6DEBE5816F2B57C23573E6D2E2B0"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionAssignmentActivity.ps1",
+                      "SHA256":  "F507943DE7EE8365A79EE1ADA06EDFDEF6C5BC935D342FBCAC5C2B48EFEF1857"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionAssignmentPaths.ps1",
+                      "SHA256":  "477A19F4BC066F1D8E1637BDD118A030C526C4E4ED7EE70CEE7260E18AAD3599"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionAssignmentPolicy.ps1",
+                      "SHA256":  "F04DBA6141E89117A654C9CF0D0D9577DC1D1749C2D74BCBF26B64B011AE5F2C"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionAssignmentProbe.ps1",
+                      "SHA256":  "50B4BF18EACA944A48506A4932DFA66A3204D327EBE65768AB2275D97BAC6D6D"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionAssignmentSafety.ps1",
+                      "SHA256":  "01F551ACCBDFBE13C96DF1846C4BAD59B98E41A4AC7D492849D4AA7831B6C914"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionAssignmentYield.ps1",
+                      "SHA256":  "44BFCD90DBF8AE885F41EDC86790976C5375C980E21A96D589734379B2D7D7B0"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionCheckInActivity.ps1",
+                      "SHA256":  "96C7150D884FA23B5679314BABF2755A8F875FB196A685340BAC767EE24A58C2"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionCheckInBaseline.ps1",
+                      "SHA256":  "55FAE90256350121561FCFD7E94C04BEA274A443EA54B2D1920D5473489AF8E8"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionCheckInClosed.ps1",
+                      "SHA256":  "DF34E4D4F8A2A6718EA08E2E492C052E88E333318E6BDDE313D988968B249065"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionCheckInClosedYield.ps1",
+                      "SHA256":  "5770021FDCF0BB280C9D53165282C7A6D5332379D4FD53CB42D087EC6DC479FA"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionCheckInPolicy.ps1",
+                      "SHA256":  "DF4BFA0A4B08211FCBD0E19E847799DF997A1F59BCBDDC4FD130CA8B6EFD5D1D"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionCheckInRouted.ps1",
+                      "SHA256":  "E095585F43C3F8CD0C2C16332C0081DCCD52B609CA6BC4FDE6DD3B2B5DC807E9"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionCheckInTerminal.ps1",
+                      "SHA256":  "EA0536FBCE0D08C0D464FC32A6C370B338F13715C585E242DF1E79ABC1A3568E"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionCheckInYield.ps1",
+                      "SHA256":  "40B5CB0F97FB4FE9CFF71646090359CF0ACC0ABB5AC7C6EA30B79E08CC9B0ADE"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionCloseActivity.ps1",
+                      "SHA256":  "1878182E04C4DF0724C4CDE40068F6FBBB09E8CFF553CBC157F9C156DD6ED89E"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionCloseProbe.ps1",
+                      "SHA256":  "55E899F499F704215C64959B217431F9989ACDE6F67F60CD990BFA7BF39E646B"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionCompleteActivity.ps1",
+                      "SHA256":  "55E6385FFA98955DAEA3617F82E9BEB79C4C0C52CE63BD9B5EFF7D09E9A1AF28"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionCompleteBaseline.ps1",
+                      "SHA256":  "D58BA002650F82AB345F9ABC95BC1A988AA6C1685CBFF6AEA7EA3D44D839EA60"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionCompleteClosed.ps1",
+                      "SHA256":  "974CA1A0EB4C1C2EF16EF0747347036C18EA718786230DC70C2273DDF71CC57C"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionCompleteClosureTrace.ps1",
+                      "SHA256":  "88BCB7B9C24AFC3897E07E57C1D40B5770DFF4AFAA10EEC0A5E4B8848EC5686A"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionCompleteEntry.ps1",
+                      "SHA256":  "A63E14EF5C9EF9F98B05D4E7EF47E45DA025B8DFD9812600C046A60FAC798C16"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionCompleteInterruptions.ps1",
+                      "SHA256":  "7DBEAF63C7D33A1C653705E3AAA7CE79FD5C8721FF73C8CCBFCB6F776E144A6A"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionCompletePaths.ps1",
+                      "SHA256":  "4754CDAE360700907C2B4A148F9F2BE4CBD29CAAFE61FB2EFF8A51B19F5A62C6"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionCompletePolicy.ps1",
+                      "SHA256":  "9BD4B35BBFD8B23AD411A8ECF6773B8659D13DBD0C14855E8BB117AEF0736E7C"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionCompletePreparation.ps1",
+                      "SHA256":  "F9010BCABD7DAF852DEEEB03E7F4D70116ACD392AB6E598A7C23320154851764"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionCompleteSubmission.ps1",
+                      "SHA256":  "64DBFB68CDB8C3F0CA4385CD6E0768D6A777B2AD2EC623570EE91CA8DEFB5D7E"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionCompleteSubmissionFault.ps1",
+                      "SHA256":  "05B685802D8E8ABF9F9C18E9A0D025FA22FB21154981865D50F518FC8A98C263"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionCompleteWorksheet.ps1",
+                      "SHA256":  "578C42BE92D7970C8DDF073F28286FB3D6A6C147B77AF1F47CE077B54028A065"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionCompleteWorksheetPermission.ps1",
+                      "SHA256":  "AD9812DBDC733523F930A17383596A3D02E47F8C3EC68DE1722B285172976D46"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionComponentActivity.ps1",
+                      "SHA256":  "4B404039AC5D6C2AF60578925B79133E27CF65AC1DC106CA2076385989C31BCA"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionComponentProbe.ps1",
+                      "SHA256":  "EB6FD15DC471FB8652C8A7DDD3ED5EE22B8D21CF7628A71F85590DA5543ECD61"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionDesignerActivity.ps1",
+                      "SHA256":  "E426EFF2B1146AE4A00BFA42A292000A8EC848A65120934205138C5238128363"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionDesignerProbe.ps1",
+                      "SHA256":  "9D4014C44BF46C7C66C3ACD7A7FA364649AFD4B96569EBB0EECE9B0B1014DCBC"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionDesignReadActivity.ps1",
+                      "SHA256":  "3FF1DB7C3FF9033BEDEAFBA8BB89B4373643DAE7B26E4F3D3EA548745EAB51E5"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionDesignReadPaths.ps1",
+                      "SHA256":  "041E0F59E334182FC8CFD4FD3B6A037ACDA0B6886663812232C8A0B03BBB751C"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionDesignReadProbe.ps1",
+                      "SHA256":  "2F0F2E41F0B0A21CC15D4D4A6E42F5676F4749BBC1E179E9878E6C4EC54742CF"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionDiagnostics.ps1",
+                      "SHA256":  "5F10EDF2D57192E5A09FE795D5AA2DC2116F81990070E442EBF84D731E4A40FA"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionInstructionActivity.ps1",
+                      "SHA256":  "D3E663345A48A485D0BC46DCB32FA203947657B988E51D6CBE908A9BFAE33F35"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionInstructionPaths.ps1",
+                      "SHA256":  "3AF7A942DA59D68E79E05D3C8FCB9AFFB7C688CEC7035B98D9ED11EAF9D64FDE"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionInstructionProbe.ps1",
+                      "SHA256":  "4E5CF0A6F3803A1F2ECA3569AA9887A2B22F736BE9AA6E5C4AC1EDF7A9E4FD99"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionLifecycle.ps1",
+                      "SHA256":  "FFDE148A7507AB44479A578C02A4908E1B34295C2F6A45CBCEBFE39830F98E7A"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionLifecycleDiagnostics.ps1",
+                      "SHA256":  "3A9BFA050D64073041D51707D3C954CD364EB4D92C0545B4B4A8AF8A33CC3AB5"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionLifecycleFailures.ps1",
+                      "SHA256":  "4BEDE8F90CAF3238362213E8EE1AA97C281A158208BC8169E8CF265F75063075"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionLifecycleNative.ps1",
+                      "SHA256":  "D5B760A44D5EE2330876E194AB19BE9848297241584E22E94997C688E05FCF92"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionLifecyclePaths.ps1",
+                      "SHA256":  "C0F7DEE6CA8F73C50A3D20923C4ACB7888834632C6C1826D4F057B0970171FF8"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionLifecyclePresentation.ps1",
+                      "SHA256":  "7DDBC4698B4B7A71DE2E509474F7339C5A9C20B72958F9A5CA5DA07273E78E97"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionLifecycleSafety.ps1",
+                      "SHA256":  "C2A452D1E1F816D2D1A606AE662EE795B6FE69A7E68EAF5714A6303EB6D3E604"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionNativeChoice.ps1",
+                      "SHA256":  "197A3D54F4333BA8844681AB3A34B061A4BDFBD3CE97F62250E6633239482ABF"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionNextActivity.ps1",
+                      "SHA256":  "BB1E50C108F5B57E33FDDEA3F8394C2C02454F1C95074F051A2084E41603D1C1"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionNextBaseline.ps1",
+                      "SHA256":  "FFE6834F12F46435F4092052EDF82F3C5893893ABD31B257FF01AFC1F28F18C5"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionNextClosed.ps1",
+                      "SHA256":  "A6F804B2C820AB56A212AE41C7EF90FBA141961B2117DAA59CE8A4812B625921"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionNextPaths.ps1",
+                      "SHA256":  "9A43E244338D415883C912FF7EEC0DB280736DD4EE87DFC583455FE505B893FC"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionNextPolicy.ps1",
+                      "SHA256":  "AA7CC9EDF731F9E448E8C117CD5CCA0B4D9C5AE5F96DBBD1D53E9CD39EC680E5"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionNextYield.ps1",
+                      "SHA256":  "7A584708E568AE7C850809BD08854D01B1E282EFB1BED6DA63E7FF45EFFF6DB3"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionOutputIdentity.ps1",
+                      "SHA256":  "F4268E5FB98D953D333D9F6FAAFBE5C77A3DF0C8F7A642B5A26AC08DCC4BF703"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionPaths.ps1",
+                      "SHA256":  "C9C195DA1760A905F14718EBF9F766378F5A92C4FC4AD8833DCA9ED2737023BC"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionPathsProbe.ps1",
+                      "SHA256":  "83BC1FED40D5CB515AFDF6641953C0239156B2520AE938A2EC0B31CAA9F49366"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionPrintAccessibility.ps1",
+                      "SHA256":  "5382B6E0DFA468CB070A50C33F80C92BB0A183FA3992E4BB1AD05AB26707E1C4"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionPrintActivity.ps1",
+                      "SHA256":  "AC42D203F4515E918808F76A1F1A5A128E93BE979EA441E882D9077D3597F575"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionPrintBaseline.ps1",
+                      "SHA256":  "2E36826822FC2DFC379D40F3AF1F86C100376EF45622C20188D11622E7E25A11"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionPrintEntry.ps1",
+                      "SHA256":  "120209739DC0DD9868E341D5B78BB2E718543BE60B1E22D611D8E75ADBD22715"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionPrintIdentity.ps1",
+                      "SHA256":  "62D7772CA7247B006E827CC0B3BDA916754C9D3FCE90EA5FCF20B4B82562437D"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionPrintInventory.ps1",
+                      "SHA256":  "F9E94F41008510978EB574A86BE325C6C315A28A68E1FDDBCB5EDC9ABF74439E"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionPrintNative.ps1",
+                      "SHA256":  "68BBEDCB863589B954CCC27B581AC21A1C08658B08E988E43105716EA52ADBC1"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionPrintOutcome.ps1",
+                      "SHA256":  "AB15E45A56910FAA1758010F3E1CC033FD8F154D66262FE29D4CF52DFD6CCA98"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionPrintPaths.ps1",
+                      "SHA256":  "DD562FBDFEE93FF1979FB5BE2B92F63AFC2B25773B6F16E3606A878D9D02D797"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionPrintPolicy.ps1",
+                      "SHA256":  "11D612CF7A141D2B155AAB6171AFD0D72B7646EF2747F665335348C499331345"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionPrintRebuild.ps1",
+                      "SHA256":  "35F14EC4B896778B25079E495874B82A12887223012CDD935079C30A9AFE6F17"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionPrintRecorded.ps1",
+                      "SHA256":  "49420093BE856889503A331961AB5FCB72B42BFE715B9112527AD13EDB477E94"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionPrintSeedBoundary.ps1",
+                      "SHA256":  "568CFD7461220A4687E583CE899EA28FEED5F11963D653D0F078E77952CEF694"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionPrintYield.ps1",
+                      "SHA256":  "BBE51132453FCA372A57279FD11B101ED6B234866627B6C7F3360AF8E234A494"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionRecipeActivity.ps1",
+                      "SHA256":  "7A839C221A0B7E9AF28F1FF535A1DA7B5EC59BF42EE9A1A7A88A15AA68A7E67A"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionRecipeOrderActivity.ps1",
+                      "SHA256":  "2F8C98A5F69FCB8F4BF74BE194A684749476A679BA109D601E6214CFD8559FDD"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionRecipeOrderProbe.ps1",
+                      "SHA256":  "38B3AD3372AC5C1C666523979309F399941D42E368FE2B332B5AD910CD5EE439"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionRecipeStructureActivity.ps1",
+                      "SHA256":  "F435559629458BF4F96FDF891C0C7CAC928D3332EB579D013B91017450126116"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionRecipeStructurePaths.ps1",
+                      "SHA256":  "6A2E3A32C0DA5FB1422BAFD672CD6AA570FBC274FE094C7E2AF4CF0B5CE1A4B7"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionRecipeStructureProbe.ps1",
+                      "SHA256":  "873BDC71801FF85EB52B396BB515925F681EA050D4E98809F6B1BA1A62AADBDD"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionRecipeStructureReleased.ps1",
+                      "SHA256":  "1B8E702D08ED8233B242FE6B095ACED8CC1F9700E1CB1D5B391BCC421485B8F2"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionRegulationActivity.ps1",
+                      "SHA256":  "CA0141BEF971B8B50C164050B05B9072A45DEB8989D7291FA789382F6669D466"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionRegulationPaths.ps1",
+                      "SHA256":  "A11FE722C561543C45C11D58C39A31062D61FF0526D265ED3E6A58633F39F89C"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionRegulationProbe.ps1",
+                      "SHA256":  "841EC1BDA72015CDCB093B7C54D720E99063D09B8810551EDDD1AF85557AB62E"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionRunClearYield.ps1",
+                      "SHA256":  "B24E4922EF154BA80A14C5F4266E43599063C9FC28E5257FFEA4BC61FC86A9EB"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionRunContract.ps1",
+                      "SHA256":  "4D54266E81976F90B8B170537A068CAFB4EEA4F875CD53696CFDE2520FE5ACE6"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionRunFault.ps1",
+                      "SHA256":  "6154046DD50C1351112694BC93E245BD49B3349F2639FB95D85660184312EDC7"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionRunLocalActivity.ps1",
+                      "SHA256":  "359E1E14312ED2F38E3DB62335D9159BA654601FE7F20B8C04DCCD7C9B18F0C1"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionRunLocalProbe.ps1",
+                      "SHA256":  "69813437504A0FEAB750DF130D83B821A04EDA065899B71D05C1150B5DCA2878"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionRunPolicy.ps1",
+                      "SHA256":  "B70EEB9CD140FD5991CEC305E7878ED28FB681701B8948EE25F6E488D727A323"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionRunPresentation.ps1",
+                      "SHA256":  "4D4E1AC9226B5E222806C862CC7AAB926889E2C4FD5B7C5DC31FCE8698649B83"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionRunScalePaths.ps1",
+                      "SHA256":  "9CCBC8E8FDCCB1CE118D04291198C631E5EA4527E9B837EA40F94084F20AEE8E"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionRunScaleSuccess.ps1",
+                      "SHA256":  "7A5D67BE5E028371B3C032741E2F5E128B3B63D6E78223AAC976F7A9C81ABBBE"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionRunStock.ps1",
+                      "SHA256":  "F46ECDDA831DB54527B3C9583521CF0F6D15F2179C7CF1BC32E737F7B85849E0"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionRunWorksheet.ps1",
+                      "SHA256":  "FDF91D88894447D2F98E6FB87568CD303491AF25128071346C9CC293E6CC4633"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionRunWorksheetOwner.ps1",
+                      "SHA256":  "80B4CF4F16F5C0C3CD42E55ACA3E5442081340C0A54356F273B991B2D1113C1B"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionRunWorksheetScale.ps1",
+                      "SHA256":  "5049AF0B9BF8794DD376761DF3E9ED9BA72606ACEFB3CDC0743A20EB137AF7FC"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionRunYield.ps1",
+                      "SHA256":  "2287F6D38CDC4B6D190CEAB018E044FE23A07A5E5C51B64AC96B8FB0E162D709"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionUomActivity.ps1",
+                      "SHA256":  "1F6A2D0BFAD65FA2531D2CE2C769A017E259535F1D69B9C044F355391CED7D3E"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionUomPublicClose.ps1",
+                      "SHA256":  "F84473886E80417943E39B4C6D0B7C6E9CF12C7AD6A5B69FA1C9977C024937C5"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beProductionUomStaging.ps1",
+                      "SHA256":  "6B26E87FD5E94F3E64593847798DFDE026EA0B40B54260D2FA47BDDF17DD0142"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4bePublicationSourceFailures.ps1",
+                      "SHA256":  "4EFCF6A94811A6DE9AF24A41BB18B30583C75284E04B705A995A45097BD2CB63"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4bePublishedGuideEdit.ps1",
+                      "SHA256":  "63EB443E8F58706C0538945485E00266AA28BFD5B1650BE601824C65AD784B2B"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4bePublishedProjectionFixture.ps1",
+                      "SHA256":  "39C4DBE236C0BF9300B21546AA461EADCD32DE26828817B3118DC3ACAEF5B4B4"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beReceivingActivity.ps1",
+                      "SHA256":  "F229A3C4E07CABDB8CAAEADC7A77319F70B58A7C2FFC866D173160BA2724842C"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beReceivingDenialDialogs.ps1",
+                      "SHA256":  "901717F85A0202B358CD866B1F7F6088AB3F8219CDB5EB4EC83FC8AC608E6654"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beReceivingFreshness.ps1",
+                      "SHA256":  "B43682E99BCFA86CC9CBEC0DBBE9F17AC70029CB21A42632101E1A3949D74E0E"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beReceivingLauncherDenial.ps1",
+                      "SHA256":  "1970D466D94A97A6CC086D8F8F706B26128621EF0D4B3DCB35BF45CEE78C63A1"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beReceivingLifecycle.ps1",
+                      "SHA256":  "FAECE0A76956FB1EAA4E57893547AC11B967495E64D4D2E9EC91AA1FC61699F6"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beReceivingLocal.ps1",
+                      "SHA256":  "FB986F76DAADF5CD1BB0BAE24E2DFBABC631055BE0B9A9DFCEA58C606E0BB927"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beReceivingNativeSurface.ps1",
+                      "SHA256":  "9DEEC0BE2C64617AED472D280DE2AC6D519B8288028F2379B20CFADBE1EEA1B3"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beReceivingNavigation.ps1",
+                      "SHA256":  "5FCB0D0788B8D6B5AF445C478118BA59AC779177C1D7E01876CC0EB2178360A8"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beReceivingNavigationTarget.ps1",
+                      "SHA256":  "306D6954FD148145B45AD84AB40BEB272870798C65B2091543628B2C207EB5A0"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beReceivingReferences.ps1",
+                      "SHA256":  "5BA557F630421F628A6EE41448DCF8FF6F3D7D3318AC9516D0DEF35A17ED0011"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beReceivingReplay.ps1",
+                      "SHA256":  "CD0D770D584D9B11C67DE63A2D1EF313D493739854225F4C4D0C33050C3A96A0"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beReceivingRetry.ps1",
+                      "SHA256":  "6C7440A1ABFC72CDB312A4747682D77141D5F6DDE7BB898A6ABCFDE6B3EAF98F"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beReceivingRun.ps1",
+                      "SHA256":  "1DE72073F9D2FA734A11BD7466B6C9A262B4757E31EEFA9144E0645E6027AF21"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beReceivingRunClose.ps1",
+                      "SHA256":  "2692E110F8706786849BE563A633B74A20ED586A432C469EDC5E9D2ABA950B9B"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beReceivingRunControls.ps1",
+                      "SHA256":  "D91A015E88184D852FC7BF276EA95AB63B02CEB2FD2B12F30E0DC4F31361D560"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beReceivingRunEventTrace.ps1",
+                      "SHA256":  "D9982911F27C1A44CC36CA1063844C6BF42637C6E4039B83ACEC1335AD1B268D"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beReceivingRunGuardProbe.ps1",
+                      "SHA256":  "F79CD1DC46DD83E81316123EA6B7B8DF6D92956CEA8CCCA3C6E4C27A3A1D9926"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beReceivingRunGuards.ps1",
+                      "SHA256":  "D1C8E1135D02283341632DA803488E5C2F03405B11E834F2079BD4C93C3A31B6"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beReceivingRunProof.ps1",
+                      "SHA256":  "5AC8FAC7BDB87995CCE52E14B8FA6C2E71D88F75885085BF7C594DEC5BF0FCB9"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beReceivingStaging.ps1",
+                      "SHA256":  "66841ED0D874435647629A7DA32801F9C157FC400CD09FAD838D0718BC3E0536"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beReceivingSurface.ps1",
+                      "SHA256":  "F7BEE3F05CB1AF265A010A458C03F97FBCE04357753B718AB77C6384847A3AC9"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beReceivingUserAudit.ps1",
+                      "SHA256":  "81D998D1C35969BD69F86E7410E0FA06E6472CDAA789A76D45587C4264FA6D20"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beReceivingWorksheetGuards.ps1",
+                      "SHA256":  "98E8D6EDDF7FE00D39AD3EB6C4038775712039E9A377068BD886A5CDC0BB78A4"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beReceivingWorksheetScenarios.ps1",
+                      "SHA256":  "D124B16710505ED7F6DEF2952858B0C8DC46030AA249A55F235DB1D51586EC3D"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beRecordingEvaluation.ps1",
+                      "SHA256":  "298388BA38E30F714F2EB72092628DB7C20C4E8FA3BD27F429202289FE58276D"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beRecordingFixture.ps1",
+                      "SHA256":  "96224C01079D795035743B71027B53DACAEC3AB074E34FDA6BD4BAC76BDC5241"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beRecordingIsolation.ps1",
+                      "SHA256":  "7CBE9CFD54047675EA1F26A3FFEB2D2BC98E07355C8E8B689CB4C63C7DAB49DF"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beRecordingLifecycle.ps1",
+                      "SHA256":  "F35DFFDA2AE5C39E537FB7C2D41B6EA8E133B9ECD701A58CD1A9688F561A8DD5"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beRecordingOperations.ps1",
+                      "SHA256":  "25F7ACA1B73C9583D199D360E199F53C290C0ACFF5032CD65E54D8119E285218"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beRecordingReader.ps1",
+                      "SHA256":  "790DD817C8A69A1564EEA1604D873EDEFBCD67A4E879ECF54F0172D4449B5C4A"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beRecordingRestart.ps1",
+                      "SHA256":  "1F733C9143ACBEADCF603F8E47AD6C52C1E4242B9FF6A6DEB7FA8177AF20FA7A"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beRecordingRestartWorker.ps1",
+                      "SHA256":  "3BC0B533369FC3918C07961A820F0766D6A08426F2ABB3C95328E5AC3A5695F7"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beRecordingStorageBounds.ps1",
+                      "SHA256":  "EEEF6294F4E1C8D2C9711F7BEC55A0E868A912D0EFA4C35D7C385F7C5964DFCA"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beRecordingTransfer.ps1",
+                      "SHA256":  "9ADE3E56A5DAA0E382645A48976FE2469FD68D57E4E49C4C89FDB8318EA3D35B"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beSettingsDiagnostics.ps1",
+                      "SHA256":  "E16EAECA5752542F9866703FBEAE6ADBC9CD42C22B906A2C7C14DE601ABFE85E"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beSettingsEditorActivity.ps1",
+                      "SHA256":  "003F11F9D52A4794242BDD13563EA10A9A1745E2AF8DFA6A36A712CFCD10F865"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beSettingsEditorCases.ps1",
+                      "SHA256":  "98B2CBD090D9A08A0B63EF2FDBFFB299521C89F17C2E7F04F71C72E1888B72BA"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beSettingsEditorProbe.ps1",
+                      "SHA256":  "D51004D29AEEE109C885A24D40B7EF36E821B4EB5EF87160C578F665ACF1B40D"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beSettingsEditorSafety.ps1",
+                      "SHA256":  "2A24C6D6EAFF17FB9256E976A1AA306EDE8111E973295C0D0A711989736CC225"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beSettingsEditorSaveCases.ps1",
+                      "SHA256":  "66901D1D9BA5188BF2AED76623DB7F281F15551EF2A0611C8EE8769B8480DF8B"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beSettingsOpenTrace.ps1",
+                      "SHA256":  "FE86D227C81033BE1129CA95402F42D1F789F9CA803BA2BF26BD3E80C0F2ECD0"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beSettingsUserActivity.ps1",
+                      "SHA256":  "757196C601DC5EB1ED1D82C409CD86FB3EF0E8DDC8749AFC8F3FAEF415C94287"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beShippingAccessInterruptions.ps1",
+                      "SHA256":  "E4A91A02923BC4980A61594BE525D5612E2D6BA95C9AC752279B83EE8AB7B162"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beShippingActivity.ps1",
+                      "SHA256":  "C2353C37583CA3CDB0BCEEB6B70C382E821066C0AED3E9C1F3DB1B909B92F77F"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beShippingCapability.ps1",
+                      "SHA256":  "F1A9456DA9FD62D08DF4B95AA05E6A2560E79A30C935A231B4C9C733B3AF8685"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beShippingCatalog.ps1",
+                      "SHA256":  "40E440F1C233BFBE6DEC9D0A21089FAB965C9CF5E49FE53AF14F5E2B8F578C4A"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beShippingContext.ps1",
+                      "SHA256":  "4852EE12122E8CDB7123E40DB42D81EB4F5985A76BF9E2E077AAB5E3745AA23C"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beShippingInterruptions.ps1",
+                      "SHA256":  "260A7E830A754EA02497C4C892CEE907FF989B6C4FA1F960A6BF37968983D1E2"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beShippingPrewriteRefusal.ps1",
+                      "SHA256":  "D3DF47F1CAE32680C618E3298AB15FE9B18CA2D5EDB9AD1E4FA4F6EFC82C0675"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beShippingPublicationFixture.ps1",
+                      "SHA256":  "C7A8583317E4B5C304F22969E6550154C4472E871D5D37120666174531C5B4D8"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beShippingRecording.ps1",
+                      "SHA256":  "5D6EF18D3CC8BB00F31978B4E24B3F3933DCAB6FF9EDE9D245FB4388B029ABB5"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beShippingSubmission.ps1",
+                      "SHA256":  "5B0F5460AED916C84C1A70DE5B3ECAEC983457733D53AC389004BDFFC86FB492"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beShippingTrackingFailure.ps1",
+                      "SHA256":  "05852EFA356355F1F78489E5EF416604B72DE291271E7664BDA74D92F7760866"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beShippingWorkbookClose.ps1",
+                      "SHA256":  "D6C9F38D9590CAB8AE15F3AE646331D3C3A3D8F0D04B5633CB168E55A7F25E9D"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beShutdownTrace.ps1",
+                      "SHA256":  "F92829AC8FD6A851759B65BE60EF89DD2F9A8E22905F064C605B996EDBAA54E4"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beTrackingPolicy.ps1",
+                      "SHA256":  "5C9CFD01232E0C2A349B7106222C3C4A76D28F0CFADCFF9717B003E9F5442DB6"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beTrackingSettings.ps1",
+                      "SHA256":  "529F007049DBB61B28CA632F535242CABACA893C0F946A6FBC7D88BD551B73AE"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beUserPolicyAccess.ps1",
+                      "SHA256":  "887944A510CE080C4220F210035F446DF2CDF3ED9983E4C3C3113E51C9A478BC"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beUserPolicyLifecycle.ps1",
+                      "SHA256":  "F565B430D102ABF6C99A60C6D7FF6AD9B316D1C765FDBC0510F2A5A62A9BDFF9"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beUserPolicyStorage.ps1",
+                      "SHA256":  "D3DC037A0328FB786A13B280B2BF88F1236B717796FC00D487277A68C470F165"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beUserTrackingPolicy.ps1",
+                      "SHA256":  "10B805080305442544D1B78E8C993BDEB6DB60D10755EC732A5A47F73E841240"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beViewerEventDetail.ps1",
+                      "SHA256":  "2BEB97581B986B8550DD0C5E523AA827BFB5A8D3B682E6EF6C1FDAC1337A30C2"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beViewerEventGroups.ps1",
+                      "SHA256":  "C331896FA9A446C1829B92C9C134A8165D6C584860ABEDEC9C5DE93C3660F30F"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beViewerFilters.ps1",
+                      "SHA256":  "B1E378AC0D4CEF194427D8066E8535F025CDE1707A78FD27E11FE42F48F87D50"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beViewerPublication.ps1",
+                      "SHA256":  "87A044B205BF3538801F8801E72C85D3D0291066899D1E8143F8B90D030C7E9B"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beViewerPublishedRead.ps1",
+                      "SHA256":  "11DE3AF88B948403E5D6A16D0DDE758CA52BA8D0B1E098BC86954FD1D70E76F9"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beViewerRefreshFailure.ps1",
+                      "SHA256":  "EA5AD4924C8C6F4F3BCC57836CCD32290CDACA883EBE4B89F9247526E2556EA8"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beViewerSettingsPreservation.ps1",
+                      "SHA256":  "87326210FC039CABCF585622973C2CE0C08D4AF4A1E6CCBD310B4F38662D4181"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beViewerShippingState.ps1",
+                      "SHA256":  "DBD4EED6228629BD7BE54A12FAD2A6A2CB9BE4026863CB8C3E2D7A2A2A52B5F8"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beViewerStartup.ps1",
+                      "SHA256":  "001A973EB9F51E352909A08E4E895EB33EACFC11053A387E4E12372C5A27574C"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beVisibilitySavePins.ps1",
+                      "SHA256":  "3DD0DB8041836D6AEAF4C198215166C1E4D5AADF12D3B7ADE2A9969BCEA3E332"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Slice4beWorksheetInput.ps1",
+                      "SHA256":  "60B173F351DF7E2672183C00388133B67C67C4E1CE6885A0382DBC0D4C1E01F1"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-AdminResetCaptureGeometry.ps1",
+                      "SHA256":  "964E402CCD500CBFD560DABCA57DD66C3B20C06DEF5EC95D82AFF0F1871E2FE4"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-AuthFixtureText.ps1",
+                      "SHA256":  "FC07959C8AE1AC13CDFF1FEE2B72B40DF3232ADA60BA655807BE33087A444A08"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-DemoWorkflowSeed.ps1",
+                      "SHA256":  "25915C916E8950375A61CC80D434D2F0E7DE5FA684E79D68A579E24B119D3344"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-EaWholeUnitInvariant.ps1",
+                      "SHA256":  "472D6FD3414D2958CB42684F97206F931D74A30F0BCFFAA0A9A4D9CC2299D136"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-IsolatedAutomationCleanup.ps1",
+                      "SHA256":  "FA1EF1F2F8B4021891B3844EFC02096A71B0532FAB4A47EDF774B6EE8A34945F"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-JsonLiteralTypes.ps1",
+                      "SHA256":  "4BB801AE5DD8295078CD55257F426E84B42AAC72D36415B9702E8BB4BF714DDD"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-LauncherCleanupEvidence.ps1",
+                      "SHA256":  "12ABEEA40B12F85F4F28F0CBEB7BC530061C45B909A55567A9A8323C8F494759"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-LiveRoleDismissalOwner.ps1",
+                      "SHA256":  "F330A60BF91C5C7092DA035B12CA8798AE61B4091BD1F0BFE810A4E600623FFF"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-NativeExceptionObserver.ps1",
+                      "SHA256":  "4915FBB1FEBCBBFCF51E99557E70803664889A47F100FBF7D7837006306652A9"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-PackagedExternalEdits.ps1",
+                      "SHA256":  "7CDDFAFD7EEFBFA898CDDE080C2B4ED4BF3CD5421CBB46DE02C41A86761C0CC9"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-PackagedInventorySmokeDiagnostic.ps1",
+                      "SHA256":  "B86A7061DEBB9AA42A3532C2F4D50B3B97D7D46F9D1D3D2B6D910084942A5FC9"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-PackagedSystemKeyGeneration.ps1",
+                      "SHA256":  "D03395D99813D7061564C8348F7A3517B889331AFC62B7FD282318DBA7F1A3AC"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-PackagedValidationGuards.ps1",
+                      "SHA256":  "9FE3DDDB9C64DB11721F44F9AC5EF5FA069A55F66D6DE4D30C0A29EA2FB431E0"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-PackagedVbaCompile.ps1",
+                      "SHA256":  "0489215974B20A32EED484576C1F20070E378AC0D5A66DE10410645F896E4C95"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Phase6PackagedWanHqSystemKey.ps1",
+                      "SHA256":  "D214CCA7A0800A69FF4E449741766429722706AAEA23D349E0134829ADC82FE0"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Phase6TwoWarehouseProofHarness.ps1",
+                      "SHA256":  "977F1D89A7022B0919C939ED594B53A32156B902BE283A64ACF5C83EE305FB05"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022DialogObserver.ps1",
+                      "SHA256":  "823AAE699DF91D8B5EEB700516C13D953B584B2708F50B3955916BDEFD0AE2FD"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022LauncherContracts.ps1",
+                      "SHA256":  "360C4F3AFD65301F7DAC0CB76FBE65361646BC8F48DAE380557D60E858E09B12"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4aaProcessBulkImport.ps1",
+                      "SHA256":  "5249B5BA80DE6A951951992199AA85C55E09445E5D2BC3E0E195ECEFEE35162E"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4abProcessPickerInventory.ps1",
+                      "SHA256":  "C8F88EEC987FEFDEB2ABEAB3559EA3F805D4A5DCFEB48FD791DF47388895E518"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4acProcessOutputPicker.ps1",
+                      "SHA256":  "08F6AB81A8E3ACED5BB588880798CA95AFC3B4859E54C77DAF348A4AD05DD65A"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4adProcessPickerRecordTypes.ps1",
+                      "SHA256":  "9AE5E3FF23487F1BD40E28EEDC2F5D3D7CA93409B90D53726C0D0BED853B7879"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4aeProcessPickerTargetsAndRowIds.ps1",
+                      "SHA256":  "5953B709C03DA025258A15CE259196A389EBD35A2328AD36A320DF756F5FC128"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4afRecipeIdentity.ps1",
+                      "SHA256":  "37286594A692BD6461D62A9A778E7EBE079A030C64884BA58D24794FC7C2A152"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4agProductionActualOutput.ps1",
+                      "SHA256":  "0E2AB4CCE4AAB3E662FD49504D59B9B427135E2A24EB296452AC752322725795"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4ahAdminEditSelection.ps1",
+                      "SHA256":  "830453EE283BFA878076D58DB46D779AFF20AF167AE6EED644D0AA7A4BA75CFC"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4aiAdminInventoryWorksheet.ps1",
+                      "SHA256":  "E9FD62D4263031838787EC09ECCAA388DC99C58D60D1A6C3348B52F3D92179E4"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4ajProductionHistoryUtility.ps1",
+                      "SHA256":  "9535E579E5A2CCD397595F63DE2D160E88544F0897C3968859D8C3ACB047AFCB"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4akAdminAddVisibilityDropdowns.ps1",
+                      "SHA256":  "15369E40520F9B97581830E3B057781E383F0E7C12521F5A6E5D21769BDD17B4"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4alInventoryDeletion.ps1",
+                      "SHA256":  "FA5D3B53393E3D6D2ACC7F71821FEAB6FB1B99164A7B2A5C81078B537EFE3768"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4amZeroStartingQuantity.ps1",
+                      "SHA256":  "79382365B857C708CEF49B9DBDE89E798C7EC128E11AEC6ACDAABE84CA35BC6A"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4anMixedUomProcess.ps1",
+                      "SHA256":  "9049EBF9CF49A310425F49D606C851A354AC71720C78E0C7A2EB12382CDFD22F"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4aoRecipeConnectionEditor.ps1",
+                      "SHA256":  "7CE0A4ABF98F1EC45E1AD9ACC0B430461AC68408703D3DD2E041EB88FE300F27"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4apNamedRecipeGraph.ps1",
+                      "SHA256":  "5116D7A647FDD08855D8F316CCE187D1D43599D7A98F11F02CC8EA0E0C41E3EB"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4aqOutputFlow.ps1",
+                      "SHA256":  "79FA351235EC54970E04732F87092A3587072EBF5433DB6A103AF15765E0E42D"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4arProductionClarity.ps1",
+                      "SHA256":  "2BECBA7838DE8D5B084B259ED26C28165F856F54CB97BC16A8D50CB746E16C62"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4asProcessOutputEditor.ps1",
+                      "SHA256":  "F57DE359176A488BEA05D4CC1C3269BE120DAFEA45EE383EC5FDC1CDD8DD6974"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4atLocationStock.ps1",
+                      "SHA256":  "85294E686A0DA34F915BADAFC514C46C67EEF80341FDE455B2B6A7BA9663CA5C"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4auReceivingListbox.ps1",
+                      "SHA256":  "28BE752301540B44D053580298D4CFE33A6BA9CB972AC9A5023156033527A1F5"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4avProcessScopedRun.ps1",
+                      "SHA256":  "285A617D219495F669FA47BB96FFEB354E5639CBDF21DF14A53AA93C1B27BBE6"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4awProcessEditExport.ps1",
+                      "SHA256":  "0C008D98EC1BC839B6BF2DF2F559DF497D66E29D71C7BD89170267E6390CB813"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4axRoutedIntermediate.ps1",
+                      "SHA256":  "E5998A32A737A81C5D85D79DC79920AC19E7ADCCD4B6C41720B3B927967CBB38"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4ayProductionRunListLayout.ps1",
+                      "SHA256":  "A182C50404467F18AC27293F851E9201C60409FC0CA83917E054296428D35F94"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4azOutputRegulation.ps1",
+                      "SHA256":  "E760AF88924B835E01F6F8F24BEE381155AA28286BF22889C6DCC0FE3FE73A76"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4baVariableQuantityModes.ps1",
+                      "SHA256":  "58288F3FF5F3D5A97CD108B24FE1E8C94F6E351B9B29EDDDC8FDC99C0B8CEBD8"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4bbExternalStockUomConversion.ps1",
+                      "SHA256":  "E41AD5F3A7E93584D0F536E54A833C5DA51F5539BD23F8D86E504F7A3A2C10F6"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4bcBatchNotesViewerListExport.ps1",
+                      "SHA256":  "9FC5B1F0148E8312EE96473B27C45B8A5E43643704F2F83F8A73BCDF49FBCB40"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4biFirstUseNasOnboarding.ps1",
+                      "SHA256":  "F5A3CCF1226CA2A7753B9B513CC99D8102317887FDECEFBFE695A12EDD4658A4"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4bjNasStationSetup.ps1",
+                      "SHA256":  "26BB9E4B8E4AC3AC368A6180ED7FED08555030B7A59759510F9C3B0AF4FE1F2C"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4bkUserOnboardingPacket.ps1",
+                      "SHA256":  "5454714C0B21F8F59EEF02A897D5F9E3EFC5CB2D93AF2DCDAFF6C80F1A848205"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4blExplorerRevalidation.ps1",
+                      "SHA256":  "74B0E1C8FF04387E0B9323472ACF4B999932F6371DF06517FF4B1CD3BDB55106"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4jWorkflowReadiness.ps1",
+                      "SHA256":  "9DA48045FAC21EDA0555F7CC39993A3BAB8229C15AED5E4DFC4D824351B68B71"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4lRibbonSessionControls.ps1",
+                      "SHA256":  "80258D3FAA10690D62495FBE0F0E126C1E87C0C5C225AA17987766781FE23EA7"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4oReceiving.ps1",
+                      "SHA256":  "FC1209B4D70C52D8A16A5F1EF97F60FF13F5CEBA584AC042275BB741168060B9"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4pReceiving.ps1",
+                      "SHA256":  "EDE6A9169583C24F710B003F48B4F504FA7AB3B436A92C69DB19990A65B926E5"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4qDisposition.ps1",
+                      "SHA256":  "78ADFAAB0B9DD805AAEFF97164C36715D8FB6D5A40CEB0D1A42D70C9CB51ACE0"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4sShippingExactKey.ps1",
+                      "SHA256":  "DF8069BAA3FFF5F8AE1C3F0680C41511C40369A2A1F15E32392AF7E362BE0A58"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4tShippingPostSend.ps1",
+                      "SHA256":  "321EC261EC768AF9D1253CFF9D8346E9E252B8E3B0B17C709A03D8A912DAEDEC"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4uShippingPersistenceFeedback.ps1",
+                      "SHA256":  "D7F279523AD945AC818DEAF6144DB7FF1FEF7DFE7A823D1959FE7A31EDB4A275"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4vReceivingProductionPersistenceFeedback.ps1",
+                      "SHA256":  "37AC4E1B7EE0CEE5E359EB497BDCF3C5169E3E66C0C046C69C6D8F844FEB2E00"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4wOperatorResponsivenessAndEvents.ps1",
+                      "SHA256":  "12930EB895F200DEC5B94DAA943EEA72E0E468CBEB266499A43478FEAF9C7644"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4xProductionRestart.ps1",
+                      "SHA256":  "1A8D3371F46240F102B67A72151E65A877E42E45D44F5C23B2AC42D454C27F0F"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4xReusableProduction.ps1",
+                      "SHA256":  "BA04550F4E75BD026D0DF75058A548501FC7B4D5AA10C7239381838990DEB5C3"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4yProcessWorksheet.ps1",
+                      "SHA256":  "B46218E7DEF435AA2C8BEA75D8918493F2B9B8E8A984AFD57AE50A062121A54A"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Plan022Slice4zProcessWorkbench.ps1",
+                      "SHA256":  "ADC0DAFD50979F97828AD5D6DDE19AFCB4EF0DF87F519B8C7873568C4C35068F"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-ProductionBatchBoundary.ps1",
+                      "SHA256":  "52143C0DE6E3E0192E8311B9163DCFC53F8E18C7D78184E07312E4EDC55EE235"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-ProductionBatchTracePlacement.ps1",
+                      "SHA256":  "72DDF72FA3EEE870278A8F3864BBE5F7F636E48BBDD2B61B3D0C4D13E82534EC"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-ProductionLayoutCaptureGeometry.ps1",
+                      "SHA256":  "C4BC68FC70F406292AE5926958F2C8FB03771443BD925142EBE1B6BB45C490CF"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-ProductionNativeAttachGeneration.ps1",
+                      "SHA256":  "AFC24DD87F4AE7404BD87102D0A4ABFEF706A03E3DEC9C3DA9CAC25A93F396EE"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-ProductionNativeCaptureGeometry.ps1",
+                      "SHA256":  "47ED9582A52B75E85EDB79659AD051E9C9717DE7F19C922C5C4558C7C3D08636"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-ProductionPaletteLayout.ps1",
+                      "SHA256":  "0E30664C946F6BD23FF493DEB02A513485816F23B8671158AC84A31E7F0F0517"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-ProductionQuietBoundary.ps1",
+                      "SHA256":  "3D9B4D14477F46F69A36B0E047789104ECA2AB17549D02504D9A9A45CBE3F885"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-ProductionRegulationRedaction.ps1",
+                      "SHA256":  "0AF07E01A0FDBA8AB3FA0F56B0CC527F36B7DD1D23444B4FCDC3B1884DF05523"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-ProductionRestartDiagnostic.ps1",
+                      "SHA256":  "FC34AD64FE1DE21CA7E195DF514679F95F90B150145679CAB1E9C075043AD770"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-ProductionRestartDiagnosticGeneration.ps1",
+                      "SHA256":  "9ED81121026E790D7E3C4568C8C4A7338A066BEACFE51DF273760A2554A01274"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-ProductionRestartReplay.ps1",
+                      "SHA256":  "0D439A671C8DF163571DD1FE787D7A9FF03FB5840CAC7E0EC42169CDCB9D2EBA"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-ProductionReusableCleanup.ps1",
+                      "SHA256":  "A3FD6830C2BD21920295F6188AF435A0520CFB4D5A3390CC49ED84D0BB5C26D0"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-ProjectionTraceAnchors.ps1",
+                      "SHA256":  "CE0022F4A12A27D48075011500B03C3112404685F5176052B156274982C746BC"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-R1ControlSurface.ps1",
+                      "SHA256":  "85F9D90CC85EF22891FCA590FECDB21EE012743D597A7E1BBE59E9D4B3A670FC"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-R1FinalControlAcceptance.ps1",
+                      "SHA256":  "A1E3CF8EBA2DA503598C174A1EBB1F4C6FC92CF785E82BC8D52DA054E70FCF76"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Release1OrderedChildExit.ps1",
+                      "SHA256":  "0060866F29E7D7061DDD9D812D457E0CB5AEE3DBCAA3F437113D35AAA1865D0E"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Release1PackageCloseOrder.ps1",
+                      "SHA256":  "97ECEA3A0CB617F2843D020C7C58788E8CC2717359E04A6029ADB7395B5FF559"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-ReusableFailedHostCleanup.ps1",
+                      "SHA256":  "5FD8CB6EDA52B47A8CC86F2874A40535B10F617E0A60727EA555EDBBF3354D73"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-SettingsCaptureGeometry.ps1",
+                      "SHA256":  "367665B0F76F5008F2999E7A5AB3D8F46DFEBBF1DA517632CF1821EF97090CD5"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-ShippingStatusAnchor.ps1",
+                      "SHA256":  "40408C7BA42CA3216D53BBC109EF6EDA09D481BDFDEFC3E2D2E3AD921F79E838"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice0ToolContracts.ps1",
+                      "SHA256":  "838022CE44350B403A96C0B4A9756B7B69235475874BB2F6B26125B624BEF0C6"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice10ReceivingStabilization.ps1",
+                      "SHA256":  "70B69FAD59E4E7FD22360F7A33569152A9D28F06E49F46DD03C3FE80CC875C27"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice11ShippingBoxingStabilization.ps1",
+                      "SHA256":  "0AF344E5EF0DB5875FE7FD741DC6AAAEB00B972F9AF0FAA24DAB98FD171A916D"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice12ReviewedCleanup.ps1",
+                      "SHA256":  "E4B986962D71C8BDD809B5202C7D6EB543E9983D3B176A41AF949BD4F4CB4D2F"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice13OperationsCutover.ps1",
+                      "SHA256":  "0C09966CBCADA8C30BBBC107C206301B581073A032A96E120CE2ABBB64CBCB99"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice14FullChain.ps1",
+                      "SHA256":  "7060B1CEA79468F99DDB481AC82F3F70D9FD43441E5BC9FA903CAB39DA68F9FA"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice3Baseline.ps1",
+                      "SHA256":  "512588ED7F20979F2C3F030E5A7DAA22F573E59CDB3A4BCAA6B7EB4BF2102AE4"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4bdAdminAggregatorCommand.ps1",
+                      "SHA256":  "F8F2E2E16FDB7DFE71F525E188D902B2B6829966562496B3A9A08F068BBEC9E6"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4bdAdminFormSmoke.ps1",
+                      "SHA256":  "8B2D64455DE7BB1C50C3D78330575E6EEEF1FAFD49B7A4B9565FCA4CB885B3F2"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4bdExplicitSourceAggregation.ps1",
+                      "SHA256":  "CA0AEC8A4E3FC5814F85D55587ECF2642AB6A8669509B6F3836ADCD627F83385"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4bdMultiServerSourceSet.ps1",
+                      "SHA256":  "78026376F0CAB6F6BF703C33507B2A80CBC43869A2CFD6E17FB1EAF3758C04C4"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beAdminAggregation.ps1",
+                      "SHA256":  "1517A1892EC465BA00981B52AD5EDB0D9BABBD39DECBD7372209D1415EF272CB"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beAdminClose.ps1",
+                      "SHA256":  "E61AB7C79CF4F03F0A218E7319C290C0278287849159389C3DA8E65796884E13"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beAdminConsole.ps1",
+                      "SHA256":  "4C9E31FB73B4A20D8985EC28282BA83B6ABADB1990846E2B5EB4988C2899CA75"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beAdminCreateWarehouseOwner.ps1",
+                      "SHA256":  "F9BD1C8049F1496D96CFE4C1C4A26AF933EBE1F99287571663AA77F4CB50FB38"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beAdminDirectoryColumns.ps1",
+                      "SHA256":  "C757E4055DE91988EB514949C9527E19D69798AA281A673FC08A24C15C6FCF65"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beAdminReconcileIdentity.ps1",
+                      "SHA256":  "3305BBB8C2411FE5D07C40C3460B1FF36003C57044FAE75D3799F9EC71815E5E"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beAdminSeedOutcome.ps1",
+                      "SHA256":  "9A87C322F76F2FCFC88A03C47863C4E65198280D7D21889F0282497E5FC0252A"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beAdminSettingsEntry.ps1",
+                      "SHA256":  "DC4B75F824BCCF85F3F5D475D571EDC7594547DC3DE83ACD876C97DB354FDFEF"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beAdminTesterSetupOwner.ps1",
+                      "SHA256":  "6972B59ED9C4813DD540C7C9A3404BB87C2BD76E0F8006E0DD79CBF6523C41F3"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beAdminVerifyAddins.ps1",
+                      "SHA256":  "E4D2D24AE7AD16B9806CBD8E49AE066AA9FF6D77EFFC6A6EFAB6984B5B4E4E9D"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beAuthReadOnly.ps1",
+                      "SHA256":  "94E8B80715E8EF7C06FD554D6CE0967B3FE421A7A65EBE5BABB89B590128C197"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beBoxingCatalog.ps1",
+                      "SHA256":  "F59101D90B28C905F0B9A731B82A5176F87D178AFC5BE974297BEFCBB9CFF086"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beCaptureForeground.ps1",
+                      "SHA256":  "04554AD9007D94448C68591ACBCEE55F8337D46DC687350D4F7B21768C04C080"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beChainStageExit.ps1",
+                      "SHA256":  "BBC20B87BAFAF498DBFA50BEFDF76C1DDA02EC14BC99EB6B3C2C024FF8684342"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beConfigCommands.ps1",
+                      "SHA256":  "5D2D2192F2DAE05F67310A42AF9FA039ABE5E05EFCBB6613EC3C251D066EA4F3"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beDetailColumns.ps1",
+                      "SHA256":  "666566FE743E41A84D7E1DC8B39F1DB561CA07C619F629C0D8D42BD010624391"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beDetailGlyphEvidence.ps1",
+                      "SHA256":  "703295A8903DFA8A058E2F4CE57CFCE08F2B2558F2AD4E0BA14DAFCB72ECCA04"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beDetailScrollEvidence.ps1",
+                      "SHA256":  "E6D4CF1FFFB1669BFC6C84D67ED837020D98AC45AFCA40A02E1B58F431DDACF4"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beExcelWindowLifecycle.ps1",
+                      "SHA256":  "44BF128A0F240EE4DBE568F894BC6EA41FE838E41655C8E8DD7B3AE03B829758"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beFormFailureDiagnostics.ps1",
+                      "SHA256":  "BAED752C6A33C1613448C4AD67352CB4BF80FF4CE5252580BF0D6DE28D023580"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beGeneralSettings.ps1",
+                      "SHA256":  "5D3420259300A1BA0EF8B74486C1E2478FB0548C6E082482D2AA3007186FED98"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beGuideResourceDiagnostic.ps1",
+                      "SHA256":  "21914DF5F3E3850171D70CF8E91613C1B4E933634F0B462B64CC9FFE85657E45"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beGuideStateRetry.ps1",
+                      "SHA256":  "B508F2DAB7859A028621C99F76C58F14213F36EC542FC3DC06D894DA2D7E14BD"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beGuideTransfer.ps1",
+                      "SHA256":  "2F7564DB5E68D51120366FB39EB08AACC3B02D679C4D0F87D6E4B999C358302B"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beHeaderScanContract.ps1",
+                      "SHA256":  "995CBDB3A82D2CB49B66AFA492B6F2E500B443D812E3B82611E77479FF778804"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beInventoryImportedRows.ps1",
+                      "SHA256":  "7BCA8243AAEF5E8D8B74615FBE0CF13FD326DE465D125134B7DBCC6C17F66AFE"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4bePackageIdentitySharing.ps1",
+                      "SHA256":  "956D8BBF947D3838B9BECE5C4EAEC5B913241079552B581A2FD78F459F9D6B13"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4bePreferenceSavePins.ps1",
+                      "SHA256":  "D3890A6F60F02055CDDBC2D82F23D33974569F9CE1A9C0055C199C8250972FA1"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4bePristineViewer.ps1",
+                      "SHA256":  "8E936AEA3C9A69CFDA2411BDE7B6080523B7AC7B2E32C7D55B2E99D194D379AC"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beProcessWorksheetActivity.ps1",
+                      "SHA256":  "61F0EE2DE6316695E8A53C3535CF009413B4A3E58720A9968B59DE687D708273"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beProcessWorksheetHeaders.ps1",
+                      "SHA256":  "4BAEBE0B656D8BFC3295CE193FCC6D9E1761172DE95048455E106343BAEC1A08"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beProcessWorksheetPicker.ps1",
+                      "SHA256":  "165A0DE672BCFA629E6E9AB30FACAB2547B37AC74FF3BFC4B2EDB76ECA9F9AD0"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beProductionAssignment.ps1",
+                      "SHA256":  "380B02CFCF17F5F9617B6B0B733EA240B518EED46BEE74FA627FD6AFCAF55FC7"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beProductionClose.ps1",
+                      "SHA256":  "D79556BD3630A8D60AC60CE1A74C0A823AC9EAFE67654299F543E8A38A462D3B"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beProductionComponents.ps1",
+                      "SHA256":  "EAC5E09E78DF8610E5F6251AB65BB237BC3834F65422384F6A8CA27233EDC85D"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beProductionDesigner.ps1",
+                      "SHA256":  "AB1FA946A3E5593494D062C7103607323432E8AA9319FE070BE151A70C947E93"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beProductionDesignReads.ps1",
+                      "SHA256":  "DA78E92AABD71CD13F168C6C43E3992478F862EA71A799F8F92535D861FA130B"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beProductionInstructions.ps1",
+                      "SHA256":  "0BFAA0D8C8D247FE114E4B081FB86551B05BACFDF21D6C60156E6D432EC3DA13"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beProductionLifecycle.ps1",
+                      "SHA256":  "7CDE97663CE8EE6F5D40068DF6D08E8A6B3153C51CC3B04C2B473F02E3AAD649"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beProductionRecipeOrder.ps1",
+                      "SHA256":  "F47BEF087ACDB6B30BA25E8C31D4BA12A89BAAAEEA451AA69E588438A04A2F99"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beProductionRecipeStructure.ps1",
+                      "SHA256":  "CFCB8319D665D5E65EFE7E5EBF5F3A9302E518427A9497E4A0FED07F56D56F8A"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beProductionRegulation.ps1",
+                      "SHA256":  "7C0EB8E5F37F392A7BDCE040942D4758E7A948FEA20CDBAA713C431171A3F02E"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beProductionRunLocal.ps1",
+                      "SHA256":  "C532D8894DF6F9F224D62C7EE1B98C3C7A18E07BE1F5B0FB1F6F98A69CBAF128"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beProductionRunPresentation.ps1",
+                      "SHA256":  "DCEC7F5D6560B777E26E481E78F94C7E80B12659A2C493F70AC40A193D51A778"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beProductionUomStaging.ps1",
+                      "SHA256":  "5F145A668D66CABDDB400C2E85210F85F88D80F59F85BE06E0EF311494712C53"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beProjectionLiveControl.ps1",
+                      "SHA256":  "14FE5F15ECDB77E45FC1F6978E11FB66B52F380DD8E7E6BBD008C78C22412797"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beReadyBeforeDispatch.ps1",
+                      "SHA256":  "F817C0ACEE8DF16B43069DD731C2885E31C4B0666E10412FBFB8BD587FECAF76"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beReceivingReplay.ps1",
+                      "SHA256":  "93C3369B28352FA3CFBF1F48326B780D0077C0719EBC06FF96F70F153636D19B"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beRecordingControllerExit.ps1",
+                      "SHA256":  "A9492EE3487FA4854A46DD4A34DADABAEF547099A9D34DD15401B2848486AF49"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beRecordingHandoff.ps1",
+                      "SHA256":  "8D58F9DF43ABC0918420D489A1CA9A46FB6CE77E5F686D36075F133F8667779C"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beRecordingLifecycle.ps1",
+                      "SHA256":  "199DCC5682C4D885B2BE2CDAFC4DE8F7B7AFB118D2206C7832EDE9E50AFE0E26"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beRecordingWorkerProtocol.ps1",
+                      "SHA256":  "5265DF3CCC5670632770F88959E8D9E2E6A707FB981D8ADEDC8D656FA6DA57DE"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beResultEvidence.ps1",
+                      "SHA256":  "C22E58138D667DBF8943C462CFEB105DAAEDC750BAE6162FC3C6BFCE91B335C7"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beShutdownControl.ps1",
+                      "SHA256":  "555B53EF65E73AA11C3C08B36CE4BDD9A936001CDABA9CD8A0682A1DA4C6F0D4"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beShutdownTrace.ps1",
+                      "SHA256":  "C5D0624FEB30986EC76931A56FA59D1C74D65CFD4F18FCE6EADA8FD1A73C576D"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beTesterHeadless.ps1",
+                      "SHA256":  "26281017689FD91A6AF860FA04100AB29110A9CC10C443C5ACBD0D0CE350C12D"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beUserTrackingPolicy.ps1",
+                      "SHA256":  "21E11D63B631E51F52C73BDA747D5E3FDAEA7E6EB532CC449CD62235321F2274"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beVisibilitySavePins.ps1",
+                      "SHA256":  "CDFD50F9DCB4E877006B2F5B6473CB3B1DDFFFEC888FB29BDB1F546932C4DA11"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beWarehousePurpose.ps1",
+                      "SHA256":  "AD98B70CA1F4BD010F9BFD2DF30ABE8E24467EA456624CD3FE09A47D6A13A2B6"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4beWorksheetInput.ps1",
+                      "SHA256":  "15A611F265D7E23EB4491404408DC18D8C819068EE0A5B10A95AF0B2E8DDEBC1"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice4bfDeployment.ps1",
+                      "SHA256":  "CC9B83522545F9763D8C1A0D523EE2576DE72325FC7B6B5F9A7262C5D7EF79C3"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice5BehaviorLocks.ps1",
+                      "SHA256":  "8F0F26F42866B1CD37CB1D72433AF23F1FC95233734C1E755A96FE043C1D41BA"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice6ShadowOperations.ps1",
+                      "SHA256":  "3F95FA8423DFFB3CCDC4DC80D774719AD172021FD74FDABE83BC3DF1FF9EFB36"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice8ProductionRetirement.ps1",
+                      "SHA256":  "DB2A1F9B7B6785C233BB2F05336FEB55673012BF44713CCD98468B41A6E355E9"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-Slice9ProductionLayout.ps1",
+                      "SHA256":  "FE13C0CA08C504EE9E640E4511600CDDF30F5642BBD25D4DF7B5C4DC719A2F66"
+                  },
+                  {
+                      "Root":  "Worker",
+                      "RelativePath":  "tests/tooling/Test-VbaImportTestRegions.ps1",
+                      "SHA256":  "82882854E74CD042424D3CD145EAF817D88E7CD3A245FE0B9D5D09E6F82681EC"
+                  },
+                  {
+                      "Root":  "Diagnostic",
+                      "RelativePath":  "tests/tooling/Invoke-ExcelShutdownDiagnostic.ps1",
+                      "SHA256":  "18D0AF3CC09304E8855C0EFAE64D99EFD9027394CD0B8003ACAEB7D143CEC8E9"
+                  },
+                  {
+                      "Root":  "Diagnostic",
+                      "RelativePath":  "tests/tooling/ExcelShutdownTiming.ps1",
+                      "SHA256":  "FE4D150C62329FFE6D98713E47E28621D9837FE1FD20DC938CBEA8A589EB8A07"
+                  },
+                  {
+                      "Root":  "Diagnostic",
+                      "RelativePath":  "tests/tooling/ExcelShutdownTableVariant.ps1",
+                      "SHA256":  "6E7ABD33666E6ED67C88EE667CDA659BE950C977D10AF247ACB325C9306D2ADD"
+                  },
+                  {
+                      "Root":  "Diagnostic",
+                      "RelativePath":  "tests/tooling/Slice4beRecordingLifecycle.ps1",
+                      "SHA256":  "F35DFFDA2AE5C39E537FB7C2D41B6EA8E133B9ECD701A58CD1A9688F561A8DD5"
+                  },
+                  {
+                      "Root":  "Diagnostic",
+                      "RelativePath":  "tests/tooling/Test-ExcelShutdownTiming.ps1",
+                      "SHA256":  "F1DF6BA654977814595EEBBD276C19FD10977169148B0E0BD0745AF73BC47D23"
+                  },
+                  {
+                      "Root":  "Diagnostic",
+                      "RelativePath":  "tests/tooling/Test-ExcelShutdownVariants.ps1",
+                      "SHA256":  "9C4AFAF7763AD2488AC7BDE9882D4525C75CB9019128139CC5B0EB9B6179A257"
+                  },
+                  {
+                      "Root":  "Main",
+                      "RelativePath":  "deploy/validation-inventory-uom-02/invSys.Admin.xlam",
+                      "SHA256":  "86E792B7E4082D0F7992191922C003C2AF63D08C93CE99D40D8582D2DE5CF776"
+                  },
+                  {
+                      "Root":  "Main",
+                      "RelativePath":  "deploy/validation-inventory-uom-02/invSys.Core.xlam",
+                      "SHA256":  "959D72ED95EEA60D62A863F2E3F851D71DD699C9483496B1B63F59667292B7A7"
+                  },
+                  {
+                      "Root":  "Main",
+                      "RelativePath":  "deploy/validation-inventory-uom-02/invSys.Designs.Domain.xlam",
+                      "SHA256":  "67AA48E24AA6C5C6C7DC33FBC49776CDC0235FA8A7A9311D1DEA9D9276047322"
+                  },
+                  {
+                      "Root":  "Main",
+                      "RelativePath":  "deploy/validation-inventory-uom-02/invSys.Inventory.Domain.xlam",
+                      "SHA256":  "11F9476BD09CC48D38EC9284B6CF910100CBFA7BDFD4C343D7D12E625E409EE4"
+                  },
+                  {
+                      "Root":  "Main",
+                      "RelativePath":  "deploy/validation-inventory-uom-02/invSys.Operations.xlam",
+                      "SHA256":  "F81BCE2DB6DDAE2ACB23D079493223A9C91B9C5A43074E012911D4258FADCFC0"
+                  },
+                  {
+                      "Root":  "Main",
+                      "RelativePath":  "reports/runtime/monitor-inventory-desktop.ps1",
+                      "SHA256":  "C0FE928B413D6758D3835F929E5625E5099CE6C70CC3219E55914E30DBF47DDD"
+                  },
+                  {
+                      "Root":  "Main",
+                      "RelativePath":  "tools/diagnose-cursor-handoff.ps1",
+                      "SHA256":  "1140850465D1EEC595A71DA1A2AE3C3A24DA38F493BF4F53660A58336880FC36"
+                  },
+                  {
+                      "Root":  "Main",
+                      "RelativePath":  "reports/runtime/slice4be-admin-inventory-entry/060f370b1fb64ecd97505c881812e96d/red.json",
+                      "SHA256":  "3A54BC5B73E48FAB677F74F3EA5BE86B68AAD5FBF4A042528280659A8886E7DE"
+                  }
+              ]
+}
