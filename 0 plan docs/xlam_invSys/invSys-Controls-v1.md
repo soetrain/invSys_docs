@@ -1,7 +1,22 @@
 # invSys Form Controls v1
 
-**Version:** 1.793 -- D18-COURSE-01 Subject/Title contract approved;
+**Version:** 1.794 -- D18-COURSE-01 packaged guide evidence in progress;
 D18-RECORDING-LIST-01 proposed, not approved; final 4be-A acceptance pending.
+
+**D18-COURSE-01 packaged checkpoint, 2026-11-21:** Subject is separate from
+Title (`Name`) and raw recording rows. The packaged editor, Save, Published
+guides and expectation route passed 177/177 with exact Subject/Title storage,
+four labelled list columns, Subject search, current-policy reads and layout
+checks. The guide transfer route passed 69/69, including Subject/Title export
+and import and imported-origin wording. The real picker/editor route passed
+61/61, including per-character Subject responsiveness, buffered flush, stale
+Cancel/X refusal and sorting two subjects opposite creation order. Five
+instrumented XLAMs compiled in each route. The static scan has 391 components,
+6767 procedures, 193 duplicate candidates, 7 same-project late bindings,
+290 unresolved candidates and 30 warnings; the last three metrics and warning
+count match the 2026-11-20 scan. This is packaged evidence, not visible NAS
+course acceptance or 4be-A acceptance. Legacy schema 1/2 read/edit, broader
+release regressions and operator review remain open.
 
 **Approved D18-COURSE-01, 2026-11-21:** The Action Path guide editor changes
 the **Guide name** label to **Title** and adds a separate **Subject** field.
@@ -13,11 +28,11 @@ Title, Version and Tags columns, sort/group by Subject then Title, and search
 those fields and exact ID through the existing current-policy Core read.
 The fast local filter remains specific to Saved recordings. Older guides show
 Unassigned without rewriting them; exact version, visibility, transfer and
-provenance protections remain. Recordings receive no course label. These are
-approved requirements, not implemented or accepted controls yet. Packaged
-editor/library/transfer RED/GREEN, layout, compile, regression and visible
-NAS review are still required. See Architecture v4.11 D18-COURSE-01 and
-Plan 022.
+provenance protections remain. Recordings receive no course label. The current
+validation candidate implements these controls and has the focused packaged
+evidence above. Legacy compatibility, broader regression and visible NAS
+review are still required before acceptance. See Architecture v4.11
+D18-COURSE-01 and Plan 022.
 
 **Action Paths Search visible NAS review, 2026-11-21:** Justin reports that
 Search recordings works in the disposable WHT7025AE library with 29 saved

@@ -1,5 +1,16 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**2026-11-21 D18-COURSE-01 checkpoint:** The approved guide-only Subject/Title
+contract has focused packaged RED (171/3 on the prior candidate; list/search
+RED 174/3 on the first schema-3 build) and current packaged passes of 177/177
+editor/library/expectation, 69/69 transfer and 61/61 buffered input/picker.
+The five XLAMs compiled in each run. Static inventory shows unchanged
+duplicate, late-binding, unresolved and warning counts against the prior
+2026-11-20 scan. The raw-recording metadata proposal remains unapproved.
+Legacy schema 1/2 compatibility, broader regressions and visible NAS review
+remain before course acceptance; 4be-A and Release 1 remain open. See Controls
+1.794 and the course integration evidence in the code repository.
+
 **Approved D18-COURSE-01, 2026-11-21:** Learning Subject groups authored
 guides and Title is the existing guide Name displayed to learners. Tags are
 separate; raw recordings remain evidence without course labels. New/edited
