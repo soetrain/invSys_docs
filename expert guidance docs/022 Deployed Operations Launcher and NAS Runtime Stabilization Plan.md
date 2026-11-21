@@ -25,7 +25,7 @@ remains limited to Saved recordings. D13 starts with packaged
 editor/library/transfer behavioral RED,
 then build/compile, regressions and visible NAS course review. This approved
 contract does not make the separate saved-recording metadata proposal
-D18-RECORDING-LIST-01 approved. See Architecture v4.11 and Controls 1.793.
+D18-RECORDING-LIST-01 approved. See Architecture v4.11 and Controls 1.794.
 
 **Proposed D18-RECORDING-LIST-01, approval pending 2026-11-21:** The
 saved-recording rows need labelled Started (UTC), Recorded by, Actions and

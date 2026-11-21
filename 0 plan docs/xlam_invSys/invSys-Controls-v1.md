@@ -16,8 +16,8 @@ Subject and Title reopen, append together in schema 3 with exact predecessor
 binding, and leave earlier version/source bytes unchanged. The same five
 instrumented XLAMs compiled in each route. The static scan has 391 components,
 6767 procedures, 193 duplicate candidates, 7 same-project late bindings,
-290 unresolved candidates and 30 warnings; the last three metrics and warning
-count match the 2026-11-20 scan. This is packaged evidence, not visible NAS
+290 unresolved candidates and 30 warnings; those four counts match the
+2026-11-20 scan. This is packaged evidence, not visible NAS
 course acceptance or 4be-A acceptance. Legacy schema 1/2 read/edit, broader
 release regressions and operator review remain open.
 
