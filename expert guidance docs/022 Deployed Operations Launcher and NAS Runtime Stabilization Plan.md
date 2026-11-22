@@ -1,5 +1,22 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**2026-11-22 D18-SEARCH-INPUT-02 candidate checkpoint:** The approved local
+Search contract is implemented in the isolated five-XLAM candidate
+`validation-search-extension-20261122`; `deploy/current` and NAS are unchanged.
+Actual packaged picker and Published guides handlers passed 75/75 and 182/182.
+Native keyboard-to-painted-list gates passed 81/81 and 194/194 with natural
+Excel exits. The native fixtures held three action rows and two guide versions;
+larger-list NAS operator acceptance is still open. The old Published guides
+package reproduced search/selection RED (110 PASS, nine FAIL), while the old
+picker's native baseline lost its form during the no-match stage and cannot be
+used as a complete timing comparison. Current-policy selection, Create and
+Refresh remain Core guarded; per-key Core library/policy reads were zero.
+The retained transfer gate passed 21/21, restoring test settings and preserving
+all five package hashes. Static maintenance found 392 components, 6,772
+procedures, 1,265 candidates, 1,060 dynamic roots and 30 warnings: two local
+filter procedures added, with no candidate, dynamic-root or warning growth
+against the prior Close checkpoint. This is candidate evidence, not 4be-A acceptance.
+
 **2026-11-21 Published guides Close checkpoint:** The native title-bar X
 previously left the reader loaded. The actual packaged handler reproduced
 176 PASS / two Close failures. Deferred owner cleanup now runs after native
@@ -17,10 +34,9 @@ headers for both forms,
 retaining full current-policy and exact-source checks on selection, guide
 creation, Refresh and other evidence-bearing actions. This explicitly
 supersedes D18-COURSE-01's per-search-action Core check for local filtering
-only. Approval authorizes D13 implementation, not acceptance; neither search
-has changed yet. D13 must first cover both real Search handlers, current
-policy/identity, then packaged RED/GREEN, compile, retained regressions and
-visible NAS review. The Close correction is recorded above.
+only. Approval authorized D13 implementation; the candidate evidence above
+does not yet establish visible NAS acceptance. The Close correction is
+recorded above.
 
 **2026-11-21 D18-COURSE-01 checkpoint:** The approved guide-only Subject/Title
 contract has focused packaged RED (171/3 on the prior candidate; list/search

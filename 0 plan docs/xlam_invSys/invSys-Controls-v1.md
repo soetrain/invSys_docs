@@ -1,5 +1,18 @@
 # invSys Form Controls v1
 
+**D18-SEARCH-INPUT-02 candidate checkpoint, 2026-11-22:** Choose tracked
+actions Search actions and Published guides Search Subject, Title, Tags or ID
+now filter their Core-authorized loaded headers locally in the isolated
+`validation-search-extension-20261122` candidate. Actual packaged handler
+gates passed 75/75 and 182/182; native keyboard-to-painted-list gates passed
+81/81 and 194/194 on three action rows and two guide versions, with natural
+Excel exits. Search makes zero per-key Core library/policy reads; explicit
+selection, Create and Refresh retain current Core checks. The retained Close
+button and native X regression passed; transfer passed 21/21. Search labels,
+ControlIds, guide schema, recording semantics and release deployment did not
+change. Larger-list NAS
+operator acceptance and final 4be-A gates remain open.
+
 **Published guides Close checkpoint, 2026-11-21:** The actual packaged Close
 button, title-bar X and originating Viewer closure now dispose the reader.
 Focused RED was 176 PASS / two Close failures; the isolated deferred-cleanup
@@ -11,17 +24,16 @@ Visible NAS confirmation remains open.
 
 **Approved D18-SEARCH-INPUT-02, 2026-11-22 (Justin, this conversation):** The
 Choose tracked actions Search actions and Published guides Search
-Subject/Title/Tags/ID are slow in visible NAS review. Architecture v4.11
+Subject/Title/Tags/ID were slow in visible NAS review. Architecture v4.11
 requires local per-character filtering of previously authorized metadata with
-full current Core checks on selection, creation and Refresh. This would
-explicitly supersedes D18-COURSE-01's per-search-action Core check for local
-filtering only; no deployed control behavior, wording, ControlId or acceptance
-status changes yet. Approval authorizes test-first implementation, not acceptance.
+full current Core checks on selection, creation and Refresh. This explicitly
+supersedes D18-COURSE-01's per-search-action Core check for local filtering
+only. Approval authorizes test-first implementation, not acceptance.
 The Close/X correction has packaged evidence above. Protect both search
 controls with actual packaged handlers and visible operator evidence before
 marking them accepted.
 
-**Version:** 1.796 -- D18-SEARCH-INPUT-02 approved; implementation pending;
+**Version:** 1.797 -- D18-SEARCH-INPUT-02 candidate packaged/native GREEN;
 Published guides Close packaged GREEN;
 D18-COURSE-01 packaged guide evidence in progress;
 D18-RECORDING-LIST-01 proposed, not approved; final 4be-A acceptance pending.
