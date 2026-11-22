@@ -4488,29 +4488,35 @@ and responsiveness, no per-key Config/NAS read, current-policy selection and
 Refresh, stale session/warehouse refusal, and the retained reader/layout
 regressions before visible NAS acceptance.
 
-**Proposed D18-SEARCH-INPUT-02 (approval pending, 2026-11-21):** Extend
+**Approved D18-SEARCH-INPUT-02, 2026-11-22 (Justin, this conversation):** Extend
 the D18-SEARCH-INPUT-01 local-filter interaction to **Choose tracked actions**
 Search actions and **Published guides** Search Subject, Title, Tags or ID.
 Authorized picker Open or reopen, and published-guide Open or explicit Refresh,
 obtain a validated, policy-permitted snapshot of action headers or guide
-metadata from Core. Each
-text change filters only that snapshot in Operations after an in-memory check
+metadata from Core. Each text change filters only that snapshot in Operations after an in-memory check
 of the exact captured invSys session and warehouse. Typing neither reads Config,
 the NAS publication or guide files nor invokes a Core search. It never loads
 new evidence, writes a source, starts recording or creates activity.
 
-The picker keeps selected exact ActivityIds across filtering. A new selection,
-Create guide and picker Open/reopen still perform the full current Core permission,
-policy, publication and source-integrity checks. On every search text change,
+The picker keeps selected exact ActivityIds across filtering, including hidden
+selected rows; list replacement neither replays selection commands nor treats
+restoration as a new operator choice. A new selection, Create guide with the
+complete selected set, and picker Open/reopen still perform the full current
+Core permission, policy, publication and source-integrity checks. Stale
+authority or source binding refuses creation without silently dropping hidden
+selections. On every search text change,
 the published-guide reader clears its selection and authored/observed content
-and disables dependent actions. Selecting a guide and every other evidence-bearing
+and child bindings, suppresses incidental list-selection callbacks, and disables
+dependent actions without selecting the first match. Selecting a guide and every other evidence-bearing
 action recheck current policy, exact guide version/chain and captured context
 in Core. Published-guide Refresh reloads authorized metadata and reapplies the
-query. Previously
-loaded metadata may remain locally searchable after an external policy or
+query; a failed authorized reload clears the prior snapshot and retained
+evidence. Previously loaded metadata may remain locally searchable after an external policy or
 publication change until Refresh, but stale metadata cannot reveal a newly
 restricted observation/instruction, authorize selection or create/edit a guide.
-Loss of local session/warehouse binding clears the cached rows and content.
+Loss of local session/warehouse binding clears cached rows, selection and
+content. New source data appears only after an authorized reload; a snapshot
+cannot be retargeted to a new session or warehouse.
 This explicitly replaces D18-COURSE-01's per-search-action Core policy check
 and the earlier reader rule that included search among Core-checked actions;
 those rules continue to apply to selection, Refresh and all evidence-bearing
@@ -4588,9 +4594,10 @@ registry or business inventory.
 columns. Each immutable version remains separately selectable by its hidden
 exact ID/version/hash. List ordering is case-insensitive Subject then Title,
 with exact ID and numeric version as tie-breakers; Unassigned sorts last.
-Search matches Subject, Title, Tags and exact guide ID. Published-guide Search
-retains its current Core-backed policy check on each action; the separate
-D18-SEARCH-INPUT-01 local-filter exception applies only to Saved recordings.
+Search matches Subject, Title, Tags and exact guide ID. Approved
+D18-SEARCH-INPUT-02 supersedes the former per-search-action Core policy check
+for local filtering of an authorized metadata snapshot. D18-SEARCH-INPUT-01
+continues to govern Saved recordings.
 Selection and every Core-backed action recheck current policy, integrity and
 exact binding; search never exposes restricted authored steps or observations.
 Refresh reloads
@@ -4870,8 +4877,9 @@ Core validates the selected guide and its complete predecessor chain, including
 exact prior RecordId/hash and distinct revision identities. Invalid, missing or
 cross-warehouse records show unavailable with a reason; reads never repair,
 rewrite, create folders or silently choose an older/newer version. Changed bytes
-under an already selected version invalidate that selection. Current visibility
-is checked on every reader action; hidden step instructions and observations are
+under an already selected version invalidate that selection. Except for the
+D18-SEARCH-INPUT-02 local Search presentation, current visibility is checked
+on every reader action; hidden step instructions and observations are
 withheld with **Hidden by policy** and incomplete-evidence feedback. Author name,
 tags and general instructions remain authored metadata, never observed proof.
 

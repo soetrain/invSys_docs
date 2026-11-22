@@ -9,18 +9,20 @@ contract and ControlIds are unchanged. A scheduling failure leaves the reader
 visible with **Unable to close Published guides. Use Close or try again.**
 Visible NAS confirmation remains open.
 
-**Proposed D18-SEARCH-INPUT-02, 2026-11-21 (approval pending):** The
+**Approved D18-SEARCH-INPUT-02, 2026-11-22 (Justin, this conversation):** The
 Choose tracked actions Search actions and Published guides Search
 Subject/Title/Tags/ID are slow in visible NAS review. Architecture v4.11
-proposes local per-character filtering of previously authorized metadata with
+requires local per-character filtering of previously authorized metadata with
 full current Core checks on selection, creation and Refresh. This would
-explicitly change D18-COURSE-01's per-search-action Core check; no deployed
-control behavior, wording, ControlId or acceptance status changes yet.
+explicitly supersedes D18-COURSE-01's per-search-action Core check for local
+filtering only; no deployed control behavior, wording, ControlId or acceptance
+status changes yet. Approval authorizes test-first implementation, not acceptance.
 The Close/X correction has packaged evidence above. Protect both search
 controls with actual packaged handlers and visible operator evidence before
 marking them accepted.
 
-**Version:** 1.795 -- Published guides Close packaged GREEN;
+**Version:** 1.796 -- D18-SEARCH-INPUT-02 approved; implementation pending;
+Published guides Close packaged GREEN;
 D18-COURSE-01 packaged guide evidence in progress;
 D18-RECORDING-LIST-01 proposed, not approved; final 4be-A acceptance pending.
 

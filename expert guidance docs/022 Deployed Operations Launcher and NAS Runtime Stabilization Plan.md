@@ -7,17 +7,18 @@ QueryClose returns; the focused Viewer, guide-library and expectation gate
 passed 178/178 with natural Excel exit. The Close button, native X, Viewer
 closure, source-byte preservation and layout checks passed. This fixes the
 Close defect under the existing D18 reader contract. The two search handlers
-remain governed by pending D18-SEARCH-INPUT-02; visible NAS acceptance is open.
+were governed by then-pending D18-SEARCH-INPUT-02; visible NAS acceptance is open.
 
-**Proposed D18-SEARCH-INPUT-02, 2026-11-21 (approval pending):** The live
+**Approved D18-SEARCH-INPUT-02, 2026-11-22 (Justin, this conversation):** The live
 operator reports unusably slow Search actions in Choose tracked actions and
 Search Subject/Title/Tags/ID in Published guides. Architecture v4.11
-proposes cached local per-character filtering of only Core-authorized
+requires cached local per-character filtering of only Core-authorized
 headers for both forms,
 retaining full current-policy and exact-source checks on selection, guide
-creation, Refresh and other evidence-bearing actions. This would explicitly
-supersede D18-COURSE-01's per-search-action Core check; it is not implemented
-or approved yet. D13 must first cover both real Search handlers, current
+creation, Refresh and other evidence-bearing actions. This explicitly
+supersedes D18-COURSE-01's per-search-action Core check for local filtering
+only. Approval authorizes D13 implementation, not acceptance; neither search
+has changed yet. D13 must first cover both real Search handlers, current
 policy/identity, then packaged RED/GREEN, compile, retained regressions and
 visible NAS review. The Close correction is recorded above.
 
