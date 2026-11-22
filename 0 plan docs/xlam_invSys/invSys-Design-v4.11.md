@@ -4488,6 +4488,40 @@ and responsiveness, no per-key Config/NAS read, current-policy selection and
 Refresh, stale session/warehouse refusal, and the retained reader/layout
 regressions before visible NAS acceptance.
 
+**Proposed D18-SEARCH-INPUT-02 (approval pending, 2026-11-21):** Extend
+the D18-SEARCH-INPUT-01 local-filter interaction to **Choose tracked actions**
+Search actions and **Published guides** Search Subject, Title, Tags or ID.
+Authorized picker Open or reopen, and published-guide Open or explicit Refresh,
+obtain a validated, policy-permitted snapshot of action headers or guide
+metadata from Core. Each
+text change filters only that snapshot in Operations after an in-memory check
+of the exact captured invSys session and warehouse. Typing neither reads Config,
+the NAS publication or guide files nor invokes a Core search. It never loads
+new evidence, writes a source, starts recording or creates activity.
+
+The picker keeps selected exact ActivityIds across filtering. A new selection,
+Create guide and picker Open/reopen still perform the full current Core permission,
+policy, publication and source-integrity checks. On every search text change,
+the published-guide reader clears its selection and authored/observed content
+and disables dependent actions. Selecting a guide and every other evidence-bearing
+action recheck current policy, exact guide version/chain and captured context
+in Core. Published-guide Refresh reloads authorized metadata and reapplies the
+query. Previously
+loaded metadata may remain locally searchable after an external policy or
+publication change until Refresh, but stale metadata cannot reveal a newly
+restricted observation/instruction, authorize selection or create/edit a guide.
+Loss of local session/warehouse binding clears the cached rows and content.
+This explicitly replaces D18-COURSE-01's per-search-action Core policy check
+and the earlier reader rule that included search among Core-checked actions;
+those rules continue to apply to selection, Refresh and all evidence-bearing
+actions. No guide schema, source identity, wording or recording rule changes.
+D13 must prove prompt native per-character input through both actual form
+handlers, zero per-key Core library/policy or NAS reads, picker identity
+retention, current-policy
+selection/Refresh, stale-context refusal, close/X behavior and retained
+published-guide/picker layout and integrity regressions before visible NAS
+operator acceptance.
+
 **Proposed D18-RECORDING-LIST-01 (approval pending, 2026-11-21):** The
 Operations **Saved recordings** list should identify runs using four labelled,
 visible columns: **Started (UTC)** from the Start entry, **Recorded by** from

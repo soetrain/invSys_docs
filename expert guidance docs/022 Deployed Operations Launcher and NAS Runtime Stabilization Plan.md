@@ -1,5 +1,18 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**Proposed D18-SEARCH-INPUT-02, 2026-11-21 (approval pending):** The live
+operator reports unusably slow Search actions in Choose tracked actions and
+Search Subject/Title/Tags/ID in Published guides; the latter reader also
+fails to close in the review session. Architecture v4.11 proposes cached local
+per-character filtering of only Core-authorized headers for both forms,
+retaining full current-policy and exact-source checks on selection, guide
+creation, Refresh and other evidence-bearing actions. This would explicitly
+supersede D18-COURSE-01's per-search-action Core check; it is not implemented
+or approved yet. D13 must first cover both real Search handlers, current
+policy/identity and Close/X, then packaged RED/GREEN, compile, retained
+regressions and visible NAS review. The Close defect is separately diagnosed
+under the existing reader Close requirement.
+
 **2026-11-21 D18-COURSE-01 checkpoint:** The approved guide-only Subject/Title
 contract has focused packaged RED (171/3 on the prior candidate; list/search
 RED 174/3 on the first schema-3 build) and current packaged passes of 177/177

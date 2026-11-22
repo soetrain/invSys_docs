@@ -1,5 +1,16 @@
 # invSys Form Controls v1
 
+**Proposed D18-SEARCH-INPUT-02, 2026-11-21 (approval pending):** The
+Choose tracked actions Search actions and Published guides Search
+Subject/Title/Tags/ID are slow in visible NAS review. Architecture v4.11
+proposes local per-character filtering of previously authorized metadata with
+full current Core checks on selection, creation and Refresh. This would
+explicitly change D18-COURSE-01's per-search-action Core check; no deployed
+control behavior, wording, ControlId or acceptance status changes yet.
+Published guides Close/X failure is a separate open defect under its existing
+Close requirement. Protect all three controls with actual packaged handlers
+and visible operator evidence before marking them accepted.
+
 **Version:** 1.794 -- D18-COURSE-01 packaged guide evidence in progress;
 D18-RECORDING-LIST-01 proposed, not approved; final 4be-A acceptance pending.
 
