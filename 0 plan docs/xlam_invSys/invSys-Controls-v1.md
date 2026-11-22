@@ -1,5 +1,14 @@
 # invSys Form Controls v1
 
+**Published guides Close checkpoint, 2026-11-21:** The actual packaged Close
+button, title-bar X and originating Viewer closure now dispose the reader.
+Focused RED was 176 PASS / two Close failures; the isolated deferred-cleanup
+build passed 178/178, including retained layout, current-policy, exact-guide
+and source-byte checks, with natural Excel exit. The form's existing Close
+contract and ControlIds are unchanged. A scheduling failure leaves the reader
+visible with **Unable to close Published guides. Use Close or try again.**
+Visible NAS confirmation remains open.
+
 **Proposed D18-SEARCH-INPUT-02, 2026-11-21 (approval pending):** The
 Choose tracked actions Search actions and Published guides Search
 Subject/Title/Tags/ID are slow in visible NAS review. Architecture v4.11
@@ -7,11 +16,12 @@ proposes local per-character filtering of previously authorized metadata with
 full current Core checks on selection, creation and Refresh. This would
 explicitly change D18-COURSE-01's per-search-action Core check; no deployed
 control behavior, wording, ControlId or acceptance status changes yet.
-Published guides Close/X failure is a separate open defect under its existing
-Close requirement. Protect all three controls with actual packaged handlers
-and visible operator evidence before marking them accepted.
+The Close/X correction has packaged evidence above. Protect both search
+controls with actual packaged handlers and visible operator evidence before
+marking them accepted.
 
-**Version:** 1.794 -- D18-COURSE-01 packaged guide evidence in progress;
+**Version:** 1.795 -- Published guides Close packaged GREEN;
+D18-COURSE-01 packaged guide evidence in progress;
 D18-RECORDING-LIST-01 proposed, not approved; final 4be-A acceptance pending.
 
 **D18-COURSE-01 packaged checkpoint, 2026-11-21:** Subject is separate from

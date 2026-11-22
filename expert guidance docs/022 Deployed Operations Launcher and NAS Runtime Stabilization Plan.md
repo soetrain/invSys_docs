@@ -1,17 +1,25 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**2026-11-21 Published guides Close checkpoint:** The native title-bar X
+previously left the reader loaded. The actual packaged handler reproduced
+176 PASS / two Close failures. Deferred owner cleanup now runs after native
+QueryClose returns; the focused Viewer, guide-library and expectation gate
+passed 178/178 with natural Excel exit. The Close button, native X, Viewer
+closure, source-byte preservation and layout checks passed. This fixes the
+Close defect under the existing D18 reader contract. The two search handlers
+remain governed by pending D18-SEARCH-INPUT-02; visible NAS acceptance is open.
+
 **Proposed D18-SEARCH-INPUT-02, 2026-11-21 (approval pending):** The live
 operator reports unusably slow Search actions in Choose tracked actions and
-Search Subject/Title/Tags/ID in Published guides; the latter reader also
-fails to close in the review session. Architecture v4.11 proposes cached local
-per-character filtering of only Core-authorized headers for both forms,
+Search Subject/Title/Tags/ID in Published guides. Architecture v4.11
+proposes cached local per-character filtering of only Core-authorized
+headers for both forms,
 retaining full current-policy and exact-source checks on selection, guide
 creation, Refresh and other evidence-bearing actions. This would explicitly
 supersede D18-COURSE-01's per-search-action Core check; it is not implemented
 or approved yet. D13 must first cover both real Search handlers, current
-policy/identity and Close/X, then packaged RED/GREEN, compile, retained
-regressions and visible NAS review. The Close defect is separately diagnosed
-under the existing reader Close requirement.
+policy/identity, then packaged RED/GREEN, compile, retained regressions and
+visible NAS review. The Close correction is recorded above.
 
 **2026-11-21 D18-COURSE-01 checkpoint:** The approved guide-only Subject/Title
 contract has focused packaged RED (171/3 on the prior candidate; list/search
