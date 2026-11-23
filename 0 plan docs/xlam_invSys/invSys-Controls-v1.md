@@ -1,5 +1,14 @@
 # invSys Form Controls v1
 
+**2026-11-23 Choose tracked actions title-bar X.** The November 22 picker
+survived a native close request after reopening. Its QueryClose handler
+cancelled the close and called back into the parent to unload the same form.
+The corrected Operations picker lets Excel complete the close and releases its
+selection and its exact owner reference. The focused curation suite passed
+77/77, including native X, subsequent reopen, Cancel, parent/Viewer closure,
+source integrity and immutable guide saves. Search, labels and control IDs
+retain their existing contracts.
+
 **2026-11-23 repeat-click verification.** The November 22 packages passed
 92/92 in the disposable action-picker fixture. Published guides and Choose
 tracked actions each opened and closed twice with one native click per action.

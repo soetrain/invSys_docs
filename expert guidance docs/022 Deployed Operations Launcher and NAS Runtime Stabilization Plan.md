@@ -1,5 +1,14 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**2026-11-23 picker native-close regression.** A reopened Choose tracked
+actions picker stayed loaded after a native X on the November 22 packages.
+The focused run recorded 14 passes, the failed disposal assertion and a
+consequent harness stop. The corrected Operations form releases its draft and
+allows the native close to finish. The rebuilt five-XLAM candidate
+`validation-guide-picker-close-20261123` passed the 77-check curation suite
+and explicit package compilation. The previous date's package-specific
+acceptance records below retain their original scope.
+
 **2026-11-23 packaged qualification.** On the November 22 candidate the
 picker suite passed 92/92, including two native open/close cycles for each
 guide child and one-click editor entry from selected actions. The guide
