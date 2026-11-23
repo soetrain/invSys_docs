@@ -1,5 +1,20 @@
 # invSys Form Controls v1
 
+**2026-11-23 repeat-click verification.** The November 22 packages passed
+92/92 in the disposable action-picker fixture. Published guides and Choose
+tracked actions each opened and closed twice with one native click per action.
+Both the child window and loaded form were gone after each close. One click
+on Create guide in the picker displayed the editor. After reopening, Search
+found the exact actions for a displayed caption, retained selected ActivityIds,
+cleared the list on no match and restored all three rows on clearing the text.
+The separate populated guide suite passed 195/195. One click on Create guide
+for a selected recording displayed the editor. Published guides Search
+restored both saved versions after clearing a no-match query, and its Close
+button and native X disposed the reader. The reported automation error did
+not occur in either run. A separate picker native X trial stopped during
+cursor restoration, before sending the close message. Larger-list NAS and
+operator acceptance remain open.
+
 **2026-11-23 single-click check.** On disposable copies of the November 22
 candidate, one native click opened the empty Published guides reader and one
 click closed it. Both its window and loaded form were gone. Cursor restoration
