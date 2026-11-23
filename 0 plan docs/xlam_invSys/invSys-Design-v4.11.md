@@ -397,6 +397,19 @@ remain required before acceptance.
 
 ### D18 -- Shared Events and How-To/Diagnostic Action Paths (R1 Locked)
 
+**Original user description of Action Path (verbatim; intent, not a replacement
+for the approved D18 contract):**
+
+> Action Path uses Event Logger to get a record of user-side actions taken in invSys. This record is saved and used to train other users, other users follow the guidance created by the Action Path system. systems evolve, breaking the guidance, thus Action Path's should also be runnable-macro like, to prove the guidance works. if broken, somebody gets notified to fix or something.
+>
+> Action Path's created from the Event Logger need to be importable and exportable, so they can be created in one warehouse owned by someone, then exported and imported to another warehouse, that would be a warehouse created for training.
+>
+> it is easy to create Warehouses, that can be a collection of warehouses if one wants, via the location field (good enough for R1 release). So creating fake training warehouses is no problem in invSys.
+>
+> Event Logger needs to be capable of logging all user-side actions in the system, including Admin actions, for training purposes.
+>
+> What Event Logger logs, needs to be editable in Admin, on or off, for real warehouses where real inventory and a team is using the system, because real warehouses will have roles and rights boundaries between users. in Admin, Event Logger options are needed to record or not a user-side event and to record or not a user.
+
 **D18-REPLAY-01 -- Approved R1 delivery and execution contract**
 
 **Approved, 2026-10-04:** The user explicitly approved D18-REPLAY-01, including
