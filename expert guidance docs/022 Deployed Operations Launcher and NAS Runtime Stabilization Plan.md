@@ -1,5 +1,17 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**2026-11-23 visible review provenance correction:** Justin observed unfiltered
+Choose tracked actions Search, slow Published guides Search and nonclosing forms
+in Excel. Read-only VBE inspection of that exact live Excel process showed all
+five running invSys projects came from `validation-action-search-final-20261120`,
+although Excel's Add-ins registration listed
+`validation-search-extension-20261122`. The Published guides form's old
+**Search name, tags or ID** label corroborated the running-project identity;
+the candidate source says **Search Subject, Title, Tags or ID**. That review
+does not qualify or refute the November 22 candidate. Excel had zero open
+workbooks and quit normally. Fresh-process candidate loading and larger-list
+NAS operator review remain required before 4be-A acceptance.
+
 **2026-11-22 D18-SEARCH-INPUT-02 candidate checkpoint:** The approved local
 Search contract is implemented in the isolated five-XLAM candidate
 `validation-search-extension-20261122`; `deploy/current` and NAS are unchanged.

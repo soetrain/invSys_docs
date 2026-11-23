@@ -1,5 +1,15 @@
 # invSys Form Controls v1
 
+**2026-11-23 visible review provenance:** The reported Choose tracked actions
+unfiltered Search, slow Published guides Search and nonclosing forms were
+observed in an Excel process whose running VBA projects all pointed to the
+older `validation-action-search-final-20261120` packages. The Add-ins list
+pointed to `validation-search-extension-20261122`, but it did not replace the
+already loaded projects. The older Published guides **Search name, tags or ID**
+label was visible. This is not candidate acceptance or candidate RED. Excel
+closed normally with zero open workbooks. Fresh-process candidate review of
+both Search controls and Close/X remains open.
+
 **D18-SEARCH-INPUT-02 candidate checkpoint, 2026-11-22:** Choose tracked
 actions Search actions and Published guides Search Subject, Title, Tags or ID
 now filter their Core-authorized loaded headers locally in the isolated
@@ -33,7 +43,7 @@ The Close/X correction has packaged evidence above. Protect both search
 controls with actual packaged handlers and visible operator evidence before
 marking them accepted.
 
-**Version:** 1.797 -- D18-SEARCH-INPUT-02 candidate packaged/native GREEN;
+**Version:** 1.798 -- visible review provenance corrected; candidate NAS review open;
 Published guides Close packaged GREEN;
 D18-COURSE-01 packaged guide evidence in progress;
 D18-RECORDING-LIST-01 proposed, not approved; final 4be-A acceptance pending.
