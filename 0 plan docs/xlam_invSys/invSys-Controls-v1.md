@@ -1,5 +1,12 @@
 # invSys Form Controls v1
 
+**2026-11-23 single-click check.** On disposable copies of the November 22
+candidate, one native click opened the empty Published guides reader and one
+click closed it. Both its window and loaded form were gone. Cursor restoration
+failed during the second opening, before the second Close could be evaluated.
+One-click Create guide, picker Search after reopen, both repeated Close actions,
+and visible NAS acceptance remain open. See handoff 262 for the focused run.
+
 **2026-11-23 visible review provenance:** The reported Choose tracked actions
 unfiltered Search, slow Published guides Search and nonclosing forms were
 observed in an Excel process whose running VBA projects all pointed to the
