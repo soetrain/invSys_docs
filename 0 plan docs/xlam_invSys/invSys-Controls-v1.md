@@ -18,6 +18,12 @@ its own navigation ID. On catalog 47 the enabled-policy fixture saved the
 new entity and event but produced no Add Item activity. Tracking off still
 allowed the same business action. Focused RED was 27 passes and six failures.
 
+The catalog 48 Add Item build passed 96/96 through the real control and the
+creation owner. This included saved, pending, partial and pre-write refusal
+outcomes, the original actor signing out, tracking disabled and an optional
+recording write failing at entry or completion. In both recording failures
+the ordinary inventory action saved and the operator received one warning.
+
 **November 24 Create Guide feedback.** Action Paths and Choose tracked actions
 temporarily append “ - Opening guide...” to their title when Create Guide is
 clicked. The ordinary title returns when opening finishes. On the new build,
