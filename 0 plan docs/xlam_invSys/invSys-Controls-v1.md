@@ -1,5 +1,14 @@
 # invSys Form Controls v1
 
+**November 24 picker close correction.** On the deferred-close build, X
+hides the picker and Excel unloads that exact instance after the native
+event returns. In the 31-action NAS fixture the reopened picker disappeared
+from both Windows and the VBA forms collection in 3.18 seconds. The
+replacement picker stayed open on immediate reentry and its Cancel button
+disposed it. The full 34-check NAS trial passed. Open took 4.97 seconds,
+single-key Search updates took 33–47 ms and clearing restored all rows
+in 31 ms.
+
 **November 24 NAS picker review.** In a fresh Training warehouse on the UAT
 share, a 31-action picker opened in 3.98 seconds. The first typed character
 appeared in 36 ms, the next two in 27 ms each and Backspace in 28 ms.

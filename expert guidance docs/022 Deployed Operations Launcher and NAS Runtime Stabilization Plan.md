@@ -1,5 +1,16 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**November 24 NAS close correction.** The reopened picker on the November
+23 packages repeatedly left one loaded VBA form after the window disappeared.
+In the new five-package build, `validation-guide-picker-deferred-20261124`,
+the native X schedules an exact-instance unload. The fresh 31-action NAS
+test passed 34/34 through native Search, Cancel, reopened X and immediate
+reentry. The package compile test passed cold Operations initialization
+and five compiles. An ordinary Excel session loaded all five new projects
+from the workstation startup entries and the read-only review host closed
+with package and host hashes preserved. This establishes picker behavior on
+the new build. Reusable Production and overall 4be-A remain open.
+
 **November 24, 4be-A.** The November 23 candidate passed populated picker
 Search on a new NAS Training fixture with 31 actions. All measured native
 Search stages finished within 60 ms, retained the selected action and made
