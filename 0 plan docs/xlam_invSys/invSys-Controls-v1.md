@@ -1,5 +1,15 @@
 # invSys Form Controls v1
 
+**November 24 NAS picker review.** In a fresh Training warehouse on the UAT
+share, a 31-action picker opened in 3.98 seconds. The first typed character
+appeared in 36 ms, the next two in 27 ms each and Backspace in 28 ms.
+A no-match query cleared the list in 59 ms. Clearing the query restored all
+31 rows in 28 ms. Caption filtering returned exactly the expected actions,
+including restoration of the previously selected action, with zero per-key
+Core library or policy reads. Cancel disposed the picker. After reopening,
+the title-bar X destroyed the visible window but left one VBA picker loaded
+ten seconds later. This is a failed close check on the November 23 packages.
+
 **2026-11-24 Choose tracked actions Search.** Native Search on a disposable
 31-action publication updated single-key results in 28–43 ms. A no-match
 query showed zero rows in 84 ms. Clearing restored all 31 rows in 30 ms.

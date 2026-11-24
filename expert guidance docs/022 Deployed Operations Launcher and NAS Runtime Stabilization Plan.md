@@ -1,5 +1,16 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**November 24, 4be-A.** The November 23 candidate passed populated picker
+Search on a new NAS Training fixture with 31 actions. All measured native
+Search stages finished within 60 ms, retained the selected action and made
+zero per-key Core library or policy reads. Two NAS runs failed the reopened
+picker's native close check. The second established that the window was
+gone but one VBA picker remained loaded after ten seconds. The synchronous
+Cancel button on that fixture passed. This remains a 4be-A release finding.
+The same candidate passed guide transfer 85/85, packaged smoke 86/86, saved
+guide/workbook restart 33/33 and complete/incomplete Receiving comparison
+30/30. The separate full reusable Production test crashed during edit/export.
+
 **2026-11-23 picker native-close regression.** A reopened Choose tracked
 actions picker stayed loaded after a native X on the November 22 packages.
 The focused run recorded 14 passes, the failed disposal assertion and a
