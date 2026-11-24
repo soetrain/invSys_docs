@@ -1,5 +1,16 @@
 # invSys Form Controls v1
 
+**November 24 NAS form retest.** On the live-close build, Published Guides
+opened in 2.50–3.16 seconds and closed in 1.27–1.51 seconds across two
+one-click cycles. Choose tracked actions opened in 5.17–5.32 seconds and
+closed in 1.30–1.32 seconds. Its title-bar X unloaded the reopened form.
+An immediate replacement stayed usable and closed with Cancel. Native
+Search filtered the displayed actions and retained the selected identity
+without per-key Core reads. Create Guide from selected actions acknowledged
+one click in 184 ms. The broader curation trial stopped at a later
+automation refusal during the permission test. The workstation's ordinary
+Excel startup loaded all five live-close projects from the checked paths.
+
 **November 24 Admin > Inventory > Add Item.** D18 catalog 48 assigns
 `ADMIN_INVENTORY_ADD` to the actual Add Item command. Its completed result
 requires the creation owner's exact saved event. Choosing Add Item Mode has
