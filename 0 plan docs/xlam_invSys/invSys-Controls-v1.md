@@ -1,5 +1,11 @@
 # invSys Form Controls v1
 
+**2026-11-24 Choose tracked actions Search.** Native Search on a disposable
+31-action publication updated single-key results in 28–43 ms. A no-match
+query showed zero rows in 84 ms. Clearing restored all 31 rows in 30 ms.
+The selected action survived a filter that hid it. Opening the picker took
+1.80 seconds. These measurements are from the local validation host.
+
 **2026-11-23 Choose tracked actions title-bar X.** The November 22 picker
 survived a native close request after reopening. Its QueryClose handler
 cancelled the close and called back into the parent to unload the same form.
