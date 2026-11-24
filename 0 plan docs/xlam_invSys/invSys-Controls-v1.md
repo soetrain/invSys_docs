@@ -1,5 +1,13 @@
 # invSys Form Controls v1
 
+**November 24 populated NAS guide library.** Two published versions appeared
+in the signed-in Training fixture. Native typing updated the list in 23–26 ms,
+the no-match query cleared it in 76 ms, and clearing restored both rows in
+26 ms. The Close button and title-bar X each unloaded the reader. One native
+Create Guide click on the selected recording opened one editor. It took
+5.40 seconds to appear and 7.88 seconds before Excel answered the form-count
+read. First-click feedback and initial load time need improvement.
+
 **November 24 picker close correction.** On the deferred-close build, X
 hides the picker and Excel unloads that exact instance after the native
 event returns. In the 31-action NAS fixture the reopened picker disappeared
