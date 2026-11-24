@@ -888,6 +888,27 @@ is lost, the original attempt can remain incomplete. Exclude entered item
 data, quantities, keys, remarks and raw errors from optional activity. The
 Add Item Mode navigation control remains a separate observation.
 
+**Inventory Delete Item observation (2026-11-24, D18 semantic inheritance).**
+Catalog 49 appends `ADMIN_INVENTORY_DELETE`, caption Delete Item, class
+Command, owner ADMIN_INVENTORY, capability ADMIN_MAINT. The actual form
+records REQUESTED before confirmation. CANCELLED and REFUSED are known
+pre-write outcomes (Unchanged). APPLIED/Changed requires this command's
+submitted Inventory event, exact saved retirement and confirmed catalog
+retirement. SAVED/Changed identifies the confirmed catalog save when there
+is no new event owned by this click. Both may satisfy CommandCompleted.
+Only independent published source evidence can satisfy SourceEventsApplied.
+
+PENDING/Unknown records a known submission with unconfirmed application.
+PARTIAL/Changed requires a verified saved retirement event from this click
+and incomplete command or catalog confirmation. FAILED/Unknown covers an
+uncertain failure. APPLIED, PENDING and PARTIAL each carry one exact
+Submitted Inventory reference. FAILED may carry one owner-supplied Submitted
+or Unknown reference. The other outcomes carry none. An event found solely
+by comparing an earlier pending payload must never be attributed to this
+click. Recording authority loss can leave the original request incomplete.
+Keep the reason, SKU, entity keys and entered data out of the optional
+activity. D8-INV-01 continues to govern retirement and retry.
+
 **Inventory worksheet observation refinement (2026-10-21, D18 semantic inheritance):**
 Catalog47 appends `ADMIN_INVENTORY_CREATE_TABLE` and
 `ADMIN_INVENTORY_UPLOAD_TABLE`, both Command/ADMIN_INVENTORY/ADMIN_MAINT.

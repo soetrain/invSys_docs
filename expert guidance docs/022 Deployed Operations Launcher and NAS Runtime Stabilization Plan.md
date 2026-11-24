@@ -1,5 +1,12 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**November 24 inventory retirement coverage.** Under D18 and D8-INV-01,
+exercise the real Delete Item handler, its confirmation and the independent
+saved states of the selected entities and catalog. Catalog 49 adds the
+optional retirement observation. Keep the original actor and event identity,
+and exercise loss of authority after application. A retry's matching payload
+cannot establish that the current click submitted the earlier event.
+
 **November 24 inventory creation coverage.** Under D18's existing
 comprehensive-coverage and owner-evidence rules, exercise the modal Add Item
 click with tracking enabled, the creation owner's exact Inventory receipt,

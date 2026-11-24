@@ -1,5 +1,13 @@
 # invSys Form Controls v1
 
+**November 24 Admin > Add/Edit Inventory > Delete Item.** D18 catalog 49
+identifies the confirmed retirement command as ADMIN_INVENTORY_DELETE.
+The test on catalog 48 retired two exact entities and preserved the extra
+columns, but the original click and its event were missing from Action
+Paths. Focused RED was 29 passes and five failures. The control's guide
+conclusion must distinguish a verified new retirement event and catalog
+save from a confirmed catalog save without a new event.
+
 **November 24 Published Guides title-bar X.** With Excel's callback held
 until after a reopen, the old reader blocked the replacement's X. Two
 checks failed. On the reader-reopen build each window keeps its own close
