@@ -5986,6 +5986,27 @@ acceptance is introduced; the code Auth-write receipt records the exact scope.
 ---
 ### D8-CREATE-01 — Create New Warehouse interactive authority (APPROVED,2026-10-13)
 
+**Proposed 4be-A guide-author onboarding, November 24, 2026. Owner decision pending.**
+When an authorized administrator creates a warehouse with its initial Admin account,
+Create Warehouse would require entry and confirmation of that account's invSys PIN
+in masked fields before creating the destination. Core would use the existing
+credential writer during explicit bootstrap. The source administrator
+and destination account retain their distinct identities under D8-CREATE-01.
+The two existing bootstrap roles would remain the defaults. The new warehouse's
+signed-in administrator could explicitly grant or revoke the existing
+`ACTION_PATH_MAINT` capability through Users & Roles for the selected
+user, warehouse and station under D8-USERS-01. Older six-choice callers would
+preserve any existing guide grant. Authoring, editing and transfer would continue
+to require the separate guide capability. PINs would be excluded from Action
+Paths, saved drafts, setup instructions, reports and logs.
+
+Proposed D13 evidence uses the actual packaged Create, Sign In and Users & Roles
+handlers in a disposable Training warehouse. Check initial sign-in, refusal of
+guide maintenance before the grant, authorized grant and revocation, preservation
+of other users and roles, and cold reopen. This proposal neither changes an
+existing warehouse nor authorizes changing the bootstrap or grant contract
+before owner approval.
+
 The user approved the revised contract below on2026-10-13, including reopened
 publication, source authorization, post-confirmation checks and redaction.
 

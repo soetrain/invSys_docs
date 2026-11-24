@@ -572,6 +572,13 @@ not prove ordinary user-side onboarding. This records observed reachability only
 no new control, permission rule, wording or acceptance is approved here. An
 explicit contract decision and D13 coverage are needed before implementation.
 
+November 24 proposal, awaiting owner decision. Create Warehouse would show
+masked PIN and confirmation fields for the initial destination Admin. Users
+& Roles would expose a separate **Maintain Action Paths** choice for a
+selected user in the current warehouse and station. The packaged acceptance
+path would use ordinary first sign-in and explicit grant, authoring and
+revocation. These proposed controls are not available in the current build.
+
 **D13 current-package early B0 replay checkpoint, 2026-11-14:** V20's five
 XLAM bytes differ from the current validation candidate, so standalone v82
 rechecked Receiving replay. It passed 121/121 exact ordered identities; all

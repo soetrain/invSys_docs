@@ -586,6 +586,14 @@ or normative contract change is approved by this checkpoint; the setup choice
 and a user-side onboarding proposal remain open. Do not mark 4be-A or human B0
 accepted.
 
+November 24 follow-up. The proposed guide-author onboarding decision under
+D8-CREATE-01 would let the creator set the initial destination Admin PIN and
+let a signed-in administrator explicitly assign the guide right through Users
+& Roles. Core's current Users save accepts only the six existing checkbox
+positions. Prove the ordinary form-to-sign-in-to-grant path and revocation
+in a new Training warehouse after approval. Prepared-fixture guide tests
+remain valid for their signed-in scope.
+
 **2026-11-14 current-package early B0 replay checkpoint:** Read-only
 comparison found v20's five XLAMs differ from the current validation set.
 Standalone v82 therefore ran the existing 121-check Receiving replay on the
