@@ -1,5 +1,12 @@
 # invSys Form Controls v1
 
+**November 24 Admin > Inventory > Add Item.** D18 catalog 48 assigns
+`ADMIN_INVENTORY_ADD` to the actual Add Item command. Its completed result
+requires the creation owner's exact saved event. Choosing Add Item Mode has
+its own navigation ID. On catalog 47 the enabled-policy fixture saved the
+new entity and event but produced no Add Item activity. Tracking off still
+allowed the same business action. Focused RED was 27 passes and six failures.
+
 **November 24 Create Guide feedback.** Action Paths and Choose tracked actions
 temporarily append “ - Opening guide...” to their title when Create Guide is
 clicked. The ordinary title returns when opening finishes. On the new build,

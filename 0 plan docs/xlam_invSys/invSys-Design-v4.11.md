@@ -869,6 +869,25 @@ preserve exact prior ordered checks;16 captures reviewed. Five compiles/cold sta
 See code `plan022_slice4be_inventory_uom_recording_results.md` for exact candidate
 scope and exclusions. This does not accept comprehensive Inventory or4be-A.
 
+**Inventory Add Item observation (2026-11-24, D18 semantic inheritance).**
+Catalog 48 appends `ADMIN_INVENTORY_ADD` for the existing **Add Item** button
+on Admin > Inventory. It is a Command owned by `ADMIN_INVENTORY` under
+`ADMIN_MAINT`. The form starts REQUESTED/Unknown before validation. The
+owning creation routine supplies the result. REFUSED/Unchanged is limited
+to a known pre-write refusal. APPLIED/Changed requires confirmation of the
+exact saved creation. PENDING/Unknown means submission succeeded and saved
+application is unconfirmed. PARTIAL/Changed requires the owner's saved
+application fact and an unfinished command confirmation. FAILED/Unknown
+covers uncertain failure. Only APPLIED satisfies CommandCompleted.
+
+APPLIED, PENDING and PARTIAL each carry the one exact submitted Inventory
+event reference. FAILED may carry a single attempted or submitted reference
+from that owner. REQUESTED and REFUSED carry none. Recording follows the
+captured workbook, actor, session and warehouse. When recording authority
+is lost, the original attempt can remain incomplete. Exclude entered item
+data, quantities, keys, remarks and raw errors from optional activity. The
+Add Item Mode navigation control remains a separate observation.
+
 **Inventory worksheet observation refinement (2026-10-21, D18 semantic inheritance):**
 Catalog47 appends `ADMIN_INVENTORY_CREATE_TABLE` and
 `ADMIN_INVENTORY_UPLOAD_TABLE`, both Command/ADMIN_INVENTORY/ADMIN_MAINT.

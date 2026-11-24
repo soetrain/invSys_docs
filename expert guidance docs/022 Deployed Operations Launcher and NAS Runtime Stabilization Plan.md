@@ -1,5 +1,12 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**November 24 inventory creation coverage.** Under D18's existing
+comprehensive-coverage and owner-evidence rules, exercise the modal Add Item
+click with tracking enabled, the creation owner's exact Inventory receipt,
+loss of the original session and optional tracking disabled. Catalog 48
+adds this command while preserving catalog 47 definitions. Keep the
+underlying creation, permissions and business receipt at their existing owners.
+
 **November 24 Create Guide on the NAS.** The deferred-picker build passed
 195/195 with two published versions, native filtering, both close controls
 and independent guide expectations. Its recorded-run editor took over five
