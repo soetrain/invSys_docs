@@ -1,5 +1,15 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**November 24 Create Guide on the NAS.** The deferred-picker build passed
+195/195 with two published versions, native filtering, both close controls
+and independent guide expectations. Its recorded-run editor took over five
+seconds to appear after one click. The focused first-response and source-read
+checks failed. On the next build, Create Guide gives immediate progress in
+the initiating form. Core projects the freshly validated source during draft
+creation and the editor revalidates on activation. The same NAS mouse test
+observed 196 ms to feedback, 3.11 seconds to the editor, and two source reads.
+Current-candidate qualification is recorded in the remaining-acceptance ledger.
+
 **November 24 NAS close correction.** The reopened picker on the November
 23 packages repeatedly left one loaded VBA form after the window disappeared.
 In the new five-package build, `validation-guide-picker-deferred-20261124`,

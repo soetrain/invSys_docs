@@ -1,5 +1,15 @@
 # invSys Form Controls v1
 
+**November 24 Create Guide feedback.** Action Paths and Choose tracked actions
+temporarily append “ - Opening guide...” to their title when Create Guide is
+clicked. The ordinary title returns when opening finishes. On the new build,
+the NAS recorded-run entry showed the feedback in 196 ms, the editor in
+3.11 seconds and one loaded form at 5.52 seconds. The first display uses
+the validated draft source and activation rechecks the binding. The prior
+build first responded at 5.43 seconds and reported the loaded form at 7.81.
+The new draft's status reads “Draft only. Authored instructions do not prove
+that a task ran.”
+
 **November 24 populated NAS guide library.** Two published versions appeared
 in the signed-in Training fixture. Native typing updated the list in 23–26 ms,
 the no-match query cleared it in 76 ms, and clearing restored both rows in
