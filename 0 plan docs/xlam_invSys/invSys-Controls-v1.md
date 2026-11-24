@@ -6,6 +6,12 @@ checks failed. On the reader-reopen build each window keeps its own close
 request. Both readers closed, and the reopened picker could still be
 cancelled. The packaged timing suite passed 19/19.
 
+The installed reader-reopen build subsequently passed all 99 signed-in NAS
+curation checks without intervention, including both repeated Close buttons,
+the picker X, native search, single-click Create Guide, revocation and source
+integrity. One click showed Create Guide feedback in 176 ms and the editor in
+2.58 s. A regular Excel launch loaded all five verified VBA projects.
+
 **November 24 NAS form retest.** On the live-close build, Published Guides
 opened in 2.50–3.16 seconds and closed in 1.27–1.51 seconds across two
 one-click cycles. Choose tracked actions opened in 5.17–5.32 seconds and
