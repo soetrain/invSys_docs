@@ -597,8 +597,12 @@ initial destination account. After successful creation, the creator remains
 signed in to the source. Users & Roles has a **Maintain Action Paths** checkbox.
 Select the account, clear **Roaming** and select the signed-in warehouse and
 exact station to inspect its saved choice. Changing that choice and clicking
-**Save** grants or revokes it. Saving other roles preserves the guide choice.
-Justin's visible review of both controls is pending.
+**Create / Update** grants or revokes it. Saving other roles preserves the guide choice.
+Changing the user or scope with a pending guide choice displays the existing
+reselection message immediately. The final candidate passed 59/59 focused
+Create and scope checks, 39/39 ordinary guide onboarding checks, 110/110
+Create regressions, 259/259 Auth and Users & Roles checks, and 175/175 Create
+recording checks. Justin's visible review of both controls is pending.
 
 **D13 current-package early B0 replay checkpoint, 2026-11-14:** V20's five
 XLAM bytes differ from the current validation candidate, so standalone v82

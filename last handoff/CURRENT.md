@@ -1,1 +1,1 @@
-`266 Initial Admin Onboarding RED and Create Recovery Decision.md`
+`267 Initial Admin and Scoped Guide Author Onboarding.md`

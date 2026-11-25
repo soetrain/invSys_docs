@@ -616,6 +616,13 @@ candidate uses the onboarding change on the catalog 48 guide-reader source.
 Catalog 49 retains its own implementation and evidence status. Justin's visible
 onboarding review remains open.
 
+The final onboarding candidate came from isolated source `27cb6d5b`.
+It passed 59/59 recovery and scope checks and 39/39 ordinary onboarding
+checks. The same packages passed the Release 1 chain, saved-workbook restart,
+live roles, reusable Production and ordered B0 regressions. Local and NAS
+scale each passed 35/36. Full NAS curation passed 100/101. The sole failed
+assertion in those cohorts was the separate empty-search explanation.
+
 **2026-11-14 current-package early B0 replay checkpoint:** Read-only
 comparison found v20's five XLAMs differ from the current validation set.
 Standalone v82 therefore ran the existing 121-check Receiving replay on the
