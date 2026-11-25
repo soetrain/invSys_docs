@@ -604,6 +604,14 @@ Create and scope checks, 39/39 ordinary guide onboarding checks, 110/110
 Create regressions, 259/259 Auth and Users & Roles checks, and 175/175 Create
 recording checks. Justin's visible review of both controls is pending.
 
+**November 25 operator feedback.** Justin reported that the search tools
+worked as expected and the controls he tried worked. The exact build and
+controls exercised in that session were unspecified. The full private
+Create → Sign In → Grant → Author → Revoke walkthrough and formal 4be-A
+acceptance remain open. Justin moved development priority to 4be-B for
+the next branched chat. The picker’s missing no-match explanation remains
+an open 4be-A finding.
+
 **D13 current-package early B0 replay checkpoint, 2026-11-14:** V20's five
 XLAM bytes differ from the current validation candidate, so standalone v82
 rechecked Receiving replay. It passed 121/121 exact ordered identities; all

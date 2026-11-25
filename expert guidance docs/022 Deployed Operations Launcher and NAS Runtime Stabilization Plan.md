@@ -1,5 +1,18 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**November 25, 2026 — owner-directed development priority.** Justin directed
+that 4be-B (Replay and proof) start in the next branched chat. Begin B1 with
+**Admin Seed Demo Inventory** in a newly generated Training warehouse. Start
+with a failing packaged test that replays a saved How-To through the ordinary
+Admin handler and requires fresh inventory evidence attributable to that run.
+Existing seed rows alone cannot satisfy the assertion. Retain the 121/121
+Receiving B0 replay as regression coverage.
+
+Justin reported that search worked as expected and the controls he tried
+worked. Formal 4be-A and Release 1 acceptance remain open. The picker’s
+missing no-match explanation and the outstanding 4be-A coverage remain
+tracked. Handoff 268 records the transition.
+
 **November 24 inventory retirement coverage.** Under D18 and D8-INV-01,
 exercise the real Delete Item handler, its confirmation and the independent
 saved states of the selected entities and catalog. Catalog 49 adds the
