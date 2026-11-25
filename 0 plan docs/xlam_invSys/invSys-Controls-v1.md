@@ -1,5 +1,13 @@
 # invSys Form Controls v1
 
+**November 25, 2026, Published Guides > Configure execution.** The B1 test
+candidate can save the built-in R1 Workflow Kit as the DataSet input of an
+Admin Seed step. A separate Training warehouse imports the source guide and
+saves its own execution profile. Its inventory stays intact during Configure.
+Run How-To opens that exact profile. On this candidate Start Run still asks
+for a Receiving entity, and the Seed step ends Unknown without an owner event.
+Packaged profile binding passed. Visible acceptance and Seed replay remain open.
+
 **November 24 Admin > Add/Edit Inventory > Delete Item.** D18 catalog 49
 identifies the confirmed retirement command as ADMIN_INVENTORY_DELETE.
 The test on catalog 48 retired two exact entities and preserved the extra

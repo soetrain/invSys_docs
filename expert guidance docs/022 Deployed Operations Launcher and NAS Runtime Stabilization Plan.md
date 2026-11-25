@@ -13,6 +13,17 @@ worked. Formal 4be-A and Release 1 acceptance remain open. The picker’s
 missing no-match explanation and the outstanding 4be-A coverage remain
 tracked. Handoff 268 records the transition.
 
+**November 25 B1 packaged Seed replay.** Justin approved two D13 steps because
+the Receiving-only registry refused to configure Seed. The first test records
+one ordinary built-in Seed outside the destination, imports the exact guide
+through Published Guides, and configures a local profile in a second generated
+Training warehouse. Baseline Configure refused that guide (7 passes, one
+failure). The registry now accepts the single literal data-set identity
+`R1_WORKFLOW_KIT` for `ADMIN_DEMO_SEED`. The profile binds the local guide
+version, record, digest and step. The bound run reached the existing dispatcher
+and ended Unknown with no owner activity or event. B1 dispatch and fresh
+persisted-effect qualification remain open.
+
 **November 24 inventory retirement coverage.** Under D18 and D8-INV-01,
 exercise the real Delete Item handler, its confirmation and the independent
 saved states of the selected entities and catalog. Catalog 49 adds the
