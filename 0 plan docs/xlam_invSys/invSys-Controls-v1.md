@@ -585,7 +585,11 @@ completion or cancel. Users & Roles changes guide rights only on explicit
 authorized Save for the captured scope. An omitted legacy choice preserves
 the grant. Verify masking, tab order, feedback, Close/Cancel, immediate
 open-editor revocation, cold restart and absence of credential traces.
-Implementation, packaged results and operator acceptance are pending.
+On the catalog 48 baseline the real Create button accepted blank input and
+created a Training destination. In an existing directory, an account-write
+fault left a publish-eligible partial hub that blocked ordinary Create retry.
+Handoff 266 records the pending recovery decision. Both proposed controls
+still await implementation, corrected package qualification and operator review.
 
 **D13 current-package early B0 replay checkpoint, 2026-11-14:** V20's five
 XLAM bytes differ from the current validation candidate, so standalone v82

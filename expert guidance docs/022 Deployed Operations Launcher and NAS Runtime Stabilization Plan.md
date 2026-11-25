@@ -601,6 +601,12 @@ versus explicit grant/revoke, stale open forms, scope isolation, private
 credential handling and existing Create failure recovery. Keep source changes,
 package qualification, visible review and release acceptance separately recorded.
 
+November 24 packaged baseline, code `ecb497aa`: 10 passed and 3 failed,
+including five successful instrumented project compiles. The existing Create
+failure path left a partial hub eligible for reopened publication in a
+pre-existing directory. Stop under D8-CREATE-01 pending the owner's choice
+of recovery policy for this case. See handoff 266 for the reproduction.
+
 **2026-11-14 current-package early B0 replay checkpoint:** Read-only
 comparison found v20's five XLAMs differ from the current validation set.
 Standalone v82 therefore ran the existing 121-check Receiving replay on the
