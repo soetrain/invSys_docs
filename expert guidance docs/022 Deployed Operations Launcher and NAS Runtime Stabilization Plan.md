@@ -609,6 +609,13 @@ of recovery policy for this case. See handoff 266 for the reproduction.
 Justin subsequently approved attempt-owned cleanup under D8-CREATE-01.
 Test preservation of pre-existing content, publish refusal and ordinary retry.
 
+November 24 implementation checkpoint. Tests `b67b03e5` and implementation
+`e90c3bbb` cover the two private initial-Admin fields, explicit exact-scope
+guide authority and revocation at the next protected action. The isolated
+candidate uses the onboarding change on the catalog 48 guide-reader source.
+Catalog 49 retains its own implementation and evidence status. Justin's visible
+onboarding review remains open.
+
 **2026-11-14 current-package early B0 replay checkpoint:** Read-only
 comparison found v20's five XLAMs differ from the current validation set.
 Standalone v82 therefore ran the existing 121-check Receiving replay on the
