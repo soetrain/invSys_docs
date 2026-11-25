@@ -5986,26 +5986,43 @@ acceptance is introduced; the code Auth-write receipt records the exact scope.
 ---
 ### D8-CREATE-01 — Create New Warehouse interactive authority (APPROVED,2026-10-13)
 
-**Proposed 4be-A guide-author onboarding, November 24, 2026. Owner decision pending.**
+**Approved 4be-A guide-author onboarding, November 24, 2026.** Justin (justinwj)
+approved proposal commit `52184a4` in conversation with the following requirements.
+Implementation, packaged qualification and human acceptance are separate gates.
 When an authorized administrator creates a warehouse with its initial Admin account,
-Create Warehouse would require entry and confirmation of that account's invSys PIN
-in masked fields before creating the destination. Core would use the existing
+Create Warehouse requires entry and confirmation of that account's invSys PIN
+in masked fields before creating the destination. Core uses the existing
 credential writer during explicit bootstrap. The source administrator
 and destination account retain their distinct identities under D8-CREATE-01.
-The two existing bootstrap roles would remain the defaults. The new warehouse's
-signed-in administrator could explicitly grant or revoke the existing
+The two existing bootstrap roles remain the defaults. The new warehouse's
+authorized signed-in administrator can explicitly grant or revoke the existing
 `ACTION_PATH_MAINT` capability through Users & Roles for the selected
-user, warehouse and station under D8-USERS-01. Older six-choice callers would
-preserve any existing guide grant. Authoring, editing and transfer would continue
-to require the separate guide capability. PINs would be excluded from Action
-Paths, saved drafts, setup instructions, reports and logs.
+user, warehouse and station under D8-USERS-01. Omitted intent in an older six-choice
+call preserves the exact existing grant. Core rechecks current administrative
+authority at Save. Preserve other users, credentials, capability rows and scopes.
+Authoring, protected edits and transfer retain their separate capability checks.
+Ordinary reading keeps its existing permissions.
 
-Proposed D13 evidence uses the actual packaged Create, Sign In and Users & Roles
-handlers in a disposable Training warehouse. Check initial sign-in, refusal of
-guide maintenance before the grant, authorized grant and revocation, preservation
-of other users and roles, and cold reopen. This proposal neither changes an
-existing warehouse nor authorizes changing the bootstrap or grant contract
-before owner approval.
+Validate both entries against existing credential rules and equality at the form
+and typed Core boundary before destination creation. Clear transient fields on
+completion and cancellation. Exclude both values from activity, saved drafts,
+setup instructions, errors, reports, logs, test arguments in evidence, input
+traces and captures. A credential-write failure must fail Create and follow
+existing rollback/recovery. Any new partial-creation policy requires an owner
+decision. Preserve source identity, existing credential format, current grants
+and existing warehouse credentials.
+
+D13 starts with actual packaged-handler RED on unchanged packages. In a new
+Training warehouse verify ordinary Create, destination Sign In, pre-grant
+refusal, exact grant, Author/Edit/Transfer, revocation and cold reopen. Exercise
+invalid/mismatched entry, cancel, writer failure, stale authority, warehouse
+and station changes, both legacy grant states and unrelated-data preservation.
+Revocation takes effect on an open form's next guarded flush, protected edit,
+Save or transfer. Failed flush refuses dependent actions. Dirty Cancel/X discard
+without WriteText or publication. Retain exact draft, source and StepId binding.
+Use disposable private inputs and verify success/error redaction. Qualify
+isolated packages, five compiles, lifecycle, restart, preservation and applicable
+regressions. Record visible operator review and Justin's acceptance separately.
 
 The user approved the revised contract below on2026-10-13, including reopened
 publication, source authorization, post-confirmation checks and redaction.

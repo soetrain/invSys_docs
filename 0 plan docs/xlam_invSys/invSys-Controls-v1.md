@@ -579,6 +579,14 @@ selected user in the current warehouse and station. The packaged acceptance
 path would use ordinary first sign-in and explicit grant, authoring and
 revocation. These proposed controls are not available in the current build.
 
+Later November 24, Justin approved both controls from docs `52184a4`.
+Create requires matching private entries before creation and clears them on
+completion or cancel. Users & Roles changes guide rights only on explicit
+authorized Save for the captured scope. An omitted legacy choice preserves
+the grant. Verify masking, tab order, feedback, Close/Cancel, immediate
+open-editor revocation, cold restart and absence of credential traces.
+Implementation, packaged results and operator acceptance are pending.
+
 **D13 current-package early B0 replay checkpoint, 2026-11-14:** V20's five
 XLAM bytes differ from the current validation candidate, so standalone v82
 rechecked Receiving replay. It passed 121/121 exact ordered identities; all
