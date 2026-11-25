@@ -606,6 +606,8 @@ including five successful instrumented project compiles. The existing Create
 failure path left a partial hub eligible for reopened publication in a
 pre-existing directory. Stop under D8-CREATE-01 pending the owner's choice
 of recovery policy for this case. See handoff 266 for the reproduction.
+Justin subsequently approved attempt-owned cleanup under D8-CREATE-01.
+Test preservation of pre-existing content, publish refusal and ordinary retry.
 
 **2026-11-14 current-package early B0 replay checkpoint:** Read-only
 comparison found v20's five XLAMs differ from the current validation set.

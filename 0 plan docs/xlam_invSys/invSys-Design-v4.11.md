@@ -6012,6 +6012,12 @@ existing rollback/recovery. Any new partial-creation policy requires an owner
 decision. Preserve source identity, existing credential format, current grants
 and existing warehouse credentials.
 
+Justin approved scoped recovery for a failed initial Admin write on November 24.
+Create may remove only files and empty directories it can prove that attempt
+created. Preserve pre-existing directories and their contents. A verified
+cleanup permits ordinary retry. If cleanup or ownership is uncertain, report
+failure and keep the incomplete destination ineligible for publication.
+
 D13 starts with actual packaged-handler RED on unchanged packages. In a new
 Training warehouse verify ordinary Create, destination Sign In, pre-grant
 refusal, exact grant, Author/Edit/Transfer, revocation and cold reopen. Exercise

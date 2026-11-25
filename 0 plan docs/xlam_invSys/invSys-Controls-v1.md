@@ -588,7 +588,8 @@ open-editor revocation, cold restart and absence of credential traces.
 On the catalog 48 baseline the real Create button accepted blank input and
 created a Training destination. In an existing directory, an account-write
 fault left a publish-eligible partial hub that blocked ordinary Create retry.
-Handoff 266 records the pending recovery decision. Both proposed controls
+Handoff 266 records the recovery failure. Justin subsequently approved cleanup
+of proven attempt-owned files and empty directories. Both proposed controls
 still await implementation, corrected package qualification and operator review.
 
 **D13 current-package early B0 replay checkpoint, 2026-11-14:** V20's five
