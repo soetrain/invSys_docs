@@ -1,5 +1,16 @@
 # invSys Form Controls v1
 
+**November 26, 2026, Start Run and Run How-To while Seed is returning.**
+Two packaged control tests on the handoff 270 candidate each passed 25/25.
+Start Run was disabled while the original Seed was returning. A separate
+delivery to its Click handler reached the busy guard and returned. The
+Published guides Run How-To button accepted the click, revalidated the guide
+and returned with the same runner still visible. Each original run completed
+once, enabled Verify and reopened in Ready after Close. These checks exercise
+MSForms controls and handlers in disposable packages. The attended verdict
+for ordinary fresh and repeat Seed and the open workbook-flashing finding
+below retain their original scope.
+
 **November 25, 2026, Start Run, Verify run and reopen after a lost Seed
 acknowledgment.** On the handoff 270 builds, the packaged Start handler
 stopped with a Failed run when the test dropped an already-applied owner's

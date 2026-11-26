@@ -1,5 +1,14 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**November 26, 2026, nested entry while the built-in Seed is returning.**
+On two fresh Training destinations, a second Start was disabled and its handler
+returned at the busy guard. Run How-To kept the original runner. Each case
+passed 25/25 on the handoff 270 builds, with one Operations dispatch, one
+accepted Admin claim, one applied event and one receipt. Verify concluded
+from the original run's 21 destination keys. See handoff 273 for the held
+boundary, regression results and cleanup. The milestone table below records
+which 4be-B acceptance requirements still need evidence.
+
 **November 25, 2026, B1 Seed applied with the Operations acknowledgment lost.**
 The packaged fault test passed 21/21 on the original five handoff 270 builds.
 One Start made one bridge call and one accepted owner claim. The fixture copied
@@ -3662,6 +3671,17 @@ B0 is B work performed early to test the recording-to-replay interface; it does 
 accept B. Receiving and Admin Seed are initial examples, not a reduced coverage
 target. Existing 4be.x tests/evidence keep their identifiers. This sequence replaces
 the earlier proposed R0-R5 grouping without discarding its work.
+
+#### Remaining 4be-B scope against the milestone exits
+
+| Area | Evidence available | Remaining work or decision |
+|---|---|---|
+| B0 Receiving | Packaged Receiving replay on the handoff 270 candidate passed 121/121, including busy/close coverage. | Retain the gate when changing the shared runner or setup. |
+| B1 built-in Seed | Fresh, stopped, already-seeded and refused requests have separate packaged proof. A lost acknowledgment preserves a Failed dispatch and its applied owner event. Second Start and Run How-To both preserve the in-flight Seed and its original recording. | The single-step Seed interruption has no later step to dispatch. A multi-step Seed interruption needs evidence that the runner stops later work and attributes the partial result to the original run. |
+| B1 owner and control coverage | The execution input registry on this candidate accepts six Receiving ControlIds and `ADMIN_DEMO_SEED`. Their tests cover specific context, rights, capture, interruption and nested-entry boundaries. | Reconcile the remaining reachable Operations/Admin controls with their owners, automatic/operator-required/helper classifications and evidence. Qualify the outstanding adapters and boundary cases indicated by that census. |
+| B2 transfer and results | Seed uses a transferred guide, a destination-bound profile and a saved local Verify result. | Complete approved replay coverage, executable-profile transfer and local revalidation. Qualify the Admin Working, Broken, Needs validation and Incomplete results, including Needs attention and superseding stale results. |
+| B3 and operator acceptance | Justin accepted the ordinary fresh and repeat Seed workflow with the workbook-flashing reservation recorded in Controls. | Formal 4be-A still has outstanding recording coverage, picker no-match feedback and visible onboarding acceptance. B3 requires retained A, the combined package, compile, layout, static, live-role, full-chain, regression and binding gates, and visible Operations and Admin acceptance. |
+| Separate or deferred work | Workbook windows flashed in front of the Seed form during the attended review. | Retest foreground and input focus by initiating click. Automatic retry, resume or repair has no place in this qualification. Scheduled validation and external notifications are outside R1. |
 
 **Boundaries:** Architecture owns behavior; do not repeat or redefine it here.
 Run executes ordinary authorized handlers only in a designated training runtime.
