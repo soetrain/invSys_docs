@@ -1,5 +1,31 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**November 25, 2026, B1 built-in Seed replay.** The isolated catalog 48
+bridge candidate passed the packaged focused suite (21/21). The preceding
+complete profile candidate passed 14 checks and failed three. Start now
+accepts a Seed-only run without a Receiving entity. The ordinary Admin
+handler produced a paired activity and a new destination event. Independent
+verification matched its receipt, log lines and saved values for 21 new
+groups and preserved all three bootstrap groups. A stopped run and a
+replayed UNCHANGED result each earned zero terminal sources. The static
+scan measured 10 literal calls and 45 unresolved. Handoff 270 identifies the
+five-package candidate and its retained regression evidence. The broader
+B1 and operator acceptance gates remain open.
+
+**November 25 B1 Seed bridge exception.** Justin approved one additional
+literal Application.Run target, from Operations `frmActionPathRun.DispatchSteps`
+to Admin `modAdminSeedReplay.ApplyBuiltIn`. The three string arguments are the
+setup token, stable pending step ID and reviewed data-set ID. The only accepted
+kit is `R1_WORKFLOW_KIT`. The target is fixed in the add-in. Core checks the
+captured Training destination, active recording sequence, stored run revision,
+exact guide/profile binding, package builds and live capability. Admin checks
+the selected actor and target and claims that pending step once before calling
+the same observed Seed handler as the Demo Inventory form. Absent or incompatible
+Admin prevents Seed setup. An uncertain return stops dispatch. A fresh event
+and its persisted inventory evidence determine the business conclusion.
+The exception permits 10 literal targets and 45 unresolved calls. The protecting
+gates are the packaged B1 Seed suite and the retained Receiving B0 suite.
+
 **November 25, 2026 — owner-directed development priority.** Justin directed
 that 4be-B (Replay and proof) start in the next branched chat. Begin B1 with
 **Admin Seed Demo Inventory** in a newly generated Training warehouse. Start

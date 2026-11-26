@@ -1,5 +1,16 @@
 # invSys Form Controls v1
 
+**November 25, 2026, Run How-To > Start Run and Verify.** On the isolated B1
+bridge candidate, a guide configured for the built-in R1 Workflow Kit shows
+the kit at setup. Start Run is available without selecting a Receiving item.
+Receiving guides still require their item. On a fresh Training destination,
+the Seed step completed and Verify credited the new Admin Seed event after
+publication. On a destination already seeded, the step completed with the
+owner outcome UNCHANGED and earned no fresh-effect credit. A separate run
+stopped before Seed failed verification even with the earlier event loaded.
+These are packaged test results. The installed review build and the visible
+operator walkthrough have separate acceptance records.
+
 **November 25, 2026, Published Guides > Configure execution.** The B1 test
 candidate can save the built-in R1 Workflow Kit as the DataSet input of an
 Admin Seed step. A separate Training warehouse imports the source guide and
