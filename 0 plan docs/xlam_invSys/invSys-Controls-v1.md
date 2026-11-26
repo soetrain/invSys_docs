@@ -1,5 +1,18 @@
 # invSys Form Controls v1
 
+**November 25, 2026, built-in Seed visible review — accepted.** Justin
+accepted the destination Run How-To workflow on the five R1-5 builds
+identified in handoff 271: “i think its fine for now, accepted”. From
+Published guides, one Start ran Seed against the separate Training destination
+without selecting a Receiving item. Direct Verify showed Awaiting. After
+Justin refreshed Viewer Events and selected Verify again, it showed Concluded
+for the applied event and 21 lines. A second explicit Start on the same
+destination returned UNCHANGED. Verify displayed Failed and “Outcome
+mismatch. Expected APPLIED.” It credited zero fresh sources. The displayed
+explanation omitted the actual UNCHANGED outcome. Justin accepted it as
+shown. Fresh and repeat run revisions spanned 113.35 and 26.47 seconds on
+the review share. This acceptance covers the built-in Seed walkthrough only.
+
 **November 25, 2026, Run How-To > Start Run and Verify.** On the isolated B1
 bridge candidate, a guide configured for the built-in R1 Workflow Kit shows
 the kit at setup. Start Run is available without selecting a Receiving item.

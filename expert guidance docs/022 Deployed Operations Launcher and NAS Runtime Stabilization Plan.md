@@ -1,5 +1,37 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**November 25, 2026, built-in Seed visible acceptance.** Justin accepted
+the fresh and already-seeded workflow on the exact handoff 270 builds.
+Fresh Verify moved from Awaiting to Concluded after a guided Viewer Events
+refresh. Repeat Seed produced UNCHANGED, no new receipt or stock, and a
+Failed evaluation with zero terminal sources because this guide expects
+APPLIED. Controls records the displayed wording. Handoff 271 records loaded
+identities, preservation and the attended verdict. The adapter retains its
+seven technical gates. Broader B1 remains open. Formal 4be-A and Release 1
+acceptance and the installed review build retain their prior status.
+
+**Proposed next B1 interruption test, November 25, 2026.** Exercise the
+packaged Run How-To Start action on a fresh Training destination. In a
+disposable test copy of Operations, call the real fixed Admin Seed bridge
+once, then raise a deterministic test-owned error after the call returns
+and before the runner accepts its Boolean acknowledgment. Enter the existing
+dispatch error handler. Observe the invocation count and the sealed run
+revisions. Independently read the closed recording, saved Inventory receipt,
+event lines and entities. Refresh Viewer Events and exercise Verify.
+
+With a complete owner pair the current `FinishStep(False)` path records a
+Failed step with the actual APPLIED reason, activity and event reference.
+Without the pair it records Unknown. The runner must stop later dispatch,
+retain the submitted effect and leave the original attempt identifiable.
+Verify may establish the saved guide's business conclusion only from the
+exact recorded and published event. It must preserve the dispatch history.
+An extra call or receipt, a claim of acknowledged completion, a lost proven
+effect, or proof borrowed from another run is behavioral RED. Close and
+reopen setup without pressing Start and check that nothing executes. A new
+attempt requires an explicit Start. Retain the focused Seed positive,
+stopped, duplicate, stale-context, repeat and preservation checks and the
+Receiving busy-close cases. This proposal adds no recovery policy.
+
 **November 25, 2026, B1 built-in Seed replay.** The isolated catalog 48
 bridge candidate passed the packaged focused suite (21/21). The preceding
 complete profile candidate passed 14 checks and failed three. Start now
