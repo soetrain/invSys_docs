@@ -41,6 +41,14 @@ Check the exact candidate and reader-reopen registration before another live rev
 
 ## Open questions and blockers
 
+Justin later clarified that workbook windows repeatedly flashed in front of the
+form and made it harder to use. A capture during guide selection showed a
+read-only Config workbook visible alongside Viewer. The originating call and
+frequency remain unverified. For a focused reproduction, trace window-show and
+foreground changes during guide selection, Start, refresh and Verify on the
+same candidate. Keep diagnostic workbook opens outside the measured clicks.
+Record the affected action and workbook role before changing a loader.
+
 Broader B1 interruption, nested entry and partial-outcome coverage remain open. Formal 4be-A, 4be-B and Release 1 acceptance are separate. The proposal below carries no implementation or recovery-policy approval.
 
 ## Immediate next action

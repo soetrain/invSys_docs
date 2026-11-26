@@ -13,6 +13,15 @@ explanation omitted the actual UNCHANGED outcome. Justin accepted it as
 shown. Fresh and repeat run revisions spanned 113.35 and 26.47 seconds on
 the review share. This acceptance covers the built-in Seed walkthrough only.
 
+**Open usability finding from the same review.** Justin reported that workbook
+windows repeatedly flashed in front of the form and made it harder to use.
+During guide selection, a window capture showed the destination’s read-only
+Config workbook visible alongside Viewer. The snapshots did not establish
+which clicks caused the other flashes. On a focused retest, record native
+window-show and foreground changes from each operator click through its
+return. Background workbook reads should leave the active form visible and
+usable throughout the action.
+
 **November 25, 2026, Run How-To > Start Run and Verify.** On the isolated B1
 bridge candidate, a guide configured for the built-in R1 Workflow Kit shows
 the kit at setup. Start Run is available without selecting a Receiving item.

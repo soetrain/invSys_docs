@@ -9,6 +9,8 @@ APPLIED. Controls records the displayed wording. Handoff 271 records loaded
 identities, preservation and the attended verdict. The adapter retains its
 seven technical gates. Broader B1 remains open. Formal 4be-A and Release 1
 acceptance and the installed review build retain their prior status.
+Controls also tracks Justin’s follow-up that workbook windows repeatedly
+flashed in front of the form during this accepted walkthrough.
 
 **Proposed next B1 interruption test, November 25, 2026.** Exercise the
 packaged Run How-To Start action on a fresh Training destination. In a
