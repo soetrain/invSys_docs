@@ -1,1 +1,1 @@
-`271 B1 visible Seed replay and interruption scope.md`
+`272 B1 Seed applied with acknowledgment lost.md`
