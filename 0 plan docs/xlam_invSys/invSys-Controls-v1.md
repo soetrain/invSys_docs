@@ -1,5 +1,14 @@
 # invSys Form Controls v1
 
+**November 25, 2026, Start Run, Verify run and reopen after a lost Seed
+acknowledgment.** On the handoff 270 builds, the packaged Start handler
+stopped with a Failed run when the test dropped an already-applied owner's
+return. Verify concluded from that run's applied Inventory event. The saved
+dispatch still showed Failed. Reopening Run How-To enabled Start for a new
+attempt and preserved the original recording, inventory and evaluation.
+This is technical coverage. Justin's visible acceptance covers the ordinary
+fresh and repeat Seed walkthrough, with the workbook-flashing reservation below.
+
 **November 25, 2026, built-in Seed visible review — accepted.** Justin
 accepted the destination Run How-To workflow on the five R1-5 builds
 identified in handoff 271: “i think its fine for now, accepted”. From

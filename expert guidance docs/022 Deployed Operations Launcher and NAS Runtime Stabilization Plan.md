@@ -1,5 +1,17 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**November 25, 2026, B1 Seed applied with the Operations acknowledgment lost.**
+The packaged fault test passed 21/21 on the original five handoff 270 builds.
+One Start made one bridge call and one accepted owner claim. The fixture copied
+the saved Inventory and recording before dropping the successful return. At
+that point the run was Running with zero completed steps. Operations subsequently
+saved a Failed run (`OWNER_NOT_COMPLETED`), with a Failed step that retained
+the owner's `APPLIED` outcome and event. After refresh, Verify concluded from
+that event's 21 applied lines. Reopen returned to Ready without dispatch or
+mutation. Handoff 272 identifies the candidate, regression gates and proposed
+nested-entry tests. Visible acceptance of the built-in Seed workflow carries
+Justin's reservation about workbooks flashing in front of the form.
+
 **November 25, 2026, built-in Seed visible acceptance.** Justin accepted
 the fresh and already-seeded workflow on the exact handoff 270 builds.
 Fresh Verify moved from Awaiting to Concluded after a guided Viewer Events
