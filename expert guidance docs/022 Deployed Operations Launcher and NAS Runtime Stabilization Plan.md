@@ -3689,10 +3689,51 @@ the earlier proposed R0-R5 grouping without discarding its work.
 |---|---|---|
 | B0 Receiving | Packaged Receiving replay on the handoff 270 candidate passed 121/121, including busy/close coverage. | Retain the gate when changing the shared runner or setup. |
 | B1 built-in Seed | Fresh, stopped, already-seeded and refused requests, both nested gestures and single-step acknowledgment loss are qualified. Seed → Open Receiving now has a working two-step control and proof of zero later dispatch after acknowledgment loss. Verify preserves the partial effect and failed history. | Retain these gates when runner progression or the owner boundary changes. Other adapters and interruption boundaries remain subject to the control census. |
-| B1 owner and control coverage | The catalog 48 execution input registry accepts six Receiving controls and `ADMIN_DEMO_SEED`. Production Run - List → Complete Run (`PRODUCTION_RUN_COMPLETE`) is a deliberate owner action with recording and historical evaluation. Required execution is currently unsupported. A recorded step has no destination Process/batch or staged output binding. | Decision requested under D18-REPLAY-01 items 2–6. Prefer operator-required completion after explicit destination selection and Check In, with fresh evidence needed before progression. A future automatic adapter would need an approved, revalidatable local selector for each Production branch. Keep this coverage row open until the chosen behavior is qualified. |
+| B1 owner and control coverage | `PRODUCTION_RUN_COMPLETE` is operator-required. On isolated candidate `validation-b1-production-operator-04` the reusable Process path passed 125/125 and the worksheet path passed 129/129. A second identical guide control required a new binding. Justin approved explicit worksheet output selection for every ordinary Complete Run. Handoff 275 retains the predecessor refusal. | Classify and qualify `PRODUCTION_RUN_CHECK_IN`, the separate unregistered prerequisite. Perform visible acceptance of both Complete Run selections and the refresh/check interaction. |
 | B2 transfer and results | Seed uses a transferred guide, a destination-bound profile and a saved local Verify result. | Complete approved replay coverage, executable-profile transfer and local revalidation. Qualify the Admin Working, Broken, Needs validation and Incomplete results, including Needs attention and superseding stale results. |
 | B3 and operator acceptance | Justin accepted the ordinary fresh and repeat Seed workflow with the workbook-flashing reservation recorded in Controls. | Formal 4be-A still has outstanding recording coverage, picker no-match feedback and visible onboarding acceptance. B3 requires retained A, the combined package, compile, layout, static, live-role, full-chain, regression and binding gates, and visible Operations and Admin acceptance. |
 | Separate or deferred work | Workbook windows flashed in front of the Seed form during the attended review. | Retest foreground and input focus by initiating click. Automatic retry, resume or repair has no place in this qualification. Scheduled validation and external notifications are outside R1. |
+
+**B1 Complete Run binding.** D18-REPLAY-01 items 2–6 permit
+operator-required steps and require fresh owner evidence. The current v1 run
+record has finished steps only. Its in-memory pending ordinal cannot establish
+which destination the operator confirmed. The v2 ExecutionRun extension in
+the design records that choice locally in the Training warehouse.
+
+1. The profile identifies the guide version/hash, stable StepId and
+   `PRODUCTION_RUN_COMPLETE`. It carries no source-local selector. On reaching
+   that step the runner records an immutable pending revision before enabling
+   confirmation. Run ID, StepId, profile, captured actor/session, destination,
+   build identities and fresh recording sequence must still match at each use.
+2. Select the output in Production, then click **Bind selected Production
+   output** in Run How-To. Keep a live reference to that exact Production
+   form and workbook. Production supplies a local selection identity and a
+   version of its prepared state. For a reusable Process, distinguish the loaded
+   batch instance, released recipe version and checked-in node. For a worksheet
+   output, distinguish even a new, unkeyed draft and its checked-in allocations.
+   Persist a local binding ID and an owner-state digest. Form closure, a different
+   prepared instance, changed state or selection invalidates the live binding.
+   A row position, displayed text, or content digest alone cannot identify a
+   replacement draft. An inventory System_Key is still minted by its ordinary owner.
+3. Only the ordinary click can claim that binding. Before the first business
+   write the owner must revalidate the actual resolved destination and associate
+   the new REQUESTED ActivityId, once, with the exact binding and sequence in a
+   saved run revision. Unrelated Production work keeps its ordinary authorization.
+   Failure to save the association prevents replay credit. A later check can use
+   that persisted association even if the callback never reached the runner.
+4. An explicit evidence check reuses the publication reader and exact Inventory
+   source validation. It needs the claimed activity's CONFIRMED terminal and
+   every submitted event applied in the captured warehouse before appending
+   `OperatorCompleted`. An old publication leaves progression pending. A later
+   explicit refresh/check can resolve that same claim while the run is active.
+   Preserve refused, partial or uncertain results and block later steps. Do not
+   call the owner on check. Duplicate checks consume the same credit only once.
+5. Stop, abandon, close and session loss revoke the live claim. An in-flight
+   owner may finish normally. Reopening creates a fresh setup. The stopped
+   run and its original binding remain in saved history. Only an active run
+   can check its existing claim and advance. Whole-guide Verify needs
+   the saved credited activity for each operator step as well as the normal
+   evaluator result. Historical Evaluate keeps its ordinary recording semantics.
 
 **Boundaries:** Architecture owns behavior; do not repeat or redefine it here.
 Run executes ordinary authorized handlers only in a designated training runtime.

@@ -593,6 +593,53 @@ their consumers and before A closes.
 | Run record v1 | `SchemaVersion=1`, `RecordKind=ExecutionRun`, `RunId`, `Revision`, `RecordId`, `PreviousRecordId`, `PreviousSha256`, `WarehouseId`, `StationId`, `CreatedByUserId`, `CreatedAtUTC`, `ContextSha256`, `Guide`, `Profile`, `PackageSetVersion`, `PackageBuilds`, `Mode`, `State`, `ReasonCode`, `Recording`, `Steps`, `ContentSha256`. Profile binding uses `ProfileId`, `Version`, `RecordId`, `ContentSha256`; package rows use `PackageId`, `BuildIdentity`. Modes are RunAll/StepThrough. States are Ready/Running/Stopped/Completed/Blocked/Failed/Unknown; Completed describes dispatch, never verified business success. Store immutable revisions in `Runs/<RunId>.<Revision>.json`. |
 | Fresh run evidence | `Recording` is `{}` before capture, then contains fresh `ActionPathId`, `SequenceId`; finished step rows contain `StepId`, `ControlId`, `State`, `ReasonCode`, `ActivityId`, `SourceEventRefs`, `Outputs`. States are Completed/OperatorCompleted/Blocked/Failed/Unknown. Reuse the existing source-reference schema. `Outputs` is an array of `{Name,Type,Value}` using declared names/types and validated values only. Original observation IDs are provenance, never replay outputs. ContextSha256 binds the captured runtime/session without storing credential material or executable destinations. |
 
+**Operator-required Production completion (D18-REPLAY-01 items 2–6).** Execution profile v1 may name
+`PRODUCTION_RUN_COMPLETE` as its own version-1 adapter with empty Inputs.
+Its registry classification is operator-required. Capture the destination
+selection after this step becomes eligible. Only the ordinary Production
+Complete Run button may perform completion. An explicitly selected worksheet
+output takes precedence over the Process filter, including outside replay.
+Preserve the Process default when no output is selected.
+
+An execution containing this step uses run schema v2. All v1 fields and limits
+apply. Add `OperatorClaims`, an ordered array of at most 256 records with exact
+fields `StepId, BindingId, Kind, SelectionSha256, ActivityId, OwnerValidated, AfterObservation`. Allocate a fresh
+unique BindingId in an immutable eligibility revision for that StepId. The
+three remaining string fields start empty and OwnerValidated starts false. Explicit confirmation fills Kind
+(`ReusableProcess` or `WorksheetOutput`) and the SHA-256 of the owner-resolved
+prepared selection. An ordinary click may associate one freshly recorded
+ActivityId before its first business write. The owner sets OwnerValidated once
+when its actual resolved target still matches immediately before completion.
+AfterObservation is zero at eligibility. Confirmation fixes it to the number of
+records already present in the same fresh sequence (0–512). Only a later
+REQUESTED record can be claimed.
+Both the early claim and this write-boundary validation are required for credit.
+Each field can be filled once.
+Prior claims and immutable run, guide, profile, context and recording bindings
+survive subsequent revisions. V1 stays readable and has no claims.
+
+The Operations binding lives only with the captured form, Workbook object,
+session and destination. Reusable confirmation binds the checked-in local
+batch/node instance and its prepared inputs and actual outputs. Worksheet
+confirmation binds a unique local staging marker and the prepared input/output
+state. Any marker used for Training is separate from the output System_Key,
+which the ordinary completion owner still creates. The marker has no effect on
+ordinary work or permission and never travels in a guide. Duplicate, replaced,
+changed or ambiguous selection cannot earn credit. Stop, close, abandonment
+and context loss revoke live attachment. Reopening may inspect persisted claims
+without resuming or attaching a later action. An in-flight ordinary owner keeps
+its own authorization and safe return boundaries.
+
+An explicit check may resolve the same claimed activity later while this run
+remains eligible. Require the matching REQUESTED and CONFIRMED in its fresh
+sequence and every exact submitted Inventory source applied in the loaded
+destination publication. Append one OperatorCompleted step row. Before proof
+the step remains unfulfilled. Retain partial/refused outcomes, stop later work
+on refusal or context loss, and leave unrelated ordinary work independent.
+Check and Verify are read-only with respect to business state. Repeated checks
+cannot dispatch or duplicate credit. Whole-guide Verify uses the credited
+activity for each completed operator step. Historical evaluation retains its normal rules.
+
 Run verification retains the existing immutable evaluator result format and exact
 guide/recording binding; it must select this run's fresh recording. A runner stores
 no independent success Boolean that could override evaluator evidence. Admin result
