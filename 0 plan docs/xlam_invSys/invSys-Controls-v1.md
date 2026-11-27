@@ -1,5 +1,10 @@
 # invSys Form Controls v1
 
+**November 27, 2026, Published Guides with a required Production Complete Run step.**
+On the catalog 48 candidate, Configure execution reports “Execution is not configured for one or more guide controls. No actions were skipped or run.” Run How-To reports “Execution not configured for this exact guide version.” The first message addresses the guide author. The second applies to a signed-in Production operator opening that guide. A reader can still evaluate an observed completion against its exact published Inventory events. Operator acceptance for the proposed operator-required workflow remains open.
+
+Both packaged cases passed, reusable Process 101/101 and worksheet output 107/107. Refusal preserved the two ordinary owner calls in each fixture and the saved inventory, publication and training records. [Handoff 275](../../last%20handoff/275%20B1%20Production%20Complete%20Run%20replay%20classification.md)
+
 **November 27, 2026, Run all, Verify run and historical evaluation.**
 For a Seed → Open Receiving guide, Start enabled after selection of an exact
 destination bootstrap entity. Ordinary return opened the Receiving workbook
@@ -13,7 +18,7 @@ action. These are packaged control checks on the handoff 270 candidate.
 
 | Scope | Current evidence | Outstanding |
 |---|---|---|
-| B1 Run / Verify | Two-step normal and interrupted controls, including repeated Verify and historical evaluation. | Production Complete Run has an observed owner and lacks a registered replay adapter. Resolve its replay classification and prerequisites in the Operations/Admin census. |
+| B1 Run / Verify | Two-step Seed progression and interruption are qualified. Production Complete Run records ordinary owner outcomes and supports historical evaluation. A required Complete Run step has no executable profile binding on catalog 48. | Decide whether completion should be an operator-required step with fresh local evidence. Automatic execution would require explicit destination binding of the checked-in Process/batch or worksheet output. The dependent Production Check In control also lacks a registered execution input. |
 | B2 / B3 | Saved local evaluations and the accepted ordinary Seed walkthrough have scoped evidence. | Executable transfer, local revalidation and Admin result coverage, formal A and combined B3 technical and visible acceptance remain open. See the Plan 022 milestone matrix. |
 | Operator acceptance | Justin accepted ordinary fresh and repeat Seed with a workbook-flashing reservation. | The packaged interruption tests collected no foreground-focus evidence. The separate flashing investigation remains open. |
 
