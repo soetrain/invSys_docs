@@ -1,5 +1,22 @@
 # invSys Form Controls v1
 
+**November 27, 2026, Run all, Verify run and historical evaluation.**
+For a Seed → Open Receiving guide, Start enabled after selection of an exact
+destination bootstrap entity. Ordinary return opened the Receiving workbook
+and Verify concluded. When the fixture dropped Seed's successful reply,
+the runner stopped before Open Receiving. Verify matched Seed APPLIED and
+its 21 destination keys, reported the missing required Receiving step
+(`REQUIRED_STEP_MISSING`) and saved Failed. A fresh setup again required an
+entity selection. Selecting the original closed recording, applying its guide
+and evaluating again reproduced the failed result without executing either
+action. These are packaged control checks on the handoff 270 candidate.
+
+| Scope | Current evidence | Outstanding |
+|---|---|---|
+| B1 Run / Verify | Two-step normal and interrupted controls, including repeated Verify and historical evaluation. | Production Complete Run has an observed owner and lacks a registered replay adapter. Resolve its replay classification and prerequisites in the Operations/Admin census. |
+| B2 / B3 | Saved local evaluations and the accepted ordinary Seed walkthrough have scoped evidence. | Executable transfer, local revalidation and Admin result coverage, formal A and combined B3 technical and visible acceptance remain open. See the Plan 022 milestone matrix. |
+| Operator acceptance | Justin accepted ordinary fresh and repeat Seed with a workbook-flashing reservation. | The packaged interruption tests collected no foreground-focus evidence. The separate flashing investigation remains open. |
+
 **November 26, 2026, Start Run and Run How-To while Seed is returning.**
 Two packaged control tests on the handoff 270 candidate each passed 25/25.
 Start Run was disabled while the original Seed was returning. A separate

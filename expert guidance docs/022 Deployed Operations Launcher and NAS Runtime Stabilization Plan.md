@@ -1,5 +1,16 @@
 # Deployed Operations Launcher and NAS Runtime Stabilization Plan
 
+**November 27, 2026, B1 multi-step interruption.** A bound Run all guide
+required Seed APPLIED followed by Receiving OPENED, with the Seed event
+as its source-events conclusion. On separate fresh Training destinations,
+normal return passed 18/18 and loss of the successful Seed acknowledgment
+passed 22/22. Normal return created the station-local Receiving workbook.
+The interrupted run saved Failed / `OWNER_NOT_COMPLETED` and its Seed step
+retained the owner's APPLIED event. Receiving had zero dispatches, owner
+calls and workbooks. Verify credited Seed's exact event and identified the
+missing required Receiving action. Historical evaluation after reopening
+gave the same Failed result. Handoff 274 records identities and regressions.
+
 **November 26, 2026, nested entry while the built-in Seed is returning.**
 On two fresh Training destinations, a second Start was disabled and its handler
 returned at the busy guard. Run How-To kept the original runner. Each case
@@ -3677,8 +3688,8 @@ the earlier proposed R0-R5 grouping without discarding its work.
 | Area | Evidence available | Remaining work or decision |
 |---|---|---|
 | B0 Receiving | Packaged Receiving replay on the handoff 270 candidate passed 121/121, including busy/close coverage. | Retain the gate when changing the shared runner or setup. |
-| B1 built-in Seed | Fresh, stopped, already-seeded and refused requests have separate packaged proof. A lost acknowledgment preserves a Failed dispatch and its applied owner event. Second Start and Run How-To both preserve the in-flight Seed and its original recording. | The single-step Seed interruption has no later step to dispatch. A multi-step Seed interruption needs evidence that the runner stops later work and attributes the partial result to the original run. |
-| B1 owner and control coverage | The execution input registry on this candidate accepts six Receiving ControlIds and `ADMIN_DEMO_SEED`. Their tests cover specific context, rights, capture, interruption and nested-entry boundaries. | Reconcile the remaining reachable Operations/Admin controls with their owners, automatic/operator-required/helper classifications and evidence. Qualify the outstanding adapters and boundary cases indicated by that census. |
+| B1 built-in Seed | Fresh, stopped, already-seeded and refused requests, both nested gestures and single-step acknowledgment loss are qualified. Seed → Open Receiving now has a working two-step control and proof of zero later dispatch after acknowledgment loss. Verify preserves the partial effect and failed history. | Retain these gates when runner progression or the owner boundary changes. Other adapters and interruption boundaries remain subject to the control census. |
+| B1 owner and control coverage | The execution input registry on this candidate accepts six Receiving ControlIds and `ADMIN_DEMO_SEED`. Controls records the ordinary owner and observation of Production Run - List → Complete Run (`PRODUCTION_RUN_COMPLETE`), which is absent from that registry. | Next, reconcile this specific control's replay classification, prerequisite workflow and evidence with D18-REPLAY-01 item 5. Continue the remaining Operations/Admin census and qualify the outstanding adapters and boundaries it identifies. |
 | B2 transfer and results | Seed uses a transferred guide, a destination-bound profile and a saved local Verify result. | Complete approved replay coverage, executable-profile transfer and local revalidation. Qualify the Admin Working, Broken, Needs validation and Incomplete results, including Needs attention and superseding stale results. |
 | B3 and operator acceptance | Justin accepted the ordinary fresh and repeat Seed workflow with the workbook-flashing reservation recorded in Controls. | Formal 4be-A still has outstanding recording coverage, picker no-match feedback and visible onboarding acceptance. B3 requires retained A, the combined package, compile, layout, static, live-role, full-chain, regression and binding gates, and visible Operations and Admin acceptance. |
 | Separate or deferred work | Workbook windows flashed in front of the Seed form during the attended review. | Retest foreground and input focus by initiating click. Automatic retry, resume or repair has no place in this qualification. Scheduled validation and external notifications are outside R1. |
